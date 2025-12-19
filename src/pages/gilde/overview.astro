@@ -1,0 +1,233 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import fs from 'fs';
+import path from 'path';
+
+const gildePath = path.join(process.cwd(), 'public', 'data', 'gilde.json');
+const gildeData = JSON.parse(fs.readFileSync(gildePath, 'utf-8'));
+
+// Ordina: party prima, poi le rivali
+const sortedGuilds = gildeData.sort((a: any, b: any) => {
+  if (a.type === 'party') return -1;
+  if (b.type === 'party') return 1;
+  return 0;
+});
+---
+
+<MainLayout title="Le Gilde di Waterdeep">
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">Gilde</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-emerald-900 via-slate-800 to-emerald-900 border-2 border-emerald-600 rounded-lg p-8 mb-8">
+    <h1 class="text-5xl mb-4 text-yellow-400">Le Gilde di Waterdeep</h1>
+    <p class="text-xl text-slate-200 leading-relaxed">
+      Nel Gioco Divino, le gilde di avventurieri sono le vere protagoniste. Competono per Favore Divino, gloria eterna e tesori leggendari esplorando il dungeon sotto la città. Waterdeep ospita centinaia di gilde, ma solo le migliori emergono dalla competizione.
+    </p>
+  </div>
+
+  <!-- Come Funzionano le Gilde -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-emerald-400">Come Funziona una Gilda</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <InfoBox type="player" title="Struttura Standard">
+        <ul class="space-y-2 text-slate-300">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span><strong>Team Principale:</strong> 4 membri (esplorano attivamente il dungeon)</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span><strong>Membri di Riserva:</strong> 10-20 membri (subentrano in caso di morte)</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span><strong>Quartier Generale:</strong> Base operativa a Waterdeep</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span><strong>Budget:</strong> Fondi per equipaggiamento e spese</span>
+          </li>
+        </ul>
+      </InfoBox>
+
+      <InfoBox type="mechanic" title="Sistema Riserve">
+        <p class="text-slate-300 mb-3">
+          Se un membro del Team Principale <strong class="text-red-400">muore permanentemente</strong>:
+        </p>
+        <ol class="space-y-2 text-slate-300 list-decimal list-inside">
+          <li>La gilda perde <strong class="text-red-400">-100 Favore</strong> (penalità efficienza)</li>
+          <li>Un membro di riserva viene promosso al Team Principale</li>
+          <li>Il nuovo membro deve "mettersi al passo" (potrebbe essere sotto-livellato)</li>
+          <li>La gilda può reclutare da gilde eliminate (5000+ MO per membro esperto)</li>
+        </ol>
+        <div class="mt-3 text-sm text-slate-400">
+          <strong>Morte Permanente:</strong> 0 HP + 3 death saves falliti, danno massiccio, o non resuscitato entro 10 giorni
+        </div>
+      </InfoBox>
+    </div>
+  </section>
+
+  <!-- Le Tre Gilde Protagoniste -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-400">Le Tre Gilde Protagoniste</h2>
+    <p class="text-slate-300 mb-6 text-lg">
+      Queste sono le tre gilde più promettenti di Waterdeep, selezionate durante le Prove Divine per competere nel Gioco.
+    </p>
+
+    <div class="space-y-8">
+      {sortedGuilds.map((guild: any) => (
+        <div class={`border-2 rounded-lg p-6 hover:scale-[1.02] transition-transform ${
+          guild.type === 'party' ? 'bg-gradient-to-br from-purple-900/30 via-slate-800/30 to-blue-900/30 border-purple-500' :
+          guild.type === 'rival-lawful' ? 'bg-gradient-to-br from-blue-900/30 via-slate-800/30 to-blue-900/30 border-blue-500' :
+          'bg-gradient-to-br from-yellow-900/30 via-slate-800/30 to-red-900/30 border-yellow-500'
+        }`}>
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="text-3xl font-bold text-yellow-400 mb-1">{guild.name}</h3>
+              <p class="text-lg italic text-slate-400">"{guild.motto}"</p>
+            </div>
+            <div class="text-right">
+              {guild.type === 'party' && (
+                <span class="bg-purple-900/50 text-purple-300 px-4 py-2 rounded-full text-sm border border-purple-700 font-bold">
+                  🎭 PARTY
+                </span>
+              )}
+              {guild.type === 'rival-lawful' && (
+                <span class="bg-blue-900/50 text-blue-300 px-4 py-2 rounded-full text-sm border border-blue-700">
+                  ⚖️ RIVALI (LG)
+                </span>
+              )}
+              {guild.type === 'rival-chaotic' && (
+                <span class="bg-yellow-900/50 text-yellow-300 px-4 py-2 rounded-full text-sm border border-yellow-700">
+                  🎲 RIVALI (CN)
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 mb-4">
+            <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
+              <div class="text-sm text-slate-400">Membri Totali</div>
+              <div class="text-2xl font-bold text-emerald-400">{guild.totalMembers}</div>
+              <div class="text-xs text-slate-500">{guild.mainTeam} principali + {guild.reserves} riserve</div>
+            </div>
+            <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
+              <div class="text-sm text-slate-400">Budget</div>
+              <div class="text-2xl font-bold text-yellow-400">{guild.budget || guild.budget}</div>
+            </div>
+            <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
+              <div class="text-sm text-slate-400">QG</div>
+              <div class="text-sm text-slate-300">{guild.headquarters.location}</div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="text-sm text-slate-400 mb-1">Filosofia</div>
+            <p class="text-slate-300 italic">"{guild.philosophy}"</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="text-sm text-slate-400 mb-2">Team Principale ({guild.mainTeam} membri)</div>
+            <div class="grid md:grid-cols-2 gap-2">
+              {guild.mainTeamMembers.slice(0, 4).map((member: any) => (
+                <div class="bg-slate-900/50 rounded p-2 border border-slate-700 flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                  <div>
+                    <div class="text-sm font-bold text-slate-200">{member.name}</div>
+                    <div class="text-xs text-slate-500">{member.race} {member.class || member.role}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="flex justify-end">
+            <a
+              href={`/gilde/${guild.slug}`}
+              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-yellow-400 px-6 py-2 rounded-lg border border-yellow-600 transition-colors no-underline"
+            >
+              Vedi Dettagli Completi
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Comparazione -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-blue-400">Comparazione Gilde</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-800 border-b-2 border-yellow-600">
+            <th class="px-4 py-3 text-left text-yellow-400">Gilda</th>
+            <th class="px-4 py-3 text-center text-yellow-400">Membri</th>
+            <th class="px-4 py-3 text-center text-yellow-400">Budget</th>
+            <th class="px-4 py-3 text-left text-yellow-400">Punti di Forza</th>
+            <th class="px-4 py-3 text-left text-yellow-400">Debolezze</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sortedGuilds.map((guild: any, index: number) => (
+            <tr class={`border-b border-slate-700 ${index % 2 === 0 ? 'bg-slate-900/30' : 'bg-slate-800/30'}`}>
+              <td class="px-4 py-3">
+                <div class="font-bold text-slate-200">{guild.name}</div>
+                <div class="text-xs text-slate-500">{guild.motto}</div>
+              </td>
+              <td class="px-4 py-3 text-center text-emerald-400">{guild.totalMembers}</td>
+              <td class="px-4 py-3 text-center text-yellow-400">{guild.budget || guild.budget}</td>
+              <td class="px-4 py-3">
+                <ul class="text-sm text-slate-300 space-y-1">
+                  {guild.strengths?.map((strength: string) => (
+                    <li class="flex items-start">
+                      <span class="text-green-500 mr-1">✓</span>
+                      {strength}
+                    </li>
+                  )) || <li class="text-slate-500">Equilibrio perfetto</li>}
+                </ul>
+              </td>
+              <td class="px-4 py-3">
+                <ul class="text-sm text-slate-400 space-y-1">
+                  {guild.weaknesses?.map((weakness: string) => (
+                    <li class="flex items-start">
+                      <span class="text-red-500 mr-1">✗</span>
+                      {weakness}
+                    </li>
+                  )) || <li class="text-slate-500">Da scoprire</li>}
+                </ul>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-center mt-12 pt-6 border-t border-slate-700">
+    <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Torna alla Home
+    </a>
+  </div>
+</MainLayout>

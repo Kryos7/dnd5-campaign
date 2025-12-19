@@ -1,0 +1,104 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import CityCard from '../../components/CityCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+const cittaPath = path.join(process.cwd(), 'public', 'data', 'citta.json');
+const cittaData = JSON.parse(fs.readFileSync(cittaPath, 'utf-8'));
+---
+
+<MainLayout title="Le Sette Città">
+  <!-- Header -->
+  <div class="mb-12">
+    <h1 class="text-center mb-4">Le Sette Città Scelte</h1>
+    <p class="text-xl text-center text-slate-400 max-w-3xl mx-auto">
+      Quando gli dèi scesero sul Piano Materiale, scelsero sette città simboliche come arene per il loro Gioco Divino.
+      Ognuna rappresenta un aspetto diverso della civiltà mortale.
+    </p>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="bg-slate-800 border border-slate-700 rounded-lg p-6 mb-12 overflow-x-auto">
+    <h2 class="text-2xl font-bold mb-6 text-yellow-400">Confronto Rapido</h2>
+    <table class="w-full text-left">
+      <thead>
+        <tr class="border-b border-slate-700">
+          <th class="pb-3 text-slate-300">Città</th>
+          <th class="pb-3 text-slate-300">Razza</th>
+          <th class="pb-3 text-slate-300">Tema</th>
+          <th class="pb-3 text-slate-300">Dèi Patroni</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cittaData.map((city: any) => (
+          <tr class="border-b border-slate-800 hover:bg-slate-700/30">
+            <td class="py-4">
+              <a href={`/citta/${city.slug}`} class="text-yellow-400 hover:text-yellow-300 font-bold">
+                {city.name}
+              </a>
+            </td>
+            <td class="py-4 text-slate-300">{city.race}</td>
+            <td class="py-4 text-purple-400">{city.theme}</td>
+            <td class="py-4 text-blue-300">{city.gods.join(', ')}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- City Cards Grid -->
+  <h2 class="text-3xl font-bold mb-8 text-center text-blue-400">Esplora Ogni Città</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {cittaData.map((city: any) => (
+      <CityCard
+        name={city.name}
+        slug={city.slug}
+        gods={city.gods}
+        theme={city.theme}
+        description={city.description}
+        race={city.race}
+      />
+    ))}
+  </div>
+
+  <!-- Context Section -->
+  <div class="mt-12 bg-purple-900/20 border-2 border-purple-700/50 rounded-lg p-8">
+    <h2 class="text-2xl font-bold text-purple-400 mb-4">Perché Queste Sette?</h2>
+    <p class="text-slate-300 leading-relaxed mb-4">
+      Gli dèi non scelsero queste città a caso. Ognuna rappresenta un pilastro fondamentale della società mortale:
+    </p>
+    <ul class="space-y-3 text-slate-300">
+      <li class="flex items-start">
+        <span class="text-yellow-500 mr-3 mt-1">"</span>
+        <div>
+          <strong class="text-yellow-400">Waterdeep</strong> - Il trionfo della legge e dell'ordine civilizzato
+        </div>
+      </li>
+      <li class="flex items-start">
+        <span class="text-yellow-500 mr-3 mt-1">"</span>
+        <div>
+          <strong class="text-yellow-400">Mithral Hall</strong> - L'eccellenza dell'artigianato e la forza della tradizione
+        </div>
+      </li>
+      <li class="flex items-start">
+        <span class="text-yellow-500 mr-3 mt-1">"</span>
+        <div>
+          <strong class="text-yellow-400">Menzoberranzan</strong> - Il potere attraverso l'inganno e la forza cruda
+        </div>
+      </li>
+      <li class="flex items-start">
+        <span class="text-yellow-500 mr-3 mt-1">"</span>
+        <div>
+          <strong class="text-yellow-400">Myth Drannor</strong> - La saggezza del passato e la speranza di redenzione
+        </div>
+      </li>
+      <li class="flex items-start">
+        <span class="text-yellow-500 mr-3 mt-1">"</span>
+        <div>
+          <strong class="text-yellow-400">Baldur's Gate</strong> - L'innovazione, il commercio e l'opportunismo
+        </div>
+      </li>
+    </ul>
+  </div>
+</MainLayout>

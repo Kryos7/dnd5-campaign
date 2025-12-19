@@ -1,0 +1,232 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+---
+
+<MainLayout title="L'Annuncio degli Dèi">
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/lore/annuncio" class="hover:text-yellow-400">Lore</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">L'Annuncio</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="text-center mb-12">
+    <div class="inline-block mb-4">
+      <svg class="w-16 h-16 text-yellow-500 mx-auto animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+      </svg>
+    </div>
+    <h1 class="mb-4">L'Annuncio degli Dèi</h1>
+    <p class="text-xl text-slate-400 italic">Il giorno in cui i cieli si aprirono e gli dèi scesero tra i mortali</p>
+  </div>
+
+  <!-- Il Grande Annuncio -->
+  <section class="mb-12">
+    <div class="bg-gradient-to-br from-yellow-900/30 via-blue-900/30 to-purple-900/30 border-2 border-yellow-600 rounded-lg p-8">
+      <h2 class="text-3xl font-bold mb-6 text-yellow-400 text-center">Il Grande Annuncio</h2>
+
+      <div class="prose prose-invert max-w-none text-slate-200 leading-relaxed space-y-4">
+        <p class="text-lg italic text-center text-blue-300 mb-6">
+          "Mortali di Toril, udite le nostre parole."
+        </p>
+
+        <p>
+          Era il primo giorno di Mirtul quando i cieli sopra sette città si aprirono simultaneamente. Da queste fratture
+          nel tessuto stesso della realtà, figure di luce accecante discesero sul Piano Materiale. Gli dèi - esseri che
+          da tempo immemore osservavano dall'alto dei loro piani divini - erano scesi fisicamente tra i mortali.
+        </p>
+
+        <p>
+          A Waterdeep, Tyr apparve nella Piazza del Mare, la sua forma radiosa visibile da ogni angolo della città.
+          A Mithral Hall, Moradin emerse dalle profondità, la sua presenza faceva tremare la montagna stessa.
+          Nelle tenebre di Menzoberranzan, Lolth materializzò la sua forma aracnide gigantesca, terrorizzando e affascinando
+          in egual misura. Sulle rovine di Myth Drannor, Corellon Larethian camminò nuovamente tra gli alberi cantori.
+          E a Baldur's Gate, Waukeen aprì le sue mani e fece piovere monete d'oro dal cielo.
+        </p>
+
+        <p class="text-xl font-bold text-yellow-400 text-center my-8">
+          E con una voce che risuonò in tutte e sette le città contemporaneamente, gli dèi parlarono:
+        </p>
+
+        <div class="bg-slate-900/50 border-l-4 border-yellow-500 pl-6 py-4 my-8">
+          <p class="italic">
+            "Mortali, per troppo tempo avete languito nell'ordinario. Vi abbiamo osservato dalle nostre dimore divine,
+            e abbiamo deciso che è giunto il tempo di mettervi alla prova.
+          </p>
+
+          <p class="italic mt-4">
+            Abbiamo scelto sette città - ognuna un gioiello della vostra civiltà, ognuna rappresentante un aspetto
+            diverso della vostra natura. Queste città sono ora separate dal resto del mondo da un Sigillo Divino.
+            Nessuno può entrare o uscire senza il nostro permesso.
+          </p>
+
+          <p class="italic mt-4">
+            Sotto ogni città abbiamo creato un dungeon - una prova di valore, astuzia, forza e fede. Coloro che
+            esploreranno queste profondità guadagneranno il nostro Favore Divino. Coloro che falliranno conosceranno
+            la nostra indifferenza.
+          </p>
+
+          <p class="italic mt-4">
+            Formate le vostre gilde. Competete. Dimostrate il vostro valore. La città le cui gilde dimostreranno il
+            maggior valore riceverà benedizioni al di là della vostra immaginazione. Le altre... beh, gli dèi non
+            premiano la mediocrità.
+          </p>
+
+          <p class="italic mt-4 font-bold text-yellow-300">
+            Che il Gioco Divino abbia inizio."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Il Sigillo Divino -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-blue-400">Il Sigillo Divino</h2>
+
+    <InfoBox type="player" title="Cosa significa per voi">
+      <p class="mb-3">
+        Il Sigillo Divino è una barriera semipermanente che avvolge ciascuna delle sette città. Ecco cosa dovete sapere:
+      </p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Nessuno può entrare o uscire</strong> senza il permesso esplicito degli dèi patroni</li>
+        <li><strong>La comunicazione è possibile</strong> - inviare messaggi magici funziona ancora, ma con difficoltà aumentata</li>
+        <li><strong>Il commercio è limitato</strong> - gli dèi permettono l'ingresso di beni essenziali, ma niente di più</li>
+        <li><strong>Sei bloccato dentro</strong> - Se eri nella città quando il Sigillo fu eretto, ci resterai fino alla fine del Gioco</li>
+      </ul>
+    </InfoBox>
+  </section>
+
+  <!-- Sistema delle Gilde -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-emerald-400">Il Sistema delle Gilde</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-yellow-400 mb-3 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          Formazione delle Gilde
+        </h3>
+        <ul class="text-slate-300 space-y-2">
+          <li>" Gruppi di 4-6 avventurieri</li>
+          <li>" Devono registrarsi presso il tempio della città</li>
+          <li>" Ogni gilda ha un emblema unico</li>
+          <li>" Possono competere per risorse e favore</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-purple-400 mb-3 flex items-center">
+          <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Favore Divino
+        </h3>
+        <ul class="text-slate-300 space-y-2">
+          <li>" Guadagnato completando livelli del dungeon</li>
+          <li>" Può essere speso per ricompense divine</li>
+          <li>" Benedizioni, oggetti magici, resurrezioni</li>
+          <li>" La gilda con più Favore ottiene bonus</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cosa Sanno i Personaggi -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-yellow-400">Cosa Sapete (Session Zero)</h2>
+
+    <InfoBox type="player">
+      <p class="mb-4">Queste informazioni sono di dominio pubblico nelle città:</p>
+      <ul class="space-y-3">
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>Gli dèi sono fisicamente presenti nelle città - li potete vedere, alcuni possono persino parlarvi</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>Il dungeon sotto la città sembra infinito - nessuno è ancora riuscito a raggiungere il fondo</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>I primi 5 livelli del dungeon si "resettano" periodicamente, ripopolandosi di mostri e tesori</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>Le gilde competono sia all'interno della città che contro gilde di altre città</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>Esistono "Tornei Divini" periodici dove le gilde si sfidano direttamente</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-blue-400 mr-2"></span>
+          <span>Nessuno sa perché gli dèi abbiano veramente fatto questo - le loro motivazioni rimangono misteriose</span>
+        </li>
+      </ul>
+    </InfoBox>
+  </section>
+
+  <!-- Verità Nascosta (DM Only) -->
+  <section class="mb-12">
+    <InfoBox type="dm" title="La Verità Che i Giocatori Non Sanno">
+      <p class="mb-4 font-bold text-red-300">
+        Questa sezione contiene informazioni riservate al DM. Non condividere con i giocatori!
+      </p>
+      <p class="mb-4">
+        Il "Gioco Divino" è una menzogna. Beh, non completamente - ma non è quello che sembra. Un'entità primordiale
+        antica quanto Toril stesso si sta risvegliando nelle profondità del pianeta. Se si risvegliasse completamente,
+        distruggerebbe tutto.
+      </p>
+      <p class="mb-4">
+        Gli dèi non possono affrontarla direttamente senza causare danni catastrofici al Piano Materiale. Quindi hanno
+        architettato questo "Gioco" come un gigantesco rituale collettivo. Ogni livello del dungeon completato rafforza
+        il sigillo che tiene dormiente l'entità.
+      </p>
+      <p class="mb-4">
+        I dungeon non sono "prove di valore" - sono pilastri rituali. Le gilde non stanno "competendo per gloria" -
+        stanno inconsapevolmente salvando il mondo.
+      </p>
+      <p class="font-bold text-yellow-300">
+        Gli dèi non possono dire la verità ai mortali, perché la conoscenza dell'entità potrebbe accelerare il suo
+        risveglio. L'ignoranza, in questo caso, è letteralmente salvezza.
+      </p>
+    </InfoBox>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Torna alla Home
+    </a>
+    <a href="/citta/overview" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Scopri le Città
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>
+
+<style>
+  .prose {
+    max-width: none;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin-top: 0.5rem;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import DungeonLevelCard from '../../components/DungeonLevelCard.astro';
+---
+
+<MainLayout title="Dungeon Overview">
+  <h1 class="mb-8">I Mega-Dungeon</h1>
+
+  <div class="mb-8">
+    <p class="text-lg text-slate-300 mb-4">
+      Sotto ogni città si estende un dungeon apparentemente infinito, creato dagli dèi come arena per il Gioco Divino.
+    </p>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-6 text-purple-400">Esempio di Livelli</h2>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <DungeonLevelCard
+      levelNumber={1}
+      name="L'Ingresso"
+      difficulty={1}
+      theme="Camere di prova iniziali"
+      resetFrequency="Giornaliero"
+      rewards={["100 PO", "Oggetti comuni", "Favore Divino (10 punti)"]}
+      dangers={["Trappole basilari", "Mostri CR 1-2", "Enigmi semplici"]}
+    />
+
+    <DungeonLevelCard
+      levelNumber={5}
+      name="Il Confine"
+      difficulty={3}
+      theme="L'ultimo livello rigenerante"
+      resetFrequency="Settimanale"
+      rewards={["1000 PO", "Oggetti non comuni", "Favore Divino (50 punti)"]}
+      dangers={["Trappole complesse", "Mostri CR 5-7", "Boss intermedio"]}
+    />
+  </div>
+
+  <InfoBox type="mechanic" title="Work in Progress">
+    <p>Dettagli completi per tutti i livelli del dungeon saranno aggiunti presto!</p>
+  </InfoBox>
+
+  <div class="mt-8 text-center">
+    <a href="/" class="text-blue-400 hover:text-blue-300">Torna alla Home</a>
+  </div>
+</MainLayout>

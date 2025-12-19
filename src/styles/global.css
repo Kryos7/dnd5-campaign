@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colori primari - Palette Divina */
+  --color-divine-gold: #d4af37;
+  --color-deep-blue: #1e3a8a;
+  --color-crimson: #991b1b;
+
+  /* Colori secondari */
+  --color-emerald: #047857;
+  --color-mystic-purple: #6b21a8;
+  --color-stone-gray: #4b5563;
+
+  /* Background */
+  --color-dark-bg: #0f172a;
+
+  /* Accenti */
+  --color-divine-gold-light: #f4d77f;
+  --color-divine-gold-dark: #b8941f;
+}
+
+/* Base styles */
+body {
+  @apply bg-slate-950 text-slate-100;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl mb-6;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl mb-5;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl mb-4;
+}
+
+/* Link styles */
+a {
+  @apply text-blue-400 hover:text-blue-300 transition-colors;
+}
+
+/* Scrollbar personalizzata */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 hover:bg-slate-600 rounded;
+}
+
+/* Visibility controls based on user role */
+/* Hide DM-only content from non-DM users */
+html[data-user-role="player"] .dm-only,
+html[data-user-role="guest"] .dm-only {
+  display: none !important;
+}
+
+/* Hide player-only content from DM when not in player view */
+html[data-user-role="dm"] .player-only {
+  display: none !important;
+}

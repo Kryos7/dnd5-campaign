@@ -1,0 +1,239 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import GodCard from '../../components/GodCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+const cittaPath = path.join(process.cwd(), 'public', 'data', 'citta.json');
+const deiPath = path.join(process.cwd(), 'public', 'data', 'dei.json');
+
+const cittaData = JSON.parse(fs.readFileSync(cittaPath, 'utf-8'));
+const deiData = JSON.parse(fs.readFileSync(deiPath, 'utf-8'));
+
+const city = cittaData.find((c: any) => c.slug === 'luskan');
+const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
+---
+
+<MainLayout title={city.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/citta/overview" class="hover:text-yellow-400">Città</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{city.name}</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-red-900 via-slate-800 to-gray-900 border-2 border-red-600 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <h1 class="text-5xl mb-2 text-yellow-400">{city.name}</h1>
+        <p class="text-2xl text-red-300 italic">{city.race}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400 mb-1">Tema</div>
+        <div class="text-xl font-bold text-red-400">{city.theme}</div>
+      </div>
+    </div>
+    <p class="text-lg text-slate-200 leading-relaxed">{city.fullDescription}</p>
+  </div>
+
+  <!-- Avviso per i Giocatori -->
+  <section class="mb-8">
+    <InfoBox type="warning" title="Benvenuti a Luskan - Lasciate ogni speranza di fair play">
+      <p class="mb-3">
+        Se la vostra gilda sceglie Luskan, sappiate questo: <strong>non esistono regole</strong>. Qui il tradimento non è scoraggiato - è incoraggiato.
+        Le altre gilde vi pugnaleranno alle spalle, letteralmente. Voi farete lo stesso a loro.
+      </p>
+      <p class="text-yellow-300 font-bold">
+        Luskan non è per i deboli di cuore. È per chi vuole giocare sporco e vincere a ogni costo. Se cercate onore o giustizia, scegliete Waterdeep o Mithral Hall.
+      </p>
+    </InfoBox>
+  </section>
+
+  <!-- Cultura e Atmosfera -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Cultura e Atmosfera</h2>
+    <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+      <p class="text-slate-300 leading-relaxed">{city.culture}</p>
+    </div>
+  </section>
+
+  <!-- Dèi Patroni -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Dèi Patroni</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {cityGods.map((god: any) => (
+        <GodCard
+          name={god.name}
+          title={god.title}
+          domain={god.domain}
+          city={god.city}
+          description={god.description}
+          alignment={god.alignment}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Le Cinque Vele -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Le Cinque Vele - I Veri Padroni di Luskan</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-gradient-to-br from-red-900/30 to-slate-800 border border-red-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-red-400 mb-2">Vela Kurth</h3>
+        <p class="text-sm text-slate-300">Pirati e contrabbandieri. Controllano il Porto Oscuro e le rotte marittime. Devoti a Umberlee (anche se non ufficialmente nel Gioco).</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-slate-800 border border-blue-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-blue-400 mb-2">Vela Suljack</h3>
+        <p class="text-sm text-slate-300">Ladri e spie. Maestri dell'inganno e del furto. Seguaci naturali di Mask, dominano il Mercato Nero.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-900/30 to-slate-800 border border-purple-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-purple-400 mb-2">Vela Rethnor</h3>
+        <p class="text-sm text-slate-300">Mercenari e guerrieri. Bruti che risolvono problemi con la forza. Onorano Talos attraverso la distruzione in battaglia.</p>
+      </div>
+      <div class="bg-gradient-to-br from-yellow-900/30 to-slate-800 border border-yellow-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-yellow-400 mb-2">Vela Baram</h3>
+        <p class="text-sm text-slate-300">Commercianti corrotti e ricettatori. Fanno affari con chiunque paghi, senza scrupoli morali.</p>
+      </div>
+      <div class="bg-gradient-to-br from-gray-900/30 to-slate-800 border border-gray-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-gray-400 mb-2 col-span-2">Vela dei Morti (Misterioso)</h3>
+        <p class="text-sm text-slate-300">La quinta Vela è un mistero. Alcuni dicono sia controllata da non-morti, altri da un culto di Beshaba. Nessuno lo sa con certezza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sistema Unico -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Sistema Unico</h2>
+    <InfoBox type="mechanic" title={city.uniqueSystem.name}>
+      <p class="mb-4">{city.uniqueSystem.description}</p>
+      <div class="bg-slate-900/50 rounded p-4 mt-4">
+        <h4 class="font-bold text-red-400 mb-2">Azioni Caotiche Premiate:</h4>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Sabotaggio</strong>: Rovinare l'esplorazione di un'altra gilda (+15 Favore)</li>
+          <li>• <strong>Furto da Alleati</strong>: Rubare tesori a gilde "amiche" (+20 Favore da Mask)</li>
+          <li>• <strong>Tradimento Spettacolare</strong>: Abbandonare alleati in momento critico (+25 Favore)</li>
+          <li>• <strong>Distruzione Creativa</strong>: Distruggere strutture nemiche (+10 Favore da Talos)</li>
+        </ul>
+        <h4 class="font-bold text-purple-400 mb-2 mt-4">Eventi di Beshaba (Casuali):</h4>
+        <ul class="text-sm space-y-2">
+          <li>• Una gilda casuale perde metà del proprio equipaggiamento</li>
+          <li>• Una trappola si attiva spontaneamente su una gilda a caso</li>
+          <li>• Un tesoro si rivela maledetto e porta sfortuna persistente</li>
+          <li>• Una gilda "fortunata" viene colpita da una tempesta di Talos</li>
+        </ul>
+        <div class="mt-4 p-3 bg-yellow-900/30 border border-yellow-700 rounded">
+          <p class="text-xs text-yellow-300 font-bold">
+            ⚠️ ATTENZIONE: Questo sistema può creare tensione REALE tra giocatori. Usare solo con gruppi maturi che separano gioco e realtà!
+          </p>
+        </div>
+      </div>
+    </InfoBox>
+  </section>
+
+  <!-- Dungeon Theme -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Tema del Dungeon</h2>
+    <div class="bg-gradient-to-r from-red-900/20 to-gray-900/20 border-2 border-red-700 rounded-lg p-6">
+      <p class="text-slate-300 text-lg leading-relaxed mb-4">{city.dungeonTheme}</p>
+      <div class="bg-slate-900/50 rounded p-4">
+        <h4 class="font-bold text-red-400 mb-2">Caratteristiche Uniche del Dungeon:</h4>
+        <ul class="text-sm space-y-2 text-slate-300">
+          <li>• <strong>Trappole a Catena</strong>: Una trappola ne attiva altre, creando reazioni a catena mortali</li>
+          <li>• <strong>Sale del Tradimento</strong>: Stanze che forzano i PG a scegliere chi sacrificare</li>
+          <li>• <strong>Il Labirinto delle Ombre</strong>: Sezione controllata da Mask dove tutto può essere rubato</li>
+          <li>• <strong>La Sala delle Tempeste</strong>: Arena dove Talos scatena tempeste casuali durante i combattimenti</li>
+          <li>• <strong>Il Corridoio della Sfortuna</strong>: Passaggio maledetto da Beshaba con eventi casuali negativi</li>
+          <li>• <strong>Rovine di Illusk</strong>: Antica città sepolta con segreti oscuri e non-morti</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luoghi Chiave -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Luoghi Chiave</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {city.keyLocations.map((location: string) => (
+        <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover:border-red-500 transition-colors">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-slate-300">{location}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Rivalità con Waterdeep -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Rivalità Storica: Luskan vs Waterdeep</h2>
+    <div class="bg-gradient-to-r from-blue-900/20 to-red-900/20 border-2 border-yellow-700 rounded-lg p-6">
+      <p class="text-slate-300 mb-4">
+        Per secoli, Luskan e Waterdeep sono state nemiche giurate. Waterdeep rappresenta legge, ordine e civiltà.
+        Luskan rappresenta caos, libertà e anarchia. Nel Gioco Divino, questa rivalità raggiunge nuove vette.
+      </p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-blue-900/30 rounded p-4 border border-blue-700">
+          <h4 class="font-bold text-blue-400 mb-2">Waterdeep dice:</h4>
+          <p class="text-sm text-slate-300 italic">"Luskan è un covo di criminali e vigliacchi che non meritano di partecipare al Gioco Divino."</p>
+        </div>
+        <div class="bg-red-900/30 rounded p-4 border border-red-700">
+          <h4 class="font-bold text-red-400 mb-2">Luskan risponde:</h4>
+          <p class="text-sm text-slate-300 italic">"Waterdeep è piena di ipocriti che si nascondono dietro le loro 'leggi'. Almeno noi siamo onesti sulla nostra disonestà."</p>
+        </div>
+      </div>
+      <div class="mt-4 p-4 bg-yellow-900/30 border border-yellow-700 rounded">
+        <p class="text-sm text-yellow-300">
+          <strong>Hook per il DM:</strong> Crea situazioni dove gilde di Luskan e Waterdeep si scontrano direttamente.
+          Le gilde di Waterdeep cercheranno di "far rispettare la legge", mentre quelle di Luskan saboteranno ogni loro tentativo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hook Narrativi -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Hook Narrativi per Luskan</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-gradient-to-br from-red-900/30 to-slate-800 border border-red-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-red-400 mb-2">La Tempesta di Talos</h3>
+        <p class="text-sm text-slate-300">Talos promette potere immenso alla gilda che distruggerà un simbolo di autorità in un'altra città. Ma come arrivarci con i Sigilli attivi?</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-900/30 to-slate-800 border border-purple-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-purple-400 mb-2">Il Grande Furto di Mask</h3>
+        <p class="text-sm text-slate-300">Mask sfida le gilde a rubare un artefatto dal dungeon di un'altra città. Il primo che ci riesce riceve benedizioni permanenti.</p>
+      </div>
+      <div class="bg-gradient-to-br from-gray-900/30 to-slate-800 border border-gray-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-gray-400 mb-2">La Maledizione di Beshaba</h3>
+        <p class="text-sm text-slate-300">Una gilda troppo fortunata attira l'ira di Beshaba, che inizia a sabotare ogni loro successo. Devono placarla o distruggerla.</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-900/30 to-slate-800 border border-blue-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-blue-400 mb-2">L'Alleanza Impossibile</h3>
+        <p class="text-sm text-slate-300">Una minaccia nel dungeon è troppo grande per una sola gilda. Luskan deve allearsi con... Waterdeep. Può funzionare? (Spoiler: probabilmente no)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/citta/candlekeep" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Precedente: Candlekeep
+    </a>
+    <a href="/citta/overview" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Tutte le Città
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>

@@ -1,0 +1,379 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import fs from 'fs';
+import path from 'path';
+
+const gildePath = path.join(process.cwd(), 'public', 'data', 'gilde.json');
+const gildeData = JSON.parse(fs.readFileSync(gildePath, 'utf-8'));
+
+const guild = gildeData.find((g: any) => g.slug === 'guardiani-della-trama');
+---
+
+<MainLayout title={guild.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/gilde/overview" class="hover:text-yellow-400">Gilde</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{guild.name}</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-purple-900 via-slate-800 to-blue-900 border-2 border-purple-600 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <h1 class="text-5xl text-yellow-400">{guild.name}</h1>
+          <span class="bg-purple-900/50 text-purple-300 px-4 py-2 rounded-full text-sm border border-purple-700 font-bold">
+            🎭 PARTY
+          </span>
+        </div>
+        <p class="text-2xl italic text-purple-300">"{guild.motto}"</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400">Simbolo</div>
+        <div class="text-lg text-slate-300">{guild.symbol}</div>
+        <div class="flex gap-2 mt-2 justify-end">
+          {guild.colors.map((color: string) => (
+            <div
+              class="w-6 h-6 rounded-full border-2 border-slate-600"
+              style={`background-color: ${color === 'Rosso' ? '#dc2626' : color === 'Oro' ? '#fbbf24' : '#3b82f6'}`}
+              title={color}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="bg-slate-900/50 rounded-lg p-4 mt-4">
+      <p class="text-slate-200 leading-relaxed">{guild.foundingStory}</p>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-3xl font-bold text-emerald-400">{guild.totalMembers}</div>
+        <div class="text-sm text-slate-400">Membri Totali</div>
+        <div class="text-xs text-slate-500 mt-1">{guild.mainTeam} principali + {guild.reserves} riserve</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-3xl font-bold text-yellow-400">{guild.budget.initial}</div>
+        <div class="text-sm text-slate-400">Budget Iniziale</div>
+        <div class="text-xs text-slate-500 mt-1">Contributi membri fondatori</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-3xl font-bold text-blue-400">{guild.headquarters.rent}</div>
+        <div class="text-sm text-slate-400">Affitto Mensile</div>
+        <div class="text-xs text-slate-500 mt-1">Pagato collettivamente</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-3xl font-bold text-purple-400">3</div>
+        <div class="text-sm text-slate-400">Gilde Originali</div>
+        <div class="text-xs text-slate-500 mt-1">Fusione strategica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quartier Generale -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Quartier Generale</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-emerald-300 mb-3">Posizione & Struttura</h3>
+        <div class="space-y-2 text-slate-300">
+          <p><strong>Posizione:</strong> {guild.headquarters.location}</p>
+          <p><strong>Tipo:</strong> {guild.headquarters.type}</p>
+          <p class="text-sm text-slate-400 mt-3">Edificio a tre piani ristrutturato, situato strategicamente a 5 minuti dall'Arco Divino</p>
+        </div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-blue-300 mb-3">Piani dell'Edificio</h3>
+        <div class="space-y-2 text-sm text-slate-300">
+          <div class="flex items-start">
+            <span class="text-blue-400 mr-2">▸</span>
+            <span><strong>Piano Terra:</strong> {guild.headquarters.floors.ground}</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-blue-400 mr-2">▸</span>
+            <span><strong>Primo Piano:</strong> {guild.headquarters.floors.first}</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-blue-400 mr-2">▸</span>
+            <span><strong>Secondo Piano:</strong> {guild.headquarters.floors.second}</span>
+          </div>
+          <div class="flex items-start">
+            <span class="text-blue-400 mr-2">▸</span>
+            <span><strong>Seminterrato:</strong> {guild.headquarters.floors.basement}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofia e Reputazione -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-2 gap-6">
+      <InfoBox type="lore" title="Filosofia della Gilda">
+        <p class="text-slate-300 italic mb-4">"{guild.philosophy}"</p>
+        <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
+          <div class="text-sm text-slate-400 mb-2">Triade Equilibrata:</div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div>
+              <div class="text-red-400 font-bold">Tempus</div>
+              <div class="text-slate-500">Strategia</div>
+            </div>
+            <div>
+              <div class="text-yellow-400 font-bold">Tymora</div>
+              <div class="text-slate-500">Fortuna</div>
+            </div>
+            <div>
+              <div class="text-blue-400 font-bold">Mystra</div>
+              <div class="text-slate-500">Conoscenza</div>
+            </div>
+          </div>
+        </div>
+      </InfoBox>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-purple-300 mb-3">Reputazione a Waterdeep</h3>
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <span class="text-slate-400 mr-2">🏛️</span>
+            <div class="text-sm">
+              <div class="text-slate-300 font-semibold">Generale</div>
+              <div class="text-slate-400">{guild.reputation.general}</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="text-slate-400 mr-2">👑</span>
+            <div class="text-sm">
+              <div class="text-slate-300 font-semibold">Nobiltà</div>
+              <div class="text-slate-400">{guild.reputation.nobles}</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="text-slate-400 mr-2">👥</span>
+            <div class="text-sm">
+              <div class="text-slate-300 font-semibold">Cittadini Comuni</div>
+              <div class="text-slate-400">{guild.reputation.commoners}</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="text-slate-400 mr-2">⚔️</span>
+            <div class="text-sm">
+              <div class="text-slate-300 font-semibold">Gilde Rivali</div>
+              <div class="text-slate-400">{guild.reputation.rivals}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Principale - I 4 Personaggi -->
+  <section class="mb-12">
+    <h2 class="text-4xl font-bold mb-6 text-yellow-400 text-center">Il Team Principale</h2>
+    <p class="text-center text-slate-300 mb-8 text-lg">I quattro avventurieri che esplorano il dungeon</p>
+
+    <div class="space-y-8">
+      {guild.mainTeamMembers.map((member: any, index: number) => (
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-yellow-600 rounded-lg p-8">
+          <!-- Header Personaggio -->
+          <div class="flex items-start justify-between mb-6">
+            <div>
+              <h3 class="text-3xl font-bold text-yellow-400 mb-1">{member.name}</h3>
+              <div class="flex items-center gap-3 text-lg">
+                <span class="text-slate-300">{member.race}</span>
+                <span class="text-slate-500">•</span>
+                <span class="text-blue-400">{member.class}</span>
+                <span class="text-slate-500">•</span>
+                <span class="text-purple-400">Livello {member.level}</span>
+              </div>
+              {member.deity && (
+                <div class="text-sm text-slate-400 mt-1">
+                  Divinità: <span class="text-yellow-300">{member.deity}</span>
+                </div>
+              )}
+            </div>
+            <div class="text-right">
+              <div class="bg-slate-900/70 rounded-lg p-3 border border-slate-700">
+                <div class="text-xs text-slate-400">Allineamento</div>
+                <div class="text-lg font-bold text-emerald-400">{member.alignment}</div>
+                <div class="text-xs text-slate-400 mt-2">Età</div>
+                <div class="text-lg font-bold text-blue-400">{member.age} anni</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <!-- Aspetto -->
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-emerald-300 mb-3">Aspetto Fisico</h4>
+              <div class="space-y-2 text-sm text-slate-300">
+                <p><strong>Altezza:</strong> {member.appearance.height}</p>
+                <p><strong>Corporatura:</strong> {member.appearance.build}</p>
+                <p><strong>Capelli:</strong> {member.appearance.hair}</p>
+                <p><strong>Occhi:</strong> {member.appearance.eyes}</p>
+                <p><strong>Pelle:</strong> {member.appearance.skin}</p>
+                <p class="text-yellow-300"><strong>Tratto distintivo:</strong> {member.appearance.distinctive}</p>
+              </div>
+            </div>
+
+            <!-- Background -->
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-blue-300 mb-3">Background</h4>
+              <p class="text-sm text-slate-300 leading-relaxed">{member.background}</p>
+            </div>
+          </div>
+
+          <!-- Motivazioni & Personalità -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-purple-300 mb-3">Motivazioni</h4>
+              <ul class="space-y-2">
+                {member.motivations.map((motivation: string) => (
+                  <li class="text-sm text-slate-300 flex items-start">
+                    <span class="text-purple-400 mr-2">▸</span>
+                    {motivation}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-yellow-300 mb-3">Personalità</h4>
+              <ul class="space-y-2">
+                {member.personality.map((trait: string) => (
+                  <li class="text-sm text-slate-300 flex items-start">
+                    <span class="text-yellow-400 mr-2">•</span>
+                    {trait}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ruolo & Quote -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-red-300 mb-3">Ruolo nella Gilda</h4>
+              <p class="text-sm text-slate-300">{member.role}</p>
+              {member.weapon && (
+                <div class="mt-3">
+                  <div class="text-xs text-slate-400">Arma Principale</div>
+                  <div class="text-sm text-yellow-400">{member.weapon}</div>
+                </div>
+              )}
+              {member.weapons && (
+                <div class="mt-3">
+                  <div class="text-xs text-slate-400">Armi</div>
+                  <div class="text-sm text-yellow-400">{member.weapons}</div>
+                </div>
+              )}
+            </div>
+
+            <div class="bg-slate-900/50 rounded-lg p-4 border border-slate-700">
+              <h4 class="text-lg font-bold text-blue-300 mb-3">Quote Tipiche</h4>
+              <div class="space-y-2">
+                {member.quotes.map((quote: string) => (
+                  <p class="text-sm text-slate-400 italic border-l-2 border-blue-500 pl-3">
+                    "{quote}"
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Obiettivo Segreto (se presente) -->
+          {member.secretGoal && (
+            <div class="bg-red-900/20 border-2 border-red-800 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+                <h4 class="text-lg font-bold text-red-300">Obiettivo Segreto</h4>
+              </div>
+              <p class="text-sm text-red-200">{member.secretGoal}</p>
+            </div>
+          )}
+
+          <!-- Nota DM (se presente) -->
+          {member.dmOnly && (
+            <div class="bg-purple-900/20 border-2 border-purple-800 rounded-lg p-4 dm-only mt-4">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                </svg>
+                <h4 class="text-lg font-bold text-purple-300">Solo DM</h4>
+              </div>
+              <p class="text-sm text-purple-200">{member.secretGoal}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Dinamiche del Team -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-blue-400">Dinamiche del Team</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <InfoBox type="mechanic" title="Sistema di Leadership">
+        <div class="space-y-2 text-sm text-slate-300">
+          <p><strong>Combattimento:</strong> {guild.teamDynamics.leadership.combat}</p>
+          <p><strong>Esplorazione:</strong> {guild.teamDynamics.leadership.exploration}</p>
+          <p><strong>Magia/Enigmi:</strong> {guild.teamDynamics.leadership.magic}</p>
+          <p><strong>Sociale:</strong> {guild.teamDynamics.leadership.social}</p>
+        </div>
+        <div class="mt-4 p-3 bg-slate-900/50 rounded border border-slate-700">
+          <p class="text-xs text-slate-400"><strong>Risoluzione Disaccordi:</strong> {guild.teamDynamics.decisionMaking}</p>
+        </div>
+      </InfoBox>
+
+      <div class="space-y-4">
+        <div class="bg-slate-800 border border-slate-700 rounded-lg p-4">
+          <h4 class="text-lg font-bold text-red-300 mb-3">Conflitti Tipici</h4>
+          <ul class="space-y-2">
+            {guild.teamDynamics.conflicts.map((conflict: string) => (
+              <li class="text-sm text-slate-300 flex items-start">
+                <span class="text-red-400 mr-2">⚠</span>
+                {conflict}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="bg-slate-800 border border-slate-700 rounded-lg p-4">
+          <h4 class="text-lg font-bold text-emerald-300 mb-3">Momenti di Legame</h4>
+          <ul class="space-y-2">
+            {guild.teamDynamics.bonding.map((moment: string) => (
+              <li class="text-sm text-slate-300 flex items-start">
+                <span class="text-emerald-400 mr-2">♥</span>
+                {moment}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/gilde/overview" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Torna a Tutte le Gilde
+    </a>
+    <a href="/gilde/scudo-radiante" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Prossima Gilda: Lo Scudo Radiante
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>

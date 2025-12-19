@@ -1,0 +1,42 @@
+---
+interface Props {
+  label: string;
+  percentage: number;
+  showPercentage?: boolean;
+  color?: 'blue' | 'green' | 'yellow' | 'purple' | 'red';
+}
+
+const { label, percentage, showPercentage = true, color = 'blue' } = Astro.props;
+
+const colorClasses = {
+  blue: 'bg-blue-500',
+  green: 'bg-emerald-500',
+  yellow: 'bg-yellow-500',
+  purple: 'bg-purple-500',
+  red: 'bg-red-500'
+};
+
+const bgColorClasses = {
+  blue: 'bg-blue-900/30',
+  green: 'bg-emerald-900/30',
+  yellow: 'bg-yellow-900/30',
+  purple: 'bg-purple-900/30',
+  red: 'bg-red-900/30'
+};
+---
+
+<div class="mb-4">
+  <div class="flex items-center justify-between mb-2">
+    <span class="text-sm font-semibold text-slate-300">{label}</span>
+    {showPercentage && (
+      <span class="text-sm text-slate-400">{percentage}%</span>
+    )}
+  </div>
+  <div class={`h-2 ${bgColorClasses[color]} rounded-full overflow-hidden`}>
+    <div
+      class={`h-full ${colorClasses[color]} rounded-full transition-all duration-500 ease-out`}
+      style={`width: ${percentage}%`}
+    >
+    </div>
+  </div>
+</div>

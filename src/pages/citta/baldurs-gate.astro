@@ -1,0 +1,117 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import GodCard from '../../components/GodCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+const cittaPath = path.join(process.cwd(), 'public', 'data', 'citta.json');
+const deiPath = path.join(process.cwd(), 'public', 'data', 'dei.json');
+
+const cittaData = JSON.parse(fs.readFileSync(cittaPath, 'utf-8'));
+const deiData = JSON.parse(fs.readFileSync(deiPath, 'utf-8'));
+
+const city = cittaData.find((c: any) => c.slug === 'baldurs-gate');
+const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
+---
+
+<MainLayout title={city.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/citta/overview" class="hover:text-yellow-400">Città</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{city.name}</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-yellow-900 via-slate-800 to-amber-900 border-2 border-yellow-600 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <h1 class="text-5xl mb-2 text-yellow-400">{city.name}</h1>
+        <p class="text-2xl text-yellow-300 italic">{city.race}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400 mb-1">Tema</div>
+        <div class="text-xl font-bold text-yellow-400">{city.theme}</div>
+      </div>
+    </div>
+    <p class="text-lg text-slate-200 leading-relaxed">{city.fullDescription}</p>
+  </div>
+
+  <!-- Cultura e Atmosfera -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Cultura e Atmosfera</h2>
+    <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+      <p class="text-slate-300 leading-relaxed">{city.culture}</p>
+    </div>
+  </section>
+
+  <!-- Dèi Patroni -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Dèi Patroni</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {cityGods.map((god: any) => (
+        <GodCard
+          name={god.name}
+          title={god.title}
+          domain={god.domain}
+          city={god.city}
+          description={god.description}
+          alignment={god.alignment}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Sistema Unico -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Sistema Unico</h2>
+    <InfoBox type="mechanic" title={city.uniqueSystem.name}>
+      <p>{city.uniqueSystem.description}</p>
+    </InfoBox>
+  </section>
+
+  <!-- Dungeon Theme -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Tema del Dungeon</h2>
+    <div class="bg-gradient-to-r from-red-900/20 to-yellow-900/20 border-2 border-red-700 rounded-lg p-6">
+      <p class="text-slate-300 text-lg leading-relaxed">{city.dungeonTheme}</p>
+    </div>
+  </section>
+
+  <!-- Luoghi Chiave -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Luoghi Chiave</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {city.keyLocations.map((location: string) => (
+        <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover:border-yellow-500 transition-colors">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-yellow-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-slate-300">{location}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/citta/myth-drannor" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Precedente: Myth Drannor
+    </a>
+    <a href="/citta/candlekeep" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Prossima: Candlekeep
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>

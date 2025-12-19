@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx create-astro@latest dnd-temp --template minimal --install --no-git --typescript strict --yes)",
+      "Bash(npx astro add:*)",
+      "Bash(robocopy:*)",
+      "Bash(powershell -Command \"Get-ChildItem -Path dnd-temp -Recurse | Move-Item -Destination . -Force\")",
+      "Bash(dir:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(npm install:*)",
+      "Bash(find:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

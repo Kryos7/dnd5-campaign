@@ -1,0 +1,200 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import CityCard from '../components/CityCard.astro';
+import ProgressTracker from '../components/ProgressTracker.astro';
+
+const citta = await fetch('/data/citta.json').then(r => r.json()).catch(() => []);
+---
+
+<MainLayout title="Home">
+  <!-- Hero Section -->
+  <div class="home-hero-section relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 border-2 border-yellow-500/30 mb-12">
+    <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+    <div class="relative px-8 py-16 md:py-12 text-center">
+      <div class="flex justify-center mb-6">
+        <svg class="w-20 h-20 text-yellow-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+        </svg>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
+        È Sbagliato Cercare Gloria in un Dungeon Divino?
+      </h1>
+
+      <p class="text-xl md:text-2xl text-blue-200 mb-8 max-w-3xl mx-auto italic">
+        Quando gli dèi camminano tra i mortali, il destino di Toril pende in bilico
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <div class="bg-slate-800/80 backdrop-blur px-6 py-3 rounded-full border border-yellow-500/50">
+          <span class="text-yellow-400 font-bold">7 Città</span>
+        </div>
+        <div class="bg-slate-800/80 backdrop-blur px-6 py-3 rounded-full border border-purple-500/50">
+          <span class="text-purple-400 font-bold">21 Dèi</span>
+        </div>
+        <div class="bg-slate-800/80 backdrop-blur px-6 py-3 rounded-full border border-red-500/50">
+          <span class="text-red-400 font-bold">Dungeon Divino</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/lore/annuncio" class="px-6 py-3 bg-yellow-600 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition-colors inline-flex items-center no-underline" style="color: white">
+          Scopri la Storia
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+        <a href="/citta/overview" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-colors inline-flex items-center no-underline" style="color: white">
+          Esplora le Città
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panoramica Rapida -->
+  <section class="mb-16">
+    <h2 class="text-4xl font-bold mb-8 text-center">
+      <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        Il Gioco Divino
+      </span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center">
+          <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          La Premessa
+        </h3>
+        <p class="text-slate-300 leading-relaxed">
+          Gli dèi sono scesi fisicamente sul Piano Materiale nei Forgotten Realms, creando un evento senza precedenti.
+          Hanno scelto 7 città, le hanno sigillate parzialmente dal resto del mondo, e hanno creato mega-dungeon
+          sotto ciascuna. Le gilde di avventurieri ora competono per completare questi dungeon, guadagnare il favore divino,
+          e portare gloria alla propria città.
+        </p>
+      </div>
+
+      <!-- <div class="bg-slate-800 border border-slate-700 rounded-lg p-6 dm-only">
+        <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center">
+          <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          La Verità (Solo DM)
+        </h3>
+        <p class="text-slate-300 leading-relaxed">
+          Un'entità primordiale si sta risvegliando nelle profondità di Toril. Gli dèi non possono affrontarla direttamente
+          senza distruggere il pianeta stesso. Il "Gioco Divino" è in realtà una guerra per procura: usano i mortali come
+          strumenti per indebolire e sigillare la minaccia. I dungeon sono rituali collettivi, e ogni livello completato
+          rafforza il sigillo.
+        </p>
+      </div>
+    </div> -->
+
+    <div class="bg-gradient-to-r from-purple-900/20 to-blue-900/20 border-2 border-purple-700/50 rounded-lg p-6">
+      <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center">
+        <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Meccaniche Chiave
+      </h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="bg-slate-800/50 rounded p-4">
+          <h4 class="font-bold text-emerald-400 mb-2">Favore Divino</h4>
+          <p class="text-sm text-slate-300">Sistema di ricompense per completare sfide e missioni divine</p>
+        </div>
+        <div class="bg-slate-800/50 rounded p-4">
+          <h4 class="font-bold text-yellow-400 mb-2">Competizione</h4>
+          <p class="text-sm text-slate-300">Gilde all'interno delle città e classifica globale tra città</p>
+        </div>
+        <div class="bg-slate-800/50 rounded p-4">
+          <h4 class="font-bold text-blue-400 mb-2">Dungeon Dinamici</h4>
+          <p class="text-sm text-slate-300">I primi livelli si rigenerano, i livelli profondi sono permanenti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status Progetto -->
+  <!-- <section class="mb-16 bg-slate-800 border border-slate-700 rounded-lg p-8">
+    <h2 class="text-3xl font-bold mb-6 text-center text-yellow-400">Stato del Progetto</h2>
+    <p class="text-center text-slate-400 mb-8">Questa documentazione è in sviluppo attivo</p>
+
+    <div class="max-w-2xl mx-auto space-y-4">
+      <ProgressTracker label="Lore e Ambientazione" percentage={85} color="purple" />
+      <ProgressTracker label="Città e Pantheon" percentage={100} color="blue" />
+      <ProgressTracker label="Meccaniche di Gioco" percentage={40} color="yellow" />
+      <ProgressTracker label="Dungeon Design" percentage={30} color="red" />
+      <ProgressTracker label="Gilde e PNG" percentage={20} color="green" />
+    </div>
+  </section> -->
+
+  <!-- Le 7 Città -->
+  <section class="mb-16">
+    <h2 class="text-4xl font-bold mb-8 text-center">
+      <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+        Le Sette Città Scelte
+      </span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {citta.map((city: any) => (
+        <CityCard
+          name={city.name}
+          slug={city.slug}
+          gods={city.gods}
+          theme={city.theme}
+          description={city.description}
+          race={city.race}
+        />
+      ))}
+    </div>
+
+    <div class="text-center">
+      <a href="/citta/overview" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-colors no-underline" style="color: white">
+        Confronta Tutte le Città
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="/meccaniche/favore-divino" class="block bg-emerald-900/30 border-2 border-emerald-700 rounded-lg p-6 hover:border-emerald-500 transition-all hover:shadow-lg hover:shadow-emerald-500/20 no-underline group">
+      <svg class="w-12 h-12 text-emerald-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <h3 class="text-xl font-bold text-emerald-400 mb-2 group-hover:text-emerald-300">Meccaniche</h3>
+      <p class="text-sm text-slate-300">Scopri come funzionano le regole del Gioco Divino</p>
+    </a>
+
+    <a href="/dungeon/overview" class="block bg-red-900/30 border-2 border-red-700 rounded-lg p-6 hover:border-red-500 transition-all hover:shadow-lg hover:shadow-red-500/20 no-underline group">
+      <svg class="w-12 h-12 text-red-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+      </svg>
+      <h3 class="text-xl font-bold text-red-400 mb-2 group-hover:text-red-300">Dungeon</h3>
+      <p class="text-sm text-slate-300">Esplora i mega-dungeon sotto le città</p>
+    </a>
+
+    <a href="/gilde/overview" class="block bg-yellow-900/30 border-2 border-yellow-700 rounded-lg p-6 hover:border-yellow-500 transition-all hover:shadow-lg hover:shadow-yellow-500/20 no-underline group">
+      <svg class="w-12 h-12 text-yellow-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+      </svg>
+      <h3 class="text-xl font-bold text-yellow-400 mb-2 group-hover:text-yellow-300">Gilde</h3>
+      <p class="text-sm text-slate-300">Organizzazioni di avventurieri che competono</p>
+    </a>
+
+    <a href="/dei/pantheon" class="block bg-purple-900/30 border-2 border-purple-700 rounded-lg p-6 hover:border-purple-500 transition-all hover:shadow-lg hover:shadow-purple-500/20 no-underline group">
+      <svg class="w-12 h-12 text-purple-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+      </svg>
+      <h3 class="text-xl font-bold text-purple-400 mb-2 group-hover:text-purple-300">Pantheon</h3>
+      <p class="text-sm text-slate-300">Conosci gli dèi che governano il Gioco</p>
+    </a>
+  </section>
+</MainLayout>

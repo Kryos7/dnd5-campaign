@@ -1,0 +1,406 @@
+[
+  {
+    "id": "guardiani-della-trama",
+    "name": "I Guardiani della Trama",
+    "slug": "guardiani-della-trama",
+    "type": "party",
+    "motto": "Equilibrio tra Forza, Fortuna e Saggezza",
+    "symbol": "Tre cerchi intrecciati (rosso = Tempus, oro = Tymora, blu = Mystra)",
+    "colors": ["Rosso", "Oro", "Blu"],
+    "founded": "2 mesi prima dell'apertura dungeon",
+    "foundingStory": "Fusione di 3 gilde minori: La Mano dell'Arcanista (maghi), Le Lame d'Argento (guerrieri), Le Monete Fortunate (ladri). I tre leader si incontrarono, decisero che uniti sarebbero stati imbattibili, e firmarono un contratto magico vincolante.",
+    "totalMembers": 20,
+    "mainTeam": 4,
+    "reserves": 16,
+    "headquarters": {
+      "location": "Dock Ward, 5 minuti a piedi dall'Arco Divino",
+      "type": "Casa a tre piani, ex-magazzino ristrutturato",
+      "floors": {
+        "ground": "Sala comune, cucina, armeria",
+        "first": "6 camere doppie (letti a castello)",
+        "second": "4 camere singole (Team Principale)",
+        "basement": "Magazzino, sala allenamento"
+      },
+      "rent": "150 MO/mese (pagato collettivamente)"
+    },
+    "budget": {
+      "initial": "5.000 MO",
+      "sources": [
+        "Favore Divino convertito (100 Favore = 50 MO)",
+        "Vendita tesori non magici",
+        "Nessuno sponsor (indipendenti)"
+      ]
+    },
+    "philosophy": "Nessuna divinità è superiore. Le tre vie (strategia, fortuna, conoscenza) portano tutte alla vittoria. L'equilibrio è la chiave.",
+    "reputation": {
+      "general": "Visti come outsider che hanno 'rubato' la vittoria a gilde più blasonate",
+      "nobles": "Guardati con sospetto (nessun sponsor = non controllabili)",
+      "commoners": "Popolari (storia underdog)",
+      "rivals": "Rispettati per equilibrio e versatilità"
+    },
+    "mainTeamMembers": [
+      {
+        "id": "valoris",
+        "name": "Valoris",
+        "fullName": "Valoris",
+        "race": "Umano",
+        "class": "Paladino 5 (Oath of the Crown)",
+        "deity": "Il Cavaliere Rosso (Red Knight, campionessa di Tempus)",
+        "level": 5,
+        "age": 24,
+        "alignment": "LG",
+        "appearance": {
+          "height": "1,85m",
+          "build": "Atletica, muscolosa",
+          "hair": "Castano scuro, corti e ordinati",
+          "eyes": "Marroni, sguardo determinato",
+          "skin": "Olivastra (origini Tethyriane)",
+          "distinctive": "Cicatrice sulla guancia sinistra",
+          "clothing": {
+            "city": "Tunica rossa della Compagnia Rossa, pantaloni scuri, stivali",
+            "mission": "Armatura a piastre (splint mail), mantello rosso",
+            "always": "Amuleto di Tymora al collo"
+          }
+        },
+        "background": "Cresciuto orfano a Baldur's Gate, viveva nelle strade. Una ragazza gli donò un amuleto di Tymora quando aveva 12 anni. Scoperto dal Cavaliere Rosso, venne addestrato come paladino. Si trasferì a Waterdeep per unirsi alla Compagnia Rossa.",
+        "motivations": [
+          "Portare onore al Cavaliere Rosso",
+          "Proteggere i deboli",
+          "Ritrovare l'amica che gli diede l'amuleto",
+          "Dimostrare che la strategia vince sulla forza bruta"
+        ],
+        "personality": [
+          "Onesto fino alla rigidità",
+          "Disciplinato (sveglia alle 5:00, allenamento quotidiano)",
+          "Protettivo verso compagni",
+          "Conflitto interno: strategia vs fortuna",
+          "Senso dell'umorismo sottile"
+        ],
+        "role": "Tank principale, leader morale, faccia del gruppo in situazioni formali",
+        "quotes": [
+          "La strategia vince guerre. L'onore le rende giuste.",
+          "Non lascio indietro nessuno.",
+          "Tymora mi ha salvato una volta. Ora tocca a me salvare altri."
+        ],
+        "weapon": "Spada lunga + scudo (stemma Cavaliere Rosso inciso)",
+        "secretGoal": "Trovare la ragazza che gli diede l'amuleto"
+      },
+      {
+        "id": "thalio",
+        "name": "Thalio Vaelaris",
+        "fullName": "Thalio Vaelaris",
+        "race": "Mezzelfo",
+        "class": "Ladro 3 / Bardo 2",
+        "deity": "Tymora",
+        "level": 5,
+        "age": 20,
+        "alignment": "CG",
+        "appearance": {
+          "height": "1,75m",
+          "build": "Magra, agile, leggiadra",
+          "hair": "Castano chiaro, mossi, sempre scompigliati",
+          "eyes": "Argento vivo (tratto elfico)",
+          "skin": "Chiara con sfumature elfiche",
+          "distinctive": "Orecchie leggermente appuntite, leggero bagliore sotto luna",
+          "clothing": {
+            "city": "Camicia ariosa, pantaloni elastici, cappello piumato",
+            "mission": "Armatura cuoio borchiato, mantello con cappuccio",
+            "always": "Flauto elfico alla cintura, ciondolo misterioso della madre"
+          }
+        },
+        "background": "Figlio di Lirael, barda elfica itinerante. Padre sconosciuto. Cresciuto viaggiando fino ai 10 anni, poi Lirael si stabilisce a Waterdeep. A 15 anni, Lirael scompare misteriosamente lasciando solo un ciondolo. Thalio continua nella gilda.",
+        "motivations": [
+          "Trovare indizi sulla madre scomparsa",
+          "Lasciare il segno nel mondo",
+          "Vivere avventure degne di canzoni",
+          "Seguire Tymora"
+        ],
+        "personality": [
+          "Chiacchierone",
+          "Ottimista",
+          "Rischioso ma non stupido",
+          "Leale a chi si fida",
+          "Performer naturale"
+        ],
+        "role": "Scout/Esplorazione, disinnesco trappole, supporto sociale, utility magica",
+        "quotes": [
+          "La vita è un dado lanciato. Speriamo esca 20!",
+          "Ho un'idea. Probabilmente pessima, ma divertente.",
+          "Mia madre diceva: 'Chi non risica, non rosica.' O forse l'ho inventata io."
+        ],
+        "weapons": "2 spade corte gemelle + pugnali da lancio",
+        "tools": "Flauto elfico, arnesi da scasso",
+        "secretGoal": "Il ciondolo della madre nasconde qualcosa"
+      },
+      {
+        "id": "riven",
+        "name": "Riven Solas",
+        "fullName": "Riven Solas",
+        "race": "Umano",
+        "class": "Stregone 5 (Wild Magic)",
+        "deity": "Nessuna ufficiale",
+        "magicOrigin": "Risvegliata durante Giorno dell'Annuncio",
+        "level": 5,
+        "age": 27,
+        "alignment": "CN",
+        "appearance": {
+          "height": "1,80m",
+          "build": "Media, non muscoloso",
+          "hair": "Neri corvini, arruffati (come percorsi da corrente)",
+          "eyes": "Blu scuro, occasionalmente scintillano",
+          "skin": "Pallida",
+          "distinctive": "Vene sotto pelle brillano viola quando lancia magia potente",
+          "clothing": {
+            "city": "Vestiti scuri (nero, grigio), stile pratico",
+            "mission": "Robes nere con cappuccio, nessuna armatura (Mage Armor)",
+            "always": "Guanti senza dita"
+          }
+        },
+        "background": "Vita normale fino al Giorno dell'Annuncio. Onda energia caotica risveglia magia selvaggia. Inizialmente terrificante (eventi casuali, esplosioni). Si allontana dalla famiglia per proteggerla. Ora invia loro denaro segretamente.",
+        "motivations": [
+          "Controllare la magia selvaggia",
+          "Proteggere la famiglia da lontano",
+          "Comprendere l'origine del suo potere",
+          "Esplorare i limiti"
+        ],
+        "personality": [
+          "Pragmatico",
+          "Riservato",
+          "Curioso intellettualmente",
+          "Diffidente",
+          "Ironico/Cinico"
+        ],
+        "role": "DPS magico principale, controllo campo, utility arcana",
+        "quotes": [
+          "La magia è caos. Io sono il caos. Dovremmo andare d'accordo.",
+          "Non è questione di bene o male. È questione di sopravvivere.",
+          "Posso provare a lanciare [incantesimo]. Probabilmente non esploderà. Probabilmente."
+        ],
+        "signatureSpells": ["Chaos Bolt", "Fireball", "Misty Step"],
+        "importantItem": "Diario dove annota ogni evento Wild Magic",
+        "secretGoal": "Capire se il risveglio è collegato agli Dèi"
+      },
+      {
+        "id": "fealer",
+        "name": "Fealer Corvonero",
+        "fullName": "Fealer Corvonero",
+        "race": "Elfo Alto",
+        "class": "Druido 5 (Circolo della Luna)",
+        "deity": "Nessuna (venera la Natura/Equilibrio)",
+        "level": 5,
+        "age": 127,
+        "alignment": "CN",
+        "appearance": {
+          "height": "1,75m",
+          "build": "Magra, asciutta",
+          "hair": "Bianchi argentei (prematuri)",
+          "eyes": "Verde bosco, intensi",
+          "skin": "Pallida con tono verdognolo",
+          "distinctive": "Piccole rune naturali tatuate sulle braccia",
+          "clothing": {
+            "always": "Robes marroni/verdi di pelle e foglie intrecciate",
+            "equipment": "Bastone di legno nodoso (focus), sacchetto semi ed erbe"
+          }
+        },
+        "background": "Eremita del Circolo della Luna, viveva nelle foreste settentrionali. Quando gli Dèi scesero, percepì un disturbo nella natura. Ha seguito le tracce dell'anomalia fino a Waterdeep. Si è unito alla gilda perché il dungeon è l'epicentro del disturbo.",
+        "motivations": [
+          "Ripristinare l'Equilibrio Naturale",
+          "Investigare il disturbo primordiale",
+          "Tornare al suo eremitaggio",
+          "NON cerca gloria/ricchezza/potere"
+        ],
+        "personality": [
+          "Distaccato emotivamente",
+          "Pragmatico estremo",
+          "Osservatore",
+          "Brutalmente onesto",
+          "Non capisce legami sociali"
+        ],
+        "role": "Tank secondario (Wild Shape), guarigione (unico healer vero), utility natura",
+        "quotes": [
+          "La morte è parte del ciclo. Accettatelo.",
+          "Non sono vostro amico. Siamo alleati temporanei.",
+          "Qualcosa è sbagliato qui. Lo sentite?"
+        ],
+        "wildShapes": [
+          "Orso Polare (tank, 42 HP)",
+          "Lupo Crudele (controllo, atterrare)",
+          "Aquila (ricognizione aerea)"
+        ],
+        "importantItem": "Diario naturalistico dove annota anomalie",
+        "secretGoal": "È l'unico che sospetta che qualcosa non va con gli Dèi",
+        "dmOnly": true
+      }
+    ],
+    "teamDynamics": {
+      "leadership": {
+        "combat": "Valoris propone, altri approvano/modificano",
+        "exploration": "Thalio decide (scout)",
+        "magic": "Riven e Fealer collaborano",
+        "social": "Thalio parla, Valoris interviene se serve autorevolezza"
+      },
+      "conflicts": [
+        "Valoris vs Thalio: Metodi (frontale vs furtivo)",
+        "Valoris vs Fealer: Moralità (salvare tutti vs pragmatismo)",
+        "Riven vs Party: Rischio magia selvaggia"
+      ],
+      "bonding": [
+        "Dopo combattimento: tutti si aiutano a curare",
+        "Riposo lungo: Thalio suona, altri ascoltano",
+        "Valoris cucina per tutti"
+      ],
+      "decisionMaking": "Votano (maggioranza 3/4). Se 2-2: lanciano moneta (Tymora decide)"
+    }
+  },
+  {
+    "id": "scudo-radiante",
+    "name": "Lo Scudo Radiante",
+    "slug": "scudo-radiante",
+    "type": "rival-lawful",
+    "motto": "Onore, Strategia, Fede",
+    "symbol": "Scudo d'argento con sole nascente",
+    "colors": ["Bianco", "Oro", "Rosso"],
+    "founded": "2 settimane prima delle Prove",
+    "totalMembers": 25,
+    "mainTeam": 4,
+    "reserves": 21,
+    "headquarters": {
+      "location": "Sea Ward (quartiere ricco)",
+      "type": "Villa a due piani donata da sponsor",
+      "cost": "0 (donata da Lord Eravien Haventree)"
+    },
+    "budget": "10.000 MO (sponsor ricco)",
+    "sponsor": "Lord Eravien Haventree (nobile, mercante, devoto di Tempus)",
+    "philosophy": "Serviamo gli Dèi con cuore puro e spada lucente. L'onore prima della vittoria.",
+    "reputation": {
+      "nobles": "Favoriti della nobiltà",
+      "guard": "Rispettati dalla Guardia Cittadina",
+      "commoners": "Visti come eroi classici",
+      "critics": "Troppo rigidi, troppo prevedibili"
+    },
+    "mainTeamMembers": [
+      {
+        "name": "Ser Aldric Brightblade",
+        "role": "Leader",
+        "race": "Umano",
+        "class": "Paladino di Tempus 6",
+        "age": 38,
+        "alignment": "LG",
+        "personality": "Carismatico, leader naturale, onorevole ma leggermente arrogante",
+        "background": "Ex-comandante Guardia Cittadina (10 anni)",
+        "weapon": "Spada lunga +1 'Dawnbreaker'",
+        "quote": "L'onore è più prezioso dell'oro."
+      },
+      {
+        "name": "Elira Sunweaver",
+        "role": "Vice-Leader",
+        "race": "Elfa del Sole",
+        "class": "Chierico di Mystra 5",
+        "age": 187,
+        "alignment": "NG",
+        "personality": "Intelligente, curiosa, gentile. Unica aperta mentalmente nel team",
+        "note": "Affascinata da magia non convenzionale. Molto interessata a Riven"
+      },
+      {
+        "name": "Durak Ironfoot",
+        "role": "Tank",
+        "race": "Nano di Scudo",
+        "class": "Guerriero (Battle Master) 5",
+        "age": 112,
+        "alignment": "LG",
+        "personality": "Silenzioso, burbero, leale. Parla pochissimo",
+        "weapon": "Ascia da battaglia nanica (eredità)"
+      },
+      {
+        "name": "Mira Swiftfoot",
+        "role": "Scout",
+        "race": "Halfling Piedilesti",
+        "class": "Ladra (Arcane Trickster) 4",
+        "age": 28,
+        "alignment": "NG",
+        "personality": "Outsider del gruppo (moralità grigia), pragmatica, schietta",
+        "note": "Tollerata da Aldric per necessità. Potenziale amicizia/rivalità con Thalio"
+      }
+    ],
+    "strengths": ["Strategia militare impeccabile", "Equipaggiamento superiore", "Esperienza"],
+    "weaknesses": ["Troppo rigidi", "Diffidenza verso magia non convenzionale", "Prendono pochi rischi"],
+    "progression": "Più veloci inizialmente (lv 1-6), stesso ritmo dopo (7-12), rallentano in late game (13+, rigidità mentale)"
+  },
+  {
+    "id": "sciocchi-fortunati",
+    "name": "Gli Sciocchi Fortunati",
+    "slug": "sciocchi-fortunati",
+    "type": "rival-chaotic",
+    "motto": "La fortuna favorisce gli audaci (e gli stupidi)",
+    "symbol": "Dado dorato con faccia sorridente",
+    "colors": ["Oro", "Rosso", "Nero"],
+    "founded": "2 settimane prima delle Prove",
+    "totalMembers": 18,
+    "mainTeam": 4,
+    "reserves": 14,
+    "headquarters": {
+      "location": "Dock Ward",
+      "type": "Taverna comprata (The Lucky Shot)",
+      "dualPurpose": "Base gilda + bar pubblico (guadagno extra)"
+    },
+    "budget": "7.000 MO (risparmi + guadagni taverna)",
+    "philosophy": "Fortuna e astuzia. Chi non osa, non vince. Le regole sono per i codardi.",
+    "reputation": {
+      "crowd": "Beniamini della folla (spettacolari, imprevedibili)",
+      "authorities": "Sospettati di metodi poco puliti (vero)",
+      "adventurers": "Rispettati per coraggio folle"
+    },
+    "mainTeamMembers": [
+      {
+        "name": "Kessa Goldtongue",
+        "role": "Leader",
+        "race": "Mezz'elfa",
+        "class": "Barda (Lore) 3 / Ladra (Thief) 2",
+        "age": 32,
+        "alignment": "CN",
+        "personality": "Carismatica incredibilmente, ex-truffatrice, codice d'onore strano",
+        "background": "Fuggita da Baldur's Gate per 'ricominciare' (debiti? mandato?)",
+        "quote": "Vita è scommessa. Io punto sempre sul rosso.",
+        "note": "Cerca attivamente di reclutare Thalio"
+      },
+      {
+        "name": "Zax Quickfingers",
+        "role": "Artefice",
+        "race": "Gnomo delle Rocce",
+        "class": "Artefice (Alchemist) 4",
+        "age": 87,
+        "alignment": "CN",
+        "personality": "Genio caotico, ossessionato da 'come funzionano le cose'",
+        "inventions": "Gadget (50% funzionano, 50% esplodono)",
+        "note": "OSSESSIONATO da magia selvaggia di Riven. Vuole studiarla"
+      },
+      {
+        "name": "Grom il Silenzioso",
+        "role": "Tank",
+        "race": "Mezz'orco",
+        "class": "Barbaro (Berserker) 5",
+        "age": 26,
+        "alignment": "CN",
+        "distinctive": "Muto (trauma infanzia)",
+        "background": "Ex-schiavo liberato da Kessa. Leale a morte verso di lei",
+        "weapon": "Ascia bipenne gigante"
+      },
+      {
+        "name": "Whisper",
+        "role": "Caster",
+        "race": "Tiefling",
+        "class": "Warlock (Great Old One) 4",
+        "age": "??? (dice numeri diversi ogni volta)",
+        "alignment": "CN",
+        "personality": "Estremamente misterioso, parla pochissimo e in modo criptico",
+        "patron": "??? (entità lovecraftiana sconosciuta)",
+        "quote": "Vuoto sussurra.",
+        "dmOnly": "Plot hook: potrebbe essere connesso all'entità primordiale",
+        "note": "Sembra riconoscere qualcosa in Fealer ('Tu senti disturbo, vero?')"
+      }
+    ],
+    "strengths": ["Audacia estrema", "Creatività tattica", "Fortuna divina (Tymora li ama)"],
+    "weaknesses": ["Imprevedibili", "Rischi stupidi", "Poco onorevoli (Tempus li disprezza)"],
+    "progression": "A strappi (fermi settimane, poi balzi enormi). Es: Lv 3 per 2 mesi, poi lv 7 in 1 settimana"
+  }
+]

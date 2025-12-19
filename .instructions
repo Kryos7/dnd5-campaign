@@ -1,0 +1,392 @@
+# D&D 5e Campaign Visual App - Project Instructions
+
+## PANORAMICA PROGETTO
+
+**Nome:** È Sbagliato Cercare Gloria in un Dungeon Divino?
+**Tipo:** Applicazione web interattiva wiki per campagna D&D 5e
+**Scopo:** Piattaforma centralizzata di gestione campagna per DM e giocatori
+
+**Concept Campagna:**
+21 divinità del Forgotten Realms sono discese sul Piano Materiale creando il "Gioco Divino".
+7 città sigillate con mega-dungeon sotterranei. Le gilde avventuriere competono per completare i dungeon, ottenere Favore Divino e portare gloria alle rispettive città.
+
+---
+
+## TECH STACK
+
+### Framework & Librerie
+- **Astro 5.16.4** - Framework principale per SSG
+- **React 19.2.3** - Componenti interattivi (auth, stato UI)
+- **TypeScript** - Type-safe in tutto il progetto
+- **Tailwind CSS 4.1.17** - Styling utility-first (@tailwindcss/vite)
+- **Supabase** - Backend PostgreSQL + Auth (@supabase/supabase-js 2.89.0)
+
+### Build & Dev
+- **Node.js/npm** - Package management
+- **Vite** - Dev server (tramite Astro)
+
+### Linguaggio
+**Italiano** per tutta l'UI, contenuti e documentazione
+
+---
+
+## STRUTTURA CARTELLE
+
+```
+dnd5-campaign-visual-app/
+├── public/
+│   └── data/
+│       ├── citta.json          # Dati 7 città (single source of truth)
+│       └── dei.json            # Dati 21 divinità
+│
+├── src/
+│   ├── components/
+│   │   ├── auth/               # Sistema autenticazione
+│   │   │   ├── AuthProvider.tsx       # React Context per stato auth
+│   │   │   ├── UserMenu.tsx           # UI login/logout
+│   │   │   ├── LoginForm.tsx          # Form di login
+│   │   │   └── VisibilityControls.tsx # Toggle modalità DM
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── AppShell.tsx           # Wrapper app con auth provider
+│   │   │   └── NavBar.tsx             # Barra navigazione con menu
+│   │   │
+│   │   ├── pages/              # Componenti specifici pagina
+│   │   │   ├── TestAuthContent.tsx
+│   │   │   └── TestAuthPage.tsx
+│   │   │
+│   │   └── [Componenti Astro] # UI riutilizzabili
+│   │       ├── CityCard.astro         # Card anteprima città
+│   │       ├── GodCard.astro          # Card informazioni dio
+│   │       ├── InfoBox.astro          # Container info (dm/player/mechanic/lore)
+│   │       ├── DungeonLevelCard.astro # Display livello dungeon
+│   │       └── ProgressTracker.astro  # Barra progresso
+│   │
+│   ├── layouts/
+│   │   └── MainLayout.astro           # Layout base con meta tags e AppShell
+│   │
+│   ├── pages/                   # Routing file-based Astro
+│   │   ├── index.astro          # Homepage
+│   │   ├── test-auth.astro      # Pagina test autenticazione
+│   │   ├── citta/               # Pagine città
+│   │   │   ├── overview.astro   # Vista griglia città
+│   │   │   ├── waterdeep.astro
+│   │   │   ├── mithral-hall.astro
+│   │   │   ├── menzoberranzan.astro
+│   │   │   ├── myth-drannor.astro
+│   │   │   ├── baldurs-gate.astro
+│   │   │   ├── candlekeep.astro
+│   │   │   └── luskan.astro
+│   │   │
+│   │   ├── dei/
+│   │   │   └── pantheon.astro   # Tutti i 21 dei organizzati per città
+│   │   │
+│   │   ├── lore/
+│   │   │   └── annuncio.astro   # Storia apertura campagna
+│   │   │
+│   │   ├── meccaniche/
+│   │   │   └── favore-divino.astro  # Sistema Favore Divino (placeholder)
+│   │   │
+│   │   ├── dungeon/
+│   │   │   └── overview.astro   # Panoramica sistema dungeon
+│   │   │
+│   │   ├── gilde/
+│   │   │   └── overview.astro   # Panoramica sistema gilde
+│   │   │
+│   │   └── reference/
+│   │       └── quick-tables.astro   # Tabelle riferimento rapido
+│   │
+│   ├── styles/
+│   │   └── global.css           # Stili globali e variabili tema
+│   │
+│   └── supabase/
+│       └── client.ts            # Inizializzazione client Supabase
+│
+├── .vscode/
+│   ├── extensions.json          # Estensioni VS Code raccomandate
+│   └── launch.json              # Configurazione debugging
+│
+├── Configuration Files
+│   ├── astro.config.mjs          # Config Astro (React, Tailwind)
+│   ├── tsconfig.json             # Config TypeScript strict
+│   ├── package.json              # Dipendenze e scripts
+│   └── package-lock.json         # Lock dipendenze
+│
+├── .env                          # Variabili ambiente (Supabase + account player)
+├── .gitignore
+├── README.md                     # Panoramica progetto
+└── USAGE.md                      # Guida uso dettagliata
+```
+
+---
+
+## FILE CHIAVE
+
+| File | Scopo |
+|------|-------|
+| `package.json` | Dipendenze e script npm (dev, build, preview) |
+| `astro.config.mjs` | Config Astro con integrazione React e Tailwind |
+| `src/layouts/MainLayout.astro` | Struttura HTML base, meta tags, wrapper AppShell |
+| `src/components/layout/AppShell.tsx` | Wrapper React con context autenticazione e footer |
+| `src/components/layout/NavBar.tsx` | Navigazione sticky con menu desktop/mobile |
+| `src/components/auth/AuthProvider.tsx` | React Context gestione stato auth e profilo |
+| `src/supabase/client.ts` | Inizializzazione client Supabase |
+| `public/data/citta.json` | Dati strutturati 7 città (fonte unica verità) |
+| `public/data/dei.json` | Dati strutturati 21 divinità |
+| `src/pages/index.astro` | Homepage con hero, quick links, griglia città |
+| `src/pages/citta/[city].astro` | Pagine dettaglio città |
+| `src/pages/dei/pantheon.astro` | Directory divinità organizzate per città |
+| `src/styles/global.css` | Colori tema, tipografia, stile scrollbar |
+
+---
+
+## FEATURE IMPLEMENTATE
+
+### ✅ Completate
+- Homepage con sezione hero
+- Panoramica città e 7 pagine dettaglio città
+- Pantheon completo (21 divinità)
+- Sezione lore/annuncio
+- Sistema autenticazione
+- Layout responsive base
+- Libreria componenti foundation
+
+### 🚧 In Progresso
+- Sistema meccaniche Favore Divino
+- Struttura e progressione dungeon
+- Sistema gilde
+- Tabelle riferimento rapido
+
+### 📋 Pianificate
+- Calcolatori interattivi
+- Mappe/aiuti visivi
+- Informazioni NPC dettagliate
+- Feature tracking campagna
+
+---
+
+## DATI JSON
+
+### Città (7 città totali)
+**Struttura `public/data/citta.json`:**
+```json
+{
+  "name": "Nome città",
+  "slug": "nome-citta",
+  "race": "Razza predominante",
+  "patronGods": ["Dio1", "Dio2", "Dio3"],
+  "theme": "Tema/Atmosfera",
+  "description": "Descrizione breve",
+  "culture": "Descrizione cultura",
+  "fullDescription": "Descrizione completa",
+  "dungeonTheme": "Tema dungeon",
+  "uniqueSystem": {
+    "name": "Nome sistema unico",
+    "description": "Descrizione"
+  },
+  "locations": [
+    {
+      "name": "Nome location",
+      "description": "Descrizione",
+      "type": "district/landmark/building"
+    }
+  ]
+}
+```
+
+**Le 7 Città:**
+1. **Waterdeep** - Umani - Tyr, Mystra, Waukeen
+2. **Mithral Hall** - Nani - Moradin, Clangeddin Silverbeard, Dumathoin
+3. **Menzoberranzan** - Drow - Lolth, Vhaeraun, Eilistraee
+4. **Myth Drannor** - Elfi - Corellon Larethian, Sehanine Moonbow, Labelas Enoreth
+5. **Baldur's Gate** - Mezzorchi - Gruumsh, Ilneval, Luthic
+6. **Candlekeep** - Gnomi - Garl Glittergold, Baervan Wildwanderer, Flandal Steelskin
+7. **Luskan** - Halfling - Yondalla, Brandobaris, Sheela Peryroyl
+
+### Divinità (21 divinità, 3 per città)
+**Struttura `public/data/dei.json`:**
+```json
+{
+  "name": "Nome divinità",
+  "title": "Epiteto/Titolo",
+  "domain": ["Dominio1", "Dominio2"],
+  "city": "città-associata",
+  "alignment": "Allineamento",
+  "description": "Descrizione",
+  "expectations": "Cosa si aspetta dai fedeli",
+  "blessings": "Benedizioni concesse",
+  "symbol": "Simbolo"
+}
+```
+
+---
+
+## AUTENTICAZIONE & CONTROLLO ACCESSO
+
+### Architettura Sistema
+- **Supabase Auth** - Email/password based
+- **Tabella Profile** - Ruolo utente: `dm` o `player`
+- Nome personaggio memorizzato per player
+- Timestamp created_at per audit
+
+### Ruoli Utente
+- **DM (Dungeon Master)** - Accesso completo inclusi contenuti DM-only
+- **Player** - Limitato a contenuti pubblici e player-specific
+
+### Implementazione
+- **AuthProvider** - React context distribuzione stato auth
+- **useAuth hook** - Accesso auth per componenti
+- **CSS class `dm-only`** - Nasconde contenuti da non-DM
+- **UserMenu** - Gestione UI login/logout
+
+### Account Test (.env)
+4 account player predefiniti:
+- dino@example.com
+- comy@example.com
+- leo@example.com
+- gian@example.com
+
+---
+
+## DESIGN & STYLING
+
+### Color Scheme
+- **Background:** Slate-950 (molto scuro)
+- **Accent primario:** Giallo/Oro (#d4af37)
+- **Colori città:** Blu, Viola, Rosso, Smeraldo
+- **Gerarchia divinità:** Bordi giallo/oro
+- **Contenuti DM:** Accent rosso
+- **Contenuti Player:** Accent blu
+
+### Tipografia
+- Stack font sistema con fallback
+- Georgia serif per heading
+- Sizing responsive (mobile-first)
+
+### Componenti UI
+- Card-based per città, divinità, location
+- Info box con styling contestuale (DM/Player/Mechanic/Lore)
+- Progress tracker con codifica colori
+- Breadcrumb navigation per wayfinding
+
+---
+
+## CONFIGURAZIONE
+
+### astro.config.mjs
+```javascript
+integrations: [react()]
+vite: { plugins: [tailwindcss()] }
+```
+
+### .env Variables
+```
+PUBLIC_SUPABASE_URL=your_url
+PUBLIC_SUPABASE_ANON_KEY=your_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_key
+```
+
+### Scripts npm
+```bash
+npm run dev     # Dev server localhost:4321
+npm run build   # Build produzione -> ./dist/
+npm run preview # Preview build locale
+npm run astro   # Accesso diretto CLI Astro
+```
+
+---
+
+## DEPLOYMENT
+
+### Opzioni Supportate
+1. **Vercel** - Auto-deploy da GitHub
+2. **Netlify** - Build command: `npm run build`
+3. **GitHub Pages** - Via Actions con config site/base
+
+**Output:** `dist/` folder (HTML/CSS/JS statico)
+
+---
+
+## CONVENZIONI CODICE
+
+### File Naming
+- **Astro components:** PascalCase.astro
+- **React components:** PascalCase.tsx
+- **Pages:** kebab-case.astro
+- **Data files:** kebab-case.json
+
+### Import Patterns
+- Astro components usano `---` frontmatter
+- React components usano named exports
+- Layout wrappano con `<slot />`
+
+### Styling
+- Tailwind utility classes preferite
+- CSS custom solo per tema globale
+- Responsive con prefissi (md:, lg:)
+- Dark mode via color theming
+
+---
+
+## TROUBLESHOOTING
+
+### Problemi Comuni
+1. **Auth non funziona:** Controlla variabili .env
+2. **Build fallisce:** Verifica dipendenze npm install
+3. **Hot reload lento:** Riavvia dev server
+4. **Styling non applica:** Controlla ordine import Tailwind
+
+### Log & Debug
+- Console browser per errori client-side
+- Terminal server per errori build
+- Supabase dashboard per query/auth issues
+
+---
+
+## PROSSIMI STEP SVILUPPO
+
+### Priority Alta
+1. Completare sistema Favore Divino
+2. Dettagliare struttura dungeon (livelli 1-20+)
+3. Implementare sistema gilde
+4. Aggiungere tabelle riferimento
+
+### Priority Media
+5. Calcolatori interattivi
+6. Sistema mappe/visual aids
+7. Database NPC espanso
+8. Tracking progresso campagna
+
+### Priority Bassa
+9. Sistema note personali player
+10. Timeline eventi campagna
+11. Bestiary mostri
+12. Sistema loot tracking
+
+---
+
+## NOTE AGGIUNTIVE
+
+- **Lingua:** Tutto il progetto è in italiano (UI, contenuti, commenti)
+- **Mobile-First:** Design ottimizzato per mobile poi desktop
+- **SEO:** Meta tags in MainLayout per tutte le pagine
+- **Accessibilità:** Semantic HTML, contrasto colori conforme
+- **Performance:** Astro genera HTML statico per caricamento veloce
+- **Type Safety:** TypeScript strict mode attivo ovunque
+
+---
+
+## CONTATTI & RISORSE
+
+- **Repository:** Progetto locale (no git remoto configurato)
+- **Docs Astro:** https://docs.astro.build
+- **Docs Supabase:** https://supabase.com/docs
+- **Docs Tailwind:** https://tailwindcss.com/docs
+- **D&D 5e SRD:** https://www.5esrd.com
+
+---
+
+**Ultimo aggiornamento:** 2025-12-19
+**Versione Astro:** 5.16.4
+**Versione React:** 19.2.3
+**Versione Node:** (verificare con `node --version`)

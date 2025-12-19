@@ -1,0 +1,183 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import GodCard from '../../components/GodCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+const cittaPath = path.join(process.cwd(), 'public', 'data', 'citta.json');
+const deiPath = path.join(process.cwd(), 'public', 'data', 'dei.json');
+
+const cittaData = JSON.parse(fs.readFileSync(cittaPath, 'utf-8'));
+const deiData = JSON.parse(fs.readFileSync(deiPath, 'utf-8'));
+
+const city = cittaData.find((c: any) => c.slug === 'candlekeep');
+const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
+---
+
+<MainLayout title={city.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/citta/overview" class="hover:text-yellow-400">Città</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{city.name}</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-purple-900 via-slate-800 to-indigo-900 border-2 border-purple-600 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <h1 class="text-5xl mb-2 text-yellow-400">{city.name}</h1>
+        <p class="text-2xl text-purple-300 italic">{city.race}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400 mb-1">Tema</div>
+        <div class="text-xl font-bold text-purple-400">{city.theme}</div>
+      </div>
+    </div>
+    <p class="text-lg text-slate-200 leading-relaxed">{city.fullDescription}</p>
+  </div>
+
+  <!-- Cultura e Atmosfera -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Cultura e Atmosfera</h2>
+    <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+      <p class="text-slate-300 leading-relaxed">{city.culture}</p>
+    </div>
+  </section>
+
+  <!-- Dèi Patroni -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Dèi Patroni</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      {cityGods.map((god: any) => (
+        <GodCard
+          name={god.name}
+          title={god.title}
+          domain={god.domain}
+          city={god.city}
+          description={god.description}
+          alignment={god.alignment}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Tensione Divina Unica -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Il Conflitto della Conoscenza</h2>
+    <InfoBox type="dm" title="La Tensione tra Tre Filosofie">
+      <p class="mb-3">
+        Candlekeep è unica tra le sette città perché i suoi tre dèi patroni hanno filosofie fondamentalmente incompatibili riguardo alla conoscenza:
+      </p>
+      <ul class="space-y-2 mb-4">
+        <li><strong class="text-blue-400">Oghma (N)</strong> - Crede che tutta la conoscenza debba essere condivisa e preservata per l'umanità. Sta cercando attivamente indizi sulla vera natura del Gioco Divino.</li>
+        <li><strong class="text-cyan-400">Savras (LN)</strong> - Vede la verità completa ma è vincolato da leggi divine a non rivelarla direttamente. Può solo offrire visioni criptiche e profezie ambigue.</li>
+        <li><strong class="text-purple-400">Vecna (NE)</strong> - Conosce la verità sull'entità primordiale e vuole sfruttarla. Accumula segreti come potere e cerca di impedire che altri scoprano troppo.</li>
+      </ul>
+      <p class="text-yellow-300 font-bold">
+        Questo crea un gioco pericoloso: le gilde di Candlekeep si trovano al centro di una guerra segreta tra divinità, dove ogni frammento di conoscenza acquisito potrebbe essere la chiave per salvare o condannare Toril.
+      </p>
+    </InfoBox>
+  </section>
+
+  <!-- Sistema Unico -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Sistema Unico</h2>
+    <InfoBox type="mechanic" title={city.uniqueSystem.name}>
+      <p class="mb-4">{city.uniqueSystem.description}</p>
+      <div class="bg-slate-900/50 rounded p-4 mt-4">
+        <h4 class="font-bold text-emerald-400 mb-2">Come Funziona:</h4>
+        <ul class="text-sm space-y-2">
+          <li>• Decifrare testi antichi nel dungeon: +10 Punti Conoscenza</li>
+          <li>• Risolvere enigmi complessi: +15 Punti Conoscenza</li>
+          <li>• Scoprire lore sulla storia di Toril: +5 Punti Conoscenza</li>
+          <li>• Trovare artefatti che rivelano segreti: +20 Punti Conoscenza</li>
+        </ul>
+        <h4 class="font-bold text-purple-400 mb-2 mt-4">Spendere Punti Conoscenza:</h4>
+        <ul class="text-sm space-y-2">
+          <li>• <strong>Visione di Savras (50 pt)</strong>: Ricevi una visione criptica del futuro prossimo</li>
+          <li>• <strong>Saggezza di Oghma (30 pt)</strong>: Ottieni la risposta a una domanda specifica</li>
+          <li>• <strong>Segreto di Vecna (80 pt)</strong>: Apprendi una verità proibita che dà potere ma può avere conseguenze</li>
+        </ul>
+      </div>
+    </InfoBox>
+  </section>
+
+  <!-- Dungeon Theme -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Tema del Dungeon</h2>
+    <div class="bg-gradient-to-r from-red-900/20 to-purple-900/20 border-2 border-red-700 rounded-lg p-6">
+      <p class="text-slate-300 text-lg leading-relaxed mb-4">{city.dungeonTheme}</p>
+      <div class="bg-slate-900/50 rounded p-4">
+        <h4 class="font-bold text-red-400 mb-2">Caratteristiche Uniche del Dungeon:</h4>
+        <ul class="text-sm space-y-2 text-slate-300">
+          <li>• <strong>Biblioteche Viventi</strong>: I libri attaccano chi non è degno di leggerli</li>
+          <li>• <strong>Custodi del Sapere</strong>: Costrutti antichi che proteggono conoscenze pericolose</li>
+          <li>• <strong>Camere Paradosso</strong>: Stanze dove la logica normale non funziona</li>
+          <li>• <strong>Archivi Temporali</strong>: Sezioni che mostrano eventi del passato e possibili futuri</li>
+          <li>• <strong>Il Labirinto dei Segreti</strong>: Un livello profondo dove Vecna nasconde verità proibite</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luoghi Chiave -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Luoghi Chiave</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {city.keyLocations.map((location: string) => (
+        <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover:border-purple-500 transition-colors">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-purple-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p class="text-slate-300">{location}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Hook Narrativi -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Hook Narrativi per Candlekeep</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-gradient-to-br from-blue-900/30 to-slate-800 border border-blue-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-blue-400 mb-2">Il Libro Proibito</h3>
+        <p class="text-sm text-slate-300">Un tomo antico nel dungeon fa riferimento a un'entità dormiente sotto Toril. Vecna cerca di impedirne la scoperta, Oghma vuole che sia studiato, Savras offre visioni inquietanti.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-900/30 to-slate-800 border border-purple-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-purple-400 mb-2">La Profezia di Savras</h3>
+        <p class="text-sm text-slate-300">"Sette pilastri tengono il mondo, ma uno nasconde verità che gli altri ignorano." I giocatori devono decifrare cosa significhi.</p>
+      </div>
+      <div class="bg-gradient-to-br from-red-900/30 to-slate-800 border border-red-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-red-400 mb-2">I Sussurri di Vecna</h3>
+        <p class="text-sm text-slate-300">Vecna offre potere proibito a chi giura di mantenere certi segreti. Accettare porta potere immenso ma conseguenze pericolose.</p>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-900/30 to-slate-800 border border-emerald-700 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-emerald-400 mb-2">La Ricerca di Oghma</h3>
+        <p class="text-sm text-slate-300">Oghma chiede alle gilde di raccogliere frammenti di conoscenza dispersi nelle altre sei città. Questo crea opportunità di interazione tra campagne diverse.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/citta/baldurs-gate" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Precedente: Baldur's Gate
+    </a>
+    <a href="/citta/luskan" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Prossima: Luskan
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>
