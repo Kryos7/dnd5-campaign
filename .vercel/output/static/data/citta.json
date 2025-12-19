@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Waterdeep",
+    "slug": "waterdeep",
+    "race": "Umani/Mista",
+    "gods": ["Tempus", "Tymora", "Mystra"],
+    "theme": "Strategia, Fortuna e Conoscenza",
+    "population": "~130.000 abitanti",
+    "government": "I Lord Mascherati + Open Lord",
+    "description": "La Città degli Splendori, cuore nevralgico di Faerûn. Sotto la Triade Divina di Tempus, Tymora e Mystra, Waterdeep rappresenta l'equilibrio perfetto tra strategia militare, fortuna audace e sapere arcano.",
+    "fullDescription": "Waterdeep, la leggendaria Città degli Splendori, è il cuore pulsante della civiltà nei Forgotten Realms. Cosmopolita e ricca, è il crocevia dove avventurieri di ogni razza convergono, dove il commercio fiorisce e dove la magia permea ogni pietra.\n\nDurante il Gioco Divino, Waterdeep è stata scelta come una delle sette città sigillate. Tempus, Tymora e Mystra hanno disceso sul Piano Materiale, creando l'Arco Divino - un maestoso portale che conduce al mega-dungeon sotterraneo. La città è ora un palcoscenico dove le gilde di avventurieri competono per Favore Divino, gloria eterna e tesori leggendari.\n\nLa popolazione è 'intrappolata' dalla barriera divina che circonda la città, ma non scontenta: il Gioco porta prosperità, eccitazione e speranza. Gli avventurieri sono diventati celebrità assolute, le taverne brulicano di scommesse, e i bambini giocano a 'Gilde e Mostri' per le strade.",
+    "culture": "Cosmopolita e meritocratica. Strategia, fortuna e conoscenza sono valorizzate equamente. La città celebra l'equilibrio tra le tre vie divine.",
+    "dungeonTheme": "Fondamenta urbane corrotte, rovine dimenticate e archivi arcani dove il passato nasconde segreti",
+    "uniqueSystem": {
+      "name": "Triade del Favore",
+      "description": "Le gilde guadagnano Favore separato con ciascuna delle tre divinità: Tempus (strategia e onore), Tymora (rischio e fortuna), Mystra (conoscenza e magia). L'equilibrio tra i tre è la chiave del successo."
+    },
+    "wards": [
+      {
+        "name": "Castle Ward",
+        "description": "Sede dei Lord Mascherati, Palazzo di Giustizia e uffici amministrativi del Gioco"
+      },
+      {
+        "name": "Sea Ward",
+        "description": "Quartiere dei nobili con ville lussuose. Qui si trova il Campo di Marte"
+      },
+      {
+        "name": "Trades Ward",
+        "description": "Centro commerciale aperto 24/7 durante il Gioco"
+      },
+      {
+        "name": "Southern Ward",
+        "description": "Carovane e magazzini. Molte gilde hanno quartier generale qui"
+      },
+      {
+        "name": "Dock Ward",
+        "description": "Porto, taverne rumorose e vita caotica"
+      },
+      {
+        "name": "North Ward",
+        "description": "Residenze borghesi e artigiani di qualità"
+      },
+      {
+        "name": "City of the Dead",
+        "description": "Cimitero cittadino, chiuso al pubblico durante il Gioco"
+      }
+    ],
+    "keyLocations": [
+      {
+        "name": "L'Arco Divino",
+        "type": "dungeon-entrance",
+        "description": "Maestoso arco di 15 metri creato dalle tre divinità al centro della Piazza del Monte. Tre colonne intrecciate (rossa, dorata, blu) sostengono l'arco. All'interno, una scalinata di pietra bianca scende nelle profondità, illuminata da fiamme perpetue. Solo chi porta il Marchio Divino può accedere al dungeon.",
+        "district": "Castle Ward"
+      },
+      {
+        "name": "Il Campo di Marte",
+        "type": "arena",
+        "description": "Arena circolare da 5.000 spettatori dove si tengono i Tornei tra Gilde ogni 7 giorni. Tempus appare qui settimanalmente. Protezioni magiche di Mystra impediscono la morte durante i combattimenti.",
+        "district": "Sea Ward"
+      },
+      {
+        "name": "Il Tempio della Trama",
+        "type": "temple",
+        "description": "Torre a 7 piani in marmo bianco dedicata a Mystra. Biblioteca enorme (30.000 volumi), laboratori arcani e santuario stellato. Alta Sacerdotessa: Remallia Haventree. Offre identificazione oggetti, vendita pergamene e consulenze magiche.",
+        "district": "Castle Ward"
+      },
+      {
+        "name": "La Sala della Fortuna",
+        "type": "temple",
+        "description": "Tempio-casinò rotondo dorato dedicato a Tymora. Tavoli da gioco, scommesse sulle gilde e il famoso 'Dado di Tymora'. Tymora appare qui casualmente 2d6 volte al mese. Alto Sacerdote: Daramos Lauthyr.",
+        "district": "Dock Ward"
+      },
+      {
+        "name": "Il Santuario di Tempus",
+        "type": "temple",
+        "description": "Edificio militare spartano con armeria e campi d'addestramento. Tempus appare qui ogni sabato mattina alle 8:00 per benedire le armi. Sommo Sacerdote: Lord Commander Rian Stormhammer.",
+        "district": "Castle Ward"
+      },
+      {
+        "name": "Il Monte Waterdeep",
+        "type": "fortress",
+        "description": "Castello al centro della città, sede dei Lord Mascherati e del Concilio del Gioco. Sulla cima, un faro magico brilla quando un ecosistema viene completato (colore varia per gilda vincitrice).",
+        "district": "Castle Ward"
+      }
+    ],
+    "divineBarrier": {
+      "active": true,
+      "description": "Una barriera invisibile circonda la città. Nessuno può entrare o uscire senza permesso esplicito degli Dèi. Comunicazioni magiche limitate (solo Sending, 1/giorno per persona)."
+    },
+    "economy": {
+      "status": "Boom economico",
+      "inflation": "30-50% su beni d'avventura",
+      "newServices": [
+        "Assicurazioni sulle vite (100 MO/anno, paga 1000 MO alla famiglia)",
+        "Curatori professionisti (50 MO/livello incantesimo)",
+        "Valutatori di tesori (100 MO per identificazione)",
+        "Cartografi (vendono mappe, spesso false)"
+      ]
+    },
+    "socialDivisions": {
+      "proGame": "80% - Mercanti, avventurieri, giovani",
+      "neutral": "15% - Artigiani, famiglie, anziani",
+      "againstGame": "5% - Sacerdoti di altre divinità, scettici, filosofi"
+    }
+  },
+  {
+    "name": "Mithral Hall",
+    "slug": "mithral-hall",
+    "race": "Nani",
+    "gods": ["Moradin", "Clangeddin", "Dumathoin"],
+    "theme": "Onore e Forgia",
+    "description": "L'antica fortezza nanica nelle montagne, dove l'onore è tutto. Le gilde naniche competono non solo per la gloria, ma per dimostrare il proprio valore secondo gli antichi codici.",
+    "fullDescription": "Nelle profondità delle Montagne del Ghiaccio, Mithral Hall risplende come un gioiello di pietra e acciaio. Questa cittadella nanica, un tempo perduta e poi riconquistata, è ora il fulcro del potere nanico nel Nord. Sotto la protezione di Moradin il Forgiatore d'Anime, Clangeddin il Guerriero e Dumathoin il Custode dei Segreti, i nani di Mithral Hall incarnano i valori dell'artigianato, dell'onore in battaglia e della preservazione delle tradizioni.\n\nIl Gioco Divino ha riacceso l'antica fiamma dell'orgoglio nanico. Le forgie bruciano giorno e notte, mentre le gilde competono per creare le armi e armature più magnifiche recuperando materiali dal dungeon sottostante.",
+    "culture": "Tradizionalista e basata sul clan. L'onore personale e la maestria artigianale sono i valori supremi.",
+    "dungeonTheme": "Antiche miniere e camere di forgia dove i segreti della creazione attendono",
+    "uniqueSystem": {
+      "name": "Codice dell'Onore",
+      "description": "Le gilde accumulano punti Onore completando sfide frontalmente senza sotterfugi. L'onore può essere speso per benedizioni divine permanenti sulle armi forgiate."
+    },
+    "keyLocations": [
+      "La Grande Forgia - Cuore produttivo di Mithral Hall",
+      "La Sala del Trono di Bruenor - Sede del potere",
+      "Le Miniere Profonde - Vene di mithral ancora attive",
+      "La Porta di Mithral - Ingresso monumentale alla cittadella"
+    ]
+  },
+  {
+    "name": "Menzoberranzan",
+    "slug": "menzoberranzan",
+    "race": "Drow",
+    "gods": ["Lolth", "Vhaeraun", "Kiaransalee"],
+    "theme": "Tradimento e Crudeltà",
+    "description": "La città drow nelle profondità dell'Underdark, dove il tradimento è un'arte. Qui le gilde si pugnalano alle spalle mentre Lolth osserva compiaciuta il caos che ne deriva.",
+    "fullDescription": "Nelle tenebre eterne dell'Underdark, Menzoberranzan brilla di una luce sinistra. Questa metropoli drow + un groviglio di ragnatele, torri di pietra oscura e intrigo costante. Governata dalle Casate matriarcali devote a Lolth, la Regina Ragno, la città è un teatro perpetuo di tradimento, assassinio e giochi di potere.\n\nIl Gioco Divino ha intensificato le tradizionali rivalità drow. Lolth, affiancata da Vhaeraun (dio dei drow maschi) e Kiaransalee (dea dei non-morti), ha trasformato il dungeon in un'arena dove il tradimento è non solo permesso, ma incoraggiato. Le gilde drow non competono solo contro il dungeon, ma principalmente l'una contro l'altra.",
+    "culture": "Matriarcale, spietata e meritocratica attraverso l'assassinio. Il tradimento è una virtù, la debolezza un peccato capitale.",
+    "dungeonTheme": "Ragnatele viventi e templi maledetti dove la paranoia è l'unica alleata",
+    "uniqueSystem": {
+      "name": "Favore attraverso il Tradimento",
+      "description": "Le gilde guadagnano favore extra sabotando altre gilde. Lolth premia particolarmente i tradimenti ben orchestrati. Tuttavia, essere traditi troppo spesso porta alla dissoluzione della gilda."
+    },
+    "keyLocations": [
+      "Tier Breche - Accademia delle arti oscure",
+      "Casa Baenre - La più potente casata drow",
+      "Il Bazaar dell'Underdark - Mercato di schiavi e rarità",
+      "Il Tempio di Lolth - Centro del potere religioso"
+    ]
+  },
+  {
+    "name": "Myth Drannor",
+    "slug": "myth-drannor",
+    "race": "Elfi",
+    "gods": ["Corellon", "Sehanine", "Hanali"],
+    "theme": "Redenzione e Memoria",
+    "description": "L'antica città elfica risorta dalle rovine, un luogo di bellezza e malinconia. Le gilde elfiche cercano di redimere il passato glorioso della città esplorando il dungeon che custodisce antichi segreti.",
+    "fullDescription": "Un tempo la più grande città di Faerun, Myth Drannor cadde in rovina secoli fa, vittima della propria ambizione. Ora, grazie all'intervento diretto di Corellon Larethian, Sehanine Moonbow e Hanali Celanil, la città è stata parzialmente restaurata - non alla sua gloria passata, ma come un monumento vivente alla memoria e alla possibilità di redenzione.\n\nLa città è un luogo di bellezza malinconica, dove torri di cristallo ancora integre si ergono accanto a rovine coperte di vegetazione. Gli elfi che qui risiedono portano il peso della storia, cercando di riscoprire la saggezza perduta senza ripetere gli errori del passato.",
+    "culture": "Contemplativa e orientata alla preservazione. Gli elfi valorizzano la conoscenza antica e la redenzione attraverso l'azione saggia.",
+    "dungeonTheme": "Biblioteche dimenticate e santuari arcani dove il passato insegna al presente",
+    "uniqueSystem": {
+      "name": "Echi del Passato",
+      "description": "Le gilde possono accedere a visioni del passato di Myth Drannor, ottenendo conoscenze che forniscono vantaggi nel dungeon. Ogni visione recuperata aumenta il favore divino e sblocca nuove aree."
+    },
+    "keyLocations": [
+      "La Torre dell'Arte - Antica accademia di magia",
+      "Il Bosco degli Alberi Cantori - Foresta sacra nel cuore della città",
+      "Le Rovine del Palazzo Coronal - Sede dell'antico potere",
+      "La Biblioteca di Alaundo - Archivio di sapere perduto"
+    ]
+  },
+  {
+    "name": "Baldur's Gate",
+    "slug": "baldurs-gate",
+    "race": "Umani/Mista",
+    "gods": ["Waukeen", "Umberlee", "Gond"],
+    "theme": "Commercio e Opportunismo",
+    "description": "La città portuale dove tutto ha un prezzo. Le gilde qui non combattono solo per gloria, ma per profitto. Il dungeon è una miniera d'oro, e Baldur's Gate intende sfruttarla al massimo.",
+    "fullDescription": "Sulla foce del fiume Chionthar, Baldur's Gate è il crocevia del commercio della Costa della Spada. Città di mercanti, pirati e opportunisti, è governata dal Consiglio dei Quattro e dai Duchi che bilanciano potere politico ed economico. Con l'arrivo del Gioco Divino, Waukeen (dea del commercio), Umberlee (dea del mare) e Gond (dio dell'invenzione) hanno trasformato la città in un'enorme impresa commerciale.\n\nA Baldur's Gate, ogni risorsa estratta dal dungeon viene immediatamente monetizzata. Le gilde operano come corporazioni, con azionisti, investitori e un mercato azionario basato sulle loro performance nel dungeon.",
+    "culture": "Capitalista e pragmatica. Il successo economico è l'unica metrica che conta. L'etica è negoziabile, il profitto no.",
+    "dungeonTheme": "Camere del tesoro e magazzini dimenticati dove la ricchezza attende gli audaci",
+    "uniqueSystem": {
+      "name": "Economia di Mercato",
+      "description": "Le gilde possono vendere risorse, comprare equipaggiamento superiore e persino assumere mercenari NPC. Il mercato fluttua in base alla domanda e offerta. Le gilde possono investire in altre gilde per profitti condivisi."
+    },
+    "keyLocations": [
+      "La Sala dei Meravigliosi - Tempio di Gond",
+      "Il Mercato Largo - Centro commerciale",
+      "I Moli - Dove Umberlee esige il suo tributo",
+      "La Rocca Fiammeggiante - Fortezza che domina la città"
+    ]
+  },
+  {
+    "name": "Candlekeep",
+    "slug": "candlekeep",
+    "race": "Mista (Studiosi di tutte le razze)",
+    "gods": ["Oghma", "Savras", "Vecna"],
+    "theme": "Verità Proibita e Conoscenza",
+    "description": "La leggendaria biblioteca-fortezza, custode della conoscenza di Faerun. Qui, tre divinità della conoscenza competono: Oghma cerca la verità, Savras la prevede, Vecna la nasconde. Il dungeon sotto Candlekeep potrebbe contenere la chiave per svelare il vero scopo del Gioco Divino.",
+    "fullDescription": "Arroccata sulle scogliere a sud di Baldur's Gate, Candlekeep è molto più di una biblioteca - è un santuario della conoscenza, una fortezza impenetrabile, e ora una delle sette città scelte dagli dèi. Per secoli, l'ingresso a Candlekeep richiedeva il dono di un libro mai visto prima. Ora, con il Gioco Divino, le porte si sono aperte a studiosi, avventurieri e cercatori di verità.\n\nLa presenza simultanea di Oghma, Savras e Vecna crea una tensione unica: tre filosofie della conoscenza in conflitto. Oghma vuole che la verità sia condivisa, Savras la vede ma non può rivelarla direttamente, Vecna la accumula come potere. Le gilde di Candlekeep non sono semplici gruppi di avventurieri - sono équipe di ricerca, squadre investigative che cercano non solo tesori, ma risposte.",
+    "culture": "Meritocratica basata sull'intelletto. La conoscenza è il vero potere. Studiosi di ogni razza e background lavorano fianco a fianco. Il dibattito intellettuale è valorizzato quanto il coraggio.",
+    "dungeonTheme": "Archivi dimenticati e camere di conoscenza proibita dove ogni risposta genera nuove domande",
+    "uniqueSystem": {
+      "name": "Ricerca della Verità",
+      "description": "Le gilde guadagnano 'Punti Conoscenza' scoprendo lore, decifrando testi antichi e risolvendo enigmi nel dungeon. Questi punti possono essere spesi per ottenere visioni da Savras, favori da Oghma, o segreti da Vecna. Man mano che accumulano conoscenza, iniziano a intravedere la verità sul Gioco Divino."
+    },
+    "keyLocations": [
+      "La Grande Biblioteca - Milioni di tomi in infinite sale",
+      "La Torre dell'Emerald - Quartier generale dei Custodi",
+      "Le Cripte della Conoscenza - Testi troppo pericolosi per la sala principale",
+      "Il Cortile degli Studiosi - Dove i saggi dibattono e insegnano"
+    ]
+  },
+  {
+    "name": "Luskan",
+    "slug": "luskan",
+    "race": "Umani (Pirati, Criminali)",
+    "gods": ["Talos", "Beshaba", "Mask"],
+    "theme": "Anarchia e Libertà Selvaggia",
+    "description": "La Città delle Vele, regno dei pirati e dei fuorilegge. Qui non esistono leggi, solo la forza e l'astuzia contano. Le gilde di Luskan non si fanno scrupoli: tradiscono, rubano e distruggono per vincere. I loro dèi - Talos, Beshaba e Mask - incoraggiano il caos.",
+    "fullDescription": "Arroccata sulla costa settentrionale, Luskan è sempre stata una città di pirati, predoni e mercenari. Governata dalle Cinque Vele (corporazioni criminali mascherate da gilde mercantili), Luskan non ha mai conosciuto vera legge o ordine. Quando gli dèi scelsero le sette città, molti furono sorpresi che Luskan fosse tra queste - ma Talos, Beshaba e Mask videro un'opportunità perfetta.\n\nA Luskan, il Gioco Divino è interpretato nel modo più letterale e spietato possibile. Non ci sono regole non scritte, nessun codice d'onore. Le gilde saccheggiano, tradiscono, e sabotano senza pietà. Il dungeon è un campo di battaglia dove ogni tattica è lecita. Paradossalmente, questa completa mancanza di regole ha reso Luskan estremamente efficace - quando non si combattono tra loro.",
+    "culture": "Anarchica e darwiniana. Sopravvive chi è più forte, più astuto, o più spietato. La lealtà è rara e preziosa. Il tradimento è previsto e rispettato se eseguito abilmente.",
+    "dungeonTheme": "Labirinti di trappole e camere del tradimento dove fidarsi significa morire",
+    "uniqueSystem": {
+      "name": "Caos e Opportunismo",
+      "description": "Le gilde possono guadagnare Favore extra attraverso azioni caotiche: sabotare altre gilde, rubare tesori ad alleati, causare 'incidenti'. Tuttavia, le altre gilde possono fare lo stesso a loro. Beshaba lancia eventi casuali di sfortuna, mentre Mask premia i furti più audaci. Il sistema premia il rischio estremo e l'abilità."
+    },
+    "keyLocations": [
+      "Il Porto Oscuro - Covo di pirati e contrabbandieri",
+      "La Torre delle Vele - Sede del potere criminale",
+      "Il Mercato Nero - Dove si vende qualsiasi cosa",
+      "Le Rovine di Illusk - Antica città sepolta sotto Luskan"
+    ]
+  }
+]

@@ -14,7 +14,13 @@
       "Bash(npm install:*)",
       "Bash(find:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInizializzazione progetto D&D 5e Campaign Visual App\n\nApplicazione web interattiva wiki per la campagna \"È Sbagliato Cercare Gloria in un Dungeon Divino?\"\n\nCaratteristiche principali:\n- Framework Astro 5.16.4 con React 19.2.3\n- Autenticazione Supabase\n- 7 città con dungeon tematici\n- 21 divinità del Forgotten Realms\n- Sistema Favore Divino\n- UI responsive con Tailwind CSS\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
