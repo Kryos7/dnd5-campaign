@@ -195,13 +195,13 @@ dnd5-campaign-visual-app/
 ```
 
 **Le 7 Città:**
-1. **Waterdeep** - Umani - Tyr, Mystra, Waukeen
-2. **Mithral Hall** - Nani - Moradin, Clangeddin Silverbeard, Dumathoin
-3. **Menzoberranzan** - Drow - Lolth, Vhaeraun, Eilistraee
-4. **Myth Drannor** - Elfi - Corellon Larethian, Sehanine Moonbow, Labelas Enoreth
-5. **Baldur's Gate** - Mezzorchi - Gruumsh, Ilneval, Luthic
-6. **Candlekeep** - Gnomi - Garl Glittergold, Baervan Wildwanderer, Flandal Steelskin
-7. **Luskan** - Halfling - Yondalla, Brandobaris, Sheela Peryroyl
+1. **Waterdeep** - Umani/Mista - Tempus, Tymora, Mystra
+2. **Mithral Hall** - Nani - Moradin, Clangeddin, Dumathoin
+3. **Menzoberranzan** - Drow - Lolth, Vhaeraun, Kiaransalee
+4. **Myth Drannor** - Elfi - Corellon Larethian, Sehanine Moonbow, Hanali Celanil
+5. **Baldur's Gate** - Umani/Mista - Waukeen, Umberlee, Gond
+6. **Candlekeep** - Umani/Mista - Oghma, Savras, Vecna
+7. **Luskan** - Umani/Mista - Talos, Beshaba, Mask
 
 ### Divinità (21 divinità, 3 per città)
 **Struttura `public/data/dei.json`:**

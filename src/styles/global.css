@@ -72,3 +72,19 @@ html[data-user-role="guest"] .dm-only {
 html[data-user-role="dm"] .player-only {
   display: none !important;
 }
+
+/* Player-specific content visibility */
+/* By default, hide all player-specific content */
+.player-specific {
+  display: none !important;
+}
+
+/* DM always sees everything */
+html[data-user-role="dm"] .player-specific {
+  display: block !important;
+}
+
+/* Player sees content if their ID matches (managed by JavaScript) */
+.player-specific.show-for-current-user {
+  display: block !important;
+}

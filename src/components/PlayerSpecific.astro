@@ -1,0 +1,13 @@
+---
+import { PlayerSpecific as PlayerSpecificReact } from './auth/VisibilityControls';
+
+interface Props {
+  playerId: string;
+}
+
+const { playerId } = Astro.props;
+---
+
+<PlayerSpecificReact client:load playerId={playerId}>
+  <slot />
+</PlayerSpecificReact>

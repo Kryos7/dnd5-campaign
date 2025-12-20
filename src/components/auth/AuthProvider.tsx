@@ -66,7 +66,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } else {
       document.documentElement.setAttribute('data-user-role', 'guest');
     }
-  }, [profile, loading]);
+
+    // Set user ID for player-specific content visibility
+    if (user?.id) {
+      document.documentElement.setAttribute('data-user-id', user.id);
+
+      // Show player-specific content for matching user IDs
+      document.querySelectorAll('.player-specific[data-player-id]').forEach((el) => {
+        const playerId = el.getAttribute('data-player-id');
+        if (playerId === user.id) {
+          el.classList.add('show-for-current-user');
+        } else {
+          el.classList.remove('show-for-current-user');
+        }
+      });
+    } else {
+      document.documentElement.removeAttribute('data-user-id');
+      // Remove show class from all player-specific elements
+      document.querySelectorAll('.player-specific.show-for-current-user').forEach((el) => {
+        el.classList.remove('show-for-current-user');
+      });
+    }
+  }, [profile, loading, user]);
 
   const fetchProfile = async (userId: string) => {
     try {

@@ -696,7 +696,7 @@ Lineari, bisogna risolvere in ordine.
   2. "In che anno fu fondata Waterdeep?" (1032 DR)
   3. "Quanti Lord Mascherati ci sono?" (Varia, ma risposta accettata: "Mai rivelato")
   4. "Chi costruì l'Undermountain?" (Halaster Blackcloak)
-  5. "Quale dio ha il tempio più grande a Waterdeep?" (Tyr o Mystra, entrambi accettati)
+  5. "Quale dio ha il tempio più grande a Waterdeep?" (Tempus o Mystra, entrambi accettati)
 
 **Soluzione**:
 - Cercare nei libri (Investigazione DC 10 per libro, 5 minuti per ricerca)

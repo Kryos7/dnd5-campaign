@@ -33,7 +33,7 @@ Gli dèi NON sono scesi volontariamente. Sono stati attratti/vincolati sul Piano
 
 ### 1. WATERDEEP - Giustizia e Ordine
 **Razza predominante:** Umani (cosmopolita)
-**Divinità patroni:** Tyr, Tymora, Mystra
+**Divinità patroni:** Tempus, Tymora, Mystra
 **Tema:** La città degli splendori, dove legge e ordine regnano supremi
 
 **Cultura:**
@@ -707,7 +707,7 @@ Questo documento è pensato come **knowledge base** per Claude.ai.
 
 ### Divinità per Dominio Principale
 **Conoscenza:** Oghma, Mystra, Savras, Vecna
-**Guerra:** Tyr, Clangeddin, Corellon
+**Guerra:** Tempus, Clangeddin, Corellon
 **Inganno:** Lolth, Vhaeraun, Mask
 **Commercio:** Waukeen, Gond
 **Natura/Cicli:** Sehanine, Dumathoin
@@ -717,7 +717,7 @@ Questo documento è pensato come **knowledge base** per Claude.ai.
 **Fortuna:** Tymora, Beshaba (contrari)
 
 ### Allineamenti
-**LG:** Tyr, Moradin, Clangeddin
+**LG:** Moradin, Clangeddin
 **NG:** Mystra
 **CG:** Tymora, Corellon, Sehanine, Hanali
 **LN:** Savras

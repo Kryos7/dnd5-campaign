@@ -33,13 +33,14 @@
     },
     "philosophy": "Nessuna divinità è superiore. Le tre vie (strategia, fortuna, conoscenza) portano tutte alla vittoria. L'equilibrio è la chiave.",
     "reputation": {
-      "general": "Visti come outsider che hanno 'rubato' la vittoria a gilde più blasonate",
+      "general": "Visti come outsider pericolosi",
       "nobles": "Guardati con sospetto (nessun sponsor = non controllabili)",
       "commoners": "Popolari (storia underdog)",
       "rivals": "Rispettati per equilibrio e versatilità"
     },
     "mainTeamMembers": [
       {
+        "playerId": "5156191a-0ce3-4ff9-8ab6-c50a53932570",
         "id": "valoris",
         "name": "Valoris",
         "fullName": "Valoris",
@@ -48,7 +49,7 @@
         "deity": "Il Cavaliere Rosso (Red Knight, campionessa di Tempus)",
         "level": 5,
         "age": 24,
-        "alignment": "LG",
+        "alignment": "LB",
         "appearance": {
           "height": "1,85m",
           "build": "Atletica, muscolosa",
@@ -86,6 +87,7 @@
         "secretGoal": "Trovare la ragazza che gli diede l'amuleto"
       },
       {
+        "playerId": "d9c3c7e3-adb5-41cd-8d3a-fbadd30c667b",
         "id": "thalio",
         "name": "Thalio Vaelaris",
         "fullName": "Thalio Vaelaris",
@@ -94,7 +96,7 @@
         "deity": "Tymora",
         "level": 5,
         "age": 20,
-        "alignment": "CG",
+        "alignment": "CB",
         "appearance": {
           "height": "1,75m",
           "build": "Magra, agile, leggiadra",
@@ -133,6 +135,7 @@
         "secretGoal": "Il ciondolo della madre nasconde qualcosa"
       },
       {
+        "playerId": "b017eb6d-b9d8-40b6-9d64-3bde07bff9e5",
         "id": "riven",
         "name": "Riven Solas",
         "fullName": "Riven Solas",
@@ -181,6 +184,7 @@
         "secretGoal": "Capire se il risveglio è collegato agli Dèi"
       },
       {
+        "playerId": "a259339d-0392-4962-8a5f-0d1565e89bbe",
         "id": "fealer",
         "name": "Fealer Corvonero",
         "fullName": "Fealer Corvonero",
@@ -399,7 +403,7 @@
         "note": "Sembra riconoscere qualcosa in Fealer ('Tu senti disturbo, vero?')"
       }
     ],
-    "strengths": ["Audacia estrema", "Creatività tattica", "Fortuna divina (Tymora li ama)"],
+    "strengths": ["Audacia estrema", "Creatività tattica", "Fortuna divina"],
     "weaknesses": ["Imprevedibili", "Rischi stupidi", "Poco onorevoli (Tempus li disprezza)"],
     "progression": "A strappi (fermi settimane, poi balzi enormi). Es: Lv 3 per 2 mesi, poi lv 7 in 1 settimana"
   }

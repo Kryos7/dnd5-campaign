@@ -41,7 +41,7 @@ const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
   </div>
 
   <!-- Avviso per i Giocatori -->
-  <section class="mb-8">
+  <section class="mb-8 dm-only">
     <InfoBox type="player" title="Benvenuti a Luskan - Lasciate ogni speranza di fair play">
       <p class="mb-3">
         Se la vostra gilda sceglie Luskan, sappiate questo: <strong>non esistono regole</strong>. Qui il tradimento non è scoraggiato - è incoraggiato.
@@ -106,7 +106,7 @@ const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
   </section>
 
   <!-- Sistema Unico -->
-  <section class="mb-8">
+  <section class="mb-8 dm-only">
     <h2 class="text-3xl font-bold mb-4 text-emerald-400">Sistema Unico</h2>
     <InfoBox type="mechanic" title={city.uniqueSystem.name}>
       <p class="mb-4">{city.uniqueSystem.description}</p>
@@ -135,7 +135,7 @@ const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
   </section>
 
   <!-- Dungeon Theme -->
-  <section class="mb-8">
+  <section class="mb-8 dm-only">
     <h2 class="text-3xl font-bold mb-4 text-red-400">Tema del Dungeon</h2>
     <div class="bg-gradient-to-r from-red-900/20 to-gray-900/20 border-2 border-red-700 rounded-lg p-6">
       <p class="text-slate-300 text-lg leading-relaxed mb-4">{city.dungeonTheme}</p>
@@ -199,7 +199,7 @@ const cityGods = deiData.filter((d: any) => city.gods.includes(d.name));
   </section>
 
   <!-- Hook Narrativi -->
-  <section class="mb-8">
+  <section class="mb-8 dm-only">
     <h2 class="text-3xl font-bold mb-4 text-yellow-400">Hook Narrativi per Luskan</h2>
     <div class="grid md:grid-cols-2 gap-4">
       <div class="bg-gradient-to-br from-red-900/30 to-slate-800 border border-red-700 rounded-lg p-5">

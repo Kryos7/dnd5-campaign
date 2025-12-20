@@ -59,12 +59,12 @@ const guild = gildeData.find((g: any) => g.slug === 'guardiani-della-trama');
         <div class="text-sm text-slate-400">Membri Totali</div>
         <div class="text-xs text-slate-500 mt-1">{guild.mainTeam} principali + {guild.reserves} riserve</div>
       </div>
-      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center dm-only">
         <div class="text-3xl font-bold text-yellow-400">{guild.budget.initial}</div>
         <div class="text-sm text-slate-400">Budget Iniziale</div>
         <div class="text-xs text-slate-500 mt-1">Contributi membri fondatori</div>
       </div>
-      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center dm-only">
         <div class="text-3xl font-bold text-blue-400">{guild.headquarters.rent}</div>
         <div class="text-sm text-slate-400">Affitto Mensile</div>
         <div class="text-xs text-slate-500 mt-1">Pagato collettivamente</div>
@@ -287,6 +287,7 @@ const guild = gildeData.find((g: any) => g.slug === 'guardiani-della-trama');
             </div>
           </div>
 
+      <div class="player-specific" data-player-id={member.playerId}>
           <!-- Obiettivo Segreto (se presente) -->
           {member.secretGoal && (
             <div class="bg-red-900/20 border-2 border-red-800 rounded-lg p-4">
@@ -312,13 +313,15 @@ const guild = gildeData.find((g: any) => g.slug === 'guardiani-della-trama');
               <p class="text-sm text-purple-200">{member.secretGoal}</p>
             </div>
           )}
+      </div>
         </div>
       ))}
     </div>
+    
   </section>
 
   <!-- Dinamiche del Team -->
-  <section class="mb-12">
+  <section class="mb-12 dm-only">
     <h2 class="text-3xl font-bold mb-6 text-blue-400">Dinamiche del Team</h2>
     <div class="grid md:grid-cols-2 gap-6">
       <InfoBox type="mechanic" title="Sistema di Leadership">

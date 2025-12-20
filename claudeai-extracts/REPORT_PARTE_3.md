@@ -108,7 +108,7 @@ Se un membro del Team Principale **muore permanentemente**:
 - Cosa succede dopo il Gioco? **Si vedrà.** Per ora focus sul dungeon.
 
 **La Fusione**:
-Firmano contratto magico (vincolante, scritto da chierico di Tyr):
+Firmano contratto magico (vincolante, scritto da chierico di Savras):
 - Condividono risorse
 - Nessun tradimento reciproco (pena: espulsione + restituzione fondi)
 - Durata: fino alla fine del Gioco Divino

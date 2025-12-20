@@ -85,7 +85,7 @@ Crea nuovi file in `src/pages/meccaniche/` seguendo il pattern di `favore-divino
 <CityCard
   name="Waterdeep"
   slug="waterdeep"
-  gods={["Tyr", "Tymora", "Mystra"]}
+  gods={["Tempus", "Tymora", "Mystra"]}
   theme="Giustizia e Ordine"
   description="Breve descrizione..."
   race="Umani/Mista"
@@ -96,12 +96,12 @@ Crea nuovi file in `src/pages/meccaniche/` seguendo il pattern di `favore-divino
 
 ```astro
 <GodCard
-  name="Tyr"
-  title="Il Dio Giusto"
-  domain={["Giustizia", "Ordine"]}
+  name="Tempus"
+  title="Il Signore delle Battaglie"
+  domain={["Guerra", "Strategia", "Combattimento"]}
   city="Waterdeep"
   description="Descrizione..."
-  alignment="LG"
+  alignment="CN"
 />
 ```
 

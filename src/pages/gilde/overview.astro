@@ -69,10 +69,9 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
           Se un membro del Team Principale <strong class="text-red-400">muore permanentemente</strong>:
         </p>
         <ol class="space-y-2 text-slate-300 list-decimal list-inside">
-          <li>La gilda perde <strong class="text-red-400">-100 Favore</strong> (penalità efficienza)</li>
+          <li>La gilda perde <strong class="text-red-400">Favore</strong> (penalità efficienza)</li>
           <li>Un membro di riserva viene promosso al Team Principale</li>
           <li>Il nuovo membro deve "mettersi al passo" (potrebbe essere sotto-livellato)</li>
-          <li>La gilda può reclutare da gilde eliminate (5000+ MO per membro esperto)</li>
         </ol>
         <div class="mt-3 text-sm text-slate-400">
           <strong>Morte Permanente:</strong> 0 HP + 3 death saves falliti, danno massiccio, o non resuscitato entro 10 giorni
@@ -125,10 +124,10 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
               <div class="text-2xl font-bold text-emerald-400">{guild.totalMembers}</div>
               <div class="text-xs text-slate-500">{guild.mainTeam} principali + {guild.reserves} riserve</div>
             </div>
-            <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
+            {/* <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
               <div class="text-sm text-slate-400">Budget</div>
               <div class="text-2xl font-bold text-yellow-400">{guild.budget || guild.budget}</div>
-            </div>
+            </div> */}
             <div class="bg-slate-900/50 rounded-lg p-3 border border-slate-700">
               <div class="text-sm text-slate-400">QG</div>
               <div class="text-sm text-slate-300">{guild.headquarters.location}</div>
@@ -180,7 +179,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
           <tr class="bg-slate-800 border-b-2 border-yellow-600">
             <th class="px-4 py-3 text-left text-yellow-400">Gilda</th>
             <th class="px-4 py-3 text-center text-yellow-400">Membri</th>
-            <th class="px-4 py-3 text-center text-yellow-400">Budget</th>
+            <!-- <th class="px-4 py-3 text-center text-yellow-400">Budget</th> -->
             <th class="px-4 py-3 text-left text-yellow-400">Punti di Forza</th>
             <th class="px-4 py-3 text-left text-yellow-400">Debolezze</th>
           </tr>
@@ -193,7 +192,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
                 <div class="text-xs text-slate-500">{guild.motto}</div>
               </td>
               <td class="px-4 py-3 text-center text-emerald-400">{guild.totalMembers}</td>
-              <td class="px-4 py-3 text-center text-yellow-400">{guild.budget || guild.budget}</td>
+              {/* <td class="px-4 py-3 text-center text-yellow-400">{guild.budget || guild.budget}</td> */}
               <td class="px-4 py-3">
                 <ul class="text-sm text-slate-300 space-y-1">
                   {guild.strengths?.map((strength: string) => (
@@ -201,7 +200,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
                       <span class="text-green-500 mr-1">✓</span>
                       {strength}
                     </li>
-                  )) || <li class="text-slate-500">Equilibrio perfetto</li>}
+                  )) || <li class="text-slate-500">Da scoprire</li>}
                 </ul>
               </td>
               <td class="px-4 py-3">

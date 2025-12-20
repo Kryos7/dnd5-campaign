@@ -6,17 +6,19 @@ Un'applicazione web moderna creata con Astro e Tailwind CSS per documentare e ge
 
 ## 📖 Concept della Campagna
 
-Gli dèi sono scesi sul Piano Materiale nei Forgotten Realms, hanno scelto 5 città simboliche, le hanno sigillate, e creato mega-dungeon sotto ciascuna. Le gilde di avventurieri competono per:
+Gli dèi sono scesi sul Piano Materiale nei Forgotten Realms, hanno scelto 7 città simboliche, le hanno sigillate, e creato mega-dungeon sotto ciascuna. Le gilde di avventurieri competono per:
 - Completare i dungeon
 - Guadagnare Favore Divino
 - Portare gloria alla propria città
 
-### Le 5 Città
-- **Waterdeep** - Giustizia e Ordine (Tyr, Tymora, Mystra)
+### Le 7 Città
+- **Waterdeep** - Strategia, Fortuna e Conoscenza (Tempus, Tymora, Mystra)
 - **Mithral Hall** - Onore e Forgia (Moradin, Clangeddin, Dumathoin)
 - **Menzoberranzan** - Tradimento e Crudeltà (Lolth, Vhaeraun, Kiaransalee)
 - **Myth Drannor** - Redenzione e Memoria (Corellon, Sehanine, Hanali)
 - **Baldur's Gate** - Commercio e Opportunismo (Waukeen, Umberlee, Gond)
+- **Candlekeep** - Conoscenza e Segreti (Oghma, Savras, Vecna)
+- **Luskan** - Caos e Distruzione (Talos, Beshaba, Mask)
 
 ## ✨ Caratteristiche
 
