@@ -1,45 +1,12 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '../../supabase/client';
+import { useAuth } from '../auth/AuthProvider';
 import UserMenu from '../auth/UserMenu';
 
-const DM_EMAIL = 'lorenzo.tranchina@gmail.com';
-
 export default function NavBar() {
-  const [isDM, setIsDM] = useState(false);
-  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  const { isDM, loading } = useAuth();
 
-  useEffect(() => {
-    checkDMStatus();
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsDM(session?.user?.email === DM_EMAIL);
-      setIsCheckingAuth(false);
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const checkDMStatus = async () => {
-    try {
-      const { data: { session } } = await supabase.auth.getSession();
-      const userEmail = session?.user?.email;
-      const dmStatus = userEmail === DM_EMAIL;
-
-      // Debug logs
-      console.log('NavBar - Checking DM status');
-      console.log('NavBar - User email:', userEmail);
-      console.log('NavBar - Expected DM email:', DM_EMAIL);
-      console.log('NavBar - Is DM:', dmStatus);
-
-      setIsDM(dmStatus);
-    } catch (error) {
-      console.error('NavBar - Error checking DM status:', error);
-      setIsDM(false);
-    } finally {
-      setIsCheckingAuth(false);
-    }
-  };
+  // Debug logs
+  console.log('NavBar - Auth loading:', loading);
+  console.log('NavBar - Is DM:', isDM);
 
   return (
     <nav id="main-nav" className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
