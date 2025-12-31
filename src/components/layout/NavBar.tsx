@@ -6,21 +6,39 @@ const DM_EMAIL = 'lorenzo.tranchina@gmail.com';
 
 export default function NavBar() {
   const [isDM, setIsDM] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
   useEffect(() => {
     checkDMStatus();
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
-      checkDMStatus();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsDM(session?.user?.email === DM_EMAIL);
+      setIsCheckingAuth(false);
     });
 
     return () => subscription.unsubscribe();
   }, []);
 
   const checkDMStatus = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    setIsDM(session?.user?.email === DM_EMAIL);
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const userEmail = session?.user?.email;
+      const dmStatus = userEmail === DM_EMAIL;
+
+      // Debug logs
+      console.log('NavBar - Checking DM status');
+      console.log('NavBar - User email:', userEmail);
+      console.log('NavBar - Expected DM email:', DM_EMAIL);
+      console.log('NavBar - Is DM:', dmStatus);
+
+      setIsDM(dmStatus);
+    } catch (error) {
+      console.error('NavBar - Error checking DM status:', error);
+      setIsDM(false);
+    } finally {
+      setIsCheckingAuth(false);
+    }
   };
 
   return (
