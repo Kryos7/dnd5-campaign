@@ -2,24 +2,11 @@ import { useAuth } from '../auth/AuthProvider';
 import UserMenu from '../auth/UserMenu';
 
 export default function NavBar() {
-  const { isDM, loading, profile, user } = useAuth();
-
-  // Debug logs
-  console.log('NavBar - Auth loading:', loading);
-  console.log('NavBar - Is DM:', isDM);
-  console.log('NavBar - Profile:', profile);
-  console.log('NavBar - User:', user);
+  const { isDM } = useAuth();
 
   return (
     <nav id="main-nav" className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
       <div className="container mx-auto px-4">
-        {/* DEBUG INFO - RIMUOVI DOPO IL FIX */}
-        {user && (
-          <div className="bg-purple-900 text-white text-xs p-2 mb-2">
-            DEBUG: loading={String(loading)} | isDM={String(isDM)} | role={profile?.role || 'null'} | email={user.email}
-          </div>
-        )}
-
         <div className="flex items-center justify-between h-16">
           {/* Logo e Titolo */}
           <a href="/" className="flex items-center space-x-3 text-xl font-bold text-yellow-500 hover:text-yellow-400 transition-colors no-underline">
