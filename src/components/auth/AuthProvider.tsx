@@ -91,14 +91,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const fetchProfile = async (userId: string) => {
     try {
+      console.log('AuthProvider - Fetching profile for userId:', userId);
       const { data, error } = await supabase
         .from('profiles')
         .select('*')
         .eq('id', userId)
         .single();
 
+      console.log('AuthProvider - Profile data:', data);
+      console.log('AuthProvider - Profile error:', error);
+
       if (error) throw error;
       setProfile(data);
+      console.log('AuthProvider - Profile role:', data?.role);
     } catch (error) {
       console.error('Error fetching profile:', error);
       setProfile(null);
@@ -109,6 +114,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const isDM = profile?.role === 'dm';
   const isPlayer = profile?.role === 'player';
+
+  console.log('AuthProvider - Context values:', { loading, isDM, isPlayer, profileRole: profile?.role });
 
   return (
     <AuthContext.Provider value={{ user, profile, loading, isDM, isPlayer }}>
