@@ -11,7 +11,7 @@ interface Props {
 const { name, slug, gods, theme, description, race } = Astro.props;
 ---
 
-<div class="bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-yellow-500 transition-all hover:shadow-lg hover:shadow-yellow-500/20">
+<div class="city-card-astro bg-slate-800 border border-slate-700 rounded-lg p-6 hover:border-yellow-500 transition-all hover:shadow-lg hover:shadow-yellow-500/20">
   <div class="flex items-start justify-between mb-4">
     <div>
       <h3 class="text-2xl font-bold text-yellow-500 mb-1">{name}</h3>
@@ -27,7 +27,7 @@ const { name, slug, gods, theme, description, race } = Astro.props;
   </div>
 
   <div class="mb-4">
-    <p class="text-sm font-semibold text-blue-400 mb-2">Dèi Patroni:</p>
+    <p class="text-sm font-semibold text-blue-400 mb-2">DÃ¨i Patroni:</p>
     <div class="flex flex-wrap gap-2">
       {gods.map(god => (
         <span class="px-2 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700">
@@ -46,7 +46,7 @@ const { name, slug, gods, theme, description, race } = Astro.props;
 
   <a
     href={`/citta/${slug}`}
-    class="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-500 text-slate-900 font-semibold rounded-lg transition-colors no-underline"
+    class="text-white inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-500 text-slate-900 font-semibold rounded-lg transition-colors no-underline"
   >
     Esplora
     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -88,3 +88,8 @@ html[data-user-role="dm"] .player-specific {
 .player-specific.show-for-current-user {
   display: block !important;
 }
+
+/*CUSTOM*/
+.city-card-astro a{
+  color: white!important;
+}
