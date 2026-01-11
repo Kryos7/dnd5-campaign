@@ -41,7 +41,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
             <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span><strong>Team Principale:</strong> 4 membri (esplorano attivamente il dungeon)</span>
+            <span><strong>Team Principale:</strong> 5 membri (esplorano attivamente il dungeon)</span>
           </li>
           <li class="flex items-start">
             <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -142,7 +142,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
           <div class="mb-4">
             <div class="text-sm text-slate-400 mb-2">Team Principale ({guild.mainTeam} membri)</div>
             <div class="grid md:grid-cols-2 gap-2">
-              {guild.mainTeamMembers.slice(0, 4).map((member: any) => (
+              {guild.mainTeamMembers.slice(0, 5).map((member: any) => (
                 <div class="bg-slate-900/50 rounded p-2 border border-slate-700 flex items-center gap-2">
                   <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
                   <div>
@@ -157,7 +157,7 @@ const sortedGuilds = gildeData.sort((a: any, b: any) => {
           <div class="flex justify-end">
             <a
               href={`/gilde/${guild.slug}`}
-              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-yellow-400 px-6 py-2 rounded-lg border border-yellow-600 transition-colors no-underline"
+              class="whitetextcolor inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-yellow-400 px-6 py-2 rounded-lg border border-yellow-600 transition-colors no-underline"
             >
               Vedi Dettagli Completi
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

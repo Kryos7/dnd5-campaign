@@ -1,0 +1,550 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../../components/dm/DMAuthGuard';
+---
+
+<MainLayout title="Violet Fungus Mutato - D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-5xl mx-auto p-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm/ecosistema-1" class="text-cyan-400 hover:text-cyan-300">
+            ← Torna all'Ecosistema 1
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-red-500 mb-2">VIOLET FUNGUS MUTATO</h1>
+        <p class="text-xl text-yellow-400">"Fungo Velenoso Evoluto - SFIDA LETALE"</p>
+        <p class="text-slate-400 mt-2">CR 4 - Sfida opzionale difficile per party livello 5 | La fuga è un'opzione valida</p>
+      </div>
+
+      <!-- Immagine del Mostro -->
+      <div class="bg-slate-900 border-2 border-red-700 rounded-lg p-6 mb-8">
+        <img
+          src="/images/mostri/violet_fungus_mutato.png"
+          alt="Violet Fungus Mutato"
+          class="w-full max-w-2xl mx-auto rounded-lg"
+        />
+      </div>
+
+      <!-- Concept della Mutazione -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🧬 Concept della Mutazione</h2>
+        <p class="text-slate-200 mb-4">
+          Questo Violet Fungus ha vissuto per <strong class="text-yellow-400">decenni</strong> in questo vicolo cieco,
+          nutrendosi di ratti, contrabbandieri smarriti e altri funghi. L'esposizione costante alle
+          <strong class="text-green-400">spore tossiche dei funghi gialli</strong> e all'<strong class="text-cyan-400">acqua stagnante contaminata</strong>
+          lo ha mutato in una creatura più grande, aggressiva e pericolosa.
+        </p>
+
+        <h3 class="text-xl font-semibold text-purple-300 mb-3 mt-6">Aspetto Mutato</h3>
+        <ul class="space-y-2 text-slate-300">
+          <li><strong class="text-yellow-400">Dimensioni:</strong> Grande (3m altezza invece di 1.5m standard)</li>
+          <li><strong class="text-yellow-400">Cappello:</strong> Violaceo con macchie giallo-verdastre pulsanti (spore integrate)</li>
+          <li><strong class="text-yellow-400">Tentacoli:</strong> 6 tentacoli invece di 4 (più lunghi e spessi, fino a 4.5m estensione)</li>
+          <li><strong class="text-yellow-400">Radici:</strong> Sommerse nell'acqua stagnante, visibili come ombre scure sotto la superficie</li>
+          <li><strong class="text-yellow-400">Aura:</strong> Emette vapori tossici visibili (nebbia verdastra leggera in raggio 3m)</li>
+          <li><strong class="text-yellow-400">Movimento:</strong> Lento ma inesorabile, radici si muovono nell'acqua come serpenti</li>
+        </ul>
+      </section>
+
+      <!-- Statistiche Complete -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">📊 Statistiche Complete</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-red-300 mb-2">VIOLET FUNGUS MUTATO</h3>
+          <p class="text-slate-400 italic mb-4">Pianta Grande, senza allineamento</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <span class="text-yellow-400 font-semibold">Classe Armatura:</span>
+              <span class="text-slate-200"> 10 (pelle fungina ispessita)</span>
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Punti Ferita:</span>
+              <span class="text-slate-200"> 75 (10d10+20)</span>
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Velocità:</span>
+              <span class="text-slate-200"> 1,5m, nuoto 3m</span>
+            </div>
+          </div>
+
+          <!-- Caratteristiche -->
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <h4 class="text-lg font-semibold text-cyan-400 mb-3">Caratteristiche</h4>
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div>
+                <div class="text-red-400 font-bold">FOR</div>
+                <div class="text-slate-200">16 (+3)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">DES</div>
+                <div class="text-slate-200">3 (-4)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">COS</div>
+                <div class="text-slate-200">15 (+2)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">INT</div>
+                <div class="text-slate-200">1 (-5)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">SAG</div>
+                <div class="text-slate-200">5 (-3)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">CAR</div>
+                <div class="text-slate-200">1 (-5)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resistenze e Immunità -->
+          <div class="space-y-2 text-slate-300">
+            <div>
+              <span class="text-green-400 font-semibold">Immunità ai Danni:</span> veleno
+            </div>
+            <div>
+              <span class="text-green-400 font-semibold">Immunità alle Condizioni:</span> accecato, assordato, avvelenato, impaurito
+            </div>
+            <div>
+              <span class="text-blue-400 font-semibold">Resistenze ai Danni:</span> perforanti (cappello spugnoso assorbe frecce)
+            </div>
+            <div>
+              <span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco (danno <strong class="text-red-500">raddoppiato</strong>)
+            </div>
+            <div>
+              <span class="text-cyan-400 font-semibold">Sensi:</span> vista cieca 18m (cieco oltre), Percezione passiva 7
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Grado di Sfida:</span> 4 (1,100 PE)
+            </div>
+            <div>
+              <span class="text-purple-400 font-semibold">Cristalli:</span> 30 (quando sconfitto)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Abilità Speciali -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">✨ Abilità Speciali</h2>
+
+        <!-- Falsa Apparenza -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">🍄 Falsa Apparenza</h3>
+          <p class="text-slate-300 mb-2">
+            Finché il fungo rimane immobile, è indistinguibile da un fungo ordinario più grande.
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li><strong>Percezione CD 16</strong> per notare che è una creatura vivente</li>
+            <li><strong>Natura CD 14</strong> per riconoscerlo come Violet Fungus mutato</li>
+          </ul>
+        </div>
+
+        <!-- Aura Tossica -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-2">🌫️ Aura Tossica</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo emette costantemente <strong>vapori velenosi</strong> in un'aura di raggio <strong class="text-red-400">3m</strong>.
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong class="text-yellow-400">Effetto:</strong> All'inizio del turno di ogni creatura entro l'aura:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 mb-2">
+            <li>TS Costituzione <strong>CD 14</strong></li>
+            <li><strong>Fallimento:</strong> 1d6 danni da veleno</li>
+            <li><strong>Successo:</strong> Nessun danno</li>
+            <li>Se già avvelenata: <strong class="text-red-400">svantaggio</strong> al TS</li>
+          </ul>
+          <p class="text-cyan-400 italic">
+            L'aura è visibile come nebbia verdastra. Combattere in mischia significa subire questo danno OGNI round.
+          </p>
+        </div>
+
+        <!-- Radici Sommerse -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-blue-300 mb-2">🌊 Radici Sommerse</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo ha un sistema di radici nell'acqua stagnante del vicolo.
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Percepisce <strong>vibrazioni</strong> nell'acqua entro <strong>9m</strong></li>
+            <li>Rivela la <strong>posizione esatta</strong> di qualsiasi creatura che tocchi l'acqua (anche invisibile)</li>
+            <li>Le radici possono essere usate per afferrare (vedi Azione Bonus)</li>
+          </ul>
+          <p class="text-red-400 mt-2 italic">Impossibile nascondersi dal fungo se si sta nell'acqua.</p>
+        </div>
+
+        <!-- Reazione Simbiotica -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4 border-2 border-red-600">
+          <h3 class="text-xl font-semibold text-red-300 mb-2">🍄 Reazione Simbiotica</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo ha sviluppato una relazione simbiotica con i <strong>funghi gialli tossici</strong> circostanti.
+          </p>
+          <p class="text-yellow-400 mb-2">
+            <strong>Trigger:</strong> Quando il fungo viene ferito O quando viene effettuato un attacco rumoroso entro 3m.
+          </p>
+          <p class="text-slate-300 mb-2"><strong>Effetto:</strong> I funghi gialli si attivano automaticamente:</p>
+          <ol class="list-decimal list-inside space-y-2 text-slate-400">
+            <li><strong>Urlo stridulo:</strong> Suono acuto (allerta creature vicine)</li>
+            <li><strong>Rilascio spore:</strong> Tutte le creature entro <strong class="text-red-400">6m dai funghi gialli</strong>:
+              <ul class="list-disc list-inside ml-6 mt-1">
+                <li>TS Costituzione <strong>CD 14</strong></li>
+                <li><strong>Fallimento:</strong> 3d4 veleno + <strong class="text-red-400">avvelenato 1 ora</strong></li>
+                <li><strong>Successo:</strong> Metà danni</li>
+              </ul>
+            </li>
+            <li>I funghi rimangono attivi per <strong class="text-yellow-400">3 round</strong>, rilasciando spore ogni round</li>
+          </ol>
+        </div>
+
+        <!-- Rigenerazione Fungina -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-2">♻️ Rigenerazione Fungina</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo assorbe nutrienti dall'acqua stagnante per auto-ripararsi.
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong class="text-yellow-400">Effetto:</strong> All'inizio del turno del fungo, se ha almeno 1 PF e non ha subito danni da fuoco nell'ultimo round:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Recupera <strong class="text-green-400">5 PF</strong></li>
+          </ul>
+          <p class="text-red-400 mt-2 italic">
+            <strong>Interruzione:</strong> Qualsiasi danno da fuoco blocca la rigenerazione per quel turno.
+          </p>
+        </div>
+
+        <!-- Spora Gassosa -->
+        <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-600">
+          <h3 class="text-xl font-semibold text-red-300 mb-2">💨 Spora Gassosa (Passiva)</h3>
+          <p class="text-slate-300 mb-2">
+            <strong class="text-yellow-400">Trigger:</strong> Ogni volta che il fungo subisce danni da attacchi <strong>taglienti</strong> o <strong>perforanti</strong>
+          </p>
+          <p class="text-slate-300 mb-2"><strong>Effetto:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Sfera raggio <strong>1,5m</strong> centrata sul fungo</li>
+            <li>TS Costituzione <strong>CD 14</strong></li>
+            <li><strong>Fallimento:</strong> 2d6 veleno</li>
+            <li><strong>Successo:</strong> Metà danni</li>
+          </ul>
+          <p class="text-red-400 mt-2 italic font-semibold">
+            Questo rende gli attacchi in mischia con armi taglienti/perforanti molto pericolosi. Preferire attacchi contundenti o fuoco.
+          </p>
+        </div>
+      </section>
+
+      <!-- Azioni -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">⚔️ Azioni</h2>
+
+        <!-- Multiattacco -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-red-300 mb-2">🎯 Multiattacco</h3>
+          <p class="text-slate-300">
+            Il fungo effettua <strong class="text-red-400">due attacchi</strong> con Tentacolo Avvelenato contro uno o più bersagli entro portata.
+          </p>
+        </div>
+
+        <!-- Tentacolo Avvelenato -->
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-purple-300 mb-2">🐙 Tentacolo Avvelenato</h3>
+          <p class="text-slate-300 mb-2">
+            <strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata <strong>4,5m</strong>, una creatura.
+          </p>
+          <p class="text-yellow-400 mb-2"><strong>Colpito:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 mb-2">
+            <li><strong>10 (2d6+3)</strong> danni contundenti</li>
+            <li><strong>+ 7 (3d4)</strong> danni da veleno</li>
+          </ul>
+          <p class="text-slate-300 mb-2">
+            Il bersaglio deve superare <strong>TS Costituzione CD 15</strong> o essere <strong class="text-green-400">avvelenato</strong>.
+          </p>
+          <p class="text-red-400 font-semibold mb-2">Effetto avvelenamento persistente:</p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Subisce <strong class="text-red-400">10 (3d6)</strong> danni da veleno all'inizio di ciascuno dei suoi turni</li>
+            <li>Può ripetere il TS alla fine di ciascuno dei suoi turni</li>
+          </ul>
+          <p class="text-orange-400 mt-2 italic">
+            Questo veleno è <strong>cumulativo</strong> - colpi multipli = veleni multipli attivi!
+          </p>
+        </div>
+
+        <!-- Nuvola di Spore -->
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-2">☁️ Nuvola di Spore (Ricarica 5-6)</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo rilascia una nuvola concentrata di spore tossiche dal suo cappello.
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong>Area:</strong> Cono di <strong class="text-red-400">4,5m</strong> |
+            <strong> TS Costituzione CD 15</strong>
+          </p>
+          <p class="text-yellow-400 mb-2"><strong>Effetti:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li><strong>Fallimento:</strong> 4d6 veleno + <strong class="text-red-400">avvelenato 1 minuto</strong> + vista oscurata 1 round</li>
+            <li><strong>Successo:</strong> Metà danni, nessuna condizione, vista oscurata comunque</li>
+          </ul>
+          <p class="text-cyan-400 mt-2 italic">
+            Ricarica: Tira 1d6 all'inizio del turno. Con 5-6 si ricarica.
+          </p>
+        </div>
+      </section>
+
+      <!-- Azioni Bonus -->
+      <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">⚡ Azioni Bonus</h2>
+
+        <!-- Afferrare con Radici -->
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-blue-300 mb-2">🪢 Afferrare con Radici (1/round)</h3>
+          <p class="text-slate-300 mb-2">
+            Il fungo usa le sue radici sommerse per tentare di afferrare una creatura.
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong>Bersaglio:</strong> Una creatura entro <strong class="text-red-400">3m</strong> che sta <strong>toccando l'acqua</strong>
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong>TS Destrezza CD 14</strong> o la creatura è <strong class="text-yellow-400">afferrata</strong>.
+          </p>
+          <p class="text-red-400 mb-2"><strong>Effetti dell'afferramento:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Velocità ridotta a <strong>0</strong></li>
+            <li>Trascinata verso il fungo di <strong>1,5m</strong> all'inizio del turno del fungo (automatico)</li>
+            <li><strong>Svantaggio</strong> ai TS contro Tentacolo Avvelenato</li>
+          </ul>
+          <p class="text-cyan-400 mt-2">
+            <strong>Liberarsi:</strong> Azione, Atletica o Acrobazia contro CD 15
+          </p>
+          <p class="text-slate-400 italic">
+            Il fungo può avere fino a <strong>3 creature afferrate</strong> contemporaneamente.
+          </p>
+        </div>
+      </section>
+
+      <!-- Reazioni -->
+      <section class="bg-slate-800 border border-orange-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-orange-400 mb-4">🛡️ Reazioni</h2>
+
+        <!-- Spasmo Difensivo -->
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-orange-300 mb-2">⚡ Spasmo Difensivo (1/round)</h3>
+          <p class="text-slate-300 mb-2">
+            <strong class="text-yellow-400">Trigger:</strong> Quando il fungo viene colpito da un attacco in <strong>mischia</strong>
+          </p>
+          <p class="text-slate-300 mb-2">
+            <strong>Effetto:</strong> Il fungo può usare la sua reazione per effettuare un <strong>attacco di opportunità</strong> con un tentacolo contro l'attaccante.
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Usa le stesse statistiche di Tentacolo Avvelenato</li>
+            <li>Si risolve dopo che il danno dell'attacco originale è stato inflitto</li>
+            <li>Limitazione: 1 volta per round</li>
+          </ul>
+          <p class="text-red-400 mt-2 italic">
+            Rende gli attacchi in mischia molto rischiosi!
+          </p>
+        </div>
+      </section>
+
+      <!-- Tattica di Combattimento -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Tattica di Combattimento</h2>
+
+        <div class="space-y-4">
+          <!-- Round 1 -->
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">Round 1 - Attacco Sorpresa 🎯</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Rimane immobile (Falsa Apparenza) finché un PG entra entro 4,5m</li>
+              <li><strong>Multiattacco</strong> contro il PG più vicino (2 tentacoli)</li>
+              <li><strong>Azione Bonus:</strong> Afferrare con Radici se il PG è nell'acqua</li>
+              <li><strong>Aura Tossica</strong> inizia a danneggiare automaticamente</li>
+            </ul>
+          </div>
+
+          <!-- Round 2-3 -->
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">Round 2-3 - Pressione Aggressiva 💪</h3>
+            <p class="text-slate-300 mb-2"><strong>Priorità bersagli:</strong></p>
+            <ol class="list-decimal list-inside space-y-1 text-slate-400 mb-2">
+              <li>PG già avvelenati</li>
+              <li>PG afferrati (hanno svantaggio)</li>
+              <li>PG feriti sotto metà PF</li>
+              <li>Caster/Arcieri vicini</li>
+            </ol>
+            <p class="text-slate-300"><strong>Tattiche:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Multiattacco ogni round</li>
+              <li>Radici trascinano PG afferrati (1,5m/round)</li>
+              <li>Nuvola di Spore se può colpire 2+ PG</li>
+            </ul>
+          </div>
+
+          <!-- Round 4+ -->
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">Round 4+ - Reazione Simbiotica 🍄💥</h3>
+            <p class="text-slate-300 mb-2">
+              A questo punto il fungo è stato ferito → <strong class="text-red-400">funghi gialli attivati</strong>
+            </p>
+            <p class="text-red-400 mb-2"><strong>Doppia minaccia veleno:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Aura del fungo: 1d4 veleno/round (raggio 3m)</li>
+              <li>Spore funghi gialli: 2d4 veleno + avvelenato (raggio 6m)</li>
+              <li>Rigenerazione: 5 PF/round (se non bruciato)</li>
+              <li>Spasmo Difensivo contro attaccanti in mischia</li>
+            </ul>
+          </div>
+
+          <!-- Nessuna Fuga -->
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-600">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">Nessuna Fuga 🚫</h3>
+            <p class="text-slate-300 mb-2">
+              Il Violet Fungus Mutato <strong class="text-red-400">NON fugge mai</strong>, nemmeno sotto 10 PF.
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>È una pianta territoriale radicata all'acqua</li>
+              <li>Difende le sue "riserve di cibo" (le casse)</li>
+              <li>Combatte fino alla morte</li>
+            </ul>
+            <p class="text-purple-400 mt-2 italic">
+              <strong>Quando ucciso:</strong> Emette uno sbuffo finale di spore, collassa e si dissolve in polvere luminosa,
+              lasciando cadere 1 Cristallo Medio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategie per i Giocatori -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">💡 Strategie per i Giocatori</h2>
+
+        <!-- Strategie Efficaci -->
+        <div class="mb-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-3">✅ Strategie Altamente Efficaci</h3>
+
+          <div class="space-y-3">
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-orange-300 mb-2">1. Fuoco è Re 🔥</h4>
+              <p class="text-slate-300 mb-2">
+                <strong class="text-red-400">Vulnerabilità a fuoco</strong> = danno raddoppiato + blocca rigenerazione
+              </p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li><strong>Burning Hands (1° lvl):</strong> 3d6 → 6d6 (media 21 danni!)</li>
+                <li><strong>Scorching Ray (2° lvl):</strong> 2d6/raggio → 4d6/raggio</li>
+                <li><strong>Torce/Olio:</strong> Anche 1d4 → 2d4 aiuta</li>
+                <li><strong>Alchemist's Fire:</strong> 1d4 → 2d4 + persistente</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">2. Attacchi a Distanza 🏹</h4>
+              <p class="text-slate-300 mb-2">Evita Aura, Spasmo Difensivo, e Afferrare</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Posizionarsi a <strong>6-7m</strong> (fuori portata)</li>
+                <li>Incantesimi: Eldritch Blast, Magic Missile, Firebolt</li>
+                <li>Armi: Resistenza perforanti = metà danno, ma sicuro</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-blue-300 mb-2">3. Evitare l'Acqua 🚶</h4>
+              <p class="text-slate-300 mb-2">Immune ad Afferrare + movimento normale</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Stare sui bordi asciutti</li>
+                <li>Saltare sulle casse (piattaforme)</li>
+                <li>Levitazione magica</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-purple-300 mb-2">4. Controllo: Web 🎭</h4>
+              <p class="text-slate-300 mb-2">
+                Fungo ha DES -4 → quasi certamente fallisce TS
+              </p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Fungo trattenuto = <strong>svantaggio</strong> tutti i suoi attacchi</li>
+                <li>Tutti hanno <strong>vantaggio</strong> contro di esso</li>
+                <li>Probabilità successo: ~80%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategie Inefficaci -->
+        <div>
+          <h3 class="text-xl font-semibold text-red-300 mb-3">❌ Strategie Inefficaci</h3>
+
+          <div class="space-y-2">
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Usare veleno:</strong> Immunità totale a veleno
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Negoziare:</strong> INT 1, è una pianta carnivora
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Combattere silenziosamente:</strong> Funghi gialli si attivano comunque quando ferito
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Aspettare che si avvicini:</strong> Velocità 1,5m, mai si muove
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ricompense -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🎁 Ricompense e Favore Divino</h2>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">💎 Cristalli</h3>
+            <p class="text-slate-300">
+              <strong class="text-purple-400">1 Cristallo Medio</strong> quando sconfitto
+            </p>
+            <p class="text-slate-400 italic">
+              Svanisce in polvere luminosa, lascia cristalli scintillanti
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚔️ Tempus - Gloria in Battaglia</h3>
+            <p class="text-slate-300 mb-2">
+              <strong class="text-green-400">Bonus Favore:</strong>
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Nessun PG ridotto a 0 PF: <strong>+15 Favore Tempus</strong></li>
+              <li>Sconfitto in 5 round o meno: <strong>+10 Favore Tempus</strong></li>
+              <li>Uso tattico dell'ambiente (es. fuoco): <strong>+5 Favore Tempus</strong></li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">🍀 Tymora - Fortuna e Audacia</h3>
+            <p class="text-slate-300 mb-2">
+              <strong class="text-green-400">Bonus Favore:</strong>
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Ritirata tattica se party sotto 30% HP totali: <strong>+20 Favore Tymora</strong> (saggezza dell'audace)</li>
+              <li>Vittoria contro aspettative: <strong>+10 Favore Tymora</strong></li>
+            </ul>
+            <p class="text-cyan-400 italic mt-2">
+              Tymora premia sia l'audacia intelligente (ritirarsi quando necessario) che il coraggio (combattere).
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </DMAuthGuard>
+</MainLayout>

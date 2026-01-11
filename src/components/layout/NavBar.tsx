@@ -7,7 +7,8 @@ export default function NavBar() {
   return (
     <nav id="main-nav" className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        {/* Prima riga: Logo e Login */}
+        <div className="flex items-center justify-between h-16 border-b border-slate-700/50">
           {/* Logo e Titolo */}
           <a href="/" className="flex items-center space-x-3 text-xl font-bold text-yellow-500 hover:text-yellow-400 transition-colors no-underline">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,18 +17,7 @@ export default function NavBar() {
             <span>È Sbagliato Cercare Gloria in un Dungeon Divino?</span>
           </a>
 
-          {/* Menu Desktop */}
-          <div className="hidden md:flex items-center space-x-6">
-            <a href="/lore/annuncio" className="hover:text-yellow-500 transition-colors">Lore</a>
-            <a href="/citta/overview" className="hover:text-yellow-500 transition-colors">Città</a>
-            <a href="/meccaniche/favore-divino" className="hover:text-yellow-500 transition-colors">Meccaniche</a>
-            <a href="/dungeon/overview" className="hover:text-yellow-500 transition-colors">Dungeon</a>
-            <a href="/gilde/overview" className="hover:text-yellow-500 transition-colors">Gilde</a>
-            <a href="/dei/pantheon" className="hover:text-yellow-500 transition-colors">Dèi</a>
-            <a href="/reference/quick-tables" className="hover:text-yellow-500 transition-colors">Reference</a>
-          </div>
-
-          {/* Toggle Buttons */}
+          {/* Login e Menu Toggle Mobile */}
           <div className="flex items-center space-x-2">
             <UserMenu />
             <button id="mobile-menu-toggle" className="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors">
@@ -38,15 +28,53 @@ export default function NavBar() {
           </div>
         </div>
 
+        {/* Seconda riga: Menu di navigazione (solo desktop) */}
+        <div className="hidden md:flex items-center justify-center space-x-6 h-12">
+          <a href="/lore/annuncio" className="hover:text-yellow-500 transition-colors">Lore</a>
+          <a href="/citta/overview" className="hover:text-yellow-500 transition-colors">Città</a>
+          {/* <a href="/meccaniche/favore-divino" className="hover:text-yellow-500 transition-colors">Meccaniche</a> */}
+          <a href="/gilde/overview" className="hover:text-yellow-500 transition-colors">Gilde</a>
+          <a href="/dei/pantheon" className="hover:text-yellow-500 transition-colors">Dèi</a>
+          {/* <a href="/reference/quick-tables" className="hover:text-yellow-500 transition-colors">Reference</a> */}
+          <span className="text-slate-600">|</span>
+          <a href="/sessioni" className="hover:text-purple-400 transition-colors flex items-center gap-1">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            Sessioni
+          </a>
+          <a href="/dungeon/overview" className="hover:text-orange-400 transition-colors flex items-center gap-1">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Dungeon
+          </a>
+        </div>
+
         {/* Menu Mobile */}
         <div id="mobile-menu" className="hidden md:hidden pb-4 space-y-2">
           <a href="/lore/annuncio" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Lore</a>
           <a href="/citta/overview" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Città</a>
-          <a href="/meccaniche/favore-divino" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Meccaniche</a>
-          <a href="/dungeon/overview" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Dungeon</a>
+          {/* <a href="/meccaniche/favore-divino" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Meccaniche</a> */}
           <a href="/gilde/overview" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Gilde</a>
           <a href="/dei/pantheon" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Dèi</a>
-          <a href="/reference/quick-tables" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Reference</a>
+          {/* <a href="/reference/quick-tables" className="block px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors">Reference</a> */}
+
+          {/* Separatore Sessioni */}
+          <div className="pt-2 mt-2 border-t border-purple-900/50">
+            <a href="/sessioni" className="block px-3 py-2 rounded-lg hover:bg-purple-900/20 text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              Registro Sessioni
+            </a>
+            <a href="/dungeon/overview" className="block px-3 py-2 rounded-lg hover:bg-purple-900/20 text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-2">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Dungeon
+          </a>
+          </div>
 
           {/* DM Menu Mobile */}
           {isDM && (
@@ -62,6 +90,9 @@ export default function NavBar() {
               </a>
               <a href="/dm/ecosistema-1" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
                 Ecosistema 1
+              </a>
+              <a href="/dm/sessioni" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
+                Sessioni
               </a>
             </div>
           )}
@@ -91,6 +122,12 @@ export default function NavBar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
                   </svg>
                   Ecosistema 1
+                </a>
+                <a href="/dm/sessioni" className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                  Sessioni
                 </a>
               </div>
             </div>

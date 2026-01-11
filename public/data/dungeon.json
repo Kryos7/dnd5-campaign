@@ -550,7 +550,7 @@
         "eventTypes": [
           {
             "name": "Arena di Tempus",
-            "format": "Combattimento 4v4 non letale",
+            "format": "Combattimento 5v5 non letale",
             "location": "Campo di Marte",
             "prizes": "1° +100 Favore + Benedizione | 2° +50 | 3° +25"
           },

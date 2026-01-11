@@ -11,6 +11,7 @@ interface Stanza {
   cristalli?: string;
   favoreDivino?: string;
   noteDM?: string[];
+  tentativoForza?: string;
   statistiche?: {
     nome: string;
     valori: string[];
@@ -42,7 +43,7 @@ export default function EcosistemaView() {
     numero: 1,
     nome: 'Le Fogne Superiori',
     livelloConsigliato: 3,
-    stanzeTotali: '11 + 2 opzionali',
+    stanzeTotali: '14 (7 opzionali)',
     durataStimata: '2.5-3.5 ore',
     tema: 'Fogne abbandonate e pericolose',
     caratteristiche: [
@@ -50,7 +51,7 @@ export default function EcosistemaView() {
       'Nessun riferimento al mondo esterno - no note di nobili, no missioni per personaggi in superficie',
       'Ambiente realistico - le fogne sembrano vere fogne di Waterdeep con pericoli mondani credibili'
     ],
-    layout: 'Struttura a "Y" con due percorsi alternativi che si ricongiungono',
+    layout: 'Percorso con stanze opzionali',
     percorsi: [
       { nome: 'Percorso Nord', descrizione: 'Più corto ma più pericoloso (trappole + combattimenti)' },
       { nome: 'Percorso Sud', descrizione: 'Più lungo ma "più sicuro" (più esplorazione, meno combattimenti diretti)' }
@@ -63,34 +64,34 @@ export default function EcosistemaView() {
       nome: "L'Ingresso delle Fogne",
       tipo: 'Entrata/Introduzione',
       dimensioni: 'Piattaforma circolare con canali',
-      descrizione: 'Una scalinata di pietra scende dalle vie di Waterdeep e termina in un\'ampia piattaforma circolare circondata da canali maleodoranti. L\'acqua scorre lentamente, portando detriti e rifiuti organici. L\'aria è soffocante, densa di umidità e fetore. Solo la luce tremolante di alcune torce di legno combatte le tenebre davanti a voi. Davanti alla scalinata, una piccola pozzanghera (30cm profondità) di acqua stagnante verdastra si è formata erodendo il vecchio pavimento in pietra sconnessa.',
+      descrizione: 'Dopo il passaggio del velo divino vi trovate su una scalinata di pietra umida e scivolosa che termina in un\'ampia piattaforma circolare circondata da canali maleodoranti. L\'acqua scorre lentamente, portando detriti e rifiuti organici. L\'aria è soffocante, densa di umidità e fetore. Solo la luce tremolante di alcune torce di legno combatte le tenebre davanti a voi. (Percezione 10) Davanti alla scalinata, una piccola pozzanghera (30cm profondità) di acqua stagnante verdastra si è formata erodendo il vecchio pavimento in pietra sconnessa.',
       elementi: [
-        'Pozzanghera: Nasconde Tomo di Mystra #1 (Percezione CD 14, semisommerso tra detriti sul fondo). Chi cerca trova anche 8 mo sparse',
         'Muri di pietra umida ricoperti di muschio scivoloso',
-        'Due uscite visibili: Sud (passerella di legno pericolante) e Nord (area aperta con canali)'
+        'Due vie visibili: Sud (passerella di legno pericolante) e Nord (area aperta con canali)',
+        'Pozzanghera: Nasconde Tomo di Mystra #1 (Percezione CD 14, semisommerso tra detriti sul fondo) e 1 Cristallo Minuscolo (Percezione CD 16, semisommerso tra detriti sul fondo).'
       ],
-      pericoli: 'Acqua stagnante (movimento dimezzato se ci si cammina dentro)',
-      cristalli: 'Nessuno',
+      pericoli: 'Acqua stagnante (TS su COS se la permanenza dura più di un minuto. Il Personaggio diventa nauseato per 1 minuto se fallisce)',
+      cristalli: '1 Cristallo Minuscolo',
       favoreDivino: 'Mystra (trovare tomo)'
     },
     {
       numero: '2',
       nome: 'Il Piazzale di Scarico',
       tipo: 'Hub esplorativo',
-      dimensioni: '8x10m circa',
-      descrizione: 'Un\'ampia area aperta circondata da canali d\'acqua sporca. Al centro si erge un vecchio pozzo di scarico con argano arrugginito e secchio marcio ancora attaccato alla catena. Attorno al pozzo, casse di legno sfondate, balle di stoffa marcia, pallet e detriti vari accatastati disordinatamente. Segni evidenti di attività recente: impronte nel fango, cenere fresca vicino a una cassa rovesciata, torce consumate da poco.',
+      dimensioni: '12x13m circa',
+      descrizione: 'Un\'ampia area aperta circondata da canali d\'acqua sporca. Al centro si erge un vecchio pozzo di scarico con argano arrugginito e secchio marcio ancora attaccato alla catena. Attorno al pozzo, casse di legno sfondate, balle di stoffa marcia, pallet e detriti vari accatastati disordinatamente.',
       elementi: [
-        'Tracce: Investigare CD 12 rivela che un paio di persone sono passate qui ~2 giorni fa. Le tracce si dividono verso Nord (passerella) o proseguono vagamente verso Sud',
-        'Barili: Ispezionare CD 13 → sul fondo (3m), 12 mo e una borraccia di buona fattura (vendibile 2 mo)',
-        'Tra le casse: 10 mo sparse, corda marcita (inutilizzabile), vecchio set di gavette (vendibili 1 mo)',
+        'Tracce: Investigare CD 12 segni evidenti di attività recente: impronte nel fango verso Sud, cenere fresca vicino a una cassa rovesciata, torce consumate da poco.',
+        'Barili: Ispezionare CD 13 → sul fondo (3m), 1 Cristallo Minuscolo e una borraccia di buona fattura (vendibile 2 mo)',
+        'Tra le casse: corda marcita (inutilizzabile), vecchio set di gavette (vendibili 1 mo), pezzi di stoffa (utili per torce o bende)',
         'Scelta: Percorso Nord (passerella di legno) o Sud (passerella di legno sul canale)'
       ],
       pericoli: 'Nessuno diretto',
-      cristalli: 'Nessuno',
+      cristalli: '1 Cristallo Minuscolo',
       favoreDivino: 'Nessuno'
     },
     {
-      numero: '3N',
+      numero: '3',
       nome: 'La Passerella Marcia',
       tipo: 'Trappola + Combattimento',
       dimensioni: '12m x 1.5m passerella',
@@ -108,25 +109,30 @@ export default function EcosistemaView() {
       noteDM: ['Se i PG attraversano velocemente mentre combattono lo sciame, fai tirare il TS Destrezza. Crea tensione!']
     },
     {
-      numero: '4N',
+      numero: '4',
       nome: 'La Camera Allagata',
-      tipo: 'Pericolo ambientale + Combattimento',
+      tipo: 'Pericolo ambientale + Combattimento (GRICK ACQUATICO)',
       dimensioni: '10x12m',
-      descrizione: 'Una vasta camera completamente sommersa da 1.5m di acqua torbida verdastra. Il soffitto a volta raggiunge i 3m d\'altezza. Sei colonne di pietra sono appena sotto la superficie dall\'acqua, distanti 2-3m l\'una dall\'altra, formando un percorso verso l\'uscita rialzata sulla parete opposta. Echi di gocciolamento risuonano nella stanza.',
+      descrizione: 'Camera vasta allagata con 60cm di acqua stagnante torbida. Un pilastro crollato emerge al centro. Scaffale marcio alla parete est. Grata metallica arrugginita alla parete nord (tana del Grick). Soffitto basso (2.5m) con stalattiti umide. L\'acqua è stranamente immobile. Ossa rosicchiate galleggiano in superficie. Solchi viscidi sui muri.',
       elementi: [
-        'Attraversamento: Nuotare (Atletica CD 11, movimento dimezzato) O Saltare tra colonne (Atletica/Acrobazia CD 12. Fallimento = caduta in acqua)',
-        'Le colonne sono stabili ma scivolose (muschio)',
-        'Combattimento: Non appena qualcuno entra in acqua → 2 Giant Rats (MM pg 327) emergono da cunicoli sommersi e attaccano chi è in acqua',
-        'Percezione CD 12 (sott\'acqua, con luce). I ratti hanno vantaggio su PG in acqua',
-        'Tesoro sul fondo: Percezione CD 14 (sott\'acqua, con luce) rivela: 20 mo sparse, vecchio scudo di legno marcio (inutilizzabile), pugnale arrugginito ma recuperabile (vendibile 2 mo dopo pulizia)'
+        'Combattimento: 1 GRICK ACQUATICO nascosto nell\'acqua (Percezione CD 16 se immobile). Attacca quando qualcuno si avvicina a 3m. Predatore anfibio con tentacoli e resistenza ai danni non magici',
+        'LINK STATBLOCK: Vedi pagina dedicata → /dm/mostri/grick-acquatico',
+        'Tattica: Il Grick emerge dall\'acqua con attacco sorpresa, usa Multiattacco (Tentacoli + Becco), si immerge per copertura, fugge se sotto 8 PF verso la grata nord',
+        'Attraversamento: Acqua 60cm = terreno difficile per PG (movimento dimezzato). Grick nuota a velocità normale (9m)',
+        'Elementi tattici: Pilastro crollato (copertura), Scaffale marcio (abbattibile, Atletica CD 13, 2d6 danni), Soffitto (Grick può arrampicarsi)'
       ],
-      pericoli: 'Acqua profonda, topi giganti, scivolosità',
-      cristalli: '10 cristalli minuscoli (5 per topo)',
-      favoreDivino: 'Tempus (sconfiggere entrambi i topi), Tymora (attraversare senza cadere)',
-      noteDM: ['I topi attaccano prioritariamente chi è in acqua. Se un PG salta con successo tutte le colonne senza mai toccare l\'acqua, i ratti non attaccano (ricompensa la scelta tattica) a meno che i personaggi non tergiversino troppo nella stanza.']
+      pericoli: 'Grick Acquatico (CR 2), acqua stagnante, terreno scivoloso',
+      cristalli: '15 cristalli (dal Grick)',
+      favoreDivino: 'Tempus (sconfiggere senza KO: +10, <4 round: +5), Mystra (uso efficace magia: +10), Tymora (attacco sorpresa vs Grick: +10)',
+      noteDM: [
+        'IMPORTANTE: Questo è un combattimento challenging per party livello 5. Il Grick ha resistenza ai danni non magici (metà danno). Premia uso di magia e tattiche.',
+        'Se i PG individuano il Grick prima (Percezione 16+), possono pianificare attacco. Altrimenti il Grick ha vantaggio all\'iniziativa.',
+        'Usa l\'acqua e il terreno tatticamente: il Grick si immerge per copertura, emerge per attaccare, usa il soffitto per posizioni inaspettate.',
+        'Se troppo difficile: riduci HP a 22. Se troppo facile: aggiungi un Grick giovane (15 HP, -1 danni).'
+      ]
     },
     {
-      numero: '3S',
+      numero: '5',
       nome: 'Il Canale Asciutto',
       tipo: 'Esplorazione/Pericolo ambientale',
       dimensioni: 'Canale 3-4m sotto il livello del pavimento',
@@ -142,7 +148,7 @@ export default function EcosistemaView() {
       noteDM: ['Il buio totale qui è importante - enfatizza la necessità di fonti di luce. I PG senza darkvision o luce hanno svantaggio a tutte le prove di Percezione.']
     },
     {
-      numero: '4S',
+      numero: '6',
       nome: 'Il Deposito Marcio',
       tipo: 'Pericolo ambientale',
       dimensioni: '6x8m rettangolare',
@@ -156,39 +162,6 @@ export default function EcosistemaView() {
       cristalli: 'Nessuno',
       favoreDivino: 'Nessuno (ma ricompensa economica buona)',
       noteDM: ['Questa stanza premia la pazienza. Se i PG si affrettano o fanno rumore, attiva il crollo. Gli attrezzi da scasso qui sono molto utili per la Stanza 14.']
-    },
-    {
-      numero: '5S',
-      nome: 'Il Nido dei Ratti',
-      tipo: 'Combattimento opzionale + Esplorazione',
-      dimensioni: '12x14m irregolare',
-      descrizione: 'Vasta camera naturale irregolare con soffitto a 4 metri. Il terreno è coperto da uno strato di funghi bioluminescenti tossici (luce fioca azzurrina) che emettono spore visibili nell\'aria. Decine di piccoli cunicoli punteggiano le pareti. Al centro della stanza, un ammasso disgustoso di resti organici, ossa, stracci - il nido principale.',
-      elementi: [
-        'Funghi tossici: Camminare tra i funghi disturba le spore. TS Costituzione CD 11 ogni 2 round passati nella stanza o subire 1d4 danni da veleno. Coprirsi naso/bocca con tessuto concede vantaggio al TS',
-        'Combattimento (opzionale): Se i PG entrano rumorosamente O toccano il nido centrale O falliscono Furtività gruppo CD 14 → Escono 1 Swarm of Rats + 3 Giant Rats che attaccano ferocemente',
-        'Evitare combattimento: Muoversi silenziosamente lungo i bordi (Furtività gruppo CD 14) permette di attraversare senza disturbare i ratti',
-        'Tesoro nel nido: Se perquisito (richiede disturbare i ratti se non già combattuto): 38 mo, Osso intagliato con simboli tribali (curiosità, vendibile 5 mo a collezionista), Tomo di Mystra #4 semisepolto sotto ossa, Anello d\'argento semplice (10 mo)'
-      ],
-      pericoli: 'Funghi tossici, sciame + topi giganti',
-      cristalli: '18 cristalli minuscoli (8 sciame + 10 dai topi, se combattono)',
-      favoreDivino: 'Tempus (sconfiggere tutti i nemici), Tymora (passare senza combattere E senza subire danni da funghi), Mystra (recuperare tomo)',
-      noteDM: ['Questa è una vera scelta tattica - combattere per i cristalli (Tempus) o essere furtivi (Tymora)? Entrambe sono strategie valide. Se evitano il combattimento ma poi tornano per il tomo, i ratti attaccano comunque.']
-    },
-    {
-      numero: '6',
-      nome: 'La Sala delle Colonne',
-      tipo: 'Area di raccolta/Riposo',
-      dimensioni: 'Camera a L con soffitto 5m',
-      descrizione: 'Imponente camera a L con soffitto a volta che raggiunge i 5 metri. Otto colonne di pietra scolpita disposte in cerchio sostengono l\'intera struttura. Al centro, un\'antica fontana prosciugata con statua corrosa e irriconoscibile (forse una divinità?). L\'acqua gocciola dalle pareti creando echi melodici. Muschio bioluminescente sulle colonne fornisce luce fioca ma sufficiente.',
-      elementi: [
-        'Fontana centrale: Ispezionare CD 14 rivela sul fondo della vasca: Aprendo tutti e 4 i rubinetti l\'altare si alza rivelando il Tomo di Mystra #5, 25 mo sparse tra foglie marce e detriti, Piccola gemma azzurrina (15 mo)',
-        'Atmosfera: Area relativamente "tranquilla" - i PG possono fare breve respiro prima delle ultime sfide',
-        'Due porte visibili: a Ovest (Corridoio 7, da dove sono arrivati) e a Nord (porta verso area successiva)'
-      ],
-      pericoli: 'Nessuno',
-      cristalli: 'Nessuno',
-      favoreDivino: 'Mystra (ultimo tomo del piano)',
-      noteDM: ['Questa è una buona posizione per un breve riposo se necessario. Permetti ai giocatori di rifiatare, contare risorse, e prepararsi per il finale.']
     },
     {
       numero: '7',
@@ -218,6 +191,22 @@ export default function EcosistemaView() {
     },
     {
       numero: '8',
+      nome: 'La Sala delle Colonne',
+      tipo: 'Area di raccolta/Riposo',
+      dimensioni: 'Camera a L con soffitto 5m',
+      descrizione: 'Imponente camera a L con soffitto a volta che raggiunge i 5 metri. Otto colonne di pietra scolpita disposte in cerchio sostengono l\'intera struttura. Al centro, un\'antica fontana prosciugata con statua corrosa e irriconoscibile (forse una divinità?). L\'acqua gocciola dalle pareti creando echi melodici. Muschio bioluminescente sulle colonne fornisce luce fioca ma sufficiente.',
+      elementi: [
+        'Fontana centrale: Ispezionare CD 14 rivela sul fondo della vasca: Aprendo tutti e 4 i rubinetti l\'altare si alza rivelando il Tomo di Mystra #5, 25 mo sparse tra foglie marce e detriti, Piccola gemma azzurrina (15 mo)',
+        'Atmosfera: Area relativamente "tranquilla" - i PG possono fare breve respiro prima delle ultime sfide',
+        'Due porte visibili: a Ovest (Corridoio 7, da dove sono arrivati) e a Nord (porta verso area successiva)'
+      ],
+      pericoli: 'Nessuno',
+      cristalli: 'Nessuno',
+      favoreDivino: 'Mystra (ultimo tomo del piano)',
+      noteDM: ['Questa è una buona posizione per un breve riposo se necessario. Permetti ai giocatori di rifiatare, contare risorse, e prepararsi per il finale.']
+    },
+    {
+      numero: '9',
       nome: 'La Vasca Tossica',
       tipo: 'Sfida ambientale + Area facoltativa (OPZIONALE)',
       dimensioni: '12x10m',
@@ -233,39 +222,21 @@ export default function EcosistemaView() {
       noteDM: ['Questa stanza è completamente opzionale - i PG possono aggirarla. È una "trappola per avidi" - le ricompense sono buone ma il rischio è alto. Se un PG muore qui, è stata loro scelta.']
     },
     {
-      numero: '9',
-      nome: 'La Cripta Misteriosa',
-      tipo: 'Esplorazione misteriosa (OPZIONALE)',
-      descrizione: 'Piccola camera laterale nascosta dietro una porta di pietra pesante. Camera quadrata (4x4m) con sarcofago di pietra al centro, coperto di rune antiche quasi illeggibili. Le pareti sono decorate con affreschi sbiaditi raffiguranti simboli religiosi non identificabili.',
-      elementi: [
-        'Sarcofago: Non contiene corpo ma solo 15 mo antiche, libro antico di preghiere in Celestiale (valore culturale, non traducibile senza magia)',
-        'Rune: Arcano CD 16 o Religione CD 14 per decifrare parzialmente - sembrano essere sigilli protettivi contro "qualcosa che dorme"',
-        'Atmosfera inquietante: Senso di essere osservati, temperatura più fredda del normale'
-      ],
-      pericoli: 'Nessuno diretto (solo atmosfera)',
-      cristalli: 'Nessuno',
-      favoreDivino: 'Mystra (+5% bonus se il libro viene trattato con rispetto e portato in superficie)',
-      noteDM: ['Questa stanza introduce elementi misteriosi che saranno ripresi nei piani successivi. Pianta il seme del dubbio.']
-    },
-    {
       numero: '10',
-      nome: 'Il Vicolo dei Funghi',
-      tipo: 'Trappola naturale + Combattimento nascosto (OPZIONALE)',
-      dimensioni: '12m x 2.5m vicolo cieco',
-      descrizione: 'Corridoio a vicolo cieco che termina contro un muro di macerie. L\'acqua stagnante raggiunge i 40cm di profondità. Diverse casse di legno galleggiano o sono semisommerse. Le pareti sono completamente ricoperte da colonie di funghi gialli tossici che pulsano debolmente. Tra di essi, apparentemente innocuo, cresce un fungo violaceo più grande (1.5m altezza) vicino alle casse più ricche. Il fungo viola ha un cappello carnoso e tentacoli sottili che penzolano immobili nell\'acqua.',
+      nome: 'Il Nido dei Ratti',
+      tipo: 'Combattimento opzionale + Esplorazione',
+      dimensioni: '12x14m irregolare',
+      descrizione: 'Vasta camera naturale irregolare con soffitto a 4 metri. Il terreno è coperto da uno strato di funghi bioluminescenti tossici (luce fioca azzurrina) che emettono spore visibili nell\'aria. Decine di piccoli cunicoli punteggiano le pareti. Al centro della stanza, un ammasso disgustoso di resti organici, ossa, stracci - il nido principale.',
       elementi: [
-        'Funghi Urlanti Tossici: Disturbare l\'acqua (camminare) o toccare i funghi gialli scatena rilascio di spore (TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno) + Suono stridulo',
-        'Violet Fungus nascosto: Percezione CD 15 o Natura CD 13 per riconoscerlo PRIMA che attacchi. Attacca con tentacoli velenosi quando un PG arriva entro 3m. 1 Violet Fungus',
-        'Casse galleggianti: 5 casse. Aprirle silenziosamente (Furtività CD 14) evita di disturbare i funghi gialli. Contenuto totale: 28 mo, 2 razioni rovinate, 1 razione sigillata, Boccetta di Antitossina (50 mo), Piccolo kit di pronto soccorso (5 usi, vantaggio a Medicina)'
+        'Funghi tossici: Camminare tra i funghi disturba le spore. TS Costituzione CD 11 ogni 2 round passati nella stanza o subire 1d4 danni da veleno. Coprirsi naso/bocca con tessuto concede vantaggio al TS',
+        'Combattimento (opzionale): Se i PG entrano rumorosamente O toccano il nido centrale O falliscono Furtività gruppo CD 14 → Escono 1 Swarm of Rats + 3 Giant Rats che attaccano ferocemente',
+        'Evitare combattimento: Muoversi silenziosamente lungo i bordi (Furtività gruppo CD 14) permette di attraversare senza disturbare i ratti',
+        'Tesoro nel nido: Se perquisito (richiede disturbare i ratti se non già combattuto): 38 mo, Osso intagliato con simboli tribali (curiosità, vendibile 5 mo a collezionista), Tomo di Mystra #4 semisepolto sotto ossa, Anello d\'argento semplice (10 mo)'
       ],
-      pericoli: 'Funghi tossici, Violet Fungus, possibile allerta',
-      cristalli: '3 cristalli piccoli (dal Violet Fungus quando sconfitto)',
-      favoreDivino: 'Tempus (sconfiggere il Violet Fungus), Tymora (recuperare tutte le casse senza attivare funghi gialli E senza combattere = 10%)',
-      noteDM: ['Questa stanza è completamente opzionale. È una "trappola per avidi". Se riconoscono il Violet Fungus prima dell\'attacco, possono usare attacchi a distanza o evitarlo. L\'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive.'],
-      immagineMostro: {
-        src: '/data/images/mostri/violet_fungus_mutato.png',
-        alt: 'Violet Fungus Mutato'
-      }
+      pericoli: 'Funghi tossici, sciame + topi giganti',
+      cristalli: '18 Cristalli Minuscoli (8 sciame + 10 dai topi, se combattono)',
+      favoreDivino: 'Tempus (sconfiggere tutti i nemici), Tymora (passare senza combattere E senza subire danni da funghi), Mystra (recuperare tomo)',
+      noteDM: ['Questa è una vera scelta tattica - combattere per i cristalli (Tempus) o essere furtivi (Tymora)? Entrambe sono strategie valide. Se evitano il combattimento ma poi tornano per il tomo, i ratti attaccano comunque.']
     },
     {
       numero: '11',
@@ -284,6 +255,31 @@ export default function EcosistemaView() {
       pericoli: 'Trappola con timer (acqua che sale)',
       cristalli: 'Nessuno',
       favoreDivino: 'Mystra (risolvere l\'enigma = raccogliere Tomo), Tymora (risolvere senza errori = +15%)',
+      tentativoForza: `**Tentativo di sfondare la porta (forza bruta):**
+
+La porta di pietra massiccia è incredibilmente resistente e praticamente impossibile da sfondare senza soluzioni magiche potenti.
+
+**Statistiche della porta:**
+• AC: 18
+• Punti Ferita: 70 HP
+• Soglia di Danno: 15 (qualsiasi danno inferiore a 15 viene ignorato completamente)
+• Immunità: Veleno, Psichico
+
+**Prova di Forza (Atletica):**
+• CD 27-30 per sfondare con forza bruta
+• Richiede almeno 3 turni di tentativi consecutivi anche in caso di successo
+• Ogni tentativo fallito aumenta la CD di +2 (affaticamento/struttura che si compatta)
+
+**Conseguenze del tentativo:**
+• Rumore assordante: Ogni tentativo attira 1d4 creature dalle zone adiacenti (automatico, nessun tiro Furtività possibile)
+• Danno di contraccolpo: Chi tenta subisce 1d6 danni contundenti per il rinculo
+• Tempo: Ogni tentativo richiede 1 turno completo (6 secondi), durante i quali l'acqua continua a salire
+
+**Alternative magiche:**
+• Disintegrate: Funziona normalmente (distrugge una sezione 3x3m)
+• Passwall: Funziona (crea passaggio temporaneo)
+• Shatter: CD TS della porta 10, se fallisce subisce 3d8 danni sonori (probabilmente sotto soglia)
+• Earthquake: Potrebbe funzionare ma rischia di far collassare l'intera zona`,
       noteDM: [
         'Questa è la stanza più difficile del Piano 1. È completamente opzionale. Premia giocatori intelligenti e pazienti. Punisce tentativi casuali (acqua sale). Non può essere "brute forced" facilmente.',
         'Tieni traccia del tempo reale E del tempo in-game. Descrivi l\'acqua che sale frequentemente per creare tensione. Non essere crudele - se stanno per affogare, lascia un ultimo tentativo di fuga.',
@@ -306,6 +302,26 @@ export default function EcosistemaView() {
       cristalli: '2 cristalli piccoli (1 per bandito)',
       favoreDivino: 'Tempus (sconfiggere banditi), Tymora (trovare segreto)',
       noteDM: ['Questa è una stanza chiave - i PG DEVONO ottenere la chiave per procedere. Se evitano il combattimento con successo, fai in modo che possano comunque ottenere la chiave (rubandola mentre i banditi dormono, barattando, ecc.)']
+    },
+    {
+      numero: '13',
+      nome: 'Il Vicolo dei Funghi',
+      tipo: 'Trappola naturale + Combattimento nascosto (OPZIONALE)',
+      dimensioni: '12m x 2.5m vicolo cieco',
+      descrizione: 'Corridoio a vicolo cieco che termina contro un muro di macerie. L\'acqua stagnante raggiunge i 40cm di profondità. Diverse casse di legno galleggiano o sono semisommerse. Le pareti sono completamente ricoperte da colonie di funghi gialli tossici che pulsano debolmente. Tra di essi, apparentemente innocuo, cresce un fungo violaceo più grande (1.5m altezza) vicino alle casse più ricche. Il fungo viola ha un cappello carnoso e tentacoli sottili che penzolano immobili nell\'acqua.',
+      elementi: [
+        'Funghi Urlanti Tossici: Disturbare l\'acqua (camminare) o toccare i funghi gialli scatena rilascio di spore (TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno) + Suono stridulo',
+        'Violet Fungus MUTATO nascosto: Percezione CD 16 o Natura CD 14 per riconoscerlo PRIMA che attacchi. Attacca con tentacoli velenosi quando un PG arriva entro 4.5m. Questo NON è un Violet Fungus standard - è MUTATO e molto più pericoloso (Grande, 52 PF, vulnerabile a fuoco, aura tossica, rigenerazione). Vedi scheda mostro completa per dettagli tattici.',
+        'Casse galleggianti: 5 casse. Aprirle silenziosamente (Furtività CD 14) evita di disturbare i funghi gialli. Contenuto totale: 28 mo, 2 razioni rovinate, 1 razione sigillata, Boccetta di Antitossina (50 mo), Piccolo kit di pronto soccorso (5 usi, vantaggio a Medicina)'
+      ],
+      pericoli: 'Funghi tossici, Violet Fungus MUTATO (GS 2, molto pericoloso!), possibile allerta',
+      cristalli: '20 cristalli (dal Violet Fungus Mutato quando sconfitto)',
+      favoreDivino: 'Tempus (sconfiggere il Violet Fungus Mutato = ~25% cristalli totali Piano 1), Tymora (recuperare tutte le casse senza attivare funghi gialli E senza combattere = 15%)',
+      noteDM: ['Questa stanza è completamente opzionale. È una "trappola per avidi". ATTENZIONE: il Violet Fungus è MUTATO e molto più pericoloso di uno standard! Vedi scheda completa del mostro per statistiche, abilità speciali, e tattiche di combattimento dettagliate. L\'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive - e per questo combattimento stesso!'],
+      immagineMostro: {
+        src: '/images/mostri/violet_fungus_mutato.png',
+        alt: 'Violet Fungus Mutato'
+      }
     },
     {
       numero: '14',
@@ -331,7 +347,7 @@ export default function EcosistemaView() {
     tomiMystra: {
       totale: 5,
       peso: '2.5 kg ciascuno (12.5 kg totali)',
-      favorePer Tomo: '20% (100% se tutti trovati)',
+      favorePerTomo: '20% (100% se tutti trovati)',
       locazioni: [
         'Stanza 1 - Pozzanghera iniziale (Percezione CD 14)',
         'Stanza 12 - Nicchia segreta accampamento banditi (Investigare CD 15)',
@@ -441,7 +457,25 @@ export default function EcosistemaView() {
           </div>
 
           <div className="bg-slate-800 border border-slate-600 rounded p-3">
-            <span className="font-semibold text-emerald-300">📋 Elementi:</span>
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-semibold text-emerald-300">📋 Elementi:</span>
+              {stanza.numero === '4' && (
+                <a
+                  href="/dm/mostri/grick-acquatico"
+                  className="px-3 py-1 bg-cyan-700 hover:bg-cyan-600 text-white rounded-lg text-xs font-semibold transition-colors"
+                >
+                  🐙 Scheda Grick Acquatico
+                </a>
+              )}
+              {stanza.numero === '7' && (
+                <a
+                  href="/dm/mostri/carrion-crawler-boss"
+                  className="px-3 py-1 bg-red-700 hover:bg-red-600 text-white rounded-lg text-xs font-semibold transition-colors"
+                >
+                  🐛 Scheda Carrion Crawler Boss
+                </a>
+              )}
+            </div>
             <ul className="mt-2 space-y-2">
               {stanza.elementi.map((elemento, i) => (
                 <li key={i} className="text-slate-300 leading-relaxed pl-4 border-l-2 border-emerald-700">
@@ -458,14 +492,38 @@ export default function EcosistemaView() {
             </div>
           )}
 
+          {stanza.tentativoForza && (
+            <div className="bg-orange-900/20 border border-orange-700 rounded p-3">
+              <span className="font-semibold text-orange-400">💪 Tentativo Forza Bruta:</span>
+              <div className="text-slate-300 mt-2 text-sm whitespace-pre-line leading-relaxed">
+                {stanza.tentativoForza}
+              </div>
+            </div>
+          )}
+
           {stanza.immagineMostro && (
             <div className="bg-slate-800 border border-red-700 rounded p-4">
-              <span className="font-semibold text-red-400 block mb-3">👹 Immagine del Mostro:</span>
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-semibold text-red-400">👹 Immagine del Mostro:</span>
+                {stanza.numero === '13' && (
+                  <a
+                    href="/dm/mostri/violet-fungus-mutato"
+                    className="px-4 py-2 bg-red-700 hover:bg-red-600 text-white rounded-lg text-sm font-semibold transition-colors"
+                  >
+                    📜 Scheda Completa del Mostro
+                  </a>
+                )}
+              </div>
               <img
                 src={stanza.immagineMostro.src}
                 alt={stanza.immagineMostro.alt}
                 className="w-full max-w-md mx-auto rounded-lg border-2 border-red-900"
               />
+              {stanza.numero === '13' && (
+                <p className="text-center text-yellow-400 mt-3 text-sm italic">
+                  ⚠️ Questo è un mostro MUTATO molto più pericoloso dello standard! Clicca per vedere la scheda completa.
+                </p>
+              )}
             </div>
           )}
 
@@ -614,7 +672,7 @@ export default function EcosistemaView() {
           <h2 className="text-2xl font-bold text-yellow-400 mb-4">🗺️ Mappa del Livello 1</h2>
           <div className="bg-slate-900 rounded-lg p-4">
             <img
-              src="/data/images/levels/livello-1-fogne-numerata.jpg"
+              src="/images/levels/livello-1-fogne-numerate.jpg"
               alt="Mappa Livello 1 - Le Fogne Superiori"
               className="w-full h-auto rounded"
             />

@@ -22,7 +22,11 @@
       "Bash(git commit:*)",
       "Bash(npm run build:*)",
       "Bash(git rm:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(mkdir:*)",
+      "Bash(copy \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\\\\src\\\\pages\\\\dm\\\\sessioni\\\\sessione-0.astro\" \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\\\\src\\\\pages\\\\sessioni\\\\sessione-0.astro\")",
+      "Bash(cp:*)",
+      "Bash(node -e:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,603 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Sessione 1 - L'Arco Divino" description="Prima discesa nel Dungeon Divino">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">01</span>
+        <h1 class="text-4xl font-bold">L'Arco Divino</h1>
+      </div>
+      <div class="flex gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 17/01/2026</span>
+        <span>⏱️ 3-4 ore</span>
+        <span>🎭 Prima Esplorazione</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 Pianificata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        La prima discesa nel Dungeon Divino. I Guardiani della Trama attraversano l'Arco e ricevono
+        il Marchio Divino. Inizia l'esplorazione dell'Ecosistema 1, Piano 1 - Le Fogne Superiori.
+      </p>
+    </div>
+
+    <!-- Obiettivi della Sessione -->
+    <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>🎯</span> Obiettivi della Sessione
+      </h2>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Creare tensione e meraviglia con la scena dell'attraversamento dell'Arco</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Rendere memorabile il momento del Marchio Divino (dolore, legame permanente)</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Far capire ai giocatori che il dungeon è PERICOLOSO (atmosfera, descrizioni)</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Iniziare l'esplorazione delle Fogne Superiori</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Primo combattimento per testare meccaniche di gruppo</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PARTE 1: L'ATTRAVERSAMENTO -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🌟</span> PARTE I: L'ATTRAVERSAMENTO DELL'ARCO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <!-- L'Alba -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">I.</span> L'Alba del Primo Giorno
+          </h3>
+
+          <div class="bg-gradient-to-r from-orange-950/20 to-yellow-950/20 border border-yellow-500/30 rounded-lg p-6 my-6">
+            <p class="text-lg leading-relaxed text-gray-200">
+              <strong>Leggi ai giocatori:</strong>
+            </p>
+            <blockquote class="border-l-4 border-yellow-500 pl-4 my-4 text-yellow-100 italic">
+              "È l'alba del <strong>15° Giorno di Kythorn, 1495 DR</strong>. Il cielo è ancora tingendo
+              di rosso e arancio quando vi svegliate nella vostra stanza al quartier generale. Sentite
+              il vostro cuore battere forte. Oggi è il giorno. Oggi attraverserete l'Arco Divino.
+
+              <br/><br/>
+
+              Scendete le scale. La sala comune è già piena. <strong class="text-purple-400">Serath Vael'Toran</strong>,
+              il Capogilda, vi aspetta. Accanto a lui, il Triumvirato: <strong class="text-red-400">Magnus</strong>
+              con la sua armatura lucente e la zoppia che non lo abbandona mai, <strong class="text-blue-400">Arianna</strong>
+              che sembra fluttuare più che camminare, e <strong class="text-yellow-400">Silas</strong> con il suo
+              sorriso enigmatico.
+
+              <br/><br/>
+
+              Serath si avvicina. 'È giunto il momento,' dice con voce calma ma solenne. 'Siete pronti?'"
+            </blockquote>
+          </div>
+
+          <div class="bg-yellow-900/20 border border-yellow-500/30 rounded p-4 my-4 dm-only">
+            <p class="text-sm font-bold text-yellow-400 mb-2">💡 MOMENTO DI GIOCO:</p>
+            <p class="text-sm text-gray-300">
+              Dai tempo ai giocatori di fare ultimi preparativi, interagire con gli NPC della gilda,
+              dire addio temporaneo ai compagni delle squadre rivali. Magnus vuole dare un ultimo consiglio
+              a Valoris. Arianna offre un focus arcano minore a Riven. Silas sussurra qualcosa all'orecchio
+              di Thalio ("Ricorda: tutto ha un valore, anche l'informazione").
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Quando i giocatori sono pronti, prosegui:
+          </p>
+
+          <blockquote class="border-l-4 border-blue-500 pl-4 my-4 text-blue-100 italic">
+            "Uscite dalla base. Le strade di Waterdeep sono stranamente silenziose. Troppo presto per
+            i mercanti, troppo tardi per i nottambuli. Camminate verso la <strong>Piazza del Monte</strong>.
+
+            <br/><br/>
+
+            Man mano che vi avvicinate, l'aria cambia. Diventa più... pesante. Elettrica. Come prima di
+            un temporale, ma senza nuvole. E poi lo vedete.
+
+            <br/><br/>
+
+            <strong class="text-yellow-400">L'Arco Divino.</strong>
+
+            <br/><br/>
+
+            Alto quindici metri. Tre colonne intrecciate - <span class="text-red-400">rossa</span>,
+            <span class="text-yellow-400">dorata</span>, <span class="text-blue-400">blu</span> - che si
+            fondono in alto formando un arco perfetto. Le colonne pulsano di luce propria, come fossero
+            vive. La colonna rossa emana calore - potete sentirlo da qui. Quella dorata scintilla e cambia
+            tonalità ogni pochi secondi. Quella blu è fredda, e l'aria attorno ad essa distorce leggermente,
+            come se la Trama stessa fosse più... visibile.
+
+            <br/><br/>
+
+            E all'interno dell'arco...
+
+            <br/><br/>
+
+            <strong>Oscurità.</strong>
+
+            <br/><br/>
+
+            Non un'oscurità normale. È un nero assoluto, liquido, che sembra assorbire la luce circostante.
+            Non riuscite a vedere nulla oltre. È come guardare nel vuoto stesso.
+
+            <br/><br/>
+
+            Ma stranamente... non vi spaventa. Vi <em>chiama</em>."
+          </blockquote>
+        </div>
+
+        <!-- La Piazza -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">II.</span> La Piazza del Monte
+          </h3>
+
+          <p class="leading-relaxed">
+            La piazza è gremita. Centinaia di cittadini si sono radunati per assistere. Vedete:
+          </p>
+
+          <ul class="list-none space-y-3 ml-4 my-4">
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400">→</span>
+              <div>
+                <strong class="text-white">Lo Scudo Radiante</strong> - Ser Aldric e la sua squadra in
+                formazione militare perfetta, armature lucenti sotto la luce dell'alba. Aldric vi guarda
+                e fa un cenno rispettoso con la testa.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400">→</span>
+              <div>
+                <strong class="text-white">Gli Sciocchi Fortunati</strong> - Kessa vi saluta con un gran
+                sorriso. Zax sta armeggiando con un gadget che sta fumando. Whisper vi fissa senza espressione.
+                Grom solleva la sua ascia in segno di saluto.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400">→</span>
+              <div>
+                <strong class="text-white">I Membri di Riserva</strong> della vostra gilda - i quindici
+                compagni che non hanno vinto le Prove Divine. Alcuni vi guardano con invidia. Altri con
+                orgoglio. Altri ancora con preoccupazione.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400">→</span>
+              <div>
+                E poi, <strong class="text-yellow-400">LE DIVINITÀ</strong>. Fluttuanti a tre metri da terra
+                sopra l'Arco. Tempus con la sua armatura fiammeggiante. Tymora che gioca con una moneta d'oro
+                che non smette mai di roteare. Mystra circondata da filamenti della Trama visibili a occhio nudo.
+              </div>
+            </li>
+          </ul>
+
+          <div class="bg-red-950/30 border-l-4 border-red-500 p-6 my-6">
+            <p class="text-red-100 text-lg font-bold leading-relaxed mb-3">
+              TEMPUS PARLA
+            </p>
+            <blockquote class="text-gray-200 italic">
+              "GUARDIANI DELLA TRAMA! Vi siete guadagnati il diritto di entrare per primi. Avete dimostrato
+              equilibrio, astuzia e valore. Ora dimostratelo nel mio dungeon.
+
+              <br/><br/>
+
+              Ricordate: qui dentro, <strong>la morte è permanente</strong>. Non ci sono seconde possibilità
+              regalate. Dovrete guadagnarvi ogni respiro.
+
+              <br/><br/>
+
+              Ma se sopravviverete... se eccellerete... riceverete potere oltre ogni vostra immaginazione.
+
+              <br/><br/>
+
+              <strong class="text-yellow-400">Che il vostro valore sia dimostrato. AVANZATE!</strong>"
+            </blockquote>
+          </div>
+
+          <p class="leading-relaxed">
+            La folla esplode in un boato. Alcune grida di incoraggiamento. Altre di paura. La tensione è palpabile.
+          </p>
+
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4 dm-only">
+            <p class="text-sm font-bold text-blue-400 mb-2">⚡ MOMENTO CRUCIALE:</p>
+            <p class="text-sm text-gray-300">
+              Chiedi ai giocatori: "Cosa fate in questi ultimi istanti prima di attraversare?" Lasciali
+              fare un'ultima azione, dire un'ultima frase, guardarsi negli occhi. Questo è il momento che
+              cementa il party. Poi: "Chi entra per primo?"
+            </p>
+          </div>
+        </div>
+
+        <!-- L'Attraversamento -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">III.</span> Attraverso l'Oscurità
+          </h3>
+
+          <p class="leading-relaxed mb-4">
+            Quando i giocatori decidono di attraversare:
+          </p>
+
+          <blockquote class="border-l-4 border-purple-500 pl-4 my-4 text-purple-100 italic">
+            "Fate un passo verso l'Arco. La folla trattiene il respiro.
+
+            <br/><br/>
+
+            Il primo di voi tocca l'oscurità.
+
+            <br/><br/>
+
+            Non c'è resistenza. È come camminare attraverso una tenda d'acqua gelida. Per un istante -
+            un singolo, terrificante istante - <strong>non esiste più nulla</strong>. Niente luce. Niente
+            suono. Niente sensazioni. È come se aveste smesso di esistere.
+
+            <br/><br/>
+
+            E poi...
+
+            <br/><br/>
+
+            Una scalinata. Pietra bianca, levigata, perfetta. Illuminata da <strong class="text-orange-400">fiamme
+            perpetue</strong> che bruciano senza consumare nulla, incastonate nelle pareti ogni tre metri.
+            Le fiamme non emettono calore. Solo luce. Una luce fredda, innaturale.
+
+            <br/><br/>
+
+            La scalinata scende. Ripida. Stretta - larga forse due metri. Le pareti sono roccia grezza da
+            entrambi i lati, ma la scalinata stessa è perfettamente liscia, come se fosse stata creata da
+            mani divine. <em>Perché lo è stata.</em>
+
+            <br/><br/>
+
+            L'aria è diversa qui. Più fredda. Umida. C'è un odore sottile ma inconfondibile di
+            <strong>muffa</strong> e <strong>acqua stagnante</strong>. E qualcosa d'altro. Qualcosa di...
+            antico. Come se questo posto esistesse da eoni, anche se sapete che è stato creato solo tre
+            mesi fa.
+
+            <br/><br/>
+
+            Guardate indietro. La scalinata sale nell'oscurità. L'Arco Divino non è più visibile. Solo
+            nero. Non c'è via di fuga visibile.
+
+            <br/><br/>
+
+            Davanti a voi, la scalinata scende nel buio. Le fiamme perpetue illuminano solo pochi metri
+            alla volta.
+
+            <br/><br/>
+
+            E mentre iniziate a scendere... <strong class="text-red-400">SENTITE QUALCOSA</strong>."
+          </blockquote>
+
+          <div class="bg-red-900/30 border border-red-500/50 rounded-lg p-6 my-6">
+            <h4 class="text-xl font-bold text-red-400 mb-4 text-center">⚠️ IL MARCHIO DIVINO</h4>
+
+            <p class="text-gray-200 leading-relaxed mb-4">
+              <strong>Leggi LENTAMENTE, con enfasi:</strong>
+            </p>
+
+            <blockquote class="text-red-100 italic text-lg leading-relaxed">
+              "Dopo il quinto gradino... sentite qualcosa di <em>sbagliato</em> sulla nuca.
+
+              <br/><br/>
+
+              Inizia come un prurito. Fastidioso. Come se qualcosa stesse strisciando sotto la pelle.
+
+              <br/><br/>
+
+              Dopo dieci gradini, il prurito diventa <strong>bruciore</strong>.
+
+              <br/><br/>
+
+              [<em>Pausa. Lascia che i giocatori reagiscano.</em>]
+
+              <br/><br/>
+
+              Dopo venti gradini, capite cosa sta succedendo. Qualcosa sta <strong class="text-yellow-400">INCIDENDO</strong>
+              la vostra pelle. Sul retro del collo, proprio sotto l'attaccatura dei capelli. Non vedete cosa,
+              ma lo sentite. Come una lama sottilissima, rovente, che traccia linee nella vostra carne.
+
+              <br/><br/>
+
+              Il dolore è <strong>agonizzante</strong>.
+
+              <br/><br/>
+
+              [<em>Chiedi un Tiro Salvezza su Costituzione, CD 12. Chi fallisce cade in ginocchio per un round.
+              Chi passa rimane in piedi ma deve stringere i denti.</em>]
+
+              <br/><br/>
+
+              Dopo trenta gradini, l'incisione è completa. E poi... <strong>BRUCIA</strong>. Come se qualcuno
+              avesse versato ferro fuso nella ferita. Il dolore è così intenso che vedete bianco. Alcuni di
+              voi gridano. Altri mordono le labbra fino a farle sanguinare.
+
+              <br/><br/>
+
+              E poi, all'improvviso... cicatrizza. Istantaneamente. Come se non fosse mai stato ferito.
+              Ma il dolore permane, fantasma di ciò che è appena successo.
+
+              <br/><br/>
+
+              Toccate la nuca. La pelle è liscia, ma sentite... qualcosa. Rilievi sottili. Un <strong>marchio</strong>.
+
+              <br/><br/>
+
+              E con il marchio, arriva una <strong class="text-purple-400">consapevolezza</strong>.
+
+              <br/><br/>
+
+              Sapete, senza sapere come, che siete legati a questo posto ora. Permanentemente. Il Dungeon
+              Divino <em>vi conosce</em>. Vi ha marchiato come suoi. Non potete più nascondervi da esso.
+              Non potete più scappare. Siete parte del Gioco Divino, ora e per sempre.
+
+              <br/><br/>
+
+              Il marchio non scomparirà mai."
+            </blockquote>
+
+            <div class="bg-black/30 p-4 rounded mt-4 dm-only">
+              <p class="text-sm font-bold text-yellow-400 mb-2">🎨 DESCRIZIONE DEL MARCHIO:</p>
+              <p class="text-sm text-gray-300 mb-2">
+                Il marchio è composto da tre simboli intrecciati:
+              </p>
+              <ul class="text-sm text-gray-300 space-y-1">
+                <li>• Una <span class="text-red-400">spada</span> (Tempus)</li>
+                <li>• Una <span class="text-yellow-400">moneta</span> (Tymora)</li>
+                <li>• Una <span class="text-blue-400">runa arcana</span> (Mystra)</li>
+              </ul>
+              <p class="text-sm text-gray-300 mt-2">
+                I tre simboli formano un cerchio, intrecciati perfettamente. Grande circa 5 cm di diametro.
+                La cicatrice è leggermente in rilievo, di colore leggermente più chiaro della pelle circostante.
+                Non può essere coperto da magia (illusioni falliscono). Non può essere rimosso (nemmeno con
+                <em>Ristorare Superiore</em> o <em>Desiderio</em>).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- L'Arrivo -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">IV.</span> Le Fogne Superiori
+          </h3>
+
+          <p class="leading-relaxed mb-4">
+            Dopo il marchio, i giocatori continuano a scendere. La scalinata sembra interminabile.
+            20 metri. 30 metri. 40 metri. Finalmente...
+          </p>
+
+          <blockquote class="border-l-4 border-green-500 pl-4 my-4 text-green-100 italic">
+            "La scalinata finisce.
+
+            <br/><br/>
+
+            Vi trovate su una piccola piattaforma di pietra. Circa 3 metri per 3 metri. Dietro di voi,
+            la scalinata risale nell'oscurità. Davanti...
+
+            <br/><br/>
+
+            <strong class="text-blue-400">Il primo livello del Dungeon Divino.</strong>
+
+            <br/><br/>
+
+            Le Fogne Superiori di Waterdeep.
+
+            <br/><br/>
+
+            Canali d'acqua verdastra scorrono lentamente in condotti di pietra corrosa. L'odore è
+            nauseabondo - una miscela di feci, acqua stagnante, muffa e qualcosa di dolciastro e
+            marcio che non riuscite a identificare. Le pareti sono coperte di muschio nero e licheni
+            fosforescenti che emettono una debolissima luce verdastra.
+
+            <br/><br/>
+
+            Il soffitto è basso - circa 2 metri e mezzo di altezza. Sentite il peso della città sopra
+            di voi. Tonnellate di pietra e terra. L'aria è pesante, carica di umidità.
+
+            <br/><br/>
+
+            Davanti a voi, un corridoio largo circa 3 metri si snoda nella penombra. L'acqua scorre in
+            un canale al centro del corridoio, profondo circa mezzo metro. Sui lati, passaggi pedonali
+            stretti, coperti di melma viscida.
+
+            <br/><br/>
+
+            E in lontananza... sentite qualcosa.
+
+            <br/><br/>
+
+            Un <strong>grido</strong>. Umano? Forse. Distorto dall'eco. Disperato.
+
+            <br/><br/>
+
+            E poi... silenzio.
+
+            <br/><br/>
+
+            Benvenuti nel Dungeon Divino."
+          </blockquote>
+
+          <div class="bg-yellow-900/20 border border-yellow-500/30 rounded p-4 my-4 dm-only">
+            <p class="text-sm font-bold text-yellow-400 mb-2">🎲 MOMENTO MECCANICO:</p>
+            <p class="text-sm text-gray-300">
+              I giocatori sono ora ufficialmente nell'Ecosistema 1, Piano 1. Chiedi loro:
+            </p>
+            <ul class="text-sm text-gray-300 space-y-1 mt-2">
+              <li>• "Chi apre la marcia?"</li>
+              <li>• "Quale formazione adottate?"</li>
+              <li>• "Accendete torce o usate fonti di luce magiche?"</li>
+              <li>• "Procedete cautamente o velocemente?"</li>
+            </ul>
+            <p class="text-sm text-gray-300 mt-2">
+              Stabilisci l'ordine di marcia e procedi con l'esplorazione. Riferisciti a
+              <a href="/dm/ecosistema-1" class="text-blue-400 hover:text-blue-300">/dm/ecosistema-1</a>
+              per i dettagli delle stanze e degli incontri.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- NOTE PER IL DM -->
+    <div class="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-8 mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span>📝</span> NOTE PER IL DUNGEON MASTER
+      </h2>
+
+      <div class="space-y-6 text-sm">
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Atmosfera e Tono</h3>
+          <p class="text-gray-300 leading-relaxed mb-2">
+            Questa sessione deve stabilire il tono per l'intera campagna. Il Dungeon Divino è:
+          </p>
+          <ul class="text-gray-300 space-y-1">
+            <li>• <strong>Pericoloso</strong> - la morte è reale e permanente</li>
+            <li>• <strong>Antico</strong> - anche se creato di recente, sembra esistere da sempre</li>
+            <li>• <strong>Vivo</strong> - il dungeon osserva, giudica, reagisce</li>
+            <li>• <strong>Competitivo</strong> - altre gilde sono qui, e non tutti sono alleati</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Il Marchio Divino - Regole Meccaniche</h3>
+          <div class="bg-gray-900/50 border border-gray-700 rounded p-4">
+            <p class="text-gray-300 mb-2"><strong>Effetti del Marchio:</strong></p>
+            <ul class="text-gray-300 space-y-2">
+              <li>
+                <strong class="text-blue-400">1. Tracciamento Divino:</strong> Le Divinità sanno sempre
+                dove siete nel dungeon. Non potete nascondervi da loro.
+              </li>
+              <li>
+                <strong class="text-blue-400">2. Favore Visibile:</strong> Il marchio cambia colore
+                basandosi sul vostro Favore Divino dominante (rosso = Tempus, oro = Tymora, blu = Mystra).
+              </li>
+              <li>
+                <strong class="text-blue-400">3. Legame Permanente:</strong> Se morite nel dungeon,
+                la vostra anima viene reclamata normalmente, ma il marchio rimane sul cadavere. Le anime
+                dei marchiati sono più "facili" da richiamare (bonus +2 ai tiri di <em>Resurrezione</em>).
+              </li>
+              <li>
+                <strong class="text-blue-400">4. Identificazione:</strong> Altri avventurieri possono
+                riconoscere la vostra gilda dal marchio. Utile per alleanze... o per vendettte.
+              </li>
+              <li>
+                <strong class="text-blue-400">5. Risonanza:</strong> Quando siete vicini (30 metri) a
+                membri di altre gilde, il marchio emette un leggero calore/freddo. Non rivela posizioni
+                esatte, ma avverte della presenza.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Ritmo della Sessione</h3>
+          <div class="space-y-2 text-gray-300">
+            <p><strong>Ora 1:</strong> L'attraversamento dell'Arco e il Marchio (gioca questa scena lentamente)</p>
+            <p><strong>Ora 2:</strong> Esplorazione iniziale delle Fogne Superiori, prime 2-3 stanze</p>
+            <p><strong>Ora 3:</strong> Primo combattimento significativo (vedi Ecosistema 1)</p>
+            <p><strong>Ora 4:</strong> Conclusione, riposo breve, setup per prossima sessione</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Checklist Sessione</h3>
+          <div class="space-y-1">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Attraversamento dell'Arco descritto in modo memorabile</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Marchio Divino applicato con giusta enfasi sul dolore e permanenza</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Tiri Salvezza su Costituzione per il marchio registrati</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Atmosfera delle Fogne Superiori stabilita (odori, suoni, pericoli)</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Primo combattimento completato</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="w-4 h-4" />
+              <span>Favore Divino iniziale guadagnato/registrato</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Possibili Complicazioni</h3>
+          <div class="bg-red-900/20 border border-red-500/30 rounded p-4">
+            <p class="text-sm text-gray-300 mb-2">
+              <strong>Se i giocatori tentano di tornare indietro dopo il marchio:</strong>
+            </p>
+            <p class="text-sm text-gray-300 mb-3">
+              La scalinata è ancora lì, ma quando cercano di risalire, sentono una voce (Tempus):
+              <em>"Non c'è ritorno finché non avete dimostrato valore. Avanzate, o perite qui."</em>
+              La scalinata diventa intangibile se provano a risalire (passa attraverso, non può essere
+              scalata). L'unica via è avanti.
+            </p>
+
+            <p class="text-sm text-gray-300 mb-2">
+              <strong>Se qualcuno entra in panico per il dolore del marchio:</strong>
+            </p>
+            <p class="text-sm text-gray-300">
+              È normale. Lascia che i giocatori interpretino la paura. Ma ricorda loro: il dolore passa,
+              il marchio rimane, e non c'è modo di rimuoverlo. Devono accettarlo e andare avanti.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link alle Risorse -->
+    <div class="bg-blue-900/20 border border-blue-500/50 rounded-lg p-6">
+      <h3 class="text-xl font-bold mb-4">🔗 Risorse Correlate</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <a href="/dm/ecosistema-1" class="block p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-700 transition-colors">
+          <p class="font-bold text-blue-400">Ecosistema 1 - Fogne Superiori</p>
+          <p class="text-gray-400">Mappa, incontri e tesori del primo piano</p>
+        </a>
+        <a href="/dm/sessioni" class="block p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-700 transition-colors">
+          <p class="font-bold text-blue-400">Registro Sessioni</p>
+          <p class="text-gray-400">Torna all'elenco completo delle sessioni</p>
+        </a>
+        <a href="/meccaniche/favore-divino" class="block p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-700 transition-colors">
+          <p class="font-bold text-blue-400">Sistema Favore Divino</p>
+          <p class="text-gray-400">Meccaniche di accumulo e spesa del Favore</p>
+        </a>
+        <a href="/gilde/guardiani-della-trama" class="block p-3 bg-gray-800 hover:bg-gray-700 rounded border border-gray-700 transition-colors">
+          <p class="font-bold text-blue-400">I Guardiani della Trama</p>
+          <p class="text-gray-400">Informazioni complete sulla gilda dei PG</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</MainLayout>

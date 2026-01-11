@@ -1,0 +1,120 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="404 - Pagina Non Trovata">
+  <!-- Hero 404 Section -->
+  <div class="min-h-[70vh] flex items-center justify-center">
+    <div class="text-center max-w-2xl mx-auto px-4">
+      <!-- Icona Dado Critico Fail -->
+      <div class="mb-8 relative">
+        <div class="inline-block relative">
+          <svg class="w-32 h-32 text-red-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <!-- <span class="text-4xl font-bold text-slate-900">1</span> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Titolo -->
+      <h1 class="text-6xl md:text-8xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-red-500 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          404
+        </span>
+      </h1>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-200 mb-6">
+        Fallimento Critico!
+      </h2>
+
+      <!-- Descrizione D&D themed -->
+      <div class="bg-slate-800 border-2 border-red-500/50 rounded-lg p-6 mb-8">
+        <p class="text-xl text-slate-300 mb-4">
+          Hai lanciato un <span class="text-red-400 font-bold">1 naturale</span> sul tiro di Percezione!
+        </p>
+        <p class="text-slate-400 italic">
+          La pagina che cercavi si è persa nelle profondità del Dungeon Divino...
+        </p>
+      </div>
+
+      <!-- Suggerimenti con Abilità D&D -->
+      <div class="grid md:grid-cols-2 gap-4 mb-8">
+        <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-left">
+          <h3 class="text-yellow-400 font-bold mb-2 flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+            Prova Indagare
+          </h3>
+          <p class="text-sm text-slate-300">Verifica di aver digitato l'URL correttamente</p>
+        </div>
+
+        <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-left">
+          <h3 class="text-blue-400 font-bold mb-2 flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+            Prova Arcano
+          </h3>
+          <p class="text-sm text-slate-300">Questa pagina potrebbe non esistere ancora</p>
+        </div>
+      </div>
+
+      <!-- Call to Action - Navigazione -->
+      <div class="space-y-4">
+        <p class="text-slate-400 text-sm mb-6">Prova a tornare in una di queste zone sicure:</p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/" class="whitetextcolor px-6 py-3 bg-yellow-600 hover:bg-yellow-500 text-white font-bold rounded-lg transition-all hover:scale-105 inline-flex items-center no-underline group shadow-lg shadow-yellow-600/30">
+            <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Torna alla Base (Home)
+          </a>
+
+          <a href="/citta/overview" class="whitetextcolor px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-all hover:scale-105 inline-flex items-center no-underline group shadow-lg shadow-blue-600/30">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Esplora le Città
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/gilde/overview" class="whitetextcolor px-5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold rounded-lg transition-all hover:scale-105 inline-flex items-center no-underline text-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Gilde
+          </a>
+
+          <a href="/dungeon/overview" class="whitetextcolor px-5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold rounded-lg transition-all hover:scale-105 inline-flex items-center no-underline text-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+            </svg>
+            Dungeon
+          </a>
+
+          <a href="/dei/pantheon" class="whitetextcolor px-5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold rounded-lg transition-all hover:scale-105 inline-flex items-center no-underline text-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+            Pantheon
+          </a>
+        </div>
+      </div>
+
+      <!-- Messaggio finale D&D themed -->
+      <div class="mt-12 text-center">
+        <p class="text-slate-500 text-sm italic">
+          "Anche i migliori avventurieri si perdono a volte. L'importante è ritrovare la strada."
+        </p>
+        <p class="text-slate-600 text-xs mt-2">
+          — Elminster Aumar, Saggio di Shadowdale
+        </p>
+      </div>
+    </div>
+  </div>
+</MainLayout>

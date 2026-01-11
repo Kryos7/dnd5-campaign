@@ -5,7 +5,7 @@ import DungeonLevelCard from '../../components/DungeonLevelCard.astro';
 ---
 
 <MainLayout title="Dungeon Overview">
-  <h1 class="mb-8">I Mega-Dungeon</h1>
+  <h1 class="mb-8">Il Dungeon Divino</h1>
 
   <div class="mb-8">
     <p class="text-lg text-slate-300 mb-4">
@@ -35,6 +35,18 @@ import DungeonLevelCard from '../../components/DungeonLevelCard.astro';
       rewards={["1000 PO", "Oggetti non comuni", "Favore Divino (50 punti)"]}
       dangers={["Trappole complesse", "Mostri CR 5-7", "Boss intermedio"]}
     />
+
+  <!-- <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <DungeonLevelCard
+      levelNumber={1}
+      name="Le Fogne"
+      difficulty={1}
+      theme="Fogne abbandonate e pericolose"
+      resetFrequency="Giornaliero"
+      rewards={["Cristalli magici", "Oggetti comuni", "Favore Divino"]}
+      dangers={["Trappole basilari", "Mostri CR 1-2", "Enigmi"]}
+    /> -->
+
   </div>
 
   <InfoBox type="mechanic" title="Work in Progress">

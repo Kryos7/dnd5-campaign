@@ -32,27 +32,25 @@ Struttura a "Y" con due percorsi alternativi che si ricongiungono:
 ## MAPPA CONCETTUALE
 
 ```
-         [1-ENTRATA]
-              |
-          [2-PIAZZALE]
-          /        \
-     [3N-Nord]   [3S-Sud]
-         |           |
-     [4N-Guard]   [4S-Deposito]
-         |           |
-     [5N-Allag]   [5S-Nido]
-          \         /
-           [6-SALA]
-              |
-          [7-VERME]
-              |
-         [8-VASCA] ← opzionale con sfide
-              |
-         [9-CRIPTA] ← laterale misteriosa
-              |
-         [??-FUNGHI] ← vicolo cieco
-              |
-        [10-SCALA P2]
+                    [1-ENTRATA]
+                          |
+                    [2-PIAZZALE]
+          /               |                     \
+[3-PASSERELLA MARCIA] [5-CANALE ASCIUTTO] [6-DEPOSITO MARCIO]
+         |                                        |
+[4-CAMERA ALLAGATA]
+          \                                      /
+                  [7-CORRIDOIO DEL VERME]
+                            |
+                    [8-SALA COLONNE]
+            /               |                     \               \
+      [9-VASCA]       [10-NIDO RATTI]       [11-4 leve]       [12-BANDITI]
+      opzionale           opzionale          opzionale          opzionale
+                            |
+         [13-VICOLO FUNGHI]
+            vicolo cieco
+                  |
+            [10-SCALA P2]
 ```
 
 ---
@@ -101,8 +99,6 @@ Un'ampia area aperta (8x10m circa) circondata da canali d'acqua sporca. Al centr
 **Favore Divino:** Nessuno
 
 ---
-
-## PERCORSO NORD (Corto ma pericoloso)
 
 ### **ZONA 3 - LA PASSERELLA MARCIA**
 
@@ -323,7 +319,7 @@ Ampia camera aperta (12x10m) dominata da una grande vasca d'acqua verdastra e fu
 
 ---
 
-### **ZONA 10 - IL NIDO DEI RATTI**
+### **ZONA 10 - IL NIDO DEI RATTI** ⭐ OPZIONALE
 
 **Tipo:** Combattimento opzionale + Esplorazione
 
@@ -368,32 +364,32 @@ Vasta camera naturale irregolare (12x14m) con soffitto a 4 metri. Il terreno è 
 **Tipo:** Enigma logico complesso + Trappola temporale
 
 **Descrizione:**
-Stanza quadrata (6x6m) con soffitto a 4m. Pareti di pietra umida con quattro **leve di ferro** montate a 1.5m d'altezza, una per parete (Nord, Sud, Est, Ovest). Ogni leva ha una placca di bronzo corroso sotto con un'iscrizione in Comune antico (ancora leggibile).
+Stanza quadrata (6x6m) con soffitto a 4m. Pareti di pietra umida con quattro **leve di ferro** montate a 1.5m d'altezza, due su parete a Nord e due su parete a Sud. Ogni leva ha una placca di bronzo corroso sotto con un'iscrizione in Comune antico (ancora leggibile).
 
-Al centro del pavimento, una pesante **griglia metallica** circolare (2m diametro) con bordi decorati con simboli d'acqua. Sotto la griglia, si intravede una camera oscura profonda 3m.
+Al centro del pavimento, due pesanti **griglie metalliche** squadrate.
 
 L'acqua gocciola costantemente dal soffitto attraverso fessure quasi invisibili.
 
 **Porta sigillata - TRAPPOLA:**
 - Appena **TUTTI i PG entrano** → **porta si chiude con scatto meccanico pesante**
-- **Percezione CD 16 o Investigare Trappole CD 16:** Notare meccanismo a pressione sul pavimento vicino alla porta PRIMA di entrare
-  - Con successo: "C'è una lastra di pressione nascosta. Sembra collegata alla porta - probabilmente si chiuderà quando qualcuno entra."
+- **Percezione CD 16 o Investigare Trappole CD 16:** Notare meccanismo sui lati corti della porta. Qualcosa di complesso agisce sulla chiusura/apertura della porta, impossibile capire cosa nello specifico."
 - Se falliscono: porta si sigilla, **senza via d'uscita apparente**
 - Tentare di forzare la porta: **impossibile** (pietra solida magicamente rinforzata, fusa con muro)
 - **Knock** o magie simili: **non funzionano** (blocco magico antico, CD troppo alta)
+- Dietro la porta, nella parte che prima che si chiudesse non si vedeva c'è una iscrizione che recita: *"Dove quattro leve dominano le acque, metà mente e metà dice il vero. L'errore affoga"*
 
 ### **Le Quattro Leve e le Iscrizioni:**
 
 **LEVA I (Parete Nord):**
 *"La Leva II mente. Io sono la terza da tirare."*
 
-**LEVA II (Parete Est):**
+**LEVA II (Parete Nord):**
 *"La Leva I mente. Io sono la quarta da tirare."*
 
 **LEVA III (Parete Sud):**
 *"La Leva IV mente. Io sono la seconda da tirare."*
 
-**LEVA IV (Parete Ovest):**
+**LEVA IV (Parete Sud):**
 *"La Leva III mente. Io sono la quarta da tirare."*
 
 ### **Meccanica dell'Enigma:**
@@ -408,17 +404,15 @@ L'acqua gocciola costantemente dal soffitto attraverso fessure quasi invisibili.
 
 **1° ERRORE:**
 - Rumore metallico cigolante dai muri
-- Acqua inizia a sgorgare più velocemente dalle fessure nel soffitto
+- Acqua inizia a sgorgare più velocemente dalla tubatura a Ovest
 - **Velocità acqua:** 10cm/minuto
 - I PG hanno circa **40 minuti** prima che l'acqua raggiunga il soffitto (4m)
-- Possono **resettare le leve** e riprovare
 
 **2° ERRORE:**
 - Rumore più forte, vibrazioni nel pavimento
 - Acqua accelera drasticamente
 - **Velocità acqua:** 30cm/minuto
 - Tempo ridotto a circa **13 minuti** totali rimanenti
-- Possono ancora resettare
 
 **3° ERRORE:**
 - Suono metallico acuto, ingranaggi si inceppano parzialmente
@@ -426,13 +420,11 @@ L'acqua gocciola costantemente dal soffitto attraverso fessure quasi invisibili.
 - **Velocità acqua:** 60cm/minuto
 - Tempo ridotto a circa **6-7 minuti** totali rimanenti
 - L'acqua è ora fredda e agitata (movimento dimezzato se si prova a nuotare)
-- Possono ancora tentare (ma con grande difficoltà)
 
 **4° ERRORE (o più):**
 - Sistema collassa completamente
 - Flusso incontrollabile: **120cm/minuto**
 - **Circa 3 minuti** prima di stanza completamente allagata
-- A questo punto devono **FUGGIRE o annegare**
 
 ### **Soluzione dell'Enigma:**
 
@@ -465,49 +457,55 @@ L'acqua gocciola costantemente dal soffitto attraverso fessure quasi invisibili.
 
 ### **Opzioni di fuga (se tutto va male):**
 
-Se i PG accumulano troppi errori e la stanza sta per allagarsi completamente:
+Se i PG accumulano troppi errori e la stanza sta per allagarsi completamente avranno ben poche opzioni:
 
-**OPZIONE A - Forzare la griglia (molto difficile):**
-- **Atletica CD 18 (gruppo):** Serve che almeno 3 PG tirino insieme per 1 round completo
-- Se riescono: griglia si apre parzialmente, possono scivolare sotto (ma perdono tutte le ricompense)
-
-**OPZIONE B - Scassinare il meccanismo (sotto pressione):**
-- **Thieves' Tools CD 19:** Richiede 3 minuti di lavoro concentrato
-- Deve essere fatto mentre l'acqua sale (svantaggio se già sopra 1m)
-- Se riescono: griglia si sblocca
-
-**OPZIONE C - Distruggere la griglia (rumoroso e pericoloso):**
-- La griglia ha **CA 19, 40 PF**
-- **Immunità a danni perforanti** (troppo sottile per frecce)
-- **Resistenza a danni contundenti** (ferro solido)
-- Vulnerabile a danni da **fulmine** (conduce elettricità, danno raddoppiato)
-- **Thunder Wave** o esplosivi funzionano
-- Se distrutta: accesso alla camera sotto, ma l'acqua inizia a scaricarsi violentemente (TS Destrezza CD 14 o trascinati sotto, 2d6 danni contundenti)
-
-**OPZIONE D - Magie creative:**
 - **Water Breathing:** Permette di sopravvivere sott'acqua, ma devono comunque uscire
-- **Shatter** sul meccanismo della porta: CD 15 danni tuono concentrati, potrebbe rompere serratura (50% possibilità)
-- **Misty Step / Dimension Door:** Teletrasportarsi attraverso la porta (se hanno linea di vista esterna)
 
-### **Camera sotto la griglia (se risolvono correttamente):**
+- **Distruzione della porta:**
+La porta di pietra massiccia è incredibilmente resistente e praticamente impossibile da sfondare senza soluzioni magiche potenti.
+
+**Statistiche della porta:**
+- **AC:** 18
+- **Punti Ferita:** 70 HP
+- **Soglia di Danno:** 15 (qualsiasi danno inferiore a 15 viene ignorato completamente)
+- **Immunità:** Veleno, Psichico
+
+**Prova di Forza (Atletica):**
+- **CD 27-30** per sfondare con forza bruta
+- Richiede almeno 3 turni di tentativi consecutivi anche in caso di successo
+- Ogni tentativo fallito aumenta la CD di +2 (affaticamento/struttura che si compatta)
+
+**Conseguenze del tentativo:**
+- **Rumore assordante:** Ogni tentativo di sfondamento attira 1d4 creature dalle zone adiacenti (automatico, nessun tiro Furtività possibile)
+- **Danno di contraccolpo:** Chi tenta di sfondare subisce 1d6 danni contundenti per il rinculo contro la pietra
+- **Tempo:** Ogni tentativo richiede 1 turno completo (6 secondi), durante i quali l'acqua continua a salire
+
+**Alternative magiche:**
+- **Disintegrate:** Funziona normalmente (distrugge una sezione 3x3m)
+- **Passwall:** Funziona (crea passaggio temporaneo)
+- **Shatter:** CD Tiro Salvezza della porta 10, se fallisce subisce 3d8 danni sonori (ma probabilmente sotto la soglia)
+- **Earthquake:** Potrebbe funzionare ma rischia di far collassare l'intera zona
+
+> **Nota DM:** Questa porta è progettata per essere praticamente impraticabile da sfondare, spingendo i giocatori a risolvere l'enigma delle leve. Permettere la forza bruta dovrebbe essere estremamente costoso in termini di risorse, tempo e rischio.
+
+### **Scompartimento segreto (se risolvono correttamente):**
 
 Quando le 4 leve vengono tirate nell'ordine corretto (III → II → I → IV):
 - Suono di ingranaggi che si allineano perfettamente
-- L'acqua che gocciola **si ferma completamente**
-- La griglia si sblocca e scivola lateralmente con fluidità
-- Scala a pioli di ferro scende nella camera sottostante
+- L'acqua che scorre **si ferma completamente**
+- L'acqua che sale fluisce attraverso le griglie che si saranno aperte
 
-**Camera del tesoro (3x3m, profondità 3m sotto la griglia):**
-Piccola cripta asciutta con pavimento di pietra levigata. Una singola torcia magica si accende automaticamente quando qualcuno scende, rivelando:
+**Scaffale del tesoro (1x1m, sul muro a Nord):**
+Piccola cassaforte nella pietra levigata si apre sul muro a Nord. Una singola torcia magica al di dietro si accende automaticamente quando si apre, rivelando:
 
 **Tesori:**
-- **Tomo di Mystra** posato su piedistallo di pietra al centro (Tomo #6 - non presente nel tuo documento attuale, questo è extra)
-- **45 mo** in monete antiche sparse ordinatamente sul pavimento (disposte in cerchio attorno al piedistallo)
+- **Tomo di Mystra #7** posato su piedistallo di pietra al centro
+- **1 cristallo medio**
 - **Chiave di Ferro Nero** appesa a gancio sulla parete est
   - Lunga 15cm, ferro nero intricato con decorazioni d'acqua
   - Simbolo di goccia d'acqua sull'impugnatura
   - Pesante (0.5 kg)
-- **Pozione di Guarigione Maggiore** (4d4+4) in ampolla di vetro blu su mensola
+- 2x **Pozione di Guarigione** (2d4+4) in ampolla di vetro blu su mensola
 - **Nota antica** su pergamena (Comune), accanto alla chiave:
 
 > *"A chi risolve il Flusso delle Quattro Verità: questa chiave apre il Magazzino Sigillato nelle profondità. Custodisce ciò che i contrabbandieri nascondevano dai Lord. Usala con saggezza."*
@@ -515,13 +513,10 @@ Piccola cripta asciutta con pavimento di pietra levigata. Una singola torcia mag
 > *— Il Maestro delle Acque*
 
 **Dettagli sulla Chiave di Ferro Nero:**
-- **Funzione:** Apre un cancello/porta speciale nel **Piano 2 - Tunnel dei Contrabbandieri**
-- **Meccanica di gioco:** Quando i PG arriveranno al Piano 2, il DM può inserire una "stanza bonus segreta" accessibile solo con questa chiave, contenente tesoro extra e/o informazioni
+- **Funzione:** Apre un cancello/porta di un passaggio segreto nel **Piano 3 - Boss**
+- **Meccanica di gioco:** Quando i PG arriveranno al Piano 3, il DM può inserire una "stanza bonus segreta" accessibile solo con questa chiave, contenente tesoro extra e/o informazioni
 - **Valore narrativo:** Collega i piani tra loro, premia la risoluzione di enigmi complessi, crea continuità
 - Non è magica (nessuna aura con Detect Magic), ma chiaramente importante
-
-**Uscita alternativa:**
-Una volta nella camera del tesoro, una **piccola porta di pietra** sulla parete nord si sblocca automaticamente. Conduce a un breve tunnel (10m) che riemerge nel corridoio principale del Piano 1 (vicino alla Stanza 6 - Sala delle Colonne), permettendo ai PG di evitare di risalire attraverso la griglia.
 
 ### **Timing e Difficoltà:**
 
@@ -537,12 +532,12 @@ Una volta nella camera del tesoro, una **piccola porta di pietra** sulla parete 
 - Conseguenze severe per errori
 
 **Scaling:**
-- **Se troppo difficile:** Dopo 20 minuti reali, un PG può fare **Intuizione CD 15** per ricevere hint: "Le leve che parlano di altre leve che mentono... forse stanno dicendo la verità su quelle?"
+- **Se troppo difficile:** Dopo 20 minuti reali, un PG può fare **Intuizione CD 15** per ricevere hint: "Le leve agli estremi hanno una tacchetta incisa appena dopo l'impugnatura... potrebbero essere indicate quelle veritiere o quelle bugiarde?"
 - **Se troppo facile:** (improbabile) Riduci tempo tra errori (es: 20cm/min, 60cm/min, 120cm/min, 240cm/min)
 
 ### **Ricompense e Risorse:**
 
-**Cristalli:** Nessuno (non c'è combattimento)
+**Cristalli:** 1 cristallo medio
 
 **Favore Divino:**
 - **Mystra:** Risolvere l'enigma = raccogliere Tomo #6 = 20% Favore (o contributo se tomo extra)
@@ -550,8 +545,6 @@ Una volta nella camera del tesoro, una **piccola porta di pietra** sulla parete 
 - **Tempus:** Nessuno (non è un test di battaglia)
 
 **Oro e oggetti:**
-- 45 mo
-- Pozione Guarigione Maggiore (4d4+4) - valore ~200 mo
 - Chiave di Ferro Nero - valore narrativo inestimabile
 
 **Note DM:**
@@ -579,8 +572,7 @@ Una volta nella camera del tesoro, una **piccola porta di pietra** sulla parete 
 - Se bloccati >40 minuti: considera di permettere un check Intelligenza CD 18 per ricevere la soluzione parziale
 
 **Collegamenti al Piano 2:**
-- La Chiave di Ferro Nero è importante - prepara una stanza/area speciale nel Piano 2 che richieda questa chiave
-- La nota menziona "Magazzino Sigillato" - dovrai crearlo
+- La Chiave di Ferro Nero è importante - prepara una stanza/area speciale nel Piano 3 che richieda questa chiave
 - Ricompensa generosa per bilanciare la difficoltà estrema dell'enigma
 
 ---
@@ -678,7 +670,7 @@ Disturbare l'acqua (camminare) o toccare i funghi gialli scatena:
 
 ---
 
-### **STANZA 14 - LA SCALA PRESIDIATA**
+### **STANZA 14 - LA SCALA PER IL LIVELLO 2**
 
 **Tipo:** Transizione con ostacolo
 
@@ -691,8 +683,6 @@ Una scala scende nelle profondità della terra.
   - **Serratura complessa:** Attrezzi da scasso + Destrezza CD 16 per scassinare (richiede 1 minuto di lavoro concentrato)
   - **Chiave:** I banditi della Stanza 4N possiedono la chiave (uno dei due ce l'ha addosso)
   - **Alternative creative:** Knock (apre automaticamente), Shatter sul meccanismo (CD 15 Costituzione o si rompe), ecc.
-
-- **Simbolo magico:** Innocuo, fornisce luce fioca costante. Detect Magic rivela aura di Divinazione (Mystra). Non ha funzione apparente oltre illuminare.
 
 - **Zona sicura:** I PG possono riposare brevemente qui. Nessuna creatura entra in questa stanza.
 

@@ -1,0 +1,1679 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Sessione 0 - La Discesa degli Dèi" description="Introduzione epica alla campagna">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">00</span>
+        <h1 class="text-4xl font-bold">La Discesa degli Dèi</h1>
+      </div>
+      <div class="flex gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 10/01/2026</span>
+        <span>⏱️ 3-4 ore</span>
+        <span>🎭 Introduzione/Setup</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 Pianificata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Introduzione all'ambientazione, spiegazione del Gioco Divino, presentazione dei personaggi,
+        descrizione delle Prove Divine per ogni città.
+      </p>
+    </div>
+
+    <!-- Obiettivi della Sessione -->
+    <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>🎯</span> Obiettivi della Sessione
+      </h2>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Immergere i giocatori nell'ambientazione con una narrazione epica e coinvolgente</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Spiegare il funzionamento del Gioco Divino e del sistema di Favore</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Presentare i personaggi e le loro motivazioni</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Raccontare le Prove Divine che hanno determinato la squadra principale di ogni gilda</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1">✓</span>
+          <span>Preparare i giocatori alla prima sessione di gioco vera</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PARTE 1: L'INCIPIT NARRATIVO -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">⚡</span> L'INCIPIT: LA DISCESA DEGLI DÈI
+      </h2>
+
+      <!-- Il Giorno dell'Annuncio -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-red-400">I.</span> Il Giorno dell'Annuncio
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="text-lg leading-relaxed">
+            <strong class="text-yellow-400">Era il 15° giorno di Mirtul, Anno 1495 DR.</strong>
+          </p>
+
+          <p class="leading-relaxed">
+            Il sole sorgeva come sempre su Faerûn, illuminando le sette città che avrebbero cambiato per sempre
+            il destino del Piano Materiale. <span class="text-blue-400">Waterdeep</span>, la Città degli Splendori,
+            si svegliava al consueto caos ordinato dei mercanti che aprivano bottega.
+            <span class="text-orange-400">Mithral Hall</span> risuonava dei primi colpi di martello nelle forgie naniche.
+            <span class="text-purple-400">Menzoberranzan</span>, nelle tenebre eterne dell'Underdark, fremeva di intrighi
+            come ogni notte. <span class="text-green-400">Myth Drannor</span> contemplava le sue rovine sotto la luce
+            dell'alba. <span class="text-yellow-400">Baldur's Gate</span> vedeva le prime navi entrare nel porto.
+            <span class="text-indigo-400">Candlekeep</span> apriva le sue porte agli studiosi del mattino.
+            E <span class="text-red-400">Luskan</span>, Città delle Vele, dormiva ancora la sbornia della notte precedente.
+          </p>
+
+          <p class="leading-relaxed">
+            Poi, <strong class="text-red-500">tutto cambiò</strong>.
+          </p>
+
+          <div class="bg-black/40 border-l-4 border-yellow-400 p-6 my-6">
+            <p class="italic text-yellow-100 text-lg leading-relaxed">
+              "Il cielo sopra le sette città si squarciò. Non come una nuvola che si apre, ma come un velo di realtà
+              che viene strappato. Decine di pilastri di luce divina - rossi, dorati, blu, argentei, viola, neri -
+              caddero dal firmamento come lance scagliate dagli dèi stessi. E forse, in un certo senso, lo erano."
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            La terra tremò. I bambini piansero. I cani ulularono. I maghi caddero in ginocchio, sopraffatti dall'energia
+            arcana improvvisa. E poi, <strong>apparvero</strong>.
+          </p>
+
+          <p class="leading-relaxed text-xl text-center font-bold text-yellow-400 my-6">
+            Le Divinità. Sul Piano Materiale. Fisicamente presenti.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-blue-400">A Waterdeep</strong>, nella Piazza del Monte, tre figure divine si
+            materializzarono fluttuanti davanti alla folla incredula:
+          </p>
+
+          <ul class="list-none space-y-3 ml-4">
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 text-2xl">⚔️</span>
+              <div>
+                <strong class="text-red-400">Tempus</strong>, il Signore delle Battaglie, alto tre metri,
+                armatura rossa fiammeggiante, spada enorme nella mano destra. I suoi occhi rossi scrutavano la folla
+                come un generale valuta un esercito.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 text-2xl">🪙</span>
+              <div>
+                <strong class="text-yellow-400">Tymora</strong>, Lady Fortuna, giovane donna dai capelli argentei
+                e occhi blu brillanti, circondata da monete fluttuanti che brillavano come stelle. Sorrideva,
+                come se tutto questo fosse un gioco divertentissimo.
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 text-2xl">✨</span>
+              <div>
+                <strong class="text-blue-400">Mystra</strong>, la Madre di Tutta la Magia, eterea e maestosa,
+                capelli che fluttuavano come inchiostro nell'acqua, occhi che contenevano galassie intere.
+                La Trama stessa pulsava visibilmente attorno a lei.
+              </div>
+            </li>
+          </ul>
+
+          <!-- DM ONLY -->
+          <p class="leading-relaxed mt-6 dm-only">
+            E in ognuna delle altre sei città, tre divinità ciascuna.
+            <span class="text-orange-400">Moradin, Clangeddin e Dumathoin</span> a Mithral Hall.
+            <span class="text-purple-400">Lolth, Vhaeraun e Kiaransalee</span> a Menzoberranzan.
+            <span class="text-green-400">Corellon, Sehanine e Hanali</span> a Myth Drannor.
+            <span class="text-yellow-400">Waukeen, Umberlee e Gond</span> a Baldur's Gate.
+            <span class="text-indigo-400">Oghma, Savras e Vecna</span> a Candlekeep.
+            <span class="text-red-400">Talos, Beshaba e Mask</span> a Luskan.
+          </p>
+          <!-- END DM ONLY -->
+
+          <p class="leading-relaxed">
+            Per lunghi istanti, nessuno parlò. Gli dèi osservavano. I mortali tremavano. Poi,
+            <strong class="text-red-400">Tempus</strong> parlò, e la sua voce tuonò su tutta Waterdeep:
+          </p>
+
+          <div class="bg-red-950/30 border-l-4 border-red-500 p-6 my-6">
+            <p class="text-red-100 text-xl font-bold leading-relaxed">
+              "MORTALI DI WATERDEEP. ASCOLTATE."
+            </p>
+            <p class="text-gray-300 leading-relaxed mt-4">
+              "Mortali, per troppo tempo avete languito nell'ordinario. Vi abbiamo osservato dalle nostre dimore divine, e abbiamo deciso che è giunto il tempo di mettervi alla prova.
+               Abbiamo scelto sette città - ognuna un gioiello della vostra civiltà, ognuna rappresentante un aspetto diverso della vostra natura. Queste città sono ora separate dal resto del mondo da un Sigillo Divino. Nessuno può entrare o uscire senza il nostro permesso.              
+               Sotto ogni città abbiamo creato un dungeon - una prova di valore, astuzia, forza e fede. Coloro che esploreranno queste profondità guadagneranno il Favore Divino. Coloro che falliranno conosceranno la nostra indifferenza e probabilmente la morte.
+               Radunate i vostri campioni. Competete. Dimostrate il vostro valore. Gli eroi che dimostreranno il maggior valore riceveranno benedizioni e ricchezze inimmaginabili. Le altre... beh, gli dèi non premiano la mediocrità.
+              <p class="text-yellow-400 text-2xl font-bold text-center my-4">
+               Che il Gioco Divino abbia inizio."
+               </p>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Il Sigillo Divino -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-blue-400">II.</span> Il Sigillo Divino
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Mentre <strong class="text-yellow-400">Tymora</strong> rideva cristallina e
+            <strong class="text-blue-400">Mystra</strong> osservava in silenzio contemplativo,
+            barriere invalicabili si formarono attorno alle sette città. Non muri visibili, ma confini di energia divina
+            pura che impedivano qualsiasi ingresso o uscita.
+          </p>
+
+          <div class="bg-gray-900/50 border border-gray-700 rounded p-4 my-4">
+            <p class="text-sm text-gray-400 mb-2"><strong>Le Regole del Sigillo:</strong></p>
+            <ul class="text-sm space-y-1">
+              <li>• Nessun mortale può entrare o uscire fisicamente</li>
+              <!-- <li>• Teletrasporto, Plane Shift, e magie di viaggio simili non funzionano attraverso la barriera</li> -->
+              <!-- <li>• <em>Sending</em> e comunicazioni magiche sono limitate: 1 per persona al giorno verso l'esterno</li> -->
+              <li>• Solo gli Dèi possono garantire permessi speciali</li>
+              <li>• Tentare di forzare la barriera risulta in danni irreparabili o morte</li>
+            </ul>
+          </div>
+
+          <p class="leading-relaxed">
+            Il panico iniziale durò ore. Famiglie divise. Mercanti con carovane fuori città. Avventurieri in missione
+            altrove. Ma gli Dèi furono irremovibili. <strong class="text-blue-400">Mystra</strong> parlò con voce
+            calma ma assoluta:
+          </p>
+
+          <div class="bg-blue-950/30 border-l-4 border-blue-500 p-6 my-6">
+            <p class="text-blue-100 leading-relaxed">
+              "Il Sigillo rimarrà fino al completamento del Gioco Divino. Coloro che si trovano all'interno
+              sono stati scelti dal destino stesso. Coloro che si trovano all'esterno... non lo sono stati.
+              <span class="text-blue-400">Accettate questo dono o questa maledizione, ma non combattetela.
+              La Trama stessa sostiene queste barriere.</span>"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- L'Arco Divino -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-yellow-400">III.</span> La Creazione del Portale Divino
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Il giorno successivo, al tramonto, le tre divinità di Waterdeep si riunirono nuovamente nella Piazza del Monte.
+            Migliaia di cittadini osservavano, questa volta con una curiosità mista a terrore reverenziale.
+            <strong class="text-red-400">Tempus</strong> alzò la sua spada.
+            <strong class="text-yellow-400">Tymora</strong> lanciò in aria una moneta d'oro che iniziò a ruotare
+            senza mai cadere. <strong class="text-blue-400">Mystra</strong> aprì le braccia, e la Trama stessa
+            divenne visibile: filamenti blu-argentei di energia pura.
+          </p>
+
+          <div class="bg-gradient-to-r from-red-950/20 via-yellow-950/20 to-blue-950/20 border border-gray-700 rounded-lg p-6 my-6">
+            <p class="italic text-gray-200 leading-relaxed">
+              "La terra nel centro della piazza si spaccò. Non violentemente, ma con una precisione geometrica
+              perfetta, come se la realtà stessa fosse stata ritagliata con un coltello divino. Dal crepaccio
+              emerse... un Arco."
+            </p>
+            <p class="italic text-gray-200 leading-relaxed mt-4">
+              "<strong class="text-yellow-400">L'Arco Divino</strong>. Alto quindici metri, fatto di tre colonne
+              intrecciate - una rossa come il fuoco di battaglia, una dorata come la fortuna stessa, una blu come
+              la Trama arcana. Le colonne si fondevano in alto formando un arco perfetto, e all'interno...
+              l'oscurità. Un'oscurità profonda e assoluta, da cui proveniva un'aria fredda che sapeva di pietra
+              antica e segreti sepolti."
+            </p>
+          </div>
+
+          <!-- Immagine Arco Divino -->
+          <div class="my-8 flex justify-center">
+            <img
+              src="/images/levels/arco-divino.png"
+              alt="L'Arco Divino - Portale del Dungeon"
+              class="rounded-lg border border-gray-700 shadow-2xl max-w-2xl w-full"
+            />
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-red-400">Tempus</strong> abbassò la spada e parlò di nuovo:
+          </p>
+
+          <div class="bg-red-950/30 border-l-4 border-red-500 p-6 my-6">
+            <p class="text-red-100 leading-relaxed">
+              "Questo è l'ingresso al <strong class="text-yellow-400">Dungeon Divino</strong>.
+              Labirinti infiniti di sfide, mostri, tesori e segreti.
+              Scendono nelle profondità della terra, attraversano piani di esistenza, sfidano la realtà stessa."
+            </p>
+            <p class="text-red-100 leading-relaxed mt-4">
+              "Solo chi porta il <strong class="text-yellow-400">Marchio Divino</strong> può attraversarlo.
+              E il Marchio viene concesso a coloro che si guadagneranno l'onore di essere la squadra di punta di una <strong>Gilda di Avventurieri</strong> e
+              giureranno di competere nel Gioco."
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Tymora</strong> rise e aggiunse con tono giocoso:
+          </p>
+
+          <div class="bg-yellow-950/30 border-l-4 border-yellow-500 p-6 my-6">
+            <p class="text-yellow-100 leading-relaxed">
+              "Oh, e sarà <em>divertente</em>! Promesso. Tesori, gloria, benedizioni divine! E se morite...
+              beh, almeno ci avete provato, no?"
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-blue-400">Mystra</strong> concluse con tono più serio:
+          </p>
+
+          <div class="bg-blue-950/30 border-l-4 border-blue-500 p-6 my-6">
+            <p class="text-blue-100 leading-relaxed">
+              "Il Dungeon non è solo una prova di forza. È una prova di <em>tutto ciò che siete</em>.
+              Strategia, coraggio, conoscenza, astuzia. Le gilde che scenderanno competeranno per il nostro
+              <strong class="text-yellow-400">Favore Divino</strong>. Chi guadagna più Favore... guadagna
+              potere inimmaginabile."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Le Regole del Gioco -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-purple-400">IV.</span> Le Regole del Gioco Divino
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Nei giorni seguenti, attraverso proclami divini, visioni nei sogni e annunci pubblici, le regole
+            del Gioco Divino vennero spiegate ai cittadini:
+          </p>
+
+          <div class="bg-gray-900/70 border border-yellow-500/50 rounded-lg p-6 my-6">
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">LE REGOLE DEL GIOCO DIVINO</h4>
+
+            <div class="space-y-4">
+              <div>
+                <p class="font-bold text-white mb-2">1. FORMAZIONE DELLE GILDE</p>
+                <p class="text-sm text-gray-300">
+                  Le gilde dovranno formare squadre di esattamente 5 membri. Ogni gilda dovrà poi disputare le <strong class="text-red-400">PROVE DIVINE</strong>
+                  per decretare quale sarà la migliore squadra che riceverà il <strong class="text-yellow-400">Marchio Divino</strong> una volta fatto l'accesso
+                  al Dungeon.
+                </p>
+              </div>
+              
+              <div>
+                <p class="font-bold text-white mb-2">2. COMPETIZIONE TRA GILDE</p>
+                <p class="text-sm text-gray-300">
+                  Le gilde competono per Favore, ma non sono obbligate a combattersi. Alleanze, tradimenti,
+                  sabotaggio - tutto è permesso. Le Divinità osservano e giudicano ogni scelta.
+                </p>
+              </div>
+
+              <div>
+                <p class="font-bold text-white mb-2">3. SISTEMA DEL FAVORE DIVINO</p>
+                <p class="text-sm text-gray-300">
+                  Ogni azione nel Dungeon viene osservata dalle Divinità. Completare sfide, scoprire segreti,
+                  combattere con onore, prendere rischi audaci, accumulare conoscenza - tutto questo guadagna
+                  <strong class="text-yellow-400">Favore Divino</strong>.
+                </p>
+                <ul class="text-sm text-gray-400 mt-2 space-y-1">
+                  <li>• <strong class="text-red-400">Tempus</strong> premia strategia e valore in combattimento</li>
+                  <li>• <strong class="text-yellow-400">Tymora</strong> premia rischi audaci e fortuna</li>
+                  <li>• <strong class="text-blue-400">Mystra</strong> premia conoscenza e uso creativo della magia</li>
+                </ul>
+              </div>
+
+              
+              <!-- DM ONLY -->
+              <div class="dm-only">
+                <p class="font-bold text-white mb-2">4. STRUTTURA DEL DUNGEON (NASCOSTO)</p>
+                <p class="text-sm text-gray-300">
+                  Il Dungeon è diviso in <strong>Ecosistemi</strong>. Ogni Ecosistema contiene 3 Livelli + 1 Pianerottolo
+                  (zona sicura). Quando la prima gilda completa un Ecosistema, si chiude per 7 giorni prima che
+                  il successivo si apra.
+                </p>
+              </div>
+
+              <div class="dm-only">
+                <p class="font-bold text-white mb-2">5. RICOMPENSE DIVINE (NASCOSTO)</p>
+                <p class="text-sm text-gray-300">
+                  Il Favore Divino può essere speso per benedizioni, potenziamenti, oggetti magici, e persino
+                  interventi divini diretti. Chi accumula più Favore ha accesso a potere oltre l'immaginabile.
+                </p>
+              </div>
+              <!-- END DM ONLY -->
+
+              <div>
+                <p class="font-bold text-white mb-2">4. MORTE NEL DUNGEON</p>
+                <p class="text-sm text-gray-300">
+                  Chi muore nel Dungeon <strong class="text-red-400">muore davvero</strong>. Le anime vengono
+                  reclamate normalmente. Resurrezione è possibile, ma costosa e non sempre garantita.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- La Rivoluzione di Waterdeep -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-orange-400">V.</span> La Rivoluzione delle Gilde
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Nelle settimane successive all'Annuncio, Waterdeep (e le altre città) cambiò completamente.
+          </p>
+
+          <p class="leading-relaxed">
+            Gilde di avventurieri spuntarono come funghi dopo la pioggia. Alcuni erano veterani di vecchie compagnie
+            che vedevano un'opportunità. Altri erano novizi che sognavano gloria. Mercanti iniziarono a vendere
+            equipaggiamento a prezzi esorbitanti. Sacerdoti offrivano benedizioni a pagamento. Guaritori
+            professionisti aprirono cliniche vicino all'Arco Divino.
+          </p>
+
+          <div class="bg-gray-900/50 border border-gray-700 rounded p-6 my-6">
+            <p class="text-yellow-400 font-bold mb-2">L'Economia del Gioco Divino:</p>
+            <ul class="text-sm space-y-2">
+              <li>• Inflazione del 30-50% su beni d'avventura (armi, armature, pozioni)</li>
+              <li>• Nuovi servizi: Assicurazioni sulle vite (100 MO/anno), Curatori professionisti (50 MO/livello incantesimo)</li>
+              <li>• Valutatori di tesori (100 MO per identificazione), Cartografi (vendono mappe, spesso false)</li>
+              <li>• Spettacoli e scommesse sulle performance delle gilde</li>
+            </ul>
+          </div>
+
+          <p class="leading-relaxed">
+            Ma la vera rivoluzione fu <strong class="text-yellow-400">sociale</strong>.
+          </p>
+
+          <p class="leading-relaxed">
+            Le gilde esistenti, anche quelle di nuova formazione - dalle piccole compagnie di mercenari alle grandi organizzazioni centenarie -
+            capirono che l'unica chance era unirsi per formare un'alleanza più solida. Gli Dèi decretarono che ogni città avrebbe avuto una
+            <strong class="text-yellow-400">Squadra Principale</strong> per gilda, scelta attraverso <strong class="text-red-400">Prove Divine</strong>.
+          </p>
+
+          <p class="leading-relaxed text-xl text-center font-bold text-yellow-400 my-6">
+            Chi avrebbe avuto l'onore di portare la bandiera della propria gilda nel Dungeon Divino?
+          </p>
+        </div>
+      </div>
+
+      <!-- La Formazione dei Guardiani della Trama -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-yellow-400">VI.</span> La Nascita dei Guardiani della Trama
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            A Waterdeep, tre gilde minori capirono che separate non avrebbero avuto speranze di competere.
+            <strong class="text-red-400">Le Lame d'Argento</strong> (guerrieri),
+            <strong class="text-blue-400">La Mano dell'Arcanista</strong> (maghi), e
+            <strong class="text-yellow-400">Le Monete Fortunate</strong> (ladri) si incontrarono in segreto.
+          </p>
+
+          <p class="leading-relaxed">
+            I tre capigilda firmarono un <strong class="text-purple-400">Contratto Magico Vincolante</strong>,
+            suggellato dalla Trama stessa. Nacquero così <strong class="text-yellow-400">I Guardiani della Trama</strong>,
+            fusione perfetta di forza, magia e astuzia.
+          </p>
+
+          <div class="bg-gray-900/50 border border-gray-700 rounded-lg p-6 my-6">
+            <h4 class="text-xl font-bold text-yellow-400 mb-4">🏛️ Leadership della Gilda</h4>
+
+            <div class="space-y-6">
+              <!-- Capogilda -->
+              <div class="border-l-4 border-purple-500 pl-4">
+                <div class="flex items-start gap-4">
+                  <div class="flex-1">
+                    <p class="text-lg font-bold text-purple-400">Serath Vael'Toran - Capogilda</p>
+                    <p class="text-sm text-gray-400 mb-2">Mezzelfo, 45 anni | Ex-Guerriero/Mago/Ladro (ritirato)</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                      Mediatore neutrale chiamato per supervisionare la fusione. La sua esperienza multiclasse
+                      in tutte e tre le discipline lo rese la scelta perfetta come arbitro imparziale.
+                      Gestisce risorse, rapporti con autorità cittadine, e risolve conflitti interni.
+                    </p>
+                    <p class="text-xs italic text-gray-500 mt-2">
+                      "L'equilibrio non è debolezza. È la forza di vedere tutte le vie."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Triumvirato -->
+              <div>
+                <p class="text-lg font-bold text-yellow-400 mb-3">Il Triumvirato dei Fondatori</p>
+
+                <div class="space-y-4">
+                  <!-- Magnus -->
+                  <div class="bg-red-950/20 border border-red-900/30 rounded p-4">
+                    <div class="flex items-start gap-3">
+                      <span class="text-2xl">⚔️</span>
+                      <div class="flex-1">
+                        <p class="font-bold text-red-400">Magnus "Ironfist" Thorne</p>
+                        <p class="text-xs text-gray-400 mb-1">Ex-capogilda "Le Lame d'Argento" | Umano, 52 anni | Guerriero 8</p>
+                        <p class="text-xs text-gray-300">
+                          Veterano della Guerra dei Signori, ferito gravemente 5 anni fa. Ora sovrintende
+                          addestramento combattimento e disciplina militare. <strong>Vede Valoris come un figlio</strong> -
+                          fu lui a raccomandarlo per la squadra principale.
+                        </p>
+                        <p class="text-xs italic text-gray-500 mt-1">"La disciplina salva vite. La gloria è per i morti."</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Arianna -->
+                  <div class="bg-blue-950/20 border border-blue-900/30 rounded p-4">
+                    <div class="flex items-start gap-3">
+                      <span class="text-2xl">✨</span>
+                      <div class="flex-1">
+                        <p class="font-bold text-blue-400">Arianna "Whispersong" Moonwhisper</p>
+                        <p class="text-xs text-gray-400 mb-1">Ex-capogilda "La Mano dell'Arcanista" | Elfa Alta, 312 anni | Maga 10</p>
+                        <p class="text-xs text-gray-300">
+                          Studiosa dell'Accademia di Blackstaff per 200 anni. Fornisce consulenza magica e
+                          identificazione oggetti. <strong>Affascinata dalla magia selvaggia di Riven</strong>,
+                          gli offre lezioni (lui accetta riluttante).
+                        </p>
+                        <p class="text-xs italic text-gray-500 mt-1">"La Trama vede tutto. Noi siamo solo... osservatori privilegiati."</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Silas -->
+                  <div class="bg-yellow-950/20 border border-yellow-900/30 rounded p-4">
+                    <div class="flex items-start gap-3">
+                      <span class="text-2xl">🗡️</span>
+                      <div class="flex-1">
+                        <p class="font-bold text-yellow-400">Silas "Shadowstep" Greycloak</p>
+                        <p class="text-xs text-gray-400 mb-1">Ex-capogilda "Le Monete Fortunate" | Umano, 38 anni | Ladro 9</p>
+                        <p class="text-xs text-gray-300">
+                          Ex-criminale "riabilitato", astuto uomo d'affari. Gestisce finanze, network informativo
+                          e approvvigionamento. <strong>Mentore non ufficiale di Thalio</strong>, gli insegna
+                          "il business dell'avventura".
+                        </p>
+                        <p class="text-xs italic text-gray-500 mt-1">"Tutto ha un prezzo. La questione è: sei disposto a pagarlo?"</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Staff Amministrativo -->
+              <div>
+                <p class="text-sm font-bold text-gray-400 mb-2">Staff Amministrativo</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                  <div class="bg-gray-900/30 border border-gray-800 rounded p-3">
+                    <p class="font-bold text-gray-300">Thea Ironhand - Quartiermastro</p>
+                    <p class="text-gray-400">Nana, 95 anni. Gestione equipaggiamento e inventario.</p>
+                    <p class="italic text-gray-500">"Se l'hai rotto, LO PAGHI."</p>
+                  </div>
+                  <div class="bg-gray-900/30 border border-gray-800 rounded p-3">
+                    <p class="font-bold text-gray-300">Lira Dawnwhisper - Medico di Gilda</p>
+                    <p class="text-gray-400">Umana, 29 anni. Chierico di Ilmater. Cure e supporto emotivo.</p>
+                    <p class="italic text-gray-500">"Ogni ferita racconta una storia."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="leading-relaxed">
+            Con la leadership stabilita e i <strong>20 membri</strong> divisi in quattro squadre candidate,
+            era giunto il momento di scoprire chi avrebbe rappresentato la gilda nel Dungeon Divino.
+          </p>
+        </div>
+      </div>
+
+      <!-- Background Personaggi Prima delle Prove -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+          <span class="text-purple-400">VII.</span> I Prescelti del Destino
+        </h3>
+
+        <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+          <p class="leading-relaxed">
+            Nei tre mesi che separarono la Discesa degli Dèi dall'apertura dell'Arco Divino, storie straordinarie
+            si intrecciarono per formare la squadra che avrebbe rappresentato i Guardiani della Trama.
+          </p>
+
+          <!-- RIVEN -->
+          <div class="bg-blue-950/20 border-l-4 border-blue-400 p-6 rounded-lg">
+            <h4 class="text-xl font-bold text-blue-400 mb-3">L'Ascesa di Riven Solas - Il Prodigio del Caos</h4>
+
+            <p class="text-sm leading-relaxed mb-3">
+              Quando il 15° giorno di Mirtul il cielo si squarciò e gli Dèi discesero su Waterdeep, <strong>Riven Solas</strong> era già nella città.
+              L'onda di energia caotica che attraversò le sette città sigillate colpì anche lui, risvegliando una magia selvaggia e incontrollabile
+              che minacciava chiunque gli stesse vicino. Nei giorni immediatamente successivi alla Discesa, piccoli eventi insoliti si manifestavano
+              costantemente attorno a lui: oggetti che levitavano, fiamme che apparivano dal nulla, la sua stessa ombra che si muoveva indipendentemente
+              dal suo corpo.
+            </p>
+
+            <p class="text-sm leading-relaxed mb-3">
+              Spaventato e disperato, Riven cercò aiuto tra i maghi della città. Fu durante le <strong>iscrizioni di massa</strong> alla neonata
+              gilda dei Guardiani della Trama che <strong>Arianna 'Whispersong' Moonwhisper</strong> lo notò. L'elfa pluricentenaria vide immediatamente
+              qualcosa che non osservava da secoli: un <strong>condotto puro e grezzo di magia selvaggia</strong>, un fenomeno che la Trama stessa aveva
+              creato durante la Discesa. Non era un talento coltivato, non era studio accademico. Era <strong>caos incarnato</strong>, grezzo e pericoloso,
+              ma con un potenziale straordinario.
+            </p>
+
+            <div class="bg-black/30 rounded p-4 mb-3">
+              <p class="text-xs font-bold text-blue-300 mb-2">IL REGIME DI ADDESTRAMENTO (3 MESI)</p>
+              <ul class="text-xs space-y-1 text-gray-400">
+                <li><strong>Settimane 1-4 (Mirtul 16 - Kythorn 14):</strong> 14 ore al giorno di manipolazione controllata della Trama.
+                Meditazione forzata per sincronizzare la coscienza con le fluttuazioni caotiche. Teoria arcana accelerata: in un mese,
+                Riven assorbì conoscenze che richiederebbero anni.</li>
+                <li><strong>Settimane 5-8 (Kythorn 15 - Flamerule 14):</strong> Canalizzazione del caos sotto stress. Prove pratiche in
+                situazioni di combattimento simulato. Arianna lo esponeva deliberatamente a trigger emotivi per insegnargli a "cavalcare l'onda"
+                della magia selvaggia.</li>
+                <li><strong>Settimane 9-12 (Flamerule 15 - Elesias 14):</strong> Integrazione con potenziali compagni di squadra.
+                Addestramento tattico insieme a Valoris e altri membri. Preparazione specifica per le Prove Divine.</li>
+              </ul>
+            </div>
+
+            <p class="text-sm leading-relaxed italic text-blue-200">
+              Ciò che stupì persino Arianna fu la <strong>velocità di apprendimento</strong>. Riven non "imparava" la magia: la <em>assorbiva</em>,
+              come se il caos stesso riconoscesse in lui un fratello. In 3 mesi, compì progressi che avrebbero richiesto 3 anni a uno stregone comune
+              e 10 anni a un mago tradizionale. Alcuni membri della gilda sussurravano che <strong>Mystra stessa</strong> avesse benedetto segretamente
+              il giovane, affascinata dalla sua natura imprevedibile.
+            </p>
+
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Arianna, quando le chiedevano come fosse possibile, rispondeva con un sorriso enigmatico:
+              "La Trama vede talento dove i mortali vedono disordine. Riven non ha imparato la magia. La magia ha riconosciuto il suo padrone.
+              Io ho solo... guidato l'incontro."
+            </p>
+          </div>
+
+          <!-- MORGRIM -->
+          <!-- DM ONLY -->
+          <div class="bg-orange-950/20 border-l-4 border-orange-400 p-6 rounded-lg dm-only">
+            <h4 class="text-xl font-bold text-orange-400 mb-3">Il Muro di Pietra - Morgrim Sangueombra</h4>
+
+            <p class="text-sm text-gray-300 mb-3">
+              <strong class="text-orange-400">Morgrim Sangueombra</strong> non cercava gloria. Non la cercava da quarant'anni.
+            </p>
+
+            <div class="bg-gray-900/50 p-4 rounded mb-3">
+              <p class="text-xs text-gray-300 mb-2">
+                Veterano di tre guerre, sopravvissuto all'Assedio di Mithral Hall (1484 DR), combattente in una dozzina di
+                conflitti minori attraverso i Reami. Il suo soprannome - <em>Sangueombra</em> - non gli venne dato per la
+                violenza, ma per il modo in cui appariva sul campo di battaglia: silenzioso, inesorabile, un'ombra intrisa
+                del sangue di chi aveva protetto. <strong>Mai il suo.</strong>
+              </p>
+              <p class="text-xs text-gray-300">
+                Arrivò a Waterdeep otto anni prima come mercenario freelance, stanco delle guerre naniche e desideroso di
+                una vita più... tranquilla. Lavorava quando serviva, rifiutava quando non ne aveva voglia. Nessun legame,
+                nessun debito, nessuna bandiera. Solo l'ascia, lo scudo, e la paga alla fine del lavoro.
+              </p>
+            </div>
+
+            <p class="text-sm text-gray-300 mb-3">
+              Quando la Discesa degli Dèi avvenne e il Sigillo si chiuse su Waterdeep, Morgrim si trovò intrappolato
+              durante un contratto di scorta carovana all'interno delle mura. La sua reazione? Un grugnito, una scrollata
+              di spalle, e un boccale di birra. <em>"Se gli Dèi vogliono giocare, che giochino. Io aspetto,"</em> disse al taverniere.
+            </p>
+
+            <p class="text-sm text-gray-300 mb-3">
+              Ma quando <strong class="text-blue-300">Magnus Ironfist</strong>, ex-capitano della Guardia Cittadina e veterano
+              come lui, venne a trovarlo una sera alla <em>Locanda del Drago Sornione</em>, le cose cambiarono. Magnus non chiese.
+              Mise un boccale davanti a Morgrim, si sedette, e parlò per mezz'ora di come stesse formando una squadra. Non mercenari.
+              Non avventurieri in cerca di oro. <strong>Campioni.</strong>
+            </p>
+
+            <div class="bg-orange-950/30 p-4 rounded border-l-2 border-orange-500 mb-3">
+              <p class="text-xs italic text-orange-200 mb-2">
+                "Morgrim, conosco la tua storia. Mithral Hall, la Guerra degli Orchi, l'Assedio del Tumulo di Kelvin.
+                Quarant'anni di battaglie. Sai cosa ho visto in tutti quegli anni? Ho visto eroi morire stupidamente perché
+                nessuno teneva la linea. Ho visto maghi brillanti bruciati vivi perché il loro guerriero era troppo lento.
+                Ho visto squadre crollare perché mancava il muro."
+              </p>
+              <p class="text-xs italic text-orange-200">
+                "Ho un chierico giovane e ambizioso. Un mago col potere del caos nelle vene. Un ladro che deve ancora imparare
+                il valore della lealtà. E una druida halfling che è gentile quanto coraggiosa. Ma manca il <strong>muro</strong>.
+                Quello che non crolla. Quello che non scappa. Quello che protegge anche quando sembra impossibile.
+                Tu sei quel muro, Morgrim."
+              </p>
+            </div>
+
+            <p class="text-sm text-gray-300 mb-3">
+              Morgrim non rispose subito. Bevve, lentamente. Poi disse solo: <em>"Paga?"</em>
+            </p>
+
+            <p class="text-sm text-gray-300 mb-3">
+              Magnus sorrise. <em>"Tutto quello che trovi nel Dungeon. E la protezione di tre Dèi, se significano qualcosa per te."</em>
+            </p>
+
+            <p class="text-sm text-gray-300 mb-3">
+              Il nano pose il boccale vuoto sul tavolo. <em>"Presentami la squadra. Se sono idioti, rifiuto. Se sono valorosi...
+              vedremo."</em>
+            </p>
+
+            <div class="bg-gray-900/50 p-3 rounded mt-3">
+              <p class="text-xs font-bold text-orange-400 mb-2">ADDESTRAMENTO (Kythorn - Elesias):</p>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• Morgrim testò la squadra duramente nei primi allenamenti. Nessuna pietà. Voleva vedere se reggevano.</li>
+                <li>• Valoris guadagnò il suo rispetto dopo aver resistito a 30 scambi d'ascia senza indietreggiare.</li>
+                <li>• Insegnò a Riven a <strong>non</strong> sprecare magie difensive: "Io tengo la linea. Tu brucia i nemici."</li>
+                <li>• Con Thalio sviluppò segnali tattici silenziosi per coordinare attacco-finta e copertura.</li>
+                <li>• Mira lo chiamava affettuosamente "Zio Morgrim" - lui fingeva fastidio, ma apprezzava.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- END DM ONLY -->
+
+          <!-- THALIO -->
+          <!-- DM ONLY -->
+          <div class="bg-yellow-950/20 border-l-4 border-yellow-400 p-6 rounded-lg mt-6 dm-only">
+            <h4 class="text-xl font-bold text-yellow-400 mb-3">La Scelta di Silas Greycloak</h4>
+
+            <p class="text-sm leading-relaxed mb-3">
+              <strong>Thalio Vaelaris</strong> era cresciuto tra i vicoli e le ombre di Waterdeep, figlio adottivo de <strong>Le Monete Fortunate</strong>,
+              la gilda di ladri, esploratori e furfanti che aveva accolto lui e sua madre Lirael. Dalla scomparsa di Lirael quando aveva 15 anni,
+              la gilda era diventata la sua unica famiglia. Aveva imparato l'arte della furtività da maestri delle ombre, l'acrobazia applicata da
+              scalatori leggendari, il disinnesco di trappole da veterani che avevano esplorato catacombe per decenni. Era <strong>uno di loro</strong>.
+            </p>
+
+            <p class="text-sm leading-relaxed mb-3">
+              Quando arrivò il momento di formare le squadre per le Prove Divine, Thalio si aspettava naturalmente di unirsi ai suoi fratelli d'armi.
+              Ma <strong>Silas 'Shadowstep' Greycloak</strong> aveva altri piani.
+            </p>
+
+            <div class="bg-black/30 rounded p-4 mb-3">
+              <p class="text-xs font-bold text-yellow-300 mb-2">LA TAVERNA SILENZIOSA</p>
+              <p class="text-xs text-gray-300 mb-2">
+                La sera prima della formazione ufficiale delle squadre, Silas convocò Thalio in una taverna semivuota.
+                Con un bicchiere di rum tra le mani e quello sguardo enigmatico che nascondeva sempre più di quanto rivelasse,
+                andò dritto al punto:
+              </p>
+              <p class="text-xs italic text-yellow-200 mb-2">
+                "Ragazzo, tu hai talento. Troppo per sprecarlo in una squadra di soli ladri. Conosco i ragazzi de Le Monete Fortunate
+                meglio di quanto loro conoscano se stessi. Sono cresciuto con molti di loro. So esattamente che tipo di squadra formeranno
+                per le Prove: veloce, sleale, efficiente... e destinata a fallire."
+              </p>
+              <p class="text-xs text-gray-300 mb-2">
+                "Perché?" chiese Thalio, confuso e ferito.
+              </p>
+              <p class="text-xs italic text-yellow-200">
+                "Perché Tempus, Tymora e Mystra non premiano solo l'astuzia. Premiano l'equilibrio. Forza, magia, strategia, fortuna.
+                Una squadra di soli ladri? Vincerà forse una prova, forse due. Ma al dunque, quando servirà un chierico che tenga la linea
+                o un mago che bruci un golem... crolleranno. Imparerai di più da un chierico che da altri dieci furfanti come me.
+                Ti ho raccomandato per la squadra mista che Magnus Ironfist e Arianna Moonwhisper stanno mettendo insieme."
+              </p>
+            </div>
+
+            <p class="text-sm leading-relaxed mb-3">
+              Thalio si sentì tradito. Ma Silas concluse con tono più duro: <em>"Fidati del vecchio. Un giorno capirai che ti ho fatto un favore.
+              E se non lo capisci... beh, almeno sarai vivo per rimproverarmi."</em>
+            </p>
+
+            <p class="text-sm leading-relaxed mb-3">
+              <strong>La Squadra B de Le Monete Fortunate</strong> non la prese bene. Alcuni lo considerarono un <strong>traditore</strong>.
+              Ma poi arrivarono le Prove Divine. Durante <strong>l'Assedio del Campo di Marte</strong>, la Squadra B tentò di rubare lo stendardo
+              mentre altri combattevano i Golem. Vennero scoperti, eliminati, umiliati. Tempus li guardò con disgusto: <em>"Astuzia senza onore è codardia."</em>
+            </p>
+
+            <p class="text-sm leading-relaxed italic text-yellow-200">
+              Quando Thalio vide i suoi vecchi compagni uscire dall'arena sconfitti, capì. Silas aveva visto quello che lui, accecato dall'affetto,
+              non aveva voluto vedere. Gli aveva dato la possibilità di diventare più di un semplice ladro. La possibilità di diventare una <strong>leggenda</strong>.
+            </p>
+          </div>
+          <!-- END DM ONLY -->
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE 2: LE PROVE DIVINE -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">⚔️</span> LE PROVE DIVINE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-4 text-gray-300 mb-8">
+        <p class="text-center text-lg leading-relaxed">
+          In ogni città, le Divinità idearono prove spietate per selezionare chi sarebbe stato degno di rappresentare
+          la propria gilda nel Dungeon. A Waterdeep, <strong>tre gilde</strong> si erano formate dall'unione forzata
+          di decine di compagnie minori. Ogni gilda dovette far competere le proprie squadre interne in tre prove divine
+          per decretare chi avrebbe portato il proprio stendardo nel Dungeon.
+        </p>
+
+        <div class="bg-yellow-900/20 border border-yellow-500/30 rounded p-4 mt-4">
+          <p class="text-sm text-yellow-200">
+            <strong>Nota:</strong> Ogni gilda principale aveva 3-5 squadre candidate (15-25 membri totali).
+            Solo UNA squadra per gilda sarebbe stata scelta. Le prove furono simultanee, competitive, e spietate.
+          </p>
+        </div>
+      </div>
+
+      <!-- Prove specifiche per gilda -->
+      <div class="space-y-8">
+        <!-- I Guardiani della Trama -->
+        <div class="bg-gradient-to-r from-red-950/20 via-yellow-950/20 to-blue-950/20 border border-gray-700 rounded-lg p-6">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+            <span>🛡️</span>
+            <span class="bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400 bg-clip-text text-transparent">
+              I Guardiani della Trama
+            </span>
+          </h3>
+
+          <div class="space-y-4 text-sm">
+            <p class="text-gray-300 leading-relaxed">
+              <strong class="text-yellow-400">Composizione:</strong> Fusione forzata di tre gilde minori -
+              La Mano dell'Arcanista (maghi), Le Lame d'Argento (guerrieri), Le Monete Fortunate (ladri).
+              Totale: 20 membri, divisi in <strong>4 squadre candidate</strong> da 5 membri ciascuna.
+            </p>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-red-500">
+              <p class="font-bold text-red-400 mb-2">PROVA I - TEMPUS: "L'Assedio del Campo di Marte"</p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Arena:</strong> Il Campo di Marte trasformato in fortezza assediata. Quattro torri ai lati,
+                una fortezza centrale con stendardo rosso sulla sommità. <strong>Le 4 squadre partono simultaneamente
+                dalle quattro torri.</strong>
+              </p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Obiettivo:</strong> Essere la PRIMA squadra a catturare lo stendardo e portarlo alla propria
+                torre di partenza. Combattimento tra squadre permesso (non letale, ma knock-out sì).
+                <strong>8 Golem di Pietra</strong> (CR 2) pattugliano l'arena, attaccando indiscriminatamente.
+              </p>
+              <p class="text-gray-400 italic text-xs mb-3">
+                "La guerra non premia i lenti. Strategia, velocità, sacrificio."
+              </p>
+
+              <div class="bg-red-950/30 rounded p-3 mb-3">
+                <p class="text-xs font-bold text-red-300 mb-2">LA GARA:</p>
+                <ul class="text-xs space-y-1 text-gray-400">
+                  <li>• <strong>Squadra A</strong> (ex-Lame d'Argento): Corsa diretta al centro, frontale.
+                  Fronteggiarono 2 golem, arrivarono allo stendardo, incontrarono un altro golem e persero 1 membro (KO). Thalio prese lo stendardo.</li>
+                  <li>• <strong>Squadra B</strong> (ex-Monete Fortunate): Tentarono di rubare stendardo mentre
+                  altri combattevano. Scoperti da Squadra C, eliminati in combattimento.</li>
+                  <li>• <strong>Squadra C</strong> (mista): Alleanza temporanea con Squadra D contro i golem.
+                  Spinti da un moto di giustizia furono distratti dalla Squadra B. Li eliminarono ma persero tempo.</li>
+                  <li>• <strong>Squadra D</strong>: Strategia perfetta.</li>
+                </ul>
+              </div>
+
+              <div class="mt-3 text-xs space-y-1 text-gray-300 bg-gray-900/50 p-3 rounded">
+                <p class="font-bold text-yellow-400 mb-2">STRATEGIA VINCENTE:</p>
+                <p>• <strong>Thalio</strong> mappò percorsi dei golem nei primi 5 minuti (Percezione +7, pattern trovato)</p>
+                <p>• <strong>Riven</strong> lanciò <em>Illusione Minore</em> per depistare avvicinamento, evitando 3 golem</p>
+                <p>• <strong>Morgrim</strong> tenne la linea difensiva quando 2 golem caricarono simultaneamente, permettendo al team di avanzare</p>
+                <p>• <strong>Valoris</strong> propose alleanza tattica con Squadra C: "Dividiamo i golem, poi gara leale"</p>
+                <p>• Squadra C accettò. Insieme eliminarono 4 golem in 15 minuti. <strong>Morgrim abbatté da solo 1 golem</strong>.</p>
+                <p>• <strong>L'OPPORTUNITÀ:</strong> La Squadra A raggiunse lo stendardo per prima ma
+                <strong>Thalio</strong> durante il combattimento contro il golem che aveva mandato KO un loro membro
+                prese lo stendardo. Fu coperto da <strong>Morgrim e Valoris</strong> tenevano impegnati gli ultimi golem.</p>
+                <p class="text-green-400 font-bold mt-2">🏆 VITTORIA - Tempus: "Valore e astuzia. Ben fatto."</p>
+              </div>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-yellow-500 mt-4">
+              <p class="font-bold text-yellow-400 mb-2">PROVA II - TYMORA: "La Roulette del Destino"</p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Arena:</strong> Circolo gigante diviso in 12 spicchi numerati. Al centro, ruota magica.
+                Tymora la fa girare: dove si ferma, quello spicchio "attiva" una sfida casuale.
+              </p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Regole:</strong> Le 4 squadre competono in simultanea. Ogni round, la ruota gira.
+                Lo spicchio attivato presenta una sfida (combattimento, enigma, corsa).
+                <strong>Prima squadra a completare 5 sfide vince.</strong> Ma attenzione: 2 spicchi su 12 sono
+                <strong class="text-red-400">"MALEDIZIONE"</strong> - perdita automatica di 1 sfida già vinta.
+              </p>
+              <p class="text-gray-400 italic text-xs mb-3">
+                "La fortuna è un gioco. Solo gli audaci vincono."
+              </p>
+
+              <div class="bg-yellow-950/30 rounded p-3 mb-3">
+                <p class="text-xs font-bold text-yellow-300 mb-2">I 12 ROUND:</p>
+                <ul class="text-xs space-y-1 text-gray-400">
+                  <li><strong>R1 - Spicchio 7 (Corsa):</strong> Sprint 100m. Squadra B vince (ladro veloce). +1 punto.</li>
+                  <li><strong>R2 - Spicchio 3 (Enigma):</strong> "Quale Dea ha tradito gli elfi?" Squadra C risponde (Lolth). +1.</li>
+                  <li><strong>R3 - Spicchio 11 (MALEDIZIONE CASUALE!):</strong> Squadra C perde 1 punto. Torna a 0.</li>
+                  <li><strong>R4 - Spicchio 5 (Combattimento):</strong> 1v1 campione. Valoris vs guerriero Squadra A.
+                  <strong>Valoris vince</strong>. Squadra D: +1.</li>
+                  <li><strong>R5 - Spicchio 9 (Azzardo):</strong> "Scommetti punti attuali. Testa o croce.
+                  Vinci = raddoppi. Perdi = azzerati." Riven propose: "Scommetto tutto (1 punto)."
+                  Lancio moneta: <strong class="text-green-400">TESTA!</strong> Squadra D: 2 punti.</li>
+                  <li><strong>R6-R9:</strong> Varie sfide. Squadra A sale a 3, Squadra B a 2, Squadra D a 4.</li>
+                  <li><strong>R10 - Spicchio 12 (MALEDIZIONE CASUALE!):</strong> Squadra A perde 1. Torna a 2.</li>
+                  <li><strong>R11 - Spicchio 4 (Finale - Salto della Fede):</strong> "Saltate da torre 10m in rete invisibile.
+                  Solo chi si fida vince." <strong>Tutti e 5 i membri Squadra D saltarono insieme senza esitazione.</strong>
+                  Rete apparve. <strong>+1 punto. TOTALE: 5.</strong></li>
+                </ul>
+              </div>
+
+              <div class="mt-3 text-xs text-gray-300 bg-gray-900/50 p-3 rounded">
+                <p class="font-bold text-yellow-400 mb-2">MOMENTO CHIAVE - Round 5:</p>
+                <p>Riven propose di scommettere l'unico punto guadagnato. Valoris esitò ("Troppo rischioso"),
+                ma Riven insistette: "Tymora premia chi osa." con un sorrisetto. <strong>Thalio</strong> supportò: "Calcolato il rischio.
+                50% è meglio di zero." Squadra accettò. Tymora sorrise quando videro il coraggio.</p>
+                <p class="text-green-400 font-bold mt-2">🏆 VITTORIA - Tymora: "MAGNIFICO! Ecco veri fedeli della Fortuna!"</p>
+              </div>
+
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-blue-500 mt-4">
+              <p class="font-bold text-blue-400 mb-2">PROVA III - MYSTRA: "La Biblioteca delle Verità Perdute"</p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Arena:</strong> Semipiano creato da Mystra. Biblioteca infinita con scaffali alti 20+ metri,
+                scale impossibili, geometrie alterate (gravità variabile, stanze che si spostano).
+              </p>
+              <p class="text-gray-300 leading-relaxed mb-2">
+                <strong>Obiettivo:</strong> Trovare 3 Tomi Specifici nascosti nella biblioteca.
+                <strong>Ogni tomo è protetto da un Guardiano Arcano</strong> (Armatura animata, Mephit, Spettro).
+                La prima squadra a recuperare tutti e 3 i tomi vince. Tempo limite: 2 ore.
+              </p>
+              <p class="text-gray-400 italic text-xs mb-3">
+                "La conoscenza non si conquista con forza. Si guadagna con ingegno."
+              </p>
+
+              <div class="bg-blue-950/30 rounded p-3 mb-3">
+                <p class="text-xs font-bold text-blue-300 mb-2">LA CACCIA AI TOMI:</p>
+                <ul class="text-xs space-y-2 text-gray-400">
+                  <li><strong>Tomo 1 - "Arcanum Primordialis"</strong> (Sezione Evocazione, 3° piano, scaffale 247)
+                    <ul class="ml-4 mt-1 space-y-1">
+                      <li>- Squadra A lo trovò per prima (mago con <em>Individuazione del magico</em>)</li>
+                      <li>- Guardiano: Armatura Animata (AC 18). Squadra A impiegò 20 minuti per abbatterlo. Tomo acquisito (35 min totali).</li>
+                      <li>- <strong>Squadra D:</strong> Thalio trovò passaggio segreto dietro scaffale, bypassò lo scontro in atto e
+                      rubò una copia del tomo (Mystra rise: "Creatività!") (25 min totali).</li>
+                    </ul>
+                  </li>
+                  <li><strong>Tomo 2 - "Codex Spatialis"</strong> (Sezione Abjuration, zona gravità invertita)
+                    <ul class="ml-4 mt-1 space-y-1">
+                      <li>- <strong>Squadra D:</strong>Riven lanciò <em>Mano magica</em> per prendere il tomo da uno scaffale alto 15m mentre
+                      Thalio si arrampicò sulla libreria con una prova acrobazia e usando la gravità invertita a proprio vantaggio afferrò il tomo tenuto
+                      fermo da Riven. <strong>Morgrim</strong> nel frattempo proteggeva l'ingresso dalla Squadra C in arrivo.</li>
+                      <li>- Guardiano: Mephit del Ghiaccio. Riven lo distrusse con <em>Raggio rovente</em> (danno fuoco, critico).
+                      Tomo acquisito (38 min totali).</li>
+                      <li>- Squadra C arrivò 5 minuti dopo, tomo già preso. <strong>Morgrim</strong> bloccò fisicamente l'ingresso permettendo alla squadra di fuggire.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Tomo 3 - "Liber Mysteriorum"</strong> (Sezione Forbidden, protetto da enigma)
+                    <ul class="ml-4 mt-1 space-y-1">
+                      <li>- <strong>Enigma:</strong> Porta sigillata con 7 rune davanti a ogni squadra. "Ordina le Scuole di Magia per complessità crescente della Trama."</li>
+                      <li>- Squadra A tentò ordine cronologico (sbagliato). Porta esplose, 2d8 danni forza a tutti.</li>
+                      <li>- <strong>Squadra D:</strong> Riven (Arcano +5) + Valoris discussero 10 minuti.
+                      Ordine corretto: Divinazione → Illusione → Evocazione → Necromanzia → Trasmutazione → Abjuration → Enchantment.</li>
+                      <li>- Porta si aprì. Guardiano: Spettro (immune fisico). <strong>Morgrim</strong> tentò di colpirlo ma l'ascia passò attraverso.
+                      <strong>Riven</strong> lo finì con <em>Dardo Incantato</em>. Spettro distrutto. (21 min totali)</li>
+                      <li>- Tomo acquisito. <strong>Tempo totale: 1h 24min.</strong></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-3 text-xs text-gray-300 bg-gray-900/50 p-3 rounded">
+                <p class="font-bold text-blue-400 mb-2">MOMENTO DECISIVO - Enigma Finale:</p>
+                <p>Riven propose la soluzione, ma non era sicuro. Valoris confermò
+                con conoscenza religiosa. Thalio chiese: "Sicuri? Se sbagliamo, esplodiamo." Mira rispose:
+                "La conoscenza richiede fiducia nella ragione." <strong>Decisero insieme.</strong></p>
+                <p>Mystra apparve quando inserirono l'ordine: "Perfetto. Non solo conoscenza, ma anche collaborazione
+                intellettuale. La Trama premia chi pensa insieme."</p>
+                <p class="text-green-400 font-bold mt-2">🏆 VITTORIA - Mystra: "La magia è un'arte di ingegno e collaborazione."</p>
+              </div>
+            </div>
+
+            <!-- DM ONLY -->
+            <div class="bg-green-900/20 border border-green-500/50 rounded p-4 mt-4 dm-only">
+              <p class="font-bold text-green-400 text-center">
+                ✓ I GUARDIANI DELLA TRAMA - SQUADRA PRINCIPALE APPROVATA
+              </p>
+              <p class="text-center text-sm text-gray-400 mt-1">
+                Favore Iniziale: Tempus 25% | Tymora 30% | Mystra 25%
+              </p>
+            </div>
+            <!-- END DM ONLY -->
+
+          </div>
+        </div>
+
+        <!-- Lo Scudo Radiante -->
+        <div class="bg-gradient-to-r from-white/5 to-yellow/5 border border-gray-700 rounded-lg p-6">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+            <span>🛡️</span>
+            <span class="text-white">Lo Scudo Radiante</span>
+          </h3>
+
+          <div class="space-y-4 text-sm">
+            <p class="text-gray-300 leading-relaxed">
+              <strong class="text-yellow-400">Composizione:</strong> Gilda militarista, sponsorizzata da Lord Eravien Haventree.
+              Valori: Onore, disciplina, giustizia. Totale: 25 membri, divisi in <strong>5 squadre candidate</strong>.
+            </p>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-red-500">
+              <p class="font-bold text-red-400 mb-2">PROVA I - TEMPUS</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                <strong>Ser Aldric Brightblade</strong> guidò con
+                formazione militare classica (avanguardia-centro-retroguardia). Approccio diretto e onorevole:
+                fronteggiarono i golem senza alleanze o sotterfugi. Completarono in 45 minuti, secondi dopo i Guardiani.
+                Tempus approvò con rispetto: "Disciplina e onore. Un vero guerriero."
+              </p>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-yellow-500 mt-4">
+              <p class="font-bold text-yellow-400 mb-2">PROVA II - TYMORA</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Aldric troppo prudente: rifiutò la sfida "Azzardo" (Round 5).
+                Scelse sfide sicure (combattimenti 1v1, enigmi studiabili). Arrivarono a 5 punti ma impiegarono
+                18 round (vs 11 dei Guardiani). Tymora sbadigliò: "Vittoria senza rischio è vittoria vuota.
+                Ma... approvato."
+              </p>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-blue-500 mt-4">
+              <p class="font-bold text-blue-400 mb-2">PROVA III - MYSTRA</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                <strong>Elira Sunweaver</strong> (Chierico di Mystra) aveva
+                studiato per settimane. Trovò tutti e 3 i tomi con metodo sistematico: <em>Detect Magic</em>,
+                catalogazione, nessuna creatività. Tempo: 1h 38min (più lenti). Mystra approvò: "Preparazione
+                è saggezza. Ma manca... scintilla."
+              </p>
+            </div>
+
+            <!-- DM ONLY -->
+            <div class="bg-green-900/20 border border-green-500/50 rounded p-4 mt-4 dm-only">
+              <p class="font-bold text-green-400 text-center">
+                ✓ LO SCUDO RADIANTE - SQUADRA PRINCIPALE APPROVATA
+              </p>
+              <p class="text-center text-sm text-gray-400 mt-1">
+                Favore Iniziale: Tempus 30% | Tymora 15% | Mystra 25%
+              </p>
+            </div>
+            <!-- END DM ONLY -->
+
+          </div>
+        </div>
+
+        <!-- Gli Sciocchi Fortunati -->
+        <div class="bg-gradient-to-r from-yellow-950/20 to-red-950/20 border border-gray-700 rounded-lg p-6">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+            <span>🎲</span>
+            <span class="text-yellow-400">Gli Sciocchi Fortunati</span>
+          </h3>
+
+          <div class="space-y-4 text-sm">
+            <p class="text-gray-300 leading-relaxed">
+              <strong class="text-yellow-400">Composizione:</strong> Gilda caotica, beniamini della folla.
+              Filosofia: "La fortuna favorisce gli stupidi audaci." Totale: 18 membri, divisi in <strong>3 squadre candidate</strong>
+              (più piccola delle altre gilde).
+            </p>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-red-500">
+              <p class="font-bold text-red-400 mb-2">PROVA I - TEMPUS</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                <strong>Kessa Goldtongue</strong> propose piano folle:
+                "Zax, fai esplodere il muro nord. Ignoriamo i golem." <strong>Zax</strong> (Artefice) lanciò bomba alchemica.
+                Muro crollò, golem confusi, corsero dritti allo stendardo in 22 minuti (record assoluto!).
+                Tempus non sapeva se arrabbiarsi o ridere: "Audace, stupido, MA efficace. Approccio non ortodosso...
+                ma la vittoria è vittoria."
+              </p>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-yellow-500 mt-4">
+              <p class="font-bold text-yellow-400 mb-2">PROVA II - TYMORA</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Kessa scommise TUTTO ad ogni occasione. Round 1: azzardo immediato (vinto).
+                Round 3: scommessa doppia (vinto). Round 5: "Tymora, guidami!" - chiuse gli occhi, scelse casuale (vinto).
+                Completarono in 7 round (record). Tymora ESPLOSE di gioia: "FINALMENTE! Veri fedeli della Fortuna!
+                QUESTA È LA MIA GILDA PREFERITA!" (Scudo Radiante visibilmente offeso in platea)
+              </p>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded border-l-4 border-blue-500 mt-4">
+              <p class="font-bold text-blue-400 mb-2">PROVA III - MYSTRA</p>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Nessuno aveva alta Intelligenza. Si persero per 45 minuti.
+                Poi <strong>Whisper</strong> (Warlock, INT 12) entrò in trance. Il suo Patrono (entità lovecraftiana)
+                gli sussurrò le posizioni dei tomi. Trovarono tutti e 3 in 52 minuti senza combattere guardiani
+                (Whisper li "convinse" a dormire con magia oscura). Mystra apparve disturbata: "Conoscenza da fonti...
+                <em>discutibili</em>. Ma conoscenza comunque. Approvato... a malincuore."
+              </p>
+            </div>
+
+            <!-- DM ONLY -->
+            <div class="bg-green-900/20 border border-green-500/50 rounded p-4 mt-4 dm-only">
+              <p class="font-bold text-green-400 text-center">
+                ✓ GLI SCIOCCHI FORTUNATI - SQUADRA PRINCIPALE APPROVATA
+              </p>
+              <p class="text-center text-sm text-gray-400 mt-1">
+                Favore Iniziale: Tempus 15% | Tymora 45% | Mystra 10%
+              </p>
+            </div>
+            <!-- END DM ONLY -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE 3: LE ALTRE CITTÀ -->
+     <!-- DM ONLY -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8 dm-only">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">🌍</span> LE PROVE NELLE ALTRE CITTÀ
+      </h2>
+
+      <p class="text-center text-gray-300 mb-8 leading-relaxed">
+        Mentre Waterdeep selezionava le sue squadre, eventi simili si svolgevano nelle altre sei città sigillate.
+        Ogni città, secondo la propria cultura e le proprie Divinità, condusse prove uniche...
+      </p>
+
+      <div class="space-y-6">
+        <!-- Mithral Hall -->
+        <div class="bg-orange-950/20 border-l-4 border-orange-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>⚒️</span>
+            <span class="text-orange-400">MITHRAL HALL</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove Naniche:</strong> Moradin, Clangeddin e Dumathoin testarono le gilde naniche con
+            tre sfide tradizionali.
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-orange-400">La Forgia dell'Onore (Moradin):</strong> Ogni squadra doveva
+              forgiare un'arma perfetta in 8 ore. Valutata su tecnica, bellezza e funzionalità.
+              Penalità per fretta o sciattezza.
+            </li>
+            <li>
+              • <strong class="text-red-400">Il Duello delle Asce (Clangeddin):</strong> Combattimento 1v1
+              tra campioni di ogni gilda. Non al primo sangue, ma fino a sottomissione. Clangeddin osservava
+              valore e onore.
+            </li>
+            <li>
+              • <strong class="text-gray-400">La Miniera Sigillata (Dumathoin):</strong> Trovare un filone
+              di mithral nascosto in miniera oscura entro 3 ore. Senza magia di localizzazione.
+              Solo intuito, esperienza, e rispetto della pietra.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            Il Clan Battlehammer dominò le prove grazie a secoli di tradizione. Re Bruenor personalmente
+            approvò la squadra principale.
+          </p>
+        </div>
+
+        <!-- Menzoberranzan -->
+        <div class="bg-purple-950/20 border-l-4 border-purple-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>🕷️</span>
+            <span class="text-purple-400">MENZOBERRANZAN</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove Oscure:</strong> Lolth rese tutto un gioco mortale di tradimenti.
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-purple-400">La Ragnatela del Tradimento (Lolth):</strong> 10 gilde entrarono.
+              Solo 1 sarebbe uscita viva. Regola unica: "Tradisci o muori."
+              Casa Baenre vinse tradendo Casa Do'Urden all'ultimo momento.
+            </li>
+            <li>
+              • <strong class="text-gray-400">L'Ombra Perfetta (Vhaeraun):</strong> Rubare un artefatto dal
+              tempio di Lolth senza essere scoperti. Casa Do'Urden (maschi) quasi riuscì, ma furono traditi
+              (vedi sopra).
+            </li>
+            <li>
+              • <strong class="text-black">La Danza dei Morti (Kiaransalee):</strong> Rianimare 20 scheletri
+              e farli combattere tra loro. Chi controlla l'ultimo scheletro in piedi vince.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            Casa Baenre, guidata dalla Matrona Madre Quenthel, dominò con spietatezza tipica drow.
+            7 case minori furono distrutte nel processo.
+          </p>
+        </div>
+
+        <!-- Myth Drannor -->
+        <div class="bg-green-950/20 border-l-4 border-green-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>🌙</span>
+            <span class="text-green-400">MYTH DRANNOR</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove del Passato:</strong> Gli Dèi Elfici testarono saggezza e connessione con la storia.
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-green-400">Il Canto Perduto (Corellon):</strong> Recuperare un'antica canzone
+              elfica dai ricordi della città stessa. Richiede trance elfica e empatia con la Memoria.
+            </li>
+            <li>
+              • <strong class="text-blue-300">Il Sogno Condiviso (Sehanine):</strong> Tutte le squadre entrano
+              in sogno collettivo. Devono navigare incubi del passato di Myth Drannor senza impazzire.
+            </li>
+            <li>
+              • <strong class="text-pink-400">Il Giardino Piangente (Hanali):</strong> Riportare bellezza in
+              un giardino corrotto. Non con magia, ma con amore e pazienza. Crescita accelerata magicamente
+              mostra chi ha vero rispetto per la vita.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            La Casa Miritar, guidata dall'Alta Sacerdotessa Ilsevele, vinse con grazia e saggezza.
+            Sehanine pianse di gioia (lacrime divennero perle).
+          </p>
+        </div>
+
+        <!-- Baldur's Gate -->
+        <div class="bg-yellow-950/20 border-l-4 border-yellow-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>💰</span>
+            <span class="text-yellow-400">BALDUR'S GATE</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove Mercantili:</strong> Tutto ha un prezzo, anche l'onore divino.
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-yellow-400">L'Asta Divina (Waukeen):</strong> Gilde ricevono 1000 MO.
+              Devono trasformarli in 10.000 MO in 24 ore. Commercio, investimenti, contratti. Chi guadagna di più vince.
+            </li>
+            <li>
+              • <strong class="text-blue-400">Il Tributo del Mare (Umberlee):</strong> Gettare in mare il tesoro
+              più prezioso che possiedono come sacrificio. Chi sacrifica di più (relativamente alla propria ricchezza)
+              guadagna Favore.
+            </li>
+            <li>
+              • <strong class="text-orange-400">L'Invenzione Impossibile (Gond):</strong> Costruire un dispositivo
+              che gli Dèi stessi non hanno mai visto. Creatività pura.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            La gilda "I Mercanti dell'Alba" vinse trasformando 1000 MO in 15.000 MO vendendo "assicurazioni sul Gioco"
+            a cittadini ingenui. Waukeen rise: "Spietato ma brillante!"
+          </p>
+        </div>
+
+        <!-- Candlekeep -->
+        <div class="bg-indigo-950/20 border-l-4 border-indigo-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>📚</span>
+            <span class="text-indigo-400">CANDLEKEEP</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove della Verità:</strong> Conoscenza è potere, ma quale conoscenza cerchi?
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-blue-400">Il Libro Infinito (Oghma):</strong> Entrare nella Biblioteca Infinita
+              (semipiano) e trovare UN libro specifico tra milioni. Titolo: "Ciò Che Non Dovrebbe Essere Conosciuto".
+              Test di ricerca, deduzione, e fortuna.
+            </li>
+            <li>
+              • <strong class="text-purple-400">La Visione del Futuro (Savras):</strong> Savras mostra visione del
+              futuro a ogni squadra: il momento della loro morte nel Dungeon. Chi accetta la visione senza paura vince.
+            </li>
+            <li>
+              • <strong class="text-black">Il Segreto Sepolto (Vecna):</strong> Scoprire un segreto su un compagno
+              di squadra che non sapevano. E decidere se rivelarlo o custodirlo.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            La gilda "Cercatori di Verità" vinse tutte e tre le prove, ma il loro leader ora conosce il momento
+            esatto della sua morte futura. Savras sorrise enigmatico.
+          </p>
+        </div>
+
+        <!-- Luskan -->
+        <div class="bg-red-950/20 border-l-4 border-red-500 p-6 rounded">
+          <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+            <span>🏴‍☠️</span>
+            <span class="text-red-400">LUSKAN</span>
+          </h3>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Le Prove Caotiche:</strong> Anarchia, violenza, e un pizzico di sfortuna divina.
+          </p>
+          <ul class="text-xs space-y-2 text-gray-400">
+            <li>
+              • <strong class="text-red-400">La Tempesta Mortale (Talos):</strong> Sopravvivere in arena mentre
+              Talos scatena fulmini casuali ogni 6 secondi. Ultima squadra in piedi vince.
+            </li>
+            <li>
+              • <strong class="text-gray-400">La Maledizione della Sfortuna (Beshaba):</strong> Beshaba maledice
+              TUTTE le squadre con sfortuna estrema per 1 ora. Chi completa una missione semplice (es: attraversare
+              città) nonostante la maledizione vince. Fallimenti critici ovunque.
+            </li>
+            <li>
+              • <strong class="text-purple-400">Il Furto Impossibile (Mask):</strong> Rubare la chiave della prigione
+              dal Gran Duca Kurth mentre è sveglio e circondato da 20 guardie. Senza uccidere nessuno.
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            La gilda "Le Vele Nere" vinse tutte e tre con mix di fortuna cieca, violenza tattica, e il miglior ladro
+            di Luskan. Mask gli offrì lavoro personalmente (rifiutarono educatamente).
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- END DM ONLY -->
+
+    <!-- PARTE 3.5: IL DRUIDO CHE NON SCESE -->
+    <div class="bg-gray-800/30 border border-red-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">⚠️</span> IL DRUIDO CHE NON SCESE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+        <p class="leading-relaxed text-center text-lg mb-6">
+          La Squadra D dei Guardiani della Trama aveva superato brillantemente le tre Prove Divine. Il roster era completo:
+          <strong class="text-blue-400">Valoris</strong> il chierico, <strong class="text-purple-400">Riven</strong> lo stregone,
+          <strong class="text-yellow-400">Thalio</strong> il ladro, <strong class="text-orange-400">Morgrim</strong> il guerriero,
+          e <strong class="text-green-400">Mira Greenleaf</strong> la druida halfling del Cerchio della Terra.
+          Ma il giorno dell'apertura dell'Arco... qualcosa andò terribilmente storto.
+        </p>
+
+        <!-- Chi era Mira -->
+        <div class="bg-green-950/20 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-green-400 mb-3">Chi Era Mira Greenleaf</h3>
+          <p class="text-sm leading-relaxed mb-2">
+            <strong>Mira Greenleaf</strong> (Halfling, 87 anni, Druido del Cerchio della Terra) era conosciuta nella gilda per la sua
+            connessione profonda con gli elementi naturali e il suo carattere gentile ma determinato. Piccola di statura ma immensa nel
+            controllo della natura, aveva guadagnato il rispetto di tutti durante l'addestramento e le Prove Divine.
+          </p>
+          <ul class="text-xs space-y-1 text-gray-400 mt-3">
+            <li>• <strong>Prova I:</strong> Evocò barriere di pietra e rovi per rallentare i Golem, trasformando il campo in un labirinto naturale
+            che permise a <strong>Morgrim</strong> di abbattere i golem uno alla volta</li>
+            <li>• <strong>Prova II:</strong> Saltò insieme a Morgrim nel "Salto della Fede", dimostrando fiducia cieca in Tymora</li>
+            <li>• <strong>Prova III:</strong> Il suo legame con la natura guidò la squadra verso passaggi nascosti nella Biblioteca,
+            mentre <strong>Morgrim</strong> teneva le altre squadre a distanza</li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-3 italic">
+            La squadra l'adorava. Era l'anima gentile del gruppo, quella che ricordava loro di riposare, che curava le piccole ferite,
+            che cantava canzoni halfling durante le marce di addestramento. Anche <strong>Morgrim</strong>, di solito stoico, aveva sviluppato
+            un affetto protettivo per la piccola halfling.
+          </p>
+        </div>
+
+        <!-- La Notte Prima dell'Alba -->
+        <div class="bg-red-950/20 border-l-4 border-red-500 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-red-400 mb-3">14 Elesias, Ore 23:00 - La Vigilia</h3>
+          <p class="text-sm leading-relaxed mb-3">
+            La notte prima dell'apertura dell'Arco Divino, Waterdeep non dormiva. Le squadre delle tre gilde si preparavano freneticamente,
+            determinate a essere le prime a scendere all'alba per guadagnare vantaggio competitivo. La Piazza del Monte era già affollata
+            di cittadini che accampavano per assistere all'evento storico. L'aria vibrava di tensione e aspettativa.
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            I Guardiani della Trama si erano riuniti nella piazza intorno alla mezzanotte per un ultimo briefing. Valoris voleva che la squadra
+            fosse presente, vigile, pronta a muoversi nel momento esatto in cui l'Arco si fosse aperto. <em>"Nessun ritardo. Nessuna esitazione.
+            Entriamo per primi,"</em> aveva detto con tono ferreo.
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Fu allora che Mira si avvicinò all'Arco per la prima volta da vicino. Fino a quel momento, durante i tre mesi di preparazione,
+            lo aveva sempre osservato da lontano, da distanza sicura. Ma ora, nella penombra della notte, a meno di dieci metri dal portale oscuro
+            che pulsava di energia contenuta, qualcosa dentro di lei <strong>si spezzò</strong>.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-red-200">
+            La sua connessione innata con la natura - quel dono che l'aveva resa una druida straordinaria - divenne improvvisamente una <strong>maledizione</strong>.
+            Sentì ciò che giaceva sotto. Non con gli occhi. Non con la mente. Ma con ogni fibra del suo essere connesso al mondo naturale.
+          </p>
+          <div class="bg-black/40 p-4 rounded-lg my-4">
+            <p class="text-red-300 font-bold text-center">
+              Una corruzione arcana. Una distorsione della realtà che urlava contro ogni legge naturale.<br/>
+              Un'escrescenza cosmica che la terra stessa rifiutava.
+            </p>
+          </div>
+          <p class="text-sm leading-relaxed mb-3">
+            Era come sentire un tumore pulsante nel corpo di Faerûn. Come ascoltare le urla silenziose della pietra, dell'acqua, dell'aria
+            che venivano contorte in forme innaturali dalla volontà divina. Il dolore della terra riversato direttamente nella sua anima.
+          </p>
+          <p class="text-sm leading-relaxed">
+            Mira iniziò a tremare violentemente. Le gambe le cedettero. Valoris la afferrò prima che cadesse a terra. <em>"Mira? Che succede?"</em><br/>
+            Lei lo guardò con occhi pieni di terrore assoluto, lacrime che rigavano il volto. <em>"Voi... voi non lo sentite? Quello. Laggiù.
+            Non è... non dovrebbe esistere. Gli Dèi hanno creato qualcosa che la natura stessa rifiuta. È... è SBAGLIATO."</em>
+          </p>
+          <p class="text-sm leading-relaxed mt-3">
+            Si liberò dalla presa di Valoris, distratto dal cercar di capire cosa intendesse, e corse via tra la folla confusa, scomparendo nelle strade buie di Waterdeep.
+            La squadra rimase paralizzata, sotto shock.
+          </p>
+        </div>
+
+        <!-- La Lettera -->
+        <div class="bg-gray-900/50 border border-gray-700 rounded-lg p-6 mb-6">
+          <h3 class="text-lg font-bold text-gray-300 mb-3">Ore 00:30 - La Lettera</h3>
+          <p class="text-sm text-gray-400 mb-3">
+            La squadra corse prima alla gilda senza successo e poi alla locanda per cercarla, sperando di trovare Mira e calmarla. Trovarono le sue cose disordinate sul
+            pavimento, ma lei era sparita. Sulla coperta, illuminata dalla fioca luce di una candela, una lettera scritta con mano tremolante:
+          </p>
+          <div class="bg-black/60 border-l-4 border-green-600 p-4 rounded">
+            <p class="text-sm italic text-green-200 leading-relaxed">
+              "Miei cari compagni,<br/><br/>
+              Perdonatemi. Perdonatemi per la mia debolezza.<br/><br/>
+              Quello che gli Dèi hanno creato sotto Waterdeep non dovrebbe esistere. La terra stessa piange. Gli elementi si contorcono in dolore.
+              Ogni fibra del mio essere urla contro quella... quella cosa.<br/><br/>
+              So che vi sto abbandonando proprio quando avete più bisogno di me. So che mi odierete. Ma non posso scendere. Se lo facessi, impazzirei
+              entro il primo livello. O peggio, diventerei un peso morto che vi trascinerebbe alla morte.<br/><br/>
+              Vi prego, trovatemi un sostituto. Non entrate là sotto senza un druido. Ne avrete bisogno. La natura, per quanto corrotta,
+              è ancora presente in quei tunnel. Qualcuno deve guidarvi attraverso di essa. Qualcuno più forte di me.<br/><br/>
+              Che Silvanus vi protegga dove io non ho avuto il coraggio di seguirvi.<br/><br/>
+              — Mira Greenleaf"
+            </p>
+          </div>
+        </div>
+
+        <!-- La Crisi -->
+        <div class="bg-yellow-950/20 border-l-4 border-yellow-500 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-yellow-400 mb-3">Ore 01:00 - La Crisi</h3>
+          <p class="text-sm leading-relaxed mb-3">
+            Tornati alla piazza con la lettera, la squadra era nel panico. L'Arco si sarebbe aperto all'<strong>alba - in meno di 5 ore</strong>.
+            Come potevano trovare un druido esperto, convincerlo, equipaggiarlo e integrarlo nella squadra in così poco tempo?
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Arianna propose di mandare messaggeri ai druidi conosciuti della città. Magnus suggerì di chiedere aiuto alla leadership della gilda.
+            Riven voleva scendere comunque, sostenendo che poteva coprire parzialmente il ruolo con incantesimi di cura per poi venir ricordato che
+            la squadra doveva essere necessariamente composta da 5 membri. Tutti i druidi esperti
+            erano già impegnati con altre gilde, e nessuno avrebbe accettato di cambiare alleanza a poche ore dall'apertura.
+          </p>
+          <p class="text-sm leading-relaxed">
+            I pensieri vennero interrotti da <strong class="text-yellow-300">Silas 'Shadowstep' Greycloak</strong>, che aveva assistito alla scena da poco dietro,
+            si avvicinò al gruppo con passo calmo e disse:<br/>
+            <em>"Fealer Corvonero. Ma non dovrete cercarlo. È già qui."</em>
+          </p>
+        </div>
+
+        <!-- L'Osservatore Silenzioso -->
+        <div class="bg-gray-900/50 border-l-4 border-purple-500 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-purple-400 mb-3">Ore 01:15 - L'Eremita che Osservava</h3>
+          <p class="text-sm leading-relaxed mb-3">
+            Silas indicò una figura avvolta in mantello scuro, appoggiata a una colonna ai margini della piazza. Era lì da ore, immobile,
+            osservando l'Arco Divino con intensità clinica. <strong>Fealer Corvonero</strong> - l'eremita del Monte Waterdeep,
+            druido del Cerchio della Luna che aveva passato 50 anni studiando le anomalie della Trama e la "malattia urbana" della città.
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            <em>"È qui da quando il sole è tramontato,"</em> spiegò Silas. <em>"Stava... monitorando. Studiando l'Arco
+            come si studia un paziente malato. Ha visto e sentito tutto quello che è successo con Mira. E credo che l'abbia trovato... interessante."</em>
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Valoris guardò verso la figura. Anche a distanza, poteva distinguere il pesante <strong>mantello di piume di corvo</strong>,
+            l'<strong>anello che pulsava di luce azzurrina</strong> alla mano sinistra, e quegli <strong>occhi chiari e vitrei</strong> che
+            fissavano l'Arco senza battere ciglio.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-purple-200">
+            "È... affidabile?" chiese Riven, diffidente.<br/>
+            Silas rise amaramente. "Affidabile? No. Competente? Assolutamente. E a differenza di Mira, quel tumore divino là sotto non lo spaventa.
+            Lo affascina. Credo voglia studiarlo da dentro." (<em>licenza poetica</em>)
+          </p>
+          <p class="text-sm leading-relaxed">
+            Valoris prese una decisione. Si diresse verso Fealer con passo deciso, seguito dagli altri. Era tempo di negoziare.
+          </p>
+        </div>
+
+        <!-- La Proposta -->
+        <div class="bg-gray-900/70 border-l-4 border-indigo-500 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-indigo-400 mb-3">Ore 01:30 - La Proposta Autonoma</h3>
+          <p class="text-sm leading-relaxed mb-3">
+            Quando il gruppo si avvicinò, Fealer non si mosse. Rimase appoggiato alla colonna, gli occhi fissi sull'Arco, come se stesse
+            analizzando ogni pulsazione di energia divina che emanava dal portale. Solo quando Valoris fu a meno di tre metri da lui,
+            Fealer parlò - senza girarsi, senza distogliere lo sguardo dall'Arco.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-indigo-200">
+            "La druida halfling aveva ragione. Quello che gli Dèi hanno creato là sotto è innaturale. Una distorsione della Trama biologica.
+            Un tumore cosmico che infetta l'Equilibrio."
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Valoris, confuso, rispose: <em>"Allora... anche tu senti quello che ha sentito Mira?"</em>
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Fealer finalmente girò la testa verso di lui con un movimento lento, calcolato. I suoi occhi chiari e vitrei scrutavano Valoris
+            come un chirurgo esamina un paziente.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-indigo-200">
+            "Sento. Ma io non fuggo da ciò che va studiato. Le malattie non si curano ignorandole. Si curano comprendendole. Analizzandole.
+            Penetrando nelle profondità dell'infezione per trovare la radice. Io sono il medico."
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Silenzio. Poi Fealer continuò, con voce piatta e priva di emozione:
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-indigo-200">
+            "Vi serve un druido. Io ho bisogno di accesso al Dungeon per studiare l'anomalia. Propongo uno scambio. Io vi guido attraverso
+            gli elementi corrotti. Voi mi permettete di raccogliere campioni, osservare i sintomi, documentare la progressione della malattia."
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Valoris guardò i compagni. Riven sembrava diffidente. Thalio allarmato. Morgrim incrociò le braccia, squadrando Fealer con occhi duri. 
+            Ma non avevano scelta. Mancavano meno di 5 ore all'alba.
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            <em>"Accettato,"</em> disse Valoris con voce ferma. <em>"Ma devi giurare di proteggere la squadra, non solo i tuoi esperimenti."</em>
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Fealer inclinò leggermente la testa, come se stesse considerando un dettaglio tecnico irrilevante.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-indigo-200">
+            "La vostra sopravvivenza è funzionale alla mia ricerca. Un chirurgo non lascia morire il paziente prima di aver completato l'operazione.
+            Siete strumenti necessari. Vi proteggerò come proteggo i miei bisturi. O, nei vostri termini, sarò il vostro scudo."
+          </p>
+          <p class="text-sm leading-relaxed mb-3 text-gray-400 italic">
+            Thalio bisbigliò a Riven: "Non è esattamente rassicurante..."<br/>
+            Riven, con un sorriso ironico amaro: "Ma almeno è onesto. E non scapperà urlando."
+          </p>
+          <p class="text-sm leading-relaxed mb-3">
+            Fealer girò la testa verso di loro con un movimento innaturalmente veloce, come un rapace che individua un movimento nell'erba.
+            Gli occhi vitrei li fissarono con intensità clinica.
+          </p>
+          <p class="text-sm leading-relaxed mb-3 italic text-indigo-200">
+            "Esatto. Non scapperò. La paura è un'emozione irrazionale che offusca l'analisi. Io non ho paura del Dungeon.
+            Ho... curiosità professionale."
+          </p>
+          <p class="text-sm leading-relaxed font-bold mt-4">
+            Valoris tese la mano. Fealer la strinse con presa ferma ma fredda, come stringere la mano a un cadavere.
+          </p>
+          <p class="text-sm leading-relaxed italic text-blue-200 mt-3">
+            "Benvenuto nei Guardiani della Trama, Fealer Corvonero. Preparati. Scendiamo all'alba."
+          </p>
+          <p class="text-sm leading-relaxed mt-4 text-orange-200 dm-only">
+            <strong>Morgrim</strong> si avvicinò a Fealer dopo che gli altri si furono allontanati. Guardò il druido dritto negli occhi vitrei
+            e disse con voce bassa ma ferma: <em>"Ho protetto Mira per tre mesi. Era gentile, coraggiosa, e parte della mia squadra.
+            Tu non sei Mira. Ma se ti unisci a noi, diventi parte della squadra. E io proteggo la squadra. Anche da sé stessa, se necessario.
+            Fa i tuoi esperimenti. Ma non mettere mai in pericolo i miei compagni per la tua 'curiosità professionale'. Chiaro?"</em>
+          </p>
+          <p class="text-sm leading-relaxed italic text-indigo-200 dm-only">
+            Fealer inclinò leggermente la testa, studiando il nano come si studia un esemplare interessante. <em>"Compreso. Il tuo attaccamento
+            emotivo al concetto di 'squadra' è irrazionale ma... prevedibile. Lo terrò in considerazione."</em>
+          </p>
+          <p class="text-sm leading-relaxed text-orange-200 dm-only">
+            Morgrim non rispose. Si limitò ad annuire una volta, poi si voltò e tornò dagli altri. Il messaggio era chiaro.
+          </p>
+        </div>
+
+        <!-- Nota DM -->
+        <div class="bg-blue-900/20 border border-blue-500/50 rounded-lg p-4 mt-6 dm-only">
+          <p class="text-xs font-bold text-blue-300 mb-2">📝 NOTA PER IL DM - Mira Greenleaf</p>
+          <p class="text-xs text-gray-300">
+            Mira Greenleaf può diventare un PNG ricorrente. Potrebbe unirsi ad un'altra gilda meno ambiziosa, o cercare di espiare
+            la sua "codardia" in altri modi. Oppure potrebbe essere un contatto esterno che fornisce informazioni sulla natura quando
+            la squadra torna in superficie. La sua partenza non è stata per cattiveria, ma per un dono naturale che è diventato un fardello
+            insopportabile di fronte all'innaturalezza del Dungeon Divino.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE 4: PREPARAZIONE ALLA SESSIONE 1 -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">🎬</span> CHIUSURA E PREPARAZIONE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-4 text-gray-300">
+        <p class="leading-relaxed">
+          Dopo settimane di preparazione, addestramenti, acquisizione di equipaggiamento e benedizioni divine,
+          arriva finalmente <strong class="text-yellow-400">il giorno dell'apertura</strong>.
+        </p>
+
+        <div class="bg-gradient-to-r from-red-950/20 via-yellow-950/20 to-blue-950/20 border border-yellow-500/50 rounded-lg p-6 my-6">
+          <p class="text-xl font-bold text-yellow-400 text-center mb-4">
+            15° Giorno di Elesias, 1495 DR - L'Arco Divino si apre
+          </p>
+
+          <p class="text-gray-200 leading-relaxed">
+            All'alba, nella Piazza del Monte gremita di cittadini, esattamente tre mesi dopo la loro prima apparizione, le tre Divinità si palesano nuovamente insieme.
+            Tempus alza la sua spada, Tymora fa brillare la sua moneta, Mystra tesse filamenti di Trama.
+            L'Arco Divino pulsa di energia, e l'oscurità al suo interno diventa... <em>invitante</em>.
+          </p>
+
+          <p class="text-gray-200 leading-relaxed mt-4">
+            <strong class="text-red-400">Tempus</strong> ruggisce:
+          </p>
+
+          <blockquote class="border-l-4 border-red-500 pl-4 my-4 text-red-100 italic">
+            "Avventurieri di Waterdeep! Il Dungeon Divino vi attende. Dimostrate il vostro valore.
+            Guadagnate Gloria. E che la vostra spada sia sempre affilata!"
+          </blockquote>
+
+        </div>
+
+        <p class="leading-relaxed text-center text-xl font-bold text-blue-400 my-6">
+          I Guardiani della Trama, con il loro stendardo sventolante - tre cerchi intrecciati (rosso, oro, blu) -
+          si avvicinano all'Arco.
+        </p>
+
+        <!-- Roster Finale -->
+        <div class="bg-gray-900/50 border border-gray-700 rounded-lg p-6 my-6">
+          <h3 class="text-lg font-bold text-center text-yellow-400 mb-4">🛡️ LA SQUADRA FINALE</h3>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-center text-sm">
+            <div class="bg-blue-950/30 border border-blue-500/30 rounded p-3">
+              <div class="text-blue-400 font-bold">⚔️ VALORIS</div>
+              <div class="text-xs text-gray-400">Mezzelfo Chierico</div>
+              <div class="text-xs text-gray-500">Leader/Tank/Healer</div>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-500/30 rounded p-3">
+              <div class="text-purple-400 font-bold">✨ RIVEN</div>
+              <div class="text-xs text-gray-400">Umano Stregone</div>
+              <div class="text-xs text-gray-500">DPS/Chaos</div>
+            </div>
+            <div class="bg-yellow-950/30 border border-yellow-500/30 rounded p-3">
+              <div class="text-yellow-400 font-bold">🗡️ THALIO</div>
+              <div class="text-xs text-gray-400">Halfling Ladro</div>
+              <div class="text-xs text-gray-500">Scout/Stealth</div>
+            </div>
+            <div class="bg-orange-950/30 border border-orange-500/30 rounded p-3">
+              <div class="text-orange-400 font-bold">🛡️ MORGRIM</div>
+              <div class="text-xs text-gray-400">Nano Guerriero</div>
+              <div class="text-xs text-gray-500">Tank/Protettore</div>
+            </div>
+            <div class="bg-indigo-950/30 border border-indigo-500/30 rounded p-3">
+              <div class="text-indigo-400 font-bold">🌿 FEALER</div>
+              <div class="text-xs text-gray-400">Elfo Druido</div>
+              <div class="text-xs text-gray-500">Support/Healer</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 text-center mt-3 italic">
+            Sostituito: Mira Greenleaf (druida halfling, ritirata per incompatibilità con il Dungeon)
+          </p>
+        </div>
+
+        <p class="leading-relaxed text-center text-lg text-gray-300">
+          Valoris guarda i suoi compagni. Thalio sorride nervoso. Riven controlla il suo focus.
+          Fealer, il nuovo arrivato, osserva il portale con distacco clinico. Morgrim stringe l'impugnatura dell'ascia, annuisce una volta. Pronto.
+        </p>
+
+        <p class="leading-relaxed text-center text-2xl font-bold text-yellow-400 my-8">
+          Attraversano l'Arco.
+        </p>
+
+        <p class="leading-relaxed text-center text-xl text-gray-400">
+          E il Gioco Divino... inizia.
+        </p>
+      </div>
+    </div>
+
+    <!-- PARTE 5: NOTE PER IL DM -->
+    <div class="bg-yellow-900/20 border border-yellow-500/50 rounded-lg p-8 mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span>📝</span> NOTE PER IL DUNGEON MASTER
+      </h2>
+
+      <div class="space-y-6 text-sm">
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Come Presentare Questa Sessione</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-400">•</span>
+              <span><strong>Lettura Narrativa:</strong> Leggi le sezioni dell'Incipit con tono epico e teatrale.
+              Fai pause drammatiche. Questo è il momento più importante della campagna per il worldbuilding.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-400">•</span>
+              <span><strong>Coinvolgi i Giocatori:</strong> Dopo aver descritto le Prove Divine generali,
+              chiedi ai giocatori di descrivere LORO come hanno superato le prove con i loro PG.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-yellow-400">•</span>
+              <span><strong>Tempo:</strong> Dedica 60-90 minuti all'incipit narrativo. Poi 30-60 minuti
+              per presentazione personaggi. Poi 60 minuti per Q&A su meccaniche e mondo.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Domande Frequenti da Anticipare</h3>
+          <ul class="space-y-2 text-gray-300 text-xs">
+            <li><strong>Q:</strong> "Possiamo uscire dalle città?" <br/>
+            <strong>A:</strong> "No. Il Sigillo Divino è assoluto."</li>
+
+            <li><strong>Q:</strong> "Cosa succede se moriamo?" <br/>
+            <strong>A:</strong> "Morte normale. Resurrezione possibile ma costosa (300+ MO)."</li>
+
+            <li><strong>Q:</strong> "Possiamo combattere altre gilde?" <br/>
+            <strong>A:</strong> "Sì, ma gli Dèi giudicano COME combattete. Onore vs slealtà."</li>
+
+            <li><strong>Q:</strong> "Perché gli Dèi hanno fatto questo?" <br/>
+            <strong>A:</strong> "Ottima domanda. Loro dicono 'per testare i mortali'.
+            Ma alcune divinità (Mystra, Oghma) sembrano... incerte."</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Transizione alla Sessione 1</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Quando i giocatori sono pronti, leggi:
+          </p>
+          <blockquote class="border-l-4 border-blue-500 pl-4 my-4 text-blue-100 italic text-xs">
+            "Attraversate l'Arco Divino. Per un istante, tutto è oscurità assoluta. Poi, una scalinata
+            di pietra bianca illuminata da fiamme perpetue appare davanti a voi. L'aria cambia - più fredda,
+            umida, con un leggero odore di muffa e acqua stagnante. Scendete 20 metri, 30, 40... E finalmente
+            arrivate. Il primo livello del Dungeon Divino. Le Fogne Superiori di Waterdeep. Davanti a voi,
+            canali di acqua verdastra. Dietro, la scalinata da cui siete scesi che svanisce nell'oscurità. E ovunque... buio."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link alle Risorse -->
+    <div class="bg-blue-900/20 border border-blue-500/50 rounded-lg p-6">
+      <h3 class="text-xl font-bold mb-4">🔗 Risorse Correlate</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+        <a href="/dm/ecosistema-1" class="block p-3 bg-gray-800/50 hover:bg-gray-800 border border-gray-700 rounded transition">
+          📖 Ecosistema 1 - Dettagli Completi
+        </a>
+        <a href="/gilde/guardiani-della-trama" class="block p-3 bg-gray-800/50 hover:bg-gray-800 border border-gray-700 rounded transition">
+          🛡️ I Guardiani della Trama - Schede
+        </a>
+        <a href="/citta/waterdeep" class="block p-3 bg-gray-800/50 hover:bg-gray-800 border border-gray-700 rounded transition">
+          🏙️ Waterdeep - Ambientazione
+        </a>
+        <a href="/meccaniche/favore-divino" class="block p-3 bg-gray-800/50 hover:bg-gray-800 border border-gray-700 rounded transition">
+          ⚡ Sistema Favore Divino
+        </a>
+      </div>
+    </div>
+  </div>
+</MainLayout>

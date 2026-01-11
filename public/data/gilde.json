@@ -10,15 +10,97 @@
     "founded": "2 mesi prima dell'apertura dungeon",
     "foundingStory": "Fusione di 3 gilde minori: La Mano dell'Arcanista (maghi), Le Lame d'Argento (guerrieri), Le Monete Fortunate (ladri). I tre leader si incontrarono, decisero che uniti sarebbero stati imbattibili, e firmarono un contratto magico vincolante.",
     "totalMembers": 20,
-    "mainTeam": 4,
-    "reserves": 16,
+    "mainTeam": 5,
+    "reserves": 15,
+    "leadership": {
+      "guildmaster": {
+        "name": "Serath Vael'Toran",
+        "title": "Capogilda",
+        "race": "Mezzelfo",
+        "age": 45,
+        "class": "Ex-avventuriero (Guerriero 4 / Mago 3 / Ladro 2) - ritirato",
+        "alignment": "Neutrale Buono",
+        "personality": "Diplomatico, pragmatico, carismatico. Negoziatore nato.",
+        "background": "Era un mediatore indipendente a Waterdeep che arbitrava dispute tra gilde. Quando le tre gilde decisero di fondersi, lo chiamarono come 'arbitro neutrale' per supervisionare l'unione. La sua esperienza in tutte e tre le discipline (magia, combattimento, astuzia) lo rese la scelta perfetta.",
+        "role": "Decisioni finali, gestione risorse, rapporti con autorità cittadine, risoluzione conflitti interni",
+        "appearance": "Capelli sale e pepe, occhi grigi penetranti, sempre vestito elegante ma pratico. Porta un bastone da passeggio che è anche focus arcano.",
+        "quote": "L'equilibrio non è debolezza. È la forza di vedere tutte le vie."
+      },
+      "triumvirate": [
+        {
+          "name": "Magnus 'Ironfist' Thorne",
+          "title": "Ex-capogilda 'Le Lame d'Argento'",
+          "race": "Umano",
+          "age": 52,
+          "class": "Guerriero 8 (Maestro di Battaglia) - semi-ritirato",
+          "alignment": "Legale Buono",
+          "personality": "Veterano duro ma giusto. Voce severa, cuore d'oro. Rispetta la gerarchia.",
+          "background": "Ex-mercenario che fondò Le Lame d'Argento 20 anni fa. Combatté nella Guerra dei Signori. Ferito gravemente 5 anni fa (gamba sinistra rigida), non può più avventurare attivamente.",
+          "role": "Sovrintende addestramento combattimento, gestione armeria, disciplina militare",
+          "appearance": "Cicatrici multiple, corporatura massiccia, zoppia lieve. Barba grigia tagliata corta.",
+          "relationWithParty": "Vede Valoris come un figlio. Fu lui a raccomandare Valoris per la squadra principale.",
+          "quote": "La disciplina salva vite. La gloria è per i morti."
+        },
+        {
+          "name": "Arianna 'Whispersong' Moonwhisper",
+          "title": "Ex-capogilda 'La Mano dell'Arcanista'",
+          "race": "Elfa Alta",
+          "age": 312,
+          "class": "Maga 10 (Divinazione) - semi-ritirata",
+          "alignment": "Neutrale Buono",
+          "personality": "Intellettuale, curiosa, eccentrica. Parla spesso in metafore arcane.",
+          "background": "Studiosa dell'Accademia di Blackstaff per 200 anni. Fondò La Mano dell'Arcanista per 'applicare teoria alla pratica'. Troppo anziana per avventure fisiche, ma mente affilata.",
+          "role": "Consulenza magica, identificazione oggetti, ricerca arcana, insegnamento teoria",
+          "appearance": "Capelli argentei lunghissimi, occhi viola brillanti, vesti azzurre con stelle ricamate.",
+          "relationWithParty": "Affascinata dalla magia selvaggia di Riven. Gli offre lezioni (lui accetta riluttante).",
+          "quote": "La Trama vede tutto. Noi siamo solo... osservatori privilegiati."
+        },
+        {
+          "name": "Silas 'Shadowstep' Greycloak",
+          "title": "Ex-capogilda 'Le Monete Fortunate'",
+          "race": "Umano (Tethyriano)",
+          "age": 38,
+          "class": "Ladro 9 (Maestro di Intrighi) - semi-ritirato",
+          "alignment": "Caotico Neutrale (tendente al Buono)",
+          "personality": "Sorriso perpetuo, occhio per il profitto, ma leale ai suoi. Ex-criminale 'riabilitato'.",
+          "background": "Leader di una gilda di ladri diventata legittima quando il crimine non pagava più. Astuto uomo d'affari. Conosce tutti i segreti di Waterdeep.",
+          "role": "Gestione finanze, network informativo, approvvigionamento equipaggiamento, negoziazione contratti",
+          "appearance": "Capelli neri slicked back, pizzetto curato, vestiti eleganti ma scuri. Sempre con un sorrisetto.",
+          "relationWithParty": "Mentore non ufficiale di Thalio. Insegna al ragazzo 'il business dell'avventura'.",
+          "quote": "Tutto ha un prezzo. La questione è: sei disposto a pagarlo?"
+        }
+      ],
+      "adminCouncil": [
+        {
+          "name": "Thea Ironhand",
+          "title": "Quartiermastro",
+          "race": "Nana",
+          "age": 95,
+          "role": "Gestione magazzino, equipaggiamento, inventario, riparazioni",
+          "personality": "Burbera, efficiente, ossessionata dall'ordine",
+          "background": "Ex-fabbro dell'esercito nanico. Nessuno osa contestare il suo inventario.",
+          "quote": "Se non è nell'inventario, non esiste. E se l'hai rotto, LO PAGHI."
+        },
+        {
+          "name": "Lira Dawnwhisper",
+          "title": "Medico di Gilda",
+          "race": "Umana",
+          "age": 29,
+          "class": "Chierico di Ilmater 3 (non combattente)",
+          "role": "Cure post-missione, infermeria, supporto emotivo",
+          "personality": "Dolce, paziente, madre per tutti",
+          "background": "Ex-suora di un tempio, si unì alla gilda per 'salvare vite invece di pregare per esse'.",
+          "quote": "Ogni ferita racconta una storia. Io sono qui per assicurarmi che possiate raccontarne altre."
+        }
+      ]
+    },
     "headquarters": {
       "location": "Dock Ward, 5 minuti a piedi dall'Arco Divino",
       "type": "Casa a tre piani, ex-magazzino ristrutturato",
       "floors": {
         "ground": "Sala comune, cucina, armeria",
         "first": "6 camere doppie (letti a castello)",
-        "second": "4 camere singole (Team Principale)",
+        "second": "5 camere singole (Team Principale)",
         "basement": "Magazzino, sala allenamento"
       },
       "rent": "150 MO/mese (pagato collettivamente)"
@@ -45,7 +127,7 @@
         "name": "Valoris",
         "fullName": "Valoris",
         "race": "Umano",
-        "class": "Paladino 5 (Oath of the Crown)",
+        "class": "Chierico 5",
         "deity": "Il Cavaliere Rosso (Red Knight, campionessa di Tempus)",
         "level": 5,
         "age": 24,
@@ -77,7 +159,7 @@
           "Conflitto interno: strategia vs fortuna",
           "Senso dell'umorismo sottile"
         ],
-        "role": "Tank principale, leader morale, faccia del gruppo in situazioni formali",
+        "role": "Supporto principale, leader morale, faccia del gruppo in situazioni formali",
         "quotes": [
           "La strategia vince guerre. L'onore le rende giuste.",
           "Non lascio indietro nessuno.",
@@ -234,6 +316,64 @@
         "importantItem": "Diario naturalistico dove annota anomalie",
         "secretGoal": "È l'unico che sospetta che qualcosa non va con gli Dèi",
         "dmOnly": true
+      },
+      {
+        "playerId": "PLACEHOLDER-NEW-PLAYER",
+        "id": "morgrim",
+        "name": "Morgrim Sangueombra",
+        "fullName": "Morgrim Sangueombra",
+        "race": "Nano di Scudo",
+        "class": "Guerriero 5 (Battle Master)",
+        "deity": "Moradin (rispetto tradizionale, non devoto)",
+        "level": 5,
+        "age": 127,
+        "alignment": "LN",
+        "appearance": {
+          "height": "1,35m (tipico nano)",
+          "build": "Massiccia, muscolosa, compatta",
+          "hair": "Rossi ramati, intrecciati in trecce da guerra. Barba lunga con anelli di ferro",
+          "eyes": "Grigi come pietra, duri e penetranti",
+          "skin": "Abbronzata e segnata da cicatrici",
+          "distinctive": "Cicatrice profonda che attraversa la fronte fino alla guancia destra. Mani callose da decenni di combattimento",
+          "clothing": {
+            "city": "Armatura a piastre parziale (corazza + spallacci), tunica arancione sotto, stivali rinforzati",
+            "mission": "Armatura completa (splint mail nanica), mantello grigio da viaggio, elmo con visiera a T",
+            "always": "Ascia da battaglia nanica a una mano + scudo con rune naniche. Portamonete legato alla cintura (sempre pieno, non lo spende mai)"
+          }
+        },
+        "background": "Veterano di tre guerre naniche. Sopravvissuto all'Assedio di Mithral Hall (1484 DR). Arrivato a Waterdeep 8 anni fa come mercenario freelance, cercando una vita più tranquilla dopo decenni di guerra. Reclutato da Magnus Ironfist per essere il 'muro' della squadra.",
+        "motivations": [
+          "Proteggere la squadra (è l'unica cosa che sa fare bene)",
+          "Onorare i caduti delle guerre passate",
+          "Pagare il debito verso Magnus per averlo tirato fuori dalla deriva post-guerra",
+          "Trovare pace nel servire qualcosa di più grande"
+        ],
+        "personality": [
+          "Stoico - parla pochissimo, solo quando necessario",
+          "Leale fino alla morte verso i compagni",
+          "Protettivo in modo quasi paterno",
+          "Diffidente verso estranei",
+          "Pragmatico e diretto",
+          "Non cerca gloria, solo dovere compiuto"
+        ],
+        "role": "Tank principale insieme a Valoris, protettore del backline, controllo campo con manovre Battle Master",
+        "quotes": [
+          "Io tengo la linea. Voi fate il resto.",
+          "La gloria è per i vivi. Io preferisco che voi restiate vivi.",
+          "Non serve parlare. Guardate cosa faccio.",
+          "Ho visto morire eroi migliori di noi. Non sprecate la vostra vita stupidamente."
+        ],
+        "weapon": "Ascia da battaglia nanica 'Spezzaroccia' (eredità familiare) + scudo nanico rinforzato con rune di protezione",
+        "maneuvers": ["Riposte", "Goading Attack", "Brace", "Menacing Attack"],
+        "importantItem": "Medaglione con nomi incisi dei compagni caduti a Mithral Hall",
+        "secretGoal": "Vuole assicurarsi che nessuno della squadra finisca come i suoi vecchi compagni - morti inutilmente",
+        "dynamic": {
+          "with_valoris": "Rispetto reciproco tra tank. Morgrim vede Valoris come giovane promettente da proteggere/guidare",
+          "with_riven": "Protettivo. Gli insegna a non sprecare magie difensive: 'Io tengo la linea, tu brucia'",
+          "with_thalio": "Sviluppa segnali tattici silenziosi. Apprezza l'astuzia del halfling",
+          "with_fealer": "Diffidente ma pragmatico. Tiene d'occhio il druido per sicurezza squadra",
+          "with_mira": "Affetto quasi paterno (ora perduto). Rispetta la sua scelta di ritirarsi"
+        }
       }
     ],
     "teamDynamics": {
@@ -253,7 +393,7 @@
         "Riposo lungo: Thalio suona, altri ascoltano",
         "Valoris cucina per tutti"
       ],
-      "decisionMaking": "Votano (maggioranza 3/4). Se 2-2: lanciano moneta (Tymora decide)"
+      "decisionMaking": "Votano (maggioranza 3/5). Il voto dispari elimina i pareggi"
     }
   },
   {
@@ -266,8 +406,8 @@
     "colors": ["Bianco", "Oro", "Rosso"],
     "founded": "2 settimane prima delle Prove",
     "totalMembers": 25,
-    "mainTeam": 4,
-    "reserves": 21,
+    "mainTeam": 5,
+    "reserves": 20,
     "headquarters": {
       "location": "Sea Ward (quartiere ricco)",
       "type": "Villa a due piani donata da sponsor",
@@ -324,6 +464,27 @@
         "alignment": "NG",
         "personality": "Outsider del gruppo (moralità grigia), pragmatica, schietta",
         "note": "Tollerata da Aldric per necessità. Potenziale amicizia/rivalità con Thalio"
+      },
+      {
+        "name": "Caelum Starweaver",
+        "role": "Strategist/Controller",
+        "race": "Umano (Calishite)",
+        "class": "Mago (Abjuration) 5",
+        "age": 42,
+        "alignment": "LN",
+        "personality": "Metodico, cerebrale, protettivo. Ex-professore della Accademia di Blackstaff. Vede gli scontri come scacchi viventi. Rispetta l'ordine e la disciplina, ma è più pragmatico che idealista. Perfezionista al limite dell'ossessivo.",
+        "background": "Insegnava Teoria dell'Abjuration all'Accademia di Blackstaff. Quando gli Dèi scesero, lasciò l'insegnamento per 'vedere la teoria in pratica'. Si unì allo Scudo Radiante per la loro struttura militare e disciplina tattica.",
+        "weapon": "Bastone arcano + spellbook 'Il Codice della Guerra'",
+        "signatureSpells": ["Counterspell", "Wall of Force", "Shield", "Fireball"],
+        "role_in_team": "Pianificatore pre-battaglia, controller in combattimento, protettore del backline con Abjuration. Lavora a stretto contatto con Aldric per strategie.",
+        "quote": "Una vittoria non pianificata è solo fortuna. Io non mi affido alla fortuna.",
+        "dynamic": {
+          "with_aldric": "Rispetto reciproco. Caelum pianifica, Aldric esegue.",
+          "with_elira": "Collaborazione accademica. Discutono teoria magica.",
+          "with_durak": "Caelum apprezza il suo silenzio e affidabilità.",
+          "with_mira": "Tensione. Caelum disapprova i suoi metodi 'poco ortodossi'."
+        },
+        "note": "Aggiunto per fornire controllo campo e strategia arcana. Bilanciamento perfetto per team lawful."
       }
     ],
     "strengths": ["Strategia militare impeccabile", "Equipaggiamento superiore", "Esperienza"],
@@ -340,8 +501,8 @@
     "colors": ["Oro", "Rosso", "Nero"],
     "founded": "2 settimane prima delle Prove",
     "totalMembers": 18,
-    "mainTeam": 4,
-    "reserves": 14,
+    "mainTeam": 5,
+    "reserves": 13,
     "headquarters": {
       "location": "Dock Ward",
       "type": "Taverna comprata (The Lucky Shot)",
@@ -401,6 +562,43 @@
         "quote": "Vuoto sussurra.",
         "dmOnly": "Plot hook: potrebbe essere connesso all'entità primordiale",
         "note": "Sembra riconoscere qualcosa in Fealer ('Tu senti disturbo, vero?')"
+      },
+      {
+        "name": "Suri 'Windstep' Moonfall",
+        "role": "Mobile DPS / Healer",
+        "race": "Tabaxi",
+        "class": "Monaco (Way of Mercy) 5",
+        "age": 24,
+        "alignment": "CG",
+        "personality": "Imprevedibile, altruista, parlatore veloce. Ex-membro di un monastero che la trovava 'troppo caotica'. Ama il rischio ma solo se serve ad aiutare qualcuno. Contraddizione vivente: monaco disciplinato + anima da giocatore d'azzardo. Estremamente superstizioso.",
+        "background": "Cresciuta in un monastero della Via della Misericordia nelle montagne. Espulsa (amichevolmente) perché 'portava troppo caos'. Vagò fino a Waterdeep dove Kessa la sfidò a una partita di dadi. Perse tutto, ma Kessa la invitò nella gilda. Ora 'paga il debito' guarendo i compagni.",
+        "appearance": {
+          "fur": "Grigio tigrato con macchie dorate",
+          "eyes": "Ambra brillante",
+          "distinctive": "Indossa bende bianche rituali su mani e avambracci (simbolo Way of Mercy). Porta amuleti portafortuna ovunque.",
+          "clothing": "Robes monastiche strappate e rappezzate, molte tasche con dadi e monete portafortuna"
+        },
+        "weapon": "Pugni + Ki focus (una moneta d'oro di Tymora)",
+        "abilities": {
+          "healing": "Hand of Healing (ki healing touch)",
+          "damage": "Hand of Harm (ki damage touch) + Flurry of Blows",
+          "mobility": "Feline Agility + Unarmored Movement (Speed 45 ft)",
+          "utility": "Medicine proficiency + Physician's Mask (analizza condizioni)"
+        },
+        "role_in_team": "Healer principale (unico nel team), mobile striker, in-and-out combattente. Arriva, guarisce/colpisce, esce. Perfetta per stile caotico della gilda.",
+        "quotes": [
+          "Tymora mi ha salvato oggi... o forse ieri? Bah, dettagli!",
+          "Guarire è un'arte. Combattere è un'arte. Io sono un'artista caotica!",
+          "Il maestro diceva: 'Disciplina porta pace.' Io dico: 'Caos porta vita!'"
+        ],
+        "dynamic": {
+          "with_kessa": "Migliori amiche. Kessa è l'unica che capisce il suo caos.",
+          "with_zax": "Partner in crime. Suri testa i suoi gadget (spesso esplodono).",
+          "with_grom": "Rispetto silenzioso. Suri gli parla comunque non-stop.",
+          "with_whisper": "Confusione. Suri cerca di capirlo, Whisper dice cose criptiche."
+        },
+        "secretGoal": "Vuole provare che il caos può salvare vite meglio della disciplina",
+        "note": "Aggiunta per fornire healing critico mancante. Perfetto contrasto: disciplina monastica + filosofia caotica della gilda."
       }
     ],
     "strengths": ["Audacia estrema", "Creatività tattica", "Fortuna divina"],

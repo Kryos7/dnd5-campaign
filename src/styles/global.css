@@ -90,6 +90,6 @@ html[data-user-role="dm"] .player-specific {
 }
 
 /*CUSTOM*/
-.city-card-astro a{
+.whitetextcolor, .city-card-astro a{
   color: white!important;
 }
