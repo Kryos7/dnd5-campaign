@@ -104,67 +104,69 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <span class="text-6xl font-bold text-gray-600">00</span>
           </div>
           <div class="flex-1">
-            <h3 class="text-2xl font-bold text-yellow-400 mb-2">
-              La Discesa degli Dèi
-            </h3>
-            <span
-              class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
-              >✓ Completata</span
-            >
-          </div>
-          <div class="flex gap-4 text-sm text-gray-400 mb-3">
-            <span>📅 10/01/2026</span>
-            <span>⏱️ 3-4 ore</span>
-            <span>🎭 Introduzione/Setup</span>
-          </div>
-          <p class="text-slate-300 leading-relaxed">
-            Introduzione all'ambientazione, spiegazione del Gioco Divino,
-            presentazione dei personaggi, descrizione delle Prove Divine che
-            hanno determinato la formazione della gilda.
-          </p>
-          <div class="mt-4 flex items-center gap-2 text-purple-400">
-            <span>Leggi il resoconto completo</span>
-            <svg
-              class="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"></path>
-            </svg>
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="text-2xl font-bold text-yellow-400 mb-2">
+                La Discesa degli Dèi
+              </h3>
+              <span
+                class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
+                >✓ Completata</span
+              >
+            </div>
+            <div class="flex gap-4 text-sm text-gray-400 mb-3">
+              <span>📅 10/01/2026</span>
+              <span>⏱️ 3-4 ore</span>
+              <span>🎭 Introduzione/Setup</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Introduzione all'ambientazione, spiegazione del Gioco Divino,
+              presentazione dei personaggi, descrizione delle Prove Divine che
+              hanno determinato la formazione della gilda.
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-purple-400">
+              <span>Leggi il resoconto completo</span>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </a>
     </div>
   </section>
-</MainLayout>
 
-<!-- Placeholder per sessioni future -->
-<section class="mb-12">
-  <h2 class="text-3xl font-bold mb-6 text-gray-500">Prossime Avventure</h2>
-  <div
-    class="bg-slate-800/30 border border-slate-700 rounded-lg p-8 text-center"
-  >
-    <svg
-      class="w-16 h-16 mx-auto mb-4 text-slate-600"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
+  <!-- Placeholder per sessioni future -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold mb-6 text-gray-500">Prossime Avventure</h2>
+    <div
+      class="bg-slate-800/30 border border-slate-700 rounded-lg p-8 text-center"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-      ></path>
-    </svg>
-    <p class="text-xl text-slate-400">
-      Altre avventure verranno aggiunte dopo essere state completate...
-    </p>
-    <p class="text-sm text-slate-500 mt-2">Il viaggio è appena iniziato!</p>
-  </div>
-</section>
+      <svg
+        class="w-16 h-16 mx-auto mb-4 text-slate-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        ></path>
+      </svg>
+      <p class="text-xl text-slate-400">
+        Altre avventure verranno aggiunte dopo essere state completate...
+      </p>
+      <p class="text-sm text-slate-500 mt-2">Il viaggio è appena iniziato!</p>
+    </div>
+  </section>
+</MainLayout>
