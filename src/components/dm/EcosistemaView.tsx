@@ -140,7 +140,7 @@ export default function EcosistemaView() {
       elementi: [
         'Scendere nel canale: Atletica CD 12 per calarsi senza cadere (3m). Fallimento = 1d6 danni contundenti',
         'Nel canale: Fango denso (movimento dimezzato), odore atroce (TS Costituzione CD 10 o svantaggio a Percezione per 10 min)',
-        'Tesoro nascosto: Sul fondo del canale, tra i detriti: Tomo di Mystra #3 semisepolto nel fango (Percezione CD 15 o Investigare CD 13), 18 mo sparse, lanterna rotta ma recuperabile con riparazioni (5 mo valore se riparata)'
+        'Tesoro nascosto: Sul fondo del canale, tra i detriti: Tomo di Mystra #2 semisepolto nel fango (Percezione CD 15 o Investigare CD 13), 18 mo sparse, lanterna rotta ma recuperabile con riparazioni (5 mo valore se riparata)'
       ],
       pericoli: 'Caduta, fango, buio totale',
       cristalli: 'Nessuno',
@@ -156,11 +156,11 @@ export default function EcosistemaView() {
       elementi: [
         'Pericolo - Gas tossico: Muffa nera tossica ricopre gran parte dei detriti. All\'ingresso: TS Costituzione CD 12 o avvelenato per 10 minuti (svantaggio a prove Costituzione e tiri per colpire). Rimanere più di 5 minuti = nuovo TS o prolunga avvelenamento altri 10 min',
         'Instabilità strutturale: Se qualcuno si muove violentemente o sposta casse rumorosamente → TS Destrezza CD 13 o subisce 2d4 danni contundenti da crollo parziale soffitto',
-        'Tesoro tra detriti: Perquisire attentamente (10 min) rivela: 30 mo sparse in vari nascondigli, Set completo di attrezzi da scassinatore in buone condizioni (25 mo valore), 3 razioni secche ancora sigillate (miracolosamente intatte)'
+        'Tesoro tra detriti: Perquisire attentamente (10 min) rivela: 2 Cristalli Minuscoli sparsi in vari nascondigli, Set completo di attrezzi da scassinatore in buone condizioni (25 mo valore), 3 razioni secche ancora sigillate (miracolosamente intatte), Tomo di Mystra #3 nascosto sotto una cassa marcia (Percezione CD 15)'
       ],
       pericoli: 'Gas tossico, crolli, claustrofobia',
-      cristalli: 'Nessuno',
-      favoreDivino: 'Nessuno (ma ricompensa economica buona)',
+      cristalli: '2 Cristalli Minuscoli',
+      favoreDivino: 'Mystra (trovare tomo)',
       noteDM: ['Questa stanza premia la pazienza. Se i PG si affrettano o fanno rumore, attiva il crollo. Gli attrezzi da scasso qui sono molto utili per la Stanza 14.']
     },
     {
@@ -174,7 +174,7 @@ export default function EcosistemaView() {
         'Tana del verme: Dopo aver sconfitto la creatura, i PG possono ispezionare la breccia. Piccola camera naturale (3x3m) piena di resti organici. Tra i resti: 35 mo, 2 gemme (ametista 10 mo, quarzo rosa 8 mo), Armatura di cuoio in discrete condizioni (equipaggiamento standard), Spada corta con impugnatura decorata (non magica, vendibile 12 mo)'
       ],
       pericoli: 'Carrion Crawler (tentacoli paralizzanti!)',
-      cristalli: '2 cristalli piccoli',
+      cristalli: '2 Cristalli Piccoli',
       favoreDivino: 'Tempus (sconfiggere il verme)',
       noteDM: [
         'Questo è il combattimento "boss" del piano. Il Carrion Crawler è pericoloso per PG livello 3. Se un PG viene paralizzato, il verme prova a trascinarlo nella tana. Crea tensione!'
@@ -196,13 +196,13 @@ export default function EcosistemaView() {
       dimensioni: 'Camera a L con soffitto 5m',
       descrizione: 'Imponente camera a L con soffitto a volta che raggiunge i 5 metri. Otto colonne di pietra scolpita disposte in cerchio sostengono l\'intera struttura. Al centro, un\'antica fontana prosciugata con statua corrosa e irriconoscibile (forse una divinità?). L\'acqua gocciola dalle pareti creando echi melodici. Muschio bioluminescente sulle colonne fornisce luce fioca ma sufficiente.',
       elementi: [
-        'Fontana centrale: Ispezionare CD 14 rivela sul fondo della vasca: Aprendo tutti e 4 i rubinetti l\'altare si alza rivelando il Tomo di Mystra #5, 25 mo sparse tra foglie marce e detriti, Piccola gemma azzurrina (15 mo)',
+        'Fontana centrale: Ispezionare CD 14 rivela sul fondo della vasca: Aprendo tutti e 4 i rubinetti l\'altare si alza rivelando il Tomo di Mystra #4, 2 Cristalli Minuscoli tra foglie marce e detriti, Piccola gemma azzurrina (15 mo)',
         'Atmosfera: Area relativamente "tranquilla" - i PG possono fare breve respiro prima delle ultime sfide',
         'Due porte visibili: a Ovest (Corridoio 7, da dove sono arrivati) e a Nord (porta verso area successiva)'
       ],
       pericoli: 'Nessuno',
-      cristalli: 'Nessuno',
-      favoreDivino: 'Mystra (ultimo tomo del piano)',
+      cristalli: '2 Cristalli Minuscoli',
+      favoreDivino: 'Mystra (trovare tomo)',
       noteDM: ['Questa è una buona posizione per un breve riposo se necessario. Permetti ai giocatori di rifiatare, contare risorse, e prepararsi per il finale.']
     },
     {
@@ -213,12 +213,12 @@ export default function EcosistemaView() {
       descrizione: 'Ampia camera aperta dominata da una grande vasca d\'acqua verdastra e fumante (3m profondità, occupa circa 60% della stanza). Il liquido emette vapori tossici visibili. Le pareti sono ricoperte di stalattiti che gocciolano continuamente nella vasca. L\'uscita è chiaramente visibile sul lato opposto - la stanza può essere aggirata lungo i bordi, anche se lo spazio è stretto (1m circa).',
       elementi: [
         'Acqua tossica: Vapori (TS Costituzione CD 11 ogni minuto in stanza o 1d4 danni da veleno), Contatto diretto (1d6 danni necrotici per round), Immersione completa (2d6 danni necrotici per round)',
-        'OPZIONE 1 - Baule Sommerso: Sul fondo della vasca (Percezione CD 13 dall\'alto con luce), tra le giganti tubature, si intravede un vecchio baule. Recuperarlo richiede: Immergersi completamente (2d6 danni/round) e trattenere fiato, Atletica CD 15 per staccarlo dal fondo e riportarlo su (2 round minimi = 4d6 danni garantiti). Contenuto: 50 mo, 3 gemme (20, 15, 10 mo), Tomo di Mystra #6, 2x Pozione di guarigione (2d4+2)',
+        'OPZIONE 1 - Baule Sommerso: Sul fondo della vasca (Percezione CD 13 dall\'alto con luce), tra le giganti tubature, si intravede un vecchio baule. Recuperarlo richiede: Immergersi completamente (2d6 danni/round) e trattenere fiato, Atletica CD 15 per staccarlo dal fondo e riportarlo su (2 round minimi = 4d6 danni garantiti). Contenuto: 1 Cristallo Piccolo, 3 gemme (20, 15, 10 mo), Tomo di Mystra #5, 2x Pozione di guarigione (2d4+2)',
         'OPZIONE 2 - Ingredienti Alchemici: Lungo i bordi della vasca crescono funghi alchemici rari color porpora (Natura o Alchimia CD 14 per riconoscerli). Raccoglierne con successo (Destrezza CD 12, serve kit alchemico o coltello) = 1d4 dosi. Valore: 20 mo a dose se venduti. Rischio: Fallimento CD significa cadere in acqua (1d6 danni necrotici)'
       ],
       pericoli: 'Vapori tossici, acqua altamente corrosiva',
-      cristalli: 'Nessuno',
-      favoreDivino: 'Tymora (recuperare baule O raccogliere funghi senza subire danni)',
+      cristalli: '1 Cristallo Piccolo (dal baule)',
+      favoreDivino: 'Tymora (recuperare baule o raccogliere funghi senza subire danni), Mystra (trovare tomo)',
       noteDM: ['Questa stanza è completamente opzionale - i PG possono aggirarla. È una "trappola per avidi" - le ricompense sono buone ma il rischio è alto. Se un PG muore qui, è stata loro scelta.']
     },
     {
@@ -231,10 +231,10 @@ export default function EcosistemaView() {
         'Funghi tossici: Camminare tra i funghi disturba le spore. TS Costituzione CD 11 ogni 2 round passati nella stanza o subire 1d4 danni da veleno. Coprirsi naso/bocca con tessuto concede vantaggio al TS',
         'Combattimento (opzionale): Se i PG entrano rumorosamente O toccano il nido centrale O falliscono Furtività gruppo CD 14 → Escono 1 Swarm of Rats + 3 Giant Rats che attaccano ferocemente',
         'Evitare combattimento: Muoversi silenziosamente lungo i bordi (Furtività gruppo CD 14) permette di attraversare senza disturbare i ratti',
-        'Tesoro nel nido: Se perquisito (richiede disturbare i ratti se non già combattuto): 38 mo, Osso intagliato con simboli tribali (curiosità, vendibile 5 mo a collezionista), Tomo di Mystra #4 semisepolto sotto ossa, Anello d\'argento semplice (10 mo)'
+        'Tesoro nel nido: Se perquisito (richiede disturbare i ratti se non già combattuto): 2 Cristalli Minuscoli, Osso intagliato con simboli tribali (curiosità, vendibile 5 mo a collezionista), Tomo di Mystra #6 semisepolto sotto ossa, Anello d\'argento semplice (10 mo)'
       ],
       pericoli: 'Funghi tossici, sciame + topi giganti',
-      cristalli: '18 Cristalli Minuscoli (8 sciame + 10 dai topi, se combattono)',
+      cristalli: '20 Cristalli Minuscoli (8 sciame + 10 dai topi, se combattono)',
       favoreDivino: 'Tempus (sconfiggere tutti i nemici), Tymora (passare senza combattere E senza subire danni da funghi), Mystra (recuperare tomo)',
       noteDM: ['Questa è una vera scelta tattica - combattere per i cristalli (Tempus) o essere furtivi (Tymora)? Entrambe sono strategie valide. Se evitano il combattimento ma poi tornano per il tomo, i ratti attaccano comunque.']
     },
@@ -250,36 +250,37 @@ export default function EcosistemaView() {
         'Regola fondamentale: 2 leve dicono SEMPRE la verità, 2 leve mentono SEMPRE. Le leve devono essere tirate in un ordine specifico. Tirare una leva nell\'ordine sbagliato = errore (con conseguenze)',
         'Sistema di errori progressivi: 1° ERRORE → acqua 10cm/minuto (~40 min totali). 2° ERRORE → acqua 30cm/minuto (~13 min). 3° ERRORE → acqua 60cm/minuto (~6-7 min). 4° ERRORE → acqua 120cm/minuto (~3 min)',
         'SOLUZIONE: Ordine corretto = III → II → I → IV',
-        'Camera del tesoro (se risolvono): Quando le 4 leve vengono tirate nell\'ordine corretto, l\'acqua che gocciola si ferma, la griglia si sblocca e scivola lateralmente. Scala a pioli di ferro scende nella camera sottostante (3x3m, profondità 3m). Tesori: Tomo di Mystra posato su piedistallo, 45 mo in monete antiche, Chiave di Ferro Nero (15cm, apre Magazzino Sigillato nel Piano 2), Pozione di Guarigione Maggiore (4d4+4), Nota antica su pergamena.'
+        'Camera del tesoro (se risolvono): Quando le 4 leve vengono tirate nell\'ordine corretto, l\'acqua che gocciola si ferma, la griglia si sblocca e scivola lateralmente. Scala a pioli di ferro scende nella camera sottostante (3x3m, profondità 3m). Tesori: Tomo di Mystra #7, posato su piedistallo, 1 Cristallo Piccolo, Chiave di Ferro Nero (15cm, apre Magazzino Sigillato nel Piano 2), Pozione di Guarigione Maggiore (4d4+4), Nota antica su pergamena.'
       ],
       pericoli: 'Trappola con timer (acqua che sale)',
-      cristalli: 'Nessuno',
+      cristalli: '1 Cristallo Piccolo',
       favoreDivino: 'Mystra (risolvere l\'enigma = raccogliere Tomo), Tymora (risolvere senza errori = +15%)',
       tentativoForza: `**Tentativo di sfondare la porta (forza bruta):**
 
-La porta di pietra massiccia è incredibilmente resistente e praticamente impossibile da sfondare senza soluzioni magiche potenti.
+            La porta di pietra massiccia è incredibilmente resistente e praticamente impossibile da sfondare senza soluzioni magiche potenti.
 
-**Statistiche della porta:**
-• AC: 18
-• Punti Ferita: 70 HP
-• Soglia di Danno: 15 (qualsiasi danno inferiore a 15 viene ignorato completamente)
-• Immunità: Veleno, Psichico
+            **Statistiche della porta:**
+            • AC: 18
+            • Punti Ferita: 70 HP
+            • Soglia di Danno: 15 (qualsiasi danno inferiore a 15 viene ignorato completamente)
+            • Immunità: Veleno, Psichico
 
-**Prova di Forza (Atletica):**
-• CD 27-30 per sfondare con forza bruta
-• Richiede almeno 3 turni di tentativi consecutivi anche in caso di successo
-• Ogni tentativo fallito aumenta la CD di +2 (affaticamento/struttura che si compatta)
+            **Prova di Forza (Atletica):**
+            • CD 27-30 per sfondare con forza bruta
+            • Richiede almeno 3 turni di tentativi consecutivi anche in caso di successo
+            • Ogni tentativo fallito aumenta la CD di +2 (affaticamento/struttura che si compatta)
 
-**Conseguenze del tentativo:**
-• Rumore assordante: Ogni tentativo attira 1d4 creature dalle zone adiacenti (automatico, nessun tiro Furtività possibile)
-• Danno di contraccolpo: Chi tenta subisce 1d6 danni contundenti per il rinculo
-• Tempo: Ogni tentativo richiede 1 turno completo (6 secondi), durante i quali l'acqua continua a salire
+            **Conseguenze del tentativo:**
+            • Rumore assordante: Ogni tentativo attira 1d4 creature dalle zone adiacenti (automatico, nessun tiro Furtività possibile)
+            • Danno di contraccolpo: Chi tenta subisce 1d6 danni contundenti per il rinculo
+            • Tempo: Ogni tentativo richiede 1 turno completo (6 secondi), durante i quali l'acqua continua a salire
 
-**Alternative magiche:**
-• Disintegrate: Funziona normalmente (distrugge una sezione 3x3m)
-• Passwall: Funziona (crea passaggio temporaneo)
-• Shatter: CD TS della porta 10, se fallisce subisce 3d8 danni sonori (probabilmente sotto soglia)
-• Earthquake: Potrebbe funzionare ma rischia di far collassare l'intera zona`,
+            **Alternative magiche:**
+            • Disintegrate: Funziona normalmente (distrugge una sezione 3x3m)
+            • Passwall: Funziona (crea passaggio temporaneo)
+            • Shatter: CD TS della porta 10, se fallisce subisce 3d8 danni sonori (probabilmente sotto soglia)
+            • Earthquake: Potrebbe funzionare ma rischia di far collassare l'intera zona`,
+
       noteDM: [
         'Questa è la stanza più difficile del Piano 1. È completamente opzionale. Premia giocatori intelligenti e pazienti. Punisce tentativi casuali (acqua sale). Non può essere "brute forced" facilmente.',
         'Tieni traccia del tempo reale E del tempo in-game. Descrivi l\'acqua che sale frequentemente per creare tensione. Non essere crudele - se stanno per affogare, lascia un ultimo tentativo di fuga.',
@@ -295,11 +296,11 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
       descrizione: 'Una camera laterale aperta ricavata da uno slargo tra le mura e i canali. All\'interno, un piccolo accampamento: due tende di tela scura, casse impilate, barili, un braciere con braci ancora calde. Odore di cibo recente e fumo. Due sentinelle sorvegliano l\'accesso al livello inferiore: sono vigili e armate, chiaramente membri di un\'organizzazione di contrabbandieri.',
       elementi: [
         'Combattimento: 2 Bandit (MM pg 343) - Sono in allerta ed ostili appena vengono notati o riescono a fare una imboscata. Se i PG tentano la furtività (gruppo, CD 15) o diplomazia convincente (Persuasione CD 16), possono ritardare il combattimento. Altrimenti attaccano a vista. IMPORTANTE: I banditi hanno la Chiave del Cancello (Stanza 14) addosso (uno dei due)',
-        'Accampamento: Perquisire dopo il combattimento rivela: 22 mo in una borsa, 2 razioni da viaggio fresche, 2 spade corte (equipaggiamento standard), Set di dadi truccati (vendibili 3 mo come curiosità)',
-        'SEGRETO: Dietro una delle casse (Investigare CD 15), pannello di legno nasconde una piccola nicchia con: Tomo di Mystra #2, Pozione di guarigione (2d4+2), 15 mo in monete antiche'
+        'Accampamento: Perquisire dopo il combattimento rivela: 2 razioni da viaggio fresche, 2 spade corte (equipaggiamento standard), Set di dadi truccati (vendibili 3 mo come curiosità)',
+        'SEGRETO: Dietro una delle casse (Investigare CD 15), pannello di legno nasconde una piccola nicchia con: Pozione di guarigione (2d4+2), 1 Cristallo Minuscolo'
       ],
       pericoli: '2 Banditi',
-      cristalli: '2 cristalli piccoli (1 per bandito)',
+      cristalli: '7 Cristalli Minuscoli (2 per bandito)',
       favoreDivino: 'Tempus (sconfiggere banditi), Tymora (trovare segreto)',
       noteDM: ['Questa è una stanza chiave - i PG DEVONO ottenere la chiave per procedere. Se evitano il combattimento con successo, fai in modo che possano comunque ottenere la chiave (rubandola mentre i banditi dormono, barattando, ecc.)']
     },
@@ -312,10 +313,10 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
       elementi: [
         'Funghi Urlanti Tossici: Disturbare l\'acqua (camminare) o toccare i funghi gialli scatena rilascio di spore (TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno) + Suono stridulo',
         'Violet Fungus MUTATO nascosto: Percezione CD 16 o Natura CD 14 per riconoscerlo PRIMA che attacchi. Attacca con tentacoli velenosi quando un PG arriva entro 4.5m. Questo NON è un Violet Fungus standard - è MUTATO e molto più pericoloso (Grande, 52 PF, vulnerabile a fuoco, aura tossica, rigenerazione). Vedi scheda mostro completa per dettagli tattici.',
-        'Casse galleggianti: 5 casse. Aprirle silenziosamente (Furtività CD 14) evita di disturbare i funghi gialli. Contenuto totale: 28 mo, 2 razioni rovinate, 1 razione sigillata, Boccetta di Antitossina (50 mo), Piccolo kit di pronto soccorso (5 usi, vantaggio a Medicina)'
+        'Casse galleggianti: 5 casse. Aprirle silenziosamente (Furtività CD 14) evita di disturbare i funghi gialli. Contenuto totale: 2 Cristalli Minuscoli, 2 razioni rovinate, 1 razione sigillata, Boccetta di Antitossina (50 mo), Piccolo kit di pronto soccorso (5 usi, vantaggio a Medicina)'
       ],
       pericoli: 'Funghi tossici, Violet Fungus MUTATO (GS 2, molto pericoloso!), possibile allerta',
-      cristalli: '20 cristalli (dal Violet Fungus Mutato quando sconfitto)',
+      cristalli: '3 Cristalli Piccoli (dal Violet Fungus Mutato quando sconfitto)',
       favoreDivino: 'Tempus (sconfiggere il Violet Fungus Mutato = ~25% cristalli totali Piano 1), Tymora (recuperare tutte le casse senza attivare funghi gialli E senza combattere = 15%)',
       noteDM: ['Questa stanza è completamente opzionale. È una "trappola per avidi". ATTENZIONE: il Violet Fungus è MUTATO e molto più pericoloso di uno standard! Vedi scheda completa del mostro per statistiche, abilità speciali, e tattiche di combattimento dettagliate. L\'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive - e per questo combattimento stesso!'],
       immagineMostro: {
@@ -345,17 +346,18 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
 
   const riepilogoRisorse = {
     tomiMystra: {
-      totale: 5,
-      peso: '2.5 kg ciascuno (12.5 kg totali)',
-      favorePerTomo: '20% (100% se tutti trovati)',
+      totale: 7,
+      peso: '2.5 kg ciascuno (17.5 kg totali)',
+      favorePerTomo: '14% (100% se tutti trovati)',
       locazioni: [
         'Stanza 1 - Pozzanghera iniziale (Percezione CD 14)',
-        'Stanza 12 - Nicchia segreta accampamento banditi (Investigare CD 15)',
-        'Stanza 3S - Canale ostruito, nel fango (Percezione CD 15)',
-        'Stanza 5S - Nido dei ratti, sotto ossa',
-        'Stanza 6 - Fontana sala delle colonne (Ispezionare CD 14)'
+        'Stanza 5 - Canale ostruito, nel fango (Percezione CD 15)',
+        'Stanza 6 - Deposito Marcio, tra detriti (Percezione CD 15)',
+        'Stanza 8 - Sala delle Colonne, sotto fontana (Ispezionare CD 14)',
+        'Stanza 9 - Vasca Tossica, nel baule sommerso (Percezione CD 13)',
+        'Stanza 10 - Nido dei ratti, sotto ossa (Perquisire CD 15)',
+        'Stanza 11 - Fontana sala delle colonne (Ispezionare CD 14)'
       ],
-      bonus: 'Libro antico di preghiere (Stanza 9, opzionale) = +5% Favore Mystra se trattato con rispetto'
     },
     cristalli: {
       totale: 81,
@@ -422,10 +424,9 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
     },
     mystra: {
       metodo: 'Sistema semplice basato su tomi',
-      perTomo: '20% Favore',
-      totale: '5 tomi disponibili = 100% possibile',
-      bonus: 'Libro antico (Stanza 9) trattato con rispetto = +5% extra (totale 105% max)',
-      peso: 'Ogni tomo pesa 2.5 kg - 5 tomi = 12.5 kg totali (ingombrante!)'
+      perTomo: '14% Favore',
+      totale: '7 tomi disponibili = 100% possibile',
+      peso: 'Ogni tomo pesa 2.5 kg - 7 tomi = 17.5 kg totali (ingombrante!)'
     }
   };
 
@@ -722,7 +723,6 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
                   <li key={i} className="text-slate-300">• {loc}</li>
                 ))}
               </ul>
-              <p className="text-emerald-400 text-sm mt-3">✨ {riepilogoRisorse.tomiMystra.bonus}</p>
             </div>
           </div>
 
@@ -900,7 +900,6 @@ La porta di pietra massiccia è incredibilmente resistente e praticamente imposs
             <div className="bg-slate-700 rounded p-4">
               <p className="text-slate-300 text-sm mb-2">{favoreDivino.mystra.metodo}</p>
               <p className="text-blue-400 font-semibold text-sm">{favoreDivino.mystra.totale}</p>
-              <p className="text-yellow-400 text-sm mt-2">{favoreDivino.mystra.bonus}</p>
               <p className="text-orange-400 text-sm mt-2">⚠️ {favoreDivino.mystra.peso}</p>
             </div>
           </div>

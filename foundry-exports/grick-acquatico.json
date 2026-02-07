@@ -1,0 +1,254 @@
+{
+  "name": "Grick Acquatico",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"Predatore Tentacolato delle Fogne\"</strong></p><p>Questo Grick si è adattato a vivere nelle acque stagnanti delle fogne superiori. A differenza dei suoi cugini che preferiscono caverne asciutte, questa variante ha sviluppato capacità anfibie e tattiche di caccia subacquee. Si nasconde nell'acqua torbida della camera allagata, emergendo solo per colpire con i suoi quattro tentacoli affilati come rasoi.</p><h3>Aspetto</h3><ul><li><strong>Corpo:</strong> Cilindrico vermiforme, 1.2m diametro x 2.5m lunghezza</li><li><strong>Pelle:</strong> Grigio-verde viscida, ricoperta di alghe e melma (mimetismo perfetto in acqua sporca)</li><li><strong>Tentacoli:</strong> 4 appendici tentacolate che spuntano dalla \"testa\", ognuna lunga 3m, con punte affilate color pietra</li><li><strong>Becco:</strong> Nascosto al centro dei tentacoli, simile a quello di un calamaro ma osseo e affilato</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Superiori",
+    "details": {
+      "biography": {
+        "value": "<h2>Zona 4 - La Camera Allagata | Party livello 5</h2><p>Il Grick è sommerso al centro della camera, vicino al pilastro crollato. Sembra un cumulo di alghe e detriti (Percezione CD 16). Ossa rosicchiate sparse in giro (ratti, qualche goblin). Solchi viscidi sui muri dove si è arrampicato.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "monstrosity",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Mostruosità"
+      },
+      "environment": "Fogne, Sotterranei acquatici",
+      "cr": 2,
+      "spellLevel": 0,
+      "xp": {
+        "value": 450
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 14,
+        "calc": "natural",
+        "formula": "",
+        "label": "Pelle naturale"
+      },
+      "hp": {
+        "value": 27,
+        "max": 27,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "6d8"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 30,
+        "fly": 0,
+        "swim": 30,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Percepisce movimento nell'acqua entro 9m"
+      }
+    },
+    "abilities": {
+      "str": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 11, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 3, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 5, "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": [], "bypasses": [], "custom": "" },
+      "dr": {
+        "value": ["bludgeoning", "piercing", "slashing"],
+        "bypasses": ["mgc"],
+        "custom": "Contundenti, perforanti e taglienti da attacchi non magici"
+      },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": [], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Resistenza alla Pietra",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La pelle del Grick ha una consistenza gommosa ma incredibilmente resistente, simile alla pietra.</p><ul><li><strong>Resistenza</strong> ai danni contundenti, perforanti e taglienti da attacchi non magici</li><li>Le armi normali infliggono metà danno</li><li>Armi magiche (+1, +2, ecc.) funzionano normalmente</li><li>Incantesimi che richiedono un tiro per colpire o TS funzionano normalmente</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Predatore Anfibio",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Grick Acquatico si è adattato perfettamente all'ambiente delle fogne allagate.</p><ul><li>Può respirare sia aria che acqua</li><li>Velocità di nuoto 9m (uguale alla velocità terrestre)</li><li>Può scalare pareti e soffitto a 9m (lascia scia viscida)</li><li><strong>Vantaggio</strong> alle prove di Furtività quando completamente sommerso in acqua torbida</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Senso delle Vibrazioni",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Grick percepisce le prede attraverso vibrazioni nell'acqua e nell'aria.</p><ul><li>Scurovisione 18m (vede normalmente al buio)</li><li>Percepisce movimento nell'acqua entro 9m anche se la creatura è invisibile</li><li><strong>Svantaggio</strong> agli attacchi contro creature volanti o levitanti (fuori dal suo elemento)</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Mimetismo Acquatico",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Quando sommerso in acqua torbida o sporca, il Grick è quasi invisibile.</p><p><strong>Effetto:</strong> Creatura completamente sommersa in acqua stagnante:</p><ul><li><strong>Percezione CD 16</strong> per individuarlo se è immobile</li><li><strong>Percezione CD 14</strong> se si sta muovendo lentamente</li><li><strong>Vantaggio</strong> ai tiri di iniziativa se attacca da nascosto</li></ul><p><em>Quando il Grick attacca, la sua posizione diventa ovvia (emerge parzialmente, tentacoli visibili).</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Multiattacco",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Grick effettua <strong>un attacco con Tentacoli</strong> e <strong>un attacco con Becco</strong>.</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Tentacoli",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +4 al colpire, portata 3m, una creatura.</p><p><strong>Colpito:</strong> 9 (2d6+2) danni taglienti.</p><p><em>I tentacoli frustano l'aria con velocità sorprendente, tagliando come lame di pietra affilata.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "4",
+        "damage": {
+          "parts": [["2d6 + 2", "slashing"]],
+          "versatile": ""
+        },
+        "range": { "value": 10, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Becco",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +4 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong> 5 (1d6+2) danni perforanti.</p><p><em>Se la creatura è stata colpita dai Tentacoli nello stesso turno, il Grick tenta di avvicinarla al becco per un morso devastante.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "4",
+        "damage": {
+          "parts": [["1d6 + 2", "piercing"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Immersione Rapida",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Bonus.</strong> Il Grick può immergersi completamente nell'acqua.</p><p><strong>Effetto:</strong> Fino all'inizio del suo prossimo turno:</p><ul><li>Il Grick ha <strong>copertura totale</strong> contro attacchi a distanza</li><li>Gli attaccanti in mischia devono superare <strong>Percezione CD 14</strong> per individuarlo nell'acqua torbida o hanno <strong>svantaggio</strong> agli attacchi</li><li>Si muove sotto l'acqua fino a metà della sua velocità di nuoto (4,5m) senza provocare attacchi di opportunità</li></ul><p><strong>Limitazione:</strong> Può usare questa abilità solo se è in acqua profonda almeno 60cm.</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Acqua profonda almeno 60cm"
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/grick-acquatico.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": 15,
+    "location": "Zona 4 - La Camera Allagata",
+    "partyLevel": 5,
+    "tactics": {
+      "preparazione": "Il Grick è completamente sommerso al centro della camera, immobile. Sembra un cumulo di detriti o alghe (Percezione CD 16). Attende che una creatura entri nell'acqua entro 3m da lui. Iniziativa con vantaggio se attacca di sorpresa.",
+      "round1": "Emerge violentemente dall'acqua accanto alla preda più vicina. Multiattacco: Tentacoli + Becco contro stesso bersaglio. Priorità: PG isolato, in acqua, apparentemente più debole (caster, arciere).",
+      "round2_3": "Focus fuoco: Continua ad attaccare lo stesso bersaglio finché non cade. Usa l'acqua: Alterna emersione (attacco) e immersione (difesa/movimento).",
+      "round4_plus": "Adatta la tattica. Se il party è fuori dall'acqua: emerge e attacca chi è più vicino, poi si rituffa. Può arrampicarsi sul soffitto per attaccare da posizioni inaspettate.",
+      "fuga": "Se scende sotto 8 PF (circa 30%): Si immerge e fugge verso la grata nord. Potrebbe tornare dopo 1d4 ore."
+    },
+    "dmNotes": {
+      "bilanciamento": {
+        "troppoFacile": "Aumenta i PF a 35 (8d8) o aggiungi un secondo Grick giovane (15 PF, stesso statblock ma -1 ai danni)",
+        "troppoDifficile": "Riduci i PF a 22 (5d8) o il Grick fugge a 12 PF invece di 8"
+      },
+      "descrizioneIniziale": "La camera è allagata, l'acqua torbida arriva alle ginocchia e odora di muffa e decomposizione. Un pilastro di pietra crollato emerge dall'acqua al centro, ricoperto di alghe verdastre. Lungo le pareti notate strani solchi viscidi che salgono verso il soffitto. Sparse nell'acqua galleggiano ossa rosicchiate. L'acqua è stranamente immobile, quasi... in attesa.",
+      "percezioneRiuscita": "Qualcosa nell'acqua vicino al pilastro non sembra... naturale. Quella non è solo un cumulo di alghe - c'è una forma sotto, qualcosa di grosso.",
+      "interpretazione": "Si muove con movimenti sinuosi e fluidi, quasi ipnotici. Emette clic e schiocchi con il becco quando emerge. Sibila quando ferito gravemente. I tentacoli frustano l'aria indipendentemente dal corpo. Odore: Muffa, pesce marcio, acqua stagnante."
+    },
+    "favoreDivino": {
+      "tempus": {
+        "nessunKO": "+10 Favore",
+        "menoRound": "+5 Favore (sconfitto in meno di 4 round)",
+        "usoTerreno": "+5 Favore (a discrezione DM)"
+      },
+      "mystra": {
+        "incantesimi": "+10 Favore (uso efficace di incantesimi per bypassare la resistenza)",
+        "magicWeapon": "+5 Favore (utilizzo di Magic Weapon o buff tattici)",
+        "studio": "+5 Favore (studio della creatura prima o dopo il combattimento)"
+      },
+      "tymora": {
+        "sorpresa": "+10 Favore (attacco di sorpresa riuscito contro il Grick)",
+        "manovraRischiosa": "+5 Favore (manovra rischiosa ma riuscita)",
+        "critico": "+5 Favore (critico decisivo che uccide il Grick)"
+      }
+    }
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "name": "Carrion Crawler - Boss del Piano 1",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"Il Signore del Corridoio\"</strong></p><p>Questo Carrion Crawler si è stabilito nelle profondità delle fogne da diverse settimane, trasformando un corridoio abbandonato nella sua tana personale. A differenza dei suoi simili più piccoli, questo esemplare è cresciuto nutrendosi di contrabbandieri smarriti e ratti giganti, diventando più grande, aggressivo e territoriale. I suoi otto tentacoli paralizzanti e il becco affilato come una lama lo rendono il predatore supremo di questo livello.</p><h3>Aspetto</h3><ul><li><strong>Corpo:</strong> Cilindrico vermiforme, 1.5m diametro × 3m lunghezza, massa muscolare impressionante</li><li><strong>Pelle:</strong> Grigio-pallida e coriacea, con placche indurite simili a chitina lungo il dorso</li><li><strong>Tentacoli:</strong> 8 appendici tentacolate che spuntano dalla \"testa\", ognuna lunga 3m, con punte affilate nere che secernono veleno</li><li><strong>Becco:</strong> Nascosto al centro dei tentacoli, simile a quello di un insetto gigante ma osseo e tagliente</li><li><strong>Movimento:</strong> Sinuoso e strisciante, lascia scia viscida; scatti rapidi quando attacca</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Superiori",
+    "details": {
+      "biography": {
+        "value": "<h2>Zona 7 - Il Corridoio del Verme | CR 3 | Party livello 5</h2><p>Nascosto nella breccia del muro destro (a metà corridoio, 10m dall'ingresso). Si muove al rumore dei PG che si avvicinano. Emerge quando il primo PG raggiunge metà corridoio.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "monstrosity",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Mostruosità"
+      },
+      "environment": "Fogne, Sotterranei",
+      "cr": 3,
+      "spellLevel": 0,
+      "xp": {
+        "value": 700
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 15,
+        "calc": "natural",
+        "formula": "",
+        "label": "Armatura naturale indurita"
+      },
+      "hp": {
+        "value": 82,
+        "max": 82,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "11d10+22"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 30,
+        "fly": 0,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 60,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 60 ft"
+      }
+    },
+    "abilities": {
+      "str": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 13, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 12, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 5, "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "skills": {
+      "prc": { "value": 1, "ability": "wis", "bonuses": { "check": "", "passive": "" } },
+      "ste": { "value": 1, "ability": "dex", "bonuses": { "check": "", "passive": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": [], "bypasses": [], "custom": "" },
+      "dr": { "value": [], "bypasses": [], "custom": "" },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": [], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 35, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Vista Cieca (18m)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il carrion crawler percepisce l'ambiente circostante attraverso vibrazioni e olfatto entro 18m.</p><ul><li>È <strong>cieco</strong> oltre questa distanza</li><li>Non è ingannato da invisibilità o oscurità magica entro 18m</li><li>Percepisce movimento anche attraverso pareti sottili</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Olfatto Acuto",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il carrion crawler ha <strong>vantaggio</strong> alle prove di Saggezza (Percezione) che si basano sull'olfatto.</p><ul><li>Può tracciare creature ferite seguendo l'odore del sangue</li><li>Identifica prede nascoste attraverso l'olfatto</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Scalatore Esperto",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il carrion crawler si muove con agilità su qualsiasi superficie.</p><ul><li>Ignora terreno difficile quando scala</li><li>La sua velocità di scalata non è dimezzata su superfici verticali o capovolte</li><li>Può attaccare normalmente mentre si arrampica</li><li>Lascia scia viscida che rende le superfici scivolose (Atletica CD 12 per scalare dove è passato)</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Veleno Paralizzante Potenziato",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il veleno dei tentacoli è più potente della norma, rafforzato da anni di caccia.</p><p><strong>Effetto:</strong> Quando una creatura fallisce il TS Costituzione contro la paralisi dei tentacoli:</p><ul><li>Ha <strong>svantaggio al primo TS di recupero</strong> (alla fine del suo primo turno)</li><li>Questo rende più difficile liberarsi rapidamente dalla paralisi</li><li>Probabilità di restare paralizzato almeno 2 round: ~75%</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Aura Nauseabonda",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>L'odore di carne marcia che emana dal verme è pervasivo e nauseabondo.</p><p><strong>Effetto:</strong> Le creature che iniziano il loro turno entro <strong>3m</strong> dal carrion crawler:</p><ul><li>Devono superare un <strong>TS Costituzione CD 11</strong></li><li><strong>Fallimento:</strong> Svantaggio alle prove di Percezione per 1 minuto (nausea)</li><li><strong>Successo:</strong> Immune per 24 ore</li></ul><p><em>L'odore rende difficile concentrarsi e può rivelare la posizione del verme prima di vederlo.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "",
+        "save": { "ability": "con", "dc": 11, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Multiattacco",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Carrion Crawler effettua <strong>due attacchi con Tentacoli</strong> e <strong>un attacco con Morso</strong>.</p><p><em>Può dividere gli attacchi tra bersagli diversi o concentrarli su uno solo.</em></p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Tentacoli",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +6 al colpire, portata 3m, un bersaglio.</p><p><strong>Colpito:</strong> 8 (2d4+3) danni perforanti.</p><p>Il bersaglio deve superare un <strong>TS Costituzione CD 14</strong> o essere <strong>paralizzato</strong> per 1 minuto.</p><h4>Effetto Paralisi:</h4><ul><li>Il bersaglio è incapacitato e non può muoversi o parlare</li><li>Automaticamente fallisce TS su Forza e Destrezza</li><li>Gli attacchi contro di lui hanno vantaggio</li><li>Attacchi da mischia entro 1,5m sono colpi critici automatici</li><li>Può ripetere il TS alla fine di ciascuno dei suoi turni</li><li><strong>Svantaggio</strong> al primo TS (Veleno Paralizzante Potenziato)</li></ul>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "6",
+        "damage": {
+          "parts": [["2d4 + 3", "piercing"]],
+          "versatile": ""
+        },
+        "range": { "value": 10, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" },
+        "save": { "ability": "con", "dc": 14, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Morso Feroce",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +6 al colpire, portata 1,5m, un bersaglio.</p><p><strong>Colpito:</strong> 10 (2d6+3) danni perforanti.</p><h4>Effetto Speciale - Morso Devastante:</h4><p>Se il bersaglio è <strong>paralizzato</strong> o <strong>prono</strong>:</p><ul><li>Il morso infligge <strong>7 (2d6)</strong> danni perforanti aggiuntivi</li><li><strong>Danno totale:</strong> 17 (4d6+3) contro bersagli indifesi</li></ul><p><em>Il becco affilato strappa carne e ossa con facilità, devastante contro prede paralizzate.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "6",
+        "damage": {
+          "parts": [["2d6 + 3", "piercing"]],
+          "versatile": "4d6 + 3"
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Trascinamento Aggressivo",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Bonus.</strong></p><p><strong>Trigger:</strong> Se il Carrion Crawler ha colpito una creatura <strong>paralizzata</strong> con i Tentacoli durante questo turno.</p><p><strong>Effetto:</strong> Può usare l'azione bonus per trascinarla fino a <strong>4,5m</strong> verso la sua tana (la breccia nel muro).</p><p>La creatura trascinata può effettuare un <strong>TS Forza CD 14</strong> per resistere.</p><ul><li><strong>Fallimento:</strong> Viene trascinata e si ritrova prona</li><li><strong>Successo:</strong> Resiste al trascinamento</li><li><strong>Nota:</strong> Le creature paralizzate hanno svantaggio al TS Forza</li></ul><p><em>\"Il verme sta trascinando il chierico verso la breccia oscura!\" - Crea tensione drammatica e separa il party.</em></p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Ha colpito una creatura paralizzata con Tentacoli questo turno",
+        "save": { "ability": "str", "dc": 14, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Affondo Difensivo",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reazione (1/combattimento).</strong></p><p><strong>Trigger:</strong> Quando il Carrion Crawler viene colpito da un attacco in mischia.</p><p><strong>Effetto:</strong> Può usare la sua reazione per effettuare immediatamente un attacco con Morso contro l'attaccante.</p><ul><li>L'attacco si risolve prima di applicare i danni dell'attacco che ha scatenato la reazione</li><li>Usa le stesse statistiche del Morso Feroce</li><li><strong>Limitazione:</strong> 1 volta per combattimento (ricarica dopo riposo breve)</li></ul><p><em>Rende gli attacchi in mischia pericolosi - il verme reagisce con ferocia quando ferito.</em></p>"
+        },
+        "activation": { "type": "reaction", "cost": 1 },
+        "requirements": "Colpito da un attacco in mischia",
+        "uses": { "value": 1, "max": "1", "per": "sr" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/carrion-crawler-boss.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "2 cristalli piccoli",
+    "location": "Zona 7 - Il Corridoio del Verme",
+    "partyLevel": 5,
+    "loot": {
+      "gp": 35,
+      "gems": ["Ametista (10 mo)", "Quarzo rosa (8 mo)"],
+      "items": ["Armatura di cuoio (discrete condizioni)", "Spada corta decorata (non magica, 12 mo)"]
+    },
+    "tactics": {
+      "fase1_emboscata": {
+        "round": "1-2",
+        "descrizione": "Il verme emerge dalla breccia quando i PG raggiungono metà corridoio (10m). Iniziativa con vantaggio.",
+        "azioni": "Multiattacco contro il PG più isolato o più debole. Tentacoli ×2 → paralizzare. Morso → danno aggiuntivo se paralisi riesce (17 danni!).",
+        "obiettivo": "Paralizzare 1-2 PG rapidamente"
+      },
+      "fase2_controllo": {
+        "round": "3-4",
+        "descrizione": "Controllo del campo di battaglia",
+        "azioni": "Se ha paralizzato qualcuno: usa Trascinamento Aggressivo. Alterna bersagli. Usa pareti/soffitto per posizionarsi.",
+        "prioritaBersagli": ["PG già feriti (sotto 50% HP)", "Caster/Guaritori", "Arcieri/Range", "Tank/Guerrieri"]
+      },
+      "fase3_disperazione": {
+        "trigger": "HP < 40",
+        "descrizione": "NON FUGGE MAI - Difende la tana fino alla morte",
+        "azioni": "Più aggressivo, focus fuoco sul PG più ferito. Usa Affondo Difensivo per punire attacchi ravvicinati."
+      }
+    },
+    "dmNotes": {
+      "bilanciamento": {
+        "troppoFacile": "Aumenta i PF a 95 (13d10+26), aggiungi 1d2 Stirge dopo 2 round, aumenta CD paralisi a 15",
+        "troppoDifficile": "Riduci i PF a 65 (10d10+10), il verme fugge a 20 PF, rimuovi Affondo Difensivo"
+      },
+      "durataStimata": "4-6 round (15-25 minuti reali)",
+      "descrizioneIniziale": "Il corridoio si estende per 20 metri davanti a voi, le pareti umide riflettono la luce delle torce. A metà percorso, notate una breccia irregolare nel muro destro, larga circa 2 metri. Un odore nauseabondo di carne marcia permea l'aria, crescendo in intensità man mano che vi avvicinate. Solchi viscidi attraversano le pareti e il soffitto. Sparse sul pavimento, ossa rosicchiate brillano debolmente alla luce.",
+      "descrizioneEmersione": "Un rumore viscido emerge dalla breccia. Improvvisamente, un cilindro di carne pallida lungo 3 metri striscia fuori dall'oscurità. Otto tentacoli si agitano minacciosamente, mentre un becco osseo scrocchia con fame. Il Carrion Crawler vi ha individuato.",
+      "interpretazione": "Descrizioni viscerali, schiocchi del becco, sibilo quando ferito, fruscio dei tentacoli. Tensione: 'Sta trascinando [nome PG] verso la breccia oscura!'"
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "2 cristalli piccoli contribuiscono al favore",
+        "nessunKO": "+10 Favore",
+        "menoRound": "+5 Favore (sconfitto in meno di 5 round)",
+        "usoTerreno": "+5 Favore (a discrezione DM)"
+      },
+      "mystra": {
+        "incantesimi": "+10 Favore (uso efficace di incantesimi per controllare il campo)",
+        "identificazione": "+5 Favore (Natura/Arcano CD 14 per identificare debolezze)"
+      },
+      "tymora": {
+        "salvataggio": "+10 Favore (salvare un alleato paralizzato prima che venga trascinato)",
+        "nessunTrascinato": "+5 Favore (nessun PG trascinato nella tana)"
+      }
+    }
+  }
+}

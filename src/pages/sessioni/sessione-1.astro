@@ -1,0 +1,658 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Sessione 1 - L'Arco Divino" description="Prima esplorazione del Dungeon Divino">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">01</span>
+        <h1 class="text-4xl font-bold">L'Arco Divino</h1>
+      </div>
+      <div class="flex gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 17/01/2026</span>
+        <span>⏱️ 3-4 ore</span>
+        <span>🎭 Prima Esplorazione</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        La prima vera discesa nel Dungeon Divino. I Guardiani della Trama attraversano l'Arco,
+        ricevono il Marchio Divino e iniziano l'esplorazione delle Fogne Superiori.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-purple-500/10 border border-purple-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Zone Esplorate</p>
+          <p class="text-gray-300">Zona 1, 2, 4, 5, 6, 7, 8, 12</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-red-400 font-bold mb-1">Combattimenti</p>
+          <p class="text-gray-300">Strisciatore Carogna, 2 Banditi</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Cristalli Ottenuti</p>
+          <p class="text-gray-300">2 piccoli + 10 minuscoli</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE 1: L'INGRESSO -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🌟</span> PARTE I: LA DISCESA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">I.</span> Le Prime Scoperte
+          </h3>
+
+          <p class="leading-relaxed">
+            Dopo aver attraversato l'Arco e ricevuto il doloroso <strong class="text-yellow-400">Marchio Divino</strong>,
+            i Guardiani della Trama scendono le lunghe scale che conducono al primo livello del Dungeon Divino:
+            le <strong>Fogne Superiori</strong>.
+          </p>
+
+          <p class="leading-relaxed">
+            L'aria umida e l'odore di acqua stagnante li accolgono appena mettono piede sulla piattaforma di pietra.
+            <strong class="text-purple-400">Fealer</strong>, con la sua mente analitica, estrae immediatamente
+            pennino e pergamena iniziando a tracciare una mappa del luogo. Ogni passo, ogni svolta, ogni dettaglio
+            viene annotato meticolosamente.
+          </p>
+
+          <div class="bg-blue-900/20 border-l-4 border-blue-500 p-6 my-6">
+            <p class="italic text-blue-100 text-lg leading-relaxed">
+              Una pozzanghera attira l'attenzione di Fealer. Un luccichio sotto la superficie torbida.
+              Con cautela, usando il suo bastone per sondare il fondo fangoso, scopre due oggetti nascosti.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Utilizzando <strong class="text-blue-400">Mano Magica</strong> per evitare di sporcarsi, Fealer
+            recupera un <strong class="text-yellow-400">libro antico con il simbolo di Mystra</strong> - una
+            stella a sette punte - sulla copertina, e un <strong class="text-cyan-400">cristallo lucente</strong>.
+            Il libro viene riposto per un'analisi successiva.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> osserva l'ambiente con occhio critico. Le sue
+            conoscenze arcane gli suggeriscono qualcosa di strano: questo luogo non sembra appartenere alla
+            normale realtà. Le grate che vedono davanti a loro mostrano acqua che scorre... nel vuoto.
+            Cascate sospese nel nulla.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong>, che conosce bene le vere fogne di Waterdeep
+            per averle esplorate nella sua gioventù, conferma i sospetti: <em>"Queste non sono le fogne
+            che conosco. È qualcosa di completamente diverso."</em>
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">II.</span> Esplorazione Metodica
+          </h3>
+
+          <p class="leading-relaxed">
+            Il gruppo adotta una formazione di marcia con <strong class="text-red-400">Morgrim</strong> in
+            testa, il nano guerriero pronto ad affrontare qualsiasi minaccia. Attraversano con cautela un
+            vecchio ponte di legno traballante, testando ogni asse prima di procedere.
+          </p>
+
+          <p class="leading-relaxed">
+            Raggiungono il <strong>Piazzale di Scarico</strong>, un'area più ampia con barili marci e detriti
+            abbandonati. Fealer, grazie ai suoi <strong class="text-purple-400">Stivali del Volo</strong>,
+            evita elegantemente il secondo ponte volando oltre. Gli altri attraversano con più cautela.
+          </p>
+
+          <div class="bg-yellow-900/20 border border-yellow-500/30 rounded p-4 my-4">
+            <p class="text-sm font-bold text-yellow-400 mb-2">💎 Bottino Trovato</p>
+            <p class="text-sm text-gray-300">
+              Nei barili marci: <strong>1 cristallo minuscolo</strong> e una <strong>borraccia</strong> ancora utilizzabile.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Proseguendo verso nord, il gruppo raggiunge una <strong>porta di metallo</strong>. Thalio,
+            esperto scassinatore, riesce ad aprirla senza troppi problemi. Oltre la porta, un'area con
+            colonne sommerse nell'acqua. Fealer vola verso l'altra sponda per esplorare, ma il gruppo
+            decide saggiamente di non rischiare acrobazie pericolose e torna indietro.
+          </p>
+
+          <p class="leading-relaxed">
+            Continuando l'esplorazione, trovano un <strong>canale prosciugato</strong>. Riven, impulsivo,
+            decide di scendere nel fango... e lo paga caro. Rimane <strong class="text-green-400">impantanato</strong>
+            e le <strong class="text-purple-400">esalazioni tossiche</strong> lo intossicano. Viene aiutato
+            a risalire dai compagni.
+          </p>
+
+          <p class="leading-relaxed">
+            Più avanti, una <strong>grande porta doppia di legno massiccio</strong> attira la loro attenzione.
+            Sembra sprangata dall'interno. Stranamente, nonostante la porta non sia chiusa a chiave, il
+            gruppo decide di non forzarla - forse temendo di attirare attenzioni indesiderate - e prosegue oltre.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE 2: I COMBATTIMENTI -->
+    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">⚔️</span> PARTE II: SANGUE E FUOCO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Lo Strisciatore Carogna
+          </h3>
+
+          <p class="leading-relaxed">
+            Il gruppo si addentra in un corridoio stretto. Thalio avanza controllando ogni centimetro
+            per possibili trappole. L'odore cambia: <strong class="text-green-400">carne putrescente</strong>.
+            Ossa umanoidi rosicchiate giacciono sparse sul pavimento.
+          </p>
+
+          <div class="bg-black/40 border-l-4 border-red-400 p-6 my-6">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              Un muro spaccato. Un movimento nell'oscurità. Tentacoli viscidi si lanciano verso il gruppo.
+              <strong>Lo Strisciatore Carogna</strong> emerge dalla sua tana, affamato.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> si dimostra il più pronto: la sua
+            <strong>alabarda</strong> blocca la creatura, respingendola con una delle sue abilità di
+            combattimento. Thalio si sposta rapidamente dietro una parete per ottenere una posizione
+            migliore e fare spazio ai compagni.
+          </p>
+
+          <p class="leading-relaxed">
+            Lo Strisciatore allunga i suoi tentacoli verso Thalio, cercando di afferrarlo, ma manca
+            il bersaglio. Nel frattempo, <strong class="text-green-400">Riven</strong> punta due dita
+            verso il mostro urlando <em>"Bruciaaa!"</em> mentre un <strong class="text-orange-400">Dardo
+            di Fuoco</strong> colpisce la creatura.
+          </p>
+
+          <p class="leading-relaxed">
+            La creatura, ferita, emana un <strong class="text-purple-400">olezzo pestilenziale</strong>
+            che debilita temporaneamente Valoris e Thalio. Ma il gruppo non si ferma.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> evoca una <strong class="text-orange-400">Sfera
+            Infuocata</strong> che appare al fianco dello Strisciatore, bruciandolo costantemente.
+            <strong class="text-red-400">Morgrim</strong> inizia a roteare la sua ascia con furia,
+            <strong>tranciando tentacolo dopo tentacolo</strong>.
+          </p>
+
+          <p class="leading-relaxed">
+            Il mostro, confuso e ferito, non riesce a infliggere nemmeno un colpo ai Guardiani.
+            Il colpo finale viene da Riven: un secondo <strong class="text-orange-400">Dardo di Fuoco</strong>
+            che manda lo Strisciatore <strong>in fumo</strong>.
+          </p>
+
+          <div class="bg-cyan-900/20 border border-cyan-500/30 rounded p-4 my-4">
+            <p class="text-sm font-bold text-cyan-400 mb-2">💎 Cristalli Ottenuti</p>
+            <p class="text-sm text-gray-300">
+              Lo Strisciatore Carogna si dissolve rilasciando <strong>2 cristalli piccoli</strong> -
+              più grandi di quelli trovati finora.
+            </p>
+          </div>
+
+          <p class="leading-relaxed text-gray-400 italic">
+            I personaggi provano ad avvicinare tutti i cristalli raccolti, cercando effetti di risonanza.
+            Non succede nulla. Fealer viene designato dal gruppo come custode di tutti i cristalli.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> L'Agguato dei Banditi
+          </h3>
+
+          <p class="leading-relaxed">
+            Dopo il combattimento, il gruppo esplora una stanza con una <strong>fontana dedicata a un
+            dio dimenticato</strong>, il cui volto è stato sfigurato. Del muschio bioluminescente cresce
+            sulla parete nord. Decidono di non tergiversare oltre e proseguono.
+          </p>
+
+          <p class="leading-relaxed">
+            Girano a sinistra e si addentrano in una nuova area. Tracce recenti: <strong>impronte
+            umanoidi</strong>, mozziconi di sigarette, segni di vita. Tende da campo. Un falò ancora caldo.
+          </p>
+
+          <div class="bg-black/40 border-l-4 border-orange-400 p-6 my-6">
+            <p class="italic text-orange-100 text-lg leading-relaxed">
+              Un'ombra dietro Thalio. Una lama che scintilla. L'agguato!
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong>Due banditi</strong> emergono dalle ombre. Uno coglie Thalio di sorpresa, la sua
+            lama scalfisce appena i vestiti del ladro. Il combattimento esplode.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> reagisce immediatamente: evoca una
+            <strong class="text-green-400">Frusta di Spine</strong> che si avvolge attorno a uno
+            dei banditi e lo <strong>trascina nel canale</strong>. L'acqua fa il resto. Il bandito
+            non avrà più scampo.
+          </p>
+
+          <p class="leading-relaxed">
+            Il secondo bandito affronta <strong class="text-red-400">Morgrim</strong>. Il nano, con
+            un sorriso feroce, passa la sua <strong>ascia attraverso il falò</strong>. La lama si
+            infuoca. Un colpo devastante. Il bandito viene <strong>annichilito</strong>.
+          </p>
+
+          <div class="bg-purple-900/20 border border-purple-500/30 rounded p-4 my-4">
+            <p class="text-sm font-bold text-purple-400 mb-2">❓ Mistero</p>
+            <p class="text-sm text-gray-300">
+              Prima di morire, i banditi comunicano tra loro in una <strong>lingua totalmente
+              sconosciuta</strong> - probabilmente non originaria del Faerûn. Chi erano veramente?
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Come lo Strisciatore prima di loro, anche i banditi si <strong>vaporizzano in una nuvola
+            di fumo</strong> rilasciando cristalli: <strong class="text-cyan-400">7 cristalli minuscoli</strong>.
+            Fealer si interroga sul perché la quantità sia diversa rispetto al mostro.
+          </p>
+
+          <div class="bg-yellow-900/20 border border-yellow-500/30 rounded p-4 my-4">
+            <p class="text-sm font-bold text-yellow-400 mb-2">💰 Bottino dal Campo</p>
+            <ul class="text-sm text-gray-300 space-y-1">
+              <li>• <strong>Valoris</strong> trova: razioni fresche, spade corte, un set di dadi truccati</li>
+              <li>• <strong>Morgrim</strong> trova dietro una cassa un pannello nascosto contenente:
+                una <strong class="text-red-400">Pozione di Guarigione</strong>, un <strong>cristallo
+                minuscolo</strong> e una <strong class="text-gray-400">grossa chiave di ferro</strong></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE 3: SCOPERTE E INCIDENTI -->
+    <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-blue-400">🔍</span> PARTE III: SCOPERTE E INCIDENTI
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">I.</span> Il Libro di Mystra
+          </h3>
+
+          <p class="leading-relaxed">
+            Dopo il combattimento, Fealer estrae finalmente il libro trovato nella pozzanghera iniziale.
+            La copertina mostra chiaramente il <strong class="text-blue-400">simbolo di Mystra</strong>:
+            una stella a sette punte.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> ipotizza che il libro sia stato <em>"creato
+            magicamente da Mystra, ma senza proprietà magiche intrinseche"</em>. Un manufatto divino,
+            ma non un oggetto magico.
+          </p>
+
+          <p class="leading-relaxed">
+            Aprendo il libro, trovano solo <strong>pagine bianche</strong>. Nessuna scritta, nessun
+            simbolo. Eppure, il gruppo sente che il libro è importante. Per ora, rimane un mistero.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-green-400">II.</span> I Funghi Pericolosi
+          </h3>
+
+          <p class="leading-relaxed">
+            La curiosità scientifica di <strong class="text-purple-400">Fealer</strong> lo porta verso
+            uno dei <strong class="text-green-400">funghi bioluminescenti</strong> che crescono sui
+            lati del passaggio. Vuole prelevarne un campione.
+          </p>
+
+          <div class="bg-green-900/20 border-l-4 border-green-500 p-6 my-6">
+            <p class="italic text-green-100 text-lg leading-relaxed">
+              Appena toccato, il fungo rilascia una <strong>nuvola di spore</strong>. Fealer tossisce,
+              sentendo il veleno infiltrarsi nei polmoni. I funghi di questo dungeon non sono da
+              sottovalutare.
+            </p>
+          </div>
+
+          <p class="leading-relaxed text-red-300">
+            Fealer subisce <strong>danni da veleno</strong>. Una lezione dolorosa: in questo dungeon,
+            anche la flora può uccidere.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIEPILOGO OGGETTI -->
+    <div class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 border border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span>🎒</span> Inventario di Sessione
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-3">Cristalli Raccolti</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+              <span><strong>2 cristalli piccoli</strong> (dallo Strisciatore)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-cyan-600"></span>
+              <span><strong>10 cristalli minuscoli</strong> (varie fonti)</span>
+            </li>
+          </ul>
+          <p class="text-xs text-gray-400 mt-2">Custode: Fealer</p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-yellow-400 mb-3">Oggetti Trovati</h3>
+          <ul class="space-y-2 text-sm">
+            <li>📖 <strong>Libro di Mystra</strong> (stella, pagine bianche)</li>
+            <li>🧪 <strong>Pozione di Guarigione</strong></li>
+            <li>🔑 <strong>Grossa Chiave di Ferro</strong></li>
+            <li>🎲 <strong>Set di Dadi Truccati</strong></li>
+            <li>⚔️ <strong>2 Spade Corte</strong> (dai banditi)</li>
+            <li>🍖 <strong>2 Razioni Fresche</strong></li>
+            <li>🫗 <strong>Borraccia</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MISTERI APERTI -->
+    <div class="bg-purple-900/20 border border-purple-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span>❓</span> Misteri Aperti
+      </h2>
+
+      <div class="space-y-4">
+        <div class="bg-gray-800/50 rounded p-4">
+          <h3 class="font-bold text-purple-400 mb-2">Il Libro di Mystra</h3>
+          <p class="text-sm text-gray-300">
+            Un libro con il simbolo della Dea della Magia, ma con pagine completamente bianche.
+            Cosa nasconde? Come si legge?
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded p-4">
+          <h3 class="font-bold text-purple-400 mb-2">La Lingua Sconosciuta</h3>
+          <p class="text-sm text-gray-300">
+            I banditi parlavano una lingua che nessuno ha riconosciuto, probabilmente non
+            originaria del Faerûn. Da dove vengono veramente?
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded p-4">
+          <h3 class="font-bold text-purple-400 mb-2">I Cristalli</h3>
+          <p class="text-sm text-gray-300">
+            Perché nemici diversi rilasciano quantità diverse di cristalli? Qual è il loro
+            vero scopo? Cosa succede accumulandone molti?
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded p-4">
+          <h3 class="font-bold text-purple-400 mb-2">La Porta Sprangata</h3>
+          <p class="text-sm text-gray-300">
+            Una grande porta doppia sprangata dall'interno. Cosa nasconde? Chi o cosa l'ha chiusa?
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded p-4">
+          <h3 class="font-bold text-purple-400 mb-2">La Chiave di Ferro</h3>
+          <p class="text-sm text-gray-300">
+            Una grossa chiave nascosta nel campo dei banditi. Cosa apre?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZONE NON ESPLORATE -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span>🗺️</span> Da Esplorare
+      </h2>
+
+      <p class="text-gray-300 mb-4">
+        Il primo livello non è ancora stato completamente esplorato. Rimangono:
+      </p>
+
+      <ul class="space-y-2 text-gray-400">
+        <li>• La zona oltre la porta sprangata (Zona 6)</li>
+        <li>• L'area oltre le colonne sommerse (Zona 4)</li>
+        <li>• Potenziali passaggi nascosti non ancora scoperti</li>
+        <li>• La fontana del dio sfigurato (non interagita)</li>
+      </ul>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <!-- Legenda -->
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-yellow-400">PX Combattimento:</strong> Assegnati durante la sessione (indicati per riferimento)
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Scelte teatrali e interazioni memorabili
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-blue-400">PX Background:</strong> Azioni coerenti con storia e personalità del personaggio
+        </p>
+      </div>
+
+      <!-- PX Combattimento (riferimento) -->
+      <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-red-400 mb-3">⚔️ PX Combattimento (già assegnati)</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">Strisciatore Carogna</p>
+            <p class="text-red-300 font-bold">700 XP</p>
+          </div>
+          <div>
+            <p class="text-gray-400">2 Banditi</p>
+            <p class="text-red-300 font-bold">475 XP</p>
+          </div>
+        </div>
+        <p class="text-center text-gray-500 text-xs mt-3">Totale: 1175 XP ÷ 5 = 235 XP a testa (già conteggiati)</p>
+      </div>
+
+      <!-- Premi Individuali -->
+      <div class="space-y-4">
+
+        <!-- FEALER - MVP -->
+        <div class="bg-gradient-to-r from-yellow-900/40 to-purple-900/40 border-2 border-yellow-500 rounded-lg p-5 relative">
+          <div class="absolute -top-3 -right-3 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm">
+            ⭐ MVP
+          </div>
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🌿</span>
+            <div>
+              <h4 class="text-xl font-bold text-purple-400">Fealer</h4>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">🌟 Ispirazione</span>
+              </div>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">450 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-blue-900/30 rounded p-3">
+              <p class="text-blue-400 font-bold mb-1">PX Background: 300</p>
+              <p class="text-gray-300">Costante attenzione ai dettagli e allo studio del dungeon divino per, un giorno, epurarlo. Studio delle acque, dei muschi, dei funghi, tentativi di risonanza tra i cristalli e il libro.</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">Utilizzo intelligente degli stivali del volo per esplorare e rilevare pericoli. Iniziativa nel disegnare la mappa del luogo e costanza nel mantenerla aggiornata.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIVEN -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🔥</span>
+            <div>
+              <h4 class="text-xl font-bold text-green-400">Riven</h4>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="text-sm">
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">Descrizione accurata delle magie e del metodo di lanciarle, degli effetti sulla cicatrice magica e ipotesi sulla conoscenza Arcana riguardo luogo e tomo di Mystra.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THALIO -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🗡️</span>
+            <div>
+              <h4 class="text-xl font-bold text-orange-400">Thalio</h4>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="text-sm">
+            <div class="bg-blue-900/30 rounded p-3">
+              <p class="text-blue-400 font-bold mb-1">PX Background: 150</p>
+              <p class="text-gray-300">Ruolo nel gruppo per check trappole e check serrature. Sempre in prima linea a verificare la sicurezza del percorso.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MORGRIM -->
+        <div class="bg-gray-800/50 border border-yellow-600/50 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🪓</span>
+            <div>
+              <h4 class="text-xl font-bold text-red-400">Morgrim</h4>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 bg-yellow-500/20 text-yellow-400 rounded text-xs">🌟 Ispirazione</span>
+              </div>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="text-sm">
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">Avanguardia e copertura del gruppo. Sempre pronto alla difesa e alla guida. Ottimo slancio verso il bandito e bellissima l'idea di passare l'ascia nel fuoco prima del colpo finale.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VALORIS -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">⚔️</span>
+            <div>
+              <h4 class="text-xl font-bold text-yellow-400">Valoris</h4>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="text-sm">
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">Leader del gruppo che ha preso diverse decisioni importanti. Fondamentale in combattimento. La colonna portante del gruppo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Riepilogo -->
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-5 gap-4 text-center">
+          <div>
+            <p class="text-purple-400 font-bold">Fealer</p>
+            <p class="text-xl text-yellow-400">450 PX</p>
+            <p class="text-xs text-yellow-500">+ Ispirazione</p>
+          </div>
+          <div>
+            <p class="text-green-400 font-bold">Riven</p>
+            <p class="text-xl text-yellow-400">150 PX</p>
+          </div>
+          <div>
+            <p class="text-orange-400 font-bold">Thalio</p>
+            <p class="text-xl text-yellow-400">150 PX</p>
+          </div>
+          <div>
+            <p class="text-red-400 font-bold">Morgrim</p>
+            <p class="text-xl text-yellow-400">150 PX</p>
+            <p class="text-xs text-yellow-500">+ Ispirazione</p>
+          </div>
+          <div>
+            <p class="text-yellow-400 font-bold">Valoris</p>
+            <p class="text-xl text-yellow-400">150 PX</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROSSIMA SESSIONE -->
+    <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>➡️</span> Prossima Sessione
+      </h2>
+      <p class="text-gray-300">
+        I Guardiani della Trama hanno ancora molto da esplorare nelle Fogne Superiori. Il viaggio continua...
+      </p>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-0" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 0 - La Discesa degli Dèi
+      </a>
+      <span class="text-gray-500 italic">Prossima sessione in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>
