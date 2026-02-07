@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Registro delle Sessioni">
@@ -11,11 +11,14 @@ import MainLayout from '../../layouts/MainLayout.astro';
   </nav>
 
   <!-- Hero Header -->
-  <div class="bg-gradient-to-br from-purple-900 via-slate-800 to-indigo-900 border-2 border-purple-600 rounded-lg p-8 mb-8">
+  <div
+    class="bg-gradient-to-br from-purple-900 via-slate-800 to-indigo-900 border-2 border-purple-600 rounded-lg p-8 mb-8"
+  >
     <h1 class="text-5xl mb-4 text-yellow-400">📖 Registro delle Sessioni</h1>
     <p class="text-xl text-slate-200 leading-relaxed">
       La cronaca delle avventure dei Guardiani della Trama nel Dungeon Divino.
-      Ogni sessione racconta le gesta, le scoperte e i pericoli affrontati dalla gilda.
+      Ogni sessione racconta le gesta, le scoperte e i pericoli affrontati dalla
+      gilda.
     </p>
   </div>
 
@@ -25,8 +28,8 @@ import MainLayout from '../../layouts/MainLayout.astro';
       <span>ℹ️</span> Come Leggere il Registro
     </h2>
     <p class="text-slate-300 mb-4">
-      Questo registro documenta le avventure della campagna in ordine cronologico.
-      Ogni sessione include:
+      Questo registro documenta le avventure della campagna in ordine
+      cronologico. Ogni sessione include:
     </p>
     <ul class="space-y-2 text-slate-300 list-disc list-inside">
       <li><strong>Narrazione completa</strong> degli eventi accaduti</li>
@@ -43,29 +46,48 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
     <div class="space-y-6">
       <!-- Sessione 1 -->
-      <a href="/sessioni/sessione-1" class="block bg-gradient-to-br from-red-900/20 via-slate-800/50 to-orange-900/20 border-2 border-red-600/50 rounded-lg p-6 hover:scale-[1.02] hover:border-red-500 transition-all">
+      <a
+        href="/sessioni/sessione-1"
+        class="block bg-gradient-to-br from-red-900/20 via-slate-800/50 to-orange-900/20 border-2 border-red-600/50 rounded-lg p-6 hover:scale-[1.02] hover:border-red-500 transition-all"
+      >
         <div class="flex items-start gap-6">
           <div class="flex-shrink-0">
             <span class="text-6xl font-bold text-gray-600">01</span>
           </div>
           <div class="flex-1">
             <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-2xl font-bold text-red-400">L'Arco Divino</h3>
-              <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs">✓ Completata</span>
+              <h3 class="text-2xl font-bold text-red-400">
+                L'ingresso nell'Arco Divino
+              </h3>
+              <span
+                class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
+                >✓ Completata</span
+              >
             </div>
             <div class="flex gap-4 text-sm text-gray-400 mb-3">
-              <span>📅 17/01/2026</span>
+              <span>📅 24/01/2026</span>
               <span>⏱️ 3-4 ore</span>
               <span>🎭 Prima Esplorazione</span>
             </div>
             <p class="text-slate-300 leading-relaxed">
-              La prima vera discesa nel Dungeon Divino. I Guardiani attraversano l'Arco, ricevono il Marchio Divino
-              e iniziano l'esplorazione delle Fogne Superiori. Combattimenti contro lo Strisciatore Carogna e banditi misteriosi.
+              La prima vera discesa nel Dungeon Divino. I Guardiani attraversano
+              l'Arco, ricevono il Marchio Divino e iniziano l'esplorazione delle
+              Fogne Superiori. Combattimenti contro lo Strisciatore Carogna e
+              banditi misteriosi.
             </p>
             <div class="mt-4 flex items-center gap-2 text-red-400">
               <span>Leggi il resoconto completo</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
               </svg>
             </div>
           </div>
@@ -73,47 +95,76 @@ import MainLayout from '../../layouts/MainLayout.astro';
       </a>
 
       <!-- Sessione 0 -->
-      <a href="/sessioni/sessione-0" class="block bg-gradient-to-br from-yellow-900/20 via-slate-800/50 to-purple-900/20 border-2 border-yellow-600/50 rounded-lg p-6 hover:scale-[1.02] hover:border-yellow-500 transition-all">
+      <a
+        href="/sessioni/sessione-0"
+        class="block bg-gradient-to-br from-yellow-900/20 via-slate-800/50 to-purple-900/20 border-2 border-yellow-600/50 rounded-lg p-6 hover:scale-[1.02] hover:border-yellow-500 transition-all"
+      >
         <div class="flex items-start gap-6">
           <div class="flex-shrink-0">
             <span class="text-6xl font-bold text-gray-600">00</span>
           </div>
           <div class="flex-1">
-            <h3 class="text-2xl font-bold text-yellow-400 mb-2">La Discesa degli Dèi</h3>
-            <div class="flex gap-4 text-sm text-gray-400 mb-3">
-              <span>📅 10/01/2026</span>
-              <span>⏱️ 3-4 ore</span>
-              <span>🎭 Introduzione/Setup</span>
-            </div>
-            <p class="text-slate-300 leading-relaxed">
-              Introduzione all'ambientazione, spiegazione del Gioco Divino, presentazione dei personaggi,
-              descrizione delle Prove Divine che hanno determinato la formazione della gilda.
-            </p>
-            <div class="mt-4 flex items-center gap-2 text-purple-400">
-              <span>Leggi il resoconto completo</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </div>
+            <h3 class="text-2xl font-bold text-yellow-400 mb-2">
+              La Discesa degli Dèi
+            </h3>
+            <span
+              class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs"
+              >✓ Completata</span
+            >
+          </div>
+          <div class="flex gap-4 text-sm text-gray-400 mb-3">
+            <span>📅 10/01/2026</span>
+            <span>⏱️ 3-4 ore</span>
+            <span>🎭 Introduzione/Setup</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Introduzione all'ambientazione, spiegazione del Gioco Divino,
+            presentazione dei personaggi, descrizione delle Prove Divine che
+            hanno determinato la formazione della gilda.
+          </p>
+          <div class="mt-4 flex items-center gap-2 text-purple-400">
+            <span>Leggi il resoconto completo</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
+            </svg>
           </div>
         </div>
       </a>
     </div>
   </section>
-
-  <!-- Placeholder per sessioni future -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-6 text-gray-500">Prossime Avventure</h2>
-    <div class="bg-slate-800/30 border border-slate-700 rounded-lg p-8 text-center">
-      <svg class="w-16 h-16 mx-auto mb-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-      </svg>
-      <p class="text-xl text-slate-400">
-        Altre avventure verranno aggiunte dopo essere state completate...
-      </p>
-      <p class="text-sm text-slate-500 mt-2">
-        Il viaggio è appena iniziato!
-      </p>
-    </div>
-  </section>
 </MainLayout>
+
+<!-- Placeholder per sessioni future -->
+<section class="mb-12">
+  <h2 class="text-3xl font-bold mb-6 text-gray-500">Prossime Avventure</h2>
+  <div
+    class="bg-slate-800/30 border border-slate-700 rounded-lg p-8 text-center"
+  >
+    <svg
+      class="w-16 h-16 mx-auto mb-4 text-slate-600"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+      ></path>
+    </svg>
+    <p class="text-xl text-slate-400">
+      Altre avventure verranno aggiunte dopo essere state completate...
+    </p>
+    <p class="text-sm text-slate-500 mt-2">Il viaggio è appena iniziato!</p>
+  </div>
+</section>
