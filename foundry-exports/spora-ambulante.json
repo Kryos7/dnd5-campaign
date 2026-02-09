@@ -1,0 +1,176 @@
+{
+  "name": "Spora Ambulante",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p>Piccole creature fungine semi-senzienti, estensioni della volontà del Violet Fungus Mutato.</p><p>Sono kamikaze: non temono la morte e cercano attivamente di esplodere vicino ai nemici.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Superiori",
+    "details": {
+      "biography": {
+        "value": "<p>Alleati del Violet Fungus Mutato. 4-6 presenti all'inizio dello scontro (2 vicine al boss, 2-4 nascoste nell'acqua).</p>",
+        "public": ""
+      },
+      "alignment": "Senza allineamento",
+      "race": "",
+      "type": {
+        "value": "plant",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Pianta"
+      },
+      "environment": "Fogne, Sotterranei umidi",
+      "cr": 0.25,
+      "spellLevel": 0,
+      "xp": {
+        "value": 50
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 8,
+        "calc": "natural",
+        "formula": "",
+        "label": "Armatura naturale"
+      },
+      "hp": {
+        "value": 13,
+        "max": 13,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "3d6+3"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 20,
+        "walk": 10,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 30,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 30 ft"
+      }
+    },
+    "abilities": {
+      "str": { "value": 8, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 6, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 12, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 3, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 1, "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "sm",
+      "di": { "value": ["poison"], "bypasses": [], "custom": "Veleno" },
+      "dr": { "value": [], "bypasses": [], "custom": "" },
+      "dv": { "value": ["fire"], "bypasses": [], "custom": "Fuoco" },
+      "ci": { "value": ["poisoned"], "custom": "Avvelenato" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Mente Alveare",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La Spora Ambulante è collegata telepaticamente al Violet Fungus Mutato.</p><ul><li>Agisce nello stesso turno del boss (stessa iniziativa)</li><li>Il boss percepisce attraverso di lei (vista cieca 9m)</li><li>Non ha volontà propria - segue gli ordini del boss</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Tocco Sporale",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +3 al colpire, portata 1.5m, una creatura.</p><p><strong>Colpito:</strong></p><ul><li><strong>4 (1d6+1)</strong> danni contundenti</li><li><strong>+ 3 (1d6)</strong> danni da veleno</li></ul><p>Il bersaglio deve superare <strong>TS Costituzione CD 12</strong> o essere <strong>avvelenato</strong> fino alla fine del suo prossimo turno.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "3",
+        "damage": {
+          "parts": [
+            ["1d6 + 1", "bludgeoning"],
+            ["1d6", "poison"]
+          ],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" },
+        "save": { "ability": "con", "dc": 12, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Esplosione Sporale",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger:</strong> La Spora Ambulante muore.</p><p>Quando la spora muore, esplode in una nuvola di spore tossiche.</p><p><strong>Area:</strong> Tutte le creature entro <strong>1.5m</strong> (5 ft)</p><p><strong>TS Costituzione CD 12</strong></p><ul><li><strong>Fallimento:</strong> 2d6 danni da veleno + <strong>avvelenato</strong> per 1 minuto</li><li><strong>Successo:</strong> Metà danni, nessuna condizione</li></ul><p><em>Ucciderle in mischia è pericoloso! Preferire attacchi a distanza o fuoco.</em></p><h4>Interazione con il Boss:</h4><p>Se la Spora muore entro 9m dal Violet Fungus Mutato:</p><ul><li>Il boss recupera 8 PF (Simbiosi Sporale)</li><li>La Nuvola di Spore del boss si ricarica automaticamente</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Alla morte",
+        "save": { "ability": "con", "dc": 12, "scaling": "flat" },
+        "damage": { "parts": [["2d6", "poison"]] },
+        "target": { "value": 5, "units": "ft", "type": "sphere" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "icons/creatures/fungi/mushroom-glowing-purple.webp",
+  "prototypeToken": {
+    "name": "Spora Ambulante",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "disposition": -1,
+    "bar1": { "attribute": "attributes.hp" }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "role": "Minion del Violet Fungus Mutato",
+    "startingCount": "4-6",
+    "positioning": "2 vicine al boss, 2-4 nascoste nell'acqua",
+    "tactics": {
+      "movimento": "Si muovono verso i PG più lontani dal boss (arcieri, caster)",
+      "obiettivo": "Circondare e intrappolare, attaccare PG proni con vantaggio",
+      "mentalita": "Kamikaze - non temono la morte, cercano di esplodere vicino ai nemici"
+    },
+    "synergy": {
+      "simbiosiSporale": "Quando muore entro 9m dal boss: boss recupera 8 PF + Nuvola di Spore si ricarica",
+      "richiamoSpore": "Se meno di 2 Spore vive, il boss ne richiama 1d2 nuove all'inizio del suo turno"
+    }
+  }
+}

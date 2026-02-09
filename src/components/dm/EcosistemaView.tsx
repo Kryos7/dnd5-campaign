@@ -312,11 +312,11 @@ export default function EcosistemaView() {
       descrizione: 'Corridoio a vicolo cieco che termina contro un muro di macerie. L\'acqua stagnante raggiunge i 40cm di profondità. Diverse casse di legno galleggiano o sono semisommerse. Le pareti sono completamente ricoperte da colonie di funghi gialli tossici che pulsano debolmente. Tra di essi, apparentemente innocuo, cresce un fungo violaceo più grande (1.5m altezza) vicino alle casse più ricche. Il fungo viola ha un cappello carnoso e tentacoli sottili che penzolano immobili nell\'acqua.',
       elementi: [
         'Funghi Urlanti Tossici: Disturbare l\'acqua (camminare) o toccare i funghi gialli scatena rilascio di spore (TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno) + Suono stridulo',
-        'Violet Fungus MUTATO nascosto: Percezione CD 16 o Natura CD 14 per riconoscerlo PRIMA che attacchi. Attacca con tentacoli velenosi quando un PG arriva entro 4.5m. Questo NON è un Violet Fungus standard - è MUTATO e molto più pericoloso (Grande, 52 PF, vulnerabile a fuoco, aura tossica, rigenerazione). Vedi scheda mostro completa per dettagli tattici.',
+        'Violet Fungus MUTATO nascosto: Percezione CD 16 o Natura CD 14 per riconoscerlo PRIMA che attacchi. Attacca con tentacoli velenosi quando un PG arriva entro 4.5m. Questo è un BOSS ENCOUNTER (CR 6, 120 PF, CA 13) con 4-6 Spore Ambulanti alleate. Ha Membrana Protettiva (resistenza fuoco → vulnerabilità), Frenesia sotto 60 PF. Vedi scheda mostro completa per dettagli tattici.',
         'Casse galleggianti: 5 casse. Aprirle silenziosamente (Furtività CD 14) evita di disturbare i funghi gialli. Contenuto totale: 2 Cristalli Minuscoli, 2 razioni rovinate, 1 razione sigillata, Boccetta di Antitossina (50 mo), Piccolo kit di pronto soccorso (5 usi, vantaggio a Medicina)'
       ],
-      pericoli: 'Funghi tossici, Violet Fungus MUTATO (GS 2, molto pericoloso!), possibile allerta',
-      cristalli: '3 Cristalli Piccoli (dal Violet Fungus Mutato quando sconfitto)',
+      pericoli: 'Funghi tossici, Violet Fungus MUTATO (CR 6 BOSS!) + 4-6 Spore Ambulanti, possibile allerta',
+      cristalli: '50 Cristalli (dal Violet Fungus Mutato quando sconfitto)',
       favoreDivino: 'Tempus (sconfiggere il Violet Fungus Mutato = ~25% cristalli totali Piano 1), Tymora (recuperare tutte le casse senza attivare funghi gialli E senza combattere = 15%)',
       noteDM: ['Questa stanza è completamente opzionale. È una "trappola per avidi". ATTENZIONE: il Violet Fungus è MUTATO e molto più pericoloso di uno standard! Vedi scheda completa del mostro per statistiche, abilità speciali, e tattiche di combattimento dettagliate. L\'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive - e per questo combattimento stesso!'],
       immagineMostro: {
@@ -604,7 +604,7 @@ export default function EcosistemaView() {
 
       {/* Navigation Tabs */}
       <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
-        {['panoramica', 'mappa', 'stanze', 'risorse', 'favore-divino', 'note-dm'].map((sezione) => (
+        {['panoramica', 'mappa', 'stanze', 'mostri', 'risorse', 'favore-divino', 'note-dm'].map((sezione) => (
           <button
             key={sezione}
             onClick={() => setSezioneAperta(sezione)}
@@ -617,6 +617,7 @@ export default function EcosistemaView() {
             {sezione === 'panoramica' && '📊 Panoramica'}
             {sezione === 'mappa' && '🗺️ Mappa'}
             {sezione === 'stanze' && '🚪 Stanze'}
+            {sezione === 'mostri' && '👹 Mostri'}
             {sezione === 'risorse' && '💰 Risorse'}
             {sezione === 'favore-divino' && '✨ Favore Divino'}
             {sezione === 'note-dm' && '📝 Note DM'}
@@ -696,6 +697,142 @@ export default function EcosistemaView() {
             Clicca su una stanza per espandere i dettagli completi. Le stanze sono organizzate in ordine di percorso.
           </p>
           {stanzeL1.map(renderStanza)}
+        </div>
+      )}
+
+      {sezioneAperta === 'mostri' && (
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-yellow-400 mb-4">👹 Mostri del Dungeon - Livello 1</h2>
+          <p className="text-slate-400 mb-6">
+            Elenco di tutti i mostri presenti nel livello con link rapidi alle schede complete.
+          </p>
+
+          {/* Mostri con scheda dedicata */}
+          <div className="bg-slate-800 border border-red-700 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-red-400 mb-4">📜 Mostri con Scheda Completa</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              <a
+                href="/dm/mostri/grick-acquatico"
+                className="bg-slate-700 hover:bg-slate-600 border border-cyan-700 rounded-lg p-4 transition-colors group"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">🐙</span>
+                  <h4 className="text-lg font-bold text-cyan-400 group-hover:text-cyan-300">Grick Acquatico</h4>
+                </div>
+                <p className="text-sm text-slate-400 mb-2">Zona 4 - La Camera Allagata</p>
+                <div className="text-xs text-slate-500">
+                  <span className="text-red-400">CR 2</span> • Predatore anfibio con tentacoli
+                </div>
+                <div className="mt-2 text-xs text-purple-400">💎 15 cristalli</div>
+              </a>
+
+              <a
+                href="/dm/mostri/carrion-crawler-boss"
+                className="bg-slate-700 hover:bg-slate-600 border border-red-700 rounded-lg p-4 transition-colors group"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">🐛</span>
+                  <h4 className="text-lg font-bold text-red-400 group-hover:text-red-300">Carrion Crawler</h4>
+                </div>
+                <p className="text-sm text-slate-400 mb-2">Zona 7 - Il Corridoio del Verme</p>
+                <div className="text-xs text-slate-500">
+                  <span className="text-red-400">BOSS</span> • Tentacoli paralizzanti!
+                </div>
+                <div className="mt-2 text-xs text-purple-400">💎 2 cristalli piccoli</div>
+              </a>
+
+              <a
+                href="/dm/mostri/violet-fungus-mutato"
+                className="bg-slate-700 hover:bg-slate-600 border border-purple-700 rounded-lg p-4 transition-colors group"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">🍄</span>
+                  <h4 className="text-lg font-bold text-purple-400 group-hover:text-purple-300">Violet Fungus Mutato</h4>
+                </div>
+                <p className="text-sm text-slate-400 mb-2">Zona 13 - Il Vicolo dei Funghi (Opz.)</p>
+                <div className="text-xs text-slate-500">
+                  <span className="text-red-400">CR 6 BOSS</span> • Scontro Deadly!
+                </div>
+                <div className="mt-2 text-xs text-purple-400">💎 50 cristalli</div>
+              </a>
+            </div>
+          </div>
+
+          {/* Altri mostri */}
+          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-yellow-400 mb-4">⚔️ Altri Nemici</h3>
+            <div className="space-y-3">
+              <div className="bg-slate-700 rounded-lg p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🐀</span>
+                  <div>
+                    <h4 className="font-bold text-slate-200">Swarm of Rats</h4>
+                    <p className="text-sm text-slate-400">Zona 3 - La Passerella Marcia</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-slate-500">MM pg 339</div>
+                  <div className="text-xs text-purple-400">💎 8 cristalli</div>
+                </div>
+              </div>
+
+              <div className="bg-slate-700 rounded-lg p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🐀</span>
+                  <div>
+                    <h4 className="font-bold text-slate-200">Swarm of Rats + 3 Giant Rats</h4>
+                    <p className="text-sm text-slate-400">Zona 10 - Il Nido dei Ratti (Opz.)</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-slate-500">MM pg 339, 327</div>
+                  <div className="text-xs text-purple-400">💎 20 cristalli (evitabili)</div>
+                </div>
+              </div>
+
+              <div className="bg-slate-700 rounded-lg p-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🗡️</span>
+                  <div>
+                    <h4 className="font-bold text-slate-200">2 Bandit</h4>
+                    <p className="text-sm text-slate-400">Zona 12 - L'Avamposto dei Contrabbandieri</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-slate-500">MM pg 343</div>
+                  <div className="text-xs text-purple-400">💎 7 cristalli</div>
+                  <div className="text-xs text-yellow-400">🔑 Hanno la chiave!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Riepilogo */}
+          <div className="bg-gradient-to-r from-red-900/30 to-purple-900/30 border border-red-700 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-red-400 mb-4">📊 Riepilogo Combattimenti</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-slate-800 rounded p-3 text-center">
+                <div className="text-2xl font-bold text-red-400">6</div>
+                <div className="text-sm text-slate-400">Incontri totali</div>
+              </div>
+              <div className="bg-slate-800 rounded p-3 text-center">
+                <div className="text-2xl font-bold text-yellow-400">3</div>
+                <div className="text-sm text-slate-400">Inevitabili</div>
+              </div>
+              <div className="bg-slate-800 rounded p-3 text-center">
+                <div className="text-2xl font-bold text-emerald-400">3</div>
+                <div className="text-sm text-slate-400">Evitabili/Opzionali</div>
+              </div>
+            </div>
+            <div className="mt-4 bg-slate-800 rounded p-3">
+              <p className="text-sm text-slate-300">
+                <strong className="text-yellow-400">Combattimenti inevitabili:</strong> Swarm (Zona 3), Grick (Zona 4), Carrion Crawler (Zona 7)
+              </p>
+              <p className="text-sm text-slate-300 mt-1">
+                <strong className="text-emerald-400">Evitabili:</strong> Ratti (Zona 10), Banditi (Zona 12, ma serve la chiave!), Violet Fungus (Zona 13)
+              </p>
+            </div>
+          </div>
         </div>
       )}
 

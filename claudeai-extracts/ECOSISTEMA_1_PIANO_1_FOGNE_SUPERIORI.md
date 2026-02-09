@@ -629,12 +629,13 @@ Disturbare l'acqua (camminare) o toccare i funghi gialli scatena:
 - **Rilascio di spore:** TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno
 - **Suono stridulo** (come funghi urlanti) che allerta eventuali creature vicine (se ce ne sono nelle vicinanze)
 
-### **Violet Fungus nascosto:**
+### **Violet Fungus Mutato (CR 6 BOSS):**
 - **Percezione CD 15 o Natura CD 13:** Riconoscerlo PRIMA che attacchi
-  - Con successo: "Quel fungo viola non è come gli altri - sembra un Violet Fungus, una creatura carnivora che attacca con tentacoli paralizzanti!"
-- Sta immobile tra le casse, sembra un fungo grande ma normale
-- Attacca con tentacoli velenosi quando un PG arriva entro 3m
-- **1 Violet Fungus Mutato** (vedi  VIOLET_FUNGUS_MUTATO.md)
+  - Con successo: "Quel fungo viola non è come gli altri - è ENORME! Sembra un Violet Fungus mutato, una versione molto più pericolosa della creatura standard!"
+- Sta immobile tra le casse, sembra un fungo grande ma normale (3m di altezza, 6 tentacoli)
+- Attacca con tentacoli velenosi quando un PG arriva entro 4.5m
+- **1 Violet Fungus Mutato (CR 6, 120 PF)** + **4-6 Spore Ambulanti** (vedi VIOLET_FUNGUS_MUTATO.md)
+- **ATTENZIONE:** Questo è uno scontro BOSS! Vedi scheda completa per meccaniche speciali (Membrana Protettiva, Frenesia Fungina, Richiamo delle Spore)
 
 ### **Combattimento:**
 - Il fungo attacca **silenziosamente** (no suono = funghi gialli urlanti non si attivano automaticamente)
@@ -653,19 +654,22 @@ Disturbare l'acqua (camminare) o toccare i funghi gialli scatena:
 - Boccetta di **Antitossina** (vendibile 50 mo, o utilizzabile contro veleni)
 - Piccolo **kit di pronto soccorso** (5 usi, concede vantaggio a prove Medicina)
 
-**Pericoli:** Funghi tossici, Violet Fungus, possibile allerta
+**Pericoli:** Funghi tossici, Violet Fungus MUTATO (CR 6 BOSS!) + 4-6 Spore Ambulanti, possibile allerta
 
-**Cristalli:** 3 cristalli piccoli (dal Violet Fungus quando sconfitto)
+**Cristalli:** 50 Cristalli (dal Violet Fungus Mutato quando sconfitto)
 
-**Favore Divino:** 
-- **Tempus:** Sconfiggere il Violet Fungus = cristalli normali (contribuisce a percentuale totale)
-- **Tymora:** Recuperare tutte le casse senza attivare funghi gialli E senza combattere il Violet Fungus = 10%
+**Favore Divino:**
+- **Tempus:** Sconfiggere il Violet Fungus MUTATO + Spore Ambulanti = 50 cristalli (contribuisce a percentuale totale)
+- **Tymora:** Recuperare tutte le casse senza attivare funghi gialli E senza combattere il Violet Fungus MUTATO = 10%
 
-**Note DM:** 
+**Note DM:**
 - Questa stanza è completamente opzionale - i PG possono ignorarla
-- È una "trappola per avidi" - le ricompense sono buone ma il rischio è presente
-- Se riconoscono il Violet Fungus prima dell'attacco, possono usare attacchi a distanza o evitarlo
-- L'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive
+- **ATTENZIONE: Questo è uno scontro BOSS CR 6!** Molto più pericoloso del Carrion Crawler
+- Il Violet Fungus Mutato ha 120 PF, CA 13, e chiama 4-6 Spore Ambulanti come alleati
+- Ha una Membrana Protettiva che lo rende resistente al fuoco (prima 20 danni fuoco), poi vulnerabile
+- Se riconoscono il Violet Fungus prima dell'attacco, possono usare tattiche a distanza
+- Sotto il 50% PF attiva Frenesia Fungina (attacco extra + rigenerazione potenziata)
+- Vedi VIOLET_FUNGUS_MUTATO.md per tutte le meccaniche dettagliate
 
 
 ---

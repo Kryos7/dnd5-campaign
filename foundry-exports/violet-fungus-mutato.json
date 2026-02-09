@@ -3,14 +3,14 @@
   "type": "npc",
   "system": {
     "description": {
-      "value": "<p><strong>\"Fungo Velenoso Evoluto - SFIDA LETALE\"</strong></p><p>Questo Violet Fungus ha vissuto per decenni in questo vicolo cieco, nutrendosi di ratti, contrabbandieri smarriti e altri funghi. L'esposizione costante alle spore tossiche dei funghi gialli e all'acqua stagnante contaminata lo ha mutato in una creatura più grande, aggressiva e pericolosa.</p><h3>Aspetto Mutato</h3><ul><li><strong>Dimensioni:</strong> Grande (3m altezza invece di 1.5m standard)</li><li><strong>Cappello:</strong> Violaceo con macchie giallo-verdastre pulsanti (spore integrate)</li><li><strong>Tentacoli:</strong> 6 tentacoli invece di 4 (più lunghi e spessi, fino a 4.5m estensione)</li><li><strong>Radici:</strong> Sommerse nell'acqua stagnante, visibili come ombre scure sotto la superficie</li><li><strong>Aura:</strong> Emette vapori tossici visibili (nebbia verdastra leggera in raggio 3m)</li><li><strong>Movimento:</strong> Lento ma inesorabile, radici si muovono nell'acqua come serpenti</li></ul>",
+      "value": "<p><strong>\"Fungo Velenoso Evoluto - BOSS ENCOUNTER\"</strong></p><p>Questo Violet Fungus ha vissuto per decenni in questo vicolo cieco, nutrendosi di ratti, contrabbandieri smarriti e altri funghi. L'esposizione costante alle spore tossiche dei funghi gialli e all'acqua stagnante contaminata lo ha mutato in una creatura più grande, aggressiva e pericolosa.</p><h3>Aspetto Mutato</h3><ul><li><strong>Dimensioni:</strong> Grande (3m altezza invece di 1.5m standard)</li><li><strong>Cappello:</strong> Violaceo con macchie giallo-verdastre pulsanti (spore integrate)</li><li><strong>Tentacoli:</strong> 6 tentacoli invece di 4 (più lunghi e spessi, fino a 4.5m estensione)</li><li><strong>Radici:</strong> Sommerse nell'acqua stagnante, visibili come ombre scure sotto la superficie</li><li><strong>Membrana:</strong> Strato di muco umido che lo protegge dal fuoco (inizialmente)</li><li><strong>Aura:</strong> Emette vapori tossici visibili (nebbia verdastra leggera in raggio 4.5m)</li></ul>",
       "chat": "",
       "unidentified": ""
     },
     "source": "Homebrew - Campagna Fogne Superiori",
     "details": {
       "biography": {
-        "value": "<h2>CR 4 - Sfida opzionale difficile per party livello 5</h2><p><strong>La fuga è un'opzione valida!</strong></p>",
+        "value": "<h2>CR 6 - Scontro Deadly per party di 5 PG livello 5</h2><p><strong>La fuga è un'opzione valida!</strong></p><p>Include 4-6 Spore Ambulanti come alleati.</p>",
         "public": ""
       },
       "alignment": "Senza allineamento",
@@ -22,25 +22,25 @@
         "custom": "Pianta"
       },
       "environment": "Fogne, Sotterranei umidi",
-      "cr": 4,
+      "cr": 6,
       "spellLevel": 0,
       "xp": {
-        "value": 1100
+        "value": 2300
       }
     },
     "attributes": {
       "ac": {
-        "flat": 10,
+        "flat": 13,
         "calc": "natural",
         "formula": "",
-        "label": "Pelle fungina ispessita"
+        "label": "Pelle fungina + muco protettivo"
       },
       "hp": {
-        "value": 75,
-        "max": 75,
+        "value": 120,
+        "max": 120,
         "temp": 0,
         "tempmax": 0,
-        "formula": "10d10+20"
+        "formula": "13d10+39"
       },
       "init": {
         "ability": "dex",
@@ -65,9 +65,9 @@
       }
     },
     "abilities": {
-      "str": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "str": { "value": 18, "proficient": 0, "bonuses": { "check": "", "save": "" } },
       "dex": { "value": 3, "proficient": 0, "bonuses": { "check": "", "save": "" } },
-      "con": { "value": 15, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
       "int": { "value": 1, "proficient": 0, "bonuses": { "check": "", "save": "" } },
       "wis": { "value": 5, "proficient": 0, "bonuses": { "check": "", "save": "" } },
       "cha": { "value": 1, "proficient": 0, "bonuses": { "check": "", "save": "" } }
@@ -75,8 +75,8 @@
     "traits": {
       "size": "lg",
       "di": { "value": ["poison"], "bypasses": [], "custom": "Veleno" },
-      "dr": { "value": ["piercing"], "bypasses": [], "custom": "Perforanti (cappello spugnoso assorbe frecce)" },
-      "dv": { "value": ["fire"], "bypasses": [], "custom": "Fuoco (danno RADDOPPIATO)" },
+      "dr": { "value": ["piercing"], "bypasses": [], "custom": "Perforanti (cappello spugnoso)" },
+      "dv": { "value": [], "bypasses": [], "custom": "Fuoco (vedi Membrana Protettiva)" },
       "ci": { "value": ["blinded", "deafened", "poisoned", "frightened"], "custom": "Accecato, Assordato, Avvelenato, Impaurito" },
       "languages": { "value": [], "custom": "—" }
     },
@@ -94,6 +94,17 @@
   },
   "items": [
     {
+      "name": "Membrana Protettiva",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il fungo ha sviluppato uno strato di <strong>muco umido</strong> che lo protegge dal fuoco.</p><ul><li>Inizia con <strong>resistenza al fuoco</strong></li><li>Traccia i danni da fuoco subiti (anche se dimezzati)</li><li>Quando raggiunge <strong>20 danni da fuoco cumulativi</strong>:</li><li>La membrana si dissolve con un sibilo</li><li>Diventa <strong>vulnerabile al fuoco</strong> per il resto del combattimento</li><li>I <strong>funghi gialli si attivano immediatamente</strong></li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
       "name": "Falsa Apparenza",
       "type": "feat",
       "system": {
@@ -109,12 +120,56 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>Il fungo emette costantemente vapori velenosi in un'aura di raggio <strong>3m</strong>.</p><p><strong>Effetto:</strong> All'inizio del turno di ogni creatura entro l'aura:</p><ul><li>TS Costituzione <strong>CD 14</strong></li><li><strong>Fallimento:</strong> 1d6 danni da veleno</li><li><strong>Successo:</strong> Nessun danno</li><li>Se già avvelenata: <strong>svantaggio</strong> al TS</li></ul><p><em>L'aura è visibile come nebbia verdastra. Combattere in mischia significa subire questo danno OGNI round.</em></p>"
+          "value": "<p>Il fungo emette costantemente vapori velenosi in un'aura di raggio <strong>4.5m</strong> (6m e 2d6 in Frenesia).</p><p><strong>Effetto:</strong> All'inizio del turno di ogni creatura entro l'aura:</p><ul><li>TS Costituzione <strong>CD 15</strong></li><li><strong>Fallimento:</strong> 1d6 danni da veleno (2d6 in Frenesia)</li><li><strong>Successo:</strong> Nessun danno</li><li>Se già avvelenata: <strong>svantaggio</strong> al TS</li></ul>"
         },
         "activation": { "type": "", "cost": null },
         "requirements": "",
-        "save": { "ability": "con", "dc": 14, "scaling": "flat" },
+        "save": { "ability": "con", "dc": 15, "scaling": "flat" },
         "damage": { "parts": [["1d6", "poison"]] }
+      }
+    },
+    {
+      "name": "Mente Alveare",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Violet Fungus Mutato condivide i sensi con le sue Spore Ambulanti.</p><ul><li><strong>Non può essere sorpreso</strong> finché almeno una Spora è viva</li><li>Percepisce attraverso le Spore (vista cieca 9m da ciascuna)</li><li>Le Spore agiscono nello stesso turno del boss</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Simbiosi Sporale",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Quando una Spora Ambulante muore entro <strong>9m</strong> dal Violet Fungus Mutato:</p><ul><li>Il boss <strong>recupera 8 PF</strong></li><li>La sua <strong>Nuvola di Spore si ricarica automaticamente</strong></li></ul><p><em>Dilemma tattico: uccidere le spore cura il boss!</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Richiamo delle Spore",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>All'inizio del turno del Violet Fungus Mutato, se ci sono <strong>meno di 2 Spore Ambulanti</strong> in vita:</p><ul><li><strong>1d2 nuove Spore</strong> emergono dall'acqua</li><li>Appaiono in punti a scelta del DM entro 6m dal boss</li><li>Agiscono immediatamente dopo essere emerse</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Frenesia Fungina (Fase 2)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Quando il Violet Fungus Mutato scende sotto <strong>60 PF</strong> (50%), entra in frenesia:</p><ul><li><strong>+1 attacco</strong> con Multiattacco (3 tentacoli invece di 2)</li><li>L'Aura Tossica aumenta a <strong>raggio 6m</strong> e fa <strong>2d6 veleno</strong></li><li><strong>Perde la Rigenerazione</strong></li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Sotto 60 PF"
       }
     },
     {
@@ -129,24 +184,11 @@
       }
     },
     {
-      "name": "Reazione Simbiotica",
+      "name": "Rigenerazione Fungina (Solo Fase 1)",
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>Il fungo ha sviluppato una relazione simbiotica con i <strong>funghi gialli tossici</strong> circostanti.</p><p><strong>Trigger:</strong> Quando il fungo viene ferito O quando viene effettuato un attacco rumoroso entro 3m.</p><p><strong>Effetto:</strong> I funghi gialli si attivano automaticamente:</p><ol><li><strong>Urlo stridulo:</strong> Suono acuto (allerta creature vicine)</li><li><strong>Rilascio spore:</strong> Tutte le creature entro <strong>6m dai funghi gialli</strong>:<ul><li>TS Costituzione <strong>CD 14</strong></li><li><strong>Fallimento:</strong> 3d4 veleno + <strong>avvelenato 1 ora</strong></li><li><strong>Successo:</strong> Metà danni</li></ul></li><li>I funghi rimangono attivi per <strong>3 round</strong>, rilasciando spore ogni round</li></ol>"
-        },
-        "activation": { "type": "", "cost": null },
-        "requirements": "Fungo ferito o attacco rumoroso entro 3m",
-        "save": { "ability": "con", "dc": 14, "scaling": "flat" },
-        "damage": { "parts": [["3d4", "poison"]] }
-      }
-    },
-    {
-      "name": "Rigenerazione Fungina",
-      "type": "feat",
-      "system": {
-        "description": {
-          "value": "<p>Il fungo assorbe nutrienti dall'acqua stagnante per auto-ripararsi.</p><p><strong>Effetto:</strong> All'inizio del turno del fungo, se ha almeno 1 PF e non ha subito danni da fuoco nell'ultimo round:</p><ul><li>Recupera <strong>5 PF</strong></li></ul><p><em><strong>Interruzione:</strong> Qualsiasi danno da fuoco blocca la rigenerazione per quel turno.</em></p>"
+          "value": "<p>Il fungo assorbe nutrienti dall'acqua stagnante per auto-ripararsi.</p><p><strong>Effetto:</strong> All'inizio del turno del fungo, se ha almeno 1 PF e non ha subito danni da fuoco nell'ultimo round:</p><ul><li>Recupera <strong>10 PF</strong></li></ul><p><em><strong>Interruzione:</strong> Qualsiasi danno da fuoco blocca la rigenerazione per quel turno.</em></p><p><em>Perde questa abilità quando entra in Frenesia Fungina (sotto 60 PF).</em></p>"
         },
         "activation": { "type": "", "cost": null },
         "requirements": ""
@@ -157,11 +199,11 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p><strong>Trigger:</strong> Ogni volta che il fungo subisce danni da attacchi <strong>taglienti</strong> o <strong>perforanti</strong>.</p><p><strong>Effetto:</strong></p><ul><li>Sfera raggio <strong>1,5m</strong> centrata sul fungo</li><li>TS Costituzione <strong>CD 14</strong></li><li><strong>Fallimento:</strong> 2d6 veleno</li><li><strong>Successo:</strong> Metà danni</li></ul><p><em>Questo rende gli attacchi in mischia con armi taglienti/perforanti molto pericolosi. Preferire attacchi contundenti o fuoco.</em></p>"
+          "value": "<p><strong>Trigger:</strong> Ogni volta che il fungo subisce danni da attacchi <strong>taglienti</strong> o <strong>perforanti</strong>.</p><p><strong>Effetto:</strong></p><ul><li>Sfera raggio <strong>1,5m</strong> centrata sul fungo</li><li>TS Costituzione <strong>CD 15</strong></li><li><strong>Fallimento:</strong> 2d6 veleno</li><li><strong>Successo:</strong> Metà danni</li></ul>"
         },
         "activation": { "type": "reaction", "cost": 0 },
         "requirements": "Subisce danni taglienti o perforanti",
-        "save": { "ability": "con", "dc": 14, "scaling": "flat" },
+        "save": { "ability": "con", "dc": 15, "scaling": "flat" },
         "damage": { "parts": [["2d6", "poison"]] }
       }
     },
@@ -170,7 +212,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>Il fungo effettua <strong>due attacchi</strong> con Tentacolo Avvelenato contro uno o più bersagli entro portata.</p>"
+          "value": "<p>Il fungo effettua <strong>due attacchi</strong> con Tentacolo Avvelenato (<strong>tre in Frenesia</strong>) contro uno o più bersagli entro portata.</p>"
         },
         "activation": { "type": "action", "cost": 1 },
         "requirements": ""
@@ -181,15 +223,15 @@
       "type": "weapon",
       "system": {
         "description": {
-          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata 4,5m, una creatura.</p><p><strong>Colpito:</strong></p><ul><li><strong>10 (2d6+3)</strong> danni contundenti</li><li><strong>+ 7 (3d4)</strong> danni da veleno</li></ul><p>Il bersaglio deve superare <strong>TS Costituzione CD 15</strong> o essere <strong>avvelenato</strong>.</p><h4>Effetto avvelenamento persistente:</h4><ul><li>Subisce <strong>10 (3d6)</strong> danni da veleno all'inizio di ciascuno dei suoi turni</li><li>Può ripetere il TS alla fine di ciascuno dei suoi turni</li></ul><p><em>Questo veleno è <strong>cumulativo</strong> - colpi multipli = veleni multipli attivi!</em></p>"
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +7 al colpire, portata 4,5m, una creatura.</p><p><strong>Colpito:</strong></p><ul><li><strong>11 (2d6+4)</strong> danni contundenti</li><li><strong>+ 7 (3d4)</strong> danni da veleno</li></ul><p>Il bersaglio deve superare <strong>TS Costituzione CD 16</strong> o essere <strong>avvelenato</strong>.</p><h4>Effetto avvelenamento persistente:</h4><ul><li>Subisce <strong>10 (3d6)</strong> danni da veleno all'inizio di ciascuno dei suoi turni</li><li>Può ripetere il TS alla fine di ciascuno dei suoi turni</li></ul><p><em>Questo veleno è <strong>cumulativo</strong> - colpi multipli = veleni multipli attivi!</em></p>"
         },
         "quantity": 1,
         "weight": 0,
         "actionType": "mwak",
-        "attackBonus": "5",
+        "attackBonus": "7",
         "damage": {
           "parts": [
-            ["2d6 + 3", "bludgeoning"],
+            ["2d6 + 4", "bludgeoning"],
             ["3d4", "poison"]
           ],
           "versatile": ""
@@ -198,7 +240,7 @@
         "ability": "str",
         "activation": { "type": "action", "cost": 1 },
         "target": { "value": 1, "type": "creature" },
-        "save": { "ability": "con", "dc": 15, "scaling": "flat" }
+        "save": { "ability": "con", "dc": 16, "scaling": "flat" }
       }
     },
     {
@@ -206,12 +248,12 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p><strong>Azione (Ricarica 5-6).</strong></p><p>Il fungo rilascia una nuvola concentrata di spore tossiche dal suo cappello.</p><p><strong>Area:</strong> Cono di <strong>4,5m</strong> | <strong>TS Costituzione CD 15</strong></p><p><strong>Effetti:</strong></p><ul><li><strong>Fallimento:</strong> 4d6 veleno + <strong>avvelenato 1 minuto</strong> + vista oscurata 1 round</li><li><strong>Successo:</strong> Metà danni, nessuna condizione, vista oscurata comunque</li></ul><p><em>Ricarica: Tira 1d6 all'inizio del turno. Con 5-6 si ricarica.</em></p>"
+          "value": "<p><strong>Azione (Ricarica 5-6).</strong></p><p>Il fungo rilascia una nuvola concentrata di spore tossiche dal suo cappello.</p><p><strong>Area:</strong> Cono di <strong>4,5m</strong> | <strong>TS Costituzione CD 16</strong></p><p><strong>Effetti:</strong></p><ul><li><strong>Fallimento:</strong> 4d6 veleno + <strong>avvelenato 1 minuto</strong> + vista oscurata 1 round</li><li><strong>Successo:</strong> Metà danni, nessuna condizione, vista oscurata comunque</li></ul><p><em>Ricarica: Tira 1d6 all'inizio del turno. Con 5-6 si ricarica. Si ricarica automaticamente quando muore una Spora!</em></p>"
         },
         "activation": { "type": "action", "cost": 1 },
         "requirements": "",
         "recharge": { "value": 5, "charged": true },
-        "save": { "ability": "con", "dc": 15, "scaling": "flat" },
+        "save": { "ability": "con", "dc": 16, "scaling": "flat" },
         "damage": { "parts": [["4d6", "poison"]] },
         "target": { "value": 15, "units": "ft", "type": "cone" }
       }
@@ -221,12 +263,12 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p><strong>Azione Bonus (1/round).</strong></p><p>Il fungo usa le sue radici sommerse per tentare di afferrare una creatura.</p><p><strong>Bersaglio:</strong> Una creatura entro <strong>3m</strong> che sta <strong>toccando l'acqua</strong>.</p><p><strong>TS Destrezza CD 14</strong> o la creatura è <strong>afferrata</strong>.</p><h4>Effetti dell'afferramento:</h4><ul><li>Velocità ridotta a 0</li><li>Trascinata verso il fungo di <strong>1,5m</strong> all'inizio del turno del fungo (automatico)</li><li><strong>Svantaggio</strong> ai TS contro Tentacolo Avvelenato</li></ul><p><strong>Liberarsi:</strong> Azione, Atletica o Acrobazia contro CD 15</p><p><em>Il fungo può avere fino a <strong>3 creature afferrate</strong> contemporaneamente.</em></p>"
+          "value": "<p><strong>Azione Bonus (1/round).</strong></p><p>Il fungo usa le sue radici sommerse per tentare di afferrare una creatura.</p><p><strong>Bersaglio:</strong> Una creatura entro <strong>4.5m</strong> che sta <strong>toccando l'acqua</strong>.</p><p><strong>TS Destrezza CD 15</strong> o la creatura è <strong>afferrata</strong>.</p><h4>Effetti dell'afferramento:</h4><ul><li>Velocità ridotta a 0</li><li>Trascinata verso il fungo di <strong>1,5m</strong> all'inizio del turno del fungo</li><li><strong>Svantaggio</strong> ai TS contro Tentacolo Avvelenato</li></ul><p><strong>Liberarsi:</strong> Azione, Atletica o Acrobazia contro CD 16</p><p><em>Il fungo può avere fino a <strong>3 creature afferrate</strong> contemporaneamente.</em></p>"
         },
         "activation": { "type": "bonus", "cost": 1 },
-        "requirements": "Bersaglio tocca l'acqua, entro 3m",
+        "requirements": "Bersaglio tocca l'acqua, entro 4.5m",
         "uses": { "value": 1, "max": "1", "per": "turn" },
-        "save": { "ability": "dex", "dc": 14, "scaling": "flat" }
+        "save": { "ability": "dex", "dc": 15, "scaling": "flat" }
       }
     },
     {
@@ -234,7 +276,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p><strong>Reazione (1/round).</strong></p><p><strong>Trigger:</strong> Quando il fungo viene colpito da un attacco in mischia.</p><p><strong>Effetto:</strong> Il fungo può usare la sua reazione per effettuare un <strong>attacco di opportunità</strong> con un tentacolo contro l'attaccante.</p><ul><li>Usa le stesse statistiche di Tentacolo Avvelenato</li><li>Si risolve dopo che il danno dell'attacco originale è stato inflitto</li><li>Limitazione: 1 volta per round</li></ul><p><em>Rende gli attacchi in mischia molto rischiosi!</em></p>"
+          "value": "<p><strong>Reazione (1/round).</strong></p><p><strong>Trigger:</strong> Quando il fungo viene colpito da un attacco in mischia.</p><p><strong>Effetto:</strong> Il fungo può usare la sua reazione per effettuare un <strong>attacco di opportunità</strong> con un tentacolo contro l'attaccante.</p><ul><li>Usa le stesse statistiche di Tentacolo Avvelenato</li><li>Si risolve dopo che il danno dell'attacco originale è stato inflitto</li></ul>"
         },
         "activation": { "type": "reaction", "cost": 1 },
         "requirements": "Colpito da un attacco in mischia",
@@ -244,72 +286,71 @@
   ],
   "flags": {},
   "img": "images/mostri/violet_fungus_mutato.png",
-  "prpitype": "character",
+  "prototypeToken": {
+    "name": "Violet Fungus Mutato",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "bar1": { "attribute": "attributes.hp" }
+  },
   "folder": null,
   "sort": 0,
   "ownership": { "default": 0 },
   "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
   "customData": {
-    "cristalli": 30,
-    "cristalliDescrizione": "1 Cristallo Medio",
-    "location": "Vicolo cieco - Sfida opzionale",
+    "cristalli": 50,
+    "cristalliDescrizione": "50 Cristalli",
+    "location": "Zona 13 - Il Vicolo dei Funghi (Opzionale)",
     "partyLevel": 5,
-    "warning": "SFIDA LETALE - La fuga è un'opzione valida!",
-    "tactics": {
-      "round1_sorpresa": {
-        "descrizione": "Rimane immobile (Falsa Apparenza) finché un PG entra entro 4,5m",
-        "azioni": "Multiattacco contro il PG più vicino (2 tentacoli). Azione Bonus: Afferrare con Radici se il PG è nell'acqua. Aura Tossica inizia a danneggiare automaticamente."
+    "partySize": 5,
+    "difficulty": "Deadly",
+    "estimatedPE": "2800-3000",
+    "warning": "BOSS ENCOUNTER - La fuga è un'opzione valida!",
+    "allies": {
+      "name": "Spore Ambulanti",
+      "count": "4-6",
+      "cr": "1/4",
+      "pe": 50,
+      "hp": 13,
+      "ac": 8,
+      "attack": "+3, 1d6+1 contundenti + 1d6 veleno",
+      "special": "Esplodono alla morte (1.5m, CD 12, 2d6 veleno + avvelenato)"
+    },
+    "phases": {
+      "phase1": {
+        "name": "Normale",
+        "hpThreshold": "Sopra 60 PF",
+        "attacks": 2,
+        "auraRadius": "4.5m",
+        "auraDamage": "1d6",
+        "regeneration": "10 PF/round"
       },
-      "round2_3_pressione": {
-        "descrizione": "Pressione aggressiva",
-        "prioritaBersagli": ["PG già avvelenati", "PG afferrati (hanno svantaggio)", "PG feriti sotto metà PF", "Caster/Arcieri vicini"],
-        "azioni": "Multiattacco ogni round. Radici trascinano PG afferrati (1,5m/round). Nuvola di Spore se può colpire 2+ PG."
-      },
-      "round4_plus_simbiotico": {
-        "descrizione": "A questo punto il fungo è stato ferito → funghi gialli attivati",
-        "doppiaMinaccia": "Aura del fungo: 1d6 veleno/round (raggio 3m). Spore funghi gialli: 3d4 veleno + avvelenato (raggio 6m). Rigenerazione: 5 PF/round (se non bruciato). Spasmo Difensivo contro attaccanti in mischia."
-      },
-      "fuga": {
-        "descrizione": "Il Violet Fungus Mutato NON fugge mai, nemmeno sotto 10 PF",
-        "motivo": "È una pianta territoriale radicata all'acqua. Difende le sue 'riserve di cibo'. Combatte fino alla morte.",
-        "morte": "Emette uno sbuffo finale di spore, collassa e si dissolve in polvere luminosa, lasciando cadere 1 Cristallo Medio."
+      "phase2": {
+        "name": "Frenesia Fungina",
+        "hpThreshold": "Sotto 60 PF",
+        "attacks": 3,
+        "auraRadius": "6m",
+        "auraDamage": "2d6",
+        "regeneration": "Nessuna"
       }
     },
-    "strategie": {
-      "efficaci": {
-        "fuoco": {
-          "descrizione": "Vulnerabilità a fuoco = danno RADDOPPIATO + blocca rigenerazione",
-          "esempi": ["Burning Hands (1°): 3d6 → 6d6 (media 21 danni!)", "Scorching Ray (2°): 2d6/raggio → 4d6/raggio", "Torce/Olio: Anche 1d4 → 2d4 aiuta", "Alchemist's Fire: 1d4 → 2d4 + persistente"]
-        },
-        "distanza": {
-          "descrizione": "Evita Aura, Spasmo Difensivo, e Afferrare",
-          "consigli": "Posizionarsi a 6-7m (fuori portata). Incantesimi: Eldritch Blast, Magic Missile, Firebolt."
-        },
-        "evitareAcqua": {
-          "descrizione": "Immune ad Afferrare + movimento normale",
-          "consigli": "Stare sui bordi asciutti. Saltare sulle casse. Levitazione magica."
-        },
-        "web": {
-          "descrizione": "Fungo ha DES -4 → quasi certamente fallisce TS",
-          "effetto": "Fungo trattenuto = svantaggio tutti i suoi attacchi. Probabilità successo: ~80%."
-        }
-      },
-      "inefficaci": [
-        "Usare veleno: Immunità totale",
-        "Negoziare: INT 1, è una pianta carnivora",
-        "Combattere silenziosamente: Funghi gialli si attivano comunque quando ferito",
-        "Aspettare che si avvicini: Velocità 1,5m, mai si muove"
-      ]
+    "fireProtection": {
+      "name": "Membrana Protettiva",
+      "initialState": "Resistenza al fuoco",
+      "threshold": "20 danni da fuoco cumulativi",
+      "finalState": "Vulnerabilità al fuoco"
     },
     "favoreDivino": {
       "tempus": {
-        "nessunKO": "+15 Favore (nessun PG ridotto a 0 PF)",
-        "menoRound": "+10 Favore (sconfitto in 5 round o meno)",
-        "usoTattico": "+5 Favore (uso tattico dell'ambiente, es. fuoco)"
+        "nessunKO": "+20 Favore (nessun PG ridotto a 0 PF)",
+        "menoRound": "+15 Favore (sconfitto in 5 round o meno)",
+        "usoTattico": "+10 Favore (uso tattico dell'ambiente)"
       },
       "tymora": {
-        "ritirata": "+20 Favore (ritirata tattica se party sotto 30% HP totali - saggezza dell'audace)",
-        "vittoria": "+10 Favore (vittoria contro aspettative)"
+        "ritirata": "+25 Favore (ritirata tattica se party sotto 30% HP totali)",
+        "vittoriaSenzaFuoco": "+15 Favore (vittoria senza usare fuoco)"
       }
     }
   }

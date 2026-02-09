@@ -20,12 +20,13 @@ Disturbare l'acqua (camminare) o toccare i funghi gialli scatena:
 - **Rilascio di spore:** TS Costituzione CD 13 o avvelenato 1 ora + 2d4 danni da veleno
 - **Suono stridulo** (come funghi urlanti) che allerta eventuali creature vicine (se ce ne sono nelle vicinanze)
 
-### **Violet Fungus nascosto:**
+### **Violet Fungus Mutato (CR 6 BOSS):**
 - **Percezione CD 15 o Natura CD 13:** Riconoscerlo PRIMA che attacchi
-  - Con successo: "Quel fungo viola non è come gli altri - sembra un Violet Fungus, una creatura carnivora che attacca con tentacoli paralizzanti!"
-- Sta immobile tra le casse, sembra un fungo grande ma normale
-- Attacca con tentacoli velenosi quando un PG arriva entro 3m
-- **1 Violet Fungus** (MM pg 138)
+  - Con successo: "Quel fungo viola non è come gli altri - è ENORME! Sembra un Violet Fungus mutato, una versione molto più pericolosa della creatura standard!"
+- Sta immobile tra le casse, sembra un fungo grande ma normale (3m altezza, 6 tentacoli)
+- Attacca con tentacoli velenosi quando un PG arriva entro 4.5m
+- **1 Violet Fungus Mutato (CR 6, 120 PF, CA 13)** + **4-6 Spore Ambulanti** (vedi VIOLET_FUNGUS_MUTATO.md)
+- **ATTENZIONE:** Questo è uno scontro BOSS! Meccaniche speciali: Membrana Protettiva, Frenesia Fungina, Richiamo delle Spore, Azioni Leggendarie
 
 ### **Combattimento:**
 - Il fungo attacca **silenziosamente** (no suono = funghi gialli urlanti non si attivano automaticamente)
@@ -44,48 +45,42 @@ Disturbare l'acqua (camminare) o toccare i funghi gialli scatena:
 - Boccetta di **Antitossina** (vendibile 50 mo, o utilizzabile contro veleni)
 - Piccolo **kit di pronto soccorso** (5 usi, concede vantaggio a prove Medicina)
 
-**Pericoli:** Funghi tossici, Violet Fungus, possibile allerta
+**Pericoli:** Funghi tossici, Violet Fungus MUTATO (CR 6 BOSS!) + 4-6 Spore Ambulanti, possibile allerta
 
-**Cristalli:** 8 (dal Violet Fungus quando sconfitto)
+**Cristalli:** 50 Cristalli (dal Violet Fungus Mutato quando sconfitto)
 
-**Favore Divino:** 
-- **Tempus:** Sconfiggere il Violet Fungus = cristalli normali (contribuisce a percentuale totale)
-- **Tymora:** Recuperare tutte le casse senza attivare funghi gialli E senza combattere il Violet Fungus = 10%
+**Favore Divino:**
+- **Tempus:** Sconfiggere il Violet Fungus MUTATO + Spore = 50 cristalli (contribuisce alla percentuale totale)
+- **Tymora:** Recuperare tutte le casse senza attivare funghi gialli E senza combattere il Violet Fungus MUTATO = 10%
 
-**Note DM:** 
+**Note DM:**
 - Questa stanza è completamente opzionale - i PG possono ignorarla
-- È una "trappola per avidi" - le ricompense sono buone ma il rischio è presente
-- Se riconoscono il Violet Fungus prima dell'attacco, possono usare attacchi a distanza o evitarlo
-- L'Antitossina e il kit di pronto soccorso sono particolarmente utili per le stanze successive
+- **ATTENZIONE: Questo è uno scontro BOSS CR 6!** Molto più pericoloso del Carrion Crawler
+- Il Violet Fungus Mutato ha 120 PF, CA 13, e chiama 4-6 Spore Ambulanti come alleati
+- Ha una Membrana Protettiva (resistenza fuoco → poi vulnerabilità dopo 20 danni fuoco)
+- Sotto il 50% PF attiva Frenesia Fungina (attacco extra + rigenerazione potenziata)
+- Vedi **VIOLET_FUNGUS_MUTATO.md** per tutte le meccaniche dettagliate
 
 ---
 
-### **STATISTICHE: VIOLET FUNGUS**
+### **STATISTICHE: VIOLET FUNGUS MUTATO (CR 6 BOSS)**
 
-*Pianta, senza allineamento*
+> **NOTA:** Le statistiche complete del Violet Fungus Mutato sono disponibili in **VIOLET_FUNGUS_MUTATO.md**
 
-**Classe Armatura:** 5  
-**Punti Ferita:** 18 (4d8)  
-**Velocità:** 1,5m
+**Statistiche Rapide:**
+- **CA 13** | **PF 120** | **CR 6 (2.300 PE)**
+- **Cristalli:** 50
+- **Attacco:** +7, portata 4.5m, 2d6+4 contundenti + 2d6 veleno
+- **Multiattacco:** 3 Tentacoli (4 in Frenesia)
+- **CD Salvezza:** 14
 
-**FOR** 3 (-4) | **DES** 1 (-5) | **COS** 10 (+0)  
-**INT** 1 (-5) | **SAG** 3 (-4) | **CAR** 1 (-5)
+**Abilità Chiave:**
+- **Membrana Protettiva:** Resistenza fuoco → Vulnerabilità dopo 20 danni fuoco
+- **Frenesia Fungina:** Sotto 60 PF, +1 attacco e rigenerazione potenziata
+- **Azioni Leggendarie:** 3/round
+- **Alleati:** 4-6 Spore Ambulanti (esplodono quando muoiono, curano il boss)
 
-**Immunità alle Condizioni:** accecato, assordato, impaurito  
-**Sensi:** vista cieca 9m (cieco oltre questa distanza), Percezione passiva 6  
-**Linguaggi:** —  
-**Grado di Sfida:** 1/4 (50 PE) | **Cristalli:** 8
-
-**Falsa Apparenza:** Finché il fungo rimane immobile, è indistinguibile da un fungo ordinario.
-
-**Tentacolo Avvelenato (Ricarica dopo riposo breve o lungo):** Attacco con Arma da Mischia: +2 al colpire, portata 3m, una creatura. Colpito: 4 (1d8) danni necrotici. Il bersaglio deve superare un tiro salvezza su Costituzione con CD 13 o essere avvelenato. Finché è avvelenato in questo modo, il bersaglio subisce 3 (1d6) danni da veleno all'inizio di ciascuno dei suoi turni. Il bersaglio può ripetere il tiro salvezza alla fine di ciascuno dei suoi turni, ponendo fine all'effetto su di sé con un successo.
-
-**Note tattiche DM:**
-- Il Violet Fungus ha portata 3m con i tentacoli - può colpire anche PG che non sono direttamente adiacenti
-- La condizione di avvelenamento è pericolosa (danni continuativi)
-- Ha CA bassissima (5) - facilissimo da colpire
-- Non insegue - rimane nella sua posizione e attacca solo chi si avvicina
-- Se i PG usano attacchi a distanza, possono ucciderlo senza mai entrare in portata
+**Per tutte le meccaniche, tattiche e dettagli:** Vedi **VIOLET_FUNGUS_MUTATO.md**
 
 ---
 
@@ -329,11 +324,11 @@ Entrambe sono completamente facoltative e possono essere ignorate dai giocatori 
 
 ## RIEPILOGO RISORSE AGGIUNTE
 
-### Stanza ?? (Vicolo dei Funghi)
-- **Cristalli:** 8 (Violet Fungus)
+### Stanza ?? (Vicolo dei Funghi) - BOSS ENCOUNTER
+- **Cristalli:** 50 (Violet Fungus Mutato CR 6)
 - **Oro:** 28 mo
 - **Consumabili:** 1 razione, 1 Antitossina, 1 kit pronto soccorso
-- **Favore Divino:** Tempus (cristalli) o Tymora 10% (evitare tutto)
+- **Favore Divino:** Tempus (50 cristalli = ~25% totale Piano 1) o Tymora 10% (evitare tutto)
 
 ### Stanza ? (Camera delle Quattro Leve)
 - **Cristalli:** 0
@@ -344,7 +339,7 @@ Entrambe sono completamente facoltative e possono essere ignorate dai giocatori 
 - **Favore Divino:** Mystra 20% (tomo) + Tymora 15% (perfezione)
 
 **Totale aggiunto al Piano 1:**
-- +8 cristalli
+- +50 cristalli (dal Violet Fungus Mutato CR 6 BOSS)
 - +73 mo
 - +1 Tomo Mystra
 - +1 Chiave speciale (narrativa)
