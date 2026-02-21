@@ -1,0 +1,227 @@
+{
+  "name": "Sommerso Completo",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"La Trasformazione Avanzata\"</strong></p><p>Un Sommerso in stadio avanzato di trasformazione, quasi irriconoscibile come ex-umano. La membrana gelatinosa è più densa e opaca, le ossa completamente ammorbidite permettono al corpo di deformarsi per passare attraverso spazi stretti. Gli attacchi con pseudopodo sono più potenti e sistematici — questo Sommerso ha imparato a cacciare.</p><h3>Aspetto</h3><ul><li><strong>Corpo:</strong> Più grande di un Sommerso Recente, meno sagoma umanoide riconoscibile</li><li><strong>Membrana:</strong> Più densa, quasi traslucida invece che trasparente — il corpo interno è solo un'ombra scura</li><li><strong>Nessun vestigio:</strong> Nessun brandello di vestiti visibile — tutto è stato assorbito o dissolto</li><li><strong>Deformazione:</strong> Può appiattire e restringere il corpo per passare attraverso aperture di 30cm</li><li><strong>Suono:</strong> Gorgoglio più profondo, quasi un rumore di pompa idraulica</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Profonde",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 2 - Le Fogne Profonde | CR 2 | Party livello 5</h2><p>Zona 23 (Accampamento dei Sommersi): 2 Sommersi Completi emergono nei Round 3-4 dell'ondata, dopo i Sommersi Recenti. Agiscono come 'tenants' che si muovono verso i PG sulle passerelle, cercando di trascinarli in acqua.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Aberrazione (ex-umanoide, stadio avanzato)"
+      },
+      "environment": "Fogne profonde, ambienti acquatici corrotti",
+      "cr": 2,
+      "spellLevel": 0,
+      "xp": {
+        "value": 450
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 10,
+        "calc": "natural",
+        "formula": "",
+        "label": "Membrana gelatinosa densa"
+      },
+      "hp": {
+        "value": 38,
+        "max": 38,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "5d8+15"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 40,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 30,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 60 ft; Vista cieca 9m"
+      }
+    },
+    "abilities": {
+      "str": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 10, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 2,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 8,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 2,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["poison", "acid"], "bypasses": [], "custom": "" },
+      "dr": { "value": ["bludgeoning"], "bypasses": [], "custom": "" },
+      "dv": { "value": ["fire", "radiant"], "bypasses": [], "custom": "" },
+      "ci": { "value": ["poisoned", "charmed", "exhaustion", "prone"], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Corpo Semi-Liquido",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il corpo è quasi completamente liquefatto, con una membrana densa che lo trattiene.</p><ul><li><strong>Resistenza</strong> ai danni contundenti</li><li>Può muoversi attraverso spazi stretti fino a 30cm senza stringersi (il corpo si deforma)</li><li>Immune ai danni da acido (il proprio fluido lo protegge)</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Schizzi Corrosivi",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Quando colpito in mischia entro 1,5m, l'attaccante subisce schizzi di fluido corrosivo.</p><p><strong>Effetto:</strong> 3 (1d6) danni da acido all'attaccante (automatico).</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Resilienza Melmosa",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Trigger:</strong> Se il danno riduce il Sommerso a 0 PF.</p><p><strong>Effetto:</strong> TS Costituzione CD (5 + danno subito). Successo = rimane a 1 PF.</p><p><strong>Non funziona</strong> contro fuoco o radianti.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Affinità Acquatica Superiore",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Sommerso Completo è quasi diventato parte dell'acqua corrotta.</p><ul><li><strong>Vantaggio</strong> ai tiri per colpire contro creature in acqua</li><li>Può respirare sott'acqua</li><li>Nuota a 12m (velocità di nuoto superiore)</li><li>Può passare attraverso spazi stretti fino a 30cm</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Multiattacco",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Sommerso Completo effettua <strong>due attacchi</strong> con Pseudopodo Corrosivo.</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pseudopodo Corrosivo",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong> 7 (1d8+3) danni contundenti + 3 (1d6) danni da acido.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "5",
+        "damage": {
+          "parts": [["1d8 + 3", "bludgeoning"], ["1d6", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Trascinamento",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Bonus.</strong></p><p><strong>Trigger:</strong> Se il Sommerso ha colpito una creatura con Pseudopodo questo turno.</p><p><strong>Effetto:</strong> Tenta di afferrare la creatura colpita.</p><p>Confronto: Atletica del Sommerso (+5) vs Atletica o Acrobazia del bersaglio.</p><p><strong>Se afferra:</strong> Il bersaglio è afferrato (velocità 0). Il Sommerso trascina la creatura di 1,5m per round verso l'acqua più profonda.</p><p><strong>Liberarsi:</strong> Azione + Atletica o Acrobazia vs CD 13 del Sommerso.</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Ha colpito con Pseudopodo questo turno"
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/sommerso-completo.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "10 cristalli piccoli",
+    "locations": [
+      "Zona 23 - L'Accampamento dei Sommersi (2, Round 3-4 dell'ondata)"
+    ],
+    "partyLevel": 5,
+    "loot": {
+      "gp": 0,
+      "items": [],
+      "note": "Svanisce in polvere ambrata come tutti i Sommersi."
+    },
+    "tactics": {
+      "obiettivo_primario": "Trascinare i PG dalle passerelle in acqua. In acqua i PG hanno movimento dimezzato, i Sommersi Completi no.",
+      "round1_2": "Avanzano verso i PG sulle passerelle. Usano il Trascinamento appena possibile.",
+      "round3_plus": "Priorità a bersagli già in acqua (vantaggio agli attacchi). Blocca le vie di fuga dalle passerelle.",
+      "deformazione": "Se un PG tenta di stringersi attraverso uno spazio stretto per sfuggire, il Sommerso può seguirlo (spazi >30cm).",
+      "fuga": "Non fugge mai."
+    },
+    "dmNotes": {
+      "differenza_da_recente": "I Sommersi Completi devono SEMBRARE più minacciosi e fisicamente diversi. Descrivili come meno 'umani' — non si vede più nessun vestito, la forma è più amebica che umanoide.",
+      "tattica_passerelle": "Questa è la differenza chiave rispetto ai Recenti: i Completi vogliono attivamente trascinare i PG in acqua. Questo crea tensione tattica — i PG sulle passerelle sono al sicuro ma devono combattere in spazio stretto.",
+      "bilanciamento": {
+        "troppoFacile": "Aumenta a 48 PF (6d8+18), aggiungi un terzo Sommerso Completo al Round 5",
+        "troppoDifficile": "Riduce a 2 attacchi totali nell'incontro (non per turno), rimuovi Trascinamento"
+      }
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "10 piccoli per Sommerso Completo sconfitto",
+        "tattica": "+5 Favore (uso eccellente delle passerelle come terreno elevato)"
+      },
+      "tymora": {
+        "nessunAcqua": "+15 Favore (nessun PG trascinato in acqua durante l'intera Zona 23)"
+      }
+    }
+  }
+}

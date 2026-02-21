@@ -1,0 +1,199 @@
+{
+  "name": "Sommerso Esplosivo",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"La Membrana Instabile\"</strong></p><p>Un Sommerso la cui membrana gelatinosa è gonfia e tremolante, piena di gas e fluidi in pressione. La trasformazione in questo caso è andata storta — invece di stabilizzarsi come i Sommersi Recenti o Completi, il corpo è rimasto in uno stato di instabilità crescente. L'unico scopo rimasto è avvicinarsi alle prede e rilasciare tutta l'energia accumulata.</p><h3>Aspetto</h3><ul><li><strong>Corpo:</strong> Gonfio e pulsante, con bolle visibili sotto la membrana</li><li><strong>Movimento:</strong> Più lento degli altri Sommersi, ma diretto — va dritto verso il gruppo più numeroso</li><li><strong>Suono:</strong> Scricchiolio continuo della membrana in tensione, come un pallone sul punto di esplodere</li><li><strong>Odore:</strong> Acido concentrato, bruciante anche a distanza</li></ul><p><em>Un Sommerso Esplosivo non viene 'attivato' dai PG — li nota, e va verso di loro. Subito. Con determinazione.</em></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Profonde",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 2 - Le Fogne Profonde | CR 1 | Party livello 5</h2><p>Zona 23 (Accampamento dei Sommersi): 1 Sommerso Esplosivo emerge dal fondo della stanza se il party sta vincendo facilmente (Round 5+). Zona 27 (Tana della Matriarca): Fase 3 del boss — i frammenti di membrana caduti durante la Fase 3 diventano Sommersi Esplosivi (max 2).</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Aberrazione (ex-umanoide, instabile)"
+      },
+      "environment": "Fogne profonde, ambienti acquatici corrotti",
+      "cr": 1,
+      "spellLevel": 0,
+      "xp": {
+        "value": 200
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 7,
+        "calc": "natural",
+        "formula": "",
+        "label": "Membrana gonfia e instabile"
+      },
+      "hp": {
+        "value": 15,
+        "max": 15,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "2d8+6"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 30,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 30,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 9m (30 ft)"
+      }
+    },
+    "abilities": {
+      "str": { "value": 10, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 8,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 4,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["poison", "acid"], "bypasses": [], "custom": "" },
+      "dr": { "value": [], "bypasses": [], "custom": "" },
+      "dv": { "value": ["fire", "piercing"], "bypasses": [], "custom": "" },
+      "ci": { "value": ["poisoned", "charmed", "exhaustion", "prone"], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Instabile",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La membrana del Sommerso Esplosivo è sotto pressione costante.</p><p><strong>Trigger speciale:</strong> Se il Sommerso subisce danni da <strong>fuoco</strong>, esplode <strong>immediatamente</strong> come effetto del danno (non aspetta il suo turno).</p><ul><li>Vulnerabilità al fuoco (danno raddoppiato) + detonazione istantanea</li><li>Vulnerabilità alle perforanti (armi appuntite bucano la membrana)</li><li>L'esplosione da fuoco avviene alla posizione del Sommerso al momento dell'impatto</li></ul><p><em>Attacchi a distanza con fuoco o frecce sono il modo più sicuro per eliminarlo.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Affinità Acquatica",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><ul><li>Può respirare sott'acqua</li><li>Nuota a 9m</li></ul></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pseudopodo Debole",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +2 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong> 4 (1d8) danni contundenti.</p><p><em>Il corpo gonfio rende gli attacchi in mischia poco efficaci. Il Sommerso Esplosivo NON è pensato per combattere — è pensato per avvicinarsi ed esplodere.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "2",
+        "damage": {
+          "parts": [["1d8", "bludgeoning"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Detonazione",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione OPPURE trigger automatico (0 PF o danni da fuoco).</strong></p><p><strong>Effetto:</strong> Il Sommerso esplode in un raggio di 3m.</p><p>Ogni creatura nel raggio deve effettuare un <strong>TS Destrezza CD 13</strong>.</p><ul><li><strong>Fallimento:</strong> 10 (3d6) danni da acido</li><li><strong>Successo:</strong> 5 (metà) danni da acido</li></ul><p><strong>Effetto persistente:</strong> L'esplosione lascia una <strong>pozza di acido</strong> di 3m di raggio che dura 1 minuto.</p><ul><li>Entrare nella pozza o iniziare il turno nella pozza: 3 (1d6) danni da acido</li></ul><p><strong>Trigger automatico (NON è un'azione):</strong></p><ul><li>Ridotto a 0 PF → esplode immediatamente</li><li>Subisce danni da fuoco → esplode immediatamente</li></ul>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "",
+        "target": { "value": 10, "type": "radius", "units": "ft" },
+        "save": { "ability": "dex", "dc": 13, "scaling": "flat" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/sommerso-esplosivo.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "15 cristalli piccoli",
+    "locations": [
+      "Zona 23 - L'Accampamento dei Sommersi (1, emerge solo se party sta vincendo facilmente — Round 5+)",
+      "Zona 27 - Tana della Matriarca (Fase 3: frammenti di membrana → max 2 Esplosivi)"
+    ],
+    "partyLevel": 5,
+    "loot": {
+      "gp": 0,
+      "items": [],
+      "note": "Svanisce in polvere ambrata (ma l'esplosione lascia una pozza d'acido fisica — questa NON svanisce)."
+    },
+    "tactics": {
+      "comportamento": "Muovi il Sommerso Esplosivo direttamente verso il gruppo più numeroso senza deviazioni. Non cerca di colpire — cerca di avvicinarsi.",
+      "priorita": "Gruppo numeroso (massimizza l'area di esplosione) > Caster raggruppati > Chiunque in acqua (l'acido si diffonde nell'acqua)",
+      "in_acqua": "Se esplode in acqua, la pozza acida si mescola all'acqua e contamina l'intera area acquatica entro 3m (DM discrezione).",
+      "contromisure_pg": "I PG intelligenti lo eliminano a distanza con fuoco o frecce. Se lo fanno esplodere con il fuoco, l'esplosione avviene alla sua posizione — sanno quando starlo lontano.",
+      "avvertimento_dm": "NON far emergere il Sommerso Esplosivo se il party è già in difficoltà. È un moltiplicatore di danni per evitare combattimenti troppo semplici."
+    },
+    "dmNotes": {
+      "primo_avvistamento": "Descrivi la differenza visiva subito: 'Questa sagoma è GONFIA. Bolle visibili sotto la membrana, scricchiolio continuo, odore di acido così intenso che brucia gli occhi. Si muove direttamente verso di voi senza esitazione.'",
+      "gestione_esplosione": "La pozza d'acido è fisica e rimane — spostala nella mappa. Crea problemi di posizionamento per il round successivo.",
+      "combo_boss": "Nella boss fight, i due Esplosivi che emergono in Fase 3 sono pensati per costringere i PG a muoversi dalla loro posizione sicura. Falli emergere vicino ai PG che si sono posizionati bene.",
+      "bilanciamento": {
+        "troppoFacile": "Esplosione da 4d6 invece di 3d6, pozza dura 2 minuti",
+        "troppoDifficile": "Esplosione da 2d6, nessuna pozza persistente"
+      }
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "15 piccoli per Sommerso Esplosivo sconfitto"
+      },
+      "tymora": {
+        "bonus": "+10 Favore (far esplodere il Sommerso Esplosivo con fuoco a distanza sicura — tattica rischiosa ma efficace)"
+      }
+    }
+  }
+}

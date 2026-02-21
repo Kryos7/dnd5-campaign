@@ -1,0 +1,213 @@
+{
+  "name": "Sommerso Recente",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"I Trasformati delle Fogne Profonde\"</strong></p><p>Un ex-contrabbandiere consumato dall'acqua corrotta delle fogne profonde. Il suo corpo è parzialmente sciolto e tenuto insieme da una membrana gelatinosa traslucida, attraverso cui si intravedono organi scuri e ossa ammorbidite. Conserva echi del suo comportamento precedente — questa figura 'sorveglia' ancora una porta, quella stringe ancora una cassetta che non può aprire. Ma non è più umana.</p><h3>Aspetto</h3><ul><li><strong>Corpo:</strong> Sagoma umanoide ma distorta — proporzioni sbagliate, arti troppo lunghi, testa piegata ad angolo innaturale</li><li><strong>Pelle:</strong> Traslucida e gelatinosa, con brandelli di vestiti fusi nella membrana stessa</li><li><strong>Movimenti:</strong> Fluidi e innaturali, come se l'aria fosse acqua — nessuna rigidità, nessuno scatto</li><li><strong>Suono:</strong> Gorgoglio umido costante, come acqua che scorre in un tubo intasato</li><li><strong>Odore:</strong> Acqua di fogna concentrata, dolciastro e nauseante, con retrogusto metallico</li></ul><p><em>Non sono zombie. Non sono creature. Sono il risultato di qualcosa che non dovrebbe esistere.</em></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Profonde",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 2 - Le Fogne Profonde | CR 1 | Party livello 5</h2><p>Zona 22 (Avamposto Abbandonato): 1 Sommerso Recente seduto a capotavola nella sala riunioni. Zona 23 (Accampamento dei Sommersi): 3 Sommersi Recenti emergono dall'acqua ambrata nell'ondata iniziale. Boss (Zona 27): generati dalla Matriarca durante la Fase 1.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Aberrazione (ex-umanoide)"
+      },
+      "environment": "Fogne profonde, ambienti acquatici corrotti",
+      "cr": 1,
+      "spellLevel": 0,
+      "xp": {
+        "value": 200
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 8,
+        "calc": "natural",
+        "formula": "",
+        "label": "Membrana gelatinosa"
+      },
+      "hp": {
+        "value": 30,
+        "max": 30,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "4d8+12"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 30,
+        "walk": 20,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 60 ft"
+      }
+    },
+    "abilities": {
+      "str": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 3,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 3,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["poison"], "bypasses": [], "custom": "" },
+      "dr": { "value": ["bludgeoning"], "bypasses": [], "custom": "" },
+      "dv": { "value": ["fire"], "bypasses": [], "custom": "" },
+      "ci": { "value": ["poisoned", "charmed", "exhaustion"], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Corpo Semi-Liquido",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La struttura gelatinosa del corpo assorbe gli impatti contundenti.</p><ul><li><strong>Resistenza</strong> ai danni contundenti (danno dimezzato)</li><li>Armi taglienti e perforanti funzionano normalmente</li><li>Il corpo si deforma al momento dell'impatto, ricompattandosi subito dopo</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Schizzi Corrosivi",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Quando il Sommerso subisce danni da un attacco in mischia entro 1,5m, l'attaccante subisce schizzi di fluido corrosivo.</p><p><strong>Effetto:</strong> 2 (1d4) danni da acido all'attaccante (automatico, nessun tiro salvezza).</p><p><em>Combatterlo corpo a corpo è doloroso — la membrana schizza quando viene perforata.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Resilienza Melmosa",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Versione aberrante dell'Indomito degli Zombie. La massa gelatinosa si ricompatta attorno alle ferite critiche.</p><p><strong>Trigger:</strong> Se il danno riduce il Sommerso a 0 PF.</p><p><strong>Effetto:</strong> Deve effettuare un TS Costituzione con CD pari a 5 + il danno subito. Con un successo, rimane a 1 PF.</p><p><strong>Limitazioni:</strong></p><ul><li><strong>Non funziona</strong> contro danni da fuoco</li><li><strong>Non funziona</strong> contro danni radianti</li><li>Non funziona se è già a 1 PF</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Affinità Acquatica",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Sommerso si è fuso con l'acqua corrotta delle fogne profonde.</p><ul><li><strong>Vantaggio</strong> ai tiri per colpire contro creature che si trovano in acqua</li><li>Può respirare sott'acqua (anfibia)</li><li>Nuota a 9m (velocità normale in acqua)</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pseudopodo Corrosivo",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +4 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong> 6 (1d8+2) danni contundenti + 3 (1d6) danni da acido.</p><p><em>L'arto distorto — che un tempo era un braccio — colpisce con forza sorprendente, lasciando bruciature chimiche dove il fluido gelatinoso tocca la pelle.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "4",
+        "damage": {
+          "parts": [["1d8 + 2", "bludgeoning"], ["1d6", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/sommerso-recente.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "8 cristalli piccoli",
+    "locations": [
+      "Zona 22 - L'Avamposto Abbandonato (1, seduto a capotavola — Percezione CD 12 per notarlo vivo)",
+      "Zona 23 - L'Accampamento dei Sommersi (3, Round 1-2 dell'ondata)",
+      "Zona 27 - Tana della Matriarca (generati dalla Matriarca in Fase 1, max 3 totali)"
+    ],
+    "partyLevel": 5,
+    "loot": {
+      "gp": 0,
+      "items": [],
+      "note": "Svanisce in polvere AMBRATA (non grigia). La diversità del colore è un indizio narrativo."
+    },
+    "tactics": {
+      "comportamento_base": "Attacca il PG più vicino senza strategia particolare. Preme avanti anche ferito. Non comunica con altri Sommersi — agisce istintivamente.",
+      "priorita_bersagli": ["Creatura più vicina", "Creatura in acqua (vantaggio)", "Creatura isolata dal party"],
+      "in_acqua": "In acqua profonda ha vantaggio a tutti gli attacchi. Cerca di trascinare i PG in acqua approfittando del loro movimento ridotto.",
+      "fuga": "Non fugge MAI. Combatte fino a 0 PF o fino alla Resilienza Melmosa."
+    },
+    "dmNotes": {
+      "primo_incontro": "IMPORTANTE: Se è la prima volta che il party incontra un Sommerso, dedica tempo alla descrizione. Non dire 'è uno zombie'. Descrivi: la membrana traslucida, gli organi visibili, i movimenti fluidi sbagliati, il gorgoglio costante. Questa è una creatura nuova.",
+      "differenza_zombie": "I Sommersi NON si muovono come zombie (rigidi, lenti). Si muovono in modo FLUIDO e innaturale, quasi danzando. Questo rende il combattimento più inquietante.",
+      "polvere_ambrata": "Quando muore, la polvere che lascia è AMBRATA, non grigia. Questo è il primo segnale visivo della diversità dei Sommersi. Se i PG lo notano, è narrativamente rilevante.",
+      "schizzi_acid": "Ricorda di applicare il danno da schizzi quando i PG colpiscono in mischia. Non è ovvio — devono scoprirlo nel primo combattimento.",
+      "bilanciamento": {
+        "troppoFacile": "Aggiungi un secondo Sommerso, o fai emergere dall'acqua nei round successivi",
+        "troppoDifficile": "Riduci i PF a 22 (3d8+9), rimuovi Resilienza Melmosa"
+      }
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "8 piccoli per Sommerso sconfitto",
+        "nessunKO": "+5 Favore se nessun PG a 0 PF nell'intero combattimento",
+        "usoTerreno": "+5 Favore a discrezione DM (uso intelligente del terreno)"
+      },
+      "tymora": {
+        "nessunAcquaZona22": "+10 Favore (Zona 22: trovare il segreto nell'armeria senza attivare il Sommerso)",
+        "nessunAcquaZona23": "+15 Favore (Zona 23: nessun PG trascinato in acqua durante l'intera ondata)"
+      },
+      "mystra": {
+        "studio": "+5 Favore (studiare la creatura dopo il combattimento e notare anomalie arcane)"
+      }
+    }
+  }
+}

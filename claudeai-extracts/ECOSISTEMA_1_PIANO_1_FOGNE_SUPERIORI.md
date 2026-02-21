@@ -1214,9 +1214,9 @@ Prima di far giocare questo piano, assicurati di avere:
 
 ## FINE PIANO 1
 
-**Prossimo:** Piano 2 - I Tunnel dei Contrabbandieri (livello 4 consigliato)
+**Prossimo:** Piano 2 - Le Fogne Profonde (livello 5 consigliato) — vedi `ECOSISTEMA_1_PIANO_2_FOGNE_PROFONDE.md`
 
-**Transizione:** Una volta attraversato il velo magico in Stanza 10, i PG sentono la voce incorporea e si trovano in un ambiente completamente diverso - tunnel artificiali, torce magiche, presenza organizzata di contrabbandieri.
+**Transizione:** Una volta attraversato il velo magico in Stanza 10, i PG sentono la voce incorporea e si trovano in un ambiente radicalmente diverso — più caldo, più umido, con acqua che si comporta in modo anomalo e tracce inquietanti di ciò che è successo ai contrabbandieri che vivevano qui sotto.
 
 **Note per continuità:**
 - I cristalli e i tomi raccolti rimangono con loro

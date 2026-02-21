@@ -1,0 +1,192 @@
+{
+  "name": "Gray Ooze (Fogne Profonde)",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"Il Custode Silenzioso\"</strong></p><p>Una Gray Ooze standard (MM pg. 243) adattata per le fogne profonde. A differenza dei Sommersi — che erano umani trasformati — la Gray Ooze è una creatura naturale delle fogne, qui da decenni. Non è stata 'corrotta' dall'acqua anomala: è semplicemente attratta dagli ambienti umidi e dalle prede.</p><p>La versione delle Fogne Profonde ha sviluppato una capacità di mimetismo nell'acqua torbida superiore alla norma, rendendola quasi invisibile sul fondo dei sarcofagi allagati.</p><h3>Aspetto</h3><ul><li><strong>Forma:</strong> Massa amorfa grigio-argento, piatta quando ferma (20cm di spessore)</li><li><strong>Mimetismo:</strong> Sul fondo di acqua torbida è quasi impossibile distinguerla da roccia o sedimento</li><li><strong>Dimensioni:</strong> Circa 1.5m x 1.5m</li></ul><h3>Meccanica speciale: Corrode Metallo</h3><p>Questa è la differenza critica rispetto alla Gray Ooze standard. Le armi metalliche non magiche che la colpiscono subiscono danni permanenti. <strong>Avvisare i giocatori in-world quando vedono l'ooze sciogliere la pietra del sarcofago.</strong></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Monster Manual (adattato) - Campagna Fogne Profonde",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 2 - Zona 19 (Cripta Allagata) | CR 1/2 | Party livello 5</h2><p>Due Gray Ooze nascoste nell'acqua torbida (1m profondità). Percezione CD 16 per individuarle prima che attacchino. La prima è vicino ai sarcofagi centrali, la seconda vicino alla porta d'ingresso (tattica a tenaglia). Entrambe attaccano quando il primo PG si avvicina ai sarcofagi chiusi.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "ooze",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Melma"
+      },
+      "environment": "Fogne profonde, ambienti acquatici",
+      "cr": 0.5,
+      "spellLevel": 0,
+      "xp": {
+        "value": 100
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 8,
+        "calc": "natural",
+        "formula": "",
+        "label": "Massa gelatinosa"
+      },
+      "hp": {
+        "value": 22,
+        "max": 22,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "3d8+9"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 10,
+        "fly": 0,
+        "swim": 10,
+        "walk": 10,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 60,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Vista cieca 18m; cieca oltre"
+      }
+    },
+    "abilities": {
+      "str": { "value": 12, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 2,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["lightning"], "bypasses": [], "custom": "" },
+      "dr": { "value": ["acid", "cold", "fire"], "bypasses": [], "custom": "" },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": ["blinded", "charmed", "deafened", "exhaustion", "frightened", "prone"], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Forma Amorfa",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La Gray Ooze può muoversi attraverso spazi stretti fino a 2,5cm senza stringersi.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Mimetismo Acquatico",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Adattamento specifico della versione Fogne Profonde.</p><ul><li>Quando è completamente sommersa in acqua torbida e immobile: <strong>Percezione CD 16</strong> per individuarla</li><li>Se si muove lentamente: <strong>Percezione CD 13</strong></li><li><strong>Vantaggio all'iniziativa</strong> se attacca di sorpresa da sott'acqua</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "⚠️ Corrode Metallo (Meccanica Homebrew)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>MECCANICA IMPORTANTE: Corrode Metallo</strong></p><p>Qualsiasi <strong>arma di metallo non magica</strong> che colpisce l'ooze viene corrosa dall'acido.</p><p><strong>Dopo aver inflitto danno, l'arma subisce -1 permanente al danno.</strong></p><ul><li>Se il malus raggiunge <strong>-5</strong>, l'arma è distrutta</li><li>Scudi di metallo non magici: <strong>-1 permanente alla CA</strong> al contatto</li><li>Armature di metallo non magiche: <strong>-1 permanente alla CA</strong> se l'ooze si attacca a loro</li></ul><p><strong>NON si applica a:</strong></p><ul><li>Armi magiche (+1, +2, ecc.)</li><li>Armi non metalliche (legno, osso, cuoio)</li><li>Incantesimi</li><li>Attacchi naturali delle forme animali di Fealer</li></ul><p><em>Esempio: La spada corta +1 trovata nella Zona 22 NON viene corrosa.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pseudopodo",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +3 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong> 4 (1d6+1) danni contundenti + 7 (2d6) danni da acido.</p><p><strong>Se il bersaglio indossa armatura di metallo non magica:</strong> l'armatura subisce -1 permanente alla CA.</p><p><em>L'impatto è sorprendentemente forte per una creatura così lenta. Il vero pericolo è l'acido, non la forza bruta.</em></p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "3",
+        "damage": {
+          "parts": [["1d6 + 1", "bludgeoning"], ["2d6", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/gray-ooze.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "6 cristalli piccoli per ooze (12 totali)",
+    "location": "Zona 19 - La Cripta Allagata (2 ooze, OPZIONALE)",
+    "partyLevel": 5,
+    "loot": {
+      "gp": 0,
+      "items": [],
+      "note": "Le Gray Ooze non hanno loot proprio. Il tesoro è nei sarcofagi (vedi documento Piano 2)."
+    },
+    "tactics": {
+      "posizionamento": "Ooze 1: vicino ai sarcofagi centrali (dove i PG vogliono andare). Ooze 2: vicino alla porta d'ingresso (taglia la ritirata).",
+      "emersione": "La prima attacca non appena un PG arriva entro 1,5m dei sarcofagi. La seconda attacca 1-2 round dopo, quando il party è impegnato.",
+      "priorita": "La creatura più vicina. Le ooze non hanno tattiche — solo istinto predatorio.",
+      "fuga": "Se ridotte sotto 5 PF, una potrebbe tentare di immergersi e 'aspettare'. A discrezione DM."
+    },
+    "dmNotes": {
+      "avvertimento_in_world": "Se i PG esaminano i sarcofagi PRIMA di scendere in acqua, possono vedere le scalfitture acide sulle pareti del sarcofago. Natura CD 12: 'Qualcosa con proprietà acide staziona qui da tempo.'",
+      "effetto_armatura": "LA MECCANICA PRINCIPALE. Valoris con armatura pesante di metallo è particolarmente vulnerabile. La prima volta che la sua armatura viene corosa, descrivi le bolle sull'acciaio. Non sia tragico — solo inquietante.",
+      "risoluzione_rapida": "Incantesimi come Thunderwave, Shatter o qualsiasi AoE magico è molto efficace. Fealer in forma animale attacca con artigli naturali (non vengono corrosi).",
+      "polvere": "Le Gray Ooze svaniscono in polvere grigio-verde (diverso dalla polvere ambrata dei Sommersi e dalla polvere normale del Piano 1).",
+      "bilanciamento": {
+        "troppoFacile": "Aggiungi una terza ooze che emerge dal soffitto (può scalare)",
+        "troppoDifficile": "Riduci a 1 ooze sola, o la seconda emerge solo se i PG attaccano noisamente"
+      }
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "6 piccoli per ooze sconfitta (12 totali)"
+      },
+      "mystra": {
+        "studio": "+5 Favore (catalogare il Nodo della Trama #2 nel sarcofago aperto)"
+      }
+    }
+  }
+}

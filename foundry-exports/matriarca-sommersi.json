@@ -1,0 +1,331 @@
+{
+  "name": "Matriarca dei Sommersi",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"La Prima, La Fonte, La Madre\"</strong></p><p>La prima contrabbandiera a essere trasformata dall'acqua corrotta delle fogne profonde. Non è un leader — è una <em>madre</em>. Alta tre metri, larga due, una montagna di membrana traslucida pulsante attraverso cui si intravedono — fusi insieme in un amalgama orribile — resti di corpi umani, attrezzi, armi, pezzi di cassa. Come se decine di persone fossero state assorbite e fuse in un unico organismo.</p><p>Non è malvagia. Non è cosciente. È una cosa che è stata creata dall'ambiente, e che ora esiste solo per espandersi.</p><h3>Aspetto</h3><ul><li><strong>Dimensioni:</strong> Grande — circa 3m di altezza, 2m di larghezza</li><li><strong>Struttura:</strong> Massa informe di membrana gelatinosa densa, su cui si intravedono silhouette di corpi assorbiti</li><li><strong>Ritmo:</strong> Pulsa ogni 6 secondi esatti — lo stesso ritmo della vasca nella Cisterna (Zona 16)</li><li><strong>Movimento:</strong> Lentissima a terra, veloce in acqua — usa l'acqua ambrata come mezzo di movimento primario</li><li><strong>Suono:</strong> Un gorgoglio profondo che QUASI suona come una parola. Quasi. Ma non lo è.</li></ul><h3>Narrazione Boss</h3><p>Quando i PG entrano, la Matriarca non attacca subito. La massa pulsa. Poi, lentamente, la parte superiore si deforma — forma qualcosa che potrebbe essere un volto. Un buco si apre dove dovrebbe essere la bocca. Produce un suono: gorgoglio basso, prolungato. Poi le sagome nell'acqua iniziano a muoversi verso i PG.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Fogne Profonde",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 2 - Zona 27 | CR 5 | BOSS | Party livello 5</h2><p>Posizionata al centro della vasca della Tana della Matriarca, su un cumulo di detriti. La stanza ha due livelli: piattaforma superiore asciutta (bordi della stanza) e vasca centrale (1,2m d'acqua ambrata). La Matriarca inizia nella vasca, sulla sua 'isola' di detriti.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale",
+      "race": "",
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Aberrazione Grande (ex-umanoide, trasformata)"
+      },
+      "environment": "Fogne profonde, vasca d'acqua corrotta",
+      "cr": 5,
+      "spellLevel": 0,
+      "xp": {
+        "value": 1800
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 13,
+        "calc": "natural",
+        "formula": "",
+        "label": "Membrana gelatinosa compattata"
+      },
+      "hp": {
+        "value": 115,
+        "max": 115,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "13d10+39"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 30,
+        "walk": 10,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 60,
+        "tremorsense": 30,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Vista cieca 18m; Tremosenso 9m (attraverso acqua)"
+      }
+    },
+    "abilities": {
+      "str": { "value": 18, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 17, "proficient": 1, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 4,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 10, "proficient": 1, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 3,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "lg",
+      "di": { "value": ["poison", "acid"], "bypasses": [], "custom": "" },
+      "dr": { "value": ["bludgeoning", "cold"], "bypasses": [], "custom": "" },
+      "dv": { "value": ["radiant"], "bypasses": [], "custom": "Fuoco solo in Fase 2+ (dopo rottura membrana)" },
+      "ci": { "value": ["poisoned", "charmed", "exhaustion", "prone", "blinded"], "custom": "" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 120, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "⚠️ FASI DEL BOSS — Leggi Prima di Giocare",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<h3>Meccanica delle Fasi</h3><p><strong>FASE 1 — La Membrana (inizio combattimento):</strong></p><ul><li>Resistenza a TUTTI i danni (membrana intatta)</li><li>Non attacca direttamente</li><li>Genera 1 Sommerso Recente per round come Azione Bonus (max 3 totali)</li><li><strong>Come rompere la membrana:</strong><ol><li>30 danni da fuoco cumulativi</li><li>Essenza Purificata versata sulla membrana (immediato)</li><li>Dopo 3 round automaticamente (la Matriarca 'si risveglia')</li></ol></li></ul><p><strong>FASE 2 — Il Risveglio (membrana rotta):</strong></p><ul><li>Perde resistenza universale, ora solo resistenza a contundenti/freddo</li><li>Vulnerabilità al fuoco si attiva</li><li>Attacca direttamente con Multiattacco e Onda d'Urto</li><li>Rigenerazione 5 PF/round in acqua (interrotta da fuoco/radianti)</li></ul><p><strong>FASE 3 — Frenesia (sotto 50 PF):</strong></p><ul><li>Si frantuma parzialmente → 1d2 frammenti diventano Sommersi Esplosivi (max 2)</li><li>+1 attacco con Tentacolo per round</li><li>L'acqua della vasca bolle: 1d4 danni da acido a inizio turno per chi è in acqua</li><li>Rigenerazione aumenta a 10 PF/round</li></ul><h3>Meccanica della Marea</h3><p>Round PARI (2,4,6...): acqua SALE 30cm (max 1,8m). Matriarca: vantaggio attacchi.</p><p>Round DISPARI (1,3,5...): acqua SCENDE 30cm (min 0,9m). Matriarca più esposta.</p><p><strong>Pannello chiuse (se sbloccato nella Zona 21):</strong> Azione → acqua resta bassa per 2 round. Usabile 2 volte.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Membrana Protettiva (Fase 1)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Solo in Fase 1 (finché la membrana è intatta).</strong></p><p>La Matriarca ha <strong>Resistenza a TUTTI i tipi di danno</strong>.</p><p><strong>La membrana si rompe quando:</strong></p><ul><li>Ha subito 30+ danni da fuoco cumulativi</li><li>Viene versata su di lei Essenza Purificata delle Profondità</li><li>Sono passati 3 round (si risveglia da sola)</li></ul><p><em>Nota: in Fase 2 il fuoco diventa una vulnerabilità (danno raddoppiato). Usare il fuoco in Fase 1 accumula danni dimezzati verso la soglia di 30. Usarlo in Fase 2 è molto più efficace.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 1"
+      }
+    },
+    {
+      "name": "Madre degli Sommersi",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Bonus (Solo Fase 1, max 3 Sommersi totali).</strong></p><p>La Matriarca genera 1 Sommerso Recente dall'acqua adiacente a sé.</p><ul><li>Il Sommerso emerge nell'acqua entro 1,5m dalla Matriarca</li><li>Agisce nel round successivo (non nel round in cui emerge)</li><li>Massimo 3 Sommersi generati totali durante l'intero combattimento</li></ul><p><strong>Recupero PF:</strong> Quando un Sommerso viene distrutto entro 9m dalla Matriarca, lei recupera 5 PF (Simbiosi Melmosa).</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Solo Fase 1, max 3 Sommersi totali"
+      }
+    },
+    {
+      "name": "Rigenerazione Acquatica",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Solo Fase 2 e 3.</strong></p><p>La Matriarca recupera <strong>5 PF</strong> a inizio del suo turno se è in contatto con acqua.</p><p><strong>Fase 3 (sotto 50 PF):</strong> Rigenerazione aumenta a <strong>10 PF</strong>.</p><p><strong>Interrotta da:</strong> Ha subito danni da fuoco o radianti nel turno precedente.</p><p><em>Tenerla fuori dall'acqua o infliggerle fuoco/radianti ogni round è fondamentale.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 2+"
+      }
+    },
+    {
+      "name": "Affinità Acquatica Superiore",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><ul><li><strong>Vantaggio</strong> a tutti i tiri per colpire quando in acqua profonda almeno 60cm</li><li>Può respirare sott'acqua</li><li>Tremosenso 9m attraverso l'acqua (sente ogni creatura che tocca l'acqua)</li></ul></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Multiattacco",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Fase 2:</strong> Due attacchi con Tentacolo Gelatinoso + un attacco con Onda d'Urto.</p><p><strong>Fase 3 (sotto 50 PF):</strong> Tre attacchi con Tentacolo Gelatinoso + un attacco con Onda d'Urto.</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "Solo Fase 2+"
+      }
+    },
+    {
+      "name": "Tentacolo Gelatinoso",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +7 al colpire, portata 3m, una creatura.</p><p><strong>Colpito:</strong> 11 (2d6+4) danni contundenti + 5 (2d4) danni da acido.</p><p><strong>Grapple:</strong> Se il bersaglio è di taglia Media o inferiore, è <strong>afferrato</strong> (CD fuga 14). La Matriarca può avere fino a <strong>2 creature afferrate</strong> contemporaneamente.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "7",
+        "damage": {
+          "parts": [["2d6 + 4", "bludgeoning"], ["2d4", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 10, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Onda d'Urto",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Ricarica 5-6. Azione.</strong></p><p>La Matriarca colpisce l'acqua con forza, creando un'onda in un <strong>cono di 6m</strong>.</p><p>Ogni creatura nell'area: <strong>TS Forza CD 14</strong>.</p><ul><li><strong>Fallimento:</strong> 9 (2d8) danni contundenti + spostata di 3m (spinta indietro, eventualmente in acqua)</li><li><strong>Successo:</strong> metà danni, non spostata</li></ul><p><em>Obiettivo principale: spingere i PG dalle piattaforme asciutte dentro l'acqua dove la Matriarca ha vantaggio.</em></p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 20, "type": "cone", "units": "ft" },
+        "save": { "ability": "str", "dc": 14, "scaling": "flat" },
+        "uses": { "value": 1, "max": "1", "per": "recharge", "recharge": { "value": 5, "charged": true } }
+      }
+    },
+    {
+      "name": "Assorbimento",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>1/round. Solo su creature afferrate.</strong></p><p>La Matriarca tenta di assorbire una creatura afferrata nella sua massa.</p><p>Il bersaglio: <strong>TS Forza CD 15</strong>.</p><ul><li><strong>Fallimento:</strong> Il bersaglio è <strong>trattenuto</strong> (restrained) all'interno della membrana</li><li>Inizio di ogni turno del bersaglio trattenuto: 7 (2d6) danni da acido</li><li><strong>Liberarsi:</strong> Azione + Atletica CD 15 (bersaglio o alleato entro 1,5m)</li><li><strong>Fuoco alla Matriarca</strong> libera automaticamente tutte le creature assorbite</li></ul>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "Solo su creature afferrate, 1/round",
+        "save": { "ability": "str", "dc": 15, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Scudo di Melma (Reazione)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reazione, 1/round.</strong></p><p><strong>Trigger:</strong> Viene bersagliata da un attacco a distanza.</p><p><strong>Effetto:</strong> Interpone un tentacolo — l'attacco ha <strong>svantaggio</strong>.</p><p><em>Il tiro viene effettuato dopo il risultato originale (se il nuovo tiro più basso manca, il danno è negato).</em></p>"
+        },
+        "activation": { "type": "reaction", "cost": 1 },
+        "requirements": "Bersagliata da attacco a distanza"
+      }
+    },
+    {
+      "name": "Azione Leggendaria: Tentacolo (1 punto)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Leggendaria — costa 1 punto (max 2/round).</strong></p><p>Effettua un attacco con Tentacolo Gelatinoso.</p>"
+        },
+        "activation": { "type": "legendary", "cost": 1 },
+        "requirements": "Fase 2+"
+      }
+    },
+    {
+      "name": "Azione Leggendaria: Generare Sommerso (2 punti)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Leggendaria — costa 2 punti (max 2/round). Solo Fase 2+, 1/round.</strong></p><p>Genera un Sommerso Recente dall'acqua adiacente.</p><p><em>Utile per pressione aggiuntiva quando i PG eliminano i Sommersi della Fase 1.</em></p>"
+        },
+        "activation": { "type": "legendary", "cost": 2 },
+        "requirements": "Solo Fase 2+, 1/round"
+      }
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/matriarca-sommersi.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "2 cristalli GRANDI (= 100 cristalli piccoli equivalenti)",
+    "location": "Zona 27 - La Tana della Matriarca (BOSS FINALE Piano 2)",
+    "partyLevel": 5,
+    "loot": {
+      "gp": 120,
+      "note": "L'oro è fuso in blocchi da 30 gp, peso 5 kg per blocco (4 blocchi). Recuperabili ma pesanti.",
+      "gems": ["Ambra (30 mo)", "Tormalina (20 mo)", "Onice (15 mo)"],
+      "items": [
+        "Spada corta +1 (lama con sfumatura ambrata permanente — primo oggetto magico del dungeon)",
+        "Medaglione dei contrabbandieri (simbolo organizzazione, vendibile 5 mo)"
+      ]
+    },
+    "combat": {
+      "trackerFasi": {
+        "fase1": "PF: 115 → Membrana intatta → Resistenza UNIVERSALE",
+        "transizione12": "Membrana si rompe (30 fuoco / Essenza Purificata / 3 round)",
+        "fase2": "PF: 115-51 → Attacca direttamente → Vulnerabilità fuoco attiva",
+        "transizione23": "Scende sotto 50 PF",
+        "fase3": "PF: 50-0 → 1d2 Esplosivi → +1 Tentacolo → Acqua bolle"
+      },
+      "meccaniaMarea": {
+        "note": "Traccia il numero del round. Round pari: acqua sale. Round dispari: scende.",
+        "altezzaAcqua": "Start: 1,2m. Round pari: +30cm (max 1,8m). Round dispari: -30cm (min 0,9m).",
+        "pannelloChiuse": "Se i PG hanno risolto la Zona 21, possono usare il pannello nella boss room (azione, 2 volte) per tenere l'acqua bassa per 2 round."
+      }
+    },
+    "tactics": {
+      "fase1": {
+        "round": "1-3",
+        "azioni": "Non attacca. Genera Sommerso Recente ogni round (Azione Bonus). Si posiziona in acqua profonda (vantaggio se la attaccano lì).",
+        "obiettivo": "Lasciare che i Sommersi consumino risorse dei PG (spell slot, PF, azioni)."
+      },
+      "transizione": {
+        "descrizione": "Quando la membrana si rompe: URLO. Descrivi la massa che si contrae e poi esplode verso l'esterno. I Sommersi generati continuano a combattere.",
+        "effettoVisivo": "La membrana esterna si dissolve o brucia. La forma interna è più fluida, più rapida, più pericolosa."
+      },
+      "fase2": {
+        "round": "4+",
+        "azioni": "Multiattacco ogni round (2 Tentacoli + Onda d'Urto). Onda d'Urto: punta verso la piattaforma per spingere i PG in acqua. Tentacoli: bersaglia i PG più lontani dall'acqua per avvicinarli.",
+        "leggendarie": "Usa Tentacolo (1 punto) per pressione aggiuntiva. Genera Sommerso (2 punti) solo se necessario.",
+        "reazione": "Scudo di Melma contro i tiri a distanza critici (caster, arcieri)."
+      },
+      "fase3": {
+        "trigger": "Sotto 50 PF",
+        "immediato": "Genera 1d2 Sommersi Esplosivi. Descrivi la Matriarca che 'si frammenta' — pezzi di membrana cadono e iniziano a muoversi.",
+        "cambioTattica": "Ora ha 3 Tentacoli + Onda d'Urso per round. Più aggressiva — attacca il PG più vicino con tutto.",
+        "acquaBollente": "Ricorda di infliggere 1d4 acido a chiunque inizi il turno in acqua."
+      },
+      "prioritaBersagli": ["PG in acqua (vantaggio)", "Caster (Riven, Fealer)", "Guaritori", "Tank (Valoris ultimo)"]
+    },
+    "dmNotes": {
+      "narrazione": "La Matriarca NON è un villain. Non ha motivazioni. Non combatte per vendetta o territorio. Esiste e si espande. Descrivila come fenomeno naturale distorto, non come mostro malvagio.",
+      "ilGorgoglio": "Il suono che produce 'quasi una parola' — se Riven o Fealer lo studiano, sentono che ERA una parola una volta. Non dire cosa. Non rispondere a questa domanda.",
+      "polvereDora": "La polvere dorata è diversa da tutti gli altri nemici. Se i PG la notano e fanno Arcano CD 14: è la stessa energia dell'acqua ascendente nella Zona 18. Non spiegare il collegamento — lascialo lì come indizio.",
+      "durata_stimata": "45-60 minuti reali, 8-15 round di combattimento",
+      "bilanciamento": {
+        "troppoFacile": "Aumenta PF a 135, la Matriarca genera Sommersi anche in Fase 2 (1 ogni 3 round), Onda d'Urso ricarica a 4-6",
+        "troppoDifficile": "Riduci PF a 90, nessun Sommerso Esplosivo in Fase 3, Assorbimento rimuovilo"
+      },
+      "condizioni_vittoria_alternative": "3 dosi di Essenza Purificata versate nella massa: ogni dose 3d6 radianti + TS CON CD 15 o stordita 1 round. Premiare questa tattica con Favore Tymora extra."
+    },
+    "favoreDivino": {
+      "tempus": {
+        "cristalli": "2 grandi = 100 piccoli equivalenti",
+        "sconfittaBoss": "+30% Favore fisso",
+        "nessunoA0PF": "+10% Favore (nessun PG a 0 PF durante il combattimento)",
+        "note": "Questo è il momento di massimizzare il Favore Tempus del Piano 2"
+      },
+      "tymora": {
+        "tatticaCreativa": "+10% Favore (usare Essenza Purificata OPPURE il pannello delle chiuse)",
+        "entrambi": "+15% Favore (usare ENTRAMBI)"
+      },
+      "mystra": {
+        "polvereDora": "+10% Favore (notare la polvere dorata e collegarla all'anomalia della Zona 18 con check Arcano CD 14)"
+      }
+    }
+  }
+}
