@@ -1,0 +1,754 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 3 - Il Confine tra i Piani [DM]"
+  description="Note del Dungeon Master - Sessione 3"
+>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">03</span>
+        <h1 class="text-4xl font-bold">Il Confine tra i Piani</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>📅 TBD</span>
+        <span>⏱️ 4–5 ore</span>
+        <span>🎭 Transizione e Scelta</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        I Guardiani della Trama completano il Livello 1 delle Fogne Superiori e scendono al Pianerottolo.
+        Qui incontrano per la prima volta il custode degli interregni — e per la prima volta capiscono che le regole del gioco sono più complesse di quanto pensassero.
+      </p>
+    </div>
+
+    <!-- Note pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Cristalli del Fungo Violaceo:</strong> da assegnare a inizio sessione (non ancora fatto)</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Vex:</strong> l'NPC è definito — rileggi la sezione personaggio prima di giocare. Decidi come vuoi interpretare il grado di amaro/ironia</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Stabilisci le altre gilde:</strong> quale è rientrata in città? Quanto tempo prima? L'altra è ancora al Livello 1 o già scesa?</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Non spingere la scelta:</strong> la decisione se scendere o rientrare è interamente dei giocatori — non guidarli</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Zona 1 del Livello 2:</strong> preparala almeno a grandi linee nel caso decidano di scendere</span></li>
+      </ul>
+    </div>
+
+    <!-- ==================== PARTE I ==================== -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-gray-400">🏁</span> PARTE I: LA FINE DELLE FOGNE SUPERIORI
+      </h2>
+
+      <p class="text-gray-300 mb-5">
+        La sessione ricomincia esattamente dove si era interrotta: il Fungo Violaceo è a terra. La battaglia è finita da secondi. C'è silenzio — il tipo di silenzio che arriva dopo che qualcosa di grosso smette di muoversi.
+      </p>
+
+      <div class="bg-gray-700/40 border border-gray-600 rounded p-4 mb-4">
+        <p class="text-sm font-bold text-yellow-400 mb-2">💎 Cristalli del Fungo Violaceo — da assegnare ora</p>
+        <p class="text-sm text-gray-300">
+          Il fungo non esplode, non brucia. Si dissolve — lentamente, in una nuvola di spore viola che ricadono come polvere silenziosa su tutto il corridoio. Dove si trovava il corpo, la pietra è pulita. E lì, quasi ordinati, ci sono i cristalli.
+          <br><br>
+          <strong>[Suggerimento: 1 cristallo medio + 2 piccoli — lo scontro era difficile e lungo. Premia la fatica.]</strong>
+        </p>
+      </div>
+
+      <div class="bg-gray-700/40 border border-gray-600 rounded p-4 mb-4">
+        <p class="text-sm font-bold text-blue-400 mb-2">🗺️ Fine del Livello 1 — situazione</p>
+        <p class="text-sm text-gray-300">
+          Oltre il punto dove si trovava il fungo, il corridoio termina dopo pochi metri contro una parete di roccia viva. Non ci sono porte, non ci sono passaggi nascosti, non ci sono zone inesplorate — le Fogne Superiori sono state interamente percorse. L'unica via è la scala che scende, quella che il gruppo ha probabilmente già notato da un po'. Non c'è nient'altro da fare qui.
+        </p>
+      </div>
+
+      <div class="bg-purple-900/20 border border-purple-500/30 rounded p-4">
+        <p class="text-sm font-bold text-purple-400 mb-2">🎭 Momento narrativo — se qualcuno guarda indietro</p>
+        <p class="text-sm text-gray-300 italic">
+          "Se vi girate a guardare le Fogne Superiori un'ultima volta, non hanno l'aria di un posto conquistato. Hanno l'aria di un posto che aspettava di essere lasciato indietro. Le vostre torce illuminano il corridoio per qualche metro, poi il buio riprende quello che era suo. Il dungeon non ha vinto, non ha perso. È semplicemente ancora lì, immobile, come se la vostra presenza fosse stata un dettaglio trascurabile in qualcosa di molto più lungo."
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II ==================== -->
+    <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-blue-400">🪜</span> PARTE II: LA DISCESA
+      </h2>
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere ad alta voce quando il gruppo mette piede sulla scala — rallenta il ritmo, lascia respirare le parole.</p>
+
+      <div class="bg-black/50 border-l-4 border-blue-500 p-6 my-4 rounded-r">
+        <p class="italic text-blue-100 text-lg leading-relaxed">
+          Le scale scendono in modo innaturale.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Non è il legno cigolante e l'umidità delle Fogne che vi hanno accompagnato finora — questi gradini sono di pietra scura e levigata, come se la pietra stessa fosse stata costruita con una precisione che trascende il lavoro umano. Ogni scalino è perfetto. Identico al precedente. Come se qualcuno avesse copiato lo stesso blocco cento volte e non si fosse mai stancato di farlo.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Mentre scendete, le Fogne spariscono sopra di voi — non gradualmente, non con una curva o un soffitto che si abbassa. Semplicemente smettono di esistere. Come una porta che si chiude senza fare rumore.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          L'aria cambia. Il puzzo — di esalazioni, di fango, di acqua stagnante che vi aveva fatto compagnia per ore — scompare in un solo respiro. Quello che lo sostituisce non è aria fresca. È assenza di odore. Un vuoto olfattivo così completo che risulta quasi più inquietante della puzza a cui vi eravate lentamente abituati.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Il silenzio delle Fogne era un silenzio di cose che aspettavano. Questo è diverso. Questo silenzio è <em>intenzionale</em>. Come se qualcuno avesse preso il concetto di quiete e lo avesse costruito mattone per mattone, senza lasciare spazio al caso. I vostri passi producono suoni — ma sembrano esaurirsi subito, assorbiti dalle pareti prima che possano rimbalzare.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          E poi — luce. Non la luce bioluminescente dei funghi. Non il fuoco delle torce. Una luce bianca, diffusa, che non proietta ombre. Una luce che sembra venire dalla pietra stessa, dal pavimento, dalle pareti, dall'aria. Come se lo spazio fosse luminoso nella sua sostanza più profonda.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III ==================== -->
+    <div class="bg-purple-900/20 border border-purple-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">✨</span> PARTE III: IL PIANEROTTOLO
+      </h2>
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando arrivano in fondo alla scala — pausa prima di "e poi lo vedete".</p>
+
+      <div class="bg-black/50 border-l-4 border-purple-500 p-6 my-4 rounded-r">
+        <p class="italic text-purple-100 text-lg leading-relaxed">
+          La stanza è circolare. Quindici metri di diametro, forse più — è difficile stimare le distanze quando le pareti non proiettano ombre. Il soffitto è alto quanto volete che sia: la luce si diffonde verso l'alto in modo tale che non sembra esserci un punto dove finisce. Potreste stare qui un'ora a guardare in su senza trovarne uno.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Il pavimento è un mosaico. Centinaia di simboli divini — ne riconoscete alcuni, altri sono di divinità che non avete mai incontrato, altri ancora sembrano appartenere a pantheon che non esistono più — disposti in cerchi concentrici attorno a un centro: un disco di pietra bianchissima, levigata come uno specchio.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Dal centro sorge una fontana. L'acqua non cade verso il basso. Sale — un filo sottile e preciso che raggiunge un metro di altezza, e poi scompare. Non spruzza, non ricade, non si sparge. Finisce e basta. Come se il concetto di gravità avesse scelto di non applicarsi in quel punto preciso.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Tre aperture ad arco si aprono nella parete. Quella da cui siete appena entrati — la scala che sale verso le Fogne. Un'altra con gradini che scendono nell'oscurità. E una terza, chiusa da qualcosa che non è una porta: un velo di luce bianca, sottile come nebbia, che si muove lentamente come se respirasse.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Non c'è sporco. Non c'è umidità. Non c'è traccia di nessun passaggio — eppure avete la certezza, chiara e fisica, che altri siano stati qui prima di voi. Come se il posto avesse metabolizzato ogni loro impronta.
+        </p>
+      </div>
+
+      <div class="bg-purple-900/30 border border-purple-500/30 rounded p-4 mt-4">
+        <p class="text-sm font-bold text-purple-400 mb-2">📍 Nota DM — Le tre aperture</p>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>• <strong>Arco con scala verso l'alto:</strong> le Fogne Superiori (già completate)</li>
+          <li>• <strong>Arco con scala verso il basso:</strong> il Livello 2 (ancora inesplorato)</li>
+          <li>• <strong>Arco del Velo:</strong> il collegamento con la superficie — non attraversabile da soli. Si attiva con il comando dell'NPC o su autorizzazione divina</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: NPC ==================== -->
+    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">👤</span> PARTE IV: VEX — IL CUSTODE DEL PIANEROTTOLO
+      </h2>
+
+      <p class="text-gray-300 mb-2">
+        Vex è una creatura unica — non esiste niente di simile nel bestiario. Non è un costrutto, non è un fantasma, non è un demone. È qualcosa che ha provato a diventare un Dio e ci è arrivato <em>quasi</em>.
+      </p>
+      <p class="text-gray-400 text-sm mb-6">
+        Il nome completo che si era scelto era <strong class="text-indigo-300">"Auranthor il Radioso, Esarca della Luce Liminale"</strong>. Gli Dèi lo chiamano Vex. Lui non protesta più, ma non lo ha dimenticato.
+      </p>
+
+      <!-- Origine -->
+      <div class="bg-indigo-900/30 border border-indigo-700/50 rounded-lg p-5 mb-6">
+        <h3 class="text-lg font-bold text-indigo-300 mb-3">📖 Origine — da rivelare a rate</h3>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Era un umanoide mortale — piccolo, di una razza mista che non esiste più o che non ha mai avuto nome preciso. Passò secoli ad accumulare preghiere, costruire un culto, studiare il <strong>Rito dell'Ascensione</strong>: una procedura proibita con cui alcuni mortali, nel corso della storia, hanno tentato di elevarsi alla divinità. Quasi tutti ci muoiono. Lui no.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Il rito ha <em>quasi</em> funzionato. Ha assorbito abbastanza energia divina da diventare immortale e da toccare il piano divino — ma non abbastanza da attraversarlo. Si è cristallizzato a metà. Né mortale né Dio. La scintilla c'è, ma non brucia abbastanza.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Gli Dèi, anziché annientarlo (operazione complicata quando qualcuno ha già una scintilla del divino), lo hanno <em>assunto</em>. Il Dungeon Divino era appena nato e serviva qualcuno per gestire i Pianerottoli. L'ironia era troppo perfetta: voleva stare sopra ai mortali — ora li serve.
+        </p>
+      </div>
+
+      <!-- Immagine + Aspetto -->
+      <div class="flex justify-center mb-6">
+        <div class="bg-gray-900/60 border border-indigo-500/30 rounded-lg p-3 max-w-sm w-full text-center">
+          <img src="/images/Vex.png" alt="Vex — il Custode del Pianerottolo" class="rounded-lg w-full object-cover max-h-96" />
+          <p class="text-xs text-indigo-400 mt-2 italic">Vex — "Auranthor il Radioso, Esarca della Luce Liminale"</p>
+        </div>
+      </div>
+
+      <!-- Aspetto -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-gray-800/60 rounded p-4">
+          <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">Aspetto fisico</p>
+          <ul class="text-sm text-gray-300 space-y-2 leading-relaxed">
+            <li><strong class="text-gray-400">Statura:</strong> 1–1,1 metri. Proporzioni goblinoidi — testa leggermente grande, mani con dita lunghe e artigli smussati</li>
+            <li><strong class="text-gray-400">Pelle:</strong> grigio-verdastra in luce normale. Nel Pianerottolo, dove la luce è divina, compaiono <strong>venature dorate</strong> sotto la superficie — come crepe riempite d'oro. La scintilla che non ha mai finito di bruciare.</li>
+            <li><strong class="text-gray-400">Occhi:</strong> scuri e piccoli da goblin. Quando parla di divinità o si emoziona, <strong>lampeggiano ambra</strong> per un secondo prima di spegnersi.</li>
+            <li><strong class="text-gray-400">L'aureola:</strong> presente ma storta. Un anello luminoso che pende da un lato, scintilla a intermittenza. Lui la raddrizza inconsciamente ogni cinque minuti senza accorgersene.</li>
+            <li><strong class="text-gray-400">Le ali:</strong> piccole, pipistrellescee, spuntano dalle spalle. Troppo piccole per volare. Si agitano quando è eccitato o agitato. Le trova imbarazzanti.</li>
+            <li><strong class="text-gray-400">Abbigliamento:</strong> vesti da servitore divino cucite per qualcuno molto più alto. Continuamente rimboccate.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800/60 rounded p-4">
+          <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">Personalità</p>
+          <ul class="text-sm text-gray-300 space-y-2 leading-relaxed">
+            <li>• Vuole disperatamente essere preso sul serio come essere (semi-)divino. Sa che non lo è abbastanza, e questa tensione è la sua caratteristica principale.</li>
+            <li>• Si riferisce al fallimento con eufemismi: <em>"la mia transizione"</em>, <em>"il momento dell'interruzione"</em>, <em>"quando ero tra gli stati"</em> — mai "quando ho fallito".</li>
+            <li>• In realtà sa moltissimo sul divino — ci è arrivato vicino, lo ha toccato. Questo lo rende prezioso e lo fa impazzire, perché nessuno gliene dà credito.</li>
+            <li>• Si offende quando non lo si riverisce, poi si ricorda che è un servo e si corregge con dignità eccessiva.</li>
+            <li>• Sotto tutto questo: solo. Aveva un culto, aveva fedeli. Ora serve dei che non lo guardano neanche.</li>
+            <li>• <strong class="text-yellow-400">La domanda aperta per te DM:</strong> sta davvero scontando una punizione? O è ancora al lavoro sulla sua ascensione, un passo alla volta?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Read-Aloud -->
+      <div class="bg-black/50 border-l-4 border-indigo-400 p-5 mb-6 rounded-r">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">📢 Read-Aloud — Prima apparizione</p>
+        <p class="italic text-indigo-100 text-base leading-relaxed">
+          Lo vedete subito. Non potete non vederlo.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          È piccolo — un metro scarso, forse meno — con proporzioni che non appartengono a nessuna razza che conosciate: testa troppo grande, dita troppo lunghe, un'aria generale di qualcosa che è stato assemblato da pezzi di specie diverse e poi lasciato a finire da solo. La pelle è grigio-verdastra, ma nella luce del Pianerottolo si vedono venature dorate che corrono sotto come crepe illuminate dall'interno.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          Sopra la testa, leggermente inclinato verso sinistra, c'è qualcosa che potrebbe essere un'aureola — se le aureole fossero fatte di luce che scintilla e smette ogni trenta secondi come una torcia che sta finendo l'olio. Due piccole ali pipistrellescee emergono dalle sue spalle, si agitano brevemente, e poi smettono come se lui si fosse ricordato che ci sono e avesse deciso di ignorarle.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          Vi guarda. I suoi occhi lampeggiano ambra per un secondo — poi tornano scuri.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          "I Guardiani della Trama." Non è una domanda. Raddrizza l'aureola con un gesto automatico. "Benvenuti al Pianerottolo. Sono Vex." Una pausa breve, come se stesse decidendo qualcosa. "Custode di questo livello. Per mandato divino."
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          Si schiarisce la voce — un suono stranamente ordinario, in questo posto.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-2">
+          "Avete completato il Livello Uno. Siete i secondi a farlo, in ordine cronologico, dall'apertura del Dungeon." Una pausa. "Questo è rilevante. Ve lo spiego."
+        </p>
+      </div>
+
+      <!-- Agganci personaggio -->
+      <div class="bg-indigo-900/20 border border-indigo-700/30 rounded p-4">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">🎭 Agganci con i personaggi — da usare nel tempo</p>
+        <div class="space-y-3 text-sm text-gray-300">
+          <div class="flex items-start gap-2">
+            <span class="text-yellow-400 font-bold shrink-0">Valoris</span>
+            <span>Vex ha deferenza visibile verso chi serve attivamente una divinità. E una punta di invidia appena percettibile. Tymora <em>risponde</em> a Valoris. Gli Dèi non rispondono a Vex.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-purple-400 font-bold shrink-0">Fealer</span>
+            <span>Se Fealer inizia a fare domande sull'ascensione o sulla natura del divino, Vex diventa stranamente espansivo — è l'unico argomento su cui parla liberamente, forse troppo. È il suo campo. Sa cose che i chierici non sanno.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-green-400 font-bold shrink-0">Riven</span>
+            <span>Vex riconosce immediatamente la Trama instabile nella cicatrice. La osserva come si osserva qualcosa di pericoloso che però ricorda qualcosa di amato. <em>"Quella energia. L'ho sentita. Ero nell'occhio del Rito quando ha smesso di funzionare."</em> Non aggiunge altro — a meno che non venga pressato.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: IL DISCORSO ==================== -->
+    <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">💬</span> PARTE V: COSA SPIEGA L'NPC
+      </h2>
+      <p class="text-gray-400 text-sm mb-6 italic">Script scritto per Vex — tono: formale ma puntellato da momenti in cui la maschera del servo scivola e traspare l'ex-aspirante-divino.</p>
+
+      <!-- 1. Cos'è il Pianerottolo -->
+      <div class="bg-yellow-900/20 border border-yellow-700/30 rounded-lg p-5 mb-5">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">1 — Cos'è il Pianerottolo</h3>
+        <div class="bg-black/40 border-l-4 border-yellow-500 p-4 rounded-r mb-3">
+          <p class="italic text-yellow-100 text-sm leading-relaxed">
+            "Questo posto." Vex fa un gesto circolare con una mano — artigliata, con venature d'oro che pulsano lievemente. "Non ha un nome ufficiale nel mandato che mi è stato consegnato. Gli Dèi non si sono preoccupati di darglielo. Io lo chiamo il Pianerottolo. È quello che è."
+          </p>
+          <p class="italic text-yellow-100 text-sm leading-relaxed mt-2">
+            "Non è il Dungeon. Qui non morirete — a meno che non facciate qualcosa di attivamente stupido, nel qual caso il mandato non copre le conseguenze. Non ci sono trappole, non ci sono creature. È lo spazio tra livello e l'altro. Gli Dèi lo hanno costruito come pausa. Come il momento tra un respiro e l'altro." Una pausa brevissima. "Concetto che apprezzo, personalmente."
+          </p>
+          <p class="italic text-yellow-100 text-sm leading-relaxed mt-2">
+            "Qui potete riposare. Posso offrirvi l'essenziale — non l'inventario di un mercante, ma quello che serve. Potrete più avanti parlare con le vostre divinità, se sceglieranno di rispondervi." L'aureola scintilla una volta, irregolare. "E potete decidere cosa fare dopo."
+          </p>
+          <p class="italic text-yellow-100 text-sm leading-relaxed mt-2">
+            "Senza fretta relativa, s'intende. Le altre gilde non aspettano."
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Stato della competizione -->
+      <div class="bg-red-900/20 border border-red-700/30 rounded-lg p-5 mb-5">
+        <h3 class="text-lg font-bold text-red-400 mb-3">2 — Lo Stato della Competizione</h3>
+        <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r mb-3">
+          <p class="italic text-red-100 text-sm leading-relaxed">
+            "Il mandato mi impone di fornire informazioni generali sullo stato degli altri partecipanti. Non tattiche, non dettagli operativi. Solo avanzamento."
+          </p>
+          <p class="italic text-red-100 text-sm leading-relaxed mt-2">
+            Abbassa gli occhi verso il mosaico del pavimento per un secondo — come se leggesse qualcosa che solo lui può vedere. Le ali si agitano leggermente.
+          </p>
+          <p class="italic text-red-100 text-sm leading-relaxed mt-2">
+            "Una delle squadre avversarie è passata da questo Pianerottolo un'oretta prima di voi. Ha scelto di rientrare in superficie attraverso il Velo. Non è ancora tornata."
+          </p>
+          <p class="italic text-red-100 text-sm leading-relaxed mt-2">
+            "L'altra squadra è ancora all'interno del Dungeon. Non ha ancora raggiunto questo livello."
+          </p>
+          <p class="italic text-red-100 text-sm leading-relaxed mt-2">
+            Rialza gli occhi. "Questo è tutto quello che il mandato mi autorizza a dirvi sulla loro posizione. Come stanno, cosa hanno trovato — non è di mia competenza." Una pausa di un secondo. "Per quanto mi riguarda."
+          </p>
+          <p class="italic text-red-100 text-sm leading-relaxed mt-2">
+            "Il premio per il vostro posizionamento nel livello attuale" rivolge nuovamente lo sguardo verso il mosaico del pavimento "vi verrà consegnato alla fine di questo ecosistema. Non posso darvi dettagli, ma posso dirvi che è commisurato al vostro progresso e alla vostra posizione relativa agli altri. Sarà un premio adeguato, né più né meno." Una pausa. "Non è un indizio, è una garanzia."
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Servizi del Pianerottolo -->
+      <div class="bg-green-900/20 border border-green-700/30 rounded-lg p-5 mt-5 mb-5">
+        <h3 class="text-lg font-bold text-green-400 mb-3">3 — Cosa Offre il Pianerottolo</h3>
+        <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r mb-4">
+          <p class="italic text-green-100 text-sm leading-relaxed">
+            "Quattro cose. Qui e non altrove nel Dungeon."
+          </p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">
+            Conta sulle dita — artigli smussati, venature d'oro appena visibili.
+          </p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">
+            "Primo: riposo. Garantito. Sicuro. Nessuna creatura può accedere a questo livello senza il mio consenso, e il mio consenso non è in vendita." Le ali si agitano leggermente — orgoglio, forse. "È una delle poche cose che posso garantire in prima persona."
+          </p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">
+            "Secondo: scambio di cristalli. Provviste, cure, equipaggiamento minore. Non ho l'inventario di un mercante — ho quello che serve. I prezzi sono stabiliti dagli Dèi, non da me." Una piccola pausa. "Il che significa che sono equi. Qualcosa che non riesco ancora a decidere se rispettare o trovare frustrante."
+          </p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">
+            "Terzo: comunicazione divina. In altri pianerottoli, non questo, se le vostre divinità desidereranno parlarvi, qui la distanza tra voi e loro è minore. Non posso garantire che rispondano." L'aureola scintilla una volta, storta. "Non ho influenza su questo."
+          </p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">
+            "Quarto: informazioni. Quelle che posso darvi, ve le darò. Quelle che non posso, ve lo dico. Non mento." Una pausa. "Ho provato, in passato. Non funziona bene con la scintilla divina. Crea interferenze."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="bg-gray-800/60 rounded p-3 text-center">
+            <p class="text-2xl mb-1">😴</p>
+            <p class="text-gray-200 font-bold text-sm">Riposo</p>
+            <p class="text-xs text-gray-400 mt-1">Breve o lungo, garantito — nessun disturbo</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-center">
+            <p class="text-2xl mb-1">💎</p>
+            <p class="text-gray-200 font-bold text-sm">Scambio Cristalli</p>
+            <p class="text-xs text-gray-400 mt-1">Provviste, cure, equipaggiamento base</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-center">
+            <p class="text-2xl mb-1">🙏</p>
+            <p class="text-gray-200 font-bold text-sm">Comunicaz. Divina</p>
+            <p class="text-xs text-gray-400 mt-1">Se le Divinità lo scelgono</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-center">
+            <p class="text-2xl mb-1">📜</p>
+            <p class="text-gray-200 font-bold text-sm">Informazioni</p>
+            <p class="text-xs text-gray-400 mt-1">Entro i limiti del ruolo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. L'Arco del Velo -->
+      <div class="bg-purple-900/20 border border-purple-700/30 rounded-lg p-5">
+        <h3 class="text-lg font-bold text-purple-400 mb-3">4 — Il Velo: rientrare in città</h3>
+        <div class="bg-black/40 border-l-4 border-purple-500 p-4 rounded-r">
+          <p class="italic text-purple-100 text-sm leading-relaxed">
+            "Quella." Indica l'arco con la luce bianca con un dito dalla punta artigliata. "Conduce in superficie. Vi deposita all'ingresso del Dungeon, fuori. Di lì siete autonomi."
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            "Il vostro progresso rimane registrato qui — se tornate, ripartite da qui. Il Livello Uno risulta completato a vostro nome. Non si azzera... almeno finché non viene completato l'ecosistema. E no, non posso darvi informazioni su di esso. Non chiedetemelo"
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            Le ali si fermano. Per la prima volta da quando lo avete incontrato, c'è qualcosa nel suo tono che non è né formale né ironico.
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            "Quello che non posso garantirvi è dove si troveranno le altre squadre quando tornate. Questo non rientra nel mio controllo." Una pausa. "È l'unica cosa che trovo genuinamente ingiusta in questo mandato."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TABELLA SCAMBIO CRISTALLI ==================== -->
+    <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-2 text-center">
+        <span class="text-green-400">💎</span> TABELLA SCAMBIO — VEX
+      </h2>
+      <p class="text-gray-400 text-sm mb-6 italic text-center">"Ho quello che serve. Non quello che volete."</p>
+
+      <!-- Denominazione cristalli -->
+      <div class="bg-gray-800/60 border border-gray-600 rounded-lg p-4 mb-8">
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Sistema di denominazione</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+          <div class="bg-gray-700/50 rounded p-3 text-center">
+            <p class="text-gray-300 font-bold text-lg">◈</p>
+            <p class="text-gray-200 font-bold">Cristallo Minuscolo</p>
+          </div>
+          <div class="bg-cyan-900/30 rounded p-3 text-center">
+            <p class="text-cyan-400 font-bold text-lg">◆</p>
+            <p class="text-gray-200 font-bold">Cristallo Piccolo</p>
+          </div>
+          <div class="bg-blue-900/30 rounded p-3 text-center">
+            <p class="text-blue-400 font-bold text-lg">◆◆</p>
+            <p class="text-gray-200 font-bold">Cristallo Medio</p>
+          </div>
+          <div class="bg-purple-900/30 rounded p-3 text-center">
+            <p class="text-purple-400 font-bold text-lg">◆◆◆</p>
+            <p class="text-gray-200 font-bold">Cristallo Grande</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-600 mt-3 italic text-center">I prezzi sono stabiliti dagli Dèi. Non sono negoziabili — e sì, Vex lo trova ugualmente frustrante.</p>
+      </div>
+
+      <!-- SOPRAVVIVENZA ESSENZIALE -->
+      <div class="mb-8">
+        <h3 class="text-lg font-bold text-green-400 mb-4 flex items-center gap-2">
+          <span>🧰</span> Sopravvivenza Essenziale
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Oggetto</th>
+                <th class="text-center pb-2 px-4 font-semibold whitespace-nowrap">Costo</th>
+                <th class="text-left pb-2 pl-4 font-semibold">Meccanica / Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60">
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Strisciata del Corridoio <span class="text-gray-500 font-normal">(1 giorno)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">2x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs italic">Non identificabile. Funziona.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Torce <span class="text-gray-500 font-normal">(×3)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">2x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Standard.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Borsa impermeabile</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">2x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Protegge il contenuto dall'acqua. Consigliata al Livello 2.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Bende sterili <span class="text-gray-500 font-normal">(5 usi)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">5x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Stabilizza un personaggio a 0 PF (azione).</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Antidoto</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">2x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Vantaggio ai TS contro veleno per 1 ora.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Kit del chirurgo <span class="text-gray-500 font-normal">(10 usi)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">2x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Come da regolamento.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Pozione di Guarigione</td>
+                <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">2x Cristallo Piccolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">2d4+4 PF.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Pozione di Guarigione Superiore</td>
+                <td class="py-3 px-4 text-center text-blue-400 whitespace-nowrap">1x Cristallo Medio</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">4d4+8 PF.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- EQUIPAGGIAMENTO E UTILITÀ -->
+      <div class="mb-8">
+        <h3 class="text-lg font-bold text-green-400 mb-4 flex items-center gap-2">
+          <span>🎒</span> Equipaggiamento e Utilità
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Oggetto</th>
+                <th class="text-center pb-2 px-4 font-semibold whitespace-nowrap">Costo</th>
+                <th class="text-left pb-2 pl-4 font-semibold">Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60">
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Corda di seta <span class="text-gray-500 font-normal">(15m)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">5x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Resistenza 600 kg.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Chiodi da roccia <span class="text-gray-500 font-normal">(×6)</span></td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">6x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Arrampicata senza tiro, anche su superfici viscide.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OGGETTI BIZZARRI MA EFFICACI -->
+      <div class="mb-8">
+        <h3 class="text-lg font-bold text-yellow-400 mb-1 flex items-center gap-2">
+          <span>🔮</span> Oggetti Bizzarri ma Efficaci
+        </h3>
+        <p class="text-gray-600 text-xs italic mb-4">"Non ho spiegazioni per tutti. Ho solo garanzie." — Vex</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Oggetto</th>
+                <th class="text-center pb-2 px-4 font-semibold whitespace-nowrap">Costo</th>
+                <th class="text-left pb-2 pl-4 font-semibold">Meccanica</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60">
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Fiala di Bioluminescenza</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">5x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Spore del Fungo Violaceo conservate. Spalmata su qualunque superficie: luce 3m per 8 ore. Nessun fuoco necessario.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Specchio del Corridoio</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">3x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Specchio angolato tascabile. Permette di osservare dietro gli angoli senza esporsi — successo automatico su Furtività per esplorare.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Sasso Parlante</td>
+                <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">1x Cristallo Piccolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Tenuto stretto mentre si parla: registra 6 secondi. Premuto di nuovo: riproducibile una volta. Uso singolo.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Boccetta di Respiro Conservato (3 sorsi)</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">6x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">2 minuti d'aria respirabile. Condivisibile. Essenziale per zone allagate o gas tossici.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Colla dell'Inganno</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">5x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Adesivo da contatto. Applicata su superficie: creatura che ci cammina sopra TS Forza CD 14 o è Trattenuta (1 min, CD 14 per liberarsi). Uso singolo.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Pillola della Chiarezza</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">5x Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Monodose. Per 1 ora: vantaggio a Percezione e Investigazione. Svantaggio a Furtività.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Nota di Debito Divino</td>
+                <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">6x Cristallo Piccolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Scritta da Vex con la sua scintilla. Presentata a qualunque essere divino o chierico: sono obbligati a fornire un servizio equivalente a un incantesimo di terzo livello. <span class="text-purple-500">Venduta con palese disagio.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OGGETTI PARTICOLARI -->
+      <div>
+        <h3 class="text-lg font-bold text-amber-400 mb-1 flex items-center gap-2">
+          <span>✦</span> Oggetti Particolari
+        </h3>
+        <p class="text-gray-600 text-xs italic mb-5">Fuori dal mandato standard. Vex non li spiega. Li vende.</p>
+
+        <!-- Frammento Narrativo -->
+        <div class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-5 mb-4">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <p class="font-bold text-amber-300">Il Frammento Narrativo</p>
+              <p class="text-amber-700 text-xs italic mt-0.5">Strumento di contestualizzazione narrativa — categoria non standard</p>
+            </div>
+            <span class="text-blue-400 font-bold whitespace-nowrap text-sm shrink-0">◆◆ Medio</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Un pezzo irregolare di pietra scura, grande quanto un palmo. Non è ossidiana — la lucentezza cambia colore a seconda di come lo tieni, come un film d'olio su acqua ferma. È caldo al tatto, sempre, anche dopo ore in una stanza fredda. Sulla superficie compaiono a tratti segni — lettere, forse, o simboli — che svaniscono prima che l'occhio riesca a metterli a fuoco. Non fa niente di visibile. Sembra aspettare.
+          </p>
+          <div class="bg-black/40 border-l-4 border-amber-500 p-4 mb-4 rounded-r">
+            <p class="italic text-amber-100 text-sm leading-relaxed">
+              "Questo non rientra nel mandato standard. Rientra in una categoria che gli Dèi hanno chiamato — e cito — <em>'strumenti di contestualizzazione narrativa'</em>. Non sono autorizzato a spiegarvi cosa fa. Posso dirvi che il Livello 2 contiene informazioni che con questo si leggono e senza questo non si vedono."
+            </p>
+            <p class="italic text-amber-200 text-sm leading-relaxed mt-3">
+              <span class="text-amber-400 not-italic font-semibold">Se lo pressano:</span> "Ho detto non <em>posso</em>, non non <em>voglio</em>. C'è differenza. La scintilla divina crea interferenze quando cerco di essere più preciso su questo specifico oggetto." <span class="text-gray-500 not-italic">[Le ali si agitano, brevemente.]</span>
+            </p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
+            <strong class="text-amber-400">📋 Nota DM:</strong> Senza il Frammento, le Note della Trama nel Livello 2 appaiono come graffi privi di senso sulla roccia bagnata — quasi scrittura, ma non lo sono. Con il Frammento in mano (o nello zaino), i graffi diventano leggibili: testo che appare e svanisce mentre lo si guarda, come se la pietra respirasse. Non consuma cariche, non si rompe — è uno strumento permanente.
+          </div>
+        </div>
+
+        <!-- Strisciata del Corridoio -->
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <p class="font-bold text-gray-200">Strisciata del Corridoio — Carne di Verme Essiccata</p>
+              <p class="text-gray-600 text-xs italic mt-0.5">Razione ricavata dal Carrion Crawler della Zona 7, Piano 1</p>
+            </div>
+            <span class="text-gray-400 font-bold whitespace-nowrap text-sm shrink-0">◈ Frammento</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Strisce grigio-pallide, coriacee, con una patina viscida che non sparisce nemmeno dopo l'essiccazione. L'odore è un ricordo persistente dell'aura nauseabonda della creatura — non forte, ma definitivamente presente. Il veleno paralizzante dei tentacoli permea i tessuti muscolari: essiccato, perde la capacità di paralizzare ma rimane biologicamente attivo in tracce microscopiche — abbastanza da mettere il sistema nervoso in uno stato di allerta costante.
+          </p>
+          <div class="bg-black/40 border-l-4 border-gray-600 p-4 mb-4 rounded-r">
+            <p class="italic text-gray-200 text-sm leading-relaxed">
+              "Provvista." Una pausa. "Non certifico il sapore."
+            </p>
+            <p class="italic text-gray-300 text-sm leading-relaxed mt-3">
+              <span class="text-gray-400 not-italic font-semibold">Se chiedono cosa fa:</span> "Funziona. L'effetto è documentato. Il gusto non è documentato perché l'unico modo per documentarlo sarebbe assaggiarla, e —" <span class="text-gray-500 not-italic">[pausa]</span> "— non rientra tra le mie responsabilità."
+            </p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
+            <strong class="text-yellow-400">Effetto:</strong> Vantaggio ai TS Costituzione in generale. Immunità alla condizione Nauseato e Paralizzato.
+            <br/><strong class="text-red-400 mt-1 block">Side effect:</strong> Al momento di mangiare, TS Costituzione CD 12 o sei Nauseato per 1 round. Solo una volta, all'ingestione.
+            <br/><span class="text-gray-600 italic mt-1 block">Nessuno la compra per piacere. Funziona per questo.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: LA SCELTA ==================== -->
+    <div class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">⚖️</span> PARTE VI: LA SCELTA
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300">
+          <strong class="text-orange-400">Regola d'oro:</strong> non spingere. Lascia che siano lo stato delle loro risorse e le informazioni sulle altre gilde a guidare la discussione. Se sembrano bloccati, Vex può offrire — senza consigliare — un riepilogo neutrale: <em>"Posso dirvi dove si trovano le altre squadre. La decisione su cosa farne è vostra."</em>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-5">
+          <h3 class="text-xl font-bold text-blue-400 mb-4">🏙️ Se tornano in città</h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2"><span class="text-blue-400">+</span><span>Riposo lungo completo con tutti i comfort</span></li>
+            <li class="flex items-start gap-2"><span class="text-blue-400">+</span><span>Accesso ai mercanti cittadini (inventario completo)</span></li>
+            <li class="flex items-start gap-2"><span class="text-blue-400">+</span><span>Possono vendere campioni e oggetti non utili</span></li>
+            <li class="flex items-start gap-2"><span class="text-red-400">−</span><span>La gilda già uscita torna — e potrebbe scendere al Livello 2 prima di loro</span></li>
+            <li class="flex items-start gap-2"><span class="text-red-400">−</span><span>La gilda ancora dentro può completare il Livello 1 nel frattempo</span></li>
+            <li class="flex items-start gap-2"><span class="text-gray-400">→</span><span>Al ritorno, Vex li accoglie come se fossero andati a fare una passeggiata. <em>"Bentornati. Il mandato registra il vostro rientro. Vediamo dove eravamo."</em></span></li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-5">
+          <h3 class="text-xl font-bold text-red-400 mb-4">⬇️ Se scendono al Livello 2</h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2"><span class="text-green-400">+</span><span>Mantengono il vantaggio competitivo attuale</span></li>
+            <li class="flex items-start gap-2"><span class="text-green-400">+</span><span>Possono riposare qui prima di scendere (senza perdere posizione)</span></li>
+            <li class="flex items-start gap-2"><span class="text-green-400">+</span><span>Potrebbero essere i primi a raggiungere il Livello 2</span></li>
+            <li class="flex items-start gap-2"><span class="text-red-400">−</span><span>Entrano con le risorse del Livello 1 (limitato dallo scambio cristalli qui)</span></li>
+            <li class="flex items-start gap-2"><span class="text-yellow-400">?</span><span>Il Livello 2 è completamente ignoto — nessuna informazione disponibile, nemmeno da Vex</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-5">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">Nota DM — Se chiedono a Vex del Livello 2</p>
+        <p class="text-sm text-gray-300 italic">
+          "Il mandato copre questo Pianerottolo. Non il Livello 2." Le ali si agitano brevemente. "Non ho informazioni verificabili su quello che troverete. Non sono mai sceso." Una pausa di due secondi esatti. "Il Livello 2 esiste da quanto esiste questo Dungeon — che è lo stesso tempo in cui esisto io in questo ruolo. Nessuno di noi sa esattamente cosa c'è lì sotto."
+        </p>
+        <p class="text-sm text-gray-400 mt-2">
+          Se lo pressano: <em>"Ho sentito i suoni che salgono dalla scala. Ma sentire non è sapere, e non voglio darvi informazioni imprecise."</em> Poi smette di rispondere su questo argomento.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: DISCESA AL LIVELLO 2 ==================== -->
+    <div class="bg-gray-900/60 border border-gray-600 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-gray-400">⬇️</span> PARTE VII: LA DISCESA AL LIVELLO 2
+      </h2>
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere solo se il gruppo sceglie di scendere — rallenta il ritmo più del normale. Ogni pausa conta.</p>
+
+      <!-- La scala -->
+      <div class="bg-black/50 border-l-4 border-gray-500 p-6 my-4 rounded-r">
+        <p class="italic text-gray-200 text-lg leading-relaxed">
+          La scala che scende verso il Livello 2 è diversa da quella che avete appena percorso.
+        </p>
+        <p class="italic text-gray-200 text-lg leading-relaxed mt-4">
+          Più stretta. I gradini non sono perfetti — hanno l'irregolarità della roccia vera, come se qui il Dungeon avesse deciso di smettere di fingere. Le pareti si stringono ai lati. La luce del Pianerottolo vi segue per una decina di gradini, poi inizia ad affievolirsi — non come una torcia che si spegne, ma come qualcosa che smette di volervi seguire.
+        </p>
+        <p class="italic text-gray-200 text-lg leading-relaxed mt-4">
+          Non è buio totale. C'è qualcosa — una luminescenza, ma non quella bianca e pulita di sopra. Qualcosa di più organico. Una luce che pulsa a intervalli irregolari, come se respirasse.
+        </p>
+        <p class="italic text-gray-200 text-lg leading-relaxed mt-4">
+          Prima ancora di vedere il fondo, sentite l'acqua. Non il gocciolio intermittente delle Fogne Superiori — qualcosa di più profondo, più continuo. Come se ci fosse una corrente. Come se steste scendendo verso qualcosa che si muove costantemente, da molto prima che arrivaste voi.
+        </p>
+        <p class="italic text-gray-200 text-lg leading-relaxed mt-4">
+          E poi l'odore. Diverso dalla fetidità di sopra — non è l'odore di qualcosa che marcisce. È l'odore di qualcosa che è sempre stato qui. Pietra bagnata. Muschio così antico da aver perso il colore. E qualcosa che non riuscite ancora a classificare: qualcosa che i vostri istinti catalogano automaticamente come <em>attenzione</em>, prima ancora che il vostro cervello abbia capito perché.
+        </p>
+      </div>
+
+      <!-- Arrivo al Livello 2 -->
+      <div class="bg-black/50 border-l-4 border-cyan-600 p-6 my-4 rounded-r">
+        <p class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-3">📢 Arrivo al Livello 2 — l'ultimo gradino</p>
+        <p class="italic text-cyan-100 text-lg leading-relaxed">
+          L'ultimo gradino. Il pavimento cambia sotto i vostri piedi — non più pietra levigata, ma roccia viva, irregolare, coperta da uno strato sottile di qualcosa di viscido che preferite non esaminare troppo da vicino.
+        </p>
+        <p class="italic text-cyan-100 text-lg leading-relaxed mt-4">
+          Siete in una caverna. O almeno — così sembra nei primi secondi. Ma poi l'occhio inizia ad adattarsi, e capite che "caverna" è una semplificazione comoda. Le pareti hanno una regolarità troppo precisa per essere naturali. I corridoi che partono dalla vostra posizione hanno angoli troppo coerenti per essere opera dell'acqua o del tempo. Qualcuno ha scavato qui. Qualcosa ha costruito qui. E non ha finito.
+        </p>
+        <p class="italic text-cyan-100 text-lg leading-relaxed mt-4">
+          L'acqua che sentivate scendendo è ovunque — ma non sul pavimento, non ancora. È nelle pareti. Nelle fessure. Nel soffitto. Gocciola, scivola, scorre in rivoli sottili che non sembrano avere una direzione precisa. Da qualche parte abbastanza vicina da essere rilevante, sentite il suono di qualcosa di più grande. Una corrente. Un flusso vero.
+        </p>
+        <p class="italic text-cyan-100 text-lg leading-relaxed mt-4">
+          Non avete ancora visto niente. Non avete ancora sentito niente muoversi. Ma avete la sensazione — chiara e nitida come una lama tirata fuori al buio — che abbiate appena fatto qualcosa di irreversibile.
+        </p>
+        <p class="italic text-cyan-100 text-lg leading-relaxed mt-6 font-medium">
+          Benvenuti al Livello 2.
+        </p>
+      </div>
+
+      <div class="bg-cyan-900/20 border border-cyan-500/30 rounded p-4 mt-2">
+        <p class="text-sm font-bold text-cyan-400 mb-2">📋 Nota DM — Il Livello 2</p>
+        <p class="text-sm text-gray-300">
+          La descrizione sopra è volutamente aperta sull'ambiente specifico — adattala a quello che hai in mente. Se le Fogne Superiori erano fognature urbane degradate, il Livello 2 potrebbe essere i canali sotterranei originari sotto le fondamenta della città, qualcosa di più antico delle fogne stesse. Oppure qualcosa che il Dungeon Divino ha sovrapposto alla topografia reale senza che corrisponda a niente di costruito dagli uomini. Definisci la Zona 1 del Livello 2 prima della prossima sessione.
+        </p>
+      </div>
+    </div>
+
+    <!-- Note Aggiuntive -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-300 mb-4">📝 Note Aggiuntive per le Sessioni Future</h2>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Vex e i Tomi di Mystra:</strong> se glieli mostrano, li riconosce immediatamente. Le venature dorate brillano più forte per un secondo. Dice solo: <em>"Questi non appartengono al sistema di ricompense del Dungeon. Non sono nel mandato."</em> Poi aggiunge, più basso: <em>"Li ho visti, però. Nel Rito. Prima che si interrompesse."</em> Non aggiunge altro a meno che non venga interrogato con insistenza.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Vex e Riven:</strong> la prima volta che vede Riven da vicino, le ali si fermano del tutto per tre secondi — cosa insolita. Poi riprendono. Non dice nulla. Se lo pressano: <em>"La cicatrice. So cos'è. O meglio — so cosa si sente avere qualcosa del genere."</em> Pausa. <em>"Non è una cosa che auguro a qualcuno."</em></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Il Pianerottolo come luogo fisso:</strong> ogni volta che tornano, Vex dovrebbe ricordare qualcosa di specifico dell'ultima visita. Un dettaglio piccolo — un nome detto, una decisione presa. È quello che lo fa sembrare reale.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Se qualcuno chiede "ti dispiace servire?":</strong> l'aureola scintilla tre volte irregolari. Poi: <em>"Il mandato non include disposizioni emotive. La domanda è fuori ambito."</em> Pausa lunga. <em>"Ma noto che me la fate."</em></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Se qualcuno lo chiama "Auranthor":</strong> si ferma completamente. Le ali smettono. Gli occhi lampeggiano ambra più a lungo del solito. Poi: <em>"Dove avete sentito quel nome."</em> Non è una domanda.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-2" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 2 - Esplorazione delle Fogne
+      </a>
+      <span class="text-gray-500 italic">Sessione 4 in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

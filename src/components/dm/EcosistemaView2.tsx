@@ -213,27 +213,30 @@ export default function EcosistemaView2() {
     {
       numero: '21',
       nome: 'La Sala delle Chiuse',
-      tipo: 'Puzzle meccanico + Pericolo ambientale',
-      dimensioni: '8x8m, soffitto 3m',
+      tipo: 'Sfida fisica + Scoperta ambientale',
+      dimensioni: '8x8m, soffitto 7m',
       percorso: 'Centrale',
-      descrizione: 'Camera quadrata con soffitto basso. Al centro, un complesso meccanismo di bronzo e ferro: quattro grandi ruote di chiusa montate su un pilastro centrale, orientate verso i quattro punti cardinali. Ogni ruota è collegata a tubature che spariscono nelle pareti.\n\nIl pavimento è una griglia di metallo sotto cui si vede acqua scura che scorre rapidamente.\n\nSulla parete Ovest, un pannello di bronzo mostra un diagramma inciso: quattro cerchi collegati da linee, con simboli. Sotto, in Comune antico: "Le acque obbediscono a chi comprende il loro flusso. Ma chi sbaglia, affoga nel suo errore."',
+      descrizione: 'Camera ottagonale con soffitto insolitamente alto. Al centro, una colonna d\'acqua sale dal pavimento fino all\'alto: stessa anomalia di Zona 18, ma qui è concentrata, potente, quasi solida — larga 1.5m, ruota lentamente su sé stessa mentre sale.\n\nA 4 metri d\'altezza, una piattaforma di pietra aggettante regge una grande ruota di bronzo — la chiusa vera e propria. La scala che portava alla piattaforma è crollata. Le pareti sono lisce, bagnate, senza appigli.\n\nIl passaggio verso Zona 25 è sigillato da una saracinesca di ferro sulla parete Sud. Sopra la saracinesca, inciso nella pietra: "L\'acqua non conosce il basso. Nemmeno tu."',
       elementi: [
-        'PUZZLE DELLE CHIUSE — Obiettivo: aprire il passaggio verso il Collettore Centrale (Zona 25)',
-        'Ruota Nord (triangolo su): afflusso dalla superficie | Ruota Sud (triangolo giù): deflusso verso profondità | Ruota Est (cerchio): pressione tubature orientali | Ruota Ovest (quadrato): pressione tubature occidentali',
-        'Ogni ruota: 3 posizioni — Chiusa (attuale), Mezza apertura, Apertura completa',
-        'SOLUZIONE: Nord = Mezza apertura, Sud = Mezza apertura, Est = Apertura completa, Ovest = Apertura completa → la pressione laterale forza la porta sud ad aprirsi',
-        'ERRORE se Est ≠ Ovest: Tubature scoppiano → 2d6 danni contundenti a tutti (TS Destrezza CD 14 per dimezzare). Ruote si resettano.',
-        'ERRORE se Nord aperta + Sud non aperta: Acqua sale 30cm/minuto. 10 min prima di allagamento completo.',
-        'Indizi: Investigare CD 13 sul diagramma | Arcano CD 14 sulle tubature | Percezione CD 12 sulla porta nascosta a Sud',
-        'Tesoro: 1 cristallo medio (emerge dal meccanismo dopo soluzione). Dentro il pannello (Investigare CD 15): 35 mo + chiave di bronzo piccola (apre lucchetto nella Zona 24)'
+        'OBIETTIVO: raggiungere la piattaforma a 4m e girare la ruota di bronzo per aprire la saracinesca verso Zona 25',
+        'LA COLONNA — L\'acqua sale con forza sufficiente a trasportare un personaggio in armatura completa. Non serve nuotare né scalare: basta entrarci e smettere di resistere. La corrente porta su in circa 3 secondi.',
+        'Entrare nella colonna: Constitution CD 11 per il freddo (1d4 danni da freddo, non bloccante). Nessun altro check — la corrente fa tutto il lavoro.',
+        'In cima: la ruota gira liberamente, non è bloccata. Non richiede check. Appena girata, la saracinesca si apre con un boato idraulico sordo e la colonna d\'acqua si ferma (il sistema si normalizza).',
+        'La piattaforma contiene: 1 cristallo medio (incastrato nell\'ingranaggio della ruota, emerge quando si gira). Pannello laterale (Investigare CD 15): 35 mo + chiave di bronzo piccola (apre lucchetto nella Zona 24).',
+        'TENTATIVI ALTERNATIVI — Scalare la parete: Atletica CD 18 (liscia e bagnata), ogni fallimento = 1d6 danni caduta. Fly/Levitate: funzionano, arrivano su e girano la ruota — ma chi usa Levitate spende uno slot per fare gratis ciò che la colonna fa gratis. Spider Climb: valido, CD non necessario.',
+        'HINT SILENZIOSO — Se dopo 10 minuti nessuno ha provato la colonna: Percezione passiva 13 nota un guanto abbandonato che sale lentamente dentro la corrente e scompare in cima.',
+        'COLLEGAMENTO ZONA 27 — Girare la ruota attiva il circuito idraulico del Collettore. In Zona 27 (boss fight), il pannello sulla parete Ovest diventa operativo: consente di forzare l\'acqua BASSA per 2 round (usabile 2 volte). I PG sentiranno un clic meccanico lontano quando la ruota gira — non sanno ancora cosa significa.'
       ],
-      pericoli: 'Tubature che scoppiano, allagamento potenziale',
-      cristalli: '1 cristallo medio (dal meccanismo)',
-      favoreDivino: 'Mystra: risolvere il puzzle al primo tentativo (+10%). Tymora: risolvere senza subire danni (+10%)',
+      pericoli: 'Caduta dalla piattaforma (1d6 danni) per chi scala o scivola, freddo della colonna (1d4)',
+      cristalli: '1 cristallo medio (dalla ruota)',
+      favoreDivino: 'Tymora: primo PG ad entrare nella colonna senza check precedenti — coraggio puro (+10%). Mystra: capire il collegamento tra la colonna e l\'anomalia di Zona 18 prima di provarla (Arcano CD 13, +10%).',
       noteDM: [
-        'Puzzle più meccanico e meno logico rispetto alle Quattro Leve del Piano 1.',
-        'Gli errori fanno male ma non uccidono. L\'obiettivo è farli sentire intelligenti.',
-        'Se bloccati oltre 15 minuti, fai fare Investigare CD 11 per un hint.'
+        'L\'unico ostacolo reale è psicologico: fidarsi dell\'acqua impossibile. Non dare fretta, non aggiungere pericoli artificiali — la tensione viene dal salto di fede.',
+        'Descrivi la colonna con cura: "L\'acqua ruota su sé stessa come un pilastro vivo. Non schizza, non fa rumore. Sale e basta." I giocatori devono sentire che è anomala ma non ostile.',
+        'Il momento in cui un PG entra e sale: rallenta il tempo. Descrivi cosa vedono dall\'alto, i compagni piccoli sotto, l\'acqua che li avvolge senza bagnare (o bagnando poco). È il momento cinematografico del percorso centrale.',
+        'Se usano Fly/Levitate senza mai considerare la colonna: nessun problema meccanico, ma perdi l\'aha-moment. Puoi far dire a un PNG o all\'ambiente qualcosa che li faccia riflettere su cosa hanno appena ignorato.',
+        'La colonna che si ferma dopo la soluzione è importante: mostra che il dungeon "risponde" alle loro azioni. L\'anomalia non era decorativa — era funzionale.',
+        'PAYOFF IN ZONA 27: i PG che sono entrati nella colonna capiranno istintivamente le correnti ascendenti della boss room. Potrebbero usarle in modi creativi — assecondalo.'
       ]
     },
     {
@@ -366,7 +369,7 @@ export default function EcosistemaView2() {
         'FASE 2 — La Matriarca si Sveglia (Round 4+): Membrana rotta. Perde Resistenza. Attacca direttamente. Sommersi generati continuano a combattere.',
         'FASE 3 — Frenesia (sotto 50 PF): Pezzi cadono nell\'acqua → max 2 Sommersi Esplosivi. 1 attacco extra per round. L\'acqua nella stanza ribolla: 1d4 acido a inizio turno se in acqua.',
         'LA MAREA: Round pari → acqua +30cm (Matriarca ha vantaggio). Round dispari → acqua -30cm (più facile muoversi).',
-        'Pannello chiuse: Se risolto puzzle Zona 21, pannello sulla parete Ovest → azione per forzare acqua BASSA per 2 round. Usabile 2 volte.',
+        'Pannello chiuse: Se girata la ruota in Zona 21, pannello sulla parete Ovest è attivo → azione per forzare acqua BASSA per 2 round. Usabile 2 volte. (I PG che sono saliti nella colonna riconoscono immediatamente il meccanismo.)',
         'Vittoria: Ridurre a 0 PF, OPPURE 3 dosi di Essenza Purificata direttamente nella massa (3d6 radianti ciascuna + TS COS CD 15 o stordita 1 round)',
         'LOOT: Polvere DORATA. 2 cristalli grandi (100 eq. piccoli). 120 mo fuse in blocchi (4 blocchi da 5 kg). Spada corta +1 (lama con sfumatura ambrata — prima arma magica del dungeon). 3 gemme (ambra 30 mo, tormalina 20 mo, onice 15 mo). Medaglione dei contrabbandieri.'
       ],
@@ -456,7 +459,7 @@ export default function EcosistemaView2() {
         { nemico: 'Sommerso Recente x1', stanza: '22', cristalli: 8, nota: 'Evitabile' },
         { nemico: 'Sommersi (ondata) x3-6', stanza: '23', cristalli: 59, nota: 'Parzialmente evitabile' },
         { nemico: 'Matriarca + Sommersi', stanza: '27', cristalli: 140, nota: 'Boss inevitabile (2 grandi + ~40 piccoli)' },
-        { nemico: 'Meccanismo chiuse', stanza: '21', cristalli: 10, nota: 'Puzzle reward (1 medio)' },
+        { nemico: 'Colonna ascendente', stanza: '21', cristalli: 10, nota: 'Reward salita (1 medio)' },
         { nemico: 'Cofanetto Riserva', stanza: '26 (opt.)', cristalli: 50, nota: 'Richiede Chiave di Ferro Nero (1 grande)' }
       ]
     },
@@ -506,7 +509,7 @@ export default function EcosistemaView2() {
       azioni: [
         { fonte: 'Correnti', condizione: 'Attraversare Zona 17 senza cadere in acqua', favore: '10%' },
         { fonte: 'Grick visti', condizione: 'Individuare entrambi i Grick prima dell\'attacco', favore: '15%' },
-        { fonte: 'Chiuse perfette', condizione: 'Puzzle Zona 21 senza danni', favore: '10%' },
+        { fonte: 'Salto di fede', condizione: 'Zona 21: primo PG entra nella colonna senza tentare scalate prima', favore: '10%' },
         { fonte: 'Accampamento pulito', condizione: 'Zona 22: trovare cassa senza attivare Sommerso', favore: '10%' },
         { fonte: 'Asciutti', condizione: 'Zona 23: nessun PG trascinato in acqua', favore: '15%' },
         { fonte: 'Boss creativo', condizione: 'Usare Essenza Purificata o pannello chiuse', favore: '10%' },
