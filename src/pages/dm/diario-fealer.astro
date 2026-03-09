@@ -1,0 +1,357 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Diario di Fealer [DM]"
+  description="Diario personale di Fealer — Mappa, Fauna, Flora"
+>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Documento privato di Fealer — non mostrare agli altri giocatori</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm" class="text-blue-400 hover:text-blue-300">← Torna al DM</a>
+      </div>
+      <div class="flex items-center gap-4 mb-2">
+        <span class="text-5xl">📔</span>
+        <div>
+          <h1 class="text-4xl font-bold text-amber-400">Diario di Fealer</h1>
+          <p class="text-amber-600/80 text-sm italic mt-1">
+            "Annotazioni metodiche su luoghi, creature e sostanze incontrate durante l'esplorazione del Dungeon Divino.
+            Compilato con l'assistenza di Vex, salvo dove diversamente indicato."
+          </p>
+        </div>
+        <span class="ml-auto px-3 py-1 bg-amber-900/50 border border-amber-600/40 rounded text-amber-400 text-xs font-bold tracking-widest self-start">🔒 PRIVATO</span>
+      </div>
+    </div>
+
+    <!-- Indice sezioni -->
+    <div class="bg-amber-950/20 border border-amber-800/30 rounded-lg p-4 mb-8 flex flex-wrap gap-4 text-sm">
+      <a href="#mappa" class="text-amber-400 hover:text-amber-300">🗺️ I — Mappa dei Livelli</a>
+      <span class="text-amber-800">·</span>
+      <a href="#fauna" class="text-amber-400 hover:text-amber-300">🦴 II — Studio della Fauna</a>
+      <span class="text-amber-800">·</span>
+      <a href="#flora" class="text-amber-400 hover:text-amber-300">🌿 III — Studio della Flora</a>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SEZIONE I: MAPPA DEI LIVELLI                          -->
+    <!-- ===================================================== -->
+    <div id="mappa" class="bg-amber-950/20 border-2 border-amber-700/40 rounded-lg p-8 mb-8">
+
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">🗺️</span>
+        <h2 class="text-2xl font-bold text-amber-300">I — Mappa dei Livelli</h2>
+        <div class="flex-1 h-px bg-amber-700/30 ml-2"></div>
+      </div>
+
+      <div class="bg-black/20 border border-amber-800/30 rounded p-4 mb-6 italic text-amber-200/60 text-sm">
+        "La mappa è abbozzata sul retro del foglio allegato. Queste sono le annotazioni a margine."
+      </div>
+
+      <!-- LIVELLO 1 -->
+      <div class="mb-8">
+        <p class="text-amber-400 font-bold text-lg mb-4 border-b border-amber-800/40 pb-1">LIVELLO 1 — Fogne Superiori</p>
+        <div class="space-y-3 text-sm text-gray-300">
+
+          <div class="bg-gray-900/40 border-l-2 border-amber-700/50 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Ingresso e Scale di Accesso</p>
+            <p class="leading-relaxed">Struttura in pietra grigia standard, priva di trappole visibili al momento del passaggio. La discesa è lineare — nessun bivio nelle scale stesse. <em>Nota: l'illuminazione è minima, portare sempre torce. Le crepe nelle pareti seguono un pattern nord-sud — probabilmente cedimento strutturale, non artificiale.</em></p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-amber-700/50 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Corridoio Principale</p>
+            <p class="leading-relaxed">Lungo, con ramificazioni laterali. Pavimento umido con rischio scivolamento nelle zone prossime ai canali. Le pareti mostrano tracce di escrementi di roditore e segni di artigli a circa 60 cm da terra — <em>presenza di ratti di grossa taglia confermata prima ancora dell'incontro diretto.</em> Elemento utile per valutazioni future.</p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-red-700/40 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Zona dei Ratti <span class="text-red-400 text-xs ml-2">[PERICOLO RESIDUO BASSO]</span></p>
+            <p class="leading-relaxed">Stanza allargata, tre accessi. Gli esemplari erano annidati nell'angolo nord-est — presenza di residui organici (ossa, brandelli) che suggerisce zona di alimentazione consolidata. <em>Lo sciame è emerso da sotto una grata nel pavimento: verificare sempre la consistenza delle grate prima di attraversare. Non si sentiva odore prima dell'attacco — naso non affidabile in ambienti come questo.</em></p>
+            <p class="text-red-400/70 text-xs mt-1 italic">⚠ La grata è rimasta aperta. Possibile reinfestazione se la zona non viene ripulita.</p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-green-700/40 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Zona dei Funghi Bioluminescenti</p>
+            <p class="leading-relaxed">Corridoio con pareti ricoperte di formazioni fungine azzurrine. Luce sufficiente a muoversi senza torcia. <em>Non toccare le formazioni senza guanti — le spore si staccano con contatto minimo e causano irritazione. La concentrazione è più alta vicino al soffitto.</em> Zone di ombra tra le colonie: possibile spazio di annidamento per creature di piccola taglia non rilevate.</p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-blue-700/40 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Zona del Forziere Sommerso</p>
+            <p class="leading-relaxed">Il canale raggiunge un metro di profondità in questa sezione. Visibilità sott'acqua pressoché nulla. Il forziere era ancorato al fondo con catena corta — troppo corta per esservi finito per caso. <em>Qualcuno lo ha posizionato deliberatamente. Perché qui? Perché sommerso? Le ipotesi non si chiudono.</em> I funghi porpora lungo i bordi del canale erano chiaramente coltivati — il bordo era netto, non casuale.</p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-yellow-700/40 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Vicolo dei Funghi Urlanti — Zona 13 <span class="text-yellow-400 text-xs ml-2">[VERIFICARE STRUTTURA]</span></p>
+            <p class="leading-relaxed">Vicolo cieco con concentrazione anomala di funghi gialli. Le formazioni erano disposte in modo troppo regolare per essere casuali — file di tre o quattro, equidistanti. <em>Qualcuno le ha piantate? O il dungeon stesso tende a sistematizzare la propria flora? Domanda aperta.</em> Il suono emesso al disturbo ha attirato l'attenzione di qualcosa più lontano nel corridoio — non abbiamo investigato la fonte.</p>
+            <p class="text-yellow-400/70 text-xs mt-1 italic">⚠ Non avvicinarsi con fiamme libere. Non parlare ad alta voce in prossimità delle colonie.</p>
+          </div>
+
+          <div class="bg-gray-900/40 border-l-2 border-purple-700/40 pl-4 py-2 rounded-r">
+            <p class="text-amber-300 font-semibold mb-1">Corridoio del Fungo Violaceo — Fondo Livello 1</p>
+            <p class="leading-relaxed">Il corridoio si chiude in fondo contro roccia viva — nessuna uscita laterale. Il Fungo Violaceo occupava l'intera larghezza del passaggio, rendendo impossibile il bypass. <em>Tattica forzata: non si può aggirare una minaccia in un corridoio lineare. In futuro valutare sempre la geometria prima di avanzare.</em> La pietra sotto il fungo era più lucida del resto — probabile presenza prolungata o fenomeno di mineralizzazione.</p>
+            <p class="text-purple-400/70 text-xs mt-1 italic">Vex ha confermato: questa zona è il limite del Livello 1. Le scale sono l'unica via seguente.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PIANEROTTOLO -->
+      <div>
+        <p class="text-amber-400 font-bold text-lg mb-4 border-b border-amber-800/40 pb-1">PIANEROTTOLO — Zona Interlivello</p>
+        <div class="bg-gray-900/40 border-l-2 border-cyan-700/40 pl-4 py-3 rounded-r text-sm text-gray-300">
+          <p class="leading-relaxed">Struttura atipica — non fognatura, non dungeon convenzionale. Spazio concepito per la permanenza, non il transito. <em>Vex è qui. Questo basta a renderlo diverso da tutto il resto.</em></p>
+          <p class="leading-relaxed mt-2">Nessuna trappola rilevata. Nessuna minaccia percepita. <em>La domanda non è se il posto è sicuro — è se "sicuro" ha lo stesso significato qui che altrove.</em></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SEZIONE II: STUDIO DELLA FAUNA                        -->
+    <!-- ===================================================== -->
+    <div id="fauna" class="bg-amber-950/20 border-2 border-amber-700/40 rounded-lg p-8 mb-8">
+
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">🦴</span>
+        <h2 class="text-2xl font-bold text-amber-300">II — Studio della Fauna</h2>
+        <div class="flex-1 h-px bg-amber-700/30 ml-2"></div>
+      </div>
+
+      <!-- Ratto Gigante -->
+      <div class="bg-gray-900/30 border border-amber-800/30 rounded-lg p-5 mb-4">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <p class="text-amber-300 font-bold text-base">Ratto Gigante <em class="text-gray-500 text-xs font-normal ml-2">(Rattus Maximus, var. fognaria)</em></p>
+            <p class="text-gray-500 text-xs">Incontro: Zona dei Ratti, Livello 1 · Esemplari osservati: 2</p>
+          </div>
+          <span class="text-xs px-2 py-0.5 bg-green-900/40 border border-green-700/40 text-green-400 rounded">Minaccia: BASSA</span>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Osservazioni anatomiche</p>
+            <p class="leading-relaxed">Taglia nettamente superiore alla media — circa 90 cm dalla testa alla coda. Pelame rado e giallastro, occhi con lieve iridescenza rossa in condizioni di buio. Artigli anteriori rinforzati, adatti allo scavo. Muscolatura del collo ipertrofica rispetto al corpo — morso come attacco primario.</p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Comportamento & Tattiche</p>
+            <p class="leading-relaxed">Aggressivi solo in branco o se in difesa della tana. Attaccano per primi quando percepiscono odore di ferite aperte. <em>Non si ritirano — comportamento anomalo rispetto agli esemplari selvatici normali. Possibile condizionamento del dungeon.</em></p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Resistenze / Immunità</p>
+            <p class="text-gray-400 italic">Nessuna resistenza rilevata. Caduti rapidamente.</p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Debolezze</p>
+            <p class="leading-relaxed">Sensibili a luce intensa — si disorientano. Il fuoco ha causato fuga immediata nel primo esemplare prima che il secondo attaccasse. <em>Tenere a mente: una torcia agitata può bastare a gestirne uno singolo.</em></p>
+          </div>
+        </div>
+        <div class="mt-3 pt-3 border-t border-amber-800/20 text-xs text-amber-700/70 italic">
+          "Vex ha commentato che i ratti del Livello 1 sono 'fauna di compensazione'. Non ho ancora capito cosa significhi."
+        </div>
+      </div>
+
+      <!-- Sciame di Ratti -->
+      <div class="bg-gray-900/30 border border-amber-800/30 rounded-lg p-5 mb-4">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <p class="text-amber-300 font-bold text-base">Sciame di Ratti <em class="text-gray-500 text-xs font-normal ml-2">(Agmen rattorum)</em></p>
+            <p class="text-gray-500 text-xs">Incontro: Zona dei Ratti, Livello 1 · Sciame: ~40 esemplari stimati</p>
+          </div>
+          <span class="text-xs px-2 py-0.5 bg-yellow-900/40 border border-yellow-700/40 text-yellow-400 rounded">Minaccia: MEDIA</span>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Osservazioni</p>
+            <p class="leading-relaxed">Lo sciame si comporta come entità singola — movimenti coordinati senza comunicazione vocalica evidente. Probabile meccanismo di feromoni o campo sensoriale condiviso. <em>Non tentare di combattere uno sciame con armi normali — è come colpire acqua.</em></p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Gestione efficace</p>
+            <p class="leading-relaxed">Fuoco, acido e magie ad area. Un singolo punto di danno da arma convenzionale non ha effetto rilevante sulla massa. La dispersione avviene solo sotto danno massiccio o fonte di calore intensa applicata al centro dello sciame.</p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Provenienza</p>
+            <p class="leading-relaxed">Dalla grata nel pavimento. <em>Annotare: le grate nel dungeon non sono solo struttura — sono accessi. Vanno sempre verificate.</em></p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Rischio contagio</p>
+            <p class="text-red-400/80 leading-relaxed">I morsi di ratto portano malattia. Pulire e trattare qualunque ferita entro un'ora dal combattimento. <em>Ho già preparato una pasta antisettica da tenere nel kit.</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fungo Violaceo Mutato -->
+      <div class="bg-gray-900/30 border border-purple-800/30 rounded-lg p-5">
+        <div class="flex items-start justify-between mb-3">
+          <div>
+            <p class="text-amber-300 font-bold text-base">Fungo Violaceo Mutato <em class="text-gray-500 text-xs font-normal ml-2">(Fungus violaceus, var. mutata)</em></p>
+            <p class="text-gray-500 text-xs">Incontro: Fondo Livello 1 · Unico esemplare · Boss di livello</p>
+          </div>
+          <span class="text-xs px-2 py-0.5 bg-red-900/40 border border-red-700/40 text-red-400 rounded">Minaccia: ALTA</span>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-sm text-gray-300">
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Anatomia</p>
+            <p class="leading-relaxed">Massa fungina di circa 2 metri di altezza, struttura interna cava con camera d'acqua integrata — fonte della rigenerazione. Superficie esterna coperta da muco denso con proprietà ritardanti il fuoco. Il cappello era perforato da pori che rilasciavano vapori viola in modo costante.</p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Meccanismi di attacco</p>
+            <p class="leading-relaxed">Spore veleno a distanza (area conica), pseudopodi per corpo a corpo, rilascio di nube di vapori al danno critico. La nube è densa — riduce visibilità e causa avvelenamento prolungato se inalata.</p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Resistenze confermate</p>
+            <p class="leading-relaxed text-orange-300/80">Resistenza al fuoco (confermata — riduzione visibile del danno). Rigenerazione attiva vicino a fonti d'acqua. <em>Il canale laterale alimentava la sua capacità di recupero — separare il bersaglio dall'acqua è priorità tattica.</em></p>
+          </div>
+          <div>
+            <p class="text-amber-400/80 font-semibold text-xs mb-1 uppercase tracking-wide">Debolezze</p>
+            <p class="leading-relaxed">Nessuna immunità rilevata ai danni taglienti/contundenti. Danni accumulati nel tempo lo hanno esaurito prima del corpo a corpo finale. <em>Approccio corretto: logoramento a distanza, evitare la nube.</em></p>
+          </div>
+        </div>
+        <div class="mt-3 pt-3 border-t border-purple-800/20 text-xs text-purple-400/70 italic">
+          "Alla morte si è dissolto in spore viola. I cristalli erano sotto. Non è un comportamento biologico normale — è quasi una deposizione deliberata. Come se sapesse di dover lasciare qualcosa."
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SEZIONE III: STUDIO DELLA FLORA                       -->
+    <!-- ===================================================== -->
+    <div id="flora" class="bg-amber-950/20 border-2 border-amber-700/40 rounded-lg p-8 mb-8">
+
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-2xl">🌿</span>
+        <h2 class="text-2xl font-bold text-amber-300">III — Studio della Flora</h2>
+        <div class="flex-1 h-px bg-amber-700/30 ml-2"></div>
+      </div>
+
+      <div class="bg-black/20 border border-amber-800/30 rounded p-4 mb-6 text-sm text-amber-200/60 italic">
+        "Studio condotto con l'assistenza di Vex al Pianerottolo, dopo la conclusione del Livello 1. Strumenti: kit alchemico, mortaio, lenti di ingrandimento, distillatore tascabile. Tempo totale: circa 3 ore."
+      </div>
+
+      <!-- Fungo Bioluminescente Azzurrino -->
+      <div class="bg-gray-900/30 border border-cyan-800/30 rounded-lg p-5 mb-4">
+        <div class="flex items-start justify-between mb-1">
+          <p class="text-cyan-300 font-bold text-base">Fungo Bioluminescente Azzurrino</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-500">Tiro studio:</span>
+            <span class="text-xs px-2 py-0.5 bg-green-900/40 border border-green-600/40 text-green-400 rounded font-bold">16–20 ✓ Studio completo</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs mb-3">Zona raccolta: corridoio fungino · dopo scontro coi ratti</p>
+        <div class="bg-amber-950/30 pl-4 py-3 rounded-r text-sm text-gray-300 italic leading-relaxed mb-3" style="border-left: 3px solid rgba(217,119,6,0.4)">
+          "Straordinario. La componente luminosa è separabile dalla tossina con distillazione a freddo. Ottengo due estratti distinti: <strong class="text-cyan-300 not-italic">(A) Tintura Azzurrina</strong> — luce chiara in raggio di 9 metri per 6 ore, applicabile su qualunque superficie, non infiammabile. <strong class="text-red-300 not-italic">(B) Estratto Sporale Concentrato</strong> — inalato causa avvelenamento (TS Cos CD 13, 2d4 danni veleno). Vex ha suggerito di testare (B) sulle acque stagnanti — ipotesi sull'effetto su creature acquatiche. Interessante. Tengo le dosi separate e etichettate."
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-cyan-900/20 border border-cyan-700/30 rounded p-3">
+            <p class="text-cyan-400 font-semibold mb-1">⚗ Tintura Azzurrina</p>
+            <p class="text-gray-400">Luce intensa 9m · 6 ore · su qualsiasi superficie · non infiammabile</p>
+            <p class="text-gray-500 mt-1">Dosi: 1d4 · Prep: 30 min</p>
+          </div>
+          <div class="bg-red-900/20 border border-red-700/30 rounded p-3">
+            <p class="text-red-400 font-semibold mb-1">⚗ Estratto Sporale Concentrato</p>
+            <p class="text-gray-400">TS Cos CD 13 o avvelenato · 2d4 danni veleno</p>
+            <p class="text-gray-500 mt-1">Dosi: 1 · Uso: inalazione</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fungo Giallo Urlante -->
+      <div class="bg-gray-900/30 border border-yellow-800/30 rounded-lg p-5 mb-4">
+        <div class="flex items-start justify-between mb-1">
+          <p class="text-yellow-300 font-bold text-base">Fungo Giallo Urlante</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-500">Tiro studio:</span>
+            <span class="text-xs px-2 py-0.5 bg-yellow-900/40 border border-yellow-600/40 text-yellow-400 rounded font-bold">12 · Studio parziale</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs mb-3">Zona raccolta: Vicolo dei Funghi, Zona 13 · Livello 1</p>
+        <div class="bg-amber-950/30 pl-4 py-3 rounded-r text-sm text-gray-300 italic leading-relaxed mb-3" style="border-left: 3px solid rgba(217,119,6,0.4)">
+          "Il meccanismo è identificato: camera interna sotto pressione che si comprime con stimoli fisici o termici, espellendo spore e producendo il suono. Le spore causano avvelenamento temporaneo (circa un'ora) e danno moderato. Il campione essiccato perde la capacità sonora ma mantiene le spore attive per giorni. Possibile uso come deterrente o trappola improvvisata. <em class="text-yellow-200/60">Non sono riuscito a controllare il rilascio con precisione — il processo di essiccazione ha compromesso parte del campione. Ulteriori studi se trovo altri esemplari.</em>"
+        </div>
+        <div class="grid grid-cols-1 gap-3 text-xs">
+          <div class="bg-yellow-900/20 border border-yellow-700/30 rounded p-3">
+            <p class="text-yellow-400 font-semibold mb-1">⚗ Spore Essiccate <span class="text-yellow-700 font-normal">(studio parziale)</span></p>
+            <p class="text-gray-400">Fiala lanciabile · TS Cos CD 12 o avvelenato 1 ora · 1d4 danni veleno</p>
+            <p class="text-gray-500 mt-1">Nota: effetto sonico andato perduto nell'essiccazione. Riesaminare con campione fresco.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cristalli / Spore del Fungo Violaceo -->
+      <div class="bg-gray-900/30 border border-purple-800/30 rounded-lg p-5 mb-4">
+        <div class="flex items-start justify-between mb-1">
+          <p class="text-purple-300 font-bold text-base">Cristalli / Spore del Fungo Violaceo Mutato</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-500">Tiro studio:</span>
+            <span class="text-xs px-2 py-0.5 bg-green-900/40 border border-green-600/40 text-green-400 rounded font-bold">16–20 ✓ Studio completo</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs mb-3">Zona raccolta: fondo Livello 1, post-scontro · Raccolto via Mano Magica</p>
+        <div class="bg-amber-950/30 pl-4 py-3 rounded-r text-sm text-gray-300 italic leading-relaxed mb-3" style="border-left: 3px solid rgba(217,119,6,0.4)">
+          "La natura di questi cristalli è straordinaria. Non sono prodotto biologico — sono mineralizzazione magica accelerata, generata dall'interazione tra la mutazione fungina e qualcosa nel sottosuolo. Forse acqua contaminata da energia planare. Vex ha proposto di testarli come amplificatore per trasmutazione — aveva ragione. Frantumati in un reagente specifico, moltiplicano l'efficacia delle pozioni di guarigione del 50% se assunti entro un minuto dalla pozione. Uso alternativo: le spore concentrate in un sigillo di 1,5m attraggono e paralizzano creature con Intelligenza ridotta (≤ 4) per 1 minuto. Tengo il resto. Non so ancora tutto quello che posso farne."
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-xs mb-2">
+          <div class="bg-purple-900/20 border border-purple-700/30 rounded p-3">
+            <p class="text-purple-400 font-semibold mb-1">⚗ Reagente Cristallino</p>
+            <p class="text-gray-400">Bevuto entro 1 min da una pozione: +50% PF curati</p>
+            <p class="text-gray-500 mt-1">Dosi: 1d4 · Prep: 20 min</p>
+          </div>
+          <div class="bg-indigo-900/20 border border-indigo-700/30 rounded p-3">
+            <p class="text-indigo-400 font-semibold mb-1">⚗ Sigillo di Spore</p>
+            <p class="text-gray-400">Area 1,5m · Creature Int ≤ 4: TS Sag CD 14 o attratte/paralizzate 1 min</p>
+            <p class="text-gray-500 mt-1">Prep: 1h · Si disattiva se disturbato</p>
+          </div>
+        </div>
+        <p class="text-xs text-purple-400/50 italic pt-2 border-t border-purple-800/20">
+          "Sottoprodotto: polvere luminosa viola — luce fioca 3m per 8 ore applicata su superficie. Uso pratico immediato."
+        </p>
+      </div>
+
+      <!-- Fungo Porpora Alchemico -->
+      <div class="bg-gray-900/30 border border-pink-800/30 rounded-lg p-5">
+        <div class="flex items-start justify-between mb-1">
+          <p class="text-pink-300 font-bold text-base">Fungo Porpora Alchemico</p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-500">Tiro studio:</span>
+            <span class="text-xs px-2 py-0.5 bg-green-900/40 border border-green-600/40 text-green-400 rounded font-bold">16–20 ✓ Studio completo</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs mb-3">Zona raccolta: bordi del forziere sommerso · Zona 8, Livello 1</p>
+        <div class="bg-amber-950/30 pl-4 py-3 rounded-r text-sm text-gray-300 italic leading-relaxed mb-3" style="border-left: 3px solid rgba(217,119,6,0.4)">
+          "Questo fungo è un capolavoro nascosto. L'alcaloide del cappello, estratto a freddo e stabilizzato con sale di roccia, diventa un sedativo potente: TS Costituzione CD 14 o creatura addormentata per un'ora — incosciente, non letale. Perfetto per operazioni silenziose. La resina del gambo, bollita con acido debole, si trasforma in un adesivo magico temporaneo — attacca qualunque materiale non magico per un'ora prima di dissolversi. Vex ha testato il sedativo annusandone una traccia. Ho dovuto sorreggerla per dieci minuti. Esperimento non autorizzato. Non lo ha trovato divertente. <em class="text-pink-200/60">Tre dosi ottenute. Valore stimato: 30–40 mo a dose per un alchimista competente.</em>"
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-pink-900/20 border border-pink-700/30 rounded p-3">
+            <p class="text-pink-400 font-semibold mb-1">⚗ Sedativo Porpora</p>
+            <p class="text-gray-400">TS Cos CD 14 o incosciente 1 ora · si sveglia se subisce danni</p>
+            <p class="text-gray-500 mt-1">Dosi: 2d4 · Valore: 30–40 mo/dose · Somministrazione: inalazione o contatto</p>
+          </div>
+          <div class="bg-rose-900/20 border border-rose-700/30 rounded p-3">
+            <p class="text-rose-400 font-semibold mb-1">⚗ Resina Tattile</p>
+            <p class="text-gray-400">Adesivo magico temporaneo · regge fino a 250 kg su superficie verticale · 1 ora poi si dissolve</p>
+            <p class="text-gray-500 mt-1">Non funziona su oggetti magici</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Torna al DM
+      </a>
+      <span class="text-gray-500 text-sm italic">Aggiornato dopo la Sessione 2</span>
+    </div>
+
+  </div>
+</MainLayout>
