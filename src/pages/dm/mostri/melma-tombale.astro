@@ -1,0 +1,457 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../../components/dm/DMAuthGuard';
+---
+
+<MainLayout title="Melma Tombale - D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-5xl mx-auto p-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm/ecosistema-1-piano-2" class="text-cyan-400 hover:text-cyan-300">
+            ← Torna all'Ecosistema 1 - Piano 2
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-green-400 mb-2">MELMA TOMBALE</h1>
+        <p class="text-xl text-yellow-400">"La Cripta Respira"</p>
+        <p class="text-slate-400 mt-2">Zona 19 - La Cripta Allagata (Opzionale) | CR 3 | Party livello 5</p>
+        <div class="mt-3 flex gap-3">
+          <span class="bg-orange-900 text-orange-200 px-3 py-1 rounded text-sm font-semibold">Variante Custom</span>
+          <span class="bg-green-900 text-green-200 px-3 py-1 rounded text-sm font-semibold">2x nell'incontro</span>
+          <span class="bg-red-900 text-red-200 px-3 py-1 rounded text-sm font-semibold">Corroe Metallo + Legno</span>
+        </div>
+      </div>
+
+      <!-- Concept del Mostro -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">🫧 Concept del Mostro</h2>
+        <p class="text-slate-200 mb-4">
+          La Melma Tombale non è un Gray Ooze comune. È qualcosa che si è formato nel corso di
+          <strong class="text-green-400">secoli di stagnazione</strong> — una massa che ha assorbito
+          i fluidi di decomposizione dei cadaveri nei sarcofagi, i minerali delle pietre antiche,
+          e qualcosa di più oscuro che filtra dalle profondità sotto la cripta.
+        </p>
+        <p class="text-slate-200 mb-4">
+          Quando l'acqua in questa camera è quasi ferma da abbastanza tempo, la Melma ne diventa
+          <strong class="text-yellow-400">indistinguibile</strong>. Non si nasconde nell'acqua —
+          è diventata l'acqua. La sua densità, il suo colore torbido grigio, perfino il modo in cui
+          si increspa al passaggio di un piede: tutto mima un liquido normale.
+          Fino a quando non è troppo tardi.
+        </p>
+
+        <h3 class="text-xl font-semibold text-green-300 mb-3 mt-6">Aspetto e Atmosfera</h3>
+        <ul class="space-y-2 text-slate-300">
+          <li><strong class="text-yellow-400">A riposo:</strong> Invisibile. Occupa 1-1.5m di diametro sul fondo, indistinguibile dall'acqua torbida. Nessun contorno, nessun riflesso anomalo.</li>
+          <li><strong class="text-yellow-400">In movimento:</strong> L'acqua "si solleva" in modo innaturale. Un rigonfiamento semiopaco emerge, simile a un blob di gelatina grigia densa.</li>
+          <li><strong class="text-yellow-400">All'attacco:</strong> Uno pseudopodio oscuro emerge dall'acqua con velocità sorprendente. La cosa si "alza" verso il bersaglio, emettendo un odore acre di acido e decomposizione.</li>
+          <li><strong class="text-yellow-400">Ferita:</strong> Perde liquido acido che si mescola all'acqua intorno. L'acqua attorno diventa leggermente più opaca e corrosiva.</li>
+          <li><strong class="text-yellow-400">Morendo:</strong> Si disintegra nell'acqua con un gorgoglio silenzioso. Dal punto in cui era emerge polvere grigio-nera che sale lentamente verso la superficie.</li>
+        </ul>
+
+        <div class="bg-slate-900 rounded-lg p-4 mt-4 border-l-4 border-green-500">
+          <h4 class="text-lg font-semibold text-green-300 mb-2">📢 Descrizione da leggere ai giocatori</h4>
+          <p class="text-slate-300 italic">
+            "L'acqua non è ferma. Non come dovrebbe essere. C'è qualcosa — una lentezza, quasi
+            una viscosità — nel modo in cui si muove attorno alle vostre gambe. Forse è solo il fango.
+            Forse è solo la corrente. Ma per un attimo, giurate di aver visto la superficie incresparsi
+            verso di voi, non lontano da voi."
+          </p>
+        </div>
+      </section>
+
+      <!-- Statistiche Complete -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">📊 Statistiche Complete</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-red-300 mb-2">MELMA TOMBALE — Variante Custom</h3>
+          <p class="text-slate-400 italic mb-4">Melma Media, senza allineamento | GdS 3 (700 PE)</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <span class="text-yellow-400 font-semibold">Classe Armatura:</span>
+              <span class="text-slate-200"> 8</span>
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Punti Ferita:</span>
+              <span class="text-slate-200"> 52 (8d8+16)</span>
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Velocità:</span>
+              <span class="text-slate-200"> 6m, nuotare 12m</span>
+            </div>
+          </div>
+
+          <!-- Caratteristiche -->
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <h4 class="text-lg font-semibold text-cyan-400 mb-3">Caratteristiche</h4>
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div>
+                <div class="text-red-400 font-bold">FOR</div>
+                <div class="text-slate-200">16 (+3)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">DES</div>
+                <div class="text-slate-200">5 (-3)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">COS</div>
+                <div class="text-slate-200">14 (+2)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">INT</div>
+                <div class="text-slate-200">1 (-5)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">SAG</div>
+                <div class="text-slate-200">6 (-2)</div>
+              </div>
+              <div>
+                <div class="text-red-400 font-bold">CAR</div>
+                <div class="text-slate-200">2 (-4)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resistenze e Immunità -->
+          <div class="space-y-2 text-slate-300">
+            <div>
+              <span class="text-red-400 font-semibold">Immunità ai Danni:</span> acido, veleno
+            </div>
+            <div>
+              <span class="text-green-400 font-semibold">Resistenze ai Danni:</span> freddo, fuoco, fulmine
+            </div>
+            <div>
+              <span class="text-blue-400 font-semibold">Immunità alle Condizioni:</span> accecato, spaventato, prono
+            </div>
+            <div>
+              <span class="text-cyan-400 font-semibold">Sensi:</span> Vista cieca 18m (cieca oltre), Percezione passiva 8
+            </div>
+            <div>
+              <span class="text-yellow-400 font-semibold">Grado di Sfida:</span> 3 (700 PE)
+            </div>
+            <div>
+              <span class="text-purple-400 font-semibold">Cristalli:</span> 10 piccoli (quando sconfitta)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Abilità Speciali -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">✨ Abilità Speciali</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4 border-2 border-green-700">
+          <h3 class="text-xl font-semibold text-green-300 mb-2">💧 Camouflage Acquatico</h3>
+          <p class="text-slate-300 mb-2">
+            Nell'acqua torbida la Melma è <strong class="text-yellow-400">invisibile a distanza superiore a 1,5m</strong>.
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li><strong>CD Percezione passiva 20</strong> per individuarla mentre è immersa e immobile</li>
+            <li>La CD <strong>scende a 14</strong> se la Melma si è mossa o ha attaccato in quel round (produce onde visibili)</li>
+            <li>Quando individuata, appare come una massa semiopaca grigio-scura sotto la superficie</li>
+          </ul>
+          <p class="text-red-400 mt-2 italic font-semibold">
+            Effetto pratico: con una Percezione passiva tipica di 12-14, il party NON la individua quasi mai. Garantisce il round di sorpresa.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4 border-2 border-orange-700">
+          <h3 class="text-xl font-semibold text-orange-300 mb-2">⚗️ Corrode Metallo e Legno</h3>
+          <p class="text-slate-300 mb-2">
+            Ogni colpo di Pseudopodio a segno richiede un TS Costituzione.
+          </p>
+          <p class="text-yellow-400 mb-2"><strong>CD 13 — Costituzione:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
+            <li><strong>Fallimento:</strong> L'arma che ha colpito perde <strong class="text-red-400">-1 permanente al danno</strong> (distrutta a -5)</li>
+            <li><strong>Fallimento su armatura/scudo:</strong> Perdono <strong class="text-red-400">-1 CA permanente</strong></li>
+            <li>Si applica a metallo E legno <strong>non magici</strong></li>
+          </ul>
+          <p class="text-green-400 italic">Le armi e armature magiche sono immuni alla corrosione.</p>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4 border-2 border-cyan-700">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">🌊 Nascita dall'Acqua (Sorpresa)</h3>
+          <p class="text-slate-300 mb-2">
+            Se i PG non hanno individuato la Melma prima che attacchi:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Ottiene un <strong class="text-red-400">round di sorpresa completo</strong> — i PG non possono agire né reagire</li>
+            <li>Nel round di sorpresa, la Melma esegue la sua azione e azione bonus normalmente</li>
+            <li>Può anche muoversi prima di attaccare, emergendo da un punto diverso da dove ci si aspettava</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Azioni -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">⚔️ Azioni</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-2">🫷 Pseudopodio</h3>
+          <p class="text-slate-300 mb-2">
+            <strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata <strong>1,5m</strong>, una creatura.
+          </p>
+          <p class="text-yellow-400 mb-2"><strong>Colpito:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li><strong>2d8+3 (12)</strong> danni contundenti</li>
+            <li><strong>2d6 (7)</strong> danni acido</li>
+            <li><strong>Totale medio: 19 danni</strong> + rischio corrosione equipaggiamento</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-yellow-300 mb-2">💦 Sputo d'Acido <span class="text-sm text-slate-400">(ricarica 5-6)</span></h3>
+          <p class="text-slate-300 mb-2">
+            <strong>Attacco a Distanza:</strong> +5 al colpire, gittata <strong>9m</strong>, una creatura.
+          </p>
+          <p class="text-yellow-400 mb-2"><strong>Colpito:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li><strong>4d6 (14)</strong> danni acido, o metà con <strong>TS Destrezza CD 13</strong></li>
+            <li>Nessun rischio di corrosione equipaggiamento (acido sputato, non contatto diretto)</li>
+          </ul>
+          <p class="text-red-400 mt-2 italic">
+            Attenzione: questo attacco colpisce i PG in retro linea che pensano di essere al sicuro!
+          </p>
+        </div>
+      </section>
+
+      <!-- Azione Bonus -->
+      <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">⚡ Azione Bonus</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-blue-300 mb-2">🌊 Immersione Rapida</h3>
+          <p class="text-slate-300 mb-2">
+            La Melma si tuffa nell'acqua, diventando di nuovo invisibile.
+          </p>
+          <p class="text-slate-300 mb-2"><strong>Effetto:</strong></p>
+          <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>La Melma si immerge completamente, ripristinando il camouflage (CD 20 per individuarla)</li>
+            <li>Si può muovere sotto l'acqua fino alla sua velocità di nuoto (12m) senza provocare attacchi di opportunità</li>
+            <li>Nel turno successivo emerge da un punto diverso e può attaccare normalmente</li>
+          </ul>
+          <p class="text-yellow-400 mt-2 italic">
+            <strong>Limitazione:</strong> Solo se si trova in acqua profonda almeno 50cm.
+          </p>
+        </div>
+      </section>
+
+      <!-- Tattica di Combattimento -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Tattica di Combattimento</h2>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-700">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">Round di Sorpresa — Emersione 🚨</h3>
+            <p class="text-slate-300 mb-2">
+              <strong>Prima che i PG agiscano:</strong>
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Melma 1:</strong> Emerge sotto il PG più avanzato (vicino ai sarcofagi). Attacco con Pseudopodio.</li>
+              <li><strong>Melma 2:</strong> Rimane nascosta un altro round — aspetta che il party sia distratto dalla prima.</li>
+              <li>La prima Melma usa l'Immersione Rapida come azione bonus se ha già attaccato.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">Round 1-2 — Tenaglia 🔱</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Melma 1:</strong> Continua ad attaccare il PG avanzato. Se viene focalizzata, si immerge e riemerge da direzione diversa.</li>
+              <li><strong>Melma 2:</strong> Emerge alle spalle del party (lato opposto) quando tutti sono concentrati sulla prima.</li>
+              <li><strong>Priorità:</strong> PG con armatura pesante (massimizza la corrosione) oppure caster (massimizza il danno).</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">Round 3+ — Logoramento 🔄</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Il pattern attacca→immerge→riemerge altrove si ripete ogni round.</li>
+              <li>Sputo d'Acido viene usato appena è disponibile, preferibilmente su un PG a distanza.</li>
+              <li>Le Melme non si coordinano intellettualmente (INT 1), ma il loro comportamento istintivo crea naturalmente la tenaglia.</li>
+              <li><strong>Non inseguono oltre la porta</strong> — il loro territorio è la camera allagata.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-yellow-600">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">Elementi Tattici della Zona 19 🗺️</h3>
+            <ul class="list-disc list-inside space-y-2 text-slate-400">
+              <li><strong class="text-yellow-400">Acqua 1m:</strong> Terreno difficile per i PG (movimento dimezzato), normale per le Melme (velocità 12m nuotare).</li>
+              <li><strong class="text-yellow-400">Sarcofagi:</strong> Copertura parziale. I PG sul bordo di un sarcofago parzialmente fuori dall'acqua hanno vantaggio difensivo ma difficoltà di movimento.</li>
+              <li><strong class="text-yellow-400">Soffitto basso (2.5m):</strong> Nessun volo, nessuna scalata. Tutti in acqua o sul bordo.</li>
+              <li><strong class="text-yellow-400">Porta d'ingresso:</strong> L'unica via di fuga. Le Melme non inseguono fuori.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategie per i Giocatori -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">💡 Strategie per i Giocatori</h2>
+
+        <div class="mb-4">
+          <h3 class="text-xl font-semibold text-green-300 mb-3">✅ Strategie Efficaci</h3>
+          <div class="space-y-3">
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-purple-300 mb-2">1. Armi e Incantesimi Magici ✨</h4>
+              <p class="text-slate-300 mb-2">Armi magiche sono <strong class="text-green-400">immuni alla corrosione</strong></p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Chi ha armi magiche deve essere il combattente principale</li>
+                <li>Incantesimi di danno ignorano completamente la corrosione</li>
+                <li><strong>Fire Bolt, Scorching Ray, Burning Hands:</strong> molto efficaci (nessuna resistenza al fuoco — solo resistenza, non immunità)</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-cyan-300 mb-2">2. Individuarle Prima 🔍</h4>
+              <p class="text-slate-300 mb-2">Provare Percezione attiva prima di entrare nell'acqua</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li><strong>Lanciare un oggetto nell'acqua</strong> per vedere se qualcosa reagisce</li>
+                <li><strong>Torce/luce intensa</strong> riducono la CD a 17 (ancora difficile ma possibile)</li>
+                <li><strong>Detect Magic:</strong> Non funziona — la Melma non è magica</li>
+                <li>Se individuata: perde il round di sorpresa, ma mantiene comunque tutti i suoi vantaggi in acqua</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text="orange-300 mb-2">3. Stare fuori dall'acqua 🏝️</h4>
+              <p class="text-slate-300 mb-2">I sarcofagi sono isole sicure</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Salire sui sarcofagi rimuove lo svantaggio al movimento</li>
+                <li>Attaccare dall'alto limita la portata delle Melme (1.5m)</li>
+                <li>Ma attenzione: lo Sputo d'Acido ha gittata 9m e non ha bisogno di linea di vista libera</li>
+              </ul>
+            </div>
+
+            <div class="bg-slate-900 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-red-300 mb-2">4. Proteggere l'Equipaggiamento ⚔️</h4>
+              <p class="text-slate-300 mb-2">La corrosione è permanente — prevenire è meglio che curare</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-400">
+                <li>Chi ha armi/armature magiche → in prima linea</li>
+                <li>Chi ha solo equipaggiamento normale → priorità ad attacchi a distanza</li>
+                <li>Valoris in armatura pesante è il bersaglio ideale per le Melme — ruotare chi assorbe i colpi</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-red-300 mb-3">❌ Strategie Inefficaci</h3>
+          <div class="space-y-2">
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Armi normali di metallo/legno in mischia:</strong> Ogni colpo richiede TS COS o corrosione permanente — il rimedio peggiora la malattia
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Rimanere in acqua:</strong> Movimento dimezzato, Melma a velocità normale — a tutto vantaggio di lei
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Attacchi ad area in acqua:</strong> Rischio di colpire alleati — la stanza è piccola (8×6m)
+              </p>
+            </div>
+            <div class="bg-slate-900 rounded-lg p-3">
+              <p class="text-slate-300">
+                <strong class="text-red-400">Negoziare/comunicare:</strong> INT 1 — intelligenza inferiore a un verme. Non percepisce linguaggi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ricompense -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🎁 Ricompense</h2>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">💎 Cristalli</h3>
+            <p class="text-slate-300">
+              <strong class="text-purple-400">10 cristalli piccoli</strong> per ogni Melma sconfitta (20 totali)
+            </p>
+            <p class="text-slate-400 italic">
+              La massa si disintegra lentamente. Dal fondo della pozza emergono cristalli grigi che galleggiano in superficie.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">🗡️ Sarcofago 1 — Tesoro</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Atletica CD 14 per sollevare il coperchio semisommerso</li>
+              <li><strong>40 mo</strong> in monete antiche</li>
+              <li><strong>Pugnale d'Argento</strong> (20 mo, funziona come arma argentata — utile contro i Grick in Zona 20)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-purple-700">
+            <h3 class="text-lg font-semibold text-purple-300 mb-2">🔮 Sarcofago 2 — Nodo della Trama #2</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Atletica CD 14 per sollevare il coperchio</li>
+              <li>Un <strong class="text-purple-400">cristallo che levita</strong> a 3cm dal fondo, emette luce tenue</li>
+              <li>Mystra: catalogare questo Nodo +20% Favore</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚔️ Favore Divino</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Tempus:</strong> Sconfiggere entrambe le Melme</li>
+              <li><strong>Mystra:</strong> Catalogare il Nodo della Trama #2 (+20% Favore)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Note DM -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">📝 Note per il DM</h2>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-orange-600">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚖️ Bilanciamento</h3>
+            <p class="text-slate-300 mb-2">
+              2x Melma Tombale CR 3 = <strong class="text-yellow-400">~2100 XP</strong> per party di 5 PG livello 5.
+              Soglia Hard: 3750 XP. Questo è <strong>Medium/Hard senza sorpresa</strong>, ma con il round di sorpresa garantito diventa effettivamente pericoloso.
+            </p>
+            <p class="text-slate-300 mb-2"><strong>Se troppo facile:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
+              <li>Aumenta PF a 65 (10d8+20)</li>
+              <li>Abbassa la CD corrosione a 11 (più danni permanenti)</li>
+            </ul>
+            <p class="text-slate-300 mb-2"><strong>Se troppo difficile:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Rimuovi lo Sputo d'Acido (solo mischia)</li>
+              <li>Le Melme vengono individuate automaticamente prima di entrare in combattimento (niente sorpresa)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">🎭 Atmosfera: Come Gestire la Scoperta</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Descrivi l'acqua come "troppo densa", "troppo silenziosa", "che si muove come respira" PRIMA che i PG entrino</li>
+              <li>Non rivelare mai il mostro esplicitamente — lascia che la sensazione cresca</li>
+              <li>Se un PG fa Percezione attiva: "L'acqua non è del tutto ferma vicino al sarcofago di sinistra. Non come fanno i fluidi normali."</li>
+              <li>Il round di sorpresa: descrivi qualcosa che "sale" dall'acqua, non un "mostro che attacca" — la rivelazione deve essere progressiva</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-purple-300 mb-2">💡 La Minaccia Psicologica</h3>
+            <p class="text-slate-300 mb-2">
+              Il danno reale di questo incontro non è il danno da combattimento — è <strong>la paura di entrare in qualsiasi acqua del Piano 2</strong> dopo questo.
+            </p>
+            <p class="text-slate-300">
+              I PG che perdono un'armatura o un'arma alla corrosione saranno molto più attenti nelle Zona 20, 22, 23 — dove l'acqua è ovunque. Questo incontro <em>insegna</em> qualcosa.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </DMAuthGuard>
+</MainLayout>

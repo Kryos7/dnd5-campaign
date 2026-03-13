@@ -26,7 +26,8 @@
       "Bash(mkdir:*)",
       "Bash(copy \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\\\\src\\\\pages\\\\dm\\\\sessioni\\\\sessione-0.astro\" \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\\\\src\\\\pages\\\\sessioni\\\\sessione-0.astro\")",
       "Bash(cp:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [],
     "ask": []

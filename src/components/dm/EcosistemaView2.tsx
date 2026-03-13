@@ -17,6 +17,7 @@ interface Stanza {
   };
   percorso?: string;
   opzionale?: boolean;
+  mostroLink?: { label: string; href: string; color?: string }[];
 }
 
 interface Livello {
@@ -156,32 +157,48 @@ export default function EcosistemaView2() {
       dimensioni: '8x6m, soffitto 2.5m',
       percorso: 'Ovest',
       opzionale: true,
-      descrizione: 'Una porta bassa e arrugginita sulla parete sud della Zona 18. Camera rettangolare completamente allagata (1m d\'acqua torbida grigia). Il soffitto è basso (2.5m), creando una sensazione claustrofobica. Vecchi sarcofagi di pietra — sei in totale — sono allineati lungo le pareti, semisommersi. Tre sono aperti e vuoti. Due sono chiusi. Uno è spaccato a metà.\n\nL\'acqua qui è densa e opaca. Impossibile vedere il fondo.',
+      descrizione: 'Una porta bassa e arrugginita sulla parete sud della Zona 18. Camera rettangolare completamente allagata (1m d\'acqua torbida grigia). Il soffitto è basso (2.5m), creando una sensazione claustrofobica. Vecchi sarcofagi di pietra — sei in totale — sono allineati lungo le pareti, semisommersi. Tre sono aperti e vuoti. Due sono chiusi. Uno è spaccato a metà.\n\nL\'acqua qui è densa e opaca. Impossibile vedere il fondo.\n\n⚠️ DESCRIZIONE AI GIOCATORI: "L\'acqua non è ferma. Non come dovrebbe essere. C\'è qualcosa — una lentezza, quasi una viscosità — nel modo in cui si muove attorno alle vostre gambe. Forse è solo il fango. Forse è solo la corrente. Ma per un attimo, giurate di aver visto la superficie incresparsi verso di voi, non lontano da voi."',
       elementi: [
-        'Gray Ooze x2: Due Gray Ooze si nascondono nell\'acqua. Percezione CD 16 per individuarne una prima che attacchi.',
-        'La prima attacca quando un PG si avvicina ai sarcofagi. La seconda attacca quando il party è impegnato con la prima (tattica a tenaglia).',
+        '⚔️ MELMA TOMBALE x2: Due Melme Tombali (custom CR 3) giacciono immerse, indistinguibili dal liquido torbido. NON sono Gray Ooze standard — sono più grandi, più rapide in acqua, e sputano acido.',
+        '🎲 SORPRESA: Percezione passiva CD 20 per individuarne una prima che emerga. Se nessun PG la supera → round di sorpresa completo. CD scende a 14 se i PG producono molto rumore nell\'acqua (corsa, cadute, ecc.).',
+        '🗡️ TATTICA: La prima emerge sotto il PG più avanzato quando si avvicina ai sarcofagi. La seconda emerge dal lato opposto 1 round dopo (tenaglia). Tra un round e l\'altro si reimmerge con azione bonus per ricostituire il camouflage.',
         'Sarcofago 1: Atletica CD 14 → 40 mo antiche + un pugnale d\'argento (20 mo, funziona come arma argentata)',
         'Sarcofago 2: Atletica CD 14 → NODO DELLA TRAMA #2 (cristallo che levita a 3cm dal fondo del sarcofago, emette luce tenue)',
         'Sarcofago spaccato: Ossa vecchissime e placca di bronzo illeggibile (corrosa). Nessun valore.'
       ],
-      pericoli: '2 Gray Ooze (corrodono metallo!), acqua profonda, claustrofobia',
-      cristalli: '12 cristalli piccoli (6 per ooze)',
-      favoreDivino: 'Tempus: sconfiggere entrambe le ooze. Mystra: catalogare il Nodo della Trama #2 (+20% Favore)',
+      pericoli: '2 Melme Tombali CR 3 (corrodono metallo E legno!), sorpresa quasi garantita, acqua che rallenta il movimento, claustrofobia',
+      cristalli: '20 cristalli piccoli (10 per melma)',
+      favoreDivino: 'Tempus: sconfiggere entrambe le melme. Mystra: catalogare il Nodo della Trama #2 (+20% Favore)',
       statistiche: {
-        nome: 'Gray Ooze',
+        nome: 'Melma Tombale — Variante Custom (CR 3, 700 PE)',
         valori: [
-          'CA 8, PF 22 (3d8+9), Velocità 3m, nuotare 3m',
-          'FOR 12 (+1) DES 6 (-2) COS 16 (+3) INT 1 (-5) SAG 6 (-2) CAR 2 (-4)',
-          'Resistenze: acido, freddo, fuoco | Immunità: fulmine',
-          'Sensi: vista cieca 18m, Percezione passiva 8 | GdS 1/2 (100 PE)',
-          'Corrode Metallo: arma non magica di metallo che colpisce → -1 permanente al danno (distrutta a -5). Armature/scudi → -1 CA permanente',
-          'Pseudopodo: +3 al colpire, 1.5m, 4 (1d6+1) contundenti + 7 (2d6) acido'
+          '--- STATISTICHE BASE ---',
+          'CA 8 | PF 52 (8d8+16) | Velocità 6m, nuotare 12m',
+          'FOR 16 (+3) DES 5 (-3) COS 14 (+2) INT 1 (-5) SAG 6 (-2) CAR 2 (-4)',
+          'Immunità danni: acido, veleno | Resistenze: freddo, fuoco, fulmine',
+          'Immunità condizioni: accecato, spaventato, prono',
+          'Vista cieca 18m (cieca oltre) | Percezione passiva 8 | GdS 3 (700 PE)',
+          '--- TRATTI SPECIALI ---',
+          'Camouflage Acquatico: Nell\'acqua torbida è invisibile oltre 1,5m. CD Percezione passiva 20 per individuarla; scende a 14 se ha mosso o attaccato quel round (produce onde visibili).',
+          'Corrode Metallo e Legno: Ogni colpo di Pseudopodio a segno → TS COS CD 13 o l\'arma/armatura perde -1 permanente al danno o CA (distrutta a -5). Valido per metallo E legno non magici.',
+          'Nascita dall\'Acqua: Se i PG non l\'hanno individuata, ottiene un round di sorpresa completo (i PG non possono agire nel primo round).',
+          '--- AZIONI (1 per turno) ---',
+          'Pseudopodio: +5 al colpire, portata 1,5m — 2d8+3 (12) contundenti + 2d6 (7) acido',
+          'Sputo d\'Acido (ricarica 5-6): Attacco a distanza +5, gittata 9m — 4d6 (14) acido, CD 13 DES per dimezzare',
+          '--- AZIONE BONUS ---',
+          'Immersione Rapida: La Melma si tuffa nell\'acqua diventando di nuovo invisibile (CD 20). Può riemergere e attaccare nel turno successivo.'
         ]
       },
       noteDM: [
-        'Le Gray Ooze sono più pericolose per l\'equipaggiamento che per i PF.',
-        'Se Valoris combatte in mischia, la sua armatura rischia danni permanenti. Questo forza tattiche a distanza o creative.',
-        'La stanza è opzionale — i PG possono ritirarsi se le cose vanno male.'
+        '🎭 ATMOSFERA: Descrivi l\'acqua che "respira" o si muove prima che i PG entrino. Non rivelare mai esplicitamente il mostro — lascia che il disagio cresca organicamente.',
+        '⚠️ PERICOLOSITÀ REALE: 2x Melma Tombale CR 3 = ~2100 XP totali. Per un party di 5 a livello 5 è un incontro Medium/Hard. Il round di sorpresa lo trasforma in qualcosa di effettivamente minaccioso.',
+        '🗡️ BERSAGLI PRIORITARI: Priorità al PG in armatura pesante (Valoris). Ogni colpo richiede TS o danneggia l\'equipaggiamento permanentemente — 3-4 colpi possono rovinare un\'armatura intera.',
+        '🏃 RITIRATA: Le Melme non inseguono oltre la porta — fuori dall\'acqua la loro velocità crolla a 6m e perdono tutti i vantaggi. I PG possono tornare preparati.',
+        '💡 ARMI MAGICHE: Armi e armature magiche sono immuni alla corrosione. I PG con spell o armi magiche sono più al sicuro — questo crea dinamiche tattiche interessanti su chi combatte in mischia.',
+        '🎲 COLPI SPECIALI: Se una Melma tira Sputo d\'Acido su un PG in acqua che cade prono, il turno successivo è in svantaggio per rialzarsi — combinazione devastante.'
+      ],
+      mostroLink: [
+        { label: '🫧 Melma Tombale — Scheda Completa', href: '/dm/mostri/melma-tombale', color: 'green' }
       ]
     },
     {
@@ -208,6 +225,9 @@ export default function EcosistemaView2() {
         'Servono magie, armi argentate/magiche, o tattiche creative.',
         'Il pugnale d\'argento della Zona 19 (se trovato) funziona qui.',
         'Due Grick contemporaneamente = incontro Difficile per party livello 5. La tattica a tenaglia è cruciale.'
+      ],
+      mostroLink: [
+        { label: '🐙 Grick Acquatico — Scheda Completa', href: '/dm/mostri/grick-acquatico', color: 'cyan' }
       ]
     },
     {
@@ -260,6 +280,9 @@ export default function EcosistemaView2() {
         'Questa stanza racconta una storia senza parole. I contrabbandieri vivevano qui, e l\'acqua li ha trasformati.',
         'I vestiti pieni di gelatina sono l\'immagine più inquietante — non descrivere cosa è successo, lascia che lo immaginino.',
         'Il Sommerso seduto a capotavola è un\'immagine potente: stava aspettando un briefing che non sarebbe mai arrivato.'
+      ],
+      mostroLink: [
+        { label: '👤 Sommerso Recente — Scheda Completa', href: '/dm/mostri/sommersi', color: 'blue' }
       ]
     },
     {
@@ -289,6 +312,9 @@ export default function EcosistemaView2() {
         'Le passerelle sono il terreno chiave: chi le controlla vince. Fai provare ai Sommersi a distruggerle!',
         'Se i PG sono in grave difficoltà dopo il Round 3, non far emergere il Sommerso Esplosivo.',
         'La bussola impazzita è un hint narrativo fortissimo: sta cercando qualcosa sotto. Non spiegare cosa.'
+      ],
+      mostroLink: [
+        { label: '👤 I Sommersi (3 varianti) — Scheda Completa', href: '/dm/mostri/sommersi', color: 'blue' }
       ]
     },
     {
@@ -408,6 +434,10 @@ export default function EcosistemaView2() {
         'L\'acqua che sale e scende forza gestione posizionamento ogni round. Non lasciare che si piazzino sulla piattaforma e bombardino a distanza.',
         'Se il party ha Essenza Purificata + pannello chiuse + Spada d\'argento, il combattimento è impegnativo ma gestibile.',
         'Se il party è arrivato senza esplorare le opzionali, sarà brutale. Questo è intenzionale.'
+      ],
+      mostroLink: [
+        { label: '👑 Matriarca dei Sommersi — Scheda Boss', href: '/dm/mostri/matriarca-sommersi', color: 'amber' },
+        { label: '👤 I Sommersi (generati) — Scheda Completa', href: '/dm/mostri/sommersi', color: 'blue' }
       ]
     },
     {
@@ -454,7 +484,7 @@ export default function EcosistemaView2() {
       minimo: 180,
       conversione: '1 grande = 50 piccoli, 1 medio = 10 piccoli',
       breakdown: [
-        { nemico: 'Gray Ooze x2', stanza: '19 (opt.)', cristalli: 12, nota: 'Opzionale' },
+        { nemico: 'Melma Tombale x2', stanza: '19 (opt.)', cristalli: 20, nota: 'Opzionale' },
         { nemico: 'Grick Acquatico x2', stanza: '20', cristalli: 30, nota: 'Percorso centrale' },
         { nemico: 'Sommerso Recente x1', stanza: '22', cristalli: 8, nota: 'Evitabile' },
         { nemico: 'Sommersi (ondata) x3-6', stanza: '23', cristalli: 59, nota: 'Parzialmente evitabile' },
@@ -667,6 +697,30 @@ export default function EcosistemaView2() {
                   <li key={i} className="text-slate-400 italic text-xs leading-relaxed">• {nota}</li>
                 ))}
               </ul>
+            </div>
+          )}
+
+          {stanza.mostroLink && stanza.mostroLink.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-1">
+              {stanza.mostroLink.map((link, i) => {
+                const colorMap: Record<string, string> = {
+                  green: 'bg-green-900 hover:bg-green-800 text-green-200 border-green-700',
+                  cyan: 'bg-cyan-900 hover:bg-cyan-800 text-cyan-200 border-cyan-700',
+                  blue: 'bg-blue-900 hover:bg-blue-800 text-blue-200 border-blue-700',
+                  amber: 'bg-amber-900 hover:bg-amber-800 text-amber-200 border-amber-700',
+                  red: 'bg-red-900 hover:bg-red-800 text-red-200 border-red-700',
+                };
+                const cls = colorMap[link.color ?? 'blue'] ?? colorMap.blue;
+                return (
+                  <a
+                    key={i}
+                    href={link.href}
+                    className={`inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded border transition-colors ${cls}`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
           )}
         </div>
@@ -909,7 +963,12 @@ export default function EcosistemaView2() {
           {/* Stat blocks */}
           {creatureSommersi.map((creatura, idx) => (
             <div key={idx} className="bg-slate-800 border border-red-700 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-red-400 mb-1">{creatura.nome}</h3>
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-bold text-red-400">{creatura.nome}</h3>
+                <a href="/dm/mostri/sommersi" className="text-xs bg-blue-800 hover:bg-blue-700 text-blue-200 px-2 py-1 rounded transition-colors">
+                  📄 Scheda Completa
+                </a>
+              </div>
               <p className="text-sm text-slate-500 italic mb-4">{creatura.tipo}</p>
               <ul className="space-y-1">
                 {creatura.valori.map((v, i) => (
@@ -919,7 +978,7 @@ export default function EcosistemaView2() {
             </div>
           ))}
 
-          {/* Grick e Ooze */}
+          {/* Grick e Melme */}
           <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
             <h3 className="text-xl font-bold text-yellow-400 mb-4">Altre Creature</h3>
             <div className="space-y-3">
@@ -932,23 +991,72 @@ export default function EcosistemaView2() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs text-red-400">Resistenti a danni non magici!</div>
-                  <div className="text-xs text-purple-400">30 cristalli</div>
+                  <div className="text-xs text-red-400 mb-1">Resistenti a danni non magici!</div>
+                  <div className="text-xs text-purple-400 mb-2">30 cristalli</div>
+                  <a href="/dm/mostri/grick-acquatico" className="text-xs bg-cyan-800 hover:bg-cyan-700 text-cyan-200 px-2 py-1 rounded transition-colors">
+                    📄 Scheda Mostro
+                  </a>
                 </div>
               </div>
               <div className="bg-slate-700 rounded-lg p-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-xl">🫧</span>
                   <div>
-                    <h4 className="font-bold text-slate-200">2 Gray Ooze</h4>
+                    <h4 className="font-bold text-slate-200">2 Melme Tombali (CR 3)</h4>
                     <p className="text-sm text-slate-400">Zona 19 - La Cripta Allagata (Opzionale)</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs text-orange-400">Corrodono metallo!</div>
-                  <div className="text-xs text-purple-400">12 cristalli</div>
+                  <div className="text-xs text-orange-400 mb-1">Corrodono metallo E legno!</div>
+                  <div className="text-xs text-purple-400 mb-2">20 cristalli</div>
+                  <a href="/dm/mostri/melma-tombale" className="text-xs bg-green-800 hover:bg-green-700 text-green-200 px-2 py-1 rounded transition-colors">
+                    📄 Scheda Mostro
+                  </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Link pagine mostro */}
+          <div className="bg-slate-800 border border-cyan-700 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-cyan-400 mb-4">📄 Schede Mostro Complete</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <a href="/dm/mostri/melma-tombale" className="bg-slate-700 hover:bg-slate-600 rounded-lg p-4 transition-colors block">
+                <div className="text-2xl mb-2">🫧</div>
+                <div className="font-bold text-green-400 text-sm">Melma Tombale</div>
+                <div className="text-xs text-slate-400">CR 3 | Zona 19 | Custom</div>
+              </a>
+              <a href="/dm/mostri/grick-acquatico" className="bg-slate-700 hover:bg-slate-600 rounded-lg p-4 transition-colors block">
+                <div className="text-2xl mb-2">🐙</div>
+                <div className="font-bold text-cyan-400 text-sm">Grick Acquatico</div>
+                <div className="text-xs text-slate-400">CR 2 | Zona 20</div>
+              </a>
+              <a href="/dm/mostri/sommersi" className="bg-slate-700 hover:bg-slate-600 rounded-lg p-4 transition-colors block">
+                <div className="text-2xl mb-2">👤</div>
+                <div className="font-bold text-blue-400 text-sm">I Sommersi</div>
+                <div className="text-xs text-slate-400">3 varianti | Zone 22-23-27</div>
+              </a>
+              <a href="/dm/mostri/matriarca-sommersi" className="bg-slate-700 hover:bg-slate-600 rounded-lg p-4 transition-colors block border-2 border-amber-700">
+                <div className="text-2xl mb-2">👑</div>
+                <div className="font-bold text-amber-400 text-sm">Matriarca dei Sommersi</div>
+                <div className="text-xs text-slate-400">CR 5 | BOSS | Zona 27</div>
+                <div className="text-xs text-red-400 mt-1">3 Fasi + Azioni Leggendarie</div>
+              </a>
+            </div>
+          </div>
+
+          {/* Boss Link */}
+          <div className="bg-gradient-to-r from-amber-900/40 to-red-900/40 border-2 border-amber-600 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-amber-400 mb-3">👑 Boss della Boss Fight</h3>
+            <div className="flex items-center justify-between">
+              <div>
+                <h4 className="text-lg font-bold text-slate-200">Matriarca dei Sommersi</h4>
+                <p className="text-sm text-slate-400">GdS 5 | 115 PF | 3 Fasi | Azioni Leggendarie</p>
+                <p className="text-xs text-red-400 mt-1">Zona 27 — La Tana della Matriarca</p>
+              </div>
+              <a href="/dm/mostri/matriarca-sommersi" className="bg-amber-700 hover:bg-amber-600 text-amber-100 px-4 py-2 rounded font-semibold transition-colors text-sm">
+                📄 Scheda Boss Completa
+              </a>
             </div>
           </div>
 

@@ -1,0 +1,536 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../../components/dm/DMAuthGuard';
+---
+
+<MainLayout title="Matriarca dei Sommersi - Boss - D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-5xl mx-auto p-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm/ecosistema-1-piano-2" class="text-cyan-400 hover:text-cyan-300">
+            ← Torna all'Ecosistema 1 - Piano 2
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-amber-400 mb-2">MATRIARCA DEI SOMMERSI</h1>
+        <p class="text-xl text-yellow-300">"La Prima. La Madre. La Fonte."</p>
+        <p class="text-slate-400 mt-2">Zona 27 - La Tana della Matriarca | CR 5 | Party livello 5</p>
+        <div class="mt-3 flex gap-3 flex-wrap">
+          <span class="bg-red-900 text-red-200 px-3 py-1 rounded text-sm font-bold">BOSS</span>
+          <span class="bg-amber-900 text-amber-200 px-3 py-1 rounded text-sm font-semibold">3 Fasi</span>
+          <span class="bg-purple-900 text-purple-200 px-3 py-1 rounded text-sm font-semibold">Azioni Leggendarie</span>
+          <span class="bg-cyan-900 text-cyan-200 px-3 py-1 rounded text-sm font-semibold">Acqua Dinamica</span>
+        </div>
+      </div>
+
+      <!-- Concept -->
+      <section class="bg-slate-800 border border-amber-600 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 mb-4">🌊 Concept del Boss</h2>
+        <p class="text-slate-200 mb-4">
+          La Matriarca non è il nemico finale del dungeon. È qualcosa di più profondo e più triste:
+          <strong class="text-amber-400">la prima persona che l'acqua ha preso</strong>.
+          Nessuno sa chi fosse — forse un esploratore, forse il capo dei contrabbandieri, forse qualcuno
+          che è sceso qui molto prima di loro. Quello che è certo è che la trasformazione è avvenuta così
+          lentamente, così completamente, che nulla dell'individuo originale sopravvive — eppure qualcosa
+          rimasto guida i Sommersi come una madre guida i suoi figli.
+        </p>
+        <p class="text-slate-200 mb-4">
+          Non è malvagia. Non è cosciente. È una <strong class="text-yellow-400">cosa creata dall'ambiente</strong> —
+          il risultato naturale di secoli di esposizione a qualcosa di arcano e incompreso che filtra dalle
+          profondità. Il gorgoglio che emette quando i PG entrano? Non è una parola. Ma era una parola, una volta.
+        </p>
+
+        <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-amber-500">
+          <h3 class="text-lg font-semibold text-amber-300 mb-2">📢 Descrizione da leggere ai giocatori</h3>
+          <p class="text-slate-300 italic">
+            "Oltre il portone di ferro, una scalinata scende in una camera naturale vasta.
+            Il soffitto raggiunge i 10 metri — stalattiti da cui gocciola acqua ambrata.
+            Al centro della vasca, su un cumulo di detriti, c'è una massa enorme.
+            Alta 3 metri. Una montagna di membrana traslucida pulsante attraverso cui si intravedono,
+            fusi insieme, resti di corpi umani, attrezzi, armi, pezzi di cassa.
+            Non si muove. La massa pulsa, lentamente. Poi forma qualcosa che potrebbe essere un volto.
+            Un gorgoglio basso sale nell'aria, come una parola soffocata nell'acqua."
+          </p>
+          <p class="text-yellow-400 mt-3 font-semibold">→ Non attacca subito. Aspetta.</p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-amber-300 mb-3 mt-6">Aspetto per Fase</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-900 rounded-lg p-3 border border-yellow-700">
+            <h4 class="font-bold text-yellow-300 mb-1">Fase 1 — Dormiente</h4>
+            <p class="text-slate-400 text-sm">Massa immobile e pulsante. Membrana traslucida intatta. Genera figli ma non attacca direttamente. Quasi vulnerabile, quasi...</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-orange-700">
+            <h4 class="font-bold text-orange-300 mb-1">Fase 2 — Sveglia</h4>
+            <p class="text-slate-400 text-sm">La membrana si rompe. Tentacoli enormi emergono dalla massa. L'acqua attorno inizia a muoversi in sincronia con i suoi movimenti.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-red-700">
+            <h4 class="font-bold text-red-300 mb-1">Fase 3 — Frenesia (&lt;50 PF)</h4>
+            <p class="text-slate-400 text-sm">Pezzi si staccano e diventano Sommersi Esplosivi. L'acqua nella stanza ribolle. Il boss è disperato ma più pericoloso.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistiche -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">📊 Statistiche Complete</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-red-300 mb-2">MATRIARCA DEI SOMMERSI — BOSS</h3>
+          <p class="text-slate-400 italic mb-4">Aberrazione Enorme, senza allineamento | GdS 5 (1800 PE)</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">13 (membrana compattata)</span></div>
+            <div><span class="text-yellow-400 font-semibold">PF:</span> <span class="text-slate-200">115 (13d10+39)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">3m, nuotare 9m</span></div>
+          </div>
+
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <h4 class="text-lg font-semibold text-cyan-400 mb-3">Caratteristiche</h4>
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div><div class="text-red-400 font-bold">FOR</div><div class="text-slate-200">18 (+4)</div></div>
+              <div><div class="text-red-400 font-bold">DES</div><div class="text-slate-200">6 (-2)</div></div>
+              <div><div class="text-red-400 font-bold">COS</div><div class="text-slate-200">17 (+3)</div></div>
+              <div><div class="text-red-400 font-bold">INT</div><div class="text-slate-200">4 (-3)</div></div>
+              <div><div class="text-red-400 font-bold">SAG</div><div class="text-slate-200">10 (+0)</div></div>
+              <div><div class="text-red-400 font-bold">CAR</div><div class="text-slate-200">3 (-4)</div></div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-slate-300 text-sm">
+            <div><span class="text-blue-400 font-semibold">Tiri Salvezza:</span> COS +6, SAG +3</div>
+            <div><span class="text-red-400 font-semibold">Immunità danni:</span> veleno, acido</div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> contundenti, freddo</div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco (Fase 2+), radianti</div>
+            <div><span class="text-blue-400 font-semibold">Immunità condizioni:</span> avvelenato, affascinato, esausto, prono, accecato</div>
+            <div><span class="text-cyan-400 font-semibold">Sensi:</span> Vista cieca 18m, tremosenso 9m | Percezione passiva 10</div>
+            <div><span class="text-purple-400 font-semibold">Cristalli:</span> 2 grandi + ~40 piccoli (dai Sommersi generati)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tratti Speciali -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">✨ Tratti Speciali</h2>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-yellow-700">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">🛡️ Membrana Protettiva (FASE 1 ONLY)</h3>
+            <p class="text-slate-300 mb-2">
+              In Fase 1, la Matriarca ha <strong class="text-red-400">Resistenza a TUTTI i danni</strong>.
+            </p>
+            <p class="text-yellow-400 mb-2"><strong>La membrana si rompe quando:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>La Matriarca subisce <strong>30+ danni da fuoco</strong> cumulativi</li>
+              <li>Viene colpita direttamente da <strong>Essenza Purificata</strong></li>
+              <li>Trascorrono <strong>3 round completi</strong> — si sveglia da sola</li>
+            </ul>
+            <p class="text-orange-400 mt-2 italic">Quando la membrana si rompe: descrivi un boato sotterraneo. L'acqua nella stanza si agita. La Fase 2 inizia.</p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-amber-700">
+            <h3 class="text-xl font-semibold text-amber-300 mb-2">👶 Madre dei Sommersi (Azione Bonus)</h3>
+            <p class="text-slate-300 mb-2">
+              Genera <strong>1 Sommerso Recente/round</strong> come azione bonus (massimo 3 attivi contemporaneamente).
+            </p>
+            <p class="text-slate-400 text-sm">In Fase 2+, può generare Sommersi anche con le Azioni Leggendarie (2 azioni).</p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-green-700">
+            <h3 class="text-xl font-semibold text-green-300 mb-2">🔄 Simbiosi Melmosa</h3>
+            <p class="text-slate-300">
+              Ogni volta che un Sommerso viene distrutto entro <strong>9m</strong> dalla Matriarca,
+              lei <strong class="text-green-400">recupera 5 PF</strong>.
+            </p>
+            <p class="text-slate-400 text-sm mt-1">
+              Implicazione tattica: il party deve decidere se uccidere i Sommersi generati (li rimuove ma cura la boss) o ignorarli (si accumulano e diventano il problema principale).
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-blue-700">
+            <h3 class="text-xl font-semibold text-blue-300 mb-2">💧 Rigenerazione Acquatica</h3>
+            <p class="text-slate-300">
+              +5 PF all'inizio del suo turno se è in acqua.
+              Interrotta per 1 round se subisce danni da fuoco o radianti.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-700">
+            <h3 class="text-xl font-semibold text-red-300 mb-2">🌊 LA MAREA (Meccanica Ambientale)</h3>
+            <p class="text-slate-300 mb-2">La vasca risponde ai movimenti della Matriarca:</p>
+            <ul class="list-disc list-inside space-y-2 text-slate-400">
+              <li><strong class="text-red-400">Round pari (2, 4, 6...):</strong> L'acqua sale di +30cm — la Matriarca ha <strong>vantaggio</strong> agli attacchi</li>
+              <li><strong class="text-green-400">Round dispari (1, 3, 5...):</strong> L'acqua scende di -30cm — movimento più facile per tutti</li>
+            </ul>
+            <div class="mt-3 bg-slate-800 rounded p-3">
+              <p class="text-yellow-400 text-sm font-semibold">Livelli d'acqua iniziali: 1.2m nella vasca</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-500 text-sm">
+                <li>Round dispari: 0.9m (cammina difficilmente)</li>
+                <li>Round pari: 1.5m (PG di taglia Media quasi sommers)</li>
+                <li>In Fase 3: aggiungere 1d4 acido/turno per chi è in acqua</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Azioni -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">⚔️ Azioni (FASE 2+)</h2>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-xl font-semibold text-red-300 mb-2">🎯 Multiattacco</h3>
+            <p class="text-slate-300">
+              2 attacchi con Tentacolo + 1 Onda d'Urto.<br/>
+              <strong class="text-red-400">In Fase 3 (sotto 50 PF):</strong> +1 attacco con Tentacolo extra.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-xl font-semibold text-purple-300 mb-2">🦑 Tentacolo Gelatinoso</h3>
+            <p class="text-slate-300 mb-2">
+              <strong>Attacco da Mischia:</strong> +7 al colpire, portata <strong>3m</strong>, una creatura.
+            </p>
+            <p class="text-yellow-400 mb-1"><strong>Colpito:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 mb-2">
+              <li><strong>11 (2d6+4)</strong> danni contundenti + <strong>5 (2d4)</strong> danni acido</li>
+              <li>Se bersaglio è Taglia Media o inferiore: <strong>afferrato</strong> (CD fuga 14)</li>
+              <li>Max 2 creature afferrate contemporaneamente</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-xl font-semibold text-orange-300 mb-2">💥 Onda d'Urto <span class="text-sm text-slate-400">(ricarica 5-6)</span></h3>
+            <p class="text-slate-300 mb-2">
+              Emette un'onda di massa gelatinosa in <strong>cono 6m</strong>.
+            </p>
+            <p class="text-yellow-400 mb-1"><strong>Effetto:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>TS Forza CD 14 → <strong>9 (2d8)</strong> danni contundenti + spostata <strong>3m</strong> (in acqua: rischio caduta prona)</li>
+              <li>Successo: metà danno, non spostata</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-700">
+            <h3 class="text-xl font-semibold text-red-300 mb-2">🔴 Assorbimento <span class="text-sm text-slate-400">(1/round, solo creature afferrate)</span></h3>
+            <p class="text-slate-300 mb-2">
+              Tenta di tirare il bersaglio afferrato dentro la membrana.
+            </p>
+            <p class="text-yellow-400 mb-1"><strong>Effetto:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>TS Forza CD 15 → creatura <strong>trattenuta</strong> (dentro la membrana)</li>
+              <li>Mentre trattenuta: <strong>7 (2d6)</strong> danni acido all'inizio di ogni turno</li>
+              <li>Liberarsi: Atletica CD 15 come azione</li>
+              <li><strong>Fuoco libera automaticamente</strong> (distrugge la membrana localmente)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Azioni Leggendarie -->
+      <section class="bg-slate-800 border border-amber-600 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 mb-4">⚡ Azioni Leggendarie (2/round)</h2>
+        <p class="text-slate-400 mb-4">
+          Usabili alla fine del turno di un'altra creatura. Si azzera all'inizio del turno della Matriarca.
+        </p>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-amber-300 mb-1">Tentacolo (1 azione)</h3>
+            <p class="text-slate-400">Un attacco con Tentacolo Gelatinoso.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-amber-300 mb-1">Generare Sommerso (2 azioni, 1/round, solo Fase 2+)</h3>
+            <p class="text-slate-400">Genera 1 Sommerso Recente che emerge dall'acqua (conta verso il massimo di 3).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reazione -->
+      <section class="bg-slate-800 border border-orange-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-orange-400 mb-4">🛡️ Reazione</h2>
+
+        <div class="bg-slate-900 rounded-lg p-4">
+          <h3 class="text-xl font-semibold text-orange-300 mb-2">🪢 Scudo di Melma (1/round)</h3>
+          <p class="text-slate-300 mb-2">
+            <strong class="text-yellow-400">Trigger:</strong> Quando viene colpita da un attacco a distanza.
+          </p>
+          <p class="text-slate-300 mb-2">
+            Interpone un tentacolo come scudo → l'attaccante ha <strong>svantaggio</strong> al tiro.
+            Se nonostante lo svantaggio manca, il <strong>danno viene negato</strong> completamente.
+          </p>
+          <p class="text-slate-400 italic text-sm">Rende il combattimento a distanza puro meno efficace — i PG devono portarsi in mischia o usare incantesimi con TS.</p>
+        </div>
+      </section>
+
+      <!-- Fasi di Combattimento -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Guida alle Fasi di Combattimento</h2>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-yellow-600">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">FASE 1 — I Figli (Round 1-3) 🥚</h3>
+            <p class="text-slate-300 mb-2"><strong>La Matriarca non si muove. Genera figli. È quasi vulnerabile.</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
+              <li>Ogni round: genera 1 Sommerso Recente (azione bonus)</li>
+              <li>Ha Resistenza a TUTTI i danni — attaccarla è quasi inutile</li>
+              <li>L'obiettivo dei PG in questa fase: rompere la membrana</li>
+            </ul>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-green-400 font-semibold text-sm mb-1">Come rompere la membrana:</p>
+              <ul class="list-disc list-inside space-y-1 text-slate-500 text-sm">
+                <li>30 danni da fuoco cumulativi (nonostante la Resistenza → 15 danni fuoco effettivi necessari, quindi ~30 raw)</li>
+                <li>1 dose di Essenza Purificata direttamente sulla massa (3d6 radianti)</li>
+                <li>Aspettare 3 round (automatico)</li>
+              </ul>
+            </div>
+            <p class="text-yellow-400 mt-3 text-sm italic">
+              I PG che hanno l'Essenza Purificata (Zona 24) hanno un enorme vantaggio qui.
+              Chi non ce l'ha si trova a gestire Sommersi crescenti per 3 round pieni.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-orange-600">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">FASE 2 — La Matriarca si Sveglia (Round 4+) ⚡</h3>
+            <p class="text-slate-300 mb-2"><strong>La membrana si rompe. La boss è attiva. I Sommersi continuano a combattere.</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
+              <li>Perde la Resistenza a TUTTI i danni</li>
+              <li>Acquista Vulnerabilità al fuoco (prima era solo resistente)</li>
+              <li>Attacca con Multiattacco + Azioni Leggendarie ogni round</li>
+              <li>Priorità: Afferrare i PG più vicini e Assorbire (danno acido continuo)</li>
+            </ul>
+            <p class="text-cyan-400 italic text-sm">
+              La Marea diventa cruciale: ogni round pari i PG in acqua sono quasi sommersi — forzarli a combattere in acqua alta è il principale vantaggio della boss.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-red-700">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">FASE 3 — Frenesia (&lt;50 PF) 💀</h3>
+            <p class="text-slate-300 mb-2"><strong>Il boss si sta disintegrando. Più disperato. Più pericoloso.</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
+              <li>Pezzi si staccano → max 2 <strong>Sommersi Esplosivi</strong> emergono dall'acqua</li>
+              <li>+1 attacco con Tentacolo aggiuntivo per round</li>
+              <li>L'acqua nella stanza <strong>ribolle</strong>: 1d4 acido a inizio turno per chi è in acqua</li>
+            </ul>
+            <p class="text-red-400 font-semibold italic text-sm">
+              Il Pannello Chiuse (Zona 21) è fondamentale qui: forza l'acqua bassa per 2 round.
+              Con acqua bassa, il 1d4 acido non si applica e il movimento è libero. Usabile 2 volte.
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-green-600">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">VITTORIA ALTERNATIVA 🏆</h3>
+            <p class="text-slate-300 mb-2">Invece di combattere fino a 0 PF:</p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>3 dosi di Essenza Purificata</strong> direttamente nella massa:</li>
+              <li>3d6 radianti ciascuna + TS COS CD 15 o <strong>stordita per 1 round</strong></li>
+              <li>Se tutte e 3 riescono → la Matriarca si dissolve (non combatteva con lucidità)</li>
+            </ul>
+            <p class="text-yellow-400 mt-2 italic text-sm">
+              Questo è il reward per chi ha esplorato il Laboratorio Sommerso (Zona 24). Non annunciare che è possibile — lascia che lo scoprano.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meccaniche Speciali -->
+      <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">🗺️ Meccaniche della Stanza</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">📍 Layout</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+              <li><strong>Piattaforma superiore:</strong> Fascia 3m lungo pareti Nord e Ovest, asciutta, elevata 1.5m — zona sicura</li>
+              <li><strong>Vasca centrale:</strong> 70% della stanza, 1.2m acqua ambrata (densa e tiepida)</li>
+              <li><strong>Stalattiti:</strong> Gocciolano acqua ambrata — toccare: TS COS CD 11 o 1d4 acido</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-green-700">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">🔧 Pannello Chiuse (Zona 21)</h3>
+            <p class="text-slate-400 text-sm mb-2">
+              Se i PG hanno girato la ruota in Zona 21, il pannello sulla parete Ovest è attivo.
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-500 text-sm">
+              <li>Azione: forza l'acqua BASSA per 2 round</li>
+              <li>Usabile 2 volte in totale</li>
+              <li>Chi ha usato la colonna in Zona 21 riconosce immediatamente il meccanismo</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">💧 La Marea Dettagliata</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+              <li>Round 1, 3, 5: acqua 0.9m — movimento quasi normale, combattimento a mischia fattibile</li>
+              <li>Round 2, 4, 6: acqua 1.5m — PG Medi quasi sommersi, +1d4 acido in Fase 3</li>
+              <li>I PG sulla piattaforma superiore (+1.5m) sono sempre al sicuro dall'acqua</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-red-700">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">💥 Simbiosi — Dilemma Tattico</h3>
+            <p class="text-slate-400 text-sm">
+              Ogni Sommerso ucciso entro 9m cura la Matriarca di 5 PF.
+              Il party deve decidere: eliminare i Sommersi (rimuovono minacce ma curano il boss) oppure
+              ignorarli e concentrarsi sul boss (rischioso ma non cura la Matriarca)?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategie -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">💡 Strategie per i Giocatori</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-green-300 mb-3">✅ Priorità Strategiche</h3>
+            <div class="space-y-2">
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">1. Rompere la membrana subito</p>
+                <p class="text-slate-400 text-sm">Ogni round in Fase 1 = +1 Sommerso. Usare fuoco o Essenza Purificata immediatamente</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">2. Controllare la piattaforma</p>
+                <p class="text-slate-400 text-sm">Stare fuori dall'acqua nega il 1d4 acido in Fase 3 e limita la Marea</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">3. Usare il Pannello Chiuse</p>
+                <p class="text-slate-400 text-sm">Forzare l'acqua bassa durante i round pari è decisivo. Usarlo in Fase 3</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">4. Fuoco concentrato in Fase 2</p>
+                <p class="text-slate-400 text-sm">In Fase 2 acquista Vulnerabilità al fuoco — raddoppia i danni. È la finestra ideale</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">5. Liberare chi viene assorbito</p>
+                <p class="text-slate-400 text-sm">7 danni acido/turno + impossibilità di agire = morte rapida. Atletica CD 15 o fuoco</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-red-300 mb-3">❌ Errori Fatali</h3>
+            <div class="space-y-2">
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Ignorare la Membrana in Fase 1</p>
+                <p class="text-slate-400 text-sm">Attaccare normalmente in Fase 1 = metà danno. Sprecare azioni quando si potrebbe rompere la membrana</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Rimanere in acqua in Fase 3</p>
+                <p class="text-slate-400 text-sm">1d4 acido/turno + rallentamento + Sommersi Esplosivi nell'acqua = scenario mortale</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Trascurare i Sommersi Esplosivi</p>
+                <p class="text-slate-400 text-sm">In Fase 3 emergono dall'acqua e si avvicinano al gruppo. In acqua esplodere = devastante</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Spread degli attacchi su Sommersi in Fase 2</p>
+                <p class="text-slate-400 text-sm">Uccidere Sommersi cura la boss. Concentrarsi sul boss prima, poi pulire i Sommersi rimasti</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ricompense -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🎁 Ricompense</h2>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-amber-700">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">⚔️ Loot della Matriarca</h3>
+            <ul class="list-disc list-inside space-y-2 text-slate-300">
+              <li><strong class="text-yellow-400">Polvere DORATA</strong> — quando muore, la massa si dissolve in polvere dorata che si deposita sul fondo. Arcano CD 14: stessa energia dell'acqua ascendente di Zona 18 (lore fondamentale)</li>
+              <li><strong class="text-purple-400">2 Cristalli Grandi</strong> (= 100 piccoli) emergono dall'acqua</li>
+              <li><strong class="text-yellow-400">120 mo</strong> in blocchi d'oro fusi (4 blocchi da 5 kg)</li>
+              <li><strong class="text-green-400">Spada Corta +1</strong> — lama con sfumatura ambrata. Prima arma magica del dungeon!</li>
+              <li><strong>3 Gemme:</strong> Ambra (30 mo), Tormalina (20 mo), Onice (15 mo)</li>
+              <li><strong>Medaglione dei Contrabbandieri</strong> — identificazione della gilda. Qualcuno lo riconoscerà</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚔️ Favore Divino</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Tempus:</strong> Sconfiggere la Matriarca (+30% Favore)</li>
+              <li><strong>Tempus Bonus:</strong> Nessun PG a 0 PF durante il combattimento (+10%)</li>
+              <li><strong>Tymora:</strong> Usare Essenza Purificata o il Pannello Chiuse (+10%)</li>
+              <li><strong>Mystra:</strong> Esaminare la polvere dorata (Arcano CD 14) — collegamento con Zona 18 (+10%)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border border-cyan-700">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">🌊 Dopo la Vittoria</h3>
+            <p class="text-slate-300 mb-2">
+              Con la morte della Matriarca, l'acqua si ritira lentamente. Il livello scende fino a lasciare
+              il pavimento quasi asciutto. Dove prima c'era la vasca, <strong>una botola di pietra emerge</strong>
+              — invisibile e inaccessibile fino ad ora.
+            </p>
+            <p class="text-slate-400 italic">
+              La botola conduce a una scala a chiocciola di pietra bianca. L'aria è fresca e pulita.
+              Dopo 5 metri, il velo magico brillante...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Note DM -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">📝 Note per il DM</h2>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-orange-600">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚖️ Bilanciamento</h3>
+            <p class="text-slate-300 mb-2">
+              Matriarca CR 5 + Sommersi generati = <strong class="text-yellow-400">incontro Mortale</strong> per party livello 5 se gestito male.
+              Con le risorse opzionali (Essenza Purificata, Pannello Chiuse, Spada d'Argento) è un Hard gestibile.
+            </p>
+            <p class="text-red-400 mb-2 font-semibold">Se il party è arrivato senza esplorare le stanze opzionali: sarà brutale. Questo è intenzionale.</p>
+            <p class="text-slate-300 mb-2"><strong>Se troppo difficile:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Riduci PF a 90 (10d10+30)</li>
+              <li>La membrana si rompe dopo 2 round invece di 3</li>
+              <li>Non far emergere Sommersi Esplosivi in Fase 3</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-amber-500">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">🎭 Il Tono Narrativo</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>La Matriarca <strong>non è malvagia</strong>. Non è cosciente. Descrivila con pietà oltre che con orrore.</li>
+              <li>Il gorgoglio che sembra una parola? <em>Non è una parola.</em> Ma era una parola, una volta.</li>
+              <li>Quando muore: non è una vittoria trionfante. La massa si dissolve lentamente, silenziosa. Era solo una cosa che cercava di sopravvivere.</li>
+              <li>La polvere dorata è l'ultimo indizio sul perché l'acqua fa questo — lascia aperta la domanda</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">⏱️ Gestione della Sessione</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Durata stimata: <strong>6-10 round</strong> (25-40 minuti di gioco reale)</li>
+              <li>Fase 1: 1-3 round (dipende da fuoco/Essenza Purificata)</li>
+              <li>Fase 2-3: 4-7 round</li>
+              <li>Ogni cambio di Fase: pausa narrativa + descrizione dell'ambiente che cambia</li>
+              <li>La Marea: tienimi track su foglio separato (Round 1,3,5=bassa; Round 2,4,6=alta)</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">🎲 Se i PG Cercano di Comunicare</h3>
+            <p class="text-slate-300 mb-2">
+              In Fase 1, se un PG tenta di parlare alla Matriarca (o usa incantesimi tipo Speak with Animals/Plants):
+            </p>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Arcano CD 18: percepisce una presenza "svuotata" — nulla che risponda coscientemente</li>
+              <li>Empatia o incantesimi simili: immagini frammento di qualcuno che <em>scende</em> le scale, poi niente</li>
+              <li>Non c'è nessuna conversazione possibile. Non c'è nessuno a cui parlare.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </DMAuthGuard>
+</MainLayout>

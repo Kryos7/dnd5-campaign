@@ -1,0 +1,417 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../../components/dm/DMAuthGuard';
+---
+
+<MainLayout title="I Sommersi - D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-5xl mx-auto p-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm/ecosistema-1-piano-2" class="text-cyan-400 hover:text-cyan-300">
+            ← Torna all'Ecosistema 1 - Piano 2
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-cyan-400 mb-2">I SOMMERSI</h1>
+        <p class="text-xl text-yellow-400">"Ciò che rimane quando l'acqua prende"</p>
+        <p class="text-slate-400 mt-2">Zone 22, 23, 27 | Party livello 5</p>
+        <div class="mt-3 flex gap-3 flex-wrap">
+          <span class="bg-blue-900 text-blue-200 px-3 py-1 rounded text-sm font-semibold">3 Varianti</span>
+          <span class="bg-red-900 text-red-200 px-3 py-1 rounded text-sm font-semibold">Immunità: Veleno</span>
+          <span class="bg-orange-900 text-orange-200 px-3 py-1 rounded text-sm font-semibold">Vulnerabilità: Fuoco</span>
+        </div>
+      </div>
+
+      <!-- Lore -->
+      <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">📖 Cos'è un Sommerso</h2>
+        <p class="text-slate-200 mb-4">
+          I Sommersi non sono non-morti. Non sono spiriti. Non sono controllati da nessuno.
+          Sono <strong class="text-cyan-400">persone che l'acqua ha cambiato</strong>.
+        </p>
+        <p class="text-slate-200 mb-4">
+          I contrabbandieri che operavano in questo livello delle fogne sono stati esposti per troppo tempo
+          all'acqua ambrata che filtra dalle profondità. Progressivamente, qualcosa nell'acqua ha cominciato
+          a <strong class="text-yellow-400">sostituire</strong> — non a uccidere, non subito — i loro tessuti
+          con una sostanza gelatinosa. Il processo richiede giorni. È doloroso. E alla fine, ciò che rimane
+          è ancora <em>in piedi</em>, ancora <em>si muove</em>, ma non è più una persona.
+        </p>
+        <p class="text-slate-200 mb-4">
+          Esistono tre stadi della trasformazione, ognuno più lontano dall'umanità originale:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-900 rounded-lg p-3 border border-blue-600">
+            <h3 class="font-bold text-blue-300 mb-1">Recente (CR 1)</h3>
+            <p class="text-slate-400 text-sm">Ancora umanoide. Ancora lento. La gelatina ha appena iniziato a emergere. Forse urla ancora.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-purple-600">
+            <h3 class="font-bold text-purple-300 mb-1">Completo (CR 2)</h3>
+            <p class="text-slate-400 text-sm">L'umanità è scomparsa. Si muove con fluidità innaturale. Cerca di trascinare le prede in acqua.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-red-600">
+            <h3 class="font-bold text-red-300 mb-1">Esplosivo (CR 1)</h3>
+            <p class="text-slate-400 text-sm">Il processo di trasformazione è andato storto. La pressione interna è insostenibile. Si avvicina e scoppia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- === SOMMERSO RECENTE === -->
+      <section class="bg-slate-800 border border-blue-600 rounded-lg p-6 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-blue-700 text-blue-100 px-3 py-1 rounded text-sm font-bold">VARIANTE I</span>
+          <h2 class="text-2xl font-bold text-blue-400">SOMMERSO RECENTE</h2>
+          <span class="text-slate-400 text-sm ml-auto">CR 1 | 200 PE | Zone 22, 23, 27</span>
+        </div>
+
+        <p class="text-slate-300 mb-4 italic">
+          "La figura alla scrivania non si muove. Ha la testa china, le braccia appoggiate al tavolo.
+          Potrebbe dormire. Poi notate che la membrana gelatinosa che copre la sua schiena pulsa lentamente,
+          come un respiro che non è più un respiro."
+        </p>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-blue-300 mb-2">SOMMERSO RECENTE</h3>
+          <p class="text-slate-400 italic mb-4">Aberrazione Media, senza allineamento</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">8</span></div>
+            <div><span class="text-yellow-400 font-semibold">PF:</span> <span class="text-slate-200">30 (4d8+12)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">6m, nuoto 9m</span></div>
+          </div>
+
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div><div class="text-red-400 font-bold">FOR</div><div class="text-slate-200">14 (+2)</div></div>
+              <div><div class="text-red-400 font-bold">DES</div><div class="text-slate-200">6 (-2)</div></div>
+              <div><div class="text-red-400 font-bold">COS</div><div class="text-slate-200">16 (+3)</div></div>
+              <div><div class="text-red-400 font-bold">INT</div><div class="text-slate-200">3 (-4)</div></div>
+              <div><div class="text-red-400 font-bold">SAG</div><div class="text-slate-200">6 (-2)</div></div>
+              <div><div class="text-red-400 font-bold">CAR</div><div class="text-slate-200">3 (-4)</div></div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-slate-300 text-sm">
+            <div><span class="text-red-400 font-semibold">Immunità danni:</span> veleno</div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> contundenti</div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco</div>
+            <div><span class="text-blue-400 font-semibold">Immunità condizioni:</span> avvelenato, affascinato, esausto</div>
+            <div><span class="text-cyan-400 font-semibold">Sensi:</span> scurovisione 18m | <span class="text-purple-400 font-semibold">Cristalli:</span> 8 piccoli</div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-yellow-300 mb-1">🧊 Corpo Semi-Liquido</h4>
+            <p class="text-slate-400 text-sm">Danni contundenti dimezzati (la gelatina assorbe l'impatto).</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-yellow-300 mb-1">💧 Schizzi Corrosivi</h4>
+            <p class="text-slate-400 text-sm">Chi colpisce in mischia entro 1.5m subisce <strong>1d4 (2) acido</strong> automaticamente.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-red-700">
+            <h4 class="font-semibold text-red-300 mb-1">🔄 Resilienza Melmosa</h4>
+            <p class="text-slate-400 text-sm">Quando ridotto a 0 PF: TS COS CD (5 + danno ricevuto). Successo = sopravvive con 1 PF. <strong class="text-red-400">Non funziona contro fuoco e danni radianti.</strong></p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-yellow-300 mb-1">🌊 Affinità Acquatica</h4>
+            <p class="text-slate-400 text-sm">Vantaggio agli attacchi contro creature in acqua. Respira sott'acqua.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-cyan-300 mb-1">⚔️ Pseudopodo Corrosivo: +4 al colpire, portata 1.5m</h4>
+            <p class="text-slate-400 text-sm"><strong>6 (1d8+2)</strong> contundenti + <strong>3 (1d6)</strong> acido</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-3 mt-4 border border-blue-600">
+          <h4 class="font-semibold text-blue-300 mb-1">💡 Note DM - Sommerso Recente</h4>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+            <li>Spesso usato come <strong>sorpresa</strong> — seduto, immobile, sembrano morti o svenuti</li>
+            <li>La Resilienza Melmosa può causare panico quando "non muore" — comunicalo con drammaticità</li>
+            <li>In Zona 22: quello seduto a capotavola è un momento narrativo forte — rallenta la descrizione</li>
+            <li>Priorità in combattimento: attacca chi è in acqua (vantaggio automatico)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- === SOMMERSO COMPLETO === -->
+      <section class="bg-slate-800 border border-purple-600 rounded-lg p-6 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-purple-700 text-purple-100 px-3 py-1 rounded text-sm font-bold">VARIANTE II</span>
+          <h2 class="text-2xl font-bold text-purple-400">SOMMERSO COMPLETO</h2>
+          <span class="text-slate-400 text-sm ml-auto">CR 2 | 450 PE | Zona 23</span>
+        </div>
+
+        <p class="text-slate-300 mb-4 italic">
+          "Ciò che emerge dall'acqua alla terza ondata si muove in modo diverso dagli altri.
+          Non cammina — scivola, come se il pavimento non fosse un ostacolo ma uno strumento.
+          Non ha più l'aspetto di qualcuno che stava diventando qualcosa d'altro.
+          È già diventato."
+        </p>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-purple-300 mb-2">SOMMERSO COMPLETO</h3>
+          <p class="text-slate-400 italic mb-4">Aberrazione Media, senza allineamento</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">10</span></div>
+            <div><span class="text-yellow-400 font-semibold">PF:</span> <span class="text-slate-200">38 (5d8+15)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">9m, nuoto 12m</span></div>
+          </div>
+
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div><div class="text-red-400 font-bold">FOR</div><div class="text-slate-200">16 (+3)</div></div>
+              <div><div class="text-red-400 font-bold">DES</div><div class="text-slate-200">10 (+0)</div></div>
+              <div><div class="text-red-400 font-bold">COS</div><div class="text-slate-200">16 (+3)</div></div>
+              <div><div class="text-red-400 font-bold">INT</div><div class="text-slate-200">2 (-4)</div></div>
+              <div><div class="text-red-400 font-bold">SAG</div><div class="text-slate-200">8 (-1)</div></div>
+              <div><div class="text-red-400 font-bold">CAR</div><div class="text-slate-200">2 (-4)</div></div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-slate-300 text-sm">
+            <div><span class="text-red-400 font-semibold">Immunità danni:</span> veleno, acido</div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> contundenti</div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco, radianti</div>
+            <div><span class="text-blue-400 font-semibold">Immunità condizioni:</span> avvelenato, affascinato, esausto, prono</div>
+            <div><span class="text-cyan-400 font-semibold">Sensi:</span> scurovisione 18m, vista cieca 9m | <span class="text-purple-400 font-semibold">Cristalli:</span> 10 piccoli</div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-yellow-300 mb-1">🧊 Corpo Semi-Liquido + Schizzi Corrosivi (1d6 acido) + Resilienza Melmosa + Affinità Acquatica</h4>
+            <p class="text-slate-400 text-sm">Stessi tratti del Sommerso Recente, con Schizzi potenziati a 1d6. Aggiunge anche: può scivolare attraverso spazi stretti fino a 30cm di diametro.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-purple-700">
+            <h4 class="font-semibold text-purple-300 mb-1">🌊 Trascinamento (Azione Bonus)</h4>
+            <p class="text-slate-400 text-sm">Se colpisce con lo Pseudopodo: può afferrare il bersaglio come azione bonus (<strong>Atletica vs Atletica/Acrobazia</strong>). Il bersaglio afferrato viene trascinato di <strong>1.5m/round verso l'acqua profonda</strong>.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-red-700">
+            <h4 class="font-semibold text-red-300 mb-1">⚔️ Multiattacco: 2 attacchi con Pseudopodo</h4>
+            <p class="text-slate-400 text-sm">
+              Pseudopodo Corrosivo: <strong>+5 al colpire</strong>, portata 1.5m<br/>
+              Colpito: <strong>7 (1d8+3)</strong> contundenti + <strong>3 (1d6)</strong> acido
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-3 mt-4 border border-purple-600">
+          <h4 class="font-semibold text-purple-300 mb-1">💡 Note DM - Sommerso Completo</h4>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+            <li><strong>Il Trascinamento è la sua arma principale</strong> — porta i PG nell'acqua (80cm) dove hanno svantaggio al movimento</li>
+            <li>2 attacchi per round = più possibilità di segnare corpi + afferrare nella stessa azione</li>
+            <li>In Zona 23: emerge nella seconda ondata (Round 3-4) quando il party è già sotto pressione dai Recenti</li>
+            <li>Priorità: il PG che stava cercando di rimanere asciutto sulle passerelle</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- === SOMMERSO ESPLOSIVO === -->
+      <section class="bg-slate-800 border border-red-600 rounded-lg p-6 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-red-700 text-red-100 px-3 py-1 rounded text-sm font-bold">VARIANTE III</span>
+          <h2 class="text-2xl font-bold text-red-400">SOMMERSO ESPLOSIVO</h2>
+          <span class="text-slate-400 text-sm ml-auto">CR 1 | 200 PE | Zona 23 (opz.), Zona 27</span>
+        </div>
+
+        <p class="text-slate-300 mb-4 italic">
+          "Questo è diverso dagli altri. Si muove più velocemente, ma in modo frantumato, a scatti.
+          Qualcosa dentro di lui non è stabile. La membrana gelatinosa pulsa con frequenza irregolare.
+          Si avvicina al gruppo più numeroso."
+        </p>
+
+        <div class="bg-slate-900 rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold text-red-300 mb-2">SOMMERSO ESPLOSIVO</h3>
+          <p class="text-slate-400 italic mb-4">Aberrazione Media, senza allineamento</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">7</span></div>
+            <div><span class="text-yellow-400 font-semibold">PF:</span> <span class="text-slate-200">15 (2d8+6)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">9m, nuoto 9m</span></div>
+          </div>
+
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div><div class="text-red-400 font-bold">FOR</div><div class="text-slate-200">10 (+0)</div></div>
+              <div><div class="text-red-400 font-bold">DES</div><div class="text-slate-200">8 (-1)</div></div>
+              <div><div class="text-red-400 font-bold">COS</div><div class="text-slate-200">16 (+3)</div></div>
+              <div><div class="text-red-400 font-bold">INT</div><div class="text-slate-200">1 (-5)</div></div>
+              <div><div class="text-red-400 font-bold">SAG</div><div class="text-slate-200">4 (-3)</div></div>
+              <div><div class="text-red-400 font-bold">CAR</div><div class="text-slate-200">1 (-5)</div></div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-slate-300 text-sm">
+            <div><span class="text-red-400 font-semibold">Immunità danni:</span> veleno, acido</div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco, perforanti</div>
+            <div><span class="text-blue-400 font-semibold">Immunità condizioni:</span> avvelenato, affascinato, esausto, prono</div>
+            <div><span class="text-cyan-400 font-semibold">Sensi:</span> vista cieca 9m (cieco oltre) | <span class="text-purple-400 font-semibold">Cristalli:</span> 15 piccoli</div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="bg-slate-900 rounded-lg p-3 border-2 border-red-700">
+            <h4 class="font-semibold text-red-300 mb-1">💥 Instabile</h4>
+            <p class="text-slate-400 text-sm">Se subisce <strong>danni da fuoco</strong> di qualsiasi entità: <strong>esplode immediatamente</strong>, indipendentemente dai PF rimanenti.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border-2 border-orange-700">
+            <h4 class="font-semibold text-orange-300 mb-1">💥 Detonazione (a 0 PF, oppure come azione)</h4>
+            <p class="text-slate-400 text-sm">
+              <strong>Ogni creatura entro 3m</strong>: TS Destrezza CD 13 o <strong>10 (3d6) danni acido</strong>, successo dimezza.<br/>
+              <strong>Lascia una pozza di acido</strong> raggio 3m per 1 minuto: <strong>1d6 acido/turno</strong> per chi ci rimane dentro.
+            </p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3">
+            <h4 class="font-semibold text-yellow-300 mb-1">⚔️ Pseudopodo Debole: +2 al colpire, portata 1.5m</h4>
+            <p class="text-slate-400 text-sm"><strong>4 (1d8)</strong> contundenti — l'attacco fisico è quasi irrilevante, è solo un pretesto per avvicinarsi</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-3 mt-4 border border-red-600">
+          <h4 class="font-semibold text-red-300 mb-1">💡 Note DM - Sommerso Esplosivo — TATTICA KAMIKAZE</h4>
+          <ul class="list-disc list-inside space-y-1 text-slate-400 text-sm">
+            <li><strong>Corre verso il gruppo più numeroso</strong> — non attacca con lo pseudopodo, usa l'azione per avvicinarsi e poi si fa esplodere come azione bonus</li>
+            <li><strong>Segnale di allarme:</strong> I PG dovrebbero capire che è diverso dalla sua andatura frantumata e la membrana che pulsa rapidamente. Se non lo capiscono, potrebbe esplodere in mezzo al gruppo</li>
+            <li><strong>Abbatterlo a distanza!</strong> Con archi/incantesimi è gestibile. Se arriva in mischia, la detonazione colpisce tutti entro 3m</li>
+            <li><strong>Fuoco = esplosione garantita</strong> — Fire Bolt a gittata sicura è la soluzione ideale, ma occorre stare attenti alla distanza</li>
+            <li><strong>Pozza acido:</strong> 3m raggio per 1 minuto può bloccare zone chiave della stanza (passerelle, uscite)</li>
+            <li>In Zona 23: emerge solo se i PG stanno vincendo facilmente. Non usarlo se il party è già in difficoltà</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Tattica Zona 23 -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Tattica — Zona 23: L'Accampamento dei Sommersi</h2>
+        <p class="text-slate-400 mb-4">
+          Questo è il combattimento più grande del Piano 2. Le ondate create dalla progressione garantiscono tensione costante.
+        </p>
+
+        <div class="space-y-4">
+          <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-blue-500">
+            <h3 class="text-lg font-semibold text-blue-300 mb-2">ONDATA 1 — Round 1-2 (3 Sommersi Recenti) 💧</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Emergono in 3 punti diversi dell'acqua (80cm), distanti tra loro</li>
+              <li>Attaccano i PG più vicini all'acqua (forzano a salire sulle passerelle)</li>
+              <li>Cercano di portare i PG giù dall'acqua dove hanno il vantaggio</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-purple-500">
+            <h3 class="text-lg font-semibold text-purple-300 mb-2">ONDATA 2 — Round 3-4 (2 Sommersi Completi) ⚡</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Emergono quando il party è già impegnato con i Recenti</li>
+              <li>Priorità: PG sulle passerelle (li afferrano e trascinano in acqua)</li>
+              <li>Tentano di distruggere i pilastri delle passerelle (CA 12, 15 PF) per far cadere tutti</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-red-500">
+            <h3 class="text-lg font-semibold text-red-300 mb-2">ONDATA 3 — Round 5+ (1 Sommerso Esplosivo) 💥</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Solo se i PG stanno vincendo facilmente</strong> — non usare se sono in difficoltà</li>
+              <li>Emerge dall'acqua in fondo alla stanza, cammina dritto verso il gruppo più numeroso</li>
+              <li>Non si ferma, non attacca, non devia — la sua unica logica è avvicinarsi</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-yellow-600">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">🗺️ Elementi Tattici della Stanza</h3>
+            <ul class="list-disc list-inside space-y-2 text-slate-400">
+              <li><strong class="text-yellow-400">Acqua 80cm:</strong> Movimento dimezzato per PG, normale per Sommersi. Chi è in acqua è in svantaggio tattico</li>
+              <li><strong class="text-yellow-400">Passerelle (1.5m larghezza, +1m sul livello acqua):</strong> I Sommersi attaccano verso l'alto con <strong>svantaggio</strong> — stare sulle passerelle è un enorme vantaggio</li>
+              <li><strong class="text-yellow-400">Casse e barili:</strong> Copertura mezza. Rovesciabili: Azione + Atletica CD 12 = 2d6 contundenti su un Sommerso</li>
+              <li><strong class="text-yellow-400">Pilastri passerelle:</strong> Distruggerne uno (CA 12, 15 PF) fa crollare 3m di passerella. TS DES CD 13 o caduta in acqua</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategie Giocatori -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">💡 Strategie per i Giocatori</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-green-300 mb-3">✅ Efficace</h3>
+            <div class="space-y-2">
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">Stare sulle passerelle</p>
+                <p class="text-slate-400 text-sm">Svantaggio ai Sommersi, movimento normale per i PG</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">Fuoco su tutto</p>
+                <p class="text-slate-400 text-sm">Vulnerabilità fuoco su Completi + Esplosivi. Attenzione alla gittata sicura per l'Esplosivo</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">Abbattere Esplosivo a distanza</p>
+                <p class="text-slate-400 text-sm">Riconoscerlo dalla sua andatura. Eliminarlo prima che raggiunga il gruppo</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">Essenza Purificata</p>
+                <p class="text-slate-400 text-sm">Dal Lab Zona 24: 3d6 radianti. Vulnerabilità radianti sui Completi = devastante</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-green-300 font-semibold text-sm">Salvare chi viene afferrato</p>
+                <p class="text-slate-400 text-sm">Non lasciare che il Completo trascini un alleato in acqua. Usa Azione Aiuto</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-red-300 mb-3">❌ Da Evitare</h3>
+            <div class="space-y-2">
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Scendere in acqua</p>
+                <p class="text-slate-400 text-sm">Velocità dimezzata + vantaggio ai Sommersi = situazione disperata</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Ignorare l'Esplosivo</p>
+                <p class="text-slate-400 text-sm">10 (3d6) acido su tutti entro 3m + pozza per 1 minuto = caos totale</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Attacchi ad area vicino all'Esplosivo</p>
+                <p class="text-slate-400 text-sm">Burning Hands/Thunderwave vicino a lui lo faranno esplodere immediatamente</p>
+              </div>
+              <div class="bg-slate-900 rounded-lg p-3">
+                <p class="text-red-300 font-semibold text-sm">Separarsi</p>
+                <p class="text-slate-400 text-sm">I Sommersi emergono da direzioni diverse — chi è isolato viene sopraffatto</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ricompense -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🎁 Ricompense</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">💎 Cristalli per variante</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li>Sommerso Recente: <strong class="text-purple-400">8 piccoli</strong></li>
+              <li>Sommerso Completo: <strong class="text-purple-400">10 piccoli</strong></li>
+              <li>Sommerso Esplosivo: <strong class="text-purple-400">15 piccoli</strong></li>
+            </ul>
+            <p class="text-slate-500 italic text-sm mt-2">
+              Zona 22 (1 Recente): 8 piccoli<br/>
+              Zona 23 (3 Recenti + 2 Completi + 1 Esplosivo opz.): 59 piccoli totali
+            </p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-orange-300 mb-2">⚔️ Favore Divino — Zona 23</h3>
+            <ul class="list-disc list-inside space-y-1 text-slate-400">
+              <li><strong>Tempus:</strong> Sconfiggere tutti i Sommersi</li>
+              <li><strong>Tempus Bonus:</strong> Uso tattico delle passerelle (+5%)</li>
+              <li><strong>Tymora:</strong> Nessun PG trascinato in acqua per tutta la battaglia</li>
+              <li><strong>Mystra:</strong> Catalogare Nodo della Trama #4 (bussola) (+20%)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </DMAuthGuard>
+</MainLayout>
