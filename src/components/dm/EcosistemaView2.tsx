@@ -46,7 +46,7 @@ export default function EcosistemaView2() {
     caratteristiche: [
       'L\'acqua è viva: correnti anomale, maree artificiali, acqua che scorre verso l\'alto',
       'Il dungeon reagisce: torce che si affievoliscono, aria che cambia temperatura',
-      'Tracce di mutazione: ossa geometriche, graffiti in lingua sconosciuta, segni di vita attiva',
+      'Tracce di mutazione: ossa geometriche disposte in pattern impossibili, segni di vita attiva',
       'Nessun riferimento al mondo esterno: nessuna lettera, nessun PNG dalla superficie',
       'Nemici eliminati svaniscono in nube di polvere rilasciando cristalli magici'
     ],
@@ -64,9 +64,8 @@ export default function EcosistemaView2() {
       nome: 'La Discesa Umida',
       tipo: 'Entrata/Transizione',
       dimensioni: '2m x 10m corridoio',
-      descrizione: 'La scala a chiocciola di pietra nera scende per altri venti metri buoni prima di sfociare in un corridoio basso e stretto. Il cambiamento è immediato: l\'aria diventa calda, umida, densa — come entrare in una bocca. Le pareti trasudano condensa. Il pavimento è coperto da un velo d\'acqua (5cm) che si muove lentamente verso il fondo del corridoio, controcorrente rispetto alla leggera pendenza.\n\nA metà corridoio, le torce dei personaggi tremolano e si abbassano per un istante, come se qualcosa avesse risucchiato l\'ossigeno. Poi tornano normali.\n\nSul muro sinistro, a 1.5m d\'altezza, qualcuno ha inciso graffiti nella stessa lingua sconosciuta parlata dai banditi del Piano 1.',
+      descrizione: 'La scala a chiocciola di pietra nera scende per altri venti metri buoni prima di sfociare in un corridoio basso e stretto. Il cambiamento è immediato: l\'aria diventa calda, umida, densa — come entrare in una bocca. Le pareti trasudano condensa. Il pavimento è coperto da un velo d\'acqua (5cm) che si muove lentamente verso il fondo del corridoio, controcorrente rispetto alla leggera pendenza.\n\nA metà corridoio, le torce dei personaggi tremolano e si abbassano per un istante, come se qualcosa avesse risucchiato l\'ossigeno. Poi tornano normali.',
       elementi: [
-        'Graffiti: Linguistica CD 18 o Arcano CD 16 rivela che non è nessuna lingua conosciuta del Faerûn — struttura grammaticale aliena, nessuna radice comune con lingue umane, elfiche, naniche',
         'Acqua controcorrente: Natura CD 12 o Arcano CD 14 per notare che l\'acqua scorre in salita. Non dovrebbe essere possibile. Nessun meccanismo visibile.',
         'Percezione CD 13: Le pareti hanno segni di graffi lunghi e paralleli — come se qualcosa con artigli si fosse trascinato lungo il corridoio. I graffi vanno in entrambe le direzioni.'
       ],
@@ -75,7 +74,7 @@ export default function EcosistemaView2() {
       favoreDivino: 'Mystra: notare l\'acqua controcorrente e ipotizzare una causa magica',
       noteDM: [
         'Questa stanza deve comunicare immediatamente che il Piano 2 è diverso.',
-        'L\'aria calda, l\'acqua che si muove da sola, i graffiti sconosciuti, i segni di artigli — tutto dice "qui qualcosa è cambiato".',
+        'L\'aria calda, l\'acqua che si muove da sola, i segni di artigli — tutto dice "qui qualcosa è cambiato".',
         'Non accelerare questa descrizione. Lascia che i giocatori sentano il disagio.'
       ]
     },
@@ -89,7 +88,7 @@ export default function EcosistemaView2() {
         'Vasca pulsante: Arcano CD 12 rivela aura debole di trasmutazione. Natura CD 14: "Non è un fenomeno naturale, ma non è nemmeno un incantesimo riconoscibile"',
         'Tubature: Investigare CD 13 rivela che il sistema è stato sabotato deliberatamente — qualcuno ha rotto le tubature in punti specifici per redirezionare l\'acqua verso le zone Est',
         'Ossa geometriche: Sul pavimento vicino all\'arco Est, piccole ossa (di ratto, forse) disposte in cerchi concentrici perfetti. Nessun animale fa questo.',
-        'Tesoro nella vasca: Percezione CD 15 (sott\'acqua, con luce) rivela sul fondo: 25 mo + un anello di bronzo con incisione a goccia d\'acqua (vendibile 15 mo, non magico)'
+        'Tesoro nella vasca: Percezione CD 15 (sott\'acqua, con luce) rivela sul fondo: 2 Cristalli Minuscoli + un anello di bronzo con incisione a goccia d\'acqua (vendibile 15 mo, non magico)'
       ],
       pericoli: 'Nessuno diretto (area sicura — buon punto per breve riposo e decisioni)',
       cristalli: 'Nessuno',
@@ -113,7 +112,7 @@ export default function EcosistemaView2() {
         'Crolli (2 punti): Saltare = Acrobazia o Atletica CD 12 (2m). Guadare il canale = Atletica CD 13. Alternative creative: corde, Mage Hand, volare, ecc.',
         'Fiamme azzurre: Arcano CD 13 rivela saturazione magica nell\'aria — "Come essere dentro un incantesimo che qualcuno ha lanciato molto tempo fa."',
         'Muro incrinato (a 15m): Percezione CD 14, Investigare CD 16 o Attrezzi da scasso CD 15: il muro è sottile, si può sfondare (Atletica CD 14 o 10 danni) → PASSAGGIO NASCOSTO verso Zona 22 (percorso Est)',
-        'Tesoro: Incastrato tra le rocce del primo crollo: 18 mo + una fiala di vetro blu sigillata (Antitossina, 50 mo)'
+        'Tesoro: Incastrato tra le rocce del primo crollo: 2 Cristalli Minuscoli + una fiala di vetro blu sigillata (Antitossina, 50 mo)'
       ],
       pericoli: 'Corrente d\'acqua, crolli, scivolosità',
       cristalli: 'Nessuno',
@@ -135,8 +134,8 @@ export default function EcosistemaView2() {
         'Colonna d\'acqua ascendente — Toccarla: l\'acqua è calda, chi ci mette la mano sente una vibrazione che risale lungo il braccio fino al petto. Non dolorosa, ma profonda.',
         'Arcano CD 15: l\'aura è fortissima — trasmutazione mista a qualcosa di non classificabile. "Non è magia divina, non è arcana... è qualcosa di più antico."',
         'Natura CD 16 (Fealer): "Sento... una distorsione. Come se le leggi naturali qui fossero state riscritte."',
-        'Se Riven tocca l\'acqua: la sua magia selvaggia reagisce — Wild Magic Surge Table. Riven sente un momento di perfetta chiarezza: la magia qui è come la sua — caotica, incontrollabile.',
-        'Pattern nella condensazione: Investigare CD 16 o Percezione CD 18: i pattern somigliano ai graffiti della Zona 15, ma molto più complessi.',
+        'Se Riven tocca l\'acqua: il flusso di magia selvaggia lo investie. Deve superare un Tiro Salvezza Volontà CD 12 per tenerla sotto controllo. Successo: avverte la pressione ma la domina — sente un momento di perfetta, inquietante chiarezza: "questa magia è come la mia". Fallimento: la magia selvaggia si scatena — tira sulla Wild Magic Surge Table.',
+        'Pattern nella condensazione: Investigare CD 16 o Percezione CD 18: i pattern sul pavimento somigliano ai cerchi di sale attorno alla colonna, ma molto più complessi — quasi una lingua.',
         'Cerchi di sale: Natura o Alchimia CD 12 per raccogliere 3 dosi di "Sale delle Profondità" — 30 mo a dose, oppure +1 al CD di un incantesimo di abiurazione (monouso)',
         'NODO DELLA TRAMA #1: Chi studia la colonna per 10 min e supera Arcano CD 14 può catalogare questa anomalia come "Nodo della Trama"'
       ],
@@ -162,7 +161,7 @@ export default function EcosistemaView2() {
         '⚔️ MELMA TOMBALE x2: Due Melme Tombali (custom CR 3) giacciono immerse, indistinguibili dal liquido torbido. NON sono Gray Ooze standard — sono più grandi, più rapide in acqua, e sputano acido.',
         '🎲 SORPRESA: Percezione passiva CD 20 per individuarne una prima che emerga. Se nessun PG la supera → round di sorpresa completo. CD scende a 14 se i PG producono molto rumore nell\'acqua (corsa, cadute, ecc.).',
         '🗡️ TATTICA: La prima emerge sotto il PG più avanzato quando si avvicina ai sarcofagi. La seconda emerge dal lato opposto 1 round dopo (tenaglia). Tra un round e l\'altro si reimmerge con azione bonus per ricostituire il camouflage.',
-        'Sarcofago 1: Atletica CD 14 → 40 mo antiche + un pugnale d\'argento (20 mo, funziona come arma argentata)',
+        'Sarcofago 1: Atletica CD 14 → 3 Cristalli Minuscoli + un pugnale d\'argento (20 mo, funziona come arma argentata)',
         'Sarcofago 2: Atletica CD 14 → NODO DELLA TRAMA #2 (cristallo che levita a 3cm dal fondo del sarcofago, emette luce tenue)',
         'Sarcofago spaccato: Ossa vecchissime e placca di bronzo illeggibile (corrosa). Nessun valore.'
       ],
@@ -212,9 +211,9 @@ export default function EcosistemaView2() {
         'Combattimento: 2 Grick Acquatici — Il primo è sommerso vicino al pilastro crollato (Percezione CD 16). Il secondo è aggrappato al soffitto nella curva (Percezione CD 15, scia viscida fresca).',
         'Tattica: Il primo attacca quando un PG supera il pilastro. Il secondo attacca 1-2 round dopo. Pinza classica. Usano Immersione Rapida per sparire e riemergere.',
         'Se ridotti sotto 8 PF: fuggono attraverso cunicoli nelle nicchie (troppo stretti per i PG)',
-        'Nicchia 3: 22 mo + osso intagliato con rune (vendibile 8 mo, non magico)',
+        'Nicchia 3: 2 Cristalli Minuscoli + osso intagliato con rune (vendibile 8 mo, non magico)',
         'Nicchia 5: Nido con uova gelatinose (4-5 uova di Grick — Natura CD 14 rivela che un Grick con uova è più aggressivo)',
-        'Nicchia 6 (fondo): Percezione CD 14 → sacca di cuoio: 30 mo + Pozione di Guarigione (2d4+2) + mappa parziale del Piano 2',
+        'Nicchia 6 (fondo): Percezione CD 14 → sacca di cuoio: 3 Cristalli Minuscoli + Pozione di Guarigione (2d4+2)',
         'Solchi sul soffitto: Atletica CD 16 per arrampicarsi → 2 dosi "Muco di Grick" — CD Costituzione 11 o svantaggio al prossimo attacco (monouso, 15 mo ciascuna)'
       ],
       pericoli: '2 Grick Acquatici (resistenti a danni non magici!), acqua profonda 60cm',
@@ -234,29 +233,29 @@ export default function EcosistemaView2() {
       numero: '21',
       nome: 'La Sala delle Chiuse',
       tipo: 'Sfida fisica + Scoperta ambientale',
-      dimensioni: '8x8m, soffitto 7m',
+      dimensioni: '12x12m, soffitto 18m',
       percorso: 'Centrale',
-      descrizione: 'Camera ottagonale con soffitto insolitamente alto. Al centro, una colonna d\'acqua sale dal pavimento fino all\'alto: stessa anomalia di Zona 18, ma qui è concentrata, potente, quasi solida — larga 1.5m, ruota lentamente su sé stessa mentre sale.\n\nA 4 metri d\'altezza, una piattaforma di pietra aggettante regge una grande ruota di bronzo — la chiusa vera e propria. La scala che portava alla piattaforma è crollata. Le pareti sono lisce, bagnate, senza appigli.\n\nIl passaggio verso Zona 25 è sigillato da una saracinesca di ferro sulla parete Sud. Sopra la saracinesca, inciso nella pietra: "L\'acqua non conosce il basso. Nemmeno tu."',
+      descrizione: 'Camera ottagonale con soffitto insolitamente alto. Al centro, una colonna d\'acqua sale dal pavimento fino quasi al soffitto: stessa anomalia di Zona 18, ma qui è concentrata, potente, quasi solida — larga 7.5 metri, alta 15 metri, ruota lentamente su sé stessa mentre sale. L\'acqua riempie la stanza per i primi 2 metri dal pavimento.\n\nA 15 metri d\'altezza, una piattaforma di pietra aggettante regge una grande ruota di bronzo — la chiusa vera e propria. La scala che portava alla piattaforma è crollata. Le pareti sono lisce, bagnate, senza appigli.\n\nIl passaggio verso Zona 25 è sigillato da una saracinesca di ferro sulla parete Sud. Sopra la saracinesca, inciso nella pietra: "L\'acqua non conosce il basso. Nemmeno tu."',
       elementi: [
-        'OBIETTIVO: raggiungere la piattaforma a 4m e girare la ruota di bronzo per aprire la saracinesca verso Zona 25',
-        'LA COLONNA — L\'acqua sale con forza sufficiente a trasportare un personaggio in armatura completa. Non serve nuotare né scalare: basta entrarci e smettere di resistere. La corrente porta su in circa 3 secondi.',
-        'Entrare nella colonna: Constitution CD 11 per il freddo (1d4 danni da freddo, non bloccante). Nessun altro check — la corrente fa tutto il lavoro.',
-        'In cima: la ruota gira liberamente, non è bloccata. Non richiede check. Appena girata, la saracinesca si apre con un boato idraulico sordo e la colonna d\'acqua si ferma (il sistema si normalizza).',
-        'La piattaforma contiene: 1 cristallo medio (incastrato nell\'ingranaggio della ruota, emerge quando si gira). Pannello laterale (Investigare CD 15): 35 mo + chiave di bronzo piccola (apre lucchetto nella Zona 24).',
-        'TENTATIVI ALTERNATIVI — Scalare la parete: Atletica CD 18 (liscia e bagnata), ogni fallimento = 1d6 danni caduta. Fly/Levitate: funzionano, arrivano su e girano la ruota — ma chi usa Levitate spende uno slot per fare gratis ciò che la colonna fa gratis. Spider Climb: valido, CD non necessario.',
-        'HINT SILENZIOSO — Se dopo 10 minuti nessuno ha provato la colonna: Percezione passiva 13 nota un guanto abbandonato che sale lentamente dentro la corrente e scompare in cima.',
+        'OBIETTIVO: raggiungere la piattaforma a 15m e girare la ruota di bronzo per aprire la saracinesca verso Zona 25.',
+        'LA COLONNA — Larga 7.5m, non si può aggirare restando a piedi asciutti. La logica è invertita rispetto alla natura: stando fermi dentro la corrente, il flusso porta lentamente in superficie (ascesa di ~3m/round). Qualsiasi azione intrapresa — nuotare, scalare, combattere — causa invece un rapido affondamento verso il fondo.',
+        'Entrare nella colonna: Constitution CD 11 per il freddo (1d4 danni da freddo, non bloccante). Per salire: restare immobili e lasciarsi trasportare — nessun check. Per scendere o restare fermi in profondità: fare un\'azione qualsiasi.',
+        'LA RUOTA — È sommersa nella colonna d\'acqua a 15m di quota. Per raggiungerla i PG devono poter respirare sott\'acqua (o trattenere il respiro). La ruota è bloccata da un meccanismo arrugginito: Forza CD 15 per sbloccarla. Appena girata, la saracinesca si apre con un boato idraulico sordo e la colonna d\'acqua si ferma.',
+        'CHIAVE DI FERRO CON IL SIMBOLO DELLA GOCCIA — Era perennemente tenuta in aria dalla forza ascendente della colonna, invisibile nell\'acqua in moto. Quando la ruota viene girata e la colonna si ferma, cade nella pozza ai piedi della colonna. Questa chiave apre la porta della Zona 26.',
+        'Pannello laterale sulla piattaforma (Investigare CD 15): 2 Cristalli Minuscoli + note tecniche sul sistema idraulico (in lingua sconosciuta — stesso alfabeto dei pattern di Zona 18).',
+        'TENTATIVI ALTERNATIVI — Scalare la parete: Atletica CD 20 (liscia, bagnata e alta 15m), ogni fallimento = 1d6 danni caduta. Fly/Levitate: funzionano, arrivano su — ma la ruota è sott\'acqua, serve comunque modo per respirare. Spider Climb: valido per la parete, ma la ruota è immersa.',
         'COLLEGAMENTO ZONA 27 — Girare la ruota attiva il circuito idraulico del Collettore. In Zona 27 (boss fight), il pannello sulla parete Ovest diventa operativo: consente di forzare l\'acqua BASSA per 2 round (usabile 2 volte). I PG sentiranno un clic meccanico lontano quando la ruota gira — non sanno ancora cosa significa.'
       ],
-      pericoli: 'Caduta dalla piattaforma (1d6 danni) per chi scala o scivola, freddo della colonna (1d4)',
-      cristalli: '1 cristallo medio (dalla ruota)',
-      favoreDivino: 'Tymora: primo PG ad entrare nella colonna senza check precedenti — coraggio puro (+10%). Mystra: capire il collegamento tra la colonna e l\'anomalia di Zona 18 prima di provarla (Arcano CD 13, +10%).',
+      pericoli: 'Affogamento per chi esaurisce il respiro nella colonna, caduta dalla piattaforma (3d6 danni, 15m), freddo della colonna (1d4)',
+      cristalli: 'Nessuno',
+      favoreDivino: 'Tymora: primo PG ad entrare nella colonna senza tentare scale o volo prima — coraggio puro (+10%). Mystra: capire la logica inversa della colonna (immobiltà = salita) prima di provarla (Arcano CD 13, +10%).',
       noteDM: [
-        'L\'unico ostacolo reale è psicologico: fidarsi dell\'acqua impossibile. Non dare fretta, non aggiungere pericoli artificiali — la tensione viene dal salto di fede.',
-        'Descrivi la colonna con cura: "L\'acqua ruota su sé stessa come un pilastro vivo. Non schizza, non fa rumore. Sale e basta." I giocatori devono sentire che è anomala ma non ostile.',
-        'Il momento in cui un PG entra e sale: rallenta il tempo. Descrivi cosa vedono dall\'alto, i compagni piccoli sotto, l\'acqua che li avvolge senza bagnare (o bagnando poco). È il momento cinematografico del percorso centrale.',
-        'Se usano Fly/Levitate senza mai considerare la colonna: nessun problema meccanico, ma perdi l\'aha-moment. Puoi far dire a un PNG o all\'ambiente qualcosa che li faccia riflettere su cosa hanno appena ignorato.',
-        'La colonna che si ferma dopo la soluzione è importante: mostra che il dungeon "risponde" alle loro azioni. L\'anomalia non era decorativa — era funzionale.',
-        'PAYOFF IN ZONA 27: i PG che sono entrati nella colonna capiranno istintivamente le correnti ascendenti della boss room. Potrebbero usarle in modi creativi — assecondalo.'
+        'L\'ostacolo è doppio: capire la logica inversa (fare niente per salire) e poi respirare sott\'acqua per girare la ruota. Non sono problemi impossibili — il party ha sicuramente qualche soluzione: Waterbreathing, pozioni, resistenza al respiro.',
+        'La larghezza di 7.5m rende impossibile evitare la colonna senza magia — Fealer con gli stivali alati non può semplicemente volare intorno, la colonna riempie la stanza. Può usarli per salire fuori dalla colonna, ma la ruota è sott\'acqua comunque.',
+        'Descrivi la colonna con cura: "L\'acqua ruota su sé stessa come un pilastro vivo, occupa quasi tutta la stanza. Non schizza, non fa rumore. Sale e basta." I giocatori devono sentire che è anomala ma non ostile.',
+        'Il momento in cui un PG si immobilizza e sale: rallenta il tempo. Descrivi la sensazione di lasciarsi andare nell\'acqua impossibile, il soffitto che si avvicina, i compagni piccoli sotto.',
+        'La colonna che si ferma dopo la soluzione è importante: mostra che il dungeon "risponde" alle loro azioni.',
+        'PAYOFF IN ZONA 27: i PG che hanno capito la logica inversa della colonna riconoscono le correnti ascendenti della boss room. Potrebbero usarle in modi creativi — assecondalo.'
       ]
     },
     {
@@ -267,8 +266,8 @@ export default function EcosistemaView2() {
       percorso: 'Est',
       descrizione: 'Un\'ampia caverna irregolare con evidenti segni di occupazione prolungata. A differenza del piccolo accampamento del Piano 1, questo era un vero avamposto: tre strutture di legno e tela, un pozzo, un\'area cucina con focolare di pietra, rastrelliere per armi vuote.\n\nMa qualcosa è andato terribilmente storto.\n\nLe baracche sono intatte ma ricoperte di una pellicola gelatinosa traslucida. Il focolare contiene cenere fredda sotto uno strato della stessa sostanza. Le rastrelliere sono piegate come se qualcuno con forza innaturale le avesse contorte. Ovunque — impronte di qualcosa che cammina su due gambe ma trascina arti troppo lunghi.\n\nL\'acqua qui è solo una pozza superficiale (10cm), ma ha un colore ambrato innaturale.',
       elementi: [
-        'Baracca 1 (Dormitorio): 4 giacigli, 3 occupati da... sagome. Non sono persone — sono vestiti pieni di sostanza gelatinosa, come se chi li indossava si fosse sciolto al loro interno. Sotto un giaciglio: 18 mo + diario illeggibile (pagine fuse dalla gelatina)',
-        'Baracca 2 (Armeria): 2 spade corte arrugginite (1 mo ciascuna), balestra senza corda, cassa chiusa con lucchetto (Attrezzi CD 14): 40 mo + Pozione di Guarigione Superiore (4d4+4) + mappa parziale',
+        'Baracca 1 (Dormitorio): 4 giacigli, 3 occupati da... sagome. Non sono persone — sono vestiti pieni di sostanza gelatinosa, come se chi li indossava si fosse sciolto al loro interno. Sotto un giaciglio: 2 Cristalli Minuscoli + diario illeggibile (pagine fuse dalla gelatina)',
+        'Baracca 2 (Armeria): 2 spade corte arrugginite (1 mo ciascuna), balestra senza corda, cassa chiusa con lucchetto (Attrezzi CD 14): 3 Cristalli Minuscoli + Pozione di Guarigione Superiore (4d4+4)',
         'Baracca 3 (Sala riunioni): Tavolo con mappa vecchia. 1 SOMMERSO RECENTE seduto immobile a capotavola, testa china. Percezione CD 12 per notare che la membrana gelatinosa pulsa. Entro 3m senza precauzioni → attacco sorpresa. Polvere ambrata quando sconfitto.',
         'Il pozzo: Asciutto. Sul fondo (4m, Atletica CD 12): NODO DELLA TRAMA #3 — l\'acqua forma spirali che ruotano da sole.',
         'Passaggio nascosto (verso Zona 18): Percezione CD 16 sulla parete Ovest. Stesso passaggio dalla Zona 17. Atletica CD 14 o 10 danni per allargare.'
@@ -300,8 +299,8 @@ export default function EcosistemaView2() {
         'Acqua (80cm): Movimento dimezzato per PG. Sommersi a velocità normale.',
         'Casse e barili: Copertura mezza. Rovesciabili sui Sommersi (azione + Atletica CD 12 = 2d6 contundenti).',
         'Pilastri passerelle: Distruggerne uno (CA 12, 15 PF) fa crollare 3m di passerella — TS Destrezza CD 13 o caduta in acqua.',
-        'Loot magazzino (15 min): 80 mo, 3 gemme (rubino 25 mo, agata 10 mo, quarzo fumé 15 mo), 2x Pozione di Guarigione (2d4+2), 4 razioni, set attrezzi carpentiere (15 mo)',
-        'Scrivania del capo (Investigare CD 14): 50 mo + NODO DELLA TRAMA #4 (bussola rotta il cui ago gira in continuazione — cerca qualcosa sotto). Sotto: Chiave di bronzo grande (accesso diretto al Collettore)'
+        'Loot magazzino (15 min): 4 Cristalli Minuscoli, 3 gemme (rubino 25 mo, agata 10 mo, quarzo fumé 15 mo), 2x Pozione di Guarigione (2d4+2), 4 razioni, set attrezzi carpentiere (15 mo)',
+        'Scrivania del capo (Investigare CD 14): 3 Cristalli Minuscoli + NODO DELLA TRAMA #4 (bussola rotta il cui ago gira in continuazione — cerca qualcosa sotto). Sotto: Chiave di bronzo grande (accesso diretto al Collettore)'
       ],
       pericoli: '3-6 Sommersi (combattimento più grosso del piano), acqua profonda, passerelle distruttibili',
       cristalli: '59 cristalli piccoli totali (24 Recenti + 20 Completi + 15 Esplosivo)',
@@ -324,11 +323,11 @@ export default function EcosistemaView2() {
       dimensioni: '5x4m',
       percorso: 'Est',
       opzionale: true,
-      descrizione: 'Una porta di ferro sulla parete sud della Zona 23, chiusa con lucchetto di bronzo (chiave dalla Zona 21, oppure Attrezzi da scasso CD 16). Oltre la porta, una stanza piccola relativamente asciutta.\n\nQuesta non era una stanza dei contrabbandieri. È più vecchia. Molto più vecchia.\n\nBanchi da lavoro di pietra con strumenti di vetro e bronzo troppo elaborati per dei contrabbandieri: alambicchi, crogioli, tubature di cristallo sottilissimo. Sul banco Ovest, un alambicco che distilla lentamente l\'acqua della pozza centrale. Il liquido distillato cade goccia a goccia in una fiala già piena per metà.',
+      descrizione: 'Una porta di ferro sulla parete sud della Zona 23, chiusa con lucchetto di bronzo (Attrezzi da scasso CD 16). Oltre la porta, una stanza piccola relativamente asciutta.\n\nQuesta non era una stanza dei contrabbandieri. È più vecchia. Molto più vecchia.\n\nBanchi da lavoro di pietra con strumenti di vetro e bronzo troppo elaborati per dei contrabbandieri: alambicchi, crogioli, tubature di cristallo sottilissimo. Sul banco Ovest, un alambicco che distilla lentamente l\'acqua della pozza centrale. Il liquido distillato cade goccia a goccia in una fiala già piena per metà.',
       elementi: [
         'Alambicco attivo: Arcano CD 13 — incantato con Purify Food and Water potenziato. Fiala: 3 dosi "Essenza Purificata delle Profondità" — cura avvelenato + vantaggio TS veleno 1h. Su Sommerso: 3d6 danni radianti. 40 mo a dose.',
         'Banchi da lavoro: Investigare CD 14 — strumenti di fattura sconosciuta, vecchissimi. Componenti alchemici per 30 mo totali.',
-        'Cassa 1: Vuota. Cassa 2: 25 mo + 2 boccette inchiostro magico (10 mo ciascuna). Cassa 3: Pergamena di Misty Step (singolo uso)',
+        'Cassa 1: Vuota. Cassa 2: 2 Cristalli Minuscoli + 2 boccette inchiostro magico (10 mo ciascuna). Cassa 3: Pergamena di Misty Step (singolo uso)',
         'NODO DELLA TRAMA #5: L\'acqua nella pozza centrale ruota lentamente in senso antiorario — sempre, senza fermarsi.'
       ],
       pericoli: 'Nessuno diretto (la stanza è sicura)',
@@ -345,12 +344,12 @@ export default function EcosistemaView2() {
       nome: 'Il Collettore Centrale',
       tipo: 'Convergenza + Area di raccolta',
       dimensioni: '12m diametro esagonale, soffitto 7m',
-      descrizione: 'I tre percorsi convergono in una vasta camera a pianta esagonale. Sei pilastri massicci sostengono la struttura. Al centro, un\'enorme griglia di ferro copre un pozzo senza fondo — l\'acqua vi precipita dentro con un rumore continuo e profondo.\n\nL\'aria è più fredda. Il rumore dell\'acqua è costante e ipnotico.\n\nSulla parete Sud, un grande portone di ferro — chiuso. Due meccanismi: serratura per la Chiave di bronzo grande (Zona 23) oppure due ruote manuali (2 PG simultaneamente, Atletica CD 13 ciascuno).\n\nSulla parete Sud-Ovest, una porta più piccola con serratura nera a forma di goccia d\'acqua. Richiede la Chiave di Ferro Nero dal Piano 1.',
+      descrizione: 'I tre percorsi convergono in una vasta camera a pianta esagonale. Sei pilastri massicci sostengono la struttura. Al centro, un\'enorme griglia di ferro copre un pozzo senza fondo — l\'acqua vi precipita dentro con un rumore continuo e profondo.\n\nL\'aria è più fredda. Il rumore dell\'acqua è costante e ipnotico.\n\nSulla parete Sud, un grande portone di ferro — chiuso. Due meccanismi: serratura per la Chiave di bronzo grande (Zona 23) oppure due ruote manuali (2 PG simultaneamente, Atletica CD 13 ciascuno).\n\nSulla parete Sud-Ovest, una porta più piccola con una serratura a forma di goccia d\'acqua. Richiede la Chiave di Ferro con il Simbolo della Goccia (trovata nella Zona 21 dopo aver girato la ruota).',
       elementi: [
         'Il pozzo centrale: Percezione CD 14 — il rumore ha un ritmo, lo stesso della vasca nella Cisterna (Zona 16). Guardare dentro: scende almeno 20m, qualcosa in fondo emette luce tenue ambrata. Lanciare un oggetto: 3 secondi, poi silenzio. Nessun splash.',
         'Area di riposo: I PG possono riposare brevemente. Nessun nemico entra — i Sommersi e i Grick evitano questa stanza.',
         'Natura CD 13 (Fealer): "Le creature di questo piano evitano questo posto. Come se avessero paura di qualcosa qui sotto."',
-        'Tesoro: Base pilastro (Percezione CD 13): 15 mo + specchio d\'argento (10 mo). Tra le griglie: 8 mo incastrate.'
+        'Tesoro: Base pilastro (Percezione CD 13): 2 Cristalli Minuscoli + specchio d\'argento (10 mo). Tra le griglie: 1 Cristallo Minuscolo incastrato.'
       ],
       pericoli: 'Nessuno diretto (pozzo: 6d6 danni da caduta se qualcuno cade)',
       cristalli: 'Nessuno',
@@ -366,21 +365,21 @@ export default function EcosistemaView2() {
       tipo: 'Tesoro speciale + Lore',
       dimensioni: '6m diametro',
       opzionale: true,
-      descrizione: 'La porta con la serratura a goccia d\'acqua si apre con un click pesante. Una stanza circolare perfettamente asciutta — l\'unica stanza completamente asciutta dell\'intero Piano 2. L\'aria è secca e fredda. Le pareti sono lisce, levigate.\n\nAl centro, un piedistallo di pietra nera con sopra un cofanetto di ferro intarsiato con simboli d\'acqua. Lungo le pareti, scaffali di pietra con oggetti ordinatamente disposti.\n\nQuesta stanza è stata sigillata intenzionalmente. Qualcuno voleva che ciò che conteneva restasse protetto dall\'acqua.',
+      descrizione: 'La porta con la serratura a goccia d\'acqua si apre con un click pesante. Una stanza circolare perfettamente asciutta — l\'unica stanza completamente asciutta dell\'intero Piano 2. L\'aria è secca e fredda. Le pareti sono lisce, levigate, senza scritte né decorazioni.\n\nOltre le quattro colonne di pietra che reggono il soffitto basso, al centro della stanza: un forziere.\n\nNon è il forziere di un ladro o di un contrabbandiere. È massiccio, lungo almeno due metri, di ferro nero intarsiato con simboli d\'acqua e onde stilizzate in bronzo antico — qualcosa che qualcuno ha costruito per durare secoli. Due serrature distinte: la più grande sul bordo superiore, la più piccola sul pannello frontale.\n\nQuesta stanza è stata sigillata intenzionalmente. Qualcuno voleva che ciò che conteneva restasse protetto dall\'acqua per sempre.',
       elementi: [
-        'Cofanetto centrale: 150 mo in monete d\'oro antiche (conio pre-Waterdeep, collezionisti pagherebbero il doppio), 1 CRISTALLO GRANDE (primo del dungeon — vale 50 piccoli), gemma d\'ambra calda come pelle viva (50 mo)',
-        'Scaffali: 3 boccette di Essenza Purificata (come Zona 24), 2x Pozione di Guarigione Superiore (4d4+4)',
-        'Libro in lingua sconosciuta: Con Comprehend Languages — diario operativo: "raccolta", "cicli di purificazione", "il flusso sotto ogni cosa". Ultima annotazione: "Il ciclo si ripete. L\'acqua ricorda. Noi dimentichiamo."',
-        'Mappa completa del Piano 2 (tutte le stanze, incluse opzionali e passaggio segreto)',
-        'Piedistallo — Investigare CD 16: compartimento segreto → ANELLO DELLA RESISTENZA AI VELENI (Ring of Poison Resistance — raro, attunement, vantaggio TS veleno + resistenza danni veleno). Primo oggetto magico permanente del dungeon!'
+        'IL FORZIERE — Serratura superiore: si apre con la Chiave di Ferro dal Piano 1 (quella trovata al livello precedente). Serratura frontale: non si apre, appartiene a un sistema diverso.',
+        'CONTENUTO DEL FORZIERE: 1 CRISTALLO GRANDE + 3 Cristalli Minuscoli, 2x Pozione di Guarigione Superiore (4d4+4), ANELLO DELLA RESISTENZA AI VELENI (Ring of Poison Resistance — raro, attunement, vantaggio TS veleno + resistenza danni veleno)',
+        'IL CRISTALLO MERIDIANO — Tra i cristalli nel forziere, uno è diverso: lungo 15cm, blu ghiaccio, tagliato con sfaccettature impossibilmente precise. Al tatto, vibra impercettibilmente. Arcano CD 13: emette una risonanza debole — la stessa firma energetica delle anomalie acquatiche del dungeon. Natura CD 14 (Fealer): "Sento che risponde a qualcosa... come un\'eco. Come se cercasse qualcosa che non è qui." Proprietà: entro 9m da un Nodo della Trama o da un\'anomalia acquatica attiva, la vibrazione diventa percettibile e il cristallo emette luce tenue azzurra. Non è un\'arma — è uno strumento.',
+        'Investigare CD 16 (il forziere): sul fondo, sotto un doppio fondo, una piccola placca di metallo incisa con lo stesso alfabeto sconosciuto dei pattern di Zona 18. Non è leggibile senza Comprehend Languages, ma è evidentemente non decorativa — sembra un\'istruzione.'
       ],
       pericoli: 'Nessuno',
-      cristalli: '1 cristallo grande (nel cofanetto)',
-      favoreDivino: 'Mystra: tradurre e leggere il libro (+10% bonus). Tymora: aprire la stanza (la Chiave era una scommessa, trovarla al Piano 1 è stata audacia ricompensata)',
+      cristalli: '1 cristallo grande + 3 cristalli minuscoli (nel forziere)',
+      favoreDivino: 'Mystra: identificare le proprietà del Cristallo Meridiano (+15%). Tymora: aprire la stanza e il forziere (due chiavi diverse trovate in due piani diversi — premiata la pazienza)',
       noteDM: [
-        'Grande ricompensa per chi ha risolto l\'enigma delle Quattro Leve nel Piano 1.',
-        'Il diario in lingua sconosciuta è lore fondamentale — qualcuno lavorava qui prima dei contrabbandieri, forse prima di Waterdeep.',
-        'Il Ring of Poison Resistance è molto utile contro il boss. Non nasconderlo troppo bene — i PG meritano di trovarlo.'
+        'Grande ricompensa per chi ha esplorato a fondo e conservato la Chiave di Ferro dal Piano 1.',
+        'Il Cristallo Meridiano è uno strumento narrativo per i livelli successivi: segnalerà anomalie e Nodi della Trama automaticamente. Darà ai giocatori una ragione meccanica per esplorare anziché rushare.',
+        'La placca con l\'alfabeto sconosciuto è lore pura — stessa grafia dei pattern di condensazione in Zona 18. Chi ci ha messo questo qui sapeva cose che i contrabbandieri non potevano sapere.',
+        'Il Ring of Poison Resistance è molto utile contro il boss. Non è nascosto — è nel forziere aperto.'
       ]
     },
     {
@@ -489,20 +488,21 @@ export default function EcosistemaView2() {
         { nemico: 'Sommerso Recente x1', stanza: '22', cristalli: 8, nota: 'Evitabile' },
         { nemico: 'Sommersi (ondata) x3-6', stanza: '23', cristalli: 59, nota: 'Parzialmente evitabile' },
         { nemico: 'Matriarca + Sommersi', stanza: '27', cristalli: 140, nota: 'Boss inevitabile (2 grandi + ~40 piccoli)' },
-        { nemico: 'Colonna ascendente', stanza: '21', cristalli: 10, nota: 'Reward salita (1 medio)' },
-        { nemico: 'Cofanetto Riserva', stanza: '26 (opt.)', cristalli: 50, nota: 'Richiede Chiave di Ferro Nero (1 grande)' }
+        { nemico: 'Colonna ascendente', stanza: '21', cristalli: 0, nota: 'Nessun cristallo (rimosso)' },
+        { nemico: 'Forziere Riserva', stanza: '26 (opt.)', cristalli: 53, nota: 'Richiede Chiave Goccia (Zona 21) + Chiave Ferro Piano 1 (1 grande + 3 minuscoli)' }
       ]
     },
     oro: {
-      obbligatorio: '~200 mo',
-      completo: '~480 mo',
-      conRiserva: '~680 mo',
-      gemme: '~165 mo in gemme',
-      valoreEconomico: '~900-1100 mo equivalenti totali (quasi il doppio del Piano 1)'
+      obbligatorio: 'Nessun oro sparso — sostituito da Cristalli Minuscoli',
+      completo: 'Gemme: ~165 mo | Oggetti: ~120 mo in oggetti vendibili',
+      conRiserva: 'Boss loot: 120 mo in blocchi fusi',
+      gemme: '~165 mo in gemme (rubino, agata, quarzo, ambra, tormalina, onice)',
+      valoreEconomico: 'Valore economico concentrato in gemme, boss loot e oggetti speciali'
     },
     oggettiMagici: [
       'Spada corta +1 (dal boss) — prima arma magica del dungeon',
       'Ring of Poison Resistance (Zona 26, opzionale)',
+      'Cristallo Meridiano — rileva anomalie acquatiche entro 9m (Zona 26, opzionale)',
       'Pergamena di Misty Step (Zona 24, opzionale)',
       'Pugnale d\'argento (Zona 19, opzionale)'
     ],
@@ -545,7 +545,7 @@ export default function EcosistemaView2() {
         { fonte: 'Boss creativo', condizione: 'Usare Essenza Purificata o pannello chiuse', favore: '10%' },
         { fonte: 'Segreti', condizione: 'Trovare passaggio nascosto 17↔22', favore: '10%' },
         { fonte: 'Sopravvivenza', condizione: 'Nessun PG a 0 PF nell\'intero piano', favore: '10%' },
-        { fonte: 'Riserva', condizione: 'Aprire Zona 26 con Chiave di Ferro Nero', favore: '10%' }
+        { fonte: 'Riserva', condizione: 'Aprire Zona 26 con la Chiave della Goccia (da Zona 21) e il forziere con la Chiave di Ferro dal Piano 1', favore: '10%' }
       ],
       totale: '100%'
     },
@@ -557,7 +557,7 @@ export default function EcosistemaView2() {
         { fonte: 'Nodo #3', condizione: 'Catalogare spirali pozzo (Zona 22)', favore: '20%' },
         { fonte: 'Nodo #4', condizione: 'Catalogare bussola impazzita (Zona 23)', favore: '20%' },
         { fonte: 'Nodo #5', condizione: 'Catalogare acqua rotante (Zona 24)', favore: '20%' },
-        { fonte: 'Bonus: Riven', condizione: 'Riven tocca acqua + party discute (Zona 18)', favore: '5%' },
+        { fonte: 'Bonus: Riven', condizione: 'Riven tocca l\'acqua (Zona 18) — sia che superi o fallisca il TS Volontà + party discute', favore: '5%' },
         { fonte: 'Bonus: Alambicco', condizione: 'Studio dell\'alambicco (Zona 24)', favore: '5%' },
         { fonte: 'Bonus: Libro', condizione: 'Tradurre il diario (Zona 26)', favore: '10%' }
       ],
@@ -1446,16 +1446,16 @@ export default function EcosistemaView2() {
               <div className="bg-slate-700 rounded p-4">
                 <h4 className="font-semibold text-yellow-400 mb-2">Callback dal Piano 1</h4>
                 <ul className="space-y-1 text-xs text-slate-300">
-                  <li>• Banditi del Piano 1 parlavano la lingua sconosciuta → stessi graffiti e diario</li>
-                  <li>• Acqua anomala notata da Riven → ora pienamente manifesta</li>
-                  <li>• Chiave di Ferro Nero → sblocca Riserva Sigillata</li>
+                  <li>• Lingua sconosciuta del Piano 1 → ricompare nei pattern di Zona 18 e nella placca del forziere</li>
+                  <li>• Acqua anomala notata da Riven → ora pienamente manifesta (TS Volontà CD 12)</li>
+                  <li>• Chiave di Ferro dal Piano 1 → apre il forziere nella Riserva Sigillata</li>
                 </ul>
               </div>
               <div className="bg-slate-700 rounded p-4">
                 <h4 className="font-semibold text-amber-400 mb-2">Semi per il Piano 3</h4>
                 <ul className="space-y-1 text-xs text-slate-300">
                   <li>• Polvere dorata del boss → collegamento al Primordiale</li>
-                  <li>• Diario in lingua sconosciuta → chi lavorava qui?</li>
+                  <li>• Cristallo Meridiano → risuona con le anomalie acquatiche dei livelli successivi</li>
                   <li>• Bussola che cerca qualcosa "sotto"</li>
                   <li>• Scala bianca → il dungeon diventa più strano</li>
                 </ul>

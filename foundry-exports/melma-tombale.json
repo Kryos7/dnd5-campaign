@@ -1,0 +1,252 @@
+{
+  "name": "Melma Tombale",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"La Cripta Respira\" — Variante Custom</strong></p><p>La Melma Tombale non è un Gray Ooze comune. È qualcosa che si è formato nel corso di <strong>secoli di stagnazione</strong> — una massa che ha assorbito i fluidi di decomposizione dei cadaveri nei sarcofagi, i minerali delle pietre antiche, e qualcosa di più oscuro che filtra dalle profondità sotto la cripta.</p><h3>Aspetto</h3><ul><li><strong>A riposo:</strong> Invisibile. Occupa 1-1.5m di diametro sul fondo, indistinguibile dall'acqua torbida. Nessun contorno, nessun riflesso anomalo.</li><li><strong>In movimento:</strong> L'acqua si \"solleva\" in modo innaturale. Un rigonfiamento semiopaco emerge, simile a un blob di gelatina grigia densa.</li><li><strong>All'attacco:</strong> Uno pseudopodio oscuro emerge dall'acqua con velocità sorprendente, emettendo un odore acre di acido e decomposizione.</li><li><strong>Morendo:</strong> Si disintegra nell'acqua con un gorgoglio silenzioso. Polvere grigio-nera sale lentamente verso la superficie.</li></ul><h3>Descrizione da leggere ai giocatori</h3><p><em>\"L'acqua non è ferma. Non come dovrebbe essere. C'è qualcosa — una lentezza, quasi una viscosità — nel modo in cui si muove attorno alle vostre gambe. Forse è solo il fango. Forse è solo la corrente. Ma per un attimo, giurate di aver visto la superficie incresparsi verso di voi, non lontano da voi.\"</em></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Campagna Piano 2 Fogne",
+    "details": {
+      "biography": {
+        "value": "<h2>CR 3 — Zona 19: La Cripta Allagata (Opzionale)</h2><p>Nell'incontro sono presenti <strong>2x Melme Tombali</strong> (totale ~2100 XP per party di 5 PG livello 5).</p><p>Medium/Hard senza sorpresa, ma il round di sorpresa garantito lo rende effettivamente pericoloso.</p><h3>Elementi tattici della Zona 19</h3><ul><li><strong>Acqua 1m:</strong> Terreno difficile per i PG, normale per le Melme (velocità nuoto 12m)</li><li><strong>Sarcofagi:</strong> Copertura parziale — PG sul bordo hanno vantaggio difensivo ma difficoltà di movimento</li><li><strong>Soffitto basso (2.5m):</strong> Nessun volo, nessuna scalata. Tutti in acqua o sul bordo.</li><li><strong>Porta d'ingresso:</strong> Unica via di fuga. Le Melme non inseguono fuori.</li></ul>",
+        "public": ""
+      },
+      "alignment": "Senza allineamento",
+      "race": "",
+      "type": {
+        "value": "ooze",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Melma"
+      },
+      "environment": "Cripta allagata, Sotterranei",
+      "cr": 3,
+      "spellLevel": 0,
+      "xp": {
+        "value": 700
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 8,
+        "calc": "natural",
+        "formula": "",
+        "label": "Armatura naturale"
+      },
+      "hp": {
+        "value": 52,
+        "max": 52,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "8d8+16"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 40,
+        "walk": 20,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 60,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieca oltre 60 ft"
+      }
+    },
+    "abilities": {
+      "str": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 5,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 2,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["acid", "poison"], "bypasses": [], "custom": "Acido, Veleno" },
+      "dr": { "value": ["cold", "fire", "lightning"], "bypasses": [], "custom": "Freddo, Fuoco, Fulmine" },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": ["blinded", "frightened", "prone"], "custom": "Accecata, Spaventata, Prona" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Camouflage Acquatico",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Nell'acqua torbida la Melma è <strong>invisibile a distanza superiore a 1,5m</strong>.</p><ul><li><strong>CD Percezione passiva 20</strong> per individuarla mentre è immersa e immobile</li><li>La CD <strong>scende a 14</strong> se la Melma si è mossa o ha attaccato in quel round (produce onde visibili)</li><li>Quando individuata, appare come una massa semiopaca grigio-scura sotto la superficie</li></ul><p><em>Con una Percezione passiva tipica di 12-14, il party NON la individua quasi mai. Garantisce il round di sorpresa.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo in acqua torbida"
+      }
+    },
+    {
+      "name": "Corrode Metallo e Legno",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Ogni colpo di Pseudopodio a segno richiede un TS Costituzione.</p><p><strong>TS Costituzione CD 13:</strong></p><ul><li><strong>Fallimento (arma):</strong> L'arma che ha colpito perde <strong>-1 permanente al danno</strong> (distrutta a -5)</li><li><strong>Fallimento (armatura/scudo):</strong> Perdono <strong>-1 CA permanente</strong></li><li>Si applica a metallo E legno <strong>non magici</strong></li></ul><p><em>Le armi e armature magiche sono immuni alla corrosione.</em></p>",
+          "chat": ""
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Si attiva quando un PG colpisce la Melma con arma non magica",
+        "save": { "ability": "con", "dc": 13, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Nascita dall'Acqua (Sorpresa)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Se i PG non hanno individuato la Melma prima che attacchi:</p><ul><li>Ottiene un <strong>round di sorpresa completo</strong> — i PG non possono agire né reagire</li><li>Nel round di sorpresa esegue la sua azione e azione bonus normalmente</li><li>Può muoversi prima di attaccare, emergendo da un punto diverso da dove ci si aspettava</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo se non individuata"
+      }
+    },
+    {
+      "name": "Pseudopodio",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata 1,5m, una creatura.</p><p><strong>Colpito:</strong></p><ul><li><strong>12 (2d8+3)</strong> danni contundenti</li><li><strong>7 (2d6)</strong> danni acido</li><li><strong>Totale medio: 19 danni</strong></li></ul><p>Dopo il colpo: il bersaglio (o chi ha colpito la Melma con arma non magica) deve superare <strong>TS Costituzione CD 13</strong> o subire corrosione permanente all'equipaggiamento (vedi Corrode Metallo e Legno).</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "5",
+        "damage": {
+          "parts": [
+            ["2d8 + 3", "bludgeoning"],
+            ["2d6", "acid"]
+          ],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Sputo d'Acido",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione (Ricarica 5-6).</strong></p><p><strong>Attacco a Distanza:</strong> +5 al colpire, gittata <strong>9m</strong>, una creatura.</p><p><strong>Colpito:</strong></p><ul><li><strong>14 (4d6)</strong> danni acido, o metà con <strong>TS Destrezza CD 13</strong></li><li>Nessun rischio di corrosione equipaggiamento (acido sputato, non contatto diretto)</li></ul><p><em>Colpisce i PG in retro linea che pensano di essere al sicuro!</em></p><p><em>Ricarica: Tira 1d6 all'inizio del turno. Con 5-6 si ricarica.</em></p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "",
+        "recharge": { "value": 5, "charged": true },
+        "actionType": "rwak",
+        "attackBonus": "5",
+        "damage": { "parts": [["4d6", "acid"]] },
+        "range": { "value": 30, "long": null, "units": "ft" },
+        "save": { "ability": "dex", "dc": 13, "scaling": "flat" },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Immersione Rapida",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione Bonus.</strong></p><p>La Melma si tuffa nell'acqua, diventando di nuovo invisibile.</p><p><strong>Effetto:</strong></p><ul><li>Si immerge completamente, ripristinando il camouflage (CD 20 per individuarla)</li><li>Si può muovere sotto l'acqua fino alla velocità di nuoto (12m / 40 ft) senza provocare attacchi di opportunità</li><li>Nel turno successivo emerge da un punto diverso e può attaccare normalmente</li></ul><p><strong>Limitazione:</strong> Solo se si trova in acqua profonda almeno 50cm.</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Deve essere in acqua profonda almeno 50cm"
+      }
+    }
+  ],
+  "flags": {},
+  "img": "icons/creatures/slimes/slime-movement-droplet-gray.webp",
+  "prototypeToken": {
+    "name": "Melma Tombale",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "disposition": -1,
+    "bar1": { "attribute": "attributes.hp" }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": 10,
+    "cristalliDescrizione": "10 cristalli piccoli per ogni Melma sconfitta (20 totali)",
+    "countInEncounter": 2,
+    "location": "Zona 19 - La Cripta Allagata (Opzionale)",
+    "partyLevel": 5,
+    "partySize": 5,
+    "difficulty": "Medium/Hard (Deadly con sorpresa)",
+    "totalXP": "~2100 (2x 700 PE)",
+    "balancing": {
+      "seToppoFacile": [
+        "Aumenta PF a 65 (10d8+20)",
+        "Abbassa la CD corrosione a 11 (più danni permanenti)"
+      ],
+      "seToppodifficile": [
+        "Rimuovi lo Sputo d'Acido (solo mischia)",
+        "Le Melme vengono individuate automaticamente prima di entrare (niente sorpresa)"
+      ]
+    },
+    "treasure": {
+      "sarcofago1": {
+        "cd": "Atletica CD 14 per sollevare il coperchio semisommerso",
+        "contenuto": ["40 mo in monete antiche", "Pugnale d'Argento (20 mo, funziona come arma argentata — utile contro i Grick in Zona 20)"]
+      },
+      "sarcofago2": {
+        "cd": "Atletica CD 14 per sollevare il coperchio",
+        "contenuto": ["Cristallo che levita a 3cm dal fondo, emette luce tenue — Nodo della Trama #2"],
+        "note": "Mystra: catalogare questo Nodo +20% Favore"
+      }
+    },
+    "favoreDivino": {
+      "tempus": "Sconfiggere entrambe le Melme",
+      "mystra": "Catalogare il Nodo della Trama #2 (+20% Favore)"
+    },
+    "tactics": {
+      "roundSorpresa": {
+        "melma1": "Emerge sotto il PG più avanzato (vicino ai sarcofagi). Pseudopodio. Poi Immersione Rapida come azione bonus.",
+        "melma2": "Rimane nascosta un altro round — aspetta che il party sia distratto dalla prima."
+      },
+      "round1_2_tenaglia": {
+        "melma1": "Continua ad attaccare il PG avanzato. Se focalizzata, si immerge e riemerge da direzione diversa.",
+        "melma2": "Emerge alle spalle del party (lato opposto) quando tutti sono concentrati sulla prima.",
+        "prioritaBersagli": ["PG con armatura pesante (massimizza la corrosione)", "Caster (massimizza il danno)"]
+      },
+      "round3plus": "Pattern attacca→immerge→riemerge altrove ogni round. Sputo d'Acido appena disponibile, su PG a distanza. Non inseguono oltre la porta."
+    },
+    "dmNotes": {
+      "atmosfera": "Descrivi l'acqua come 'troppo densa', 'troppo silenziosa', 'che si muove come respira' PRIMA che i PG entrino. Non rivelare mai il mostro esplicitamente.",
+      "percezioneAttiva": "Se un PG fa Percezione attiva: 'L'acqua non è del tutto ferma vicino al sarcofago di sinistra. Non come fanno i fluidi normali.'",
+      "minacciaRealePermanente": "Il danno reale di questo incontro è la paura di entrare in qualsiasi acqua del Piano 2. Chi perde arma/armatura sarà molto più attento nelle Zone 20, 22, 23 — questo incontro insegna qualcosa."
+    }
+  }
+}
