@@ -260,25 +260,25 @@ export default function EcosistemaView2() {
     },
     {
       numero: '22',
-      nome: 'L\'Avamposto Abbandonato',
-      tipo: 'Esplorazione + Lore + Combattimento minore',
-      dimensioni: '12x10m caverna',
+      nome: 'La Quadra Nord',
+      tipo: 'Hub — 4 sub-aree',
+      dimensioni: 'Grande stanza quadrata, 4 quadranti',
       percorso: 'Est',
-      descrizione: 'Un\'ampia caverna irregolare con evidenti segni di occupazione prolungata. A differenza del piccolo accampamento del Piano 1, questo era un vero avamposto: tre strutture di legno e tela, un pozzo, un\'area cucina con focolare di pietra, rastrelliere per armi vuote.\n\nMa qualcosa è andato terribilmente storto.\n\nLe baracche sono intatte ma ricoperte di una pellicola gelatinosa traslucida. Il focolare contiene cenere fredda sotto uno strato della stessa sostanza. Le rastrelliere sono piegate come se qualcuno con forza innaturale le avesse contorte. Ovunque — impronte di qualcosa che cammina su due gambe ma trascina arti troppo lunghi.\n\nL\'acqua qui è solo una pozza superficiale (10cm), ma ha un colore ambrato innaturale.',
+      descrizione: 'Una grande stanza quadrata che funge da snodo per l\'ala nord del livello. È divisa in quattro quadranti distinti, ciascuno corrispondente a una delle aree operative originarie del complesso.\n\n▸ Nord-Ovest: Dormitori\n▸ Nord-Est: Pozzo\n▸ Sud-Ovest: Cucine\n▸ Sud-Est: Armeria\n\n[SESSIONE 5 — parzialmente esplorata] I PG hanno esplorato le Cucine (SW). Dormitori, Armeria e Pozzo sono ancora inesplorate.',
       elementi: [
-        'Baracca 1 (Dormitorio): 4 giacigli, 3 occupati da... sagome. Non sono persone — sono vestiti pieni di sostanza gelatinosa, come se chi li indossava si fosse sciolto al loro interno. Sotto un giaciglio: 2 Cristalli Minuscoli + diario illeggibile (pagine fuse dalla gelatina)',
-        'Baracca 2 (Armeria): 2 spade corte arrugginite (1 mo ciascuna), balestra senza corda, cassa chiusa con lucchetto (Attrezzi CD 14): 3 Cristalli Minuscoli + Pozione di Guarigione Superiore (4d4+4)',
-        'Baracca 3 (Sala riunioni): Tavolo con mappa vecchia. 1 SOMMERSO RECENTE seduto immobile a capotavola, testa china. Percezione CD 12 per notare che la membrana gelatinosa pulsa. Entro 3m senza precauzioni → attacco sorpresa. Polvere ambrata quando sconfitto.',
-        'Il pozzo: Asciutto. Sul fondo (4m, Atletica CD 12): NODO DELLA TRAMA #3 — l\'acqua forma spirali che ruotano da sole.',
-        'Passaggio nascosto (verso Zona 18): Percezione CD 16 sulla parete Ovest. Stesso passaggio dalla Zona 17. Atletica CD 14 o 10 danni per allargare.'
+        '🍳 CUCINE (SW) — [ESPLORATA] 3 Sommersi Recenti sconfitti. Trovati: 24 Cristalli Minuscoli, Pozione di Guarigione Superiore sulla mensola del camino. Riven trasformato in pianta da magia selvaggia al termine del combattimento.',
+        '🛏️ DORMITORI (NW) — [INESPLORATA] Da definire.',
+        '⚗️ ARMERIA (SE) — [INESPLORATA] Da definire.',
+        '🪣 POZZO (NE) — [INESPLORATO] Da definire.',
+        'Individuazione del Magico: Fealer ha rilevato piccole aure sparse nella stanza principale — cristalli da raccogliere.'
       ],
-      pericoli: '1 Sommerso Recente, gelatina corrosiva (toccare a mani nude: 1d4 acido)',
-      cristalli: '8 cristalli piccoli (dal Sommerso)',
-      favoreDivino: 'Tempus: sconfiggere il Sommerso. Mystra: catalogare il Nodo della Trama #3 (+20%). Tymora: trovare cassa nell\'armeria senza attivare il Sommerso',
+      pericoli: 'Varia per sub-area',
+      cristalli: '24 cristalli (dalle Cucine, già raccolti in S5)',
+      favoreDivino: '',
       noteDM: [
-        'Questa stanza racconta una storia senza parole. I contrabbandieri vivevano qui, e l\'acqua li ha trasformati.',
-        'I vestiti pieni di gelatina sono l\'immagine più inquietante — non descrivere cosa è successo, lascia che lo immaginino.',
-        'Il Sommerso seduto a capotavola è un\'immagine potente: stava aspettando un briefing che non sarebbe mai arrivato.'
+        '[S5] I PG sono entrati dalla porta nord della Zona 23.',
+        '[S5] Cucine esplorate e ripulite — 3 Sommersi Recenti sconfitti.',
+        'Dormitori, Armeria e Pozzo da esplorare nelle sessioni successive.'
       ],
       mostroLink: [
         { label: '👤 Sommerso Recente — Scheda Completa', href: '/dm/mostri/sommersi', color: 'blue' }
@@ -287,30 +287,29 @@ export default function EcosistemaView2() {
     {
       numero: '23',
       nome: 'L\'Accampamento dei Sommersi',
-      tipo: 'Combattimento pesante',
-      dimensioni: '20x15m, soffitto 6m',
+      tipo: 'Combattimento pesante — [COMPLETATA S5]',
+      dimensioni: 'Stanza quadrata in muratura, acqua 2m + 3m fino al soffitto',
       percorso: 'Est',
-      descrizione: 'La caverna si allarga enormemente. Questo era il centro operativo dei contrabbandieri: pile di casse, barili, carrelli rovesciati, e una rete di passerelle di legno che collegava le diverse aree sopra il livello dell\'acqua.\n\nL\'acqua qui è profonda (80cm) e di colore ambrato. Le passerelle, alte 1m dal livello dell\'acqua, sono l\'unico modo per muoversi rapidamente. Sotto, nell\'acqua, si muovono sagome.\n\nQuando i PG entrano, la stanza sembra inizialmente deserta. Poi l\'acqua inizia a incresparsi. Bolle salgono in superficie. E dai punti più profondi emergono, una dopo l\'altra, le figure deformate dei Sommersi.',
+      descrizione: 'Stanza quadrata in muratura, non una caverna. Il pavimento è sommerso da circa 2 metri di acqua ambrata — limpida, non fangosa, pregna di magia. Dal livello dell\'acqua al soffitto ci sono altri 3 metri di aria.\n\nSott\'acqua: una vecchia stanza amministrativa intatta — scrivanie, poltrone, librerie. Oggetti galleggianti (fogli, sedie, assi di legno) derivano lentamente nel liquido ambrato.\n\nUna passerella di legno, stabile, attraversa la stanza da Sud a Nord. Porta a una porta a Nord (verso Zona 22).\n\n⚠️ PROPRIETÀ DELL\'ACQUA AMBRATA:\n• Individuazione del Magico non funziona attraverso l\'acqua — la saturazione magica scherma tutto ciò che è sotto.\n• Qualsiasi incantesimo attivo su una creatura che tocca l\'acqua viene istantaneamente dissolto.\n• Immergersi richiede Saggio TS 14 vs panico (forza magica sopraffacente). Fallimento → catatonia fino a quando non si esce e si viene assistiti.',
       elementi: [
-        'ONDATA Round 1-2: Emergono 3 Sommersi Recenti dall\'acqua in punti diversi. Attaccano il PG più vicino all\'acqua.',
-        'ONDATA Round 3-4: Emergono 2 Sommersi Completi (più veloci, più pericolosi). Cercano di trascinare PG in acqua.',
-        'ONDATA Round 5+: Se i PG stanno vincendo facilmente, emerge 1 Sommerso Esplosivo. Si avvicina al gruppo più numeroso.',
-        'Passerelle: Larghe 1.5m, stabili, movimento normale. I Sommersi dall\'acqua attaccano con svantaggio verso l\'alto.',
-        'Acqua (80cm): Movimento dimezzato per PG. Sommersi a velocità normale.',
-        'Casse e barili: Copertura mezza. Rovesciabili sui Sommersi (azione + Atletica CD 12 = 2d6 contundenti).',
-        'Pilastri passerelle: Distruggerne uno (CA 12, 15 PF) fa crollare 3m di passerella — TS Destrezza CD 13 o caduta in acqua.',
-        'Loot magazzino (15 min): 4 Cristalli Minuscoli, 3 gemme (rubino 25 mo, agata 10 mo, quarzo fumé 15 mo), 2x Pozione di Guarigione (2d4+2), 4 razioni, set attrezzi carpentiere (15 mo)',
-        'Scrivania del capo (Investigare CD 14): 3 Cristalli Minuscoli + NODO DELLA TRAMA #4 (bussola rotta il cui ago gira in continuazione — cerca qualcosa sotto). Sotto: Chiave di bronzo grande (accesso diretto al Collettore)'
+        '[S5] ONDATA 1 (turno 1): 2× Sommerso Recente, 1× Sommerso Completo, 1× Sommerso Esplosivo — emergono dall\'acqua salendo sulla passerella.',
+        '[S5] ONDATA 2 (turno 2): 1× Sommerso Recente, 2× Sommerso Completo.',
+        '[S5] ONDATA 3 (turno 3): 2× Sommerso Recente, 1× Sommerso Esplosivo.',
+        'Schizzi corrosivi: quando un Sommerso viene colpito, rilascia liquido acido (1d4 acido a chi è adiacente). I PG lo hanno scoperto in questa sessione.',
+        'Sommerso Esplosivo: alla morte deflagra in un raggio di 2m (3d6 acido, TS Des CD 14 per metà) + crea pozzanghera di acido sul pavimento (1d4/turno per chi vi rimane).',
+        '[S5 — RACCOLTO] 92 Cristalli Minuscoli dai Sommersi sconfitti.',
+        '[S5 — RACCOLTO] Loot subacqueo (recuperato da Fealer con pozione respiro): Bauletto prezioso (conteneva Chiave di Ferro a goccia), Bussola dorata con ago impazzito, Mappa del piano (sbiadita — stanze finali illeggibili), 2× Pozione di Guarigione, 4 Razioni rancide, Set attrezzi carpentiere, 4 Cristalli Minuscoli.'
       ],
-      pericoli: '3-6 Sommersi (combattimento più grosso del piano), acqua profonda, passerelle distruttibili',
-      cristalli: '59 cristalli piccoli totali (24 Recenti + 20 Completi + 15 Esplosivo)',
-      favoreDivino: 'Tempus: sconfiggere tutti i Sommersi. Bonus: uso tattico passerelle (+5%). Tymora: nessun PG trascinato in acqua. Mystra: catalogare Nodo della Trama #4 (+20%)',
+      pericoli: '10 Sommersi totali su 3 ondate — [SCONFITTI in S5]',
+      cristalli: '96 cristalli (92 dai Sommersi + 4 subacquei — tutti raccolti in S5)',
+      favoreDivino: 'Tempus: sconfiggere tutti i Sommersi. Bonus: uso tattico passerella (+5%). Tymora: nessun PG trascinato in acqua.',
       noteDM: [
-        'Questo è il COMBATTIMENTO PIÙ GRANDE del Piano 2. Deve sentirsi come una battaglia.',
-        'Le ondate danno respiro tra un\'emergenza e l\'altra — non far emergere tutti insieme.',
-        'Le passerelle sono il terreno chiave: chi le controlla vince. Fai provare ai Sommersi a distruggerle!',
-        'Se i PG sono in grave difficoltà dopo il Round 3, non far emergere il Sommerso Esplosivo.',
-        'La bussola impazzita è un hint narrativo fortissimo: sta cercando qualcosa sotto. Non spiegare cosa.'
+        '[S5] Stanza completamente esplorata e ripulita.',
+        '[S5] Fealer è diventato catatonico al primo tuffo — recuperato da Valoris (Medicina). Al secondo tentativo (con sola forza di volontà, i buff vengono dissolti dall\'acqua) è riuscito a resistere.',
+        '[S5] Fealer ha usato la Pozione per Respirare Sott\'Acqua comprata da Vex per la ricerca subacquea.',
+        '[S5] Riven ha sofferto di Wild Magic in questa stanza (panico al primo lancio).',
+        'La Chiave di Ferro a goccia trovata nel bauletto è destinata alla serratura a forma di goccia nella Zona 25 (Collettore).',
+        'La bussola dorata con ago impazzito: l\'ago cerca ancora qualcosa. Non spiegare cosa — è un hook narrativo.'
       ],
       mostroLink: [
         { label: '👤 I Sommersi (3 varianti) — Scheda Completa', href: '/dm/mostri/sommersi', color: 'blue' }

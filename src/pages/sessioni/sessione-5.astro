@@ -1,0 +1,870 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 5 - Acque Ambrate"
+  description="Quinta sessione: l'Accampamento dei Sommersi, tre ondate di nemici, Fealer nelle profondità ambrate, e Riven diventa una pianta"
+>
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">05</span>
+        <h1 class="text-4xl font-bold">Acque Ambrate</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 TBD</span>
+        <span>⏱️ 4–5 ore</span>
+        <span>🎭 Combattimento e Esplorazione</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        I Guardiani attraversano l'Accampamento dei Sommersi su una passerella sull'acqua ambrata e affrontano
+        tre ondate di nemici che risalgono dalle profondità. Dopo la battaglia, Fealer sfida personalmente la
+        corrente magica per recuperare segreti nascosti sott'acqua. La sessione si chiude con una scarica di
+        magia selvaggia che trasforma Riven in una pianta da vaso.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-amber-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">Accampamento dei Sommersi, Ufficio Sommerso, Quadra Nord, Cucine</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Oggetti Trovati</p>
+          <p class="text-gray-300">120 cristalli minuscoli, bauletto con chiave a goccia, bussola dorata, mappa del piano, 3 pozioni, set attrezzi</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-red-400 font-bold mb-1">Nemici Sconfitti</p>
+          <p class="text-gray-300">13× Sommersi (Recenti, Completi, Esplosivi)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I: L'ASSALTO DEI SOMMERSI -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🌊</span> PARTE I: L'ASSALTO DEI SOMMERSI
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">I.</span> L'Accampamento dei Sommersi
+          </h3>
+
+          <p class="leading-relaxed">
+            Lasciato il laboratorio alchemico alle spalle, i Guardiani spingono la
+            <strong class="text-amber-400">doppia porta di legno a destra</strong>.
+            Oltre la soglia si apre una stanza quadrata in muratura — silenziosa, ferma, avvolta da
+            un'atmosfera sospesa che fa trattenere il fiato.
+          </p>
+
+          <div class="bg-black/40 border-l-4 border-amber-600 p-6 my-4 rounded-r">
+            <p class="italic text-amber-100 text-lg leading-relaxed">
+              Il pavimento non esiste più. Al suo posto, un'estensione di
+              <strong>acqua ambrata</strong> — limpida, silenziosa, quasi luminosa nella sua immobilità.
+              Profonda circa due metri, lascia scorgere in controluce i contorni di una stanza amministrativa
+              rimasta intatta sotto la superficie: scrivanie, poltrone, librerie. Fogli sgualciti, sedie
+              rovesciate, tavole di legno roteano lentamente nel liquido ambrato come reliquie di un'altra epoca.
+              Dall'acqua al soffitto, altri tre metri di aria immobile.
+              Al centro della stanza, una <strong>passerella di legno</strong> attraversa l'intera lunghezza,
+              abbastanza stabile da reggere il peso di cinque avventurieri. Porta a una porta a Nord.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> attiva <strong>Individuazione del Magico</strong>
+            rivolgendola verso le profondità ambrate — ma la percezione si inceppa, schermata.
+            <em>L'acqua stessa è così carica di magia da saturare completamente il campo di rilevamento</em>:
+            impossibile distinguere eventuali oggetti incantati sott'acqua.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">II.</span> Prima Ondata — Il Costo dell'Acido
+          </h3>
+
+          <p class="leading-relaxed">
+            Il gruppo si immette sulla passerella. Sotto di loro, nell'acqua ambrata, iniziano a comparire bolle.
+            Prima poche, poi sempre più fitte. Poi le sagome risalgono —
+            <strong class="text-amber-300">Sommersi</strong> che emergono dalla superficie scuotendo l'acqua
+            e salgono con movimenti goffi e implacabili sulla passerella.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong> si getta in avanti con la sua spada corta —
+            ma nel momento in cui il metallo trafigge il corpo flaccido del Sommerso, una
+            <strong class="text-yellow-500">schizziata di liquido corrosivo</strong> gli riga la pelle.
+            Capisce il pericolo prima degli altri: usa <strong>Gioco di Gambe</strong> e si allontana
+            di scatto senza provocare attacchi di opportunità.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> interviene con autorità. L'alabarda si abbassa
+            in un'impennata controllatissima, e dal suo calcio parte un
+            <strong class="text-purple-400">raggio nero necrotico</strong> che si diffonde lungo il legno
+            e l'acciaio fino al punto di contatto: il primo Sommerso Recente cade. Valoris si gira verso
+            <strong class="text-green-400">Riven</strong> con un cenno secco: <em>"Stai dietro di me."</em>
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-red-400">Morgrim</strong> impugna l'ascia con un'espressione di
+            soddisfazione quasi gastronomica: <em>"Ahhh... ottima carne da macello!"</em> —
+            e scarica un fendente multiplo sul secondo Sommerso Recente, riducendolo a brandelli.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">III.</span> La Magia che Esplode in Mano
+          </h3>
+
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> urla a <strong class="text-purple-400">Fealer</strong>
+            di non interrompere il suo incantesimo — <em>ci pensa lui alle magie</em>.
+            Si sposta indietro sulla passerella, creando distanza. Tre linee di energia blu corrono dalla
+            cicatrice fino alla mano. Leva la voce:
+          </p>
+
+          <div class="bg-gray-900/60 border-l-4 border-blue-500 p-4 my-4 rounded-r">
+            <p class="italic text-blue-100 text-sm">"Sfolgora e consuma!"</p>
+          </div>
+
+          <p class="leading-relaxed">
+            La magia non parte. Si contorce, si aggroviglia su se stessa, e
+            <strong class="text-red-400">gli esplode direttamente in mano</strong>.
+            L'effetto è immediato: Riven viene travolto da un attacco di panico incontenibile.
+            I Sommersi — creature lente, striscianti, putrefatte — all'improvviso gli sembrano enormi e
+            inarrestabili. Si rannicchia in un angolo della passerella abbracciandosi le ginocchia,
+            incapace di agire.
+          </p>
+
+          <div class="bg-orange-900/20 border border-orange-700/40 rounded p-4 my-4">
+            <p class="text-xs font-bold text-orange-400 mb-1">✦ Magia Selvaggia</p>
+            <p class="text-xs text-gray-400">L'incantesimo si trasforma in un attacco di panico: Riven perde il prossimo turno di azione.</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">IV.</span> Morgrim: Mezzo Nano, Mezzo Fumo
+          </h3>
+
+          <p class="leading-relaxed">
+            Uno dei Sommersi vede in Morgrim il bersaglio più esposto. Le sue dita flaccide e gonfie si
+            chiudono intorno al suo braccio con una forza molle e abominevole. Ovunque tocchino, la pelle
+            frigge: il fluido corrosivo cola nelle giunture dell'armatura, si insinua nelle crepe del metallo
+            e trova la carne sottostante, lasciando una scia di bruciature che pulsano come brace viva.
+            Morgrim sbuffa tra i denti — ha subito
+            <strong class="text-red-400">quasi la metà dei suoi punti ferita</strong> in un singolo tocco.
+          </p>
+
+          <p class="leading-relaxed">
+            Il Sommerso Esplosivo tenta di colpirlo a sua volta — e manca clamorosamente.
+            <strong class="text-yellow-400">Valoris</strong> regge il confronto con il suo Sommerso lasciando
+            aperta la linea di fuoco per <strong class="text-red-400">Morgrim</strong>, che abbatte il mostro
+            con l'ascia. Nel frattempo <strong class="text-purple-400">Fealer</strong> si solleva in volo
+            sopra la superficie dell'acqua, ben lontano dalla passerella, e recita la
+            <strong>preghiera guaritrice</strong> verso Morgrim.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">V.</span> Seconda Ondata — I Guardiani Spirituali
+          </h3>
+
+          <p class="leading-relaxed">
+            Tre nuove sagome emergono dall'acqua. Due di esse risalgono proprio davanti a
+            <strong class="text-green-400">Riven</strong> ancora rannicchiato nel panico.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong>, temporaneamente libero da minacce dirette,
+            estrae il suo <strong class="text-blue-400">flauto</strong> e suona una breve litania curatrice,
+            recuperando parte delle ferite subite.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> chiude gli occhi per un istante. Le sue labbra
+            si muovono in una preghiera rapida, e attorno a lui irrompono i
+            <strong class="text-yellow-300">Guardiani Spirituali</strong>: figure luminose che vorticano in
+            cerchio, colpendo ogni nemico nell'area con feroci zampate incorporee. I Sommersi attorno a lui
+            vengono martoriati. Uno dopo l'altro cominciano a cadere — incluso il
+            <strong class="text-orange-500">Sommerso Esplosivo</strong> rimasto dalla prima ondata.
+          </p>
+
+          <div class="bg-orange-900/30 border-l-4 border-orange-500 p-5 my-5 rounded-r">
+            <p class="italic text-orange-100 leading-relaxed">
+              L'Esplosivo, morendo, mantiene la sua promessa. Il corpo si gonfia in una frazione di secondo —
+              poi <strong>deflagra</strong>, investendo Morgrim di una pioggia di melma acida.
+              Ai suoi piedi si forma una <strong class="text-yellow-500">pozzanghera di acido fumante</strong>
+              che continuerà a fare danni nel tempo.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Valoris si muove lungo la passerella portando i Guardiani con sé — ogni passo è una scia di
+            danni per i nemici che li sfiorano. <strong class="text-purple-400">Fealer</strong> scaglia la
+            <strong>Frusta di Spine</strong> sul Sommerso che minaccia Thalio: lo uccide e lo sposta
+            lateralmente, liberando il passaggio.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong>, ancora terrorizzato, spara istintivamente un
+            <strong class="text-orange-400">Dardo di Fuoco</strong> sul Sommerso che lo sovrasta.
+            Il fuoco lo avvolge — <em>l'effetto appare devastante su questi nemici</em>, molto più del previsto.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">VI.</span> Terza Ondata — Sfolgora e Consuma
+          </h3>
+
+          <p class="leading-relaxed">
+            Altri tre Sommersi emergono: due Recenti e un Esplosivo.
+            L'Esplosivo appare <em>alle spalle di Thalio</em>. Il mezzelfo si volta in un riflesso e in
+            un'unica azione fluida
+            <strong class="text-orange-400">perfora il Sommerso Esplosivo con la spada corta</strong>
+            in maniera così precisa da ucciderlo sul colpo — ma il mostro esplode comunque, investendo
+            Thalio da distanza ravvicinata con una quantità ingentissima di danni.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> continua a essere inarrestabile: tre Sommersi
+            cadono sotto i colpi suoi e dei Guardiani.
+            <strong class="text-purple-400">Fealer</strong> approfitta del momento per curare nuovamente Morgrim.
+          </p>
+
+          <p class="leading-relaxed">
+            Rimane un solo nemico. <strong class="text-green-400">Riven</strong> si rialza lentamente.
+            Chiude gli occhi. <em>Le parole della sua insegnante tornano, chiare e precise.</em>
+            Respira. Prende il controllo. Le linee di energia blu corrono di nuovo lungo il braccio.
+          </p>
+
+          <div class="bg-gray-900/60 border-l-4 border-orange-400 p-4 my-4 rounded-r">
+            <p class="italic text-orange-100">"Sfolgora e consuma."</p>
+          </div>
+
+          <p class="leading-relaxed">
+            Il <strong class="text-orange-400">Raggio Rovente</strong> parte dritto e preciso.
+            L'ultimo Sommerso <strong>implode</strong> letteralmente.
+            La passerella torna silenziosa. L'acqua ambrata ricomincia a riflettere le torce senza incresparsi.
+          </p>
+
+          <div class="bg-amber-900/20 border border-amber-600/30 rounded p-4 mt-6">
+            <p class="text-sm font-bold text-amber-400 mb-2">⚔️ Sconfitti — Accampamento dei Sommersi</p>
+            <p class="text-sm text-gray-300">Ondata 1: 2× Sommerso Recente, 1× Sommerso Completo, 1× Sommerso Esplosivo<br/>
+            Ondata 2: 1× Sommerso Recente, 2× Sommerso Completo<br/>
+            Ondata 3: 2× Sommerso Recente, 1× Sommerso Esplosivo</p>
+            <p class="text-sm text-amber-300 font-bold mt-2">2750 PX totali · 550 PX a testa</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE II: LE PROFONDITÀ AMBRATE -->
+    <div class="bg-teal-900/20 border border-teal-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">💧</span> PARTE II: LE PROFONDITÀ AMBRATE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-teal-400">I.</span> Riposo e Raccolta
+          </h3>
+
+          <p class="leading-relaxed">
+            I Guardiani raccolgono i <strong class="text-amber-300">92 Cristalli Minuscoli</strong> lasciati
+            cadere dai nemici sulla passerella e ai suoi bordi, poi si concedono un
+            <strong>riposo breve</strong> per leccarsi le ferite.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-teal-400">II.</span> Il Primo Tuffo — e la Catatonia
+          </h3>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> decide di testare l'acqua in prima persona.
+            Prima immerge un piede.
+          </p>
+
+          <div class="bg-teal-900/30 border-l-4 border-teal-500 p-5 my-5 rounded-r">
+            <p class="italic text-teal-100 leading-relaxed">
+              La sensazione è identica a quella della colonna d'acqua ascendente: un'oppressione che parte
+              dalla pelle e raggiunge la mente, un <strong>panico primordiale</strong> dettato dalla corrente
+              magica concentrata nel liquido. Come essere presi per mano da qualcosa di enorme che non si
+              capisce e non si vede.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Si immerge con tutto il corpo. La corrente lo avvolge completamente —
+            Fealer <strong>diventa catatonico</strong>. Gli occhi spalancati, fissi nel vuoto.
+            Nessuna risposta ai segnali del gruppo.
+          </p>
+
+          <p class="leading-relaxed">
+            Il gruppo lo tira a riva con la corda con cui lo avevano legato.
+            <strong class="text-yellow-400">Valoris</strong> usa le sue conoscenze di medicina per
+            riportarlo a sé.
+          </p>
+
+          <p class="leading-relaxed">
+            Fealer racconta quello che ha sentito: <em>stava entrando a far parte del sistema</em> —
+            quello che lui chiama il "tumore" che pervade il dungeon. Si concentra per capire se ciò
+            abbia lasciato tracce di corruzione nel suo corpo. Non trova nulla di concreto.
+            Ma la sensazione rimane.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-teal-400">III.</span> Il Secondo Tuffo — la Forza di Volontà
+          </h3>
+
+          <p class="leading-relaxed">
+            Fealer non si ferma. Lancia su di sé diversi incantesimi di supporto prima di rituffarsi.
+          </p>
+
+          <div class="bg-red-900/20 border-l-4 border-red-500 p-4 my-4 rounded-r">
+            <p class="italic text-red-100 text-sm">
+              L'acqua ambrata dissolve tutti gli incantesimi attivi nel momento stesso in cui li tocca.
+              I buff spariscono uno ad uno, annullati dalla forza magica concentrata nel liquido.
+            </p>
+          </div>
+
+          <p class="leading-relaxed">
+            Non importa. Fealer si ributta lo stesso. Questa volta, la consapevolezza di cosa aspettarsi
+            e una ferrea <strong class="text-teal-400">forza di volontà</strong> fanno la differenza:
+            la corrente preme, l'oppressione è la stessa — ma regge.
+            Beve la <strong>Pozione per Respirare Sott'Acqua</strong> acquistata da Vex e
+            si immerge completamente.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-teal-400">IV.</span> L'Ufficio Sommerso
+          </h3>
+
+          <p class="leading-relaxed">
+            Sott'acqua, la stanza si rivela in tutta la sua storia silenziosa. L'ufficio di qualche
+            ufficiale sconosciuto è rimasto intatto sotto il livello ambrato: scrivanie, poltrone, librerie.
+            Oggetti che fluttuano in una deriva perpetua come reliquie di un'altra epoca.
+          </p>
+
+          <div class="bg-amber-900/20 border border-amber-600/30 rounded p-5 my-5">
+            <p class="text-sm font-bold text-amber-400 mb-3">🎒 Ritrovamenti Subacquei</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li>• <strong class="text-yellow-300">Bauletto prezioso</strong> — lucchettato</li>
+              <li>• <strong class="text-yellow-300">Bussola dorata</strong> con ago impazzito</li>
+              <li>• <strong class="text-yellow-300">Mappa del piano</strong> — sbiadita dall'acqua, le stanze finali sono quasi illeggibili</li>
+              <li>• <strong>2× Pozione di Guarigione</strong></li>
+              <li>• 4 Razioni (rancide)</li>
+              <li>• Set di attrezzi da carpentiere</li>
+              <li>• <strong>4× Cristalli Minuscoli</strong></li>
+            </ul>
+          </div>
+
+          <p class="leading-relaxed">
+            Tornato a riva, Fealer tenta di capire se la bussola reagisca a oggetti magnetici —
+            nessuna interazione rilevante. Poi usa il <strong class="text-gray-400">piede di porco</strong>
+            per forzare il lucchetto del bauletto. Il coperchio cede.
+          </p>
+
+          <div class="bg-yellow-900/20 border-2 border-yellow-500/40 rounded-lg p-5 mt-4">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">🗝️</span>
+              <div>
+                <p class="text-yellow-400 font-bold">Chiave di Ferro — Forma a Goccia</p>
+                <p class="text-gray-400 text-sm mt-1">Una chiave di ferro con l'impugnatura a forma di goccia sulla sommità. A cosa apre — non è ancora chiaro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-teal-400">V.</span> La Mappa e la Decisione
+          </h3>
+
+          <p class="leading-relaxed">
+            Tutto il gruppo si riunisce attorno alla mappa recuperata. Le stanze finali sono sbiadite,
+            ma le aree più vicine sono ancora intelligibili. Dopo una breve discussione, la scelta ricade
+            sulla porta a Nord: la mappa indica in quella direzione i
+            <strong class="text-blue-400">Dormitori</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE III: LA QUADRA NORD E LE CUCINE -->
+    <div class="bg-orange-900/20 border border-orange-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🧭</span> PARTE III: LA QUADRA NORD
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">I.</span> La Zona 22
+          </h3>
+
+          <p class="leading-relaxed">
+            La porta a Nord apre su un lungo corridoio che termina in una grande stanza quadrata divisa
+            in quattro settori — uno snodo logistico del livello:
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 my-5">
+            <div class="bg-gray-800/60 border border-gray-700 rounded p-3 text-center">
+              <p class="text-blue-400 font-bold text-sm">Nord-Ovest</p>
+              <p class="text-gray-300 text-sm">Dormitori</p>
+            </div>
+            <div class="bg-gray-800/60 border border-gray-700 rounded p-3 text-center">
+              <p class="text-cyan-400 font-bold text-sm">Nord-Est</p>
+              <p class="text-gray-300 text-sm">Pozzo</p>
+            </div>
+            <div class="bg-gray-800/60 border border-gray-700 rounded p-3 text-center">
+              <p class="text-orange-400 font-bold text-sm">Sud-Ovest</p>
+              <p class="text-gray-300 text-sm">Cucine</p>
+            </div>
+            <div class="bg-gray-800/60 border border-gray-700 rounded p-3 text-center">
+              <p class="text-red-400 font-bold text-sm">Sud-Est</p>
+              <p class="text-gray-300 text-sm">Armeria</p>
+            </div>
+          </div>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> attiva <strong>Individuazione del Magico</strong>
+            e rileva <strong class="text-amber-300">piccole aure sparse</strong> — cristalli da raccogliere.
+            Dopo una rapida valutazione, il gruppo punta sulle <strong class="text-orange-400">Cucine</strong>.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">II.</span> L'Ingresso in Cucina — Un Salto di Stile
+          </h3>
+
+          <p class="leading-relaxed">
+            Aprono la porta. Tre Sommersi Recenti si voltano verso di loro.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong>, nelle retrovie, valuta la situazione in una
+            frazione di secondo. Prende la rincorsa, salta,
+            <strong class="text-orange-400">piroetta sulla testa di Fealer</strong> con una grazia da
+            acrobata consumato e atterra direttamente nella stanza — superando il gruppo intero in un
+            singolo movimento.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-red-400">Morgrim</strong> non spreca un secondo: afferra il tavolo più
+            vicino e <strong class="text-red-400">lo scaraventa contro uno dei Sommersi</strong>.
+            Il mobile colpisce il bersaglio, e nel volo trascina con sé un
+            <strong>pentolone di metallo pieno</strong> che si rovescia sul pavimento con un fragore
+            enorme, spargendo il contenuto ovunque.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> entra e prepara un
+            <strong class="text-orange-400">Dardo di Fuoco</strong> che parte dritto su uno dei Sommersi.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> guarda la scena — il tavolo volante, il
+            pentolone rovesciato, il caos generale — e scuote la testa:
+            <em>"Disordine tattico inaccettabile."</em>
+            Evoca un <strong class="text-red-300">raggio di luce rosso</strong> (Fiamma Sacra) e lo dirige
+            con chirurgica precisione sul Sommerso già colpito da Riven.
+          </p>
+
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> alza la mano sinistra verso lo stesso mostro.
+          </p>
+
+          <div class="bg-gray-900/60 border-l-4 border-red-500 p-4 my-4 rounded-r">
+            <p class="italic text-red-100">"Naur Kara!"</p>
+          </div>
+
+          <p class="leading-relaxed">
+            Una fiamma evocata, sparata verso il Sommerso — che brucia e cade.
+            <strong class="text-orange-400">Thalio</strong> colpisce il secondo nemico scatenando un
+            <strong class="text-yellow-500">altro schizzo acido</strong> che brucia i personaggi nei dintorni.
+            <strong class="text-red-400">Morgrim</strong> liquida il secondo Sommerso con l'ascia
+            senza particolare sforzo.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">III.</span> Riven Diventa una Pianta
+          </h3>
+
+          <p class="leading-relaxed">
+            Rimane un solo Sommerso. <strong class="text-green-400">Riven</strong> lo punta.
+            Concentrazione, le linee di energia blu lungo il braccio, l'intenzione chiara.
+          </p>
+
+          <p class="leading-relaxed">La magia selvaggia ha altri piani.</p>
+
+          <div class="bg-green-900/30 border-l-4 border-green-500 p-5 my-5 rounded-r">
+            <p class="italic text-green-100 leading-relaxed">
+              Una scarica di elettricità avvolge Riven dall'interno verso l'esterno.
+              Poi il corpo del mago comincia a <strong>cambiare</strong>.
+              Le gambe si ispessiscono, si fondono, diventano un tronco verde.
+              Le braccia si allungano in rami. Le dita si trasformano in foglie.
+              Nel giro di pochi secondi, dove prima c'era Riven, ora c'è una
+              <strong class="text-green-400">pianta alta in un elegante vaso di terracotta</strong>.
+              La pianta è bella, rigogliosa, e completamente silenziosa.
+            </p>
+          </div>
+
+          <div class="bg-orange-900/20 border border-orange-700/40 rounded p-4 my-4">
+            <p class="text-xs font-bold text-orange-400 mb-1">✦ Magia Selvaggia</p>
+            <p class="text-xs text-gray-400">Riven si trasforma in una pianta da appartamento.</p>
+          </div>
+
+          <p class="leading-relaxed">
+            L'ultimo Sommerso muore per mano di <strong class="text-yellow-400">Valoris</strong>.
+            Il combattimento termina. Il gruppo si gira verso la pianta.
+          </p>
+
+          <div class="bg-amber-900/20 border border-amber-600/30 rounded p-4 mt-4">
+            <p class="text-sm font-bold text-amber-400 mb-2">⚔️ Sconfitti — Cucine</p>
+            <p class="text-sm text-gray-300">3× Sommerso Recente</p>
+            <p class="text-sm text-amber-300 font-bold mt-2">600 PX totali · 120 PX a testa</p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">IV.</span> Considerazioni Botaniche
+          </h3>
+
+          <p class="leading-relaxed">
+            Il gruppo osserva la pianta con un misto di preoccupazione genuina e disorientamento totale.
+            Seguono considerazioni ad alta voce su come riportarlo umano e cosa si faccia con un compagno
+            trasformato in vegetale. Nel frattempo, raccolgono la stanza.
+          </p>
+
+          <div class="bg-amber-900/20 border border-amber-600/30 rounded p-5">
+            <p class="text-sm font-bold text-amber-400 mb-3">🎒 Ritrovamenti nelle Cucine</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li>• <strong>24× Cristalli Minuscoli</strong> (dai Sommersi)</li>
+              <li>• <strong class="text-pink-300">Pozione di Guarigione Superiore</strong> — sulla mensola del camino</li>
+            </ul>
+          </div>
+
+          <p class="leading-relaxed mt-4 text-gray-500 italic text-sm">
+            Fine sessione 5. Riven è ancora una pianta.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Combattimento:</strong> 3350 PX totali divisi per 5 — Accampamento dei Sommersi (2750 PX) + Cucine (600 PX)
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Tutti i personaggi</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">PX Presenza</p>
+            <p class="text-green-300 font-bold">375 PX</p>
+          </div>
+          <div>
+            <p class="text-gray-400">PX Combattimento</p>
+            <p class="text-amber-300 font-bold">670 PX</p>
+          </div>
+        </div>
+        <p class="text-center text-green-400 font-bold mt-3">Totale base: 1045 PX a testa</p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- RIVEN -->
+        <div class="bg-gradient-to-r from-green-900/40 to-teal-900/40 border-2 border-green-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🔥</span>
+            <h4 class="text-xl font-bold text-green-400">Riven</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1195 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Combattimento: 1045</p>
+              <p class="text-gray-300">375 presenza + 670 combattimento</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">
+                Soprannome: "L'arco della sessione". La sequenza è completa: urla a Fealer di non
+                interrompere l'incantesimo ("ci penso io"), la magia gli esplode in mano, panico totale
+                rannicchiato nell'angolo — poi recupero interiore richiamando le parole della maestra,
+                "sfolgora e consuma" e l'ultimo nemico implode. Un arco narrativo in un singolo scontro.
+                Poi trasformato in pianta. Perfetto.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEALER -->
+        <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border-2 border-purple-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🌿</span>
+            <h4 class="text-xl font-bold text-purple-400">Fealer</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1195 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Combattimento: 1045</p>
+              <p class="text-gray-300">375 presenza + 670 combattimento</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 150</p>
+              <p class="text-gray-300">
+                Soprannome: "Il tuffatore ostinato". Diventare catatonico nell'acqua, recuperare, riflettere
+                sul rischio di corruzione magica — e poi ricominciare comunque, stavolta con sola forza di
+                volontà perché i buff vengono dissolti. La ricerca subacquea sistematica che ha portato la
+                mappa, la bussola, il bauletto e la chiave a goccia è la scoperta più concreta della sessione.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VALORIS -->
+        <div class="bg-gradient-to-r from-yellow-900/30 to-amber-900/30 border-2 border-yellow-600/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">⚔️</span>
+            <h4 class="text-xl font-bold text-yellow-400">Valoris</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1145 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Combattimento: 1045</p>
+              <p class="text-gray-300">375 presenza + 670 combattimento</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 100</p>
+              <p class="text-gray-300">
+                La colonna portante di entrambi i combattimenti. I Guardiani Spirituali hanno fatto il lavoro
+                sporco uccidendo più nemici di chiunque altro, inclusi due Esplosivi. Direzione tattica coerente,
+                cura di Morgrim nei momenti giusti, e il rimbrotto per il "disordine tattico inaccettabile"
+                in cucina è rimasto impresso.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THALIO -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🗡️</span>
+            <h4 class="text-xl font-bold text-orange-400">Thalio</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1120 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Combattimento: 1045</p>
+              <p class="text-gray-300">375 presenza + 670 combattimento</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 75</p>
+              <p class="text-gray-300">
+                La piroetta sulla testa di Fealer per entrare in cucina è il momento tattico più elegante
+                della sessione. L'uso del flauto guaritore al momento giusto, e il colpo istantaneo
+                all'Esplosivo — anche se poi è esploso addosso — mostrano reattività e stile.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MORGRIM -->
+        <div class="bg-gradient-to-r from-red-900/30 to-orange-900/30 border-2 border-red-700/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🪓</span>
+            <h4 class="text-xl font-bold text-red-400">Morgrim</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1120 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Combattimento: 1045</p>
+              <p class="text-gray-300">375 presenza + 670 combattimento</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 75</p>
+              <p class="text-gray-300">
+                "Ottima carne da macello!" apre la sessione con la personalità giusta. Il lancio del tavolo
+                con annesso pentolone rovesciato è Morgrim nella sua essenza più pura. Ha incassato due
+                esplosioni e metà dei suoi HP in un singolo attacco acido — e non si è mai lamentato.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-5 gap-4 text-center">
+          <div>
+            <p class="text-green-400 font-bold">Riven</p>
+            <p class="text-xl text-yellow-400">1195 PX</p>
+          </div>
+          <div>
+            <p class="text-purple-400 font-bold">Fealer</p>
+            <p class="text-xl text-yellow-400">1195 PX</p>
+          </div>
+          <div>
+            <p class="text-yellow-400 font-bold">Valoris</p>
+            <p class="text-xl text-yellow-400">1145 PX</p>
+          </div>
+          <div>
+            <p class="text-orange-400 font-bold">Thalio</p>
+            <p class="text-xl text-yellow-400">1120 PX</p>
+          </div>
+          <div>
+            <p class="text-red-400 font-bold">Morgrim</p>
+            <p class="text-xl text-yellow-400">1120 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOTALE CUMULATIVO PX -->
+    <div class="bg-gradient-to-br from-indigo-900/40 via-purple-900/30 to-blue-900/40 border-2 border-indigo-500/60 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-2 flex items-center gap-2">
+        <span>📊</span> Totale PX Cumulativo
+      </h2>
+      <p class="text-gray-400 text-sm mb-6">Livello 5 → Livello 6 &nbsp;·&nbsp; Base di partenza: <strong class="text-white">6500 PX</strong> &nbsp;·&nbsp; Traguardo: <strong class="text-white">14000 PX</strong></p>
+
+      <div class="space-y-5">
+
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="font-bold text-purple-400">Fealer</span>
+            <span class="text-sm text-gray-400"><span class="text-white font-bold">11800</span> / 14000 PX &nbsp;·&nbsp; mancano <span class="text-red-400 font-bold">2200</span></span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-4">
+            <div class="bg-purple-500 h-4 rounded-full" style="width: 70.7%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">6500 base + 5300 guadagnati &nbsp;·&nbsp; 70.7%</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="font-bold text-orange-400">Thalio</span>
+            <span class="text-sm text-gray-400"><span class="text-white font-bold">11386</span> / 14000 PX &nbsp;·&nbsp; mancano <span class="text-red-400 font-bold">2614</span></span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-4">
+            <div class="bg-orange-500 h-4 rounded-full" style="width: 65.1%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">6500 base + 4886 guadagnati &nbsp;·&nbsp; 65.1%</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="font-bold text-green-400">Riven</span>
+            <span class="text-sm text-gray-400"><span class="text-white font-bold">11361</span> / 14000 PX &nbsp;·&nbsp; mancano <span class="text-red-400 font-bold">2639</span></span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-4">
+            <div class="bg-green-500 h-4 rounded-full" style="width: 64.8%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">6500 base + 4861 guadagnati &nbsp;·&nbsp; 64.8%</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="font-bold text-yellow-400">Valoris</span>
+            <span class="text-sm text-gray-400"><span class="text-white font-bold">11111</span> / 14000 PX &nbsp;·&nbsp; mancano <span class="text-red-400 font-bold">2889</span></span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-4">
+            <div class="bg-yellow-500 h-4 rounded-full" style="width: 61.5%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">6500 base + 4611 guadagnati &nbsp;·&nbsp; 61.5%</p>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="font-bold text-red-400">Morgrim</span>
+            <span class="text-sm text-gray-400"><span class="text-white font-bold">11036</span> / 14000 PX &nbsp;·&nbsp; mancano <span class="text-red-400 font-bold">2964</span></span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-4">
+            <div class="bg-red-500 h-4 rounded-full" style="width: 60.5%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">6500 base + 4536 guadagnati &nbsp;·&nbsp; 60.5%</p>
+        </div>
+
+      </div>
+
+      <p class="text-xs text-gray-500 mt-6 text-center italic">
+        I PX guadagnati includono: combattimento, presenza, interpretazione, background — tutte le sessioni dalla 1 alla 5.
+      </p>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-4" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 4 - I Nodi delle Profondità
+      </a>
+      <span class="text-gray-500 italic">Sessione 6 in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>
