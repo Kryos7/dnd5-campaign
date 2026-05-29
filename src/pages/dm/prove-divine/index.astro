@@ -1,0 +1,156 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+const prove = [
+  {
+    dio: "Tymora",
+    titolo: "La Prova della Fortuna",
+    slug: "tymora",
+    icon: "🎲",
+    colorBorder: "border-yellow-600/40",
+    colorBorderHover: "hover:border-yellow-400",
+    colorBg: "bg-yellow-900/20",
+    colorBgHover: "hover:bg-yellow-900/30",
+    colorTitle: "text-yellow-300",
+    colorLabel: "text-yellow-500",
+    status: "Disponibile",
+    requisito: "5 Nodi della Trama — Piano 2",
+    pianerottolo: "Secondo Pianerottolo",
+    descrizione: "Una prova che testa il coraggio di fidarsi della fortuna. Quattro stanze: la Biforcazione, l'Altare dell'Azzardo, il Corridoio delle Monete, e la Grande Moneta. Non si vince con la forza. Si vince osando."
+  },
+  {
+    dio: "Mystra",
+    titolo: "La Prova dell'Arcano",
+    slug: "mystra",
+    icon: "✨",
+    colorBorder: "border-gray-700",
+    colorBorderHover: "",
+    colorBg: "bg-gray-800/30",
+    colorBgHover: "",
+    colorTitle: "text-gray-400",
+    colorLabel: "text-gray-500",
+    status: "In Preparazione",
+    requisito: "TBD",
+    pianerottolo: "TBD",
+    descrizione: "Una prova che testa la comprensione della magia come forza vivente, non come strumento. In preparazione."
+  },
+  {
+    dio: "Tempus",
+    titolo: "La Prova del Conflitto",
+    slug: "tempus",
+    icon: "⚔️",
+    colorBorder: "border-gray-700",
+    colorBorderHover: "",
+    colorBg: "bg-gray-800/30",
+    colorBgHover: "",
+    colorTitle: "text-gray-400",
+    colorLabel: "text-gray-500",
+    status: "In Preparazione",
+    requisito: "TBD",
+    pianerottolo: "TBD",
+    descrizione: "Una prova che testa il coraggio in battaglia e la comprensione che il conflitto ha uno scopo. In preparazione."
+  }
+];
+---
+
+<MainLayout title="Prove Divine [DM]" description="Dungeon Bonus — Le tre Prove Divine">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa sezione contiene meccaniche nascoste riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm" class="text-blue-400 hover:text-blue-300">← Dashboard DM</a>
+      </div>
+      <h1 class="text-4xl font-bold mb-4">✦ Le Prove Divine</h1>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Dungeon Bonus accessibili solo a chi ha raggiunto determinate condizioni nascoste durante l'esplorazione.
+        Ognuna è dedicata a uno dei tre Dèi della campagna — Tymora, Mystra, Tempus — e testa i giocatori su qualcosa
+        che appartiene al dominio di quel dio. Non sono prove di combattimento. Sono prove di comprensione.
+      </p>
+    </div>
+
+    <!-- Come funzionano -->
+    <div class="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-purple-400 mb-3">📖 Come Funzionano le Prove Divine</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">•</span>
+          <span>Ogni prova si attiva con una condizione specifica — non c'è un annuncio. Il party la scopre da solo, oppure non la scopre.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">•</span>
+          <span>Le prove non danno oggetti permanenti. Danno <strong>benedizioni divine temporanee</strong> — favori del dio, non loot.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">•</span>
+          <span>Le prove sono opzionali. Chi non entra non viene penalizzato. Chi entra e sbaglia non viene punito duramente — i Dèi giudicano il tentativo, non solo il risultato.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">•</span>
+          <span>Vex non spiega cosa sono. Le sa — ma non rientrano nel mandato ordinario. Se pressato: <em class="text-gray-400">"Non è nel mandato. Quello che c'è dentro non è mio da descrivere."</em></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Liste prove -->
+    <div class="space-y-6">
+      {prove.map((prova) => (
+        <a
+          href={prova.status === "Disponibile" ? `/dm/prove-divine/${prova.slug}` : "#"}
+          class={`block rounded-lg p-6 border-2 transition-all ${prova.colorBg} ${prova.colorBorder} ${prova.colorBorderHover} ${prova.colorBgHover} ${prova.status !== "Disponibile" ? "opacity-60 cursor-not-allowed" : ""}`}
+        >
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div class="flex items-center gap-4">
+              <span class="text-5xl">{prova.icon}</span>
+              <div>
+                <p class={`text-sm uppercase tracking-widest font-bold mb-1 ${prova.colorLabel}`}>
+                  Prova di {prova.dio}
+                </p>
+                <h2 class={`text-2xl font-bold ${prova.colorTitle}`}>
+                  {prova.titolo}
+                </h2>
+              </div>
+            </div>
+            <span class={`text-xs px-3 py-1 rounded-full whitespace-nowrap ${
+              prova.status === "Disponibile"
+                ? "bg-green-500/20 text-green-400 border border-green-700"
+                : "bg-gray-700 text-gray-400 border border-gray-600"
+            }`}>
+              {prova.status === "Disponibile" ? "✓ Disponibile" : "📋 In Preparazione"}
+            </span>
+          </div>
+
+          <div class="flex flex-wrap gap-4 text-xs text-gray-500 mb-3">
+            <span>📍 {prova.pianerottolo}</span>
+            <span>🔑 Requisito: {prova.requisito}</span>
+          </div>
+
+          <p class="text-gray-300 text-sm leading-relaxed">{prova.descrizione}</p>
+        </a>
+      ))}
+    </div>
+
+    <!-- Navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Dashboard DM
+      </a>
+      <a href="/dm/sessioni/sessione-8" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Sessione 8 — Il Secondo Pianerottolo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>

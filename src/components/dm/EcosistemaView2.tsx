@@ -368,7 +368,6 @@ export default function EcosistemaView2() {
         'IL FORZIERE — Serratura superiore: si apre con la Chiave di Ferro dal Piano 1 (quella trovata al livello precedente). Serratura frontale: non si apre, appartiene a un sistema diverso.',
         'CONTENUTO DEL FORZIERE: 1 CRISTALLO GRANDE + 3 Cristalli Minuscoli, 2x Pozione di Guarigione Superiore (4d4+4), LETTERA SIGILLATA DELL\'ARCHITETTO (sul fondo, sotto tutto il resto)',
         'LA LETTERA SIGILLATA — Carta spessa, vecchia ma integra come se il tempo non l\'avesse toccata. Sigillo di cera iridescente (ora dorato, ora blu scuro a seconda dell\'angolazione) con simbolo architettonico — non divino, non araldico. Sul fronte in scrittura formale: "Al Custode del Pianerottolo." Nessun nome, nessuna data, nessun mittente. La carta odora di minerale pulito nonostante l\'età. Portata a Vex al Pianerottolo attiva il Protocollo di Assistenza Eccezionale: scelta tra 4 oggetti fuori dal mandato ordinario.',
-        'Investigare CD 16 (il forziere): sul fondo, sotto un doppio fondo, una piccola placca di metallo incisa con lo stesso alfabeto sconosciuto dei pattern di Zona 18. Non è leggibile senza Comprehend Languages, ma è evidentemente non decorativa — sembra un\'istruzione.'
       ],
       pericoli: 'Nessuno',
       cristalli: '1 cristallo grande + 3 cristalli minuscoli (nel forziere)',

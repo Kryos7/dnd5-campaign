@@ -1,0 +1,639 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Prove Divine — Prova di Tymora [DM]"
+  description="Dungeon Bonus — La Prova di Tymora al Secondo Pianerottolo"
+>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/prove-divine" class="text-yellow-400 hover:text-yellow-300">← Prove Divine</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-3">
+        <span class="text-6xl">🎲</span>
+        <div>
+          <p class="text-sm text-yellow-500 uppercase tracking-widest font-bold mb-1">Prova Divina — Dungeon Bonus</p>
+          <h1 class="text-4xl font-bold text-yellow-300">La Prova di Tymora</h1>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>📍 Secondo Pianerottolo</span>
+        <span>⏱️ 45–90 min</span>
+        <span>🎭 Scelta e Azzardo</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">🔑 Richiede: 5 Nodi della Trama — Piano 2</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Un portale segreto si apre sul secondo Pianerottolo quando la Pietra Misteriosa ha registrato tutti e cinque i Nodi della Trama.
+        Attraversarlo significa affrontare la prova di Tymora — non un test di forza, non di magia.
+        Un test di coraggio: la volontà di fidarsi della fortuna quando non ci sono garanzie.
+      </p>
+    </div>
+
+    <!-- Checklist pre-prova -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Prova</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Valoris</strong>: adora Tymora. Ha CD ridotte alle prove di Religione e riceve un momento narrativo personale alla stanza finale. Prepara qualcosa per lui prima di sederti.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Il tono</strong>: questa prova non è oscura. È dorata. L'aria odora di metallo e probabilità. Tymora è una dea che ride — non in modo crudele, in modo genuinamente divertito dall'imprevedibilità degli avventurieri.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Traccia mentalmente</strong> tre stati possibili per ogni PG: <span class="text-yellow-400">Segno dell'Audace</span> (Stanza 1), <span class="text-yellow-400">Token della Fortuna</span> (Stanza 2), <span class="text-yellow-400">Segno dell'Azzardato</span> (Stanza 3). Modificano la Stanza Finale.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>La prova è opzionale</strong>: il party può entrare e uscire senza partecipare. Tymora non punisce chi non gioca — si annoia, ma non punisce.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==================== PARTE I: IL PORTALE ==================== -->
+    <div class="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">✦</span> PARTE I: IL PORTALE
+      </h2>
+
+      <div class="bg-yellow-900/30 border border-yellow-700/30 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-yellow-400 mb-2">📍 Condizione di apertura</p>
+        <p class="text-sm text-gray-300">
+          Il portale appare sul secondo Pianerottolo quando la Pietra Misteriosa ha tutti e 5 i Nodi del Piano 2 registrati.
+          Non è una porta fisica — è un arco di luce tra due colonne del mosaico del pavimento, dove prima c'era solo pietra.
+          Si apre senza suono. Non si annuncia. Chi lo nota, lo nota.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando qualcuno nota l'arco. Pausa dopo "non c'era prima".</p>
+
+      <div class="bg-black/50 border-l-4 border-yellow-500 p-6 my-4 rounded-r">
+        <p class="italic text-yellow-100 text-lg leading-relaxed">
+          Tra le due colonne del mosaico, sul lato est della stanza, c'è qualcosa che non c'era prima.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          Un arco. Non scolpito nella pietra — fatto di luce. Dorata ai bordi, quasi bianca al centro, con quella qualità dell'aria sopra una moneta scaldata dal sole.
+          Nel mezzo, la luce pulsa — non in modo regolare come un respiro, ma in modo irregolare, come un lancio di dadi.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          Sul pavimento, sotto l'arco, il mosaico ha cambiato disposizione. I simboli divini si sono riorganizzati — una moneta al centro, faccia in su.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          Non c'è scritto niente. Non c'è un invito. Ma l'arco è aperto, e l'aria che viene da dentro odora di rame caldo e possibilità.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/60 rounded p-4 mt-4">
+        <p class="text-sm font-bold text-yellow-400 mb-3">📋 Cosa dice Vex</p>
+        <p class="text-gray-300 text-sm italic mb-2">"Questo non è nel mandato."</p>
+        <p class="text-gray-400 text-sm">Le ali si fermano. L'aureola scintilla tre volte irregolari. Se chiedono cos'è:</p>
+        <p class="text-gray-300 text-sm italic mt-2">"Sento una presenza divina attraverso il dungeon. Questo arco..." — ali che riprendono, piano — "...non era previsto dal mandato che conosco."</p>
+        <div class="bg-gray-800/60 rounded p-3 mt-3 text-xs">
+          <p class="text-yellow-400 font-bold mb-1">Se è Valoris a chiedere esplicitamente:</p>
+          <p class="text-gray-300 italic">"È sua."</p>
+          <p class="text-gray-400 mt-1">Tre secondi di silenzio. Poi: <span class="text-gray-300 italic">"Entrate quando siete pronti. Sarò qui al vostro ritorno."</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: L'INGRESSO ==================== -->
+    <div class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🚪</span> PARTE II: L'INGRESSO
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando attraversano l'arco.</p>
+
+      <div class="bg-black/50 border-l-4 border-amber-500 p-6 my-4 rounded-r">
+        <p class="italic text-amber-100 text-lg leading-relaxed">
+          L'arco si lascia attraversare come un velo d'aria calda.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          La stanza dall'altra parte è circolare. Le pareti sono pietra dorata — non dipinta, non rivestita: la pietra stessa ha una qualità diversa, come se fosse stata estratta da un filone che il sole aveva attraversato per secoli. Il soffitto è basso, più basso del Pianerottolo. L'aria è calda e odora di rame.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          Il pavimento è coperto di monete. Non sparse disordinatamente — sono murate nella pietra, parte del pavimento stesso, migliaia di monete di rame e argento disposte in spirali che puntano al centro della stanza.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          Al centro, due porte. Identiche. Stesso arco, stessa pietra, stessa altezza. L'unica differenza: su ognuna c'è una moneta incisa. Su una, la moneta è a faccia in su. Sull'altra, a faccia in giù.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          Non c'è nessun altro nella stanza. Nessun guardiano visibile. Solo le due porte, e il silenzio, e la sensazione fisica di essere osservati da qualcosa che si sta divertendo.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: LA BIFORCAZIONE ==================== -->
+    <div class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-500">🚧</span> PARTE III: LA BIFORCAZIONE DEL DESTINO — Stanza 1
+      </h2>
+
+      <div class="bg-yellow-900/30 border border-yellow-700/40 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-yellow-400 mb-2">📍 Premessa DM</p>
+        <p class="text-sm text-gray-300">
+          Tymora testa immediatamente la prima cosa che conta per lei: <em>la volontà di scegliere</em>.
+          Non c'è una risposta "giusta" in senso assoluto — entrambe le porte portano avanti.
+          Una è la via diretta, l'altra è una sfida. E chi sceglie senza pensarci riceve qualcosa che gli altri non ricevono.
+        </p>
+      </div>
+
+      <!-- Prove disponibili -->
+      <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5 mb-6">
+        <p class="text-sm font-bold text-gray-300 uppercase tracking-widest mb-4">🎲 Prove Disponibili</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="bg-blue-900/50 text-blue-300 text-xs font-bold px-2 py-1 rounded whitespace-nowrap mt-0.5">Religione CD 12</span>
+            <p class="text-sm text-gray-300">La moneta a faccia in su è il simbolo di Tymora — lei si mostra sempre a chi la cerca. La porta con la moneta in su è la via diretta.</p>
+          </div>
+          <div class="bg-gray-800/50 rounded p-2 ml-2 text-xs text-yellow-400">
+            Per Valoris (o chi adora Tymora): <strong>CD 8</strong> — lo sa quasi istintivamente, come un riflesso condizionato dalla devozione.
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="bg-green-900/50 text-green-300 text-xs font-bold px-2 py-1 rounded whitespace-nowrap mt-0.5">Percezione CD 15</span>
+            <p class="text-sm text-gray-300">Un sottile scintillio dorato attorno alla porta con la moneta in su — percettibile solo concentrandosi attivamente.</p>
+          </div>
+          <div class="bg-yellow-900/30 border border-yellow-700/50 rounded p-3">
+            <p class="text-xs font-bold text-yellow-400 mb-1">Nessuna prova — scelta d'istinto</p>
+            <p class="text-sm text-gray-300">Chi sceglie senza fare prove — senza analizzare, senza esitare — riceve il <strong class="text-yellow-300">Segno dell'Audace</strong>. Tymora ama chi si fida dell'istinto più che del ragionamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Le due porte -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-5">
+          <p class="text-sm font-bold text-green-400 mb-3">✓ Porta con Moneta in Su — Via Diretta</p>
+          <p class="text-sm text-gray-300">
+            Conduce direttamente alla Stanza 2 senza ostacoli. Non c'è un premio aggiuntivo per aver scelto "bene" — Tymora premia l'audacia, non la risposta corretta.
+          </p>
+          <p class="text-xs text-gray-500 mt-3 italic">Scegliere questa porta con le prove non vale il Segno dell'Audace — quello si ottiene solo senza prove.</p>
+        </div>
+        <div class="bg-orange-900/20 border border-orange-700/40 rounded-lg p-5">
+          <p class="text-sm font-bold text-orange-400 mb-3">⚔️ Porta con Moneta in Giù — Via della Sfida</p>
+          <p class="text-sm text-gray-300">
+            Una sala con <strong class="text-orange-300">Il Custode della Scelta</strong>. Non aggredisce subito — aspetta che il party decida.
+          </p>
+          <ul class="text-xs text-gray-400 space-y-1 mt-3">
+            <li>• <strong class="text-green-400">Sconfitto</strong>: porta a Stanza 2 + <span class="text-yellow-400">Moneta della Grazia</span></li>
+            <li>• <strong class="text-amber-400">Aggirato</strong> (Furtività CD 14): porta a Stanza 2, nessun oggetto</li>
+            <li>• <strong class="text-gray-400">Ignorato, ci si avvicina alla porta</strong>: un singolo avvertimento, poi lascia scegliere</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Stat block custode -->
+      <div class="bg-orange-900/20 border border-orange-700/30 rounded-lg p-5 mb-6">
+        <p class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-4">🗡️ Il Custode della Scelta</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-gray-300 mb-4">
+          <div class="bg-gray-800/60 rounded p-2 text-center">
+            <p class="text-gray-500 mb-1">CA</p>
+            <p class="font-bold text-lg">13</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-2 text-center">
+            <p class="text-gray-500 mb-1">PF</p>
+            <p class="font-bold text-lg">45</p>
+            <p class="text-gray-500">(7d8+14)</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-2 text-center">
+            <p class="text-gray-500 mb-1">Speed</p>
+            <p class="font-bold text-lg">30 ft</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-2 text-center">
+            <p class="text-gray-500 mb-1">CR</p>
+            <p class="font-bold text-lg">2</p>
+          </div>
+        </div>
+        <div class="space-y-2 text-sm text-gray-300 mb-4">
+          <p><strong class="text-orange-300">Pugno di Rame.</strong> Attacco in mischia: +5 al tiro, portata 1,5m. Colpito: 2d6+3 danni contundenti. Multiattacco: due pugni per azione.</p>
+          <p><strong class="text-orange-300">Giro della Fortuna</strong> (Reazione, 1/giorno). Quando ridotto a 0 PF, tira 1d6. Su 5–6: risorge con 15 PF. Su 1–4: cade definitivamente.</p>
+          <p class="text-xs text-gray-500">Immunità danni: veleno, psichico. Immunità stati: charmato, spaventato, paralizzato, avvelenato.</p>
+        </div>
+        <div class="bg-gray-800/60 rounded p-3 text-xs">
+          <strong class="text-orange-400">📋 Nota DM — Comportamento:</strong>
+          <p class="text-gray-400 mt-1">Il Custode non è ostile di default. Si mette di traverso alla porta, fissa il party, aspetta. Non attacca finché non viene attaccato o finché qualcuno non tenta di passargli accanto. Se il party lo ignora completamente e si avvicina alla porta: fa un singolo avvertimento alzando il pugno. Poi lascia scegliere. Tymora ha detto al Custode di aspettare la scelta del party — non di impedirla.</p>
+        </div>
+      </div>
+
+      <!-- Segno dell'Audace -->
+      <div class="bg-yellow-900/30 border border-yellow-600/40 rounded p-4">
+        <p class="text-sm font-bold text-yellow-400 mb-2">✦ Il Segno dell'Audace — Cosa è e come funziona</p>
+        <p class="text-sm text-gray-300 mb-2">Non è visibile. Il PG sente una lieve sensazione di calore alla mano. Non sa cosa significa — Tymora non si spiega.</p>
+        <div class="text-xs text-gray-400 space-y-1">
+          <p>• <strong class="text-yellow-300">Stanza 3 — Corridoio:</strong> vede un brevissimo scintillio dorato sulla prima piastrella sicura di ogni gruppo</p>
+          <p>• <strong class="text-yellow-300">Stanza Finale — La Grande Moneta:</strong> può cambiare la propria dichiarazione (testa/croce) UNA volta dopo aver sentito le scelte di tutti gli altri, ma prima che la moneta cada</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: L'ALTARE ==================== -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🏛️</span> PARTE IV: L'ALTARE DELL'AZZARDO — Stanza 2
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando entrano nella stanza.</p>
+
+      <div class="bg-black/50 border-l-4 border-amber-500 p-6 my-4 rounded-r">
+        <p class="italic text-amber-100 text-lg leading-relaxed">
+          La stanza è piccola. Al centro, un altare di pietra dorata — la stessa qualità delle pareti, come se fosse venuta su da sola piuttosto che scolpita. Sulla superficie, una ciotola vuota. Attorno alla base, inciso con una precisione che non sembra umana:
+        </p>
+        <p class="italic text-amber-200 text-xl leading-relaxed mt-4 text-center font-semibold">
+          "Non si ottiene ciò che non si è disposti a rischiare."
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          L'altare pulsa di una luce fioca — come un fuoco che non vuole disturbare. La ciotola è pulita, asciutta, senza traccia di uso precedente.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          Aspetta.
+        </p>
+      </div>
+
+      <!-- Meccanica -->
+      <div class="bg-amber-900/30 border border-amber-700/30 rounded-lg p-5 mt-6 mb-4">
+        <p class="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">🎲 Meccanica — L'Offerta</p>
+        <p class="text-sm text-gray-300 mb-4">
+          Ogni PG si avvicina individualmente e sceglie cosa mettere nella ciotola — oppure non mette nulla.
+          Non c'è pressione, non c'è limite di tempo. Poi tira <strong class="text-amber-300">1d20</strong>.
+        </p>
+
+        <div class="bg-gray-800/50 rounded-lg overflow-x-auto mb-4">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left p-3 font-semibold">Risultato d20</th>
+                <th class="text-left p-3 font-semibold">Esito</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="p-3 font-bold text-red-400">1–5</td>
+                <td class="p-3">L'offerta svanisce. Tymora l'ha presa. <span class="text-gray-500 text-xs">Era il rischio — lo sapeva chi ha offerto qualcosa.</span></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-400">6–10</td>
+                <td class="p-3">L'offerta torna invariata. <span class="text-gray-500 text-xs">Tymora ti ha valutato. Non ti ha premiato.</span></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-green-400">11–19</td>
+                <td class="p-3">L'offerta torna <strong>+ un beneficio</strong> proporzionale all'entità dell'offerta. <span class="text-gray-500 text-xs">Vedi tabella sotto.</span></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-yellow-400">20</td>
+                <td class="p-3">Beneficio massimo <strong>+ Token della Fortuna</strong>. <span class="text-yellow-400 text-xs">Usabile nella Stanza Finale.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-gray-500 italic">Chi non offre nulla: passa senza conseguenze. Ma alla Stanza Finale non riceve il sussurro di Tymora — non ha nulla che glielo abbia guadagnato.</p>
+      </div>
+
+      <!-- Tipi di offerta e benefici -->
+      <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+        <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">📋 Tipi di Offerta e Benefici (su 11–19)</p>
+        <div class="space-y-4">
+
+          <div class="bg-gray-800/60 border-l-4 border-gray-500 rounded-r p-4">
+            <p class="text-sm font-bold text-gray-300 mb-1">Offerta Piccola</p>
+            <p class="text-xs text-gray-500 mb-2">Slot incantesimo 1°–2°, pozione minore, antidoto, un consumabile da pochi mo, oppure 5 PF max ridotti temporaneamente fino al prossimo riposo lungo</p>
+            <p class="text-xs text-green-400">Su 11–19: l'offerta torna + <strong>1d8 PF temporanei</strong></p>
+          </div>
+
+          <div class="bg-amber-900/20 border-l-4 border-amber-600 rounded-r p-4">
+            <p class="text-sm font-bold text-amber-300 mb-1">Offerta Media</p>
+            <p class="text-xs text-gray-500 mb-2">Slot incantesimo 3°, pozione superiore, pergamena di incantesimo, consumabile significativo, oppure 10 PF max ridotti temporaneamente</p>
+            <p class="text-xs text-green-400">Su 11–19: l'offerta torna + <strong>1d8 PF temporanei</strong> + <strong>vantaggio al prossimo tiro abilità</strong></p>
+          </div>
+
+          <div class="bg-yellow-900/30 border-l-4 border-yellow-500 rounded-r p-4">
+            <p class="text-sm font-bold text-yellow-300 mb-1">Offerta Grande</p>
+            <p class="text-xs text-gray-500 mb-2">Slot incantesimo 4°+, oggetto consumabile importante (pergamena rara, essenza purificata, ecc.), Dado Fortuna, Ispirazione Bardica, o altra risorsa limitata di classe</p>
+            <p class="text-xs text-green-400">Su 11–19: l'offerta torna + <strong>Benedizione di Tymora</strong> (vantaggio fisso su un tiro a scelta nel Piano 3, 1/giorno)</p>
+            <p class="text-xs text-yellow-400 mt-1">Su 20: Benedizione + <strong>Token della Fortuna</strong></p>
+          </div>
+
+        </div>
+        <div class="bg-gray-800/60 rounded p-3 mt-4 text-xs text-gray-300">
+          <strong class="text-amber-400">📋 Nota DM:</strong> Non c'è una risposta corretta su quanto offrire. Se un giocatore è incerto, non aiutarlo — Tymora si aspetta che decidano da soli. Se offrono qualcosa di bizzarro o inatteso (una scarpa, un ricordo descritto a voce), valuta tu se conta come piccola o media — Tymora apprezza l'improvvisazione e l'autenticità più della coerenza meccanica.
+        </div>
+      </div>
+
+      <!-- Token della Fortuna -->
+      <div class="bg-yellow-900/30 border border-yellow-500/40 rounded-lg p-4 mt-4">
+        <p class="text-sm font-bold text-yellow-400 mb-2">✦ Il Token della Fortuna — Solo su 20 naturale</p>
+        <p class="text-sm text-gray-300">Una moneta d'oro appare nella mano del PG — pesante, calda, e la faccia su cambia espressione se la guardi da angolature diverse. Nella Stanza Finale, chi ha il Token riceve il <em>sussurro di Tymora</em>: non la risposta, ma una sensazione. Come sapere senza sapere. Il DM dà un hint non verbale e ambiguo che punta verso la risposta giusta — un'espressione, un gesto verso una delle facce della moneta gigante. Non è una garanzia. È una grazia.</p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: IL CORRIDOIO ==================== -->
+    <div class="bg-orange-900/20 border border-orange-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🏃</span> PARTE V: IL CORRIDOIO DELLE MONETE — Stanza 3
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando entrano nel corridoio.</p>
+
+      <div class="bg-black/50 border-l-4 border-orange-500 p-6 my-4 rounded-r">
+        <p class="italic text-orange-100 text-lg leading-relaxed">
+          Un corridoio lungo venti metri. Il pavimento è completamente coperto di piastrelle di rame — alcune murate salde, altre che si abbassano impercettibilmente sotto il peso. Non c'è altro.
+        </p>
+        <p class="italic text-orange-100 text-lg leading-relaxed mt-4">
+          Alle pareti, a intervalli regolari, piccole fessure orizzontali. Sembrano decorative, finché non ci si avvicina abbastanza da vedere che puntano verso il centro del corridoio.
+        </p>
+        <p class="italic text-orange-100 text-lg leading-relaxed mt-4">
+          In fondo, la porta aperta. La stanza finale è visibile — quella luce dorata, più intensa di qualsiasi cosa abbiate visto da quando siete entrati.
+        </p>
+      </div>
+
+      <!-- Meccanica corridoio -->
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded-lg p-5 mt-6">
+        <p class="text-sm font-bold text-orange-400 uppercase tracking-widest mb-4">🎲 Meccanica — Attraversare il Corridoio</p>
+        <p class="text-sm text-gray-300 mb-5">
+          Le piastrelle seguono un pattern: <strong>ogni terza piastrella è sicura</strong>, le altre due attivano dardi dalle fessure (1d8 danni perforanti, TS Destrezza CD 13 per metà). Con Investigazione CD 14, il pattern diventa decifrabile dopo 1 round di osservazione.
+        </p>
+
+        <div class="space-y-4">
+          <div class="bg-gray-800/60 border border-green-800/50 rounded-lg p-4">
+            <p class="text-sm font-bold text-green-400 mb-2">Approccio 1 — Studio del Pattern</p>
+            <p class="text-xs text-gray-300"><strong>Investigazione CD 14</strong>: il PG identifica le piastrelle sicure dopo un round di osservazione. Attraversa senza rischi. Richiede 2 round per il corridoio.</p>
+          </div>
+          <div class="bg-gray-800/60 border border-amber-800/50 rounded-lg p-4">
+            <p class="text-sm font-bold text-amber-400 mb-2">Approccio 2 — Avanzata Cauta</p>
+            <p class="text-xs text-gray-300"><strong>Percezione CD 10 per ogni gruppo di tre piastrelle</strong>: il PG nota la piastrella sicura prima di calpestarla. Fallire significa calpestarne una pericolosa — TS DES CD 13. Velocità media, rischio parziale.</p>
+          </div>
+          <div class="bg-yellow-900/30 border border-yellow-600/50 rounded-lg p-4">
+            <p class="text-sm font-bold text-yellow-300 mb-2">Approccio 3 — Corsa Cieca</p>
+            <p class="text-xs text-gray-300 mb-2">Nessuna prova. Il PG corre. Attraversa circa 7 gruppi di piastrelle: per ognuno, 33% di probabilità di calpestare quella sicura, 67% di attivare un dardo (TS DES CD 13).</p>
+            <p class="text-xs text-yellow-400">Chi raggiunge la fine così riceve il <strong>Segno dell'Azzardato</strong>: vantaggio alla chiamata nella Stanza Finale. Tymora premia chi corre nonostante il rischio.</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/60 rounded p-3 mt-4 text-xs text-gray-300">
+          <strong class="text-orange-400">📋 Nota DM — Segno dell'Audace nel Corridoio:</strong>
+          <p class="text-gray-400 mt-1">Chi ha questo segno dalla Stanza 1 vede, a ogni bivio, un brevissimo scintillio dorato sulla piastrella sicura. Descrivilo come "una riflessione di luce sul metallo, appena percettibile" — non abbastanza da togliere ogni rischio, abbastanza da aiutare chi presta attenzione.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: LA GRANDE MONETA ==================== -->
+    <div class="bg-yellow-900/20 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🪙</span> PARTE VI: LA GRANDE MONETA — Stanza Finale
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando entrano nella stanza finale. Pausa lunga prima di "che gira". Pausa dopo l'iscrizione.</p>
+
+      <div class="bg-black/50 border-l-4 border-yellow-400 p-6 my-4 rounded-r">
+        <p class="italic text-yellow-100 text-xl leading-relaxed">
+          La stanza finale è circolare, alta, e vuota.
+        </p>
+        <p class="italic text-yellow-100 text-xl leading-relaxed mt-4">
+          Tranne lei.
+        </p>
+        <p class="italic text-yellow-100 text-xl leading-relaxed mt-4">
+          Al centro, a un metro e mezzo da terra, una moneta d'oro delle dimensioni di uno scudo — che gira. Lentamente, senza fermarsi, senza oscillare. Gira su se stessa come se il tempo non la riguardasse. Sulla faccia che di volta in volta si mostra: a volte un profilo femminile che ride, a volte un simbolo che non riconoscete.
+        </p>
+        <p class="italic text-yellow-100 text-xl leading-relaxed mt-4">
+          Sotto la moneta, sul pavimento, un'iscrizione in lettere dorate:
+        </p>
+        <p class="italic text-yellow-200 text-xl leading-relaxed mt-4 text-center font-bold">
+          "La Fortuna non chiede chi siete.<br/>Chiede quanto vi fidate di lei."
+        </p>
+        <p class="italic text-yellow-100 text-xl leading-relaxed mt-4">
+          Silenzio. La moneta gira.
+        </p>
+      </div>
+
+      <!-- Meccanica finale -->
+      <div class="bg-yellow-900/30 border border-yellow-700/30 rounded-lg p-5 mt-6 mb-6">
+        <p class="text-sm font-bold text-yellow-400 uppercase tracking-widest mb-4">🎲 Meccanica — Il Tiro della Fortuna</p>
+        <p class="text-sm text-gray-300 mb-4">
+          Ogni PG si avvicina alla moneta e, a voce alta, dichiara: <strong>TESTA</strong> o <strong>CROCE</strong>.
+          Possono consultarsi finché tutti non hanno dichiarato. Ma la scelta è individuale — con alcune eccezioni basate sulle stanze precedenti.
+          Quando tutti hanno dichiarato, la moneta cade.
+        </p>
+
+        <!-- Modificatori -->
+        <div class="space-y-3 mb-5">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Modificatori dalle stanze precedenti</p>
+          <div class="bg-gray-800/60 rounded p-3 text-xs">
+            <p class="text-yellow-400 font-bold mb-1">Token della Fortuna (Stanza 2, risultato 20)</p>
+            <p class="text-gray-300">Il portatore riceve il sussurro di Tymora. Il DM dà un hint non verbale e ambiguo — un'espressione, un gesto impercettibile verso una delle facce della moneta — che punta verso la risposta giusta. Non è una certezza. Per <strong class="text-yellow-300">Valoris</strong>: il sussurro è leggermente più chiaro.</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-xs">
+            <p class="text-yellow-400 font-bold mb-1">Segno dell'Audace (Stanza 1, scelta senza prove)</p>
+            <p class="text-gray-300">Può cambiare la propria dichiarazione UNA volta dopo aver sentito le scelte di tutti gli altri, ma prima che la moneta cada.</p>
+          </div>
+          <div class="bg-gray-800/60 rounded p-3 text-xs">
+            <p class="text-yellow-400 font-bold mb-1">Segno dell'Azzardato (Stanza 3, corsa cieca)</p>
+            <p class="text-gray-300">Vantaggio alla chiamata: può dichiarare, aspettare la caduta della moneta, e cambiare scelta UNA volta prima della rivelazione finale — una frazione di secondo di grazia divina.</p>
+          </div>
+        </div>
+
+        <!-- Risultati -->
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left p-3 font-semibold">Risultato</th>
+                <th class="text-left p-3 font-semibold">Ricompensa</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="p-3 font-bold text-green-400">Chiamata corretta</td>
+                <td class="p-3"><strong class="text-green-300">Tocco della Fortuna</strong> — benedizione completa. Vedi Parte VII.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-amber-400">Chiamata sbagliata (ha partecipato alla prova)</td>
+                <td class="p-3"><strong class="text-amber-300">Segno della Fortunata</strong> — benedizione minore. Tymora premia il coraggio di aver scelto. Vedi Parte VII.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-500">Non ha offerto nulla all'altare</td>
+                <td class="p-3 text-gray-400">Stessa meccanica, senza il sussurro. Una piccola moneta d'argento appare nel suo borsello al momento dell'uscita. Vale 5 mo. È il commento di Tymora.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Momento Valoris -->
+      <div class="bg-yellow-900/40 border-2 border-yellow-500/60 rounded-lg p-5">
+        <p class="text-sm font-bold text-yellow-300 mb-3">✦ Momento Speciale — Valoris</p>
+        <p class="text-sm text-gray-300 mb-3">
+          Quando Valoris si avvicina alla moneta — indipendentemente da cosa ha fatto nelle stanze precedenti — succede qualcosa che non succede agli altri.
+        </p>
+        <div class="bg-black/40 border-l-4 border-yellow-400 p-4 rounded-r">
+          <p class="italic text-yellow-100 text-sm leading-relaxed">
+            Mentre ti avvicini, la moneta rallenta. Non si ferma — ma rallenta abbastanza da poter vedere chiaramente entrambe le facce mentre girano.
+          </p>
+          <p class="italic text-yellow-100 text-sm leading-relaxed mt-2">
+            E per un secondo — forse meno — senti qualcosa. Non una voce. Non un'istruzione. La sensazione di qualcuno che sorride, come se la cosa più divertente del mondo fosse proprio questa: che tu sei qui, che stai scegliendo, che il risultato non lo sai ancora.
+          </p>
+          <p class="italic text-yellow-100 text-sm leading-relaxed mt-2">
+            Come se non fosse l'esito che conta. Come se fosse questo momento — qui, con questa moneta in aria — il punto.
+          </p>
+        </div>
+        <p class="text-xs text-gray-500 mt-3 italic">Nota DM: non dirgli la risposta. Non dargli vantaggio meccanico aggiuntivo se non ha già il Token. Questo è un momento narrativo — Tymora lo riconosce come suo. Il resto lo decide lui.</p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: RICOMPENSE ==================== -->
+    <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">🎁</span> PARTE VII: RICOMPENSE
+      </h2>
+
+      <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300">
+          <strong class="text-green-400">Principio guida:</strong> le ricompense di Tymora non sono oggetti fisici — sono favori divini temporanei.
+          Si esauriscono alla fine del Piano 3 o dopo un riposo lungo fuori dal dungeon, qualunque venga prima.
+          Non si accumulano con benedizioni da altre fonti divine (a discrezione del DM).
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-green-300 text-lg">Tocco della Fortuna</p>
+            <span class="text-xs text-green-500 bg-green-900/50 px-2 py-1 rounded border border-green-800 whitespace-nowrap">Chiamata Corretta</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            1 volta al giorno: dopo aver tirato un d20 e visto il risultato, puoi rilanciarlo. Devi accettare il secondo risultato.
+            Funziona su qualsiasi d20: attacchi, tiri salvezza, prove di caratteristica.
+          </p>
+          <p class="text-xs text-gray-500 mt-2 italic">Dura fino alla fine del Piano 3 o al primo riposo lungo fuori dal dungeon.</p>
+        </div>
+
+        <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-amber-300 text-lg">Segno della Fortunata</p>
+            <span class="text-xs text-amber-500 bg-amber-900/50 px-2 py-1 rounded border border-amber-800 whitespace-nowrap">Chiamata Sbagliata</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            +1 a tutti i tiri salvezza per il resto della sessione corrente.
+          </p>
+          <p class="text-xs text-gray-500 mt-2 italic">"Tymora non punisce chi sbaglia. Premia chi ha avuto il coraggio di scegliere comunque."</p>
+        </div>
+
+        <div class="bg-yellow-900/20 border border-yellow-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-yellow-300 text-lg">Grazia di Tymora</p>
+            <span class="text-xs text-yellow-500 bg-yellow-900/50 px-2 py-1 rounded border border-yellow-800 whitespace-nowrap">Valoris — Automatica</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Alla fine della prova — indipendentemente dall'esito della chiamata — Valoris recupera un Dado Fortuna speso, oppure guadagna un Dado Fortuna aggiuntivo per la durata del Piano 3.
+            Scegli l'opzione che ha più senso per la situazione attuale del personaggio.
+          </p>
+          <p class="text-xs text-gray-500 mt-2 italic">Non è condizionata alla chiamata corretta. È un riconoscimento diretto, da devoto a dea.</p>
+        </div>
+
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-gray-300 text-lg">Moneta della Grazia</p>
+            <span class="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded border border-gray-600 whitespace-nowrap">Custode sconfitto</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Trovata sul Custode della Scelta (Stanza 1, porta sbagliata). Singolo uso: spendila prima di tirare qualsiasi d20 per ottenere vantaggio su quel tiro. La moneta si consuma nell'uso — letteralmente scompare.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VIII: L'USCITA E VEX ==================== -->
+    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">👤</span> PARTE VIII: L'USCITA E VEX
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando riattraversano l'arco e tornano sul Pianerottolo.</p>
+
+      <div class="bg-black/50 border-l-4 border-indigo-400 p-5 mb-6 rounded-r">
+        <p class="italic text-indigo-100 text-base leading-relaxed">
+          L'arco vi lascia passare nella direzione opposta con la stessa semplicità. Il secondo Pianerottolo è come l'avevate lasciato — la fontana, il mosaico, la luce bianca con i bordi dorati.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          Dietro di voi, l'arco si dissolve. Non velocemente — si consuma lentamente, come fumo che sale. In meno di un minuto, tra le due colonne c'è di nuovo solo la pietra del mosaico.
+        </p>
+        <p class="italic text-indigo-100 text-base leading-relaxed mt-3">
+          La moneta nel pavimento sotto l'arco è tornata nella sua posizione originale. Faccia in su.
+        </p>
+      </div>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-5">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">🎭 Reazione di Vex</p>
+        <p class="text-sm text-gray-300 mb-3">Vex è dove li avete lasciati. Vi guarda tornare. Le ali si muovono piano — non agitate, piano. L'aureola scintilla una volta.</p>
+        <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r mb-4">
+          <p class="italic text-indigo-100 text-sm leading-relaxed">"Siete tornati interi."</p>
+          <p class="text-gray-400 text-sm not-italic mt-1">Non è sollievo — è la voce di qualcuno che stava aspettando un'informazione e l'ha ricevuta.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-3">"Non avevo questo nel mandato. Non so cosa vi ha mostrato. Non vi chiedo."</p>
+          <p class="text-gray-400 text-sm not-italic mt-1">Le venature dorate pulsano piano.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-3">"Ma ho sentito cos'ha fatto il dungeon mentre eravate là dentro."</p>
+          <p class="text-gray-400 text-sm not-italic mt-1">Guarda l'arco — ormai pietra.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-3">"Non avevo mai sentito qualcosa del genere da questo posto."</p>
+          <p class="text-gray-400 text-sm not-italic mt-1">Tre secondi.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-3">"Comprate quello che vi serve. Il Piano 3 non aspetta."</p>
+        </div>
+        <div class="bg-gray-800/60 rounded p-3 text-xs">
+          <p class="text-indigo-400 font-bold mb-1">Se Valoris parla di Tymora</p>
+          <p class="text-gray-400">Vex lo guarda un secondo più del normale. <span class="text-gray-300 italic">"Lei ha scelto bene il suo."</span> Una pausa. <span class="text-gray-300 italic">"Non aggiungo altro."</span> Le ali si muovono una volta — qualcosa che non è disagio, ma è vicino a rispetto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note Aggiuntive -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-300 mb-4">📝 Note Aggiuntive</h2>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Secondo tentativo:</strong> l'arco non si riapre. Il mosaico mostra ancora la moneta a faccia in su, ma è inerte. Tymora ha già visto quello che voleva vedere. Non c'è un ripasso.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Chi non entra:</strong> nessuna penalità. Se quel personaggio arriva al Piano 3 senza benedizioni, Tymora a un certo punto potrebbe "commentare" attraverso un evento casuale favorevole — una prova riuscita appena appena, un dado fortunato. Non dirlo esplicitamente. Solo fallo.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Il tono della prova:</strong> non è tetra, non è solenne. È giocosa. Se i giocatori iniziano a ridere o fare battute sulla moneta, è corretto — Tymora si diverte. Non correggere l'umore al tavolo: è quello giusto.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-0.5">→</span>
+          <span><strong class="text-yellow-400">Durata flessibile:</strong> la prova può espandersi o restringersi. Il Custode è opzionale, il Corridoio può essere risolto in un round. Se il tempo stringe, la Stanza Finale è l'unica che non si salta — è il cuore della prova.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/prove-divine" class="text-yellow-400 hover:text-yellow-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Torna alle Prove Divine
+      </a>
+      <a href="/dm/sessioni/sessione-8" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Sessione 8 — Il Secondo Pianerottolo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
