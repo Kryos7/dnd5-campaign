@@ -1,0 +1,838 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../components/dm/DMAuthGuard';
+---
+
+<MainLayout title="Kethrar — Piano 3 — Ecosistema 1 — D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-5xl mx-auto p-6">
+
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm/ecosistema-1-piano-2" class="text-cyan-400 hover:text-cyan-300">
+            ← Torna all'Ecosistema 1 — Piano 2
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-amber-400 mb-1">KETHRAR</h1>
+        <p class="text-2xl text-orange-300 mb-1">"L'Esperimento Finale"</p>
+        <p class="text-slate-400 mt-2">Piano 3 — L'Arena della Capsula | CR 8 | Party livello 5–6</p>
+        <div class="mt-3 flex gap-3 flex-wrap">
+          <span class="bg-red-900 text-red-200 px-3 py-1 rounded text-sm font-bold">BOSS FINALE ECO 1</span>
+          <span class="bg-amber-900 text-amber-200 px-3 py-1 rounded text-sm font-semibold">3 Fasi</span>
+          <span class="bg-green-900 text-green-200 px-3 py-1 rounded text-sm font-semibold">Mutazione Progressiva</span>
+          <span class="bg-purple-900 text-purple-200 px-3 py-1 rounded text-sm font-semibold">Sigilli Divini</span>
+          <span class="bg-blue-900 text-blue-200 px-3 py-1 rounded text-sm font-semibold">Anti-Magia Fase 3</span>
+        </div>
+      </div>
+
+      <!-- CONCEPT -->
+      <section class="bg-slate-800 border border-amber-600 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-amber-400 mb-4">📖 Chi è Kethrar</h2>
+
+        <p class="text-slate-200 mb-4">
+          Kethrar era un alchimista-studioso ossessionato dalla biologia del soprannaturale. I Tomi di Mystra disseminati
+          nei livelli precedenti erano suoi — li usava come riferimento per capire il confine tra la materia vivente
+          e l'energia magica pura. Il Livello 2 era il suo laboratorio preparatorio: le mummie erano soggetti di test,
+          gli esperimenti sull'acqua ambrata servivano a isolare i componenti della mutazione.
+        </p>
+        <p class="text-slate-200 mb-4">
+          La capsula alchemica al centro del laboratorio non serviva a far crescere una creatura esterna.
+          <strong class="text-amber-400">Serviva a far crescere lui.</strong>
+          Ogni sessione nella capsula lo modificava un po' di più — prima rafforzamento strutturale, poi integrazione
+          coi fluidi delle Melme Tombali, infine la cristallizzazione con l'ambra distillata dalla colonna ascendente.
+        </p>
+        <p class="text-slate-200">
+          Il Piano 3 è il suo laboratorio principale, quello che i giocatori non hanno ancora visto.
+          La capsula al piano 2 era una versione secondaria. Quella qui è la versione originale — più grande,
+          più potente, e ormai vuota. Kethrar ne è già uscito.
+        </p>
+
+        <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-amber-500 mt-5">
+          <h3 class="text-lg font-semibold text-amber-300 mb-2">🔑 Filo Narrativo — Riven</h3>
+          <p class="text-slate-300 text-sm">
+            In Fase 3, il Frammento Narrativo rivela le ultime annotazioni di Kethrar sulle pareti dell'arena.
+            Una delle ultime voci descrive <em>"il soggetto della capsula secondaria — rifiuto del composto primario.
+            Il corpo ha sviluppato una risposta inattesa: cicatrizzazione reattiva invece di assorbimento.
+            Il soggetto è scappato prima del completamento. Esperimento incompleto."</em>
+            Non serve spiegarlo. Chi ascolta, capisce.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-amber-300 mb-3 mt-6">Aspetto per Fase</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-900 rounded-lg p-3 border border-yellow-700">
+            <h4 class="font-bold text-yellow-300 mb-1">Fase 1 — Il Dotto</h4>
+            <p class="text-slate-400 text-sm">Corpo umano ma sovradimensionato. Pelle tesa come se fosse sotto pressione interna. Tubi alchemici innestati nelle braccia, nel torso, nel collo — pompano Essenza Purificata in circolo continuo. I tubi sono visibili, pulsanti.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-green-700">
+            <h4 class="font-bold text-green-300 mb-1">Fase 2 — La Melma</h4>
+            <p class="text-slate-400 text-sm">La metà inferiore del corpo è gelatinosa — non ha più gambe definite. Scivola sul pavimento. La metà superiore è ancora solida ma la pelle ha la stessa superficie viscida degli pseudopodi delle Melme Tombali. I tubi si sono dissolti nella massa.</p>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-3 border border-amber-700">
+            <h4 class="font-bold text-amber-300 mb-1">Fase 3 — Il Cristallizzato</h4>
+            <p class="text-slate-400 text-sm">La massa gelatinosa si cristallizza dall'interno. Formazioni di cristallo ambrato spuntano dalla carne, crescono sul pavimento attorno a lui. Diventa lento, massiccio. L'occhio sinistro è completamente sigillato da cristallo. Solo quello destro guarda ancora.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARENA -->
+      <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">🗺️ L'Arena — Layout Fisico</h2>
+
+        <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-cyan-500 mb-6">
+          <p class="text-slate-200 leading-relaxed italic">
+            "La scala termina in un arco basso. Oltre, la stanza si apre — circolare, trenta metri di diametro,
+            il soffitto a sei metri. Sei colonne d'acqua ascendente, identiche a quella del Livello 2 ma più grandi,
+            si sollevano dal pavimento verso il soffitto a intervalli regolari: l'acqua non cade, sale, e scompare
+            nella pietra. Pulsano di una luce ambrata densa, quasi arancione.
+            Al centro della stanza, la capsula alchemica — alta quattro metri, cilindrica, trasparente.
+            Vuota. La valvola di apertura sul lato è forzata dall'interno.
+            Il pavimento è lo stesso mosaico di simboli divini del Pianerottolo, ma incrinato e macchiato
+            da decenni di versamenti alchemici. In tre punti equidistanti attorno alla stanza, grandi glifi
+            incisi nel pavimento sono circondati da altari di pietra — spenti, spenti, spenti.
+            Kethrar è in piedi vicino alla capsula."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-cyan-300 mb-3">📐 Elementi dell'Arena</h3>
+            <ul class="space-y-2 text-slate-400 text-sm">
+              <li><strong class="text-cyan-400">Capsula centrale:</strong> Taglia Grande, CA 12, 60 PF. Distruggerla fa perdere 1 azione di Kethrar per 1 round (reagisce con rabbia). Non ha effetto sulle fasi.</li>
+              <li><strong class="text-cyan-400">6 Colonne ascendenti:</strong> Dissolvono la magia al contatto (come la colonna del L2). Passarci attraverso: TS COS CD 13 o Stordito 1 round. Non si possono usare per coprirsi.</li>
+              <li><strong class="text-cyan-400">Pozza ambrata:</strong> Occupa 1/4 della stanza (zona Sud-Est), 20cm di acqua ambrata. Camminare nella pozza: difficile terreno. In Fase 2 diventa acida.</li>
+              <li><strong class="text-cyan-400">3 Altari-Sigillo:</strong> Nord, Sud-Est, Sud-Ovest. Vedi sezione Sigilli Divini.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-4">
+            <h3 class="text-lg font-semibold text-amber-300 mb-3">🔮 Frammento Narrativo</h3>
+            <p class="text-slate-400 text-sm mb-3">
+              Le pareti dell'arena sono coperte da annotazioni incise — testo fitto, diagrammi, formule.
+              A occhio nudo sembrano simboli incomprensibili.
+            </p>
+            <div class="bg-slate-800 rounded p-3 border border-amber-700">
+              <p class="text-amber-400 text-sm font-semibold mb-1">Con il Frammento Narrativo attivato:</p>
+              <ul class="text-slate-400 text-xs space-y-1">
+                <li>• Le annotazioni diventano leggibili — resoconto cronologico degli esperimenti</li>
+                <li>• In Fase 3: i pattern di cristallizzazione sul pavimento diventano prevedibili (+2 alle CD per evitarli)</li>
+                <li>• L'ultima voce rivela il soggetto della capsula secondaria (momento Riven)</li>
+                <li>• Identifica la debolezza dell'Essenza Purificata contro i cristalli in Fase 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4 border border-yellow-700">
+          <h3 class="text-lg font-semibold text-yellow-300 mb-2">🤝 Le Mummie-Assistenti (Fase 1)</h3>
+          <p class="text-slate-300 text-sm mb-3">
+            Tre mummie in posizione attorno alla capsula all'inizio del combattimento, connesse a Kethrar
+            da tubi visibili di ambra solidificata. Non sono autonome — li controlla lui.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div>
+              <p class="text-yellow-400 text-xs font-bold mb-1">MUMMIA ASSISTENTE — Stats Ridotte</p>
+              <ul class="text-slate-500 text-xs space-y-0.5">
+                <li>CA 11 | PF 32 (5d8+10) | Velocità 6m</li>
+                <li>FOR 16 (+3) DES 6 (-2) COS 15 (+2)</li>
+                <li>Immunità: veleno, freddo | Res: B/P/T non magici</li>
+                <li><strong class="text-red-400">Pugno Mummificato:</strong> +5, 2d6+3 contundente</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-green-400 text-xs font-bold mb-1">CONDUIT AMBRATO (il tubo)</p>
+              <ul class="text-slate-500 text-xs space-y-0.5">
+                <li>CA 10 | PF 20 — attaccabile come oggetto</li>
+                <li>Distrutto il conduit → mummia cade esanime immediatamente</li>
+                <li>Liberare una mummia (Dispel Magic o conduit distrutto): sblocca bonus al Sigillo Nord</li>
+                <li>Kethrar non può rigenerare conduit distrutti</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESCRIZIONI TEATRALI -->
+      <section class="bg-slate-800 border border-violet-600 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-violet-400 mb-2">🎭 Descrizioni Teatrali</h2>
+        <p class="text-slate-400 text-sm mb-6">Leggi ad alta voce. Pausa dopo ogni paragrafo.</p>
+
+        <!-- Ingresso -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-violet-300 mb-1 flex items-center gap-2">
+            <span class="bg-violet-900 text-violet-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Primo ingresso</span>
+            Quando i PG entrano nell'Arena
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Voce calma, descrittiva. L'inquietudine viene dall'ambiente, non dal tono.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-violet-500 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"La stanza è enorme. Circolare. Il soffitto sale a sei metri — e da sei punti del pavimento, colonne d'acqua salgono verso di esso senza cadere, senza spruzzare. Le stesse di sopra, ma più grandi. Più calde. Pulsano di una luce che è quasi arancione."</p>
+            <p class="text-violet-400 not-italic text-sm">[pausa]</p>
+            <p>"Al centro, una capsula di vetro alta quattro metri. Vuota. La valvola laterale è forzata dall'interno — i cardini sono piegati verso l'esterno, come se qualcosa di molto forte avesse spinto."</p>
+            <p class="text-violet-400 not-italic text-sm">[pausa]</p>
+            <p>"E in piedi accanto alla capsula, con una mano appoggiata al vetro come un padre che guarda una culla vuota — c'è qualcosa che era un uomo."</p>
+            <p class="text-violet-400 not-italic text-sm">[pausa lunga]</p>
+            <p>"Vi guarda. Non si muove. I tubi nel suo corpo pulsano. Il pavimento attorno a lui è macchiato di ambra secca, a cerchi concentrici, come anni di sedimenti."</p>
+            <p class="text-violet-400 not-italic text-sm">[abbassa la voce]</p>
+            <p>"Parla. La voce è quella di un uomo vecchio, precisa, quasi professionale: 'Avete trovato tutto quello che avevo lasciato. Interessante. Molto interessante.'"</p>
+          </div>
+          <p class="text-yellow-400 text-sm font-semibold mt-2">→ Non attacca subito. Lascia che i PG parlino. Kethrar è curioso — ha domande sui loro marchi divini.</p>
+        </div>
+
+        <!-- Inizio combattimento -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-yellow-300 mb-1 flex items-center gap-2">
+            <span class="bg-yellow-900 text-yellow-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Inizio Fase 1</span>
+            Quando decide di combattere
+          </h3>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-yellow-600 text-slate-200 italic leading-relaxed">
+            <p>"Un gesto quasi annoiato. I tubi nel suo braccio si contraggono. I tre corpi dietro di lui — i corpi che non avevate ancora notato — si sollevano dal pavimento."</p>
+            <p class="mt-3">"'Avrei preferito qualche ora. Ma anche questo mi dirà qualcosa di utile.'"</p>
+          </div>
+        </div>
+
+        <!-- Transizione Fase 2 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-green-300 mb-1 flex items-center gap-2">
+            <span class="bg-green-900 text-green-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Transizione → Fase 2</span>
+            Raggiunge 140 PF rimasti
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Voce distaccata, quasi scientifica. Lui non ha paura — sta solo accelerando il piano.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-green-600 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"Kethrar smette di combattere per un secondo."</p>
+            <p>"Si guarda le mani. Annuisce — una sola volta, come chi verifica un dato."</p>
+            <p>"Poi cammina verso la capsula e ci entra."</p>
+            <p class="text-green-400 not-italic text-sm">[pausa — lascia il silenzio lavorare]</p>
+            <p>"Il vetro si appanna dall'interno. Qualcosa si muove dentro — qualcosa che si deforma. Si espande. Il vetro cigola."</p>
+            <p>"Poi la capsula esplode verso l'esterno. Non violentemente — si apre, come un bozzolo che cede."</p>
+            <p>"Quello che emerge non ha più gambe."</p>
+            <p>"La metà inferiore del corpo è diventata una massa che scivola sul pavimento. La metà superiore è ancora riconoscibile — la stessa faccia, gli stessi occhi — ma la pelle ha la consistenza e il colore dell'acqua torbida di una melma."</p>
+            <p class="text-green-400 not-italic text-sm">[abbassa la voce]</p>
+            <p>"'Questo è il secondo stadio. Prendete nota.'"</p>
+          </div>
+        </div>
+
+        <!-- Transizione Fase 3 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-amber-300 mb-1 flex items-center gap-2">
+            <span class="bg-amber-900 text-amber-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Transizione → Fase 3</span>
+            Raggiunge 70 PF rimasti
+          </h3>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-amber-500 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"La massa rallenta. Non per stanchezza — per scelta."</p>
+            <p>"Raggiunge la parete più vicina. Apre un pannello nascosto nella pietra — una piccola camera sigillata — e prende una fiala. L'ultima."</p>
+            <p>"La fiala contiene qualcosa di denso, quasi solido, color ambra bruciata. Lo stesso colore delle colonne. Lo stesso colore dell'acqua del corridoio al Livello 2, ma concentrato, sedimentato, antico."</p>
+            <p>"Se lo inietta nel petto. Senza esitazione."</p>
+            <p class="text-amber-400 not-italic text-sm">[pausa — 3 secondi di silenzio veri]</p>
+            <p>"Per un momento — non succede niente."</p>
+            <p>"Poi vedete i cristalli. Prima piccoli, come ghiaccio che si forma sul vetro. Poi più grandi. Crescono dalla sua carne verso l'esterno — dalle spalle, dal torace, dal lato sinistro del viso."</p>
+            <p>"Il suo occhio sinistro sparisce sotto il cristallo. Solo quello destro rimane libero."</p>
+            <p>"Kethrar smette di parlare."</p>
+          </div>
+        </div>
+
+        <!-- Momento Riven (Fase 3) -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-red-300 mb-1 flex items-center gap-2">
+            <span class="bg-red-900 text-red-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Momento Narrativo — Fase 3</span>
+            Se Riven è nel combattimento
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Solo se Riven è vicino a lui e la cicatrice reagisce (lo fa, in questa stanza). Digli in privato che la cicatrice brucia forte.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-red-500 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"L'occhio destro di Kethrar si gira verso di te [Riven]. Rimane lì."</p>
+            <p>"La cristallizzazione rallenta per un secondo, come se qualcosa lo avesse distratto."</p>
+            <p>"La voce, quando parla, è quasi normale — quasi quella di un uomo vecchio e molto stanco:"</p>
+            <p class="text-red-400 not-italic text-sm">[lentamente, con pausa dopo ogni pezzo]</p>
+            <p>"'Il soggetto secondario. Credevo fossi morto.'"</p>
+            <p>"'La cicatrice — sì. È quello che succede quando il corpo rifiuta il composto. Non è un fallimento. È... una variante. Non l'avevo considerata.'"</p>
+            <p>"E poi i cristalli riprendono a crescere, e Kethrar smette di parlare."</p>
+          </div>
+        </div>
+
+        <!-- Morte -->
+        <div class="mb-2">
+          <h3 class="text-xl font-bold text-slate-300 mb-1 flex items-center gap-2">
+            <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Fine del combattimento</span>
+            La dissoluzione
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <p class="text-slate-500 text-xs font-semibold mb-2">SENZA tutti i Sigilli attivi (fine brutale)</p>
+              <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-slate-500 text-slate-200 italic leading-relaxed text-sm">
+                <p>"I cristalli si frantumano verso l'interno. La massa gelatinosa sotto si decompone in liquido — in secondi."</p>
+                <p class="mt-2">"Sul pavimento, dove era Kethrar, rimane una macchia ambrata che lentamente si solidifica di nuovo. Come se il dungeon stesse cercando di assorbire quello che è rimasto."</p>
+                <p class="mt-2 text-yellow-400 not-italic text-xs">→ Loot base. Nessuna risposta divina.</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-slate-500 text-xs font-semibold mb-2">CON tutti i Sigilli attivi (fine pulita)</p>
+              <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-amber-500 text-slate-200 italic leading-relaxed text-sm">
+                <p>"I tre altari pulsano in sincrono. La luce si espande verso il centro."</p>
+                <p class="mt-2">"I cristalli non si frantumano — si sciolgono. Uno ad uno, dall'esterno verso l'interno, come sale nell'acqua calda."</p>
+                <p class="mt-2">"Quello che rimane è un uomo anziano. Piccolo, senza i tubi, senza la massa. Un uomo qualunque, in ginocchio sul pavimento. Poi anche lui si dissolve — ma lentamente, e in silenzio."</p>
+                <p class="mt-2">"Sul pavimento, dove era, rimane il formulario. E i componenti. Tutto quello che aveva creato, ordinato come se qualcuno lo avesse messo lì apposta."</p>
+                <p class="mt-2 text-amber-400 not-italic text-xs">→ Loot completo + risposta divina.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATISTICHE -->
+      <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-1">📊 Statistiche — Blocco Unico</h2>
+        <p class="text-slate-400 text-sm mb-6">Pool HP unico: 210 totali. Le fasi cambiano le capacità, non i PF. Transizioni a soglie di PF rimasti.</p>
+
+        <!-- HP Overview -->
+        <div class="grid grid-cols-3 gap-3 mb-6">
+          <div class="bg-yellow-900/30 border-2 border-yellow-600 rounded-lg p-3 text-center">
+            <p class="text-yellow-400 font-bold text-sm mb-1">FASE 1 — Il Dotto</p>
+            <p class="text-slate-300 text-xs">da 210 → 141 PF</p>
+            <p class="text-slate-500 text-xs italic mt-1">~70 HP da infliggere</p>
+          </div>
+          <div class="bg-green-900/30 border-2 border-green-600 rounded-lg p-3 text-center">
+            <p class="text-green-400 font-bold text-sm mb-1">FASE 2 — La Melma</p>
+            <p class="text-slate-300 text-xs">da 140 → 71 PF</p>
+            <p class="text-slate-500 text-xs italic mt-1">~70 HP da infliggere</p>
+          </div>
+          <div class="bg-amber-900/30 border-2 border-amber-600 rounded-lg p-3 text-center">
+            <p class="text-amber-400 font-bold text-sm mb-1">FASE 3 — Il Cristallizzato</p>
+            <p class="text-slate-300 text-xs">da 70 → 0 PF</p>
+            <p class="text-slate-500 text-xs italic mt-1">~70 HP da infliggere</p>
+          </div>
+        </div>
+
+        <!-- Base Stats -->
+        <div class="bg-slate-900 rounded-lg p-5 mb-5">
+          <h3 class="text-xl font-bold text-red-300 mb-1">KETHRAR — Statistiche Base</h3>
+          <p class="text-slate-400 italic mb-4">Umanoide (umano) modificato, neutrale malvagio | GdS 8 (3900 PE)</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm">
+            <div><span class="text-yellow-400 font-semibold">PF totali:</span> <span class="text-slate-200">210 (28d8+84)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Tiri Salvezza:</span> <span class="text-slate-200">COS +7, INT +8</span></div>
+            <div><span class="text-yellow-400 font-semibold">Lingue:</span> <span class="text-slate-200">Comune, Elfico, Nanico</span></div>
+          </div>
+
+          <div class="bg-slate-800 rounded p-4 mb-4">
+            <h4 class="text-base font-semibold text-cyan-400 mb-3">Caratteristiche (invariate tra le fasi)</h4>
+            <div class="grid grid-cols-6 gap-2 text-center">
+              <div><div class="text-red-400 font-bold text-sm">FOR</div><div class="text-slate-200">18 (+4)</div></div>
+              <div><div class="text-red-400 font-bold text-sm">DES</div><div class="text-slate-200">13 (+1)</div></div>
+              <div><div class="text-red-400 font-bold text-sm">COS</div><div class="text-slate-200">18 (+4)</div></div>
+              <div><div class="text-red-400 font-bold text-sm">INT</div><div class="text-slate-200">20 (+5)</div></div>
+              <div><div class="text-red-400 font-bold text-sm">SAG</div><div class="text-slate-200">14 (+2)</div></div>
+              <div><div class="text-red-400 font-bold text-sm">CAR</div><div class="text-slate-200">8 (-1)</div></div>
+            </div>
+          </div>
+
+          <div class="space-y-1 text-slate-300 text-sm">
+            <div><span class="text-blue-400 font-semibold">Abilità:</span> Arcano +9, Medicina +9, Indagare +9, Natura +8</div>
+            <div><span class="text-cyan-400 font-semibold">Sensi:</span> Vista normale 18m, Percezione Passiva 12</div>
+          </div>
+        </div>
+
+        <!-- FASE 1 Stats -->
+        <div class="bg-slate-900 rounded-lg p-5 mb-4 border-2 border-yellow-700">
+          <h3 class="text-xl font-bold text-yellow-300 mb-3">⚗️ FASE 1 — Il Dotto</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">15 (armatura alchemica innestata)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">9m</span></div>
+            <div><span class="text-yellow-400 font-semibold">Attacco:</span> <span class="text-slate-200">+7 (proficiency +3 + INT +5 è il modificatore intenzionale)</span></div>
+          </div>
+          <div class="space-y-1 text-sm mb-3">
+            <div><span class="text-red-400 font-semibold">Immunità:</span> <span class="text-slate-300">veleno</span></div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> <span class="text-slate-300">acido, danni veleno</span></div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> <span class="text-slate-300">nessuna</span></div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-yellow-300 font-semibold text-sm mb-1">🛡️ Soglia del Danno</p>
+              <p class="text-slate-400 text-sm">I tubi alchemici ridistribuiscono l'impatto. I primi <strong class="text-yellow-400">5 punti danno</strong> di ogni attacco singolo vengono ignorati.</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-yellow-300 font-semibold text-sm mb-1">🪢 Conduit Ambrato — 3 mummie attive</p>
+              <p class="text-slate-400 text-sm">Vedi sezione Arena. Finché almeno un conduit è integro: vantaggio ai TS contro Incapacitato e Stordito.</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-yellow-300 font-semibold text-sm mb-1">🧪 Pozione Rapida (azione bonus, 3/combattimento)</p>
+              <p class="text-slate-400 text-sm">Come azione bonus, beve o inietta un composto: recupera <strong class="text-green-400">2d4+5 PF</strong> (pozione) o ottiene <strong class="text-cyan-400">vantaggio</strong> al prossimo attacco (siero di precisione). Annuncia quale usa — il party vede l'azione.</p>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-red-300 mt-4 mb-2">⚔️ Azioni — Multiattacco: 2 attacchi</h4>
+          <div class="space-y-2">
+            <div class="bg-slate-800 rounded p-3 text-sm">
+              <span class="text-red-400 font-semibold">Lancio Alchemico:</span>
+              <span class="text-slate-300"> +7, portata 18m, 2d8+4 acido. TS COS CD 14 o Avvelenato per 1 round.</span>
+            </div>
+            <div class="bg-slate-800 rounded p-3 text-sm">
+              <span class="text-red-400 font-semibold">Siringa Innestata (mischia):</span>
+              <span class="text-slate-300"> +7, portata 1.5m, 1d6+4 perforante + 2d6 veleno. TS COS CD 14 o velocità dimezzata per 1 round.</span>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-orange-300 mt-4 mb-2">🛡️ Reazione</h4>
+          <div class="bg-slate-800 rounded p-3 text-sm">
+            <span class="text-orange-400 font-semibold">Schermo di Mummia (1/round):</span>
+            <span class="text-slate-300"> Quando viene bersaglio di un attacco, redirige il colpo verso una mummia adiacente. Il colpo colpisce automaticamente la mummia invece di Kethrar.</span>
+          </div>
+        </div>
+
+        <!-- FASE 2 Stats -->
+        <div class="bg-slate-900 rounded-lg p-5 mb-4 border-2 border-green-700">
+          <h3 class="text-xl font-bold text-green-300 mb-1">🫧 FASE 2 — La Melma</h3>
+          <p class="text-slate-500 text-xs italic mb-3">Inizia quando Kethrar raggiunge 140 PF. Entra nella capsula (1 round, non può agire), poi riemerge trasformato al round successivo.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">13 (corpo gelatinoso — più morbido)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">9m, nuotare 15m</span></div>
+            <div><span class="text-yellow-400 font-semibold">Soglia del Danno:</span> <span class="text-slate-200">rimossa</span></div>
+          </div>
+          <div class="space-y-1 text-sm mb-3">
+            <div><span class="text-red-400 font-semibold">Immunità:</span> <span class="text-slate-300">veleno, acido, <strong class="text-orange-400">FUOCO</strong></span></div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> <span class="text-slate-300">perforanti, taglienti</span></div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> <span class="text-red-300 font-bold">freddo, necrotico</span></div>
+          </div>
+
+          <div class="bg-amber-900/20 border border-amber-700 rounded p-3 mb-3">
+            <p class="text-amber-400 font-bold text-sm">⚠️ FUOCO = CURA, non danno</p>
+            <p class="text-amber-200 text-xs">Ogni danno da fuoco ricevuto viene convertito in PF recuperati, non persi. I PG lo scoprono al primo incantesimo di fuoco — poi devono cambiare approccio. Questa è la ricompensa per chi ha studiato le Melme Tombali al L2.</p>
+          </div>
+
+          <div class="space-y-3 mb-4">
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-green-300 font-semibold text-sm mb-1">🌊 Forma Fluida</p>
+              <p class="text-slate-400 text-sm">Può passare attraverso spazi di 15cm senza difficoltà. I corridoi stretti non sono terreno difficile per lui.</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-green-300 font-semibold text-sm mb-1">🫧 Pseudopodi (azione bonus, 1/round, max 2 attivi)</p>
+              <p class="text-slate-400 text-sm">Sputa una piccola appendice gelatinosa (Pseudopodo Minore) che agisce autonomamente: CA 10, PF 15, velocità 6m, Pseudopodo +4 (1d6+2 acido). Si dissolve se Kethrar va a 0 PF o se viene distrutta.</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-green-300 font-semibold text-sm mb-1">💧 Pozza Corrosiva (passivo, da Fase 2)</p>
+              <p class="text-slate-400 text-sm">La pozza ambrata a Sud-Est diventa acida. Chi inizia il proprio turno nella pozza: 1d6 acido automatico. Kethrar usa questa zona attivamente.</p>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-red-300 mb-2">⚔️ Azioni — Multiattacco: 3 attacchi (2 Tentacolo + 1 Schizzo)</h4>
+          <div class="space-y-2">
+            <div class="bg-slate-800 rounded p-3 text-sm">
+              <span class="text-red-400 font-semibold">Tentacolo Acido:</span>
+              <span class="text-slate-300"> +7, portata 3m, 2d6+4 contundente + 2d6 acido. Se colpisce: afferrato (CD fuga 14). Max 2 creature afferrate.</span>
+            </div>
+            <div class="bg-slate-800 rounded p-3 text-sm">
+              <span class="text-red-400 font-semibold">Schizzo Acido:</span>
+              <span class="text-slate-300"> +7, portata 12m, 3d8 acido. TS DES CD 14 o velocità dimezzata per 1 round.</span>
+            </div>
+            <div class="bg-slate-800 rounded p-3 text-sm border border-red-800">
+              <span class="text-red-400 font-semibold">Dissoluzione Alchemica (ricarica 5–6):</span>
+              <span class="text-slate-300"> L'acqua sul pavimento nel raggio di 6m diventa acida per 2 round. Ogni creatura che inizia il turno nell'area: 2d6 acido automatico. Kethrar è immune.</span>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-orange-300 mt-4 mb-2">🛡️ Reazione (sostituisce Schermo di Mummia)</h4>
+          <div class="bg-slate-800 rounded p-3 text-sm">
+            <span class="text-orange-400 font-semibold">Schizz Reattivo (1/round):</span>
+            <span class="text-slate-300"> Quando viene colpito da un attacco a distanza, spruzza acido sul'attaccante: 1d6 acido automatico all'attaccante.</span>
+          </div>
+        </div>
+
+        <!-- FASE 3 Stats -->
+        <div class="bg-slate-900 rounded-lg p-5 border-2 border-amber-600">
+          <h3 class="text-xl font-bold text-amber-300 mb-1">💎 FASE 3 — Il Cristallizzato</h3>
+          <p class="text-slate-500 text-xs italic mb-3">Inizia quando Kethrar raggiunge 70 PF. Recupera il pannello nascosto, inietta l'ultima fiala. Transizione immediata (no round di pausa).</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm">
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">18 (cristallo ambrato — armatura naturale massima)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">6m (lento ma corazzato)</span></div>
+            <div><span class="text-yellow-400 font-semibold">Attacchi:</span> <span class="text-slate-200">+8 (FOR aumenta a 20 per la cristallizzazione)</span></div>
+          </div>
+          <div class="space-y-1 text-sm mb-3">
+            <div><span class="text-red-400 font-semibold">Immunità:</span> <span class="text-slate-300">veleno, acido (perdura)</span></div>
+            <div><span class="text-green-400 font-semibold">Resistenze:</span> <span class="text-slate-300">fuoco, freddo (il cristallo isola), acido</span></div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> <span class="text-red-300 font-bold">TONANTE — il cristallo risuona e si frantuma</span></div>
+            <div><span class="text-blue-400 font-semibold">Perdute:</span> <span class="text-slate-300">vulnerabilità a freddo/necrotico (cristallizzazione le neutralizza)</span></div>
+          </div>
+
+          <div class="space-y-3 mb-4">
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-amber-300 font-semibold text-sm mb-1">🔮 Zona Cristallina (passivo)</p>
+              <p class="text-slate-400 text-sm">All'inizio di ogni turno di Kethrar, 1d4 caselle entro 3m da lui si cristallizzano. Caselle cristallizzate: terreno difficile. Incantesimi da contatto o lancio da posizione cristallizzata: TS Arcano CD 12 o falliscono. I Sigilli Divini non si cristallizzano.</p>
+              <p class="text-amber-400 text-xs mt-1 italic">Con Frammento Narrativo: il pattern è prevedibile, i PG hanno +2 alle CD per evitarli.</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-amber-300 font-semibold text-sm mb-1">🧊 Presenza Anti-Magica Locale (passivo)</p>
+              <p class="text-slate-400 text-sm">Incantesimi di 1° e 2° livello lanciati entro 3m da Kethrar richiedono un TS Arcano CD 13. Fallendo: l'incantesimo svanisce (slot consumato, nessun effetto).</p>
+            </div>
+            <div class="bg-slate-800 rounded p-3">
+              <p class="text-amber-300 font-semibold text-sm mb-1">✨ Essenza Purificata — Finestra di Vulnerabilità</p>
+              <p class="text-slate-400 text-sm">Se Fealer (o chiunque) usa una dose di Essenza Purificata su una zona cristallizzata di Kethrar (azione, deve essere adiacente): quella zona si scioglie per 1 round. Finestra di vulnerabilità: danni ×2 sulla zona colpita nel prossimo attacco. Kethrar perde la Reazione quel round.</p>
+              <p class="text-amber-400 text-xs mt-1 italic">Questo non è annunciato. Si scopre o ci si arriva da soli.</p>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-red-300 mb-2">⚔️ Azioni — Multiattacco: 3 attacchi</h4>
+          <div class="space-y-2">
+            <div class="bg-slate-800 rounded p-3 text-sm">
+              <span class="text-red-400 font-semibold">Pugno Cristallino:</span>
+              <span class="text-slate-300"> +8, portata 1.5m, 2d8+5 contundente + 2d6 taglienti. Creature adiacenti all'impatto: TS DES CD 13 o 1d6 taglienti da schegge.</span>
+            </div>
+            <div class="bg-slate-800 rounded p-3 text-sm border border-amber-800">
+              <span class="text-red-400 font-semibold">Eruzione Cristallina (ricarica 5–6):</span>
+              <span class="text-slate-300"> Proietta schegge in cerchio 9m. 4d8 perforante. TS DES CD 15 → metà danno. Tutte le caselle nell'area diventano terreno difficile (cristalli sul pavimento).</span>
+            </div>
+          </div>
+
+          <h4 class="text-base font-semibold text-orange-300 mt-4 mb-2">🛡️ Reazione</h4>
+          <div class="bg-slate-800 rounded p-3 text-sm">
+            <span class="text-orange-400 font-semibold">Barriera di Cristallo (1/round):</span>
+            <span class="text-slate-300"> Quando subisce danni, riduce i danni ricevuti di 1d8. La barriera cede se subisce 20+ danni tonanti in un singolo colpo (la reazione non funziona quel round).</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIGILLI DIVINI -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-2">✨ I Tre Sigilli Divini</h2>
+        <p class="text-slate-300 mb-2">
+          Tre altari-glifo nel pavimento dell'arena, posti dagli Dèi sapendo che Kethrar avrebbe spinto
+          troppo oltre. Non sono lì per aiutare i giocatori a combatterlo — sono lì per assicurarsi che
+          quello che ha creato <strong class="text-purple-300">non esca dal dungeon</strong>.
+        </p>
+        <p class="text-slate-400 text-sm mb-5 italic">
+          I PG possono attivarli durante il combattimento come secondo obiettivo. Ognuno richiede un'azione intera.
+          Con il Frammento Narrativo: le annotazioni spiegano cosa sono e come usarli (+2 alle prove se necessarie).
+        </p>
+
+        <div class="space-y-4">
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-yellow-600">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <p class="text-yellow-300 font-bold text-lg">Sigillo Nord — Memoria dei Caduti</p>
+                <p class="text-slate-500 text-xs italic">Attivabile in Fase 1 o 2</p>
+              </div>
+              <span class="bg-yellow-900 text-yellow-200 px-2 py-0.5 rounded text-xs whitespace-nowrap">Zona Nord</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <p class="text-yellow-400 text-sm font-semibold mb-1">Come si attiva:</p>
+                <p class="text-slate-400 text-sm">Depositare una delle chiavi d'argento trovate nelle mummie del L2 sull'altare + azione intera.</p>
+                <p class="text-slate-500 text-xs italic mt-1">Bonus: se almeno 1 mummia-assistente è stata liberata (conduit distrutto o Dispel), l'attivazione non richiede azione — avviene automaticamente al deposito della chiave.</p>
+              </div>
+              <div>
+                <p class="text-green-400 text-sm font-semibold mb-1">Effetto:</p>
+                <p class="text-slate-400 text-sm">Le mummie-assistenti restanti smettono di poter essere rianistate o riutilizzate da Kethrar. Quelle già distrutte rimangono a terra. Kethrar perde la Reazione "Schermo di Mummia" per il resto del combattimento.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-blue-600">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <p class="text-blue-300 font-bold text-lg">Sigillo Sud-Est — Conoscenza Purificata</p>
+                <p class="text-slate-500 text-xs italic">Attivabile in Fase 2 o 3</p>
+              </div>
+              <span class="bg-blue-900 text-blue-200 px-2 py-0.5 rounded text-xs whitespace-nowrap">Zona Sud-Est</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <p class="text-blue-400 text-sm font-semibold mb-1">Come si attiva:</p>
+                <p class="text-slate-400 text-sm">Posare un Tomo di Mystra sull'altare e bruciarla (azione intera). Il tomo viene consumato — non recuperabile.</p>
+              </div>
+              <div>
+                <p class="text-green-400 text-sm font-semibold mb-1">Effetto:</p>
+                <p class="text-slate-400 text-sm">La pozza ambrata Sud-Est diventa neutra (nessun danno acido, non più terreno difficile). In Fase 3: i cristalli che si formano nella metà Sud della stanza si dissolvono automaticamente dopo 1 round invece di accumularsi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-red-600">
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <p class="text-red-300 font-bold text-lg">Sigillo Sud-Ovest — Il Tributo</p>
+                <p class="text-slate-500 text-xs italic">Attivabile in qualsiasi fase — idealmente Fase 3</p>
+              </div>
+              <span class="bg-red-900 text-red-200 px-2 py-0.5 rounded text-xs whitespace-nowrap">Zona Sud-Ovest</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <p class="text-red-400 text-sm font-semibold mb-1">Come si attiva:</p>
+                <p class="text-slate-400 text-sm">Offerta libera decisa dal gruppo — qualsiasi oggetto o quantità di cristalli che rappresenti un sacrificio reale (minimo 10 cristalli piccoli equivalenti, o un oggetto a cui tengono). Il gruppo deve <strong>decidere insieme</strong>.</p>
+                <p class="text-slate-500 text-xs italic mt-1">Non c'è una risposta giusta — l'atto del sacrificio è ciò che conta, non il valore assoluto.</p>
+              </div>
+              <div>
+                <p class="text-green-400 text-sm font-semibold mb-1">Effetto:</p>
+                <p class="text-slate-400 text-sm">In Fase 3, i cristalli sul pavimento smettono di propagarsi oltre la metà Nord della stanza. La Zona Cristallina di Kethrar non si espande più — rimane entro 3m da lui invece di allargarsi. I PG hanno spazio libero per manovra.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bg-purple-900/20 border border-purple-600 rounded-lg p-4 mt-5">
+          <p class="text-purple-300 font-semibold mb-2">✨ Se tutti e tre i Sigilli sono attivi alla morte di Kethrar</p>
+          <p class="text-slate-300 text-sm">Gli altari pulsano in sincrono. La morte di Kethrar è "pulita" — il corpo si dissolve ordinatamente, le componenti rimangono raccoglibili, Vex al prossimo Pianerottolo avrà qualcosa in più da dire sui Sigilli e su chi li ha costruiti. Loot completo attivato.</p>
+        </div>
+      </section>
+
+      <!-- GUIDA FASI -->
+      <section class="bg-slate-800 border border-yellow-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🎯 Guida alle Fasi — Come Gestire il Combattimento</h2>
+
+        <div class="space-y-4">
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-yellow-600">
+            <h3 class="text-lg font-semibold text-yellow-300 mb-2">FASE 1 — Il Dotto (210 → 141 PF)</h3>
+            <p class="text-slate-300 mb-3"><strong>Kethrar è metodico, quasi didattico. Comanda le mummie, lancia composti a distanza, usa la Siringa in mischia solo se qualcuno gli si avvicina. Non sembra in difficoltà.</strong></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+              <div>
+                <p class="text-yellow-400 text-xs font-bold mb-1">PRIORITÀ DI KETHRAR</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>1. Mantenere le mummie tra sé e i PG</li>
+                  <li>2. Bersagliare il caster più pericoloso con Lancio Alchemico</li>
+                  <li>3. Usare Schermo di Mummia per deflettere almeno 1 attacco/round</li>
+                  <li>4. Pozione Rapida se scende sotto 170 PF</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-green-400 text-xs font-bold mb-1">OPPORTUNITÀ PER I PG</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>• Distruggere i conduit è più efficiente che attaccare le mummie direttamente</li>
+                  <li>• La Soglia del Danno (5 punti ignorati) rende gli attacchi deboli meno efficaci — concentrarsi</li>
+                  <li>• Sigillo Nord attivabile adesso — non aspettare</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-yellow-400 italic text-sm">Quando Kethrar raggiunge 140 PF: usa la Capsula. Descrivi la transizione. 1 round in cui è dentro la capsula — i PG possono agire, lui no. Le mummie rimaste continuano da sole.</p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-green-600">
+            <h3 class="text-lg font-semibold text-green-300 mb-2">FASE 2 — La Melma (140 → 71 PF)</h3>
+            <p class="text-slate-300 mb-3"><strong>Il ritmo cambia. Kethrar non parla più — si muove. È più aggressivo, più veloce in acqua, usa la pozza corrosiva strategicamente.</strong></p>
+
+            <div class="bg-amber-900/20 border border-amber-700 rounded p-3 mb-3">
+              <p class="text-amber-400 font-bold text-sm">Il momento del fuoco</p>
+              <p class="text-amber-200 text-xs">Il primo PG che usa un incantesimo di fuoco vede Kethrar recuperare PF invece di perderne. Questo è un momento di shock tattico — lascia che processino la situazione. Non servono spiegazioni — Fealer o Riven capiscono da soli (conoscono le Melme Tombali).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <p class="text-green-400 text-xs font-bold mb-1">PRIORITÀ DI KETHRAR</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>1. Spingere i PG nella pozza corrosiva</li>
+                  <li>2. Afferrare il PG più pericoloso con Tentacolo</li>
+                  <li>3. Generare Pseudopodi per creare pressione su più fronti</li>
+                  <li>4. Usare Dissoluzione Alchemica se 3+ PG sono nella stessa area</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 text-xs font-bold mb-1">ERRORI FATALI PER I PG</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>• Usare fuoco (cura lui)</li>
+                  <li>• Rimanere nella pozza ambrata</li>
+                  <li>• Non liberarsi dall'afferrare (7+ acido/turno)</li>
+                  <li>• Ignorare i Pseudopodi che si accumulano</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="text-green-400 italic text-sm mt-3">Quando Kethrar raggiunge 70 PF: raggiunge la parete, prende la fiala. La transizione è immediata — descrivila con calma, non come emergenza. Lui sa esattamente cosa sta facendo.</p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-5 border-2 border-amber-600">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">FASE 3 — Il Cristallizzato (70 → 0 PF)</h3>
+            <p class="text-slate-300 mb-3"><strong>Il finale. Kethrar non parla più — quasi. Solo quell'occhio che guarda. Il campo di battaglia si trasforma ogni round. La pressione è massima.</strong></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+              <div>
+                <p class="text-amber-400 text-xs font-bold mb-1">PRIORITÀ DI KETHRAR</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>1. Colpire con Pugno Cristallino chiunque gli sia vicino (3 attacchi)</li>
+                  <li>2. Espandere la Zona Cristallina verso i Sigilli — cerca di rendere difficile attivarli</li>
+                  <li>3. Eruzione Cristallina se 2+ PG sono nel raggio</li>
+                  <li>4. Barriera di Cristallo per ridurre danni</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-cyan-400 text-xs font-bold mb-1">OPPORTUNITÀ SPECIALE</p>
+                <ul class="text-slate-500 text-xs space-y-1">
+                  <li>• Tonante (Thunderwave, Shatter) è la vulnerabilità — ma richiede avvicinarsi</li>
+                  <li>• Essenza Purificata apre finestre di danno raddoppiato</li>
+                  <li>• Sigillo Sud-Ovest da attivare adesso (libera metà arena)</li>
+                  <li>• Il Frammento Narrativo predice i pattern cristalline</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-amber-400 italic text-sm">Se Riven è presente e la cicatrice brucia: fai il momento narrativo. Non interrompe il combattimento — Kethrar parla mentre combatte, una frase alla volta.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STRATEGIE -->
+      <section class="bg-slate-800 border border-green-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">💡 Strategia per i Giocatori — Riepilogo Rapido</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="text-xl font-semibold text-green-300 mb-3">✅ Da fare</h3>
+            <div class="space-y-2 text-sm">
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-green-300 font-semibold">F1: Distruggere i conduit prima delle mummie</p>
+                <p class="text-slate-400">Conduit a 20 PF, CA 10 — molto più veloci da eliminare. Mummia = si spegne istantaneamente.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-green-300 font-semibold">F1: Attivare Sigillo Nord il prima possibile</p>
+                <p class="text-slate-400">Richiede solo la chiave d'argento del L2. Elimina lo Schermo di Mummia per sempre.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-green-300 font-semibold">F2: Freddo e Necrotico, mai fuoco</p>
+                <p class="text-slate-400">Riven con Tocco Gelido è ideale. Colpo Necrotico di Valoris è vulnerabilità.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-green-300 font-semibold">F3: Avvicinarsi per Tonante</p>
+                <p class="text-slate-400">Thunderwave, Shatter: vulnerabilità. Sì, significa stare vicini ai pugni — è il rischio calcolato.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-green-300 font-semibold">F3: Essenza Purificata per finestre</p>
+                <p class="text-slate-400">1 azione, 1 dose = danni ×2 sul prossimo colpo sulla zona colpita. Fealer ha questa risorsa.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-red-300 mb-3">❌ Errori Fatali</h3>
+            <div class="space-y-2 text-sm">
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-red-300 font-semibold">F2: Fireball, Dardo di Fuoco, qualunque fuoco</p>
+                <p class="text-slate-400">Cura Kethrar. Uno spell slot 3° = ~28 HP regalati. Il party lo capirà al primo tentativo.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-red-300 font-semibold">F2: Restare nella pozza ambrata</p>
+                <p class="text-slate-400">1d6 acido per round si accumula. Uscire dalla pozza è sempre la prima priorità del proprio turno.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-red-300 font-semibold">F3: Lanciare spell di 1°–2° lv dentro 3m</p>
+                <p class="text-slate-400">La Presenza Anti-Magica vanifica gli incantesimi minori. Usare slot alti o attacchi fisici da vicino.</p>
+              </div>
+              <div class="bg-slate-900 rounded p-3">
+                <p class="text-red-300 font-semibold">F3: Ignorare la Zona Cristallina che avanza</p>
+                <p class="text-slate-400">Accumularsi di cristalli = l'arena diventa inaccessibile per i caster. Attivare Sigillo Sud-Ovest blocca l'espansione.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RICOMPENSE -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">🎁 Ricompense</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-slate-900 rounded-lg p-4 border border-slate-600">
+            <h3 class="text-lg font-semibold text-slate-300 mb-3">Loot Base (senza Sigilli)</h3>
+            <ul class="space-y-2 text-slate-400 text-sm">
+              <li>• <strong class="text-cyan-400">2 Cristalli Grandi</strong></li>
+              <li>• <strong class="text-slate-300">Fiale di mutazione incompleta (×2)</strong> — potenti ma instabili. Uso: effetti mutanti casuali. Non sicure.</li>
+              <li>• <strong class="text-slate-300">Formulario di Kethrar</strong> — taccuino con formule alchemiche. Utile per un alchimista esperto.</li>
+              <li>• <strong class="text-yellow-400">80 mo</strong> in strumenti e metalli preziosi nel laboratorio</li>
+            </ul>
+          </div>
+          <div class="bg-slate-900 rounded-lg p-4 border-2 border-amber-600">
+            <h3 class="text-lg font-semibold text-amber-300 mb-3">Loot Completo (tutti i Sigilli attivi)</h3>
+            <ul class="space-y-2 text-slate-400 text-sm">
+              <li>• <strong class="text-cyan-400">3 Cristalli Grandi</strong></li>
+              <li>• <strong class="text-amber-400">Frammenti di Cristallo Ambrato (×5)</strong> — materiale magico raro. Vex li compra a peso. Oppure: componenti per oggetti.</li>
+              <li>• <strong class="text-green-400">Componenti Melma Distillata</strong> — da Fealer raccoglibili. Stesso valore dell'Essenza Purificata ×3.</li>
+              <li>• <strong class="text-slate-300">Formulario di Kethrar</strong> (come sopra)</li>
+              <li>• <strong class="text-yellow-400">80 mo</strong> + <strong class="text-purple-400">Risposta Divina:</strong> Vex al Pianerottolo avrà un item speciale per il gruppo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4 border border-orange-700">
+          <h3 class="text-lg font-semibold text-orange-300 mb-3">⚔️ Favore Divino</h3>
+          <ul class="space-y-1 text-slate-400 text-sm">
+            <li>• <strong class="text-purple-400">Mystra:</strong> Completare il combattimento con il Frammento Narrativo attivo (+15% Favore — completare la comprensione di ciò che era)</li>
+            <li>• <strong class="text-yellow-400">Tempus:</strong> Sopravvivere alla Fase 3 senza nessun PG a 0 PF (+10% Favore)</li>
+            <li>• <strong class="text-cyan-400">Tymora:</strong> Attivare tutti e tre i Sigilli (+10% Favore — aver trovato la soluzione "giusta")</li>
+            <li>• <strong class="text-green-400">Bonus gruppo:</strong> Se qualcuno usa l'Essenza Purificata di propria iniziativa in Fase 3 senza suggerimenti (+5% Favore — intuizione tattica)</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-900 rounded-lg p-4 border border-cyan-700 mt-4">
+          <h3 class="text-lg font-semibold text-cyan-300 mb-2">🌊 Dopo la Vittoria</h3>
+          <p class="text-slate-300 text-sm mb-3">
+            Con la morte di Kethrar, le colonne d'acqua ascendente si spengono una per una.
+            L'arena si fa buia eccetto per la luce bioluminescente che filtra dal pavimento.
+            Al centro, dove era la capsula, una botola di pietra emerge leggermente dal pavimento —
+            non era visibile prima. Porta al Pianerottolo 2 e al prossimo ecosistema.
+          </p>
+          <p class="text-slate-400 text-sm italic">
+            "L'aria che sale da sotto è diversa. Non è l'aria delle fogne, non è l'aria del dungeon.
+            È aria di qualcosa di aperto. Come se da sotto ci fosse spazio — molto spazio."
+          </p>
+        </div>
+      </section>
+
+      <!-- NOTE DM -->
+      <section class="bg-slate-800 border border-red-900 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">📌 Note DM — Riepilogo Veloce da Tavolo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-900 rounded p-3">
+            <p class="text-yellow-400 font-bold mb-2">FASE 1 (210 → 141 PF)</p>
+            <ul class="text-slate-500 space-y-1">
+              <li>CA 15 | Velocità 9m</li>
+              <li>Soglia danno: -5 ogni attacco</li>
+              <li>Multiattacco: Lancio + Siringa</li>
+              <li>Bonus: Pozione Rapida (3/combat)</li>
+              <li>Reazione: Schermo Mummia</li>
+              <li>Transizione a 140 PF: entra capsula (1 round)</li>
+            </ul>
+          </div>
+          <div class="bg-slate-900 rounded p-3">
+            <p class="text-green-400 font-bold mb-2">FASE 2 (140 → 71 PF)</p>
+            <ul class="text-slate-500 space-y-1">
+              <li>CA 13 | Velocità 9m/nuota 15m</li>
+              <li>IMM: veleno, acido, FUOCO (cura!)</li>
+              <li>VULN: freddo, necrotico</li>
+              <li>Multi: 2× Tentacolo + Schizzo</li>
+              <li>Bonus: Pseudopodo (max 2)</li>
+              <li>Reazione: Schizz Reattivo</li>
+              <li>Transizione a 70 PF: fiala immediata</li>
+            </ul>
+          </div>
+          <div class="bg-slate-900 rounded p-3">
+            <p class="text-amber-400 font-bold mb-2">FASE 3 (70 → 0 PF)</p>
+            <ul class="text-slate-500 space-y-1">
+              <li>CA 18 | Velocità 6m</li>
+              <li>IMM: veleno, acido | RES: fuoco, freddo</li>
+              <li>VULN: TONANTE</li>
+              <li>Multi: 3× Pugno Cristallino</li>
+              <li>Passivi: Zona Cristallina, Anti-Magia 1°-2°</li>
+              <li>Reazione: Barriera Cristallo (-1d8)</li>
+              <li>Essenza Purificata → finestra danno ×2</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 mt-3 text-xs">
+          <div class="bg-purple-900/30 border border-purple-700 rounded p-3 text-center">
+            <p class="text-purple-400 font-bold mb-1">Sigillo Nord</p>
+            <p class="text-slate-500">Chiave argento L2</p>
+            <p class="text-slate-500">→ Mummie disabilitate</p>
+          </div>
+          <div class="bg-blue-900/30 border border-blue-700 rounded p-3 text-center">
+            <p class="text-blue-400 font-bold mb-1">Sigillo Sud-Est</p>
+            <p class="text-slate-500">Tomo Mystra (bruciato)</p>
+            <p class="text-slate-500">→ Pozza neutra / cristalli S dimezzati</p>
+          </div>
+          <div class="bg-red-900/30 border border-red-700 rounded p-3 text-center">
+            <p class="text-red-400 font-bold mb-1">Sigillo Sud-Ovest</p>
+            <p class="text-slate-500">Offerta libera</p>
+            <p class="text-slate-500">→ Zona Cristallina bloccata</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </DMAuthGuard>
+</MainLayout>
