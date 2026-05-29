@@ -43,7 +43,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <ul class="space-y-2 text-sm text-gray-300">
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Stato delle altre gilde:</strong> decidi prima di sederti a tavola quale gilda è avanti, quale indietro, se ci sono feriti o morti. Vedi Parte III per le opzioni.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Nodi della Trama raccolti:</strong> conta quanti Nodi del Piano 2 il party ha registrato sulla Pietra. Determina cosa succede al Pianerottolo. Vedi Parte VI.</span></li>
-        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Riserva Sigillata:</strong> il party ha trovato la Zona 26? Ha aperto il forziere con la Chiave di Ferro del Piano 1? Se sì, hanno il Cristallo Meridiano e l'Anello di Resistenza ai Veleni.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Riserva Sigillata:</strong> il party ha trovato la Zona 26? Ha aperto il forziere con la Chiave di Ferro del Piano 1? Se sì, hanno la Lettera Sigillata dell'Architetto. Vedi Parte V per la reazione di Vex e la scelta degli oggetti.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Vex e Riven:</strong> la cicatrice si è espansa fino al gomito con venature blu. Vex la vedrà subito. Prepara la reazione — è diversa dalla prima volta. Vedi Parte V.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Myra:</strong> se il party torna in città, stabilisci chi è Myra, dove trovarla e cosa sa. <span class="text-yellow-400">[Placeholder — definisci il personaggio prima della sessione]</span></span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Inventario Vex:</strong> controlla la Parte VII — nuovi oggetti disponibili per il Piano 3. Decidi eventuali prezzi personalizzati.</span></li>
@@ -430,22 +430,81 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </div>
       </div>
 
-      <!-- Cristallo Meridiano -->
+      <!-- Lettera Sigillata dell'Architetto -->
       <div class="bg-cyan-900/20 border border-cyan-700/30 rounded-lg p-5 mb-5">
-        <h3 class="text-lg font-bold text-cyan-400 mb-3">💎 Il Cristallo Meridiano <span class="text-xs text-gray-500 font-normal">(solo se trovato dalla Riserva Sigillata)</span></h3>
-        <div class="bg-black/40 border-l-4 border-cyan-500 p-4 rounded-r">
+        <h3 class="text-lg font-bold text-cyan-400 mb-3">📜 La Lettera Sigillata dell'Architetto <span class="text-xs text-gray-500 font-normal">(solo se trovata dalla Riserva Sigillata)</span></h3>
+
+        <div class="bg-amber-900/20 border border-amber-700/30 rounded p-4 mb-3">
+          <p class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-2">📢 Read-Aloud — Apertura del baule nella Riserva Sigillata</p>
+          <p class="italic text-amber-100 text-sm leading-relaxed">
+            Sul fondo del baule, sotto tutto il resto, c'è una busta. Carta spessa — non pergamena, non cuoio, qualcosa di intermedio. Vecchia, ma integra come se il tempo non l'avesse toccata.
+          </p>
+          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
+            Il sigillo di cera non ha un colore preciso. Guardarla da angolazioni diverse cambia qualcosa — ora dorato, ora blu scuro, ora niente. Il simbolo impressovi non è un simbolo divino che riconoscete, non è un'insegna di gilda. Somiglia a una notazione architettonica — il timbro di chi ha progettato qualcosa, non di chi l'ha santificato.
+          </p>
+          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
+            Sul fronte, in una scrittura formale e precisa: <em>"Al Custode del Pianerottolo."</em>
+          </p>
+          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
+            Nessun nome. Nessuna data. Nessun mittente. La carta non odora di muffa nonostante l'età — odora di minerale pulito, di roccia dopo la pioggia.
+          </p>
+        </div>
+
+        <div class="bg-black/40 border-l-4 border-cyan-500 p-4 rounded-r mb-3">
+          <p class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">📢 Reazione di Vex</p>
           <p class="italic text-cyan-100 text-sm leading-relaxed">
-            Vex vede il cristallo e — per un momento breve, quasi impercettibile — smette di raddrizzare l'aureola.
+            Vex vede la lettera. Le ali si fermano del tutto — non rallentano, si bloccano. L'aureola smette di scintillare per quasi dieci secondi.
           </p>
           <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">
-            "Dove l'avete trovato."
+            "Questo sigillo." Non è una domanda. Si avvicina di un passo, ma non la tocca. "Non è nel mandato corrente." Pausa. "È anteriore al mandato corrente. Di molto."
           </p>
           <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">
-            <span class="text-gray-400 not-italic">[Dopo che lo dite:]</span> "La Riserva." Annuisce una volta, lento. "Allora avevate la chiave del Piano 1. Avete tenuto la chiave." Qualcosa nel suo tono è diverso — come se questo lo informasse di qualcosa che stava cercando di capire. "Questo cristallo risponde alle anomalie acquatiche. Vibra entro nove metri da loro." Pausa. "Non posso dirvi di più su cosa siano quelle anomalie — non qui, non ancora. Ma il cristallo vi guiderà. Tenetelo."
+            Le ali riprendono — lente, quasi inconsapevoli.
           </p>
           <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">
-            Le ali si agitano una volta, brevemente. <em>"Qualcuno lo ha costruito per voi. Non per voi specificamente — ma per chiunque fosse abbastanza attento da arrivare fino lì. E voi ci siete arrivati."</em>
+            "È indirizzata a me. Non al mio nome — al mio ruolo." Le venature dorate pulsano irregolari. "Qualcuno sapeva che ci sarei stato. Non so come. Questo posto è stato costruito sapendo chi ci avrei messo." Una pausa più lunga. "Non avrei dovuto essere sorpreso da niente qui dentro."
           </p>
+          <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">
+            Non lo dice come ammissione di debolezza. Lo dice come qualcuno che trova un errore contabile impossibile.
+          </p>
+          <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">
+            Raddrizza l'aureola — un gesto automatico. "Il protocollo è chiaro. Chi porta questa lettera ha dimostrato un livello di attenzione che il mandato ordinario non copre." Guarda verso la sua postazione. "Ho riserve per questo. Scegliete uno."
+          </p>
+        </div>
+
+        <div class="bg-gray-800/40 border border-gray-700 rounded p-4 mb-3">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">📋 Scelta — 4 oggetti (uno solo)</p>
+          <div class="space-y-3">
+
+            <div class="bg-gray-800/60 border border-cyan-800/50 rounded p-3">
+              <p class="font-bold text-cyan-200 text-sm">Sigillo di Passaggio</p>
+              <p class="text-gray-500 text-xs italic mb-1">Tavoletta di pietra incisa — singolo uso</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Azione: sospende un effetto ambientale attivo nel dungeon divino — campo, aura, trappola ricorrente — in una zona di 6 metri per 1 minuto. Il dungeon riconosce l'autorità del sigillo e attende. Non disattiva, non distrugge.</p>
+            </div>
+
+            <div class="bg-gray-800/60 border border-amber-800/50 rounded p-3">
+              <p class="font-bold text-amber-200 text-sm">Frammento di Grazia Primaria</p>
+              <p class="text-gray-500 text-xs italic mb-1">Cristallo — singolo uso</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Azione bonus: tutti i membri del party entro 9 metri recuperano 2d6 PF e rimuovono una condizione a scelta tra <em>spaventato</em>, <em>avvelenato</em> o <em>trattenuto</em>.</p>
+            </div>
+
+            <div class="bg-gray-800/60 border border-red-800/50 rounded p-3">
+              <p class="font-bold text-red-200 text-sm">Tavoletta dell'Ultimo Accordo</p>
+              <p class="text-gray-500 text-xs italic mb-1">Tavoletta sottile — singolo uso</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Reazione: quando un alleato scende a 0 PF per effetto di un meccanismo divino — campo, aura, trappola, non un attacco diretto — si frantuma la tavoletta. Il danno viene annullato e il personaggio resta a 1 PF.</p>
+            </div>
+
+            <div class="bg-gray-800/60 border border-purple-800/50 rounded p-3">
+              <p class="font-bold text-purple-200 text-sm">Sfera dell'Intervallo</p>
+              <p class="text-gray-500 text-xs italic mb-1">Sfera di vetro opaco — singolo uso</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Azione: lanciata a terra, crea una zona di 3 metri di raggio per 3 round attraversabile solo dai personaggi del party. Mostri e effetti ostili non possono entrarvi né uscirne dall'interno.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
+          <strong class="text-cyan-400">📋 Nota DM:</strong> Vex non descrive gli oggetti in dettaglio — li presenta in modo sobrio, come chi conosce la funzione ma non ha mai avuto occasione di usarli. Se pressato: <em>"Li tenevo per questo protocollo. Non mi era mai stato chiesto di attivarli."</em> L'aureola scintilla irregolare per qualche secondo. <em>"Finora."</em>
         </div>
       </div>
 
@@ -562,7 +621,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 
             <div class="bg-gray-800/60 rounded p-3 text-xs">
               <p class="text-yellow-400 font-bold mb-1">Serath Vael'Toran — Guildmaster</p>
-              <p class="text-gray-400">Vuole un debrief completo. È orgoglioso ma nascosto sotto la professionalità. Domande su: il boss, le altre gilde, i cristalli, oggetti recuperati. Sarà interessato alla Bussola Dorata. Se hanno il Cristallo Meridiano: <em>"Non toccatelo finché non lo facciamo esaminare."</em> Poi non lo fa esaminare.</p>
+              <p class="text-gray-400">Vuole un debrief completo. È orgoglioso ma nascosto sotto la professionalità. Domande su: il boss, le altre gilde, i cristalli, oggetti recuperati. Sarà interessato alla Bussola Dorata. Se hanno la Lettera Sigillata: <em>"Questa lettera non doveva essere al Piano 2. Chi l'ha messa lì sapeva cose che non avrebbe dovuto sapere."</em> La esamina brevemente. Non la restituisce subito.</p>
             </div>
 
             <div class="bg-gray-800/60 rounded p-3 text-xs">
@@ -577,7 +636,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 
             <div class="bg-gray-800/60 rounded p-3 text-xs">
               <p class="text-orange-400 font-bold mb-1">Silas "Shadowstep" Greycloak — Triumvirato Rogue</p>
-              <p class="text-gray-400">Interessatissimo alla Riserva Sigillata (se l'hanno trovata). All'Anello. Al Cristallo Meridiano. Al Formulario di Kethrar (se fosse già rilevante). A Thalio nello specifico: <em>"Hai tenuto d'occhio i tuoi compagni? Tutti e cinque tornati interi?"</em></p>
+              <p class="text-gray-400">Interessatissimo alla Riserva Sigillata (se l'hanno trovata). Alla Lettera Sigillata e a cosa ha dato Vex in cambio — vuole sapere esattamente quale oggetto hanno scelto. Al Formulario di Kethrar (se fosse già rilevante). A Thalio nello specifico: <em>"Hai tenuto d'occhio i tuoi compagni? Tutti e cinque tornati interi?"</em></p>
             </div>
 
             <div class="bg-gray-800/60 rounded p-3 text-xs border border-yellow-700/50">
@@ -599,7 +658,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               <li>• <strong>Quartier Generale della gilda</strong> — debrief, riposo, cibo vero</li>
               <li>• <strong>Tempio di Tymora</strong> — Valoris; possibile comunicazione divina</li>
               <li>• <strong>Mercato alchemico</strong> — vendita componenti Piano 2, acquisto materiali</li>
-              <li>• <strong>Fabbro/artigiano magico</strong> — identificare oggetti (Cristallo Meridiano, Anello)</li>
+              <li>• <strong>Archivista/esperto di sigilli</strong> — esaminare il sigillo architettonico sulla Lettera Sigillata</li>
               <li>• <strong>Archivio/Biblioteca</strong> — Fealer: cercare informazioni sui Nodi della Trama, sull'acqua ambrata</li>
             </ul>
           </div>

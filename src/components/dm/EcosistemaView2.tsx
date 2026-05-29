@@ -366,18 +366,17 @@ export default function EcosistemaView2() {
       descrizione: 'La porta con la serratura a goccia d\'acqua si apre con un click pesante. Una stanza circolare perfettamente asciutta — l\'unica stanza completamente asciutta dell\'intero Piano 2. L\'aria è secca e fredda. Le pareti sono lisce, levigate, senza scritte né decorazioni.\n\nOltre le quattro colonne di pietra che reggono il soffitto basso, al centro della stanza: un forziere.\n\nNon è il forziere di un ladro o di un contrabbandiere. È massiccio, lungo almeno due metri, di ferro nero intarsiato con simboli d\'acqua e onde stilizzate in bronzo antico — qualcosa che qualcuno ha costruito per durare secoli. Due serrature distinte: la più grande sul bordo superiore, la più piccola sul pannello frontale.\n\nQuesta stanza è stata sigillata intenzionalmente. Qualcuno voleva che ciò che conteneva restasse protetto dall\'acqua per sempre.',
       elementi: [
         'IL FORZIERE — Serratura superiore: si apre con la Chiave di Ferro dal Piano 1 (quella trovata al livello precedente). Serratura frontale: non si apre, appartiene a un sistema diverso.',
-        'CONTENUTO DEL FORZIERE: 1 CRISTALLO GRANDE + 3 Cristalli Minuscoli, 2x Pozione di Guarigione Superiore (4d4+4), ANELLO DELLA RESISTENZA AI VELENI (Ring of Poison Resistance — raro, attunement, vantaggio TS veleno + resistenza danni veleno)',
-        'IL CRISTALLO MERIDIANO — Tra i cristalli nel forziere, uno è diverso: lungo 15cm, blu ghiaccio, tagliato con sfaccettature impossibilmente precise. Al tatto, vibra impercettibilmente. Arcano CD 13: emette una risonanza debole — la stessa firma energetica delle anomalie acquatiche del dungeon. Natura CD 14 (Fealer): "Sento che risponde a qualcosa... come un\'eco. Come se cercasse qualcosa che non è qui." Proprietà: entro 9m da un Nodo della Trama o da un\'anomalia acquatica attiva, la vibrazione diventa percettibile e il cristallo emette luce tenue azzurra. Non è un\'arma — è uno strumento.',
+        'CONTENUTO DEL FORZIERE: 1 CRISTALLO GRANDE + 3 Cristalli Minuscoli, 2x Pozione di Guarigione Superiore (4d4+4), LETTERA SIGILLATA DELL\'ARCHITETTO (sul fondo, sotto tutto il resto)',
+        'LA LETTERA SIGILLATA — Carta spessa, vecchia ma integra come se il tempo non l\'avesse toccata. Sigillo di cera iridescente (ora dorato, ora blu scuro a seconda dell\'angolazione) con simbolo architettonico — non divino, non araldico. Sul fronte in scrittura formale: "Al Custode del Pianerottolo." Nessun nome, nessuna data, nessun mittente. La carta odora di minerale pulito nonostante l\'età. Portata a Vex al Pianerottolo attiva il Protocollo di Assistenza Eccezionale: scelta tra 4 oggetti fuori dal mandato ordinario.',
         'Investigare CD 16 (il forziere): sul fondo, sotto un doppio fondo, una piccola placca di metallo incisa con lo stesso alfabeto sconosciuto dei pattern di Zona 18. Non è leggibile senza Comprehend Languages, ma è evidentemente non decorativa — sembra un\'istruzione.'
       ],
       pericoli: 'Nessuno',
       cristalli: '1 cristallo grande + 3 cristalli minuscoli (nel forziere)',
-      favoreDivino: 'Mystra: identificare le proprietà del Cristallo Meridiano (+15%). Tymora: aprire la stanza e il forziere (due chiavi diverse trovate in due piani diversi — premiata la pazienza)',
+      favoreDivino: 'Mystra: decifrare il sigillo architettonico sulla Lettera Sigillata (+15%). Tymora: aprire la stanza e il forziere (due chiavi diverse trovate in due piani diversi — premiata la pazienza)',
       noteDM: [
         'Grande ricompensa per chi ha esplorato a fondo e conservato la Chiave di Ferro dal Piano 1.',
-        'Il Cristallo Meridiano è uno strumento narrativo per i livelli successivi: segnalerà anomalie e Nodi della Trama automaticamente. Darà ai giocatori una ragione meccanica per esplorare anziché rushare.',
-        'La placca con l\'alfabeto sconosciuto è lore pura — stessa grafia dei pattern di condensazione in Zona 18. Chi ci ha messo questo qui sapeva cose che i contrabbandieri non potevano sapere.',
-        'Il Ring of Poison Resistance è molto utile contro il boss. Non è nascosto — è nel forziere aperto.'
+        'La Lettera Sigillata è indirizzata al "Custode del Pianerottolo" — il ruolo di Vex. Portarla al Pianerottolo attiva il Protocollo di Assistenza Eccezionale: Vex offre una scelta tra 4 oggetti fuori dal mandato ordinario. È il momento più spiazzante per lui in tutta la campagna.',
+        'La placca con l\'alfabeto sconosciuto è lore pura — stessa grafia dei pattern di condensazione in Zona 18. Chi ci ha messo questo qui sapeva cose che i contrabbandieri non potevano sapere.'
       ]
     },
     {
@@ -499,8 +498,7 @@ export default function EcosistemaView2() {
     },
     oggettiMagici: [
       'Spada corta +1 (dal boss) — prima arma magica del dungeon',
-      'Ring of Poison Resistance (Zona 26, opzionale)',
-      'Cristallo Meridiano — rileva anomalie acquatiche entro 9m (Zona 26, opzionale)',
+      'Lettera Sigillata dell\'Architetto (Zona 26, opzionale) — ticket per scelta tra 4 oggetti da Vex al Pianerottolo',
       'Pergamena di Misty Step (Zona 24, opzionale)',
       'Pugnale d\'argento (Zona 19, opzionale)'
     ],
@@ -1453,7 +1451,7 @@ export default function EcosistemaView2() {
                 <h4 className="font-semibold text-amber-400 mb-2">Semi per il Piano 3</h4>
                 <ul className="space-y-1 text-xs text-slate-300">
                   <li>• Polvere dorata del boss → collegamento al Primordiale</li>
-                  <li>• Cristallo Meridiano → risuona con le anomalie acquatiche dei livelli successivi</li>
+                  <li>• Lettera Sigillata → attiva protocollo Vex, oggetto scelto utile al Piano 3</li>
                   <li>• Bussola che cerca qualcosa "sotto"</li>
                   <li>• Scala bianca → il dungeon diventa più strano</li>
                 </ul>
