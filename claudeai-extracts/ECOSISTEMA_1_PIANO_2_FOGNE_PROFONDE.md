@@ -52,8 +52,8 @@ Struttura **circolare a tre percorsi** che partono da un hub centrale e convergo
                                 |
                       [16-GRANDE CISTERNA]
                      /          |          \
-          [17-CORRENTI     [20-GALLERIA    [22-AVAMPOSTO
-            INVERSE]       DEI GRICK]      ABBANDONATO]
+          [17-CORRENTI     [20-GALLERIA    [22-LA QUADRA
+            INVERSE]       DEI GRICK]      NORD]
                |                |                |
           [18-ACQUA        [21-SALA         [23-ACCAMPAMENTO
           ASCENDENTE]      DELLE CHIUSE]     DEI SOMMERSI]
@@ -74,7 +74,7 @@ Struttura **circolare a tre percorsi** che partono da un hub centrale e convergo
                      [28-SCALA PER IL LIVELLO 3]
 ```
 
-**Passaggio nascosto (18↔22):** Un tunnel parzialmente allagato collega la Camera dell'Acqua Ascendente all'Avamposto Abbandonato. Percezione CD 16 per trovarlo da entrambi i lati. Permette ai giocatori di spostarsi tra i percorsi senza tornare alla Cisterna.
+**Passaggio nascosto (18↔22):** Un tunnel parzialmente allagato collega la Camera dell'Acqua Ascendente alla Quadra Nord. Percezione CD 16 per trovarlo da entrambi i lati. Permette ai giocatori di spostarsi tra i percorsi senza tornare alla Cisterna.
 
 ---
 
@@ -193,9 +193,9 @@ Le torce qui **bruciano con fiamma azzurra** invece che arancione. La luce è su
 
 - **Fiamme azzurre:** Arcano CD 13 rivela saturazione magica nell'aria — non pericolosa ma indica forte presenza di energia arcana residua. "Come essere dentro un incantesimo che qualcuno ha lanciato molto tempo fa."
 
-- **Muro incrinato (a 15m):** Percezione CD 14 rivela una crepa sottile nel muro destro. Investigare CD 16 o Attrezzi da scasso CD 15: il muro è sottile, si può sfondare con forza (Atletica CD 14 o 10 danni) → rivela **passaggio nascosto** verso Zona 22 (Avamposto Abbandonato, percorso Est)
+- **Muro incrinato (a 15m):** Percezione CD 14 rivela una crepa sottile nel muro destro. Investigare CD 16 o Attrezzi da scasso CD 15: il muro è sottile, si può sfondare con forza (Atletica CD 14 o 10 danni) → rivela **passaggio nascosto** verso Zona 22 (La Quadra Nord, percorso Est)
 
-- **Tesoro:** Incastrato tra le rocce del primo crollo: 18 mo + una fiala di vetro blu sigillata (Antitossina, 50 mo)
+- **Tesoro:** Incastrato tra le rocce del primo crollo: 2 Cristalli Minuscoli + una fiala di vetro blu sigillata (Antitossina, 50 mo)
 
 **Pericoli:** Corrente d'acqua, crolli, scivolosità
 
@@ -315,9 +315,9 @@ A metà galleria (15m), un pilastro crollato emerge dall'acqua. Oltre il pilastr
   - **Se ridotti sotto 8 PF:** Fuggono attraverso cunicoli nelle nicchie (troppo stretti per i PG)
 
 - **Nicchie laterali (6):** Vecchie alcove di stoccaggio, ora tane dei Grick
-  - Nicchia 3: 22 mo + osso intagliato con rune (vendibile 8 mo, non magico)
+  - Nicchia 3: 2 Cristalli Minuscoli + osso intagliato con rune (vendibile 8 mo, non magico)
   - Nicchia 5: Nido con uova gelatinose (4-5 uova di Grick, nessun valore ma Natura CD 14 rivela che un Grick con uova è più aggressivo — questo spiega perché non fuggono subito)
-  - Nicchia 6 (fondo galleria): Percezione CD 14 → vecchia sacca di cuoio contenente: 30 mo + **Pozione di Guarigione (2d4+2)** + un rotolo di pergamena con una mappa parziale del Piano 2 (mostra le tre uscite dalla Cisterna e il percorso fino al Collettore, ma non le stanze opzionali)
+  - Nicchia 6 (fondo galleria): Percezione CD 14 → vecchia sacca di cuoio contenente: 3 Cristalli Minuscoli + **Pozione di Guarigione (2d4+2)**
 
 - **Solchi sul soffitto:** Atletica CD 16 per arrampicarsi e ispezionare → viscosità traslucida con proprietà anestetiche (Natura CD 13). Componente alchemico: 2 dosi di "Muco di Grick" — applicabile su armi, CD Costituzione 11 o bersaglio ha svantaggio al prossimo tiro per colpire (monouso per dose, 15 mo ciascuna se vendute)
 
@@ -340,118 +340,100 @@ A metà galleria (15m), un pilastro crollato emerge dall'acqua. Oltre il pilastr
 
 ### **ZONA 21 — LA SALA DELLE CHIUSE** (Percorso Centrale)
 
-**Tipo:** Puzzle meccanico + Pericolo ambientale
+**Tipo:** Sfida fisica + Scoperta ambientale
 
 **Descrizione:**
-Camera quadrata (8x8m) con soffitto basso (3m). Al centro, un complesso meccanismo di bronzo e ferro: quattro grandi **ruote di chiusa** montate su un pilastro centrale, orientate verso i quattro punti cardinali. Ogni ruota è collegata a tubature che spariscono nelle pareti.
+Camera ottagonale (12x12m) con soffitto insolitamente alto (18m). Al centro, una colonna d'acqua sale dal pavimento fino quasi al soffitto: stessa anomalia di Zona 18, ma qui è concentrata, potente, quasi solida — larga 7.5 metri, alta 15 metri, ruota lentamente su sé stessa mentre sale. L'acqua riempie la stanza per i primi 2 metri dal pavimento.
 
-Il pavimento è una griglia di metallo sotto cui si vede acqua scura che scorre rapidamente. L'aria vibra con il rumore del meccanismo idraulico.
+A 15 metri d'altezza, una piattaforma di pietra aggettante regge una grande ruota di bronzo — la chiusa vera e propria. La scala che portava alla piattaforma è crollata. Le pareti sono lisce, bagnate, senza appigli.
 
-Sulla parete Ovest, un pannello di bronzo mostra un **diagramma** inciso: quattro cerchi collegati da linee, con simboli accanto a ciascuno. Sotto, in Comune antico: *"Le acque obbediscono a chi comprende il loro flusso. Ma chi sbaglia, affoga nel suo errore."*
+Il passaggio verso Zona 25 è sigillato da una saracinesca di ferro sulla parete Sud. Sopra la saracinesca, inciso nella pietra: *"L'acqua non conosce il basso. Nemmeno tu."*
 
 **Elementi:**
 
-### Il Puzzle delle Chiuse
+**OBIETTIVO:** Raggiungere la piattaforma a 15m e girare la ruota di bronzo per aprire la saracinesca verso Zona 25.
 
-Obiettivo: aprire il passaggio verso il Collettore Centrale (Zona 25) regolando correttamente il flusso d'acqua.
+**La Colonna d'Acqua — Logica Invertita:**
+Larga 7.5m, non si può aggirare restando a piedi asciutti. La logica è invertita rispetto alla natura:
+- **Stando fermi dentro la corrente:** il flusso porta lentamente in superficie (~3m/round). Nessun check.
+- **Qualsiasi azione intrapresa** (nuotare, scalare, combattere, lanciare incantesimi): causa un rapido affondamento verso il fondo.
 
-**Le quattro ruote:**
-- **Ruota Nord** (simbolo: triangolo verso l'alto) — Controlla l'afflusso dalla superficie
-- **Ruota Sud** (simbolo: triangolo verso il basso) — Controlla il deflusso verso le profondità
-- **Ruota Est** (simbolo: cerchio) — Controlla la pressione nelle tubature orientali
-- **Ruota Ovest** (simbolo: quadrato) — Controlla la pressione nelle tubature occidentali
+Entrare nella colonna: TS Costituzione CD 11 per il freddo (1d4 danni da freddo, non bloccante).
 
-Ogni ruota può essere girata in tre posizioni: **Chiusa** (posizione attuale), **Mezza apertura**, **Apertura completa**.
+**La Ruota:**
+È sommersa nella colonna d'acqua a 15m di quota. Per raggiungerla i PG devono poter respirare sott'acqua (Waterbreathing, pozione, trattenere il respiro). La ruota è bloccata da un meccanismo arrugginito: Forza CD 15 per sbloccarla. Appena girata, la saracinesca si apre con un boato idraulico sordo e la colonna si ferma.
 
-**Diagramma sulla parete:**
-Il diagramma mostra che:
-1. Se Nord è completamente aperta, il livello dell'acqua nella stanza sale
-2. Se Sud è completamente aperta, l'acqua defluisce
-3. Est e Ovest devono essere in equilibrio (stessa posizione) o le tubature scoppiano
-4. Il passaggio si apre solo quando l'acqua raggiunge esattamente il livello della griglia (livello attuale)
+**Prima Chiave a Spirale:**
+Era perennemente tenuta in aria dalla forza ascendente della colonna, invisibile nell'acqua in moto. Quando la ruota viene girata e la colonna si ferma, cade nella pozza ai piedi della colonna. La testa della chiave ha la forma di una spirale d'acqua — la stessa del movimento rotante della colonna stessa. È la prima delle due chiavi necessarie per sbloccare i meccanismi del portone blindato verso la Zona 27.
 
-**Soluzione:**
-- Nord: Mezza apertura (aggiunge acqua lentamente)
-- Sud: Mezza apertura (defluisce alla stessa velocità)
-- Est: Apertura completa
-- Ovest: Apertura completa
-- Risultato: l'acqua rimane stabile, la pressione nelle tubature laterali forza il meccanismo della porta sud ad aprirsi
+**Tentativi Alternativi:**
+- Scalare la parete: Atletica CD 20 (liscia, bagnata e alta 15m), ogni fallimento = 1d6 danni caduta
+- Fly/Levitate: funzionano per arrivare in cima — ma la ruota è sott'acqua, serve comunque modo per respirare
+- Spider Climb: valido per la parete, ma la ruota è immersa
 
-**Conseguenze degli errori:**
+**Pannello laterale sulla piattaforma:** Investigare CD 15 → 2 Cristalli Minuscoli + note tecniche sul sistema idraulico (in lingua sconosciuta — stesso alfabeto dei pattern di Zona 18)
 
-**Se Est ≠ Ovest (posizioni diverse):**
-- Tubature che scoppiano: 2d6 danni contundenti a tutti nella stanza (TS Destrezza CD 14 per dimezzare), getti d'acqua ad alta pressione
-- Le ruote si resettano. Si può riprovare.
+**Collegamento Zona 27:** Girare la ruota attiva il circuito idraulico del Collettore. In Zona 27 (boss fight), il pannello sulla parete Ovest diventa operativo: consente di forzare l'acqua BASSA per 2 round. Usabile 2 volte. I PG sentiranno un clic meccanico lontano — non sanno ancora cosa significa.
 
-**Se Nord completamente aperta + Sud non completamente aperta:**
-- L'acqua sale rapidamente — 30cm al minuto
-- I PG hanno 10 minuti prima che la stanza sia completamente allagata
-- Girare Sud su completa apertura svuota la stanza in 3 minuti
+**Pericoli:** Affogamento per chi esaurisce il respiro nella colonna, caduta dalla piattaforma (3d6 danni, 15m), freddo della colonna (1d4)
 
-**Se tutte chiuse (reset):**
-- Nulla succede. Stato iniziale.
-
-**Indizi:**
-- Investigare CD 13 sul diagramma: "I triangoli indicano direzione del flusso — su e giù. Il cerchio e il quadrato devono essere uguali."
-- Arcano CD 14: "Sento la pressione magica nelle tubature Est e Ovest — devono essere aperte completamente per sbloccare qualcosa."
-- Percezione CD 12: "C'è una porta sulla parete Sud, nascosta dietro una lastra di ferro. Un meccanismo la tiene chiusa — sembra collegato alle tubature."
-
-**Tesoro nella camera:**
-- Sul pilastro centrale, incastonato: 1 cristallo medio (visibile solo dopo aver risolto il puzzle — emerge dal meccanismo)
-- Dentro il pannello del diagramma (Investigare CD 15): cavità nascosta con 35 mo + una chiave di bronzo piccola (apre un lucchetto nella Zona 24)
-
-**Pericoli:** Tubature che scoppiano, allagamento potenziale
-
-**Cristalli:** 1 cristallo medio (dal meccanismo)
+**Cristalli:** Nessuno (2 Cristalli Minuscoli nel pannello laterale sulla piattaforma)
 
 **Favore Divino:**
-- Mystra: risolvere il puzzle al primo tentativo (+10% Favore)
-- Tymora: risolvere senza subire danni (+10% Favore)
+- Tymora: primo PG ad entrare nella colonna senza tentare scale o volo prima — coraggio puro (+10%)
+- Mystra: capire la logica inversa della colonna (immobilità = salita) prima di provarla (Arcano CD 13, +10%)
 - Tempus: nessuno (non è un test di battaglia)
 
-**Note DM:** Questo puzzle è più meccanico e meno logico rispetto alle Quattro Leve del Piano 1. I giocatori possono sperimentare senza conseguenze mortali — gli errori fanno male ma non uccidono. L'obiettivo è farli sentire intelligenti quando capiscono il sistema. Se sono bloccati oltre 15 minuti, fai fare un check di Investigare CD 11 per un hint aggiuntivo.
+**Note DM:**
+- L'ostacolo è doppio: capire la logica inversa (fare niente per salire) e poi respirare sott'acqua per girare la ruota.
+- La larghezza di 7.5m rende impossibile evitare la colonna senza magia — Fealer con gli stivali alati non può semplicemente volare intorno. Può usarli per salire fuori dalla colonna, ma la ruota è sott'acqua comunque.
+- Descrivi la colonna con cura: "L'acqua ruota su sé stessa come un pilastro vivo, occupa quasi tutta la stanza. Non schizza, non fa rumore. Sale e basta."
+- Il momento clue: rallenta il tempo quando un PG si immobilizza e sale. Descrivi la sensazione di lasciarsi andare nell'acqua impossibile, il soffitto che si avvicina.
+- PAYOFF IN ZONA 27: i PG che hanno capito la logica inversa della colonna riconoscono le correnti ascendenti della boss room.
 
 ---
 
-### **ZONA 22 — L'AVAMPOSTO ABBANDONATO** (Percorso Est)
+### **ZONA 22 — LA QUADRA NORD** (Percorso Est)
 
-**Tipo:** Esplorazione + Lore + Combattimento minore
+**Tipo:** Hub — 4 sub-aree
 
 **Descrizione:**
-Un'ampia caverna irregolare (12x10m) con evidenti segni di occupazione prolungata. A differenza del piccolo accampamento del Piano 1 (Zona 12), questo era un vero avamposto: tre strutture di legno e tela (una sorta di baracche), un pozzo, un'area cucina con focolare di pietra, rastrelliere per armi ormai vuote, e casse impilate in modo ordinato.
+Una grande stanza quadrata che funge da snodo per l'ala nord del livello. È divisa in quattro quadranti distinti, ciascuno corrispondente a una delle aree operative originarie del complesso.
 
-Ma qualcosa è andato terribilmente storto.
-
-Le baracche sono intatte ma ricoperte di una pellicola gelatinosa traslucida. Il focolare contiene cenere fredda sotto uno strato della stessa sostanza. Le rastrelliere sono piegate come se qualcuno con forza innaturale le avesse contorte. E ovunque — sul pavimento, sulle pareti, sulle casse — **impronte** di qualcosa che cammina su due gambe ma trascina arti troppo lunghi.
-
-L'acqua qui è solo una pozza superficiale (10cm), ma ha un colore **ambrato** innaturale.
+▸ Nord-Ovest: Dormitori
+▸ Nord-Est: Pozzo
+▸ Sud-Ovest: Cucine *(esplorate in S5)*
+▸ Sud-Est: Armeria
 
 **Elementi:**
-- **Le baracche:**
-  - **Baracca 1:** Dormitorio. 4 giacigli, 3 ancora occupati da... sagome. Avvicinandosi: non sono persone. Sono **vestiti** pieni della sostanza gelatinosa, come se chi li indossava si fosse semplicemente *sciolto* al loro interno. Sotto uno dei giacigli: 18 mo + un diario illeggibile (pagine fuse dalla gelatina)
-  - **Baracca 2:** Armeria. Vuota tranne che per 2 spade corte arrugginite (1 mo ciascuna), una balestra leggera senza corda, e una cassa chiusa con lucchetto (Attrezzi CD 14): 40 mo + **Pozione di Guarigione Superiore (4d4+4)** + un rotolino di pergamena con una mappa parziale di questo piano (mostra le Zona 22 e 23 in dettaglio)
-  - **Baracca 3:** Sala riunioni. Tavolo con mappa vecchia delle fogne (inutile, è del piano superiore). **1 Sommerso Recente** è seduto immobile a capotavola, testa china, come in attesa.
 
-- **Combattimento: 1 Sommerso Recente**
-  - Percezione CD 12 per notare che la "figura seduta" non è un cadavere — la membrana gelatinosa pulsa debolmente
-  - Se i PG si avvicinano entro 3m senza precauzioni → attacca di sorpresa
-  - Se lo individuano prima → possono attaccare per primi o evitarlo del tutto (aggirando la baracca)
-  - **Dopo averlo sconfitto**, svanisc in polvere e cristalli come ogni altra creatura del dungeon, ma la polvere è di colore **ambrato** invece che grigia
+- **🍳 CUCINE (SW) — [ESPLORATA in S5]:** 3 Sommersi Recenti sconfitti. Trovati: 24 Cristalli Minuscoli, Pozione di Guarigione Superiore sulla mensola del camino. Riven trasformato in pianta da magia selvaggia al termine del combattimento.
 
-- **Il pozzo:** Asciutto. Sul fondo (4m, Atletica CD 12 per scendere): **Nodo della Trama #3** — l'acqua sul fondo del pozzo forma spirali che ruotano da sole. Catalogarlo = Favore Mystra.
+- **🛏️ DORMITORI (NW) — [INESPLORATA]:** Da definire.
 
-- **Passaggio nascosto (verso Zona 18):** Percezione CD 16 sulla parete Ovest rivela una crepa nel muro. Stesso passaggio scopribile dalla Zona 17. Si può allargare con forza (Atletica CD 14 o 10 danni).
+- **⚗️ ARMERIA (SE) — [INESPLORATA]:** Da definire.
 
-**Pericoli:** 1 Sommerso Recente, gelatina corrosiva sulle superfici (toccare a mani nude: 1d4 acido)
+- **🪣 POZZO (NE) — [INESPLORATO]:** **Nodo della Trama #3** — l'acqua sul fondo del pozzo forma spirali che ruotano da sole. Arcano CD 12 per catalogare. Sul fondo del pozzo (~4m di profondità), in una piccola nicchia scavata nella parete laterale (Percezione CD 14 sott'acqua con luce), è nascosta la **Seconda Chiave a Spirale**. Identica nella forma alla prima — una spirale intrecciata in ferro scuro. È la seconda delle due chiavi per il portone blindato della Zona 27. Recuperarla richiede immergersi (Atletica CD 12 per la discesa).
 
-**Cristalli:** 8 cristalli piccoli (dal Sommerso)
+- **Individuazione del Magico:** Fealer ha rilevato piccole aure sparse nella stanza principale — cristalli da raccogliere.
+
+**Combattimento: 1 Sommerso Recente** (in una delle sub-aree inesplorate)
+- Percezione CD 12 per notare che la "figura ferma" non è un cadavere — la membrana gelatinosa pulsa debolmente
+- Se i PG si avvicinano entro 3m senza precauzioni → attacca di sorpresa
+- Se lo individuano prima → possono attaccare per primi o evitarlo
+
+**Passaggio nascosto (verso Zona 17/18):** Stessa crepa nella parete ovest scopribile dalla Zona 17. Percezione CD 16, allargabile con Atletica CD 14 o 10 danni.
+
+**Pericoli:** 1 Sommerso Recente nelle sub-aree inesplorate
+
+**Cristalli:** 24 Cristalli Minuscoli (dalle Cucine, già raccolti in S5) + 8 cristalli dal Sommerso
 
 **Favore Divino:**
 - Tempus: sconfiggere il Sommerso
-- Mystra: catalogare il Nodo della Trama #3 (+20% Favore)
-- Tymora: trovare la cassa nell'armeria senza attivare il Sommerso
+- Mystra: catalogare il Nodo della Trama #3 dal Pozzo (+20% Favore)
+- Tymora: trovare la cassa nelle aree inesplorate senza attivare il Sommerso
 
-**Note DM:** Questa stanza racconta una storia senza parole. I giocatori dovrebbero arrivare alla conclusione da soli: i contrabbandieri vivevano qui, e l'acqua li ha trasformati. I vestiti pieni di gelatina sono l'immagine più inquietante — non descrivere cosa è successo, lascia che lo immaginino. Il Sommerso Recente seduto a capotavola è un'immagine potente: stava aspettando un briefing che non sarebbe mai arrivato.
+**Note DM:** I PG sono entrati dalla porta nord della Zona 23 in S5. Le Cucine (SW) sono esplorate e ripulite. Dormitori, Armeria e Pozzo restano da esplorare. Il Nodo della Trama nel Pozzo è la cosa più importante di questa stanza — non perderselo.
 
 ---
 
@@ -527,7 +509,7 @@ Quando i PG entrano, la stanza sembra inizialmente deserta. Poi l'acqua inizia a
 **Tipo:** Esplorazione + Lore + Ricompense
 
 **Descrizione:**
-Una porta di ferro sulla parete sud della Zona 23, chiusa con un lucchetto di bronzo (la chiave si trova nella Zona 21, oppure Attrezzi da scasso CD 16). Oltre la porta, una stanza piccola (5x4m) relativamente asciutta — l'acqua qui è solo una pozza nel centro (30cm).
+Una porta di ferro sulla parete sud della Zona 23, chiusa con un lucchetto di bronzo (Attrezzi da scasso CD 16). Oltre la porta, una stanza piccola (5x4m) relativamente asciutta — l'acqua qui è solo una pozza nel centro (30cm).
 
 Questa non era una stanza dei contrabbandieri. È più vecchia. Molto più vecchia.
 
@@ -574,9 +556,9 @@ I tre percorsi convergono in una vasta camera a pianta esagonale (12m di diametr
 
 Da qui, le tre gallerie (Ovest, Nord, Est) si ricongiungono. L'aria è più fredda. Il rumore dell'acqua che precipita nel pozzo è costante e ipnotico.
 
-Sulla parete Sud, un grande portone di ferro — chiuso. Due meccanismi di apertura: una serratura per la **Chiave di bronzo grande** (Zona 23) oppure due ruote manuali che richiedono forza (2 PG simultaneamente, Atletica CD 13 ciascuno).
+Sulla parete Sud, un grande portone blindato di ferro — chiuso. Ai lati del portone, due meccanismi incastonati nella pietra: due serrature a spirale, una per parte. Richiedono la **Prima Chiave a Spirale** (trovata in Zona 21 dopo aver girato la ruota) e la **Seconda Chiave a Spirale** (recuperata dal fondo del pozzo in Zona 22). Entrambe devono essere inserite contemporaneamente per sbloccare il portone verso la Zona 27.
 
-Sulla parete Sud-Ovest, una porta più piccola — chiusa con una serratura nera intricata. Il buco della serratura ha la forma di una **goccia d'acqua**. Richiede la **Chiave di Ferro Nero** dal Piano 1.
+Sulla parete Sud-Ovest, una porta più piccola — chiusa con una serratura nera intricata. Il buco della serratura ha la forma di una **goccia d'acqua**. Richiede la **Chiave di Ferro a goccia** trovata nel bauletto della Zona 23. Dà accesso alla Riserva Sigillata (Zona 26).
 
 **Elementi:**
 - **Il pozzo centrale:**
@@ -601,7 +583,7 @@ Sulla parete Sud-Ovest, una porta più piccola — chiusa con una serratura nera
 
 ---
 
-### **ZONA 26 — LA RISERVA SIGILLATA** ⭐⭐ OPZIONALE (Richiede Chiave di Ferro Nero)
+### **ZONA 26 — LA RISERVA SIGILLATA** ⭐⭐ OPZIONALE (Richiede Chiave di Ferro a goccia da Zona 23)
 
 **Tipo:** Tesoro speciale + Lore
 
@@ -857,7 +839,7 @@ Dopo 5 metri di discesa, il velo magico brillante. Questa volta la voce è diver
 ### **Matriarca dei Sommersi** ⭐⭐⭐ BOSS
 *Aberrazione Grande, senza allineamento*
 
-**Classe Armatura:** 13 (membrana compattata)
+**Classe Armatura:** 16 (membrana compattata)
 **Punti Ferita:** 115 (13d10+39)
 **Velocità:** 3m, nuotare 9m
 
@@ -867,7 +849,7 @@ Dopo 5 metri di discesa, il velo magico brillante. Questa volta la voce è diver
 **Tiri Salvezza:** COS +6, SAG +3
 **Immunità ai Danni:** veleno, acido
 **Resistenze ai Danni:** contundenti, freddo
-**Vulnerabilità ai Danni:** fuoco (solo in Fase 2+), radianti
+**Vulnerabilità ai Danni:** radianti
 **Immunità alle Condizioni:** avvelenato, affascinato, esausto, prono, accecato
 **Sensi:** vista cieca 18m, tremosenso 9m, Percezione passiva 10
 **Linguaggi:** —
@@ -1021,7 +1003,7 @@ Dopo 5 metri di discesa, il velo magico brillante. Questa volta la voce è diver
 |--------|-----------|----------|
 | Correnti | Attraversare Zona 17 senza cadere in acqua | 10% |
 | Grick visti | Individuare entrambi i Grick prima dell'attacco | 15% |
-| Chiuse perfette | Puzzle Zona 21 senza danni | 10% |
+| Salto di fede | Zona 21: primo PG entra nella colonna senza tentare scalate prima | 10% |
 | Accampamento pulito | Zona 22: trovare cassa senza attivare Sommerso | 10% |
 | Asciutti | Zona 23: nessun PG trascinato in acqua | 15% |
 | Boss creativo | Usare Essenza Purificata o pannello chiuse | 10% |

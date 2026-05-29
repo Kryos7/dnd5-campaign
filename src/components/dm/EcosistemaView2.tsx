@@ -241,8 +241,7 @@ export default function EcosistemaView2() {
         'LA COLONNA — Larga 7.5m, non si può aggirare restando a piedi asciutti. La logica è invertita rispetto alla natura: stando fermi dentro la corrente, il flusso porta lentamente in superficie (ascesa di ~3m/round). Qualsiasi azione intrapresa — nuotare, scalare, combattere — causa invece un rapido affondamento verso il fondo.',
         'Entrare nella colonna: Constitution CD 11 per il freddo (1d4 danni da freddo, non bloccante). Per salire: restare immobili e lasciarsi trasportare — nessun check. Per scendere o restare fermi in profondità: fare un\'azione qualsiasi.',
         'LA RUOTA — È sommersa nella colonna d\'acqua a 15m di quota. Per raggiungerla i PG devono poter respirare sott\'acqua (o trattenere il respiro). La ruota è bloccata da un meccanismo arrugginito: Forza CD 15 per sbloccarla. Appena girata, la saracinesca si apre con un boato idraulico sordo e la colonna d\'acqua si ferma.',
-        'CHIAVE DI FERRO CON IL SIMBOLO DELLA GOCCIA — Era perennemente tenuta in aria dalla forza ascendente della colonna, invisibile nell\'acqua in moto. Quando la ruota viene girata e la colonna si ferma, cade nella pozza ai piedi della colonna. Questa chiave apre la porta della Zona 26.',
-        'Pannello laterale sulla piattaforma (Investigare CD 15): 2 Cristalli Minuscoli + note tecniche sul sistema idraulico (in lingua sconosciuta — stesso alfabeto dei pattern di Zona 18).',
+        'PRIMA CHIAVE A SPIRALE — Era perennemente tenuta in aria dalla forza ascendente della colonna, invisibile nell\'acqua in moto. Quando la ruota viene girata e la colonna si ferma, cade nella pozza ai piedi della colonna. La testa della chiave ha la forma di una spirale d\'acqua — la stessa del movimento rotante della colonna stessa. È la prima delle due chiavi necessarie per sbloccare i meccanismi del portone blindato verso la Zona 27.',
         'TENTATIVI ALTERNATIVI — Scalare la parete: Atletica CD 20 (liscia, bagnata e alta 15m), ogni fallimento = 1d6 danni caduta. Fly/Levitate: funzionano, arrivano su — ma la ruota è sott\'acqua, serve comunque modo per respirare. Spider Climb: valido per la parete, ma la ruota è immersa.',
         'COLLEGAMENTO ZONA 27 — Girare la ruota attiva il circuito idraulico del Collettore. In Zona 27 (boss fight), il pannello sulla parete Ovest diventa operativo: consente di forzare l\'acqua BASSA per 2 round (usabile 2 volte). I PG sentiranno un clic meccanico lontano quando la ruota gira — non sanno ancora cosa significa.'
       ],
@@ -269,7 +268,7 @@ export default function EcosistemaView2() {
         '🍳 CUCINE (SW) — [ESPLORATA] 3 Sommersi Recenti sconfitti. Trovati: 24 Cristalli Minuscoli, Pozione di Guarigione Superiore sulla mensola del camino. Riven trasformato in pianta da magia selvaggia al termine del combattimento.',
         '🛏️ DORMITORI (NW) — [INESPLORATA] Da definire.',
         '⚗️ ARMERIA (SE) — [INESPLORATA] Da definire.',
-        '🪣 POZZO (NE) — [INESPLORATO] Da definire.',
+        '🪣 POZZO (NE) — [INESPLORATO] NODO DELLA TRAMA #3: l\'acqua sul fondo del pozzo forma spirali che ruotano da sole (Arcano CD 12 per catalogare). Sul fondo del pozzo (~4m di profondità, acqua fredda e scura), in una piccola nicchia scavata nella parete laterale: SECONDA CHIAVE A SPIRALE. Identica nella forma alla prima — una spirale intrecciata in ferro scuro. È la seconda delle due chiavi per il portone blindato della Zona 27. Recuperarla richiede immergersi (Atletica CD 12 per la discesa con corrente debole). Percezione CD 14 sott\'acqua con luce per notare la nicchia.',
         'Individuazione del Magico: Fealer ha rilevato piccole aure sparse nella stanza principale — cristalli da raccogliere.'
       ],
       pericoli: 'Varia per sub-area',
@@ -286,11 +285,11 @@ export default function EcosistemaView2() {
     },
     {
       numero: '23',
-      nome: 'L\'Accampamento dei Sommersi',
+      nome: 'L\'ufficio sommerso',
       tipo: 'Combattimento pesante — [COMPLETATA S5]',
       dimensioni: 'Stanza quadrata in muratura, acqua 2m + 3m fino al soffitto',
       percorso: 'Est',
-      descrizione: 'Stanza quadrata in muratura, non una caverna. Il pavimento è sommerso da circa 2 metri di acqua ambrata — limpida, non fangosa, pregna di magia. Dal livello dell\'acqua al soffitto ci sono altri 3 metri di aria.\n\nSott\'acqua: una vecchia stanza amministrativa intatta — scrivanie, poltrone, librerie. Oggetti galleggianti (fogli, sedie, assi di legno) derivano lentamente nel liquido ambrato.\n\nUna passerella di legno, stabile, attraversa la stanza da Sud a Nord. Porta a una porta a Nord (verso Zona 22).\n\n⚠️ PROPRIETÀ DELL\'ACQUA AMBRATA:\n• Individuazione del Magico non funziona attraverso l\'acqua — la saturazione magica scherma tutto ciò che è sotto.\n• Qualsiasi incantesimo attivo su una creatura che tocca l\'acqua viene istantaneamente dissolto.\n• Immergersi richiede Saggio TS 14 vs panico (forza magica sopraffacente). Fallimento → catatonia fino a quando non si esce e si viene assistiti.',
+      descrizione: 'Stanza quadrata in muratura. Il pavimento è sommerso da circa 3 metri di acqua ambrata — limpida, non fangosa, pregna di magia. Dal livello dell\'acqua al soffitto ci sono altri 2 metri di aria.\n\nSott\'acqua: una vecchia stanza amministrativa intatta — scrivanie, poltrone, librerie. Oggetti galleggianti (fogli, sedie, assi di legno) derivano lentamente nel liquido ambrato.\n\nUna passerella di legno, stabile, attraversa la stanza da Sud a Nord. Porta a una porta a Nord (verso Zona 22).\n\n⚠️ PROPRIETÀ DELL\'ACQUA AMBRATA:\n• Individuazione del Magico non funziona attraverso l\'acqua — la saturazione magica scherma tutto ciò che è sotto.\n• Qualsiasi incantesimo attivo su una creatura che tocca l\'acqua viene istantaneamente dissolto.\n• Immergersi richiede Saggio TS 14 vs panico (forza magica sopraffacente). Fallimento → catatonia fino a quando non si esce e si viene assistiti.',
       elementi: [
         '[S5] ONDATA 1 (turno 1): 2× Sommerso Recente, 1× Sommerso Completo, 1× Sommerso Esplosivo — emergono dall\'acqua salendo sulla passerella.',
         '[S5] ONDATA 2 (turno 2): 1× Sommerso Recente, 2× Sommerso Completo.',
@@ -308,7 +307,7 @@ export default function EcosistemaView2() {
         '[S5] Fealer è diventato catatonico al primo tuffo — recuperato da Valoris (Medicina). Al secondo tentativo (con sola forza di volontà, i buff vengono dissolti dall\'acqua) è riuscito a resistere.',
         '[S5] Fealer ha usato la Pozione per Respirare Sott\'Acqua comprata da Vex per la ricerca subacquea.',
         '[S5] Riven ha sofferto di Wild Magic in questa stanza (panico al primo lancio).',
-        'La Chiave di Ferro a goccia trovata nel bauletto è destinata alla serratura a forma di goccia nella Zona 25 (Collettore).',
+        'La Chiave di Ferro a goccia trovata nel bauletto apre la serratura a forma di goccia nella parete Sud-Ovest della Zona 25 — dà accesso diretto alla Riserva Sigillata (Zona 26). NON è legata al portone della Zona 27.',
         'La bussola dorata con ago impazzito: l\'ago cerca ancora qualcosa. Non spiegare cosa — è un hook narrativo.'
       ],
       mostroLink: [
@@ -343,7 +342,7 @@ export default function EcosistemaView2() {
       nome: 'Il Collettore Centrale',
       tipo: 'Convergenza + Area di raccolta',
       dimensioni: '12m diametro esagonale, soffitto 7m',
-      descrizione: 'I tre percorsi convergono in una vasta camera a pianta esagonale. Sei pilastri massicci sostengono la struttura. Al centro, un\'enorme griglia di ferro copre un pozzo senza fondo — l\'acqua vi precipita dentro con un rumore continuo e profondo.\n\nL\'aria è più fredda. Il rumore dell\'acqua è costante e ipnotico.\n\nSulla parete Sud, un grande portone di ferro — chiuso. Due meccanismi: serratura per la Chiave di bronzo grande (Zona 23) oppure due ruote manuali (2 PG simultaneamente, Atletica CD 13 ciascuno).\n\nSulla parete Sud-Ovest, una porta più piccola con una serratura a forma di goccia d\'acqua. Richiede la Chiave di Ferro con il Simbolo della Goccia (trovata nella Zona 21 dopo aver girato la ruota).',
+      descrizione: 'I tre percorsi convergono in una vasta camera a pianta esagonale. Sei pilastri massicci sostengono la struttura. Al centro, un\'enorme griglia di ferro copre un pozzo senza fondo — l\'acqua vi precipita dentro con un rumore continuo e profondo.\n\nL\'aria è più fredda. Il rumore dell\'acqua è costante e ipnotico.\n\nSulla parete Sud, un grande portone blindato di ferro — chiuso. Ai lati del portone, due meccanismi incastonati nella pietra: due serrature a spirale, una per parte. Richiedono la Prima Chiave a Spirale (trovata in Zona 21 dopo aver girato la ruota) e la Seconda Chiave a Spirale (recuperata dal fondo del pozzo in Zona 22). Entrambe devono essere inserite contemporaneamente per sbloccare il portone verso la Zona 27.\n\nSulla parete Sud-Ovest, una porta più piccola con una serratura a forma di goccia d\'acqua. Richiede la Chiave di Ferro a goccia (trovata nel bauletto della Zona 23). Dà accesso alla Riserva Sigillata (Zona 26).',
       elementi: [
         'Il pozzo centrale: Percezione CD 14 — il rumore ha un ritmo, lo stesso della vasca nella Cisterna (Zona 16). Guardare dentro: scende almeno 20m, qualcosa in fondo emette luce tenue ambrata. Lanciare un oggetto: 3 secondi, poi silenzio. Nessun splash.',
         'Area di riposo: I PG possono riposare brevemente. Nessun nemico entra — i Sommersi e i Grick evitano questa stanza.',
@@ -403,10 +402,10 @@ export default function EcosistemaView2() {
       statistiche: {
         nome: 'Matriarca dei Sommersi (BOSS)',
         valori: [
-          'CA 13 (membrana compattata), PF 115 (13d10+39), Velocità 3m, nuotare 9m',
+          'CA 16 (membrana compattata), PF 115 (13d10+39), Velocità 3m, nuotare 9m',
           'FOR 18 (+4) DES 6 (-2) COS 17 (+3) INT 4 (-3) SAG 10 (+0) CAR 3 (-4)',
           'TS: COS +6, SAG +3',
-          'Immunità: veleno, acido | Resistenze: contundenti, freddo | Vulnerabilità: fuoco (Fase 2+), radianti',
+          'Immunità: veleno, acido | Resistenze: contundenti, freddo | Vulnerabilità: radianti',
           'Immunità condizioni: avvelenato, affascinato, esausto, prono, accecato',
           'Sensi: vista cieca 18m, tremosenso 9m | GdS 5 (1800 PE)',
           '--- TRATTI SPECIALI ---',
@@ -544,7 +543,7 @@ export default function EcosistemaView2() {
         { fonte: 'Boss creativo', condizione: 'Usare Essenza Purificata o pannello chiuse', favore: '10%' },
         { fonte: 'Segreti', condizione: 'Trovare passaggio nascosto 17↔22', favore: '10%' },
         { fonte: 'Sopravvivenza', condizione: 'Nessun PG a 0 PF nell\'intero piano', favore: '10%' },
-        { fonte: 'Riserva', condizione: 'Aprire Zona 26 con la Chiave della Goccia (da Zona 21) e il forziere con la Chiave di Ferro dal Piano 1', favore: '10%' }
+        { fonte: 'Riserva', condizione: 'Aprire Zona 26 con la Chiave di Ferro a goccia (da Zona 23) e il forziere con la Chiave di Ferro dal Piano 1', favore: '10%' }
       ],
       totale: '100%'
     },
@@ -887,7 +886,7 @@ export default function EcosistemaView2() {
             <div className="bg-blue-900/20 border border-blue-700 rounded p-4">
               <p className="text-slate-300 text-sm">
                 <strong className="text-blue-400">Passaggio nascosto (18-22):</strong> Un tunnel parzialmente allagato collega
-                la Camera dell'Acqua Ascendente all'Avamposto Abbandonato. Percezione CD 16 per trovarlo da entrambi i lati.
+                la Camera dell'Acqua Ascendente alla Quadra Nord. Percezione CD 16 per trovarlo da entrambi i lati.
               </p>
             </div>
             <div className="bg-amber-900/20 border border-amber-700 rounded p-4">

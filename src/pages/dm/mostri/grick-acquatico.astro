@@ -15,7 +15,7 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
         </div>
         <h1 class="text-4xl font-bold text-red-500 mb-2">GRICK ACQUATICO</h1>
         <p class="text-xl text-yellow-400">"Predatore Tentacolato delle Fogne"</p>
-        <p class="text-slate-400 mt-2">Zona 4 - La Camera Allagata | Party livello 5</p>
+        <p class="text-slate-400 mt-2">Zona 20 - La Galleria dei Grick | Party livello 5</p>
       </div>
 
       <!-- Immagine del Mostro -->
@@ -34,7 +34,7 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
           Questo Grick si è adattato a vivere nelle <strong class="text-cyan-400">acque stagnanti delle fogne superiori</strong>.
           A differenza dei suoi cugini che preferiscono caverne asciutte, questa variante ha sviluppato
           <strong class="text-yellow-400">capacità anfibie</strong> e tattiche di caccia subacquee.
-          Si nasconde nell'acqua torbida della camera allagata, emergendo solo per colpire con i suoi
+          Si nasconde nell'acqua torbida della galleria allagata, emergendo solo per colpire con i suoi
           <strong class="text-red-400">quattro tentacoli affilati come rasoi</strong>.
         </p>
 
@@ -445,48 +445,52 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
 
       <!-- Dettagli Ambientali -->
       <section class="bg-slate-800 border border-cyan-700 rounded-lg p-6 mb-6">
-        <h2 class="text-2xl font-bold text-cyan-400 mb-4">🗺️ Integrazione con la Zona 4 - Camera Allagata</h2>
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">🗺️ Integrazione con la Zona 20 - La Galleria dei Grick</h2>
 
         <div class="space-y-3">
           <div class="bg-slate-900 rounded-lg p-4">
             <h3 class="text-lg font-semibold text-yellow-300 mb-2">📍 Posizionamento Iniziale</h3>
             <ul class="list-disc list-inside space-y-1 text-slate-400">
-              <li>Il Grick è <strong>sommerso al centro della camera</strong>, vicino al pilastro crollato</li>
-              <li>Sembra un cumulo di alghe e detriti (Percezione CD 16)</li>
-              <li>Ossa rosicchiate sparse in giro (ratti, qualche goblin)</li>
-              <li>Solchi viscidi sui muri dove si è arrampicato</li>
+              <li><strong>Grick 1:</strong> sommerso vicino al pilastro crollato a metà galleria (Percezione CD 16 — sembra alghe e detriti)</li>
+              <li><strong>Grick 2:</strong> aggrappato al soffitto nella curva (Percezione CD 15 — scia viscida fresca)</li>
+              <li>Ossa sparse ovunque (ratti, pipistrelli, un cranio allungato — non umano)</li>
+              <li>Solchi viscidi sui muri e sul soffitto dove si arrampicano</li>
             </ul>
           </div>
 
           <div class="bg-slate-900 rounded-lg p-4">
-            <h3 class="text-lg font-semibold text-cyan-300 mb-2">🌊 Elementi Tattici della Stanza</h3>
+            <h3 class="text-lg font-semibold text-cyan-300 mb-2">🌊 Elementi Tattici della Galleria</h3>
             <ul class="list-disc list-inside space-y-1 text-slate-400">
               <li><strong>Acqua stagnante:</strong> 60cm profondità (terreno difficile per PG, normale per Grick)</li>
-              <li><strong>Pilastro crollato:</strong> Copertura parziale, può essere usato per nascondersi</li>
-              <li><strong>Grata nord:</strong> Tana del Grick, troppo piccola per PG (può fuggire qui)</li>
-              <li><strong>Scaffale marcio:</strong> Può essere abbattuto su di lui (improvvisazione, Atletica CD 13, 2d6 danni)</li>
-              <li><strong>Soffitto basso (2.5m):</strong> Il Grick può arrampicarsi e attaccare dall'alto</li>
+              <li><strong>Pilastro crollato (metà galleria):</strong> Copertura parziale, spartiacque tattico tra i due Grick</li>
+              <li><strong>Cunicoli nelle nicchie laterali:</strong> Passaggi troppo stretti per i PG — qui fuggono i Grick sotto 8 PF</li>
+              <li><strong>Nicchie laterali (6):</strong> Alcune contengono tesori (nicchia 3, 5, 6)</li>
+              <li><strong>Soffitto alto (5m):</strong> Il Grick 2 si nasconde aggrappato al soffitto nella curva — attacca dall'alto con vantaggio</li>
             </ul>
           </div>
 
           <div class="bg-slate-900 rounded-lg p-4">
             <h3 class="text-lg font-semibold text-green-300 mb-2">🎬 Descrizione Iniziale Suggerita</h3>
             <p class="text-slate-300 italic">
-              "La camera è allagata, l'acqua torbida arriva alle ginocchia e odora di muffa e decomposizione.
-              Un pilastro di pietra crollato emerge dall'acqua al centro, ricoperto di alghe verdastre.
-              Lungo le pareti notate strani solchi viscidi che salgono verso il soffitto.
-              Sparse nell'acqua galleggiano ossa rosicchiate - ratti, forse qualcosa di più grande.
+              "La galleria è lunga e sinuosa, il soffitto sparisce nel buio sopra i cinque metri.
+              L'acqua torbida arriva alle ginocchia e odora di muffa e decomposizione.
+              Le pareti sono rigate da solchi profondi e viscidi — segni di artigli che salgono fino al soffitto.
+              Ossa sparse ovunque nell'acqua. A metà galleria, un pilastro crollato emerge dalla superficie.
+              Oltre il pilastro, la galleria curva verso sinistra e il fondo non è visibile.
               L'acqua è stranamente immobile, quasi... in attesa."
             </p>
             <p class="text-yellow-400 mt-3">
-              → <strong>Chiedi prove di Percezione (Passiva 16 o Attiva)</strong>
+              → <strong>Chiedi prove di Percezione (Passiva 16 per Grick 1, Passiva 15 per Grick 2)</strong>
             </p>
             <p class="text-slate-400 mt-2">
-              Se <strong>CD 16+:</strong> "Qualcosa nell'acqua vicino al pilastro non sembra... naturale.
-              Quella non è solo un cumulo di alghe - c'è una forma sotto, qualcosa di grosso."
+              Se <strong>CD 16+:</strong> "Qualcosa nell'acqua vicino al pilastro non sembra naturale.
+              Quella non è solo un cumulo di alghe — c'è una forma sotto, qualcosa di grosso."
             </p>
             <p class="text-slate-400 mt-1">
-              Se <strong>fallito:</strong> Il Grick attacca di sorpresa quando qualcuno si avvicina a 3m.
+              Se <strong>CD 15+ (soffitto):</strong> "Oltre il pilastro, sul soffitto nella curva, notate una scia viscida fresca."
+            </p>
+            <p class="text-slate-400 mt-1">
+              Se <strong>fallito:</strong> Grick 1 attacca di sorpresa quando qualcuno supera il pilastro. Grick 2 entra 1-2 round dopo.
             </p>
           </div>
         </div>

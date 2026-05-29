@@ -72,6 +72,181 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
         </div>
       </section>
 
+      <!-- Descrizioni Teatrali -->
+      <section class="bg-slate-800 border border-violet-600 rounded-lg p-6 mb-6">
+        <h2 class="text-2xl font-bold text-violet-400 mb-2">🎭 Descrizioni Teatrali</h2>
+        <p class="text-slate-400 text-sm mb-6">Leggi queste descrizioni ad alta voce ai giocatori. Parla lentamente. Fai le pause.</p>
+
+        <!-- Primo ingresso -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-violet-300 mb-1 flex items-center gap-2">
+            <span class="bg-violet-900 text-violet-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Primo ingresso</span>
+            Quando i PG entrano nella Zona 27
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Parla lentamente. Pausa dopo ogni frase.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-violet-500 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"Il portone di ferro cede. Una scalinata scende nell'oscurità.<br/>
+            L'aria cambia — più densa, più calda. Come stare dentro qualcosa di vivo.<br/>
+            Alla base della scala, la camera si apre.<br/>
+            Il soffitto sale a dieci metri — stalattiti da cui cade acqua ambrata a gocce lente, quasi ritmiche.<br/>
+            Al centro, una vasca occupa quasi tutta la stanza. L'acqua è densa, color miele bruciato, tiepida.<br/>
+            E al centro della vasca, su un cumulo di detriti sommersi..."</p>
+            <p class="text-violet-400 not-italic font-semibold text-sm">[pausa]</p>
+            <p>"...c'è una cosa.<br/>
+            Alta tre metri. Forse più. Una montagna di membrana traslucida — come carne di medusa, ma compatta, densa.<br/>
+            E attraverso quella membrana... ci sono sagome. Sagome che potrebbero essere braccia. Che potrebbero essere volti. Resti di persone — decine di persone — fuse insieme in qualcosa che non è più nessuno di loro.<br/>
+            Pulsa.<br/>
+            Ogni sei secondi, come un respiro. Come un cuore.<br/>
+            Non si muove. Non vi guarda — non ha occhi. Ma quella massa si volta verso di voi comunque.<br/>
+            Poi, lentamente, la parte superiore si deforma. Qualcosa si gonfia verso l'esterno, si appiattisce — quasi un volto. Un avvallamento dove dovrebbero essere gli occhi. Un buco che si apre dove dovrebbe essere una bocca.<br/>
+            E sale un suono dal fondo della vasca.<br/>
+            Un gorgoglio basso, prolungato, che riecheggia nelle pareti di pietra."</p>
+            <p class="text-violet-400 not-italic font-semibold text-sm">[abbassate la voce]</p>
+            <p>"Quasi una parola. Quasi."</p>
+            <p class="text-violet-400 not-italic font-semibold text-sm">[pausa lunga]</p>
+            <p>"Nell'acqua attorno a lei, qualcosa inizia a muoversi."</p>
+          </div>
+          <p class="text-yellow-400 text-sm font-semibold mt-2">→ Non attacca subito. Aspetta. Lascia che i giocatori parlino.</p>
+        </div>
+
+        <!-- Genera Sommerso -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-yellow-300 mb-1 flex items-center gap-2">
+            <span class="bg-yellow-900 text-yellow-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Fase 1 — ripetibile</span>
+            Quando genera un Sommerso
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Breve. Ripetila ogni round con variante.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-yellow-600 text-slate-200 italic leading-relaxed text-sm">
+              "La massa pulsa — una contrazione più forte delle altre. L'acqua accanto a lei si increspa. Una forma emerge lentamente dalla vasca, come se l'acqua la stesse sputando fuori."
+            </div>
+            <div class="bg-slate-900 rounded-lg p-4 border-l-4 border-yellow-600 text-slate-200 italic leading-relaxed text-sm">
+              "Un movimento sotto la superficie. Qualcosa si separa dalla massa principale — un pezzo che nuota via e poi si alza in piedi."
+            </div>
+          </div>
+        </div>
+
+        <!-- Transizione Fase 2 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-orange-300 mb-3 flex items-center gap-2">
+            <span class="bg-orange-900 text-orange-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Transizione → Fase 2</span>
+            La membrana si rompe
+          </h3>
+          <div class="space-y-4">
+
+            <div>
+              <p class="text-orange-400 text-sm font-semibold mb-2">Per fuoco (30 danni fuoco accumulati)</p>
+              <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-orange-500 text-slate-200 italic leading-relaxed">
+                "La membrana prende fuoco — non come la carne brucia, ma come una bolla che scoppia.<br/>
+                Un lampo. Una contrazione.<br/>
+                E poi la massa URLA.<br/>
+                Non con una voce. Con tutto il corpo — si contrae verso il centro, si raggrinzisce... e poi esplode verso l'esterno.<br/>
+                La membrana esterna cade a pezzi nell'acqua come pelle bruciata.<br/>
+                Quello che rimane è più fluido. Più scuro. Più veloce.<br/>
+                L'acqua nella stanza si agita — come se avesse ricevuto un ordine.<br/>
+                Tentacoli emergono dalla massa. Non lentamente. Di scatto."
+              </div>
+            </div>
+
+            <div>
+              <p class="text-cyan-400 text-sm font-semibold mb-2">Per Essenza Purificata</p>
+              <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-cyan-500 text-slate-200 italic leading-relaxed">
+                "Il liquido tocca la membrana.<br/>
+                Per un secondo — niente.<br/>
+                Poi la membrana reagisce come reagisce il sale sull'acqua bollente. Si dissolve dall'interno. Si contraggono. Si ritirano.<br/>
+                Un suono — non un urlo, qualcosa di più basso, più antico — riempie la stanza. Fa vibrare l'acqua. Fa vibrare le ossa nel petto.<br/>
+                La forma interna è esposta adesso. Più scura. Più densa. E si muove."
+              </div>
+            </div>
+
+            <div>
+              <p class="text-slate-400 text-sm font-semibold mb-2">Automatica — si sveglia da sola (dopo 3 round)</p>
+              <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-slate-500 text-slate-200 italic leading-relaxed">
+                "La massa ha smesso di pulsare.<br/>
+                Un secondo di silenzio assoluto.<br/>
+                Poi — come qualcosa che decide di alzarsi dopo un lungo sonno — la membrana si lacera dall'interno. Non si rompe: si apre. Come un bozzolo.<br/>
+                Non stava aspettando voi.<br/>
+                Stava aspettando di svegliarsi."
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Assorbimento -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-red-300 mb-1 flex items-center gap-2">
+            <span class="bg-red-900 text-red-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Azione — Fase 2+</span>
+            Assorbimento
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Rivolgiti direttamente al giocatore colpito.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-red-500 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"La massa ti tira verso di sé. Puoi sentire la membrana — è tiepida. È viscosa. Non è dura come la pietra, ma cede solo quanto basta per lasciarti entrare.<br/>
+            E mentre entri — appena la superficie ti tocca — vedi attraverso di lei.<br/>
+            Vedi le sagome dentro. Vedi le mani. I volti.<br/>
+            Nessuno di loro si muove."</p>
+            <p class="text-red-400 not-italic font-semibold text-sm">[Se fallisce il Tiro Salvezza]</p>
+            <p>"La membrana si chiude attorno a te. Non violentemente. Come abbracciare.<br/>
+            Puoi gridare. Nessuno sente più la tua voce — l'acqua e la massa attutiscono tutto.<br/>
+            Senti l'acido. Senti il calore. E senti — questo è il peggio — senti qualcosa che potrebbe essere un battito cardiaco che non è il tuo."</p>
+          </div>
+        </div>
+
+        <!-- Transizione Fase 3 -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-red-400 mb-1 flex items-center gap-2">
+            <span class="bg-red-900 text-red-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Transizione → Fase 3</span>
+            Sotto 50 PF — Frenesia
+          </h3>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-red-600 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"La Matriarca trema.<br/>
+            Non di paura — non è capace di paura. Trema perché qualcosa si sta rompendo dentro.<br/>
+            Un pezzo di membrana cade nell'acqua.<br/>
+            Si muove da solo.<br/>
+            Un altro pezzo. Anche quello si muove.<br/>
+            La massa centrale è ancora lì — ferita, più piccola, ma ancora lì — e i tentacoli che rimangono si muovono più veloci adesso. Meno precisi. Più rabbiosi.<br/>
+            L'acqua attorno a lei inizia a cambiare colore. Più scura. Più calda.<br/>
+            Inizia a bollire."</p>
+            <p class="text-red-400 not-italic font-semibold text-sm">[Se i PG sono in acqua]</p>
+            <p>"Sentite il calore attraverso le suole. L'acqua brucia adesso."</p>
+          </div>
+        </div>
+
+        <!-- Morte -->
+        <div class="mb-2">
+          <h3 class="text-xl font-bold text-slate-300 mb-1 flex items-center gap-2">
+            <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded font-semibold uppercase tracking-wide">Fine del combattimento</span>
+            La morte della Matriarca
+          </h3>
+          <p class="text-slate-500 text-xs italic mb-3">Voce quieta. Nessuna enfasi trionfante.</p>
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-slate-400 space-y-3 text-slate-200 italic leading-relaxed">
+            <p>"La massa smette di muoversi.<br/>
+            Non cade — non c'è niente che crolli. Si... ferma, semplicemente.<br/>
+            Il pulsare si interrompe. L'acqua smette di agitarsi.<br/>
+            Per un momento — qualche secondo — la stanza è completamente silenziosa.<br/>
+            Poi la massa comincia a disfarsi. Lentamente. Come neve che si scioglie a contatto con l'acqua calda.<br/>
+            Le sagome dentro — quelle che sembravano persone — spariscono mentre la massa si dissolve.<br/>
+            Sul fondo della vasca rimane della polvere.<br/>
+            Dorata.<br/>
+            Non ambrata. Non opaca. Dorata — come la luce attraverso il vetro, come qualcosa che non appartiene alle fogne.<br/>
+            Scende lentamente verso il basso.<br/>
+            L'acqua nella stanza inizia a ritirarsi."</p>
+            <p class="text-slate-400 not-italic font-semibold text-sm">[pausa]</p>
+            <p>"Non era una vittoria su un nemico. Era la fine di qualcosa che stava solo cercando di esistere."</p>
+          </div>
+
+          <div class="bg-slate-900 rounded-lg p-5 border-l-4 border-cyan-500 mt-4 text-slate-200 italic leading-relaxed">
+            <p class="text-cyan-400 not-italic font-semibold text-sm mb-3">Dopo — l'acqua si ritira, compare la botola</p>
+            <p>"Mentre l'acqua scende — pochi centimetri al minuto, come una marea che torna indietro — il pavimento della vasca emerge dall'oscurità.<br/>
+            E con esso, qualcosa che l'acqua nascondeva.<br/>
+            Una botola di pietra. Incassata nel pavimento. Invisibile finché l'acqua la copriva.<br/>
+            L'aria che sale da sotto è fresca. Pulita.<br/>
+            Non sapeva di fogne da quando siete entrati nel dungeon."</p>
+          </div>
+        </div>
+
+      </section>
+
       <!-- Statistiche -->
       <section class="bg-slate-800 border border-red-700 rounded-lg p-6 mb-6">
         <h2 class="text-2xl font-bold text-red-400 mb-4">📊 Statistiche Complete</h2>
@@ -81,7 +256,7 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
           <p class="text-slate-400 italic mb-4">Aberrazione Enorme, senza allineamento | GdS 5 (1800 PE)</p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">13 (membrana compattata)</span></div>
+            <div><span class="text-yellow-400 font-semibold">CA:</span> <span class="text-slate-200">16 (membrana compattata)</span></div>
             <div><span class="text-yellow-400 font-semibold">PF:</span> <span class="text-slate-200">115 (13d10+39)</span></div>
             <div><span class="text-yellow-400 font-semibold">Velocità:</span> <span class="text-slate-200">3m, nuotare 9m</span></div>
           </div>
@@ -102,7 +277,7 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
             <div><span class="text-blue-400 font-semibold">Tiri Salvezza:</span> COS +6, SAG +3</div>
             <div><span class="text-red-400 font-semibold">Immunità danni:</span> veleno, acido</div>
             <div><span class="text-green-400 font-semibold">Resistenze:</span> contundenti, freddo</div>
-            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> fuoco (Fase 2+), radianti</div>
+            <div><span class="text-orange-400 font-semibold">Vulnerabilità:</span> radianti</div>
             <div><span class="text-blue-400 font-semibold">Immunità condizioni:</span> avvelenato, affascinato, esausto, prono, accecato</div>
             <div><span class="text-cyan-400 font-semibold">Sensi:</span> Vista cieca 18m, tremosenso 9m | Percezione passiva 10</div>
             <div><span class="text-purple-400 font-semibold">Cristalli:</span> 2 grandi + ~40 piccoli (dai Sommersi generati)</div>
@@ -297,7 +472,7 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
             <p class="text-slate-300 mb-2"><strong>La membrana si rompe. La boss è attiva. I Sommersi continuano a combattere.</strong></p>
             <ul class="list-disc list-inside space-y-1 text-slate-400 mb-3">
               <li>Perde la Resistenza a TUTTI i danni</li>
-              <li>Acquista Vulnerabilità al fuoco (prima era solo resistente)</li>
+              <li>Perde la membrana protettiva — nessuna resistenza universale</li>
               <li>Attacca con Multiattacco + Azioni Leggendarie ogni round</li>
               <li>Priorità: Afferrare i PG più vicini e Assorbire (danno acido continuo)</li>
             </ul>
@@ -402,12 +577,12 @@ import DMAuthGuard from '../../../components/dm/DMAuthGuard';
                 <p class="text-slate-400 text-sm">Forzare l'acqua bassa durante i round pari è decisivo. Usarlo in Fase 3</p>
               </div>
               <div class="bg-slate-900 rounded-lg p-3">
-                <p class="text-green-300 font-semibold text-sm">4. Fuoco concentrato in Fase 2</p>
-                <p class="text-slate-400 text-sm">In Fase 2 acquista Vulnerabilità al fuoco — raddoppia i danni. È la finestra ideale</p>
+                <p class="text-green-300 font-semibold text-sm">4. Radianti in Fase 2</p>
+                <p class="text-slate-400 text-sm">In Fase 2 è vulnerabile ai radianti — Essenza Purificata, Sacred Flame, Guiding Bolt raddoppiano i danni</p>
               </div>
               <div class="bg-slate-900 rounded-lg p-3">
                 <p class="text-green-300 font-semibold text-sm">5. Liberare chi viene assorbito</p>
-                <p class="text-slate-400 text-sm">7 danni acido/turno + impossibilità di agire = morte rapida. Atletica CD 15 o fuoco</p>
+                <p class="text-slate-400 text-sm">7 danni acido/turno + impossibilità di agire = morte rapida. Atletica CD 15 o radianti</p>
               </div>
             </div>
           </div>

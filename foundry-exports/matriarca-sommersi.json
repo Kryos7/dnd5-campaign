@@ -30,7 +30,7 @@
     },
     "attributes": {
       "ac": {
-        "flat": 13,
+        "flat": 16,
         "calc": "natural",
         "formula": "",
         "label": "Membrana gelatinosa compattata"
@@ -76,7 +76,7 @@
       "size": "lg",
       "di": { "value": ["poison", "acid"], "bypasses": [], "custom": "" },
       "dr": { "value": ["bludgeoning", "cold"], "bypasses": [], "custom": "" },
-      "dv": { "value": ["radiant"], "bypasses": [], "custom": "Fuoco solo in Fase 2+ (dopo rottura membrana)" },
+      "dv": { "value": ["radiant"], "bypasses": [], "custom": "" },
       "ci": { "value": ["poisoned", "charmed", "exhaustion", "prone", "blinded"], "custom": "" },
       "languages": { "value": [], "custom": "—" }
     },
@@ -131,7 +131,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p><strong>Solo Fase 2 e 3.</strong></p><p>La Matriarca recupera <strong>5 PF</strong> a inizio del suo turno se è in contatto con acqua.</p><p><strong>Fase 3 (sotto 50 PF):</strong> Rigenerazione aumenta a <strong>10 PF</strong>.</p><p><strong>Interrotta da:</strong> Ha subito danni da fuoco o radianti nel turno precedente.</p><p><em>Tenerla fuori dall'acqua o infliggerle fuoco/radianti ogni round è fondamentale.</em></p>"
+          "value": "<p><strong>Solo Fase 2 e 3.</strong></p><p>La Matriarca recupera <strong>5 PF</strong> a inizio del suo turno se è in contatto con acqua.</p><p><strong>Fase 3 (sotto 50 PF):</strong> Rigenerazione aumenta a <strong>10 PF</strong>.</p><p><strong>Interrotta da:</strong> Ha subito danni da radianti nel turno precedente.</p><p><em>Tenerla fuori dall'acqua o infliggerle radianti ogni round è fondamentale.</em></p>"
         },
         "activation": { "type": "", "cost": null },
         "requirements": "Solo Fase 2+"
@@ -267,7 +267,7 @@
       "trackerFasi": {
         "fase1": "PF: 115 → Membrana intatta → Resistenza UNIVERSALE",
         "transizione12": "Membrana si rompe (30 fuoco / Essenza Purificata / 3 round)",
-        "fase2": "PF: 115-51 → Attacca direttamente → Vulnerabilità fuoco attiva",
+        "fase2": "PF: 115-51 → Attacca direttamente → Vulnerabilità radianti",
         "transizione23": "Scende sotto 50 PF",
         "fase3": "PF: 50-0 → 1d2 Esplosivi → +1 Tentacolo → Acqua bolle"
       },
