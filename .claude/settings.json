@@ -10,7 +10,10 @@
       "Read(//c/Users/Lorenzo/.claude/projects/**)",
       "Bash(ls -la ~/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/ 2>/dev/null | head -50)",
       "Read(//c/Users/Lorenzo/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/**)",
-      "Bash(cat ~/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/sessions-index.json 2>/dev/null | head -c 3000)"
+      "Bash(cat ~/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/sessions-index.json 2>/dev/null | head -c 3000)",
+      "Bash(npm run *)",
+      "Bash(npx astro *)",
+      "Bash(node_modules/.bin/tsc --noEmit -p tsconfig.json)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude"

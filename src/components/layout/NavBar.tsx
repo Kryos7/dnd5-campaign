@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { useAuth } from '../auth/AuthProvider';
 import UserMenu from '../auth/UserMenu';
 
 export default function NavBar() {
   const { isDM, isPlayer, profile } = useAuth();
+  const [ecosistemaOpen, setEcosistemaOpen] = useState(false);
+  const [ecosistemaMobileOpen, setEcosistemaMobileOpen] = useState(false);
 
   return (
     <nav id="main-nav" className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
@@ -88,15 +91,29 @@ export default function NavBar() {
               <a href="/dm" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
                 Dashboard DM
               </a>
-              <a href="/dm/ecosistema-1" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
-                Ecosistema 1 - Piano 1
-              </a>
-              <a href="/dm/ecosistema-1-piano-2" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
-                Ecosistema 1 - Piano 2
-              </a>
-              <a href="/dm/ecosistema-1-piano-3" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
-                Ecosistema 1 - Piano 3
-              </a>
+              <button
+                type="button"
+                onClick={() => setEcosistemaMobileOpen(!ecosistemaMobileOpen)}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors"
+              >
+                <span>Ecosistema 1</span>
+                <svg className={`w-4 h-4 transition-transform ${ecosistemaMobileOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              {ecosistemaMobileOpen && (
+                <div className="pl-4 space-y-1">
+                  <a href="/dm/ecosistema-1" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-300 hover:text-red-200 transition-colors">
+                    Piano 1
+                  </a>
+                  <a href="/dm/ecosistema-1-piano-2" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-300 hover:text-red-200 transition-colors">
+                    Piano 2
+                  </a>
+                  <a href="/dm/ecosistema-1-piano-3" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-300 hover:text-red-200 transition-colors">
+                    Piano 3 — Kethrar
+                  </a>
+                </div>
+              )}
               <a href="/dm/sessioni" className="block px-3 py-2 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors">
                 Sessioni
               </a>
@@ -135,24 +152,38 @@ export default function NavBar() {
                   </svg>
                   Dashboard
                 </a>
-                <a href="/dm/ecosistema-1" className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                  </svg>
-                  Piano 1
-                </a>
-                <a href="/dm/ecosistema-1-piano-2" className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                  </svg>
-                  Piano 2
-                </a>
-                <a href="/dm/ecosistema-1-piano-3" className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-                  </svg>
-                  Piano 3
-                </a>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setEcosistemaOpen(true)}
+                  onMouseLeave={() => setEcosistemaOpen(false)}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setEcosistemaOpen(!ecosistemaOpen)}
+                    className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                    Ecosistema 1
+                    <svg className={`w-3 h-3 transition-transform ${ecosistemaOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                  {ecosistemaOpen && (
+                    <div className="absolute top-full left-0 pt-2 flex flex-col gap-1 min-w-[160px] z-50">
+                      <a href="/dm/ecosistema-1" className="px-3 py-2 bg-slate-800 border border-red-900/50 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors whitespace-nowrap">
+                        Piano 1
+                      </a>
+                      <a href="/dm/ecosistema-1-piano-2" className="px-3 py-2 bg-slate-800 border border-red-900/50 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors whitespace-nowrap">
+                        Piano 2
+                      </a>
+                      <a href="/dm/ecosistema-1-piano-3" className="px-3 py-2 bg-slate-800 border border-red-900/50 rounded-lg hover:bg-red-900/20 text-red-400 hover:text-red-300 transition-colors whitespace-nowrap">
+                        Piano 3 — Kethrar
+                      </a>
+                    </div>
+                  )}
+                </div>
                 <a href="/dm/sessioni" className="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>

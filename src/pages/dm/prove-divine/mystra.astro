@@ -1,0 +1,511 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+const magie = [
+  {
+    verbo: "Proteggere",
+    nome: "Scudo",
+    livello: "1°",
+    runa: "La runa mostra una sagoma colpita da una freccia di luce. Un attimo prima dell'impatto, un bagliore argenteo scatta attorno a lei come una seconda pelle: la freccia si infrange senza lasciare segno."
+  },
+  {
+    verbo: "Riflettere",
+    nome: "Spell Turning",
+    livello: "7°",
+    runa: "La runa mostra un fascio di energia colorata scagliato contro una figura. A mezz'aria si piega su se stesso, come uno specchio d'acqua, e torna indietro verso il punto da cui è partito."
+  },
+  {
+    verbo: "Disperdere",
+    nome: "Dissolvi Magie",
+    livello: "3°",
+    runa: "La runa mostra un groviglio di fili luminosi intrecciati attorno a un oggetto. Una mano li sfiora appena, e il groviglio si scioglie in polvere di luce, lasciando l'oggetto com'era prima."
+  },
+  {
+    verbo: "Distruggere",
+    nome: "Disintegrare",
+    livello: "6°",
+    runa: "La runa mostra un sottile raggio verdastro che tocca un blocco di pietra solida. Il blocco si sgretola all'istante in una nuvola di polvere grigia — senza rumore, senza resti."
+  },
+  {
+    verbo: "Rivelare",
+    nome: "Vista Vera",
+    livello: "6°",
+    runa: "La runa mostra due occhi che si aprono, uno sopra l'altro. Ciò che prima appariva sfocato o sdoppiato ora si mostra in un'unica forma nitida e reale."
+  },
+  {
+    verbo: "Legare",
+    nome: "Immobilizzare Mostri (Hold Monster)",
+    livello: "5°",
+    runa: "La runa mostra una creatura in pieno movimento che si irrigidisce di colpo, come se il tempo attorno a lei si fosse fermato — immobile, ma intatta, ancora viva."
+  },
+  {
+    verbo: "Assorbire",
+    nome: "Assorbi Elementi (Absorb Elements)",
+    livello: "1°",
+    runa: "La runa mostra una scarica d'energia che colpisce una mano aperta. Invece di ferire, l'energia viene assorbita nel palmo — e la mano comincia a brillare dello stesso colore, pronta a restituirla."
+  },
+  {
+    verbo: "Purificare",
+    nome: "Rimuovi Maledizione (Remove Curse)",
+    livello: "3°",
+    runa: "La runa mostra una macchia scura che si diffonde su una superficie. Una luce dorata l'attraversa, e la macchia si ritira fino a sparire del tutto, senza lasciare traccia."
+  }
+];
+
+const turni = [
+  {
+    numero: 1,
+    fase: "Fase I — Fondamentali",
+    fenomeno: "Un Muro di Forza dell'Arcimago si materializza tra il Campione e il centro della sala, sbarrando l'unico passaggio.",
+    ideale: "Disintegrare",
+    idealeNota: "RAW, solo Disintegrare distrugge un Muro di Forza.",
+    valida: null,
+    validaNota: "Nessuna alternativa: le altre 7 magie non si applicano affatto a un Muro di Forza. Turno a risposta secca — 2 punti o 0."
+  },
+  {
+    numero: 2,
+    fase: "Fase I — Fondamentali",
+    fenomeno: "L'Arcimago scaglia un singolo colpo magico diretto e onesto contro il Campione — nessun trucco, nessuna finta.",
+    ideale: "Scudo",
+    idealeNota: "La risposta più pulita a una minaccia diretta e onesta.",
+    valida: "Spell Turning",
+    validaNota: "Rimanda comunque il colpo, ma è uno strumento di 7° livello sprecato per un attacco così semplice."
+  },
+  {
+    numero: 3,
+    fase: "Fase II — Inganni",
+    fenomeno: "L'Arcimago si moltiplica in una nebbia di doppioni illusori identici. Solo uno è reale.",
+    ideale: "Vista Vera",
+    idealeNota: "Rivela immediatamente quale sia reale.",
+    valida: null,
+    validaNota: "Nessuna alternativa pulita: le altre magie non permettono di distinguere il vero dal falso in questo modo diretto."
+  },
+  {
+    numero: 4,
+    fase: "Fase II — Inganni",
+    fenomeno: "Un fascio di energia arcana, lanciato con chiaro intento, vola dritto verso il Campione.",
+    ideale: "Spell Turning",
+    idealeNota: "Rimanda l'energia alla fonte, silenzioso e definitivo.",
+    valida: "Scudo",
+    validaNota: "Blocca il colpo, funziona, ma non lo rimanda indietro — non punisce, non insegna nulla all'Arcimago."
+  },
+  {
+    numero: 5,
+    fase: "Fase III — Sottigliezza",
+    fenomeno: "Un costrutto ostile, intrecciato di pura Trama, si anima e attacca. È alimentato in tempo reale da un incantesimo attivo dell'Arcimago.",
+    ideale: "Dissolvi Magie",
+    idealeNota: "Scioglie il legame che lo alimenta: il costrutto crolla e non si riforma.",
+    valida: "Disintegrare",
+    validaNota: "Lo riduce in polvere, ma il legame magico resta intatto — si rianima poco dopo. Rimedio temporaneo."
+  },
+  {
+    numero: 6,
+    fase: "Fase III — Sottigliezza",
+    fenomeno: "Una macchia di magia corrotta e instabile si diffonde su un piccolo altare in miniatura al centro della sala, come una malattia arcana.",
+    ideale: "Rimuovi Maledizione",
+    idealeNota: "Guarisce la fonte: la corruzione non ritorna.",
+    valida: "Dissolvi Magie",
+    validaNota: "Rimuove l'effetto attivo in quel momento, ma non cura la causa — la corruzione può tornare a diffondersi."
+  },
+  {
+    numero: 7,
+    fase: "Fase IV — Il vero giudizio",
+    fenomeno: "Uno spirito arcano innocuo e spaventato, generato per errore dall'esperimento dell'Arcimago, tenta di fuggire portando con sé un frammento di conoscenza che Mystra vuole preservare.",
+    ideale: "Immobilizzare Mostri",
+    idealeNota: "Lo cattura senza fargli del male, preservando ciò che sa.",
+    valida: null,
+    validaNota: "Nessuna alternativa: Disintegrare vale esplicitamente 0 punti, non 1 — distruggerebbe anche la conoscenza che lo spirito porta con sé. Coerente con dei.json: Mystra odia la distruzione di conoscenza."
+  },
+  {
+    numero: 8,
+    fase: "Fase IV — Il vero giudizio",
+    fenomeno: "L'Arcimago libera un nucleo di energia arcana grezza e instabile al centro della sala: cresce, e detonerà se colpito con forza o disperso con violenza.",
+    ideale: "Assorbi Elementi",
+    idealeNota: "La neutralizza assorbendola in sicurezza — l'unica risposta che non rischia di farla esplodere, e trasforma il pericolo in una risorsa per il colpo successivo.",
+    valida: "Scudo",
+    validaNota: "Riduce il danno della detonazione, ma non la previene né la trasforma in risorsa."
+  }
+];
+---
+
+<MainLayout
+  title="Prove Divine — Prova di Mystra [DM]"
+  description="Dungeon Bonus — La Prova di Mystra al Secondo Pianerottolo"
+>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/prove-divine" class="text-purple-400 hover:text-purple-300">← Prove Divine</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-3">
+        <span class="text-6xl">✨</span>
+        <div>
+          <p class="text-sm text-purple-500 uppercase tracking-widest font-bold mb-1">Prova Divina — Dungeon Bonus</p>
+          <h1 class="text-4xl font-bold text-purple-300">La Prova dell'Arcano — Duello della Trama</h1>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>📍 Secondo Pianerottolo</span>
+        <span>⏱️ 45–60 min</span>
+        <span>🎭 Comprensione della Magia</span>
+        <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded">🔑 Requisito: 5 Nodi della Trama — Piano 2</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Un terzo portale, gemello di quelli di Tymora e Tempus ma di tutt'altra natura, è già disponibile sul Pianerottolo
+        insieme agli altri due — si apre con la stessa condizione (5 Nodi della Trama registrati al Piano 2), nessun requisito
+        aggiuntivo. Non è una prova di fortuna né di conflitto. È una prova di comprensione arcana — capire non quale magia
+        sia più potente, ma quale sia più <em>giusta</em> per la situazione davanti a sé.
+      </p>
+    </div>
+
+    <!-- Checklist pre-prova -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Prova</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>8 rune fisiche</strong> (gettoni o carte): una per ciascuna delle magie in Parte III. Ai giocatori si mostra solo la runa e la sua illusione — <strong>mai il nome reale dell'incantesimo</strong>.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Tabella dei turni a portata di mano</strong> (Parte V) — per ogni turno serve sapere al volo qual è la risposta ideale, quale l'eventuale alternativa valida, e perché.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Nessun dado</strong> per la valutazione delle risposte — punteggio fisso per ogni combinazione fenomeno/magia, deciso a priori (vedi Parte V).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Nessun "comandante"</strong>: a differenza della Prova di Tempus, qui il Campione della Trama è mosso collettivamente — la ricompensa finale (Parte VII) è già pensata per il gruppo intero, senza bisogno di nominare nessuno.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Tono e personalità dell'Arcimago Illusorio</strong>: 📝 <em>da definire</em>. Per questa versione della pagina, la sua caratterizzazione narrativa (voce, battute, reazioni) non è ancora scritta — usa un tono neutro, analitico e pacato coerente con Mystra (calma, contemplativa, non giudica la moralità ma solo l'uso della magia — vedi <code>dei.json</code>) finché non viene definita una voce più specifica.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==================== PARTE I: LA SALA DEL DUELLO ==================== -->
+    <div class="bg-purple-900/20 border border-purple-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">✦</span> PARTE I: LA SALA DEL DUELLO
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando il gruppo attraversa il portale.</p>
+
+      <div class="bg-black/50 border-l-4 border-purple-500 p-6 my-4 rounded-r">
+        <p class="italic text-purple-100 text-lg leading-relaxed">
+          La stanza dall'altra parte è circolare, silenziosa, illuminata da una luce che non viene da nessuna torcia —
+          sembra emanare dalle pareti stesse, dove filamenti sottili di blu e argento scorrono come vene, intrecciandosi
+          e sciogliendosi in continuazione. La Trama, resa visibile.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Al centro, un cerchio di rune fluttua a mezz'aria sopra un basso piedistallo — otto simboli, distanti tra loro,
+          ognuno che pulsa piano di una luce propria.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          Di fronte al cerchio, due sagome fatte della stessa sostanza traslucida di Vex si materializzano lentamente,
+          una di fronte all'altra: <strong>l'Arcimago Illusorio</strong> — il suo volto ancora indistinto, come una pagina
+          che non ha ancora deciso cosa scrivere — e <strong>il Campione della Trama</strong>, una figura vuota, in attesa
+          di essere guidata.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/60 rounded p-4 mt-4">
+        <p class="text-sm font-bold text-purple-400 mb-3">📝 Nota DM</p>
+        <p class="text-gray-300 text-sm">
+          L'aspetto e la voce dell'Arcimago Illusorio non sono ancora stati definiti nel dettaglio — questa descrizione
+          resta volutamente vaga ("il volto ancora indistinto") in attesa di una caratterizzazione più specifica. Il resto
+          della prova (Parti II–VI) è invece meccanicamente completo e utilizzabile da subito.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: COME FUNZIONA IL DUELLO ==================== -->
+    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">📖</span> PARTE II: COME FUNZIONA IL DUELLO
+      </h2>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          I personaggi non lanciano incantesimi in prima persona: scelgono quale magia far usare al Campione della Trama,
+          toccando una delle 8 rune fluttuanti. Toccare una runa mostra una breve illusione dell'effetto — mai il nome
+          dell'incantesimo — così la scelta si basa su <strong>cosa fa</strong> la magia, non su come si chiama.
+        </p>
+      </div>
+
+      <ul class="space-y-2 text-sm text-gray-300 mb-4">
+        <li class="flex items-start gap-2">
+          <span class="text-indigo-400 mt-0.5">1.</span>
+          <span>L'Arcimago presenta un fenomeno magico (un turno).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-indigo-400 mt-0.5">2.</span>
+          <span>I giocatori possono rivedere le illusioni delle rune, liberamente, quante volte vogliono.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-indigo-400 mt-0.5">3.</span>
+          <span>Discutono e scelgono <strong>una sola runa</strong> per turno.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-indigo-400 mt-0.5">4.</span>
+          <span>Mystra valuta la risposta secondo la tabella in Parte V — 2, 1 o 0 punti.</span>
+        </li>
+      </ul>
+
+      <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-4 text-xs text-amber-200">
+        <strong class="text-amber-400">Nessun limite di utilizzo:</strong> le magie si possono riusare liberamente in turni diversi.
+        Ogni turno è indipendente — non ci sono penalità per aver "sprecato" una runa in un turno precedente.
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: LE 8 MAGIE ==================== -->
+    <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-blue-400">🔮</span> PARTE III: LE 8 MAGIE DISPONIBILI
+      </h2>
+
+      <p class="text-sm text-gray-400 mb-6">
+        Ogni magia rappresenta un verbo/approccio distinto. Nessuna è mai la risposta ideale a più di una situazione — nessuna
+        è una soluzione universale. La colonna "Incantesimo reale" è <strong>solo per il DM</strong>: non va mai detta ad
+        alta voce, i giocatori conoscono solo la descrizione della runa.
+      </p>
+
+      <div class="space-y-4">
+        {magie.map((magia) => (
+          <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-5">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+              <p class="font-bold text-blue-300 text-lg">{magia.verbo}</p>
+              <span class="text-xs text-red-400 bg-red-900/30 px-2 py-1 rounded border border-red-800">
+                🔒 {magia.nome} — {magia.livello} livello
+              </span>
+            </div>
+            <p class="text-sm text-gray-300 italic leading-relaxed">📢 "{magia.runa}"</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mt-6 text-xs text-gray-400">
+        <strong class="text-blue-400">Incantesimi esclusi:</strong> Controincantesimo (sarebbe una risposta quasi universale
+        contro qualsiasi magia in fase di lancio) e Teletrasporto (permetterebbe di evitare il problema anziché risolverlo).
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mt-3 text-xs text-gray-400">
+        <strong class="text-blue-400">Nota sulle traduzioni:</strong> Scudo, Disintegrare, Dissolvi Magie e Vista Vera sono
+        nomi usati con buona sicurezza. Immobilizzare Mostri, Assorbi Elementi e Rimuovi Maledizione sono traduzioni
+        letterali plausibili — verificale sul manuale italiano. Spell Turning è lasciato in inglese per incertezza sulla
+        dicitura ufficiale.
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: GLI 8 TURNI ==================== -->
+    <div class="bg-cyan-900/20 border border-cyan-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-cyan-400">⚔️</span> PARTE IV: GLI 8 TURNI
+      </h2>
+
+      <p class="text-sm text-gray-400 mb-6">
+        Ordine narrativo consigliato: Fase I fondamenti meccanici, Fase II inganni e illusioni, Fase III sottigliezza
+        (sciogliere contro distruggere, curare contro rimuovere), Fase IV il vero giudizio di Mystra — cosa si preserva,
+        cosa si maneggia con cura. Il Turno 8 è il climax naturale, va tenuto per ultimo.
+      </p>
+
+      <div class="space-y-6">
+        {turni.map((turno) => (
+          <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+              <p class="text-xs font-bold text-cyan-400 uppercase tracking-widest">{turno.fase}</p>
+              <span class="text-xs text-gray-500">Turno {turno.numero}</span>
+            </div>
+
+            <div class="bg-black/40 border-l-4 border-cyan-500 p-4 rounded-r mb-4">
+              <p class="italic text-cyan-100 text-sm leading-relaxed">📢 {turno.fenomeno}</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+                <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta ideale — 2 punti</p>
+                <p class="text-sm text-gray-300 mb-1"><strong>{turno.ideale}</strong></p>
+                <p class="text-xs text-gray-400">{turno.idealeNota}</p>
+              </div>
+              <div class={turno.valida ? "bg-amber-900/20 border border-amber-700/40 rounded-lg p-4" : "bg-gray-800/40 border border-gray-600 rounded-lg p-4"}>
+                <p class={turno.valida ? "text-sm font-bold text-amber-400 mb-2" : "text-sm font-bold text-gray-400 mb-2"}>
+                  {turno.valida ? "△ Risposta valida — 1 punto" : "— Nessuna alternativa — risposta secca"}
+                </p>
+                {turno.valida && <p class="text-sm text-gray-300 mb-1"><strong>{turno.valida}</strong></p>}
+                <p class="text-xs text-gray-400">{turno.validaNota}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-purple-900/20 border border-purple-700/40 rounded-lg p-4 mt-6 text-xs text-purple-200">
+        <strong class="text-purple-400">Nota di semplificazione:</strong> alcune interazioni sono adattate per restare
+        leggibili come minigioco simulato e non vanno lette come una ruling RAW rigorosa per il gioco reale al tavolo.
+        In particolare il Turno 6 tratta Dissolvi Magie come capace di arginare temporaneamente un effetto di corruzione
+        in corso, cosa non sempre pacifica in RAW puro per una maledizione permanente.
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: PUNTEGGIO ==================== -->
+    <div class="bg-teal-900/20 border border-teal-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">📊</span> PARTE V: PUNTEGGIO E SOGLIE
+      </h2>
+
+      <p class="text-sm text-gray-300 mb-6">
+        8 turni × 2 punti massimi = <strong>16 punti totali</strong>. Chi sceglie sempre la risposta "valida" quando esiste,
+        e mai quella ideale, totalizza comunque 8/16 — finisce nella fascia media: la costanza onesta vale più della
+        fortuna occasionale, ma meno della vera comprensione.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4 text-center">
+          <p class="text-2xl font-bold text-green-400 mb-1">13–16</p>
+          <p class="text-sm text-gray-300">Eccellente</p>
+        </div>
+        <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-4 text-center">
+          <p class="text-2xl font-bold text-amber-400 mb-1">7–12</p>
+          <p class="text-sm text-gray-300">Buono / solido</p>
+        </div>
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 text-center">
+          <p class="text-2xl font-bold text-gray-400 mb-1">0–6</p>
+          <p class="text-sm text-gray-300">Insufficiente, non punito duramente</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: RICOMPENSE ==================== -->
+    <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">🎁</span> PARTE VI: RICOMPENSE
+      </h2>
+
+      <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Ricompensa agganciata a una meccanica reale del boss finale Kethrar (Piano 3, Fase 3, da 70 PF): la
+          <strong> Zona Cristallina</strong> crea terreno difficile entro 3m da lui, e gli incantesimi di 1°/2° livello
+          lanciati entro quel raggio richiedono un <strong>TS Arcano CD 13</strong> o svaniscono (slot consumato, nessun
+          effetto). Stessa logica della ricompensa di Tempus (che annulla la Soglia del Danno di Kethrar in Fase 1) — ogni
+          Prova Divina disinnesca un pezzo specifico del boss finale. Ogni fascia include un beneficio
+          <strong> universale</strong>, utilizzabile anche da chi non lancia incantesimi.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-green-300 text-lg">Il Dono della Tessitrice</p>
+            <span class="text-xs text-green-500 bg-green-900/50 px-2 py-1 rounded border border-green-800 whitespace-nowrap">13–16</span>
+          </div>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li><strong>Universale:</strong> tutto il gruppo ignora il terreno difficile della Zona Cristallina in Fase 3 — nessuno viene rallentato nell'avvicinarsi a Kethrar, lanciatori o meno.</li>
+            <li><strong>Dono collettivo aggiuntivo:</strong> vantaggio al primo attacco (arma o incantesimo) sferrato contro Kethrar nello scontro, chiunque lo tenti.</li>
+            <li><strong>Extra per chi lancia incantesimi:</strong> ignora anche il TS Arcano CD 13 — i propri incantesimi di 1°/2° livello funzionano sempre entro 3m da Kethrar.</li>
+          </ul>
+        </div>
+
+        <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-amber-300 text-lg">Il Favore dell'Arcano</p>
+            <span class="text-xs text-amber-500 bg-amber-900/50 px-2 py-1 rounded border border-amber-800 whitespace-nowrap">7–12</span>
+          </div>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li><strong>Universale:</strong> vantaggio (invece di immunità) ai tiri per muoversi nel terreno difficile della Zona Cristallina.</li>
+            <li><strong>Extra per chi lancia incantesimi:</strong> vantaggio (invece di immunità) al TS Arcano CD 13.</li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-2 italic">Nessun dono collettivo aggiuntivo rispetto alla fascia superiore.</p>
+        </div>
+
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-gray-300 text-lg">L'Attenzione di Mystra</p>
+            <span class="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded border border-gray-600 whitespace-nowrap">0–6</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong>Universale:</strong> vantaggio ai tiri salvezza di Intelligenza per l'intero Piano 3 — utile contro
+            molti effetti magici e mentali, non solo quelli di Kethrar, e sfruttabile da qualunque personaggio
+            indipendentemente dalla classe.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: L'USCITA E VEX ==================== -->
+    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">👤</span> PARTE VII: L'USCITA E VEX
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando riattraversano il portale e tornano sul Pianerottolo.</p>
+
+      <div class="bg-black/50 border-l-4 border-indigo-400 p-5 mb-6 rounded-r">
+        <p class="italic text-indigo-100 text-base leading-relaxed">
+          I filamenti blu-argento sulle pareti rallentano, poi si spengono uno a uno, come una candela che consuma
+          l'ultima cera. Il portale si richiude dietro di voi senza rumore.
+        </p>
+      </div>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-5">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">🎭 Reazione di Vex</p>
+        <p class="text-sm text-gray-300 mb-3">Le venature dorate di Vex pulsano piano, con un ritmo quasi pensieroso.</p>
+        <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r">
+          <p class="italic text-indigo-100 text-sm leading-relaxed">"Non ho sentito nulla, questa volta. Nessun rumore, nessun tavolo colpito."</p>
+          <p class="text-gray-400 text-sm not-italic mt-2">Una pausa più lunga del solito.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-2">"Il silenzio, con lei, è spesso il segno che le cose sono andate bene."</p>
+          <p class="text-gray-400 text-sm not-italic mt-2">Le ali si muovono, di nuovo regolari.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-2">"Comprate quello che vi serve. Il Piano 3 non aspetta."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note Aggiuntive -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-300 mb-4">📝 Note Aggiuntive</h2>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">→</span>
+          <span><strong class="text-purple-400">Secondo tentativo:</strong> come per Tymora e Tempus, il portale non si riapre. L'Arcimago ha già visto quello che voleva vedere.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">→</span>
+          <span><strong class="text-purple-400">Chi non entra:</strong> nessuna penalità. Semplicemente non ricevono nulla.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-purple-400 mt-0.5">→</span>
+          <span><strong class="text-purple-400">Parti ancora da definire:</strong> caratterizzazione narrativa dell'Arcimago Illusorio (voce, tono, reazioni turno per turno). La struttura meccanica (magie, turni, punteggio, ricompense) è completa e finalizzata.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/prove-divine" class="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Torna alle Prove Divine
+      </a>
+      <a href="/dm/sessioni/sessione-8" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Sessione 8 — Il Secondo Pianerottolo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
