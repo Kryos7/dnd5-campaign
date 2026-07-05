@@ -5,7 +5,15 @@
       "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\" -Recurse -Directory)",
       "Bash(Select-Object -First 30 FullName)",
       "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Lorenzo\\\\Documents\\\\dnd5-campaign-visual-app\\\\src\\\\data\" -Recurse -File)",
-      "Bash(Select-Object -ExpandProperty FullName)"
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Read(//c/Users/Lorenzo/.claude/**)",
+      "Read(//c/Users/Lorenzo/.claude/projects/**)",
+      "Bash(ls -la ~/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/ 2>/dev/null | head -50)",
+      "Read(//c/Users/Lorenzo/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/**)",
+      "Bash(cat ~/.claude/projects/c--Users-Lorenzo-Documents-dnd5-campaign-visual-app/sessions-index.json 2>/dev/null | head -c 3000)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Lorenzo\\.claude"
     ]
   }
 }

@@ -1,0 +1,570 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Prove Divine — Prova di Tempus [DM]"
+  description="Dungeon Bonus — La Prova di Tempus al Secondo Pianerottolo"
+>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/prove-divine" class="text-red-400 hover:text-red-300">← Prove Divine</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-3">
+        <span class="text-6xl">⚔️</span>
+        <div>
+          <p class="text-sm text-red-500 uppercase tracking-widest font-bold mb-1">Prova Divina — Dungeon Bonus</p>
+          <h1 class="text-4xl font-bold text-red-300">La Prova del Conflitto</h1>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>📍 Secondo Pianerottolo</span>
+        <span>⏱️ 30–45 min</span>
+        <span>🎭 Strategia e Tempismo</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔑 Richiede: 5 Nodi della Trama + nessun mostro evitato al Piano 2</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Un secondo portale si apre sul Pianerottolo, gemello di quello di Tymora ma di tutt'altra tempra.
+        Non è una prova di coraggio cieco, né di magia. È una prova di comprensione — capire che il conflitto
+        ha uno scopo, e che vincerlo richiede testa, non solo spada.
+      </p>
+    </div>
+
+    <!-- Checklist pre-prova -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Prova</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Gettoni fisici</strong>: prepara 2 set di pedine-unità (Fanteria / Cavalleria / Arcieri) — uno per i PG, uno per il Generale — più pedine numerate 1-2-3 per l'ordine di attivazione (Manche 2 e 3 soltanto).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Il tono</strong>: caloroso, tonante, mai crudele. Il Generale ride di gusto anche quando perde. Nessuna vera posta in gioco — è un gioco da tavolo tra soldati, non un pericolo.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>All'inizio</strong>, chiedi al gruppo di nominare un "comandante" per la prova — riceverà la ricompensa principale, qualunque sia l'esito.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Tieni a mente le mosse del Generale</strong> (sono fisse, non improvvisate): Manche 1 → Cavalleria. Manche 2 → Cavalleria al guado (pedina 1), Fanteria al ponte (pedina 2), Arcieri in riserva. Manche 3 → Cavalleria sul fianco (pedina 1, il suo difetto — carica troppo presto), Fanteria al passo (pedina 2), Arcieri sulla collina (pedina 3).</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 mt-0.5">□</span>
+          <span><strong>Nessun dado</strong> per le assegnazioni di unità — solo lettura del terreno e ragionamento. L'unico spazio per un tiro è un'eventuale prova di Intuizione/Storia opzionale in Manche 2, se vuoi dare un indizio su "dove" il Generale colpirà per primo.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==================== PARTE I: IL PORTALE ==================== -->
+    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">✦</span> PARTE I: IL PORTALE
+      </h2>
+
+      <div class="bg-red-900/30 border border-red-700/30 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-red-400 mb-2">📍 Condizione di apertura</p>
+        <p class="text-sm text-gray-300">
+          Come quello di Tymora, il portale compare quando la Pietra Misteriosa ha registrato tutti e 5 i Nodi del Piano 2 —
+          ma si materializza solo perché <strong>ogni mostro del Piano 2 è stato affrontato e sconfitto, nessuno evitato</strong>.
+          Tempus osserva i combattimenti, non le fughe. Il party li ha voluti tutti. Lui l'ha notato.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando qualcuno nota il secondo arco. Pausa dopo "non era lì prima".</p>
+
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          Sul lato opposto della stanza rispetto all'arco dorato, ce n'è un altro. Non era lì prima.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Anche questo è fatto di luce, ma è rossa — non il rosso del sangue, il rosso di una brace che non si spegne mai del tutto.
+          Non pulsa in modo irregolare come quello di Tymora. Pulsa con un ritmo fermo, quasi militare — un battito, una pausa, un battito.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Sul mosaico, sotto l'arco, i simboli si sono riorganizzati in una formazione — file ordinate, come soldati schierati.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          L'aria che esce da dentro odora di metallo caldo e di qualcosa di più vecchio — polvere da campo di battaglia, cuoio, disciplina.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/60 rounded p-4 mt-4">
+        <p class="text-sm font-bold text-red-400 mb-3">📋 Cosa dice Vex</p>
+        <p class="text-gray-300 text-sm italic mb-2">"Anche questo non è nel mandato."</p>
+        <p class="text-gray-400 text-sm">Le ali si fermano un istante, poi riprendono, più rigide del solito — quasi sull'attenti.</p>
+        <p class="text-gray-300 text-sm italic mt-2">"Sento una seconda presenza attraverso il dungeon. Questa è... più diretta della prima. Meno paziente."</p>
+        <div class="bg-gray-800/60 rounded p-3 mt-3 text-xs">
+          <p class="text-red-400 font-bold mb-1">Se chiedono di chi è:</p>
+          <p class="text-gray-300 italic">"Non ha bisogno che ve lo dica io. Entrate, e ve lo dirà lui stesso — a voce molto alta, probabilmente."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: L'INGRESSO E IL GENERALE ==================== -->
+    <div class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🏕️</span> PARTE II: LA SALA DEL TAVOLO DI SABBIA
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando attraversano l'arco.</p>
+
+      <div class="bg-black/50 border-l-4 border-orange-500 p-6 my-4 rounded-r">
+        <p class="italic text-orange-100 text-lg leading-relaxed">
+          La stanza dall'altra parte è rettangolare, bassa, con pareti di pietra scura segnate da incisioni che a
+          uno sguardo distratto sembrano decorazioni — a uno più attento, sono mappe. Decine di mappe, sovrapposte,
+          di battaglie che non riconoscete.
+        </p>
+        <p class="italic text-orange-100 text-lg leading-relaxed mt-4">
+          Al centro della stanza, un tavolo enorme, basso, ricoperto di sabbia fine color ruggine. Sopra la sabbia,
+          un paesaggio in miniatura — non statico: colline che si alzano e si abbassano lentamente, come se respirassero,
+          un fiume che scorre davvero, in scala, tra sponde alte pochi centimetri.
+        </p>
+        <p class="italic text-orange-100 text-lg leading-relaxed mt-4">
+          E dietro il tavolo, una figura che occupa quasi tutta l'altezza della stanza.
+        </p>
+      </div>
+
+      <!-- DESCRIZIONE VISIVA DEL GENERALE -->
+      <div class="bg-gray-900/60 border-2 border-orange-500/40 rounded-lg p-6 my-6">
+        <p class="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">🎨 Descrizione Visiva — Prima Apparizione (leggere lentamente, senza fretta)</p>
+        <div class="space-y-3 text-orange-100 italic leading-relaxed">
+          <p>
+            È alto quasi tre metri, ma non incombe — sta chinato sul tavolo, gomiti puntati sulla sabbia, come un
+            nonno che studia una partita a scacchi con i nipoti. Il corpo è fatto della stessa sostanza di Vex, in un
+            certo senso — traslucido, i bordi che tremolano appena come aria calda sopra il fuoco — ma dove Vex è
+            fragile e piccolo, lui è <strong>massiccio</strong>. Un'armatura a piastre antica, ammaccata in cento punti,
+            ognuno dei quali sembra raccontare una battaglia diversa. Non la porta come un peso: la porta come una
+            seconda pelle, consumata da tremila anni di uso.
+          </p>
+          <p>
+            Il viso è quello di un uomo che è stato vecchio già alla sua morte — barba grigia intrecciata con fili di
+            rame, una cicatrice che gli attraversa l'occhio sinistro (l'occhio c'è ancora, luminoso di una luce ambrata
+            fioca, non spento come ci si aspetterebbe). Le mani, enormi, sono quelle che ora si muovono sulla sabbia
+            con una delicatezza sorprendente, spostando minuscole miniature di soldati con la punta di due dita, come
+            se stesse accarezzando qualcosa di prezioso.
+          </p>
+          <p>
+            Sulla schiena, ripiegato e mai spiegato, un vessillo a brandelli — troppo sbiadito per leggerne l'emblema,
+            tranne per una cosa: nel punto centrale, ancora visibile, una spada incrociata a una fiamma. Il simbolo di Tempus.
+          </p>
+          <p>
+            Non vi ha ancora guardato. È concentrato sul tavolo. Ma quando alza la testa, il sorriso che gli si apre
+            sul viso è enorme, sincero, quasi infantile — l'esatto opposto di quello che la sua mole dovrebbe suggerire.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-3 italic">📢 Annuncio d'apertura — leggere quando alza lo sguardo.</p>
+
+      <div class="bg-black/50 border-l-4 border-red-500 p-5 rounded-r">
+        <p class="italic text-red-100 text-base leading-relaxed">
+          "AH! Sangue fresco sul tavolo di sabbia!"
+        </p>
+        <p class="text-gray-400 text-sm not-italic mt-2">Si china ancora di più, mani (trasparenti, ma solidissime nel gesto) che sfiorano le miniature senza spostarle.</p>
+        <p class="italic text-red-100 text-base leading-relaxed mt-3">
+          "Tre battaglie. Tre plance. Voi contro me — non con le vostre spade, per una volta, ma con la vostra testa.
+          Tempus non giudica solo chi colpisce più forte. Giudica chi capisce <em>perché</em> colpisce."
+        </p>
+        <p class="text-gray-400 text-sm not-italic mt-2">Un ghigno enorme.</p>
+        <p class="italic text-red-100 text-base leading-relaxed mt-3">
+          "Vediamo se sapete ancora pensare, prima di sanguinare."
+        </p>
+        <p class="text-gray-400 text-sm not-italic mt-3">Poi, guardando il gruppo con genuina curiosità:</p>
+        <p class="italic text-red-100 text-base leading-relaxed mt-2">
+          "Allora. Chi guida la carica, oggi?"
+        </p>
+      </div>
+      <p class="text-xs text-gray-500 mt-3 italic">📋 Nota DM: qui il gruppo nomina il "comandante" — vedi Parte VI per il perché.</p>
+    </div>
+
+    <!-- ==================== PARTE III: MANCHE 1 ==================== -->
+    <div class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-500">🏜️</span> PARTE III: MANCHE 1 — IL CANYON
+      </h2>
+
+      <div class="bg-yellow-900/30 border border-yellow-700/40 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-yellow-400 mb-2">📍 Meccanica</p>
+        <p class="text-sm text-gray-300">
+          Il Generale schiera sempre l'unità oggettivamente più forte per il terreno mostrato. I PG devono dedurre
+          quale userà lui e opporre il contro giusto scegliendo <strong>una sola pedina-unità</strong>. Nessun dado.
+          Triangolo: Fanteria batte Cavalleria, Cavalleria batte Arcieri, Arcieri battono Fanteria.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-3 italic">📢 Descrizione della plancia.</p>
+      <div class="bg-black/50 border-l-4 border-yellow-500 p-5 rounded-r mb-6">
+        <p class="italic text-yellow-100 text-base leading-relaxed">
+          La sabbia si sposta da sola. Si alza in due pareti parallele, strette, che formano un canyon dritto —
+          a un'estremità, una radura aperta dove sono posate le vostre pedine. Dall'altra, l'imbocco del canyon,
+          dove il Generale ha già i suoi soldatini in miniatura schierati.
+        </p>
+        <p class="italic text-yellow-100 text-base leading-relaxed mt-3">
+          "Il mio esercito attraversa. Il vostro attende. Scegliete chi vi difende."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+          <p class="text-sm font-bold text-gray-300 mb-2">🎖️ Scelta del Generale</p>
+          <p class="text-sm text-gray-400"><strong class="text-red-400">Cavalleria.</strong> Il corridoio è dritto e stretto — perfetto per sfruttare lo slancio prima che il nemico si organizzi.</p>
+        </div>
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+          <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta corretta</p>
+          <p class="text-sm text-gray-300"><strong>Fanteria</strong>, schierata all'imbocco del canyon (collo di bottiglia). La carica perde tutto lo slancio contro una linea serrata in spazio stretto.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-6 text-xs text-gray-400">
+        <strong class="text-yellow-400">Perché sbagliano le altre:</strong> gli Arcieri non hanno campo di tiro libero in un corridoio stretto in movimento veloce; Cavalleria contro Cavalleria è uno scontro alla pari che il Generale vince comunque, per aver scelto lui il terreno.
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se scelgono Fanteria (giusto)</p>
+          <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r">
+            <p class="italic text-green-100 text-sm leading-relaxed">"AH-HA!" Batte un pugno sul bordo del tavolo, facendolo vibrare.</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-2">"Guardatela, la mia cavalleria — si sfracella contro la vostra linea come un'onda contro uno scoglio! Bene. BENE! Chi capisce il collo di bottiglia, capisce metà della guerra."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Se scelgono Cavalleria o Arcieri (sbagliato)</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="italic text-red-100 text-sm leading-relaxed">"Coraggiosi!" Ride, di gusto, non con disprezzo.</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-2">"Sciocchi — ma coraggiosi! La mia cavalleria vi travolge come vento tra le canne. Ditemi: sentivate già lo slancio nelle gambe dei miei cavalli, prima di scegliere? No? Peccato."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: MANCHE 2 ==================== -->
+    <div class="bg-cyan-900/20 border border-cyan-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-cyan-400">🌊</span> PARTE IV: MANCHE 2 — IL GUADO E IL PONTE
+      </h2>
+
+      <div class="bg-cyan-900/30 border border-cyan-700/40 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-cyan-400 mb-2">📍 Meccanica</p>
+        <p class="text-sm text-gray-300">
+          Ogni lato schiera <strong>2 unità su 3</strong> (una resta in riserva). Ai PG servono pedina-unità + pedina numerata
+          per ciascuna delle due assegnate — il numero indica solo <em>chi si muove prima</em>, non un bonus.
+          Il gruppo assegna la prima unità a un varco; il Generale rivela dove manda la sua prima unità; il gruppo
+          assegna la seconda unità con quell'informazione in mano.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-3 italic">📢 Descrizione della plancia.</p>
+      <div class="bg-black/50 border-l-4 border-cyan-500 p-5 rounded-r mb-6">
+        <p class="italic text-cyan-100 text-base leading-relaxed">
+          La sabbia si riforma: un fiume, in scala, con due attraversamenti. A sinistra un ponte di pietra, stretto,
+          a senso unico. A destra un guado ampio e basso — e sulla vostra sponda, proprio sopra il guado, un dosso
+          che domina l'acqua bassa.
+        </p>
+        <p class="italic text-cyan-100 text-base leading-relaxed mt-3">
+          "Due varchi. Due unità a testa. La terza aspetta la prossima battaglia."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+          <p class="text-sm font-bold text-gray-300 mb-2">🎖️ Scelte del Generale</p>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li>• <strong class="text-red-400">Cavalleria → Guado</strong> (pedina 1, si muove per prima: la velocità riduce il tempo sotto tiro)</li>
+            <li>• <strong class="text-red-400">Fanteria → Ponte</strong> (pedina 2, più lenta a organizzarsi)</li>
+            <li>• Arcieri in riserva (inutili nell'attraversare acqua)</li>
+          </ul>
+        </div>
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+          <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta corretta</p>
+          <ul class="text-sm text-gray-300 space-y-1">
+            <li>• <strong>Fanteria → Ponte</strong> (tiene il collo di bottiglia)</li>
+            <li>• <strong>Arcieri → Guado</strong>, sul dosso (gittata e tempo di mira su chi attraversa allo scoperto)</li>
+            <li>• Cavalleria in riserva — la tengono per la Manche 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-4 mb-6 text-xs text-amber-200">
+        <strong class="text-amber-400">Il tranello del terreno:</strong> normalmente Cavalleria batte Arcieri. Ma il dosso ribalta il rapporto —
+        Arcieri con tempo e gittata dall'alto battono una carica esposta su acqua bassa. È la lezione centrale della manche: il terreno vince sul tipo.
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-xs font-bold text-cyan-400 uppercase mb-2">📢 Rivelazione — la Cavalleria del Generale si muove per prima</p>
+          <div class="bg-black/40 border-l-4 border-cyan-500 p-4 rounded-r">
+            <p class="italic text-cyan-100 text-sm leading-relaxed">"La mia Cavalleria si getta nel guado!" Annuncia come un banditore, quasi cantando.</p>
+            <p class="italic text-cyan-100 text-sm leading-relaxed mt-2">"Corre sull'acqua bassa come se fosse polvere secca. Vediamo... vediamo se avete studiato quella collina, avventurieri, o se l'avete solo guardata."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se azzeccano l'abbinamento</p>
+          <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r">
+            <p class="text-gray-400 text-sm not-italic">Per un istante non dice nulla — solo un lungo fischio ammirato.</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-2">"...Il dosso. L'avevo dimenticato, il dosso — no, non è vero, non lo dimentico mai, ma VOI l'avete visto. Questo è un colpo da generale vero, non da soldato."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Se sbagliano l'abbinamento</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="italic text-red-100 text-sm leading-relaxed">"Oh, che PECCATO." Non è sarcasmo cattivo — è delusione sincera da appassionato del gioco.</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-2">"Avevate la collina. Avevate il vantaggio. E l'avete ignorato. Tymora piange per il coraggio sprecato — io piango per la strategia sprecata. Su, forza, un'altra manche vi aspetta."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: MANCHE 3 ==================== -->
+    <div class="bg-purple-900/20 border border-purple-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">🏔️</span> PARTE V: MANCHE 3 — LA PIANA DEI TRE COLLI
+      </h2>
+
+      <div class="bg-purple-900/30 border border-purple-700/40 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-purple-400 mb-2">📍 Meccanica</p>
+        <p class="text-sm text-gray-300">
+          Tutte e 3 le unità in campo per entrambi i lati. I PG dichiarano <strong>disposizione + ordine</strong> con
+          pedina-unità + pedina numerata per ciascuna. Vittoria = assegnazione corretta (Fanteria-passo, Arcieri-collina,
+          Cavalleria-fianco) <strong>E</strong> numero della Cavalleria più alto (ultima ad attivarsi) di quello del Generale.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-3 italic">📢 Descrizione della plancia.</p>
+      <div class="bg-black/50 border-l-4 border-purple-500 p-5 rounded-r mb-6">
+        <p class="italic text-purple-100 text-base leading-relaxed">
+          La sabbia si riforma un'ultima volta, più ampia delle precedenti: un passo stretto al centro, una collinetta
+          su un lato, un fianco aperto sull'altro. Tutti gli elementi delle prime due battaglie, insieme.
+        </p>
+        <p class="italic text-purple-100 text-base leading-relaxed mt-3">
+          "L'ultima. La vera." La sua voce si abbassa, per un attimo quasi solenne.
+        </p>
+        <p class="italic text-purple-100 text-base leading-relaxed mt-3">
+          "Qui non conta più solo dove mettete i pezzi. Conta QUANDO. Un generale che sa dove ma non sa quando...
+          è solo un uomo con una bella mappa."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+          <p class="text-sm font-bold text-gray-300 mb-2">🎖️ Scelte del Generale (col suo difetto)</p>
+          <ul class="text-sm text-gray-400 space-y-1">
+            <li>• <strong class="text-red-400">Cavalleria → Fianco</strong> (pedina 1 — carica subito, impaziente)</li>
+            <li>• <strong class="text-red-400">Fanteria → Passo</strong> (pedina 2)</li>
+            <li>• <strong class="text-red-400">Arcieri → Collina</strong> (pedina 3 — tirano per ultimi)</li>
+          </ul>
+        </div>
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+          <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta corretta dei PG</p>
+          <ul class="text-sm text-gray-300 space-y-1">
+            <li>• <strong>Fanteria → Passo</strong> (fissa il nemico)</li>
+            <li>• <strong>Arcieri → Collina</strong> (fuoco di supporto)</li>
+            <li>• <strong>Cavalleria → Fianco</strong>, ma con <strong>numero più alto</strong> (carica per ultima, quando il Generale si è già scoperto)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-4 mb-6 text-xs text-amber-200">
+        <strong class="text-amber-400">Il vero test:</strong> non serve indovinare posizioni diverse dal Generale — le posizioni giuste sono le stesse per
+        chiunque legga bene il terreno. Vince chi dimostra più disciplina di lui: aspettare che la sua carica anticipata si esaurisca,
+        prima di sferrare la propria. Se i PG caricano anche loro presto (Cavalleria con numero 1 o 2), è uno scontro alla pari — valoroso ma non magistrale.
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Apertura della manche finale</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="italic text-red-100 text-sm leading-relaxed">"L'ultima. La vera." (già letta sopra, se non l'hai ancora fatto, questo è il momento.)</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Rivelazione — la carica anticipata del Generale</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="italic text-red-100 text-sm leading-relaxed">"NON ASPETTO NESSUNO!" Grida, quasi con gioia infantile, mentre la miniatura della cavalleria vola in avanti sul plastico.</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-2">"La gloria non aspetta il momento perfetto — la gloria SI PRENDE!"</p>
+            <p class="text-gray-400 text-sm not-italic mt-2">Una pausa. Poi, più piano, quasi a se stesso:</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-1">"...O almeno, così ho sempre creduto."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se i PG vincono con disciplina (Cavalleria per ultima)</p>
+          <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r">
+            <p class="text-gray-400 text-sm not-italic">Il Generale rimane immobile un lungo momento, gli occhi fissi sul tavolo.</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-2">"...Avete aspettato." Non è una domanda. "Avete guardato la mia carica esaurirsi. E POI avete colpito."</p>
+            <p class="text-gray-400 text-sm not-italic mt-2">Si raddrizza lentamente, un gesto quasi cerimoniale.</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-1">"Questo, avventurieri, è quello che io non ho mai imparato del tutto in tremila anni di battaglie di sabbia. Il dominio del campo non è la spada più veloce. È la pazienza di chi sa aspettare il momento giusto per usarla."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: RICOMPENSE ==================== -->
+    <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">🎁</span> PARTE VI: RICOMPENSE
+      </h2>
+
+      <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300">
+          <strong class="text-green-400">Principio guida:</strong> benedizioni divine temporanee, non oggetti fisici. Durano fino alla fine
+          del Piano 3 o al primo riposo lungo fuori dal dungeon, quello che viene prima. Non si accumulano con benedizioni da altre fonti divine.
+          Il gruppo nomina un "comandante" a inizio prova — è lui/lei a ricevere la ricompensa principale, qualunque sia l'esito finale.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-green-300 text-lg">Il Momento del Generale</p>
+            <span class="text-xs text-green-500 bg-green-900/50 px-2 py-1 rounded border border-green-800 whitespace-nowrap">3/3</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            <strong>Il Colpo del Momento Giusto</strong> (al comandante nominato): 1 volta al giorno, come <strong>azione bonus</strong>,
+            dichiara un attacco "decisivo" prima di tirare. Quell'attacco ha vantaggio, e se colpisce ignora resistenze,
+            immunità e soglie di danno per quel singolo colpo.
+          </p>
+          <p class="text-xs text-gray-500 italic mb-2">Sinergia diretta col Piano 3: annulla la Soglia del Danno di Kethrar in Fase 1, o le sue resistenze elementali nelle fasi successive.</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong>Più un dono collettivo</strong>: tutto il gruppo ottiene <strong>+2 all'Iniziativa</strong> per lo scontro con Kethrar.
+          </p>
+        </div>
+
+        <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-amber-300 text-lg">Il Rispetto del Generale</p>
+            <span class="text-xs text-amber-500 bg-amber-900/50 px-2 py-1 rounded border border-amber-800 whitespace-nowrap">2/3</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il comandante nominato riceve comunque <strong>Il Colpo del Momento Giusto</strong>, ma come <strong>azione</strong> intera
+            (non bonus) — stesso effetto, un costo più alto. Nessun bonus collettivo all'iniziativa.
+          </p>
+          <p class="text-xs text-gray-500 mt-2 italic">"Avete vinto la guerra, ma non il tempismo perfetto. Il colpo arriva comunque forte — solo un attimo più tardi."</p>
+        </div>
+
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-gray-300 text-lg">La Presenza sul Campo</p>
+            <span class="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded border border-gray-600 whitespace-nowrap">1/3 o 0/3</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Nessuna abilità legata al combattimento specifico. Tutto il gruppo ottiene <strong>vantaggio ai tiri salvezza contro
+            spaventato</strong> per l'intero Piano 3.
+          </p>
+          <p class="text-xs text-gray-500 mt-2 italic">"Tempus non punisce chi perde onestamente. Ma a chi resta al tavolo fino alla fine, dona questo: la paura di Kethrar non vi toccherà come toccherebbe altri."</p>
+        </div>
+
+      </div>
+
+      <!-- Congratulazioni finali -->
+      <div class="mt-8 space-y-4">
+        <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">📢 Congratulazioni finali — leggere in base al punteggio</p>
+
+        <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r">
+          <p class="text-xs font-bold text-green-400 uppercase mb-2">3/3</p>
+          <p class="italic text-green-100 text-sm leading-relaxed">"Tre su tre." Ride, ma questa volta è una risata piena, non di scherno né di sorpresa — di puro, genuino piacere.</p>
+          <p class="italic text-green-100 text-sm leading-relaxed mt-2">"Non capita spesso, sapete? Non con chi si ferma a pensare invece di caricare a testa bassa. Tempus non manda spesso complimenti — ma io sì, e ve lo dico io: siete stati generali, oggi. Non solo guerrieri."</p>
+        </div>
+
+        <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r">
+          <p class="text-xs font-bold text-amber-400 uppercase mb-2">2/3</p>
+          <p class="italic text-amber-100 text-sm leading-relaxed">"Due su tre." Annuisce, soddisfatto ma non entusiasta.</p>
+          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">"Buona guerra. Non perfetta — ma buona. Anche i più grandi generali della storia hanno perso una battaglia che potevano vincere. La differenza è cosa imparano dopo."</p>
+        </div>
+
+        <div class="bg-black/40 border-l-4 border-gray-500 p-4 rounded-r">
+          <p class="text-xs font-bold text-gray-400 uppercase mb-2">1/3 o 0/3</p>
+          <p class="text-gray-400 text-sm not-italic">"Beh." Una pausa, poi una scrollata di spalle quasi affettuosa.</p>
+          <p class="italic text-gray-200 text-sm leading-relaxed mt-2">"Non avete vinto. Ma siete rimasti al tavolo fino alla fine, e avete comunque scelto — non siete scappati, non avete tirato a indovinare per noia. Tempus non ama chi vince sempre. Ama chi continua a giocare sul serio anche quando perde."</p>
+          <p class="text-gray-400 text-sm not-italic mt-2">Raccoglie le miniature con cura, quasi con affetto.</p>
+          <p class="italic text-gray-200 text-sm leading-relaxed mt-1">"Tornate quando volete. Il tavolo di sabbia non dimentica nessuno."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: L'USCITA E VEX ==================== -->
+    <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">👤</span> PARTE VII: L'USCITA E VEX
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando riattraversano l'arco e tornano sul Pianerottolo.</p>
+
+      <div class="bg-black/50 border-l-4 border-indigo-400 p-5 mb-6 rounded-r">
+        <p class="italic text-indigo-100 text-base leading-relaxed">
+          L'arco rosso si dissolve dietro di voi, non lentamente come quello di Tymora — si spegne di scatto, come una
+          torcia spenta da un colpo di vento. In un secondo, tra le colonne del mosaico c'è di nuovo solo pietra.
+        </p>
+      </div>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded-lg p-5">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">🎭 Reazione di Vex</p>
+        <p class="text-sm text-gray-300 mb-3">Vex vi guarda tornare. Le ali si muovono a scatti brevi — non è agitazione, è qualcosa di più vicino all'eccitazione contenuta.</p>
+        <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r">
+          <p class="italic text-indigo-100 text-sm leading-relaxed">"Ho sentito il rumore anche da qui."</p>
+          <p class="text-gray-400 text-sm not-italic mt-1">Le venature dorate pulsano piano.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-2">"Non un rumore vero — non ho orecchie per quello. Ma qualcosa che assomigliava a un tavolo colpito con un pugno, più di una volta. Interessante."</p>
+          <p class="text-gray-400 text-sm not-italic mt-2">Guarda l'arco — ormai pietra.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-2">"Non vi chiedo cosa avete fatto là dentro. Ma se lui vi ha sorriso così tanto quanto sembra dal modo in cui state in piedi, allora avete fatto qualcosa di raro."</p>
+          <p class="text-gray-400 text-sm not-italic mt-2">Tre secondi.</p>
+          <p class="italic text-indigo-100 text-sm leading-relaxed mt-2">"Comprate quello che vi serve. Il Piano 3 non aspetta."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note Aggiuntive -->
+    <div class="bg-gray-800/30 border border-gray-700 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-300 mb-4">📝 Note Aggiuntive</h2>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">→</span>
+          <span><strong class="text-red-400">Secondo tentativo:</strong> l'arco non si riapre, come quello di Tymora. Il Generale ha già visto quello che voleva vedere.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">→</span>
+          <span><strong class="text-red-400">Chi non entra:</strong> nessuna penalità. Semplicemente non ricevono nulla — Tempus non insegue chi non vuole giocare.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">→</span>
+          <span><strong class="text-red-400">Nessun devoto di Tempus nel party:</strong> la nomina del "comandante" a inizio prova sostituisce bene il ruolo che Valoris ha nella prova di Tymora — dà comunque un momento personale a qualcuno del gruppo, senza bisogno di un legame di fede preesistente.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">→</span>
+          <span><strong class="text-red-400">Il tono:</strong> mai cupo, mai umiliante. Il Generale è un veterano che si diverte davvero — anche le sue battute sulla sconfitta dei PG sono affettuose, mai sprezzanti. Se il tavolo ride con lui, è il segnale che stai leggendo bene il personaggio.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-0.5">→</span>
+          <span><strong class="text-red-400">Durata flessibile:</strong> se il tempo stringe, la Manche 3 è quella che non si taglia — è lì che si gioca la vera lezione (disciplina batte foga). Le prime due possono essere velocizzate.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/prove-divine" class="text-red-400 hover:text-red-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Torna alle Prove Divine
+      </a>
+      <a href="/dm/sessioni/sessione-8" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Sessione 8 — Il Secondo Pianerottolo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
