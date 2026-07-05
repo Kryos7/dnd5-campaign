@@ -569,7 +569,7 @@ export default function EcosistemaView() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-[1440px] mx-auto p-6">
       {/* Header */}
       <div className="bg-gradient-to-r from-red-900/30 to-purple-900/30 border-2 border-red-700 rounded-xl p-8 mb-8">
         <div className="flex items-center justify-between mb-4">
