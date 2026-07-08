@@ -335,12 +335,20 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <div class="bg-purple-900/30 border border-purple-700/40 rounded p-4 mb-6">
         <p class="text-sm font-bold text-purple-400 mb-2">📍 Meccanica</p>
         <p class="text-sm text-gray-300">
-          Tutte e 3 le unità in campo per entrambi i lati. I PG dichiarano <strong>disposizione + ordine</strong> con
-          pedina-unità + pedina numerata per ciascuna. Le posizioni giuste dei PG non rispecchiano quelle del Generale:
-          <strong>ruotano il triangolo</strong> di Manche 1 (Fanteria batte Cavalleria, Cavalleria batte Arcieri, Arcieri
-          battono Fanteria) di una casella, così ogni unità PG affronta il tipo che batte per natura, non lo stesso tipo
-          del Generale. Vittoria = assegnazione ruotata corretta <strong>E</strong> tempistica giusta per ciascuna unità
-          (vedi sotto) — copiare lo schieramento del Generale è parità, e a parità vince sempre lui.
+          Tutte e 3 le unità in campo per entrambi i lati, ma <strong>solo in questa manche lo schieramento avviene a
+          turni alternati e scoperti</strong>, non dichiarato in blocco come nelle precedenti: il Generale schiera
+          un'unità con la sua pedina numerata, poi i PG rispondono schierando una delle loro; si ripete finché tutti i
+          pezzi sono in campo. Ordine fisso: <strong>Generale (Cavalleria, 1) → PG → Generale (Fanteria, 2) → PG →
+          Generale (Arcieri, 3) → ultima unità PG piazzata per eliminazione</strong> (resta solo una casella e una
+          pedina libere, quindi quel piazzamento non è una vera scelta).
+        </p>
+        <p class="text-sm text-gray-300 mt-3">
+          Le posizioni giuste dei PG non rispecchiano quelle del Generale: <strong>ruotano il triangolo</strong> di
+          Manche 1 (Fanteria batte Cavalleria, Cavalleria batte Arcieri, Arcieri battono Fanteria) di una casella, così
+          ogni unità PG affronta il tipo che batte per natura. Vedendo un pezzo alla volta, i PG possono rispondere con
+          il contro giusto subito, senza dover indovinare l'intero schieramento fisso del Generale alla cieca.
+          Vittoria = assegnazione ruotata corretta <strong>E</strong> tempistica giusta per ciascuna unità (vedi sotto)
+          — copiare lo schieramento del Generale è parità, e a parità vince sempre lui.
         </p>
       </div>
 
@@ -394,13 +402,52 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           </div>
         </div>
         <div>
-          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Rivelazione — la carica anticipata del Generale</p>
+          <p class="text-xs font-bold text-orange-400 uppercase mb-2">📢 Il Generale spiega il cambio di modalità — leggere prima di iniziare i piazzamenti</p>
+          <div class="bg-black/40 border-l-4 border-orange-500 p-4 rounded-r">
+            <p class="text-gray-400 text-sm not-italic">Alza una mano enorme, fermandovi un istante prima ancora che possiate guardare le vostre pedine.</p>
+            <p class="italic text-orange-100 text-sm leading-relaxed mt-2">"Nelle prime due partite vi ho lasciato indovinare al buio — era giusto, era la prova della lettura del terreno. Ma questa è l'ultima. La vera. E in una vera battaglia, nessun generale sano di mente schiera l'intero esercito bendato, sperando bene."</p>
+            <p class="text-gray-400 text-sm not-italic mt-2">Un ghigno, mentre la mano scende già verso la prima miniatura.</p>
+            <p class="italic text-orange-100 text-sm leading-relaxed mt-1">"Muovo un pezzo. Voi rispondete. Muovo il secondo. Rispondete ancora. Vediamo se sapete leggere non solo DOVE muovo — quello, ormai, lo sapete fare — ma cosa fare, istante per istante, mentre la battaglia si scrive sotto i vostri occhi."</p>
+            <p class="italic text-orange-100 text-sm leading-relaxed mt-2">"Comincio io. Come sempre."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Turno 1 — Il Generale schiera la Cavalleria (pedina 1)</p>
           <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
             <p class="italic text-red-100 text-sm leading-relaxed">"NON ASPETTO NESSUNO!" Grida, quasi con gioia infantile, mentre la miniatura della cavalleria vola in avanti sul plastico.</p>
             <p class="italic text-red-100 text-sm leading-relaxed mt-2">"La gloria non aspetta il momento perfetto — la gloria SI PRENDE!"</p>
             <p class="text-gray-400 text-sm not-italic mt-2">Una pausa. Poi, più piano, quasi a se stesso:</p>
             <p class="italic text-red-100 text-sm leading-relaxed mt-1">"...O almeno, così ho sempre creduto."</p>
           </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-gray-400 uppercase mb-2">📢 Turno 2 — I PG rispondono (piccola reazione, senza confermare nulla)</p>
+          <div class="bg-black/40 border-l-4 border-gray-500 p-4 rounded-r">
+            <p class="text-gray-400 text-sm not-italic">Qualunque cosa scelgano i PG, non confermare né smentire — nessun giudizio a metà partita, la risoluzione arriva solo alla fine.</p>
+            <p class="italic text-gray-200 text-sm leading-relaxed mt-2">Il Generale inclina la testa, studia la pedina appena posata con un piccolo grugnito di apprezzamento.</p>
+            <p class="italic text-gray-200 text-sm leading-relaxed mt-1">"Interessante." È tutto quello che dice. Poi torna al tavolo, come se nulla fosse.</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Turno 3 — Il Generale schiera la Fanteria (pedina 2)</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="text-gray-400 text-sm not-italic">La miniatura della fanteria avanza, lenta e compatta, verso il passo stretto.</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-2">"La fanteria non ha fretta." Lo dice quasi tra sé, sistemando i soldatini con due dita. "La fretta è un lusso della cavalleria. Noialtri, coi piedi per terra, la pazienza la impariamo per forza."</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-gray-400 uppercase mb-2">📢 Turno 4 — I PG rispondono (piccola reazione)</p>
+          <div class="bg-black/40 border-l-4 border-gray-500 p-4 rounded-r">
+            <p class="italic text-gray-200 text-sm leading-relaxed">Il Generale non dice nulla, stavolta — solo un sorriso che si allarga appena, gli occhi che passano dalla vostra ultima pedina al varco stretto della strettoia.</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-red-400 uppercase mb-2">📢 Turno 5 — Il Generale schiera gli Arcieri (pedina 3) — piazzamento finale</p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r">
+            <p class="italic text-red-100 text-sm leading-relaxed">"E per ultimi, come sempre, i miei arcieri. Sulla collina." Posa l'ultima miniatura con un tocco quasi affettuoso.</p>
+            <p class="italic text-red-100 text-sm leading-relaxed mt-2">"Buona vista, quassù. Peccato per chi non arriva in tempo a usarla."</p>
+          </div>
+          <p class="text-xs text-gray-500 mt-2 italic">📋 Nota DM: a questo punto ai PG resta un solo pezzo (la Cavalleria) e una sola casella libera (la Collina) — il piazzamento è automatico, per eliminazione, non una vera scelta. Procedi subito alla risoluzione finale.</p>
         </div>
         <div>
           <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se i PG indovinano lo schieramento (triangolo ruotato + tempistica giusta)</p>
