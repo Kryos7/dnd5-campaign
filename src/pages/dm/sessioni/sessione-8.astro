@@ -792,14 +792,29 @@ import MainLayout from "../../../layouts/MainLayout.astro";
                 <td class="py-3 pl-4 text-gray-500 text-xs">Azione: applicato a un'arma. Il prossimo attacco infligge 3d6 danni da freddo aggiuntivi. Monouso. <span class="text-cyan-400">Utile in Fase 2.</span></td>
               </tr>
               <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Unguento Ignifero</td>
+                <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">4× Cristallo Piccolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Azione: applicato sulla pelle, resistenza ai danni da fuoco per 1 ora. Monouso. <span class="text-gray-500">Depistaggio — non specifico al Piano 3.</span></td>
+              </tr>
+              <tr>
                 <td class="py-3 pr-4 text-gray-200 font-medium">Fiala Tonante</td>
                 <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">4× Cristallo Piccolo</td>
                 <td class="py-3 pl-4 text-gray-500 text-xs">Proiettile da lanciare: area 3m raggio, 3d8 danni tonanti, TS DES CD 13 per metà. Monouso. <span class="text-amber-400">Vulnerabilità in Fase 3.</span></td>
               </tr>
               <tr>
-                <td class="py-3 pr-4 text-gray-200 font-medium">Guanti Isolanti</td>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Antitossina Rinforzata</td>
+                <td class="py-3 px-4 text-center text-gray-400 whitespace-nowrap">6× Cristallo Minuscolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Azione: immunità al veleno per 10 minuti, poi vantaggio ai TS veleno per la restante ora. Monouso. <span class="text-gray-500">Depistaggio — non specifico al Piano 3.</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Unguento Isolante</td>
                 <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">5× Cristallo Piccolo</td>
-                <td class="py-3 pl-4 text-gray-500 text-xs">Resistenza ai danni acido per 1 ora. Indossabili subito. <span class="text-green-400">Utile in Fase 1 e 2.</span></td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Azione: applicato sulla pelle (non equipaggiamento — si consuma con l'uso), resistenza ai danni acido per 1 ora. Monouso. <span class="text-green-400">Utile in Fase 1 e 2.</span></td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-gray-200 font-medium">Proiettile Radiante</td>
+                <td class="py-3 px-4 text-center text-cyan-400 whitespace-nowrap">4× Cristallo Piccolo</td>
+                <td class="py-3 pl-4 text-gray-500 text-xs">Proiettile da lanciare: area 3m raggio, 3d8 danni radiosi, TS DES CD 13 per metà. Monouso. <span class="text-gray-500">Depistaggio — non specifico al Piano 3.</span></td>
               </tr>
               <tr>
                 <td class="py-3 pr-4 text-gray-200 font-medium">Pergamena di Passo Velato</td>
@@ -808,7 +823,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               </tr>
               <tr>
                 <td class="py-3 pr-4 text-gray-200 font-medium">Siero di Stabilizzazione Arcana</td>
-                <td class="py-3 px-4 text-center text-blue-400 whitespace-nowrap">1× Cristallo Medio</td>
+                <td class="py-3 px-4 text-center text-blue-400 whitespace-nowrap">3× Cristallo Medio</td>
                 <td class="py-3 pl-4 text-gray-500 text-xs">Reazione (1/giorno): riduce di 5 la CD del prossimo TS per magia selvaggia o effetto di instabilità arcana. Per Riven — o chiunque rischi interferenze magiche. <span class="text-red-400">Rilevante tutto il combattimento.</span></td>
               </tr>
               <tr>
@@ -818,6 +833,17 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               </tr>
             </tbody>
           </table>
+        </div>
+        <p class="text-gray-600 text-xs italic mt-3">📋 Nota DM: gli oggetti segnati "Depistaggio" sono mescolati apposta tra quelli realmente utili contro Kethrar — stesso stile di presentazione, stesso range di prezzo — così i giocatori non possono dedurre dalla lista di Vex quali elementi contano davvero al Piano 3. Nel peggiore dei casi restano comunque oggetti generici utili in futuro, non acquisti sprecati.</p>
+
+        <div class="bg-black/40 border-l-4 border-blue-500 p-4 rounded-r mt-3">
+          <p class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">📢 Se chiedono a Vex del Siero di Stabilizzazione Arcana</p>
+          <p class="italic text-blue-100 text-sm leading-relaxed">
+            "Questo l'ho preparato io." Non lo dice con orgoglio dichiarato — ma le venature dorate pulsano un po' più in fretta del solito. "Non esisteva nel mandato originale. L'ho formulato osservando cosa succede quando la magia selvaggia interagisce con l'instabilità arcana. La cicatrice di Riven, per esempio."
+          </p>
+          <p class="italic text-blue-100 text-sm leading-relaxed mt-2">
+            Una pausa, quasi onesta. "Non posso garantirvi che funzioni al cento per cento. Non l'ho mai visto in un vero combattimento — solo nei miei calcoli." Raddrizza l'aureola. "Ma i miei calcoli sono buoni. Sono sempre stati la parte di me che ha funzionato meglio."
+          </p>
         </div>
       </div>
 
@@ -841,7 +867,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             <span class="text-blue-400 font-bold whitespace-nowrap text-sm shrink-0">1× Cristallo Grande</span>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed mb-4">
-            Un taccuino sottile, copertina di cuoio grigio che non si bagna né si strapazza. Le pagine sono già parzialmente scritte — ma l'inchiostro è invisibile fino a che non si è in presenza di un'anomalia alchemica attiva. A contatto con l'acqua ambrata o con cristalli ambrati, il testo appare: note di osservazione su fenomeni che assomigliano molto a quello che il party ha incontrato al Piano 2, ma scritte in un linguaggio tecnico che richiede Arcano CD 15 per essere decodificato pienamente.
+            Un taccuino sottile, copertina di cuoio grigio che non si bagna né si strapazza. Le pagine sono già parzialmente scritte — ma l'inchiostro resta invisibile finché il taccuino non si trova entro pochi metri da un'anomalia alchemica ambrata attiva (acqua ambrata, cristalli ambrati, o fenomeni simili). Non serve toccare nulla: il taccuino stesso reagisce alla presenza dell'energia e le pagine si illuminano da sole. Basta averlo con sé e aprirlo (azione bonus) per consultarlo. Il testo, quando appare, è scritto in un linguaggio tecnico che richiede Arcano CD 15 per essere decodificato pienamente.
           </p>
           <div class="bg-black/40 border-l-4 border-purple-500 p-4 mb-4 rounded-r">
             <p class="italic text-purple-100 text-sm leading-relaxed">
@@ -852,7 +878,9 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             </p>
           </div>
           <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
-            <strong class="text-purple-400">📋 Nota DM:</strong> Il Compendio dell'Essenza è le annotazioni di Kethrar dalle sue fasi preliminari — non quelle sul Piano 3, ma quelle precedenti, quando ancora stava sperimentando al Piano 2. In presenza di acqua ambrata o cristalli ambrati (inclusi quelli nell'arena di Kethrar), il testo diventa leggibile e rivela: le debolezze di Fase 2 e 3 (fuoco = cura in F2, tonante = vulnerabilità in F3, Essenza Purificata = finestra di danno ×2 in F3). Sostanzialmente equivale al Frammento Narrativo per la parte meccanica, ma con più contesto narrativo. Chi ha già il Frammento ha sovrapposizione parziale — è ugualmente utile per il momento Riven e per capire la storia.
+            <strong class="text-purple-400">📋 Nota DM:</strong> Il Compendio dell'Essenza è le annotazioni di Kethrar dalle sue fasi preliminari — non quelle sul Piano 3, ma quelle precedenti, quando ancora stava sperimentando al Piano 2. Reagisce per prossimità (entro ~9 metri da acqua ambrata o cristalli ambrati, inclusi quelli nell'arena di Kethrar), non per contatto: pensato apposta per essere consultabile in combattimento con un'azione bonus, senza dover immergere il taccuino in una pozza o premerlo contro un cristallo. Quando leggibile rivela: le debolezze di Fase 2 e 3 (fuoco = cura in F2, tonante = vulnerabilità in F3, Essenza Purificata = finestra di danno ×2 in F3). Sostanzialmente equivale al Frammento Narrativo per la parte meccanica, ma con più contesto narrativo. Chi ha già il Frammento ha sovrapposizione parziale — è ugualmente utile per il momento Riven e per capire la storia.
+            <br><br>
+            <strong class="text-purple-400">Da non confondere con:</strong> il Frammento Narrativo (comprato in Sessione 3 — la pietra scura che predice i pattern cristallini di Kethrar) e la Pietra Misteriosa (che raccoglie i Nodi della Trama e apre le Prove Divine, vedi Parte VI). Tre oggetti diversi, tutti "pietre/oggetti misteriosi" — facile confonderli al tavolo.
           </div>
         </div>
       </div>
@@ -868,11 +896,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </li>
         <li class="flex items-start gap-2">
           <span class="text-yellow-400 mt-0.5">→</span>
-          <span><strong class="text-yellow-400">Se qualcuno chiede a Vex di Auranthor:</strong> stessa reazione di prima — forse più intensa. <em>"Dove avete sentito quel nome."</em> Non è una domanda. Se questa è la seconda volta che lo chiamano così: si avvicina di un passo. Le ali smettono. <em>"Non usatelo qui."</em> Non spiega perché.</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-yellow-400 mt-0.5">→</span>
-          <span><strong class="text-yellow-400">I Tomi di Mystra:</strong> se glieli mostrano di nuovo, le venature dorate pulsano forte. <em>"Li avete ancora tutti."</em> Poi guarda la scala verso il Piano 3. <em>"Bene."</em> Non aggiunge altro — ma il fatto che "bene" sia riferito ad avere i Tomi prima del Piano 3 non è casuale. Al Piano 3 serve un Tomo per il Sigillo Sud-Est.</span>
+          <span><strong class="text-yellow-400">I Tomi di Mystra:</strong> se glieli mostrano di nuovo, le venature dorate pulsano forte. Se li hanno tutti: <em>"Li avete ancora tutti."</em> Poi guarda la scala verso il Piano 3. <em>"Bene."</em> Se ne manca anche solo uno: la pausa è più lunga. <em>"Non tutti."</em> Non è un rimprovero. <em>"Ma tenetelo a mente per quello che segue."</em> In entrambi i casi aggiunge, più piano: <em>"Quello che si raccoglie in un piano, a volte, serve solo nel piano successivo — e a quel punto è tardi per tornare indietro a cercarlo. Non do consigli che non mi competono. Ma se foste miei, non lascerei nulla sul pavimento."</em> Non aggiunge altro — ma il fatto che lo dica proprio ora, prima del Piano 3, non è casuale: al Piano 3 serve un Tomo per il Sigillo Sud-Est (vedi <code>/dm/ecosistema-1-piano-3</code>).</span>
         </li>
         <li class="flex items-start gap-2">
           <span class="text-yellow-400 mt-0.5">→</span>
