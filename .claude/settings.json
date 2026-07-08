@@ -15,7 +15,13 @@
       "Bash(npx astro *)",
       "Bash(node_modules/.bin/tsc --noEmit -p tsconfig.json)",
       "Bash(xargs sed -i -E 's/max-w-\\(5xl|7xl\\)/max-w-[1440px]/g')",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/kethrar.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
+      "PowerShell(npx astro check 2>&1)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/mummia-assistente.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/pseudopodo-minore.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node \"C:\\\\Users\\\\Lorenzo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--dev-dnd5-campaign-visual-app\\\\a16a9a57-5785-4e2a-a4b3-9d97b9c87fb2\\\\scratchpad\\\\checktags.js\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude"

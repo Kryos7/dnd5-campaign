@@ -1,0 +1,537 @@
+{
+  "name": "Kethrar - Boss Finale Ecosistema 1",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p><strong>\"L'Esperimento Finale\"</strong></p><p>Kethrar era un alchimista-studioso ossessionato dalla biologia del soprannaturale. I Tomi di Mystra disseminati nei livelli precedenti erano suoi. La capsula alchemica al centro del suo laboratorio non serviva a far crescere una creatura esterna — serviva a far crescere lui. Ogni sessione lo ha modificato un po' di più: prima rafforzamento strutturale, poi integrazione coi fluidi delle Melme Tombali, infine cristallizzazione con l'ambra distillata.</p><h3>Aspetto per Fase</h3><ul><li><strong>Fase 1 — Il Dotto:</strong> Corpo umano sovradimensionato, pelle tesa. Tubi alchemici innestati in braccia, torso, collo — pompano Essenza Purificata in circolo continuo.</li><li><strong>Fase 2 — La Melma:</strong> La metà inferiore è gelatinosa, senza gambe definite. La metà superiore è ancora solida ma con la superficie viscida delle Melme Tombali.</li><li><strong>Fase 3 — Il Cristallizzato:</strong> La massa gelatinosa si cristallizza dall'interno. Formazioni di cristallo ambrato spuntano dalla carne. L'occhio sinistro è sigillato da cristallo.</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Ecosistema 1, Piano 3",
+    "details": {
+      "biography": {
+        "value": "<h2>Piano 3 - L'Arena della Capsula | CR 8 | BOSS FINALE | Party livello 5-6</h2><p>Pool HP unico: 210 totali. Le fasi cambiano le capacità, non i PF. Transizioni a soglie di PF rimasti: Fase 1 (210→141), Fase 2 (140→71), Fase 3 (70→0). Non attacca subito all'ingresso dei PG — è curioso, ha domande sui loro marchi divini.</p>",
+        "public": ""
+      },
+      "alignment": "Neutrale Malvagio",
+      "race": "",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Umanoide (umano) modificato"
+      },
+      "environment": "Laboratorio alchemico, dungeon sotterraneo",
+      "cr": 8,
+      "spellLevel": 0,
+      "xp": {
+        "value": 3900
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 15,
+        "calc": "natural",
+        "formula": "",
+        "label": "Fase 1: armatura alchemica innestata (cambia per fase, vedi items)"
+      },
+      "hp": {
+        "value": 210,
+        "max": 210,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "28d8+84"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Vista normale 18m, Percezione Passiva 12"
+      }
+    },
+    "abilities": {
+      "str": { "value": 18, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 13, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 18, "proficient": 1, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 20, "proficient": 1, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 8,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "skills": {
+      "arc": { "value": 1, "ability": "int", "bonuses": { "check": "1", "passive": "" } },
+      "med": { "value": 1, "ability": "wis", "bonuses": { "check": "4", "passive": "" } },
+      "inv": { "value": 1, "ability": "int", "bonuses": { "check": "1", "passive": "" } },
+      "nat": { "value": 1, "ability": "int", "bonuses": { "check": "", "passive": "" } }
+    },
+    "traits": {
+      "size": "lg",
+      "di": { "value": ["poison"], "bypasses": [], "custom": "Veleno (persiste in tutte le fasi)" },
+      "dr": { "value": ["acid"], "bypasses": [], "custom": "Fase 1: acido. Cambia radicalmente per fase — vedi item 'FASI DEL BOSS'" },
+      "dv": { "value": [], "bypasses": [], "custom": "Nessuna in Fase 1. Cambia per fase — vedi item 'FASI DEL BOSS'" },
+      "ci": { "value": [], "custom": "" },
+      "languages": { "value": ["common", "elvish", "dwarvish"], "custom": "Comune, Elfico, Nanico" }
+    },
+    "currency": {
+      "pp": 0, "gp": 80, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "⚠️ FASI DEL BOSS — Leggi Prima di Giocare",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<h3>⚙️ Automazione: Active Effects</h3><p>Sulla scheda Actor, tab <strong>Effects</strong>, sono già pronti 3 effetti: <em>Fase 1 — Il Dotto</em> (attivo di default), <em>Fase 2 — La Melma</em> e <em>Fase 3 — Il Cristallizzato</em> (disattivi). Quando Kethrar raggiunge una soglia di PF: <strong>disattiva l'effetto della fase precedente e attiva quello nuovo</strong> — CA, velocità, resistenze/immunità/vulnerabilità e FOR (Fase 3) si aggiornano da soli. Tieni sempre un solo effetto Fase attivo alla volta. La Soglia del Danno (Fase 1) e i cambi di attacco/multiattacco restano da gestire a voce, non sono automatizzabili con un Active Effect.</p><h3>Meccanica delle Fasi (Pool HP unico: 210)</h3><p><strong>FASE 1 — Il Dotto (210 → 141 PF):</strong></p><ul><li>CA 15, Velocità 9m</li><li>Immunità: veleno. Resistenze: acido, danni veleno. Nessuna vulnerabilità</li><li>Soglia del Danno: i primi 5 danni di ogni attacco singolo sono ignorati</li><li>Comanda 3 mummie-assistenti connesse da Conduit Ambrato</li><li>Multiattacco: Lancio Alchemico + Siringa Innestata</li><li>Azione bonus: Pozione Rapida (3/combattimento)</li><li>Reazione: Schermo di Mummia</li><li><strong>Transizione a 140 PF:</strong> avviene sul posto, nessuna pausa — dal turno successivo agisce già con le statistiche di Fase 2</li></ul><p><strong>FASE 2 — La Melma (140 → 71 PF):</strong></p><ul><li>CA 13, Velocità 9m/nuoto 15m. Soglia del Danno rimossa</li><li>Immunità: veleno, acido, <strong>FUOCO (il danno da fuoco cura invece di ferire)</strong></li><li>Resistenze: perforanti, taglienti. Vulnerabilità: freddo, necrotico</li><li>Forma Fluida: passa spazi di 15cm, corridoi stretti non sono terreno difficile</li><li>Multiattacco: 2× Tentacolo Acido + 1 Schizzo Acido</li><li>Azione bonus: genera Pseudopodo Minore (max 2 attivi)</li><li>Ricarica 5-6: Dissoluzione Alchemica</li><li>Reazione: Schizzo Reattivo (sostituisce Schermo di Mummia)</li><li><strong>Transizione a 70 PF:</strong> smette di attaccare, si muove (movimento normale, subisce attacchi di opportunità) verso la colonna d'acqua ambrata più vicina, 1-2 round. Cristallizzazione istantanea al contatto</li></ul><p><strong>FASE 3 — Il Cristallizzato (70 → 0 PF):</strong></p><ul><li>CA 18, Velocità 6m. FOR aumenta a 20 (attacco +8)</li><li>Immunità: veleno, acido. Resistenze: fuoco, freddo, acido</li><li>Vulnerabilità: <strong>TONANTE</strong> (perde le vulnerabilità a freddo/necrotico)</li><li>Passivi: Zona Cristallina, Presenza Anti-Magica Locale (incantesimi 1°-2° entro 3m)</li><li>Multiattacco: 3× Pugno Cristallino</li><li>Ricarica 5-6: Eruzione Cristallina</li><li>Reazione: Barriera di Cristallo (-1d8 danni subiti)</li><li>Essenza Purificata su zona cristallizzata adiacente: scioglie la zona per 1 round, prossimo attacco su quella zona x2 danni, Kethrar perde la Reazione quel round</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Soglia del Danno (Fase 1)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>I tubi alchemici ridistribuiscono l'impatto. I primi <strong>5 punti danno</strong> di ogni attacco singolo vengono ignorati.</p><p><em>Rimossa a partire dalla Fase 2.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 1"
+      }
+    },
+    {
+      "name": "Conduit Ambrato — Mummie Assistenti (Fase 1)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Tre mummie in posizione attorno alla capsula, connesse a Kethrar da tubi di ambra solidificata (Conduit Ambrato: CA 10, PF 20, attaccabile come oggetto). Non sono autonome — Kethrar le controlla.</p><ul><li><strong>Mummia Assistente:</strong> CA 11, PF 32 (5d8+10), Velocità 6m. FOR 16 (+3) DES 6 (-2) COS 15 (+2). Immunità veleno/freddo, Resistenza contundenti/perforanti/taglienti non magici. Pugno Mummificato: +5, 2d6+3 contundente.</li><li>Distrutto il conduit → la mummia collegata cade esanime immediatamente. Kethrar non può rigenerare conduit distrutti.</li><li>Finché almeno un conduit è integro: Kethrar ha <strong>vantaggio</strong> ai TS contro Incapacitato e Stordito.</li><li>Liberare una mummia (Dispel Magic o conduit distrutto) sblocca un bonus al Sigillo Nord.</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 1"
+      }
+    },
+    {
+      "name": "Pozione Rapida (Fase 1)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione bonus, 3/combattimento.</strong></p><p>Beve o inietta un composto: recupera <strong>2d4+5 PF</strong> (pozione) oppure ottiene <strong>vantaggio</strong> al prossimo attacco (siero di precisione). Annuncia sempre quale usa — il party vede l'azione.</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Solo Fase 1, 3/combattimento",
+        "uses": { "value": 3, "max": "3", "per": "encounter" }
+      }
+    },
+    {
+      "name": "Multiattacco",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Fase 1:</strong> due attacchi — Lancio Alchemico e/o Siringa Innestata.</p><p><strong>Fase 2:</strong> tre attacchi — due Tentacolo Acido + un Schizzo Acido.</p><p><strong>Fase 3:</strong> tre attacchi — Pugno Cristallino.</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Lancio Alchemico (Fase 1)",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco a Distanza con Arma:</strong> +7 al colpire, portata 18m, un bersaglio.</p><p><strong>Colpito:</strong> 13 (2d8+4) danni acido.</p><p>Il bersaglio deve superare un <strong>TS Costituzione CD 14</strong> o essere <strong>Avvelenato</strong> per 1 round.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "rwak",
+        "attackBonus": "7",
+        "damage": {
+          "parts": [["2d8 + 4", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 60, "long": null, "units": "ft" },
+        "ability": "int",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" },
+        "save": { "ability": "con", "dc": 14, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Siringa Innestata (Fase 1)",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +7 al colpire, portata 1,5m, un bersaglio.</p><p><strong>Colpito:</strong> 7 (1d6+4) danni perforanti + 7 (2d6) danni da veleno.</p><p>Il bersaglio deve superare un <strong>TS Costituzione CD 14</strong> o avere velocità dimezzata per 1 round.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "7",
+        "damage": {
+          "parts": [["1d6 + 4", "piercing"], ["2d6", "poison"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "int",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" },
+        "save": { "ability": "con", "dc": 14, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Schermo di Mummia (Reazione, Fase 1)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reazione, 1/round.</strong></p><p><strong>Trigger:</strong> Kethrar diventa bersaglio di un attacco.</p><p><strong>Effetto:</strong> Redirige il colpo verso una mummia adiacente — l'attacco colpisce automaticamente la mummia invece di Kethrar.</p><p><em>Rimossa permanentemente se il Sigillo Nord viene attivato.</em></p>"
+        },
+        "activation": { "type": "reaction", "cost": 1 },
+        "requirements": "Solo Fase 1, 1/round"
+      }
+    },
+    {
+      "name": "Forma Fluida (Fase 2)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Può passare attraverso spazi di 15cm senza difficoltà. I corridoi stretti non sono terreno difficile per lui.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 2"
+      }
+    },
+    {
+      "name": "Pseudopodi (Fase 2)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Azione bonus, 1/round, max 2 attivi.</strong></p><p>Sputa una piccola appendice gelatinosa (Pseudopodo Minore) che agisce autonomamente: CA 10, PF 15, Velocità 6m. Attacco Pseudopodo: +4, 1d6+2 danni acido.</p><p>Si dissolve se Kethrar va a 0 PF o se viene distrutto.</p>"
+        },
+        "activation": { "type": "bonus", "cost": 1 },
+        "requirements": "Solo Fase 2, 1/round, max 2 attivi"
+      }
+    },
+    {
+      "name": "FUOCO = CURA (Fase 2, passivo)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Ogni danno da fuoco ricevuto viene convertito in PF recuperati, non persi.</strong></p><p>I PG lo scoprono al primo incantesimo di fuoco — poi devono cambiare approccio. Ricompensa per chi ha studiato le Melme Tombali al Livello 2.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 2"
+      }
+    },
+    {
+      "name": "Pozza Corrosiva (Fase 2, passivo)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La pozza ambrata a Sud-Est dell'arena diventa acida da Fase 2. Chi inizia il proprio turno nella pozza subisce <strong>1d6 danni acido automatici</strong>. Kethrar usa questa zona attivamente.</p><p><em>Neutralizzata se il Sigillo Sud-Est viene attivato.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 2+"
+      }
+    },
+    {
+      "name": "Tentacolo Acido (Fase 2)",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +7 al colpire, portata 3m, un bersaglio.</p><p><strong>Colpito:</strong> 11 (2d6+4) danni contundenti + 7 (2d6) danni acido.</p><p>Se colpisce: il bersaglio è <strong>afferrato</strong> (CD fuga 14). Massimo 2 creature afferrate contemporaneamente.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "7",
+        "damage": {
+          "parts": [["2d6 + 4", "bludgeoning"], ["2d6", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 10, "long": null, "units": "ft" },
+        "ability": "int",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Schizzo Acido (Fase 2)",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco a Distanza con Arma:</strong> +7 al colpire, portata 12m, un bersaglio.</p><p><strong>Colpito:</strong> 13 (3d8) danni acido.</p><p>Il bersaglio deve superare un <strong>TS Destrezza CD 14</strong> o avere velocità dimezzata per 1 round.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "rwak",
+        "attackBonus": "7",
+        "damage": {
+          "parts": [["3d8", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 40, "long": null, "units": "ft" },
+        "ability": "int",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" },
+        "save": { "ability": "dex", "dc": 14, "scaling": "flat" }
+      }
+    },
+    {
+      "name": "Dissoluzione Alchemica (Fase 2, ricarica 5-6)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Ricarica 5-6. Azione.</strong></p><p>L'acqua sul pavimento entro 6m diventa acida per 2 round. Ogni creatura che inizia il turno nell'area subisce <strong>2d6 danni acido automatici</strong>. Kethrar è immune.</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "Solo Fase 2",
+        "target": { "value": 20, "type": "radius", "units": "ft" },
+        "uses": { "value": 1, "max": "1", "per": "recharge", "recharge": { "value": 5, "charged": true } }
+      }
+    },
+    {
+      "name": "Schizzo Reattivo (Reazione, Fase 2)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reazione, 1/round.</strong></p><p><strong>Trigger:</strong> viene colpito da un attacco a distanza.</p><p><strong>Effetto:</strong> spruzza acido sull'attaccante: 1d6 danni acido automatici.</p><p><em>Sostituisce Schermo di Mummia.</em></p>"
+        },
+        "activation": { "type": "reaction", "cost": 1 },
+        "requirements": "Solo Fase 2, 1/round"
+      }
+    },
+    {
+      "name": "Zona Cristallina (Fase 3, passivo)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>All'inizio di ogni turno di Kethrar, 1d4 caselle entro 3m da lui si cristallizzano (terreno difficile). Incantesimi da contatto o lancio da posizione cristallizzata: TS Arcano CD 12 o falliscono. I Sigilli Divini non si cristallizzano.</p><p><em>Con Frammento Narrativo attivo: il pattern è prevedibile, +2 alle CD per evitarlo. Espansione bloccata se il Sigillo Sud-Ovest è attivo (rimane entro 3m invece di allargarsi).</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 3"
+      }
+    },
+    {
+      "name": "Presenza Anti-Magica Locale (Fase 3, passivo)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Incantesimi di 1° e 2° livello lanciati entro 3m da Kethrar richiedono un <strong>TS Arcano CD 13</strong>. Fallendo: l'incantesimo svanisce (slot consumato, nessun effetto).</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 3"
+      }
+    },
+    {
+      "name": "Essenza Purificata — Finestra di Vulnerabilità (Fase 3)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Se un PG usa una dose di Essenza Purificata su una zona cristallizzata di Kethrar (azione, deve essere adiacente): quella zona si scioglie per 1 round. Il prossimo attacco su quella zona infligge <strong>danni ×2</strong>. Kethrar perde la Reazione quel round.</p><p><em>Non annunciato — si scopre o ci si arriva da soli.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": "Solo Fase 3"
+      }
+    },
+    {
+      "name": "Pugno Cristallino (Fase 3)",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +8 al colpire, portata 1,5m, un bersaglio.</p><p><strong>Colpito:</strong> 14 (2d8+5) danni contundenti + 7 (2d6) danni taglienti.</p><p>Creature adiacenti al bersaglio colpito: TS Destrezza CD 13 o 1d6 danni taglienti da schegge.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "8",
+        "damage": {
+          "parts": [["2d8 + 5", "bludgeoning"], ["2d6", "slashing"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    },
+    {
+      "name": "Eruzione Cristallina (Fase 3, ricarica 5-6)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Ricarica 5-6. Azione.</strong></p><p>Proietta schegge in cerchio di 9m. Ogni creatura nell'area: <strong>TS Destrezza CD 15</strong>.</p><ul><li><strong>Fallimento:</strong> 18 (4d8) danni perforanti</li><li><strong>Successo:</strong> metà danni</li></ul><p>Tutte le caselle nell'area diventano terreno difficile (cristalli sul pavimento).</p>"
+        },
+        "activation": { "type": "action", "cost": 1 },
+        "requirements": "Solo Fase 3",
+        "target": { "value": 30, "type": "radius", "units": "ft" },
+        "save": { "ability": "dex", "dc": 15, "scaling": "flat" },
+        "uses": { "value": 1, "max": "1", "per": "recharge", "recharge": { "value": 5, "charged": true } }
+      }
+    },
+    {
+      "name": "Barriera di Cristallo (Reazione, Fase 3)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reazione, 1/round.</strong></p><p>Quando subisce danni, riduce i danni ricevuti di <strong>1d8</strong>. La barriera cede se subisce 20+ danni tonanti in un singolo colpo (la reazione non funziona quel round).</p>"
+        },
+        "activation": { "type": "reaction", "cost": 1 },
+        "requirements": "Solo Fase 3, 1/round"
+      }
+    },
+    {
+      "name": "I Tre Sigilli Divini",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Tre altari-glifo nell'arena, posti dagli Dèi per assicurarsi che quello che Kethrar ha creato non esca dal dungeon. I PG possono attivarli durante il combattimento come secondo obiettivo (un'azione intera ciascuno).</p><ul><li><strong>Sigillo Nord — Memoria dei Caduti</strong> (Fase 1-2): deposita una chiave d'argento del L2 sull'altare. Effetto: le mummie-assistenti restanti non possono più essere riutilizzate; Kethrar perde permanentemente Schermo di Mummia.</li><li><strong>Sigillo Sud-Est — Conoscenza Purificata</strong> (Fase 2-3): posa un Tomo di Mystra sull'altare e brucialo (consumato). Effetto: la pozza ambrata diventa neutra; in Fase 3 i cristalli a Sud si dissolvono dopo 1 round.</li><li><strong>Sigillo Sud-Ovest — Il Tributo</strong> (qualsiasi fase): offerta libera decisa dal gruppo (min. 10 cristalli piccoli equivalenti o un oggetto a cui tengono). Effetto: in Fase 3 la Zona Cristallina non si espande oltre 3m da Kethrar.</li></ul><p><strong>Se tutti e tre attivi alla morte di Kethrar:</strong> morte 'pulita', loot completo, Vex avrà di più da dire sui Sigilli.</p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    }
+  ],
+  "effects": [
+    {
+      "name": "Fase 1 — Il Dotto",
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "description": "<p>Attiva di default all'inizio del combattimento (210 → 141 PF). CA 15, Velocità 9m.</p>",
+      "disabled": false,
+      "transfer": true,
+      "duration": {},
+      "changes": [
+        { "key": "system.attributes.ac.flat", "mode": 5, "value": "15", "priority": 50 },
+        { "key": "system.attributes.movement.walk", "mode": 5, "value": "30", "priority": 50 }
+      ],
+      "statuses": [],
+      "flags": {}
+    },
+    {
+      "name": "Fase 2 — La Melma",
+      "img": "icons/creatures/slimes/slime-movement-green.webp",
+      "description": "<p>Disattiva 'Fase 1' e attiva questa quando Kethrar scende a 140 PF (140 → 71 PF). CA 13, nuoto 15m, immune a fuoco/acido, resistente a perforanti/taglienti, vulnerabile a freddo/necrotico. Ricorda: il fuoco lo CURA, non danneggia.</p>",
+      "disabled": true,
+      "transfer": true,
+      "duration": {},
+      "changes": [
+        { "key": "system.attributes.ac.flat", "mode": 5, "value": "13", "priority": 50 },
+        { "key": "system.attributes.movement.swim", "mode": 5, "value": "50", "priority": 50 },
+        { "key": "system.traits.di.value", "mode": 2, "value": "acid", "priority": 20 },
+        { "key": "system.traits.di.value", "mode": 2, "value": "fire", "priority": 20 },
+        { "key": "system.traits.dr.value", "mode": 2, "value": "piercing", "priority": 20 },
+        { "key": "system.traits.dr.value", "mode": 2, "value": "slashing", "priority": 20 },
+        { "key": "system.traits.dv.value", "mode": 2, "value": "cold", "priority": 20 },
+        { "key": "system.traits.dv.value", "mode": 2, "value": "necrotic", "priority": 20 }
+      ],
+      "statuses": [],
+      "flags": {}
+    },
+    {
+      "name": "Fase 3 — Il Cristallizzato",
+      "img": "icons/commodities/gems/gem-faceted-round-amber.webp",
+      "description": "<p>Disattiva 'Fase 2' e attiva questa quando Kethrar scende a 70 PF, dopo essersi immerso nella colonna d'acqua ambrata (70 → 0 PF). CA 18, Velocità 6m, FOR 20, resistente a fuoco/freddo/acido, vulnerabile a TONANTE (sostituisce la vulnerabilità di Fase 2).</p>",
+      "disabled": true,
+      "transfer": true,
+      "duration": {},
+      "changes": [
+        { "key": "system.attributes.ac.flat", "mode": 5, "value": "18", "priority": 50 },
+        { "key": "system.attributes.movement.walk", "mode": 5, "value": "20", "priority": 50 },
+        { "key": "system.abilities.str.value", "mode": 5, "value": "20", "priority": 50 },
+        { "key": "system.traits.di.value", "mode": 2, "value": "acid", "priority": 20 },
+        { "key": "system.traits.dr.value", "mode": 2, "value": "fire", "priority": 20 },
+        { "key": "system.traits.dr.value", "mode": 2, "value": "cold", "priority": 20 },
+        { "key": "system.traits.dv.value", "mode": 2, "value": "thunder", "priority": 20 }
+      ],
+      "statuses": [],
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "img": "images/mostri/kethrar_1.png",
+  "prpitype": "character",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "cristalli": "2-3 Cristalli Grandi (3 se tutti i Sigilli sono attivi)",
+    "location": "Piano 3 - L'Arena della Capsula (BOSS FINALE Ecosistema 1)",
+    "partyLevel": "5-6",
+    "loot": {
+      "base": {
+        "gp": 80,
+        "items": [
+          "2 Cristalli Grandi",
+          "Fiale di mutazione incompleta (×2) — potenti ma instabili, effetti mutanti casuali",
+          "Formulario di Kethrar — taccuino con formule alchemiche, utile per un alchimista esperto"
+        ]
+      },
+      "completo": {
+        "gp": 80,
+        "items": [
+          "3 Cristalli Grandi",
+          "Frammenti di Cristallo Ambrato (×5) — materiale magico raro, Vex li compra a peso",
+          "Componenti Melma Distillata — raccoglibili da Fealer, valore pari a Essenza Purificata ×3",
+          "Formulario di Kethrar",
+          "Risposta Divina: Vex al Pianerottolo avrà un item speciale per il gruppo"
+        ]
+      }
+    },
+    "combat": {
+      "trackerFasi": {
+        "fase1": "PF: 210 → 141 — Il Dotto — CA 15, Soglia Danno -5, mummie attive",
+        "transizione12": "A 140 PF: trasformazione sul posto, nessuna pausa",
+        "fase2": "PF: 140 → 71 — La Melma — CA 13, FUOCO CURA, VULN freddo/necrotico",
+        "transizione23": "A 70 PF: si muove verso la colonna ambrata (1-2 round), poi cristallizzazione istantanea",
+        "fase3": "PF: 70 → 0 — Il Cristallizzato — CA 18, VULN tonante, Zona Cristallina + Anti-Magia"
+      }
+    },
+    "tactics": {
+      "fase1": {
+        "priorita": ["Mantenere le mummie tra sé e i PG", "Bersagliare il caster più pericoloso con Lancio Alchemico", "Schermo di Mummia per deflettere almeno 1 attacco/round", "Pozione Rapida sotto 170 PF"],
+        "opportunitaPG": ["Distruggere i conduit (CA 10, 20 PF) è più efficiente che colpire le mummie", "Soglia del Danno rende gli attacchi deboli inefficaci — concentrarsi", "Sigillo Nord attivabile subito"]
+      },
+      "fase2": {
+        "priorita": ["Spingere i PG nella pozza corrosiva", "Afferrare il PG più pericoloso con Tentacolo", "Generare Pseudopodi per pressione multi-fronte", "Dissoluzione Alchemica se 3+ PG nella stessa area"],
+        "erroriFataliPG": ["Usare fuoco (cura Kethrar)", "Restare nella pozza ambrata", "Non liberarsi dall'afferrare (7+ acido/turno)", "Ignorare gli Pseudopodi che si accumulano"]
+      },
+      "fase3": {
+        "priorita": ["Pugno Cristallino su chiunque sia vicino (3 attacchi)", "Espandere la Zona Cristallina verso i Sigilli", "Eruzione Cristallina se 2+ PG nel raggio", "Barriera di Cristallo per ridurre danni"],
+        "opportunitaPG": ["Tonante (Thunderwave, Shatter) è la vulnerabilità", "Essenza Purificata apre finestre di danno ×2", "Sigillo Sud-Ovest da attivare subito", "Frammento Narrativo predice i pattern cristallini"]
+      }
+    },
+    "dmNotes": {
+      "ingresso": "Kethrar non attacca subito. Lascia che i PG parlino — è curioso, ha domande sui loro marchi divini.",
+      "ilMomentoDelFuoco": "Il primo PG che usa fuoco in Fase 2 vede Kethrar recuperare PF invece di perderne. Shock tattico — lascia che processino la situazione, non serve spiegare (Fealer/Riven capiscono da soli).",
+      "transizioneFase3": "Non è un singolo momento — è un processo di 1-2 round: rallenta, si muove verso la colonna, si immerge, poi i cristalli crescono progressivamente.",
+      "finaleConRiven": "Se Riven è presente e la cicatrice brucia: momento narrativo che non interrompe il combattimento — Kethrar parla mentre combatte, una frase alla volta."
+    },
+    "favoreDivino": {
+      "mystra": "Completare il combattimento con il Frammento Narrativo attivo: +15% Favore",
+      "tempus": "Sopravvivere alla Fase 3 senza nessun PG a 0 PF: +10% Favore",
+      "tymora": "Attivare tutti e tre i Sigilli: +10% Favore",
+      "bonusGruppo": "Usare Essenza Purificata di propria iniziativa in Fase 3 senza suggerimenti: +5% Favore"
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "name": "Mummia Assistente",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p>Una mummia legata alla volontà di Kethrar tramite un <strong>Conduit Ambrato</strong> — un tubo di ambra solidificata che la connette al suo laboratorio. Non ha volontà propria: obbedisce ciecamente ai comandi di Kethrar finché il conduit resta integro.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Ecosistema 1, Piano 3 (Kethrar)",
+    "details": {
+      "biography": {
+        "value": "<p>Una delle 3 mummie-assistenti presenti in Fase 1 dello scontro con Kethrar (Piano 3). Posizionate attorno alla capsula alchemica, connesse a lui da tubi visibili di ambra solidificata.</p>",
+        "public": ""
+      },
+      "alignment": "Senza allineamento",
+      "race": "",
+      "type": {
+        "value": "undead",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Non-morto (mummia modificata, stats ridotte)"
+      },
+      "environment": "Laboratorio alchemico, dungeon sotterraneo",
+      "cr": 1,
+      "spellLevel": 0,
+      "xp": {
+        "value": 200
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 11,
+        "calc": "natural",
+        "formula": "",
+        "label": "Bende indurite + rinforzi alchemici"
+      },
+      "hp": {
+        "value": 32,
+        "max": 32,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "5d8+10"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 20,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      }
+    },
+    "abilities": {
+      "str": { "value": 16, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 15, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 3,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 5,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "med",
+      "di": { "value": ["poison", "cold"], "bypasses": [], "custom": "Veleno, Freddo" },
+      "dr": { "value": ["bludgeoning", "piercing", "slashing"], "bypasses": ["mgc"], "custom": "Contundenti, Perforanti, Taglienti da armi non magiche" },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": ["poisoned"], "custom": "Avvelenato" },
+      "languages": { "value": [], "custom": "Comprende il Comune ma non parla" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Controllo di Kethrar",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>La Mummia Assistente non ha volontà propria — è controllata da Kethrar attraverso il Conduit Ambrato.</p><ul><li>Agisce nello stesso turno di Kethrar (subito dopo di lui nell'ordine di iniziativa)</li><li>Non può agire autonomamente se il suo conduit viene distrutto: cade esanime immediatamente</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Conduit Ambrato — Debolezza",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Ogni Mummia Assistente è collegata a Kethrar da un <strong>Conduit Ambrato</strong> (il tubo visibile di ambra solidificata): CA 10, 20 PF — attaccabile come oggetto, non richiede di colpire la mummia stessa.</p><ul><li><strong>Conduit distrutto → la mummia cade esanime immediatamente</strong> (0 PF istantaneo, nessun tiro salvezza)</li><li>Kethrar non può rigenerare i conduit distrutti</li><li>Liberare una mummia (Dispel Magic sul conduit o conduit distrutto) sblocca un bonus al Sigillo Nord dell'Arena</li></ul><p><em>Più efficiente attaccare il conduit (CA 10, 20 PF) che la mummia (CA 11, 32 PF) direttamente.</em></p>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pugno Mummificato",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +5 al colpire, portata 1,5m, un bersaglio.</p><p><strong>Colpito:</strong> 10 (2d6+3) danni contundenti.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "5",
+        "damage": {
+          "parts": [["2d6 + 3", "bludgeoning"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "icons/svg/mystery-man.svg",
+  "prototypeToken": {
+    "name": "Mummia Assistente",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "disposition": -1,
+    "bar1": { "attribute": "attributes.hp" }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "role": "Assistente di Kethrar, Fase 1 (Piano 3, Ecosistema 1)",
+    "startingCount": 3,
+    "positioning": "In posizione attorno alla capsula alchemica al centro dell'arena",
+    "tactics": {
+      "movimento": "Resta vicina a Kethrar per coprirlo (vedi Schermo di Mummia nel suo statblock)",
+      "obiettivo": "Assorbire attacchi diretti a Kethrar, colpire chi gli è vicino",
+      "mentalita": "Nessuna iniziativa propria — esegue solo ordini di Kethrar"
+    },
+    "synergy": {
+      "schermoDiMummia": "Kethrar può redirigere su una mummia adiacente un attacco che lo bersaglia (1/round)",
+      "sigilloNord": "Se liberata (conduit distrutto o Dispel Magic), sblocca un bonus all'attivazione del Sigillo Nord"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "name": "Pseudopodo Minore",
+  "type": "npc",
+  "system": {
+    "description": {
+      "value": "<p>Una piccola appendice gelatinosa sputata dalla massa di Kethrar durante la Fase 2 (La Melma). Agisce autonomamente ma resta un'estensione della sua volontà — non ha una mente propria.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Homebrew - Ecosistema 1, Piano 3 (Kethrar)",
+    "details": {
+      "biography": {
+        "value": "<p>Generato da Kethrar come azione bonus in Fase 2 (140 → 71 PF), 1/round, massimo 2 attivi contemporaneamente. Si dissolve automaticamente se Kethrar va a 0 PF.</p>",
+        "public": ""
+      },
+      "alignment": "Senza allineamento",
+      "race": "",
+      "type": {
+        "value": "ooze",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Melma (estensione di Kethrar)"
+      },
+      "environment": "Laboratorio alchemico, dungeon sotterraneo",
+      "cr": 0.25,
+      "spellLevel": 0,
+      "xp": {
+        "value": 50
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": 10,
+        "calc": "natural",
+        "formula": "",
+        "label": "Membrana gelatinosa sottile"
+      },
+      "hp": {
+        "value": 15,
+        "max": 15,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "2d8+6"
+      },
+      "init": {
+        "ability": "dex",
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 20,
+        "walk": 20,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 0,
+        "blindsight": 30,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": "Cieco oltre 9m"
+      }
+    },
+    "abilities": {
+      "str": { "value": 10, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "dex": { "value": 10, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "con": { "value": 14, "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "int": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "wis": { "value": 6,  "proficient": 0, "bonuses": { "check": "", "save": "" } },
+      "cha": { "value": 1,  "proficient": 0, "bonuses": { "check": "", "save": "" } }
+    },
+    "traits": {
+      "size": "sm",
+      "di": { "value": ["poison"], "bypasses": [], "custom": "Veleno (eredita l'immunità di Kethrar)" },
+      "dr": { "value": [], "bypasses": [], "custom": "" },
+      "dv": { "value": [], "bypasses": [], "custom": "" },
+      "ci": { "value": ["prone"], "custom": "Prono (non ha una forma da far cadere)" },
+      "languages": { "value": [], "custom": "—" }
+    },
+    "currency": {
+      "pp": 0, "gp": 0, "ep": 0, "sp": 0, "cp": 0
+    },
+    "bonuses": {
+      "mwak": { "attack": "", "damage": "" },
+      "rwak": { "attack": "", "damage": "" },
+      "msak": { "attack": "", "damage": "" },
+      "rsak": { "attack": "", "damage": "" },
+      "abilities": { "check": "", "save": "", "skill": "" },
+      "spell": { "dc": "" }
+    }
+  },
+  "items": [
+    {
+      "name": "Estensione di Kethrar",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Il Pseudopodo Minore non è una creatura indipendente — è una propaggine della massa gelatinosa di Kethrar.</p><ul><li>Generato come <strong>azione bonus</strong> da Kethrar in Fase 2, 1/round, <strong>massimo 2 attivi</strong> contemporaneamente</li><li>Si dissolve immediatamente se Kethrar scende a 0 PF</li><li>Non genera alcun beneficio per Kethrar quando viene distrutto (a differenza delle Spore del Violet Fungus — qui è puramente offensivo/di pressione)</li></ul>"
+        },
+        "activation": { "type": "", "cost": null },
+        "requirements": ""
+      }
+    },
+    {
+      "name": "Pseudopodo",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><strong>Attacco con Arma da Mischia:</strong> +4 al colpire, portata 1,5m, un bersaglio.</p><p><strong>Colpito:</strong> 5 (1d6+2) danni acido.</p>"
+        },
+        "quantity": 1,
+        "weight": 0,
+        "actionType": "mwak",
+        "attackBonus": "4",
+        "damage": {
+          "parts": [["1d6 + 2", "acid"]],
+          "versatile": ""
+        },
+        "range": { "value": 5, "long": null, "units": "ft" },
+        "ability": "str",
+        "activation": { "type": "action", "cost": 1 },
+        "target": { "value": 1, "type": "creature" }
+      }
+    }
+  ],
+  "flags": {},
+  "img": "icons/creatures/slimes/slime-movement-green.webp",
+  "prototypeToken": {
+    "name": "Pseudopodo Minore",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "disposition": -1,
+    "bar1": { "attribute": "attributes.hp" }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "_stats": { "systemId": "dnd5e", "systemVersion": "3.0.0" },
+  "customData": {
+    "role": "Minion generato da Kethrar, Fase 2 (Piano 3, Ecosistema 1)",
+    "startingCount": "0 (generati durante il combattimento, max 2 attivi)",
+    "positioning": "Emerge adiacente a Kethrar nel momento in cui viene generato",
+    "tactics": {
+      "movimento": "Si dirige verso il PG più vicino o più isolato per creare pressione su più fronti",
+      "obiettivo": "Distrarre e logorare, non è pensato per infliggere danni ingenti",
+      "mentalita": "Nessuna iniziativa propria — segue la direzione generale data implicitamente da Kethrar"
+    },
+    "synergy": {
+      "generazione": "Kethrar (Fase 2): azione bonus, 1/round, max 2 Pseudopodi attivi contemporaneamente",
+      "dissoluzione": "Si dissolve automaticamente se Kethrar scende a 0 PF (indipendentemente dai propri PF residui)"
+    }
+  }
+}

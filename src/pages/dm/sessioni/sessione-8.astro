@@ -45,7 +45,8 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Nodi della Trama raccolti:</strong> conta quanti Nodi del Piano 2 il party ha registrato sulla Pietra. Determina cosa succede al Pianerottolo. Vedi Parte VI.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Riserva Sigillata:</strong> il party ha trovato la Zona 26? Ha aperto il forziere con la Chiave di Ferro del Piano 1? Se sì, hanno la Lettera Sigillata dell'Architetto. Vedi Parte V per la reazione di Vex e la scelta degli oggetti.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Vex e Riven:</strong> la cicatrice si è espansa fino al gomito con venature blu. Vex la vedrà subito. Prepara la reazione — è diversa dalla prima volta. Vedi Parte V.</span></li>
-        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Myra:</strong> se il party torna in città, stabilisci chi è Myra, dove trovarla e cosa sa. <span class="text-yellow-400">[Placeholder — definisci il personaggio prima della sessione]</span></span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Arianna e la cicatrice di Riven:</strong> se tornano in città, il party ha già dichiarato l'intenzione di parlarne con lei (Sessioni 6-7) — è la sua maestra di magia selvaggia (Sessione 0). Prepara la sua reazione di sorpresa. Vedi Parte VII.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Mira Greenleaf:</strong> se il party torna in città, decidi se e dove la incrociano — è la druida halfling che si ritirò prima della discesa (Sessione 0). Vedi Parte VII.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Inventario Vex:</strong> controlla la Parte VII — nuovi oggetti disponibili per il Piano 3. Decidi eventuali prezzi personalizzati.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Bussola Dorata:</strong> decidi cosa stava cercando. Vedi nota in Parte V. Tienila nella testa durante la sessione.</span></li>
       </ul>
@@ -367,9 +368,9 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           </p>
         </div>
         <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
-          <strong class="text-red-400">📋 Nota DM:</strong> Vex sa di più. Kethrar ha studiato esattamente questo tipo di risposta nel soggetto secondario della capsula (che era Riven). Ma Vex non può dire a Riven cosa lo aspetta al Piano 3 — viola il mandato. Lui sa che Riven incontrerà Kethrar. Sa quello che Kethrar gli dirà. Non può avvertirlo. Questo lo tormenta.
+          <strong class="text-red-400">📋 Nota DM:</strong> Vex osserva la cicatrice con un'attenzione che va oltre la curiosità clinica — quasi allerta, come se cercasse di riconoscere un pattern che non riesce a inquadrare. Non lo nasconde bene. Quello che Riven sta diventando non rientra in nessuna categoria che il mandato gli ha dato per classificare le cose, e questo lo disturba più di quanto ammetta.
           <br><br>
-          Se Riven chiede esplicitamente: <em>"Sai cosa mi sta succedendo?"</em> — Vex: <em>"Ho informazioni parziali. Quelle che posso condividere, le ho condivise. Quelle che non posso — non è una questione di volontà."</em> L'aureola scintilla in modo irregolare per circa dieci secondi. <em>"Mi dispiace."</em>
+          Se Riven chiede esplicitamente: <em>"Sai cosa mi sta succedendo?"</em> — Vex: <em>"So quello che vedo. Quello che vedo non corrisponde a niente che ho nei miei riferimenti."</em> Pausa. <em>"Non è la stessa cosa che sapere. Vorrei poterti dire di più."</em>
         </div>
       </div>
 
@@ -387,68 +388,11 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             "Non era consapevole. Non nel senso che intendete voi con quella parola. Ma era... orientata. Verso qualcosa. Non verso di voi — voi eravate un ostacolo sulla sua strada." Una pausa. "Trovo interessante che abbiate interpretato questo come un combattimento da vincere piuttosto che un problema da aggirare. Non dico che abbiate sbagliato." Le ali si agitano. "Dico solo che avete fatto una scelta."
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-400">
-          <div class="bg-gray-800/60 rounded p-3">
-            <p class="text-green-400 font-bold mb-1">Se hanno usato l'Essenza Purificata:</p>
-            <p>"L'Essenza." L'aureola pulsa. "Avete capito cosa fosse prima di usarla, o l'avete usata per intuizione?" — Non giudica. Vuole sapere se hanno capito davvero.</p>
-          </div>
-          <div class="bg-gray-800/60 rounded p-3">
-            <p class="text-blue-400 font-bold mb-1">Se hanno usato il pannello delle chiuse (Zona 21):</p>
-            <p>"Il pannello." Pausa di un secondo. "Avete girato la ruota prima della boss fight. Molto bene." L'unico complimento diretto della serata.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bussola Dorata -->
-      <div class="bg-amber-900/20 border border-amber-700/30 rounded-lg p-5 mb-5">
-        <h3 class="text-lg font-bold text-amber-400 mb-3">🧭 La Bussola Dorata</h3>
-        <p class="text-xs text-gray-500 italic mb-3">Questo dialogo avviene solo se il party tira fuori la bussola e la mostra a Vex.</p>
-        <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r mb-3">
-          <p class="italic text-amber-100 text-sm leading-relaxed">
-            Vex guarda la bussola. L'ago gira ancora — incerto, irregolare — come se cercasse qualcosa che è allo stesso tempo vicino e lontano.
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            "Questa non dovrebbe essere qui." Non è spaventato. È... sorpreso in modo professionale, come chi trova un errore contabile. "Non intendo nel senso che voi non dovreste averla — intendo che non dovrebbe essere nelle Fogne Profonde."
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            Guarda l'ago ancora.
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            "Cercava qualcosa. Cerca ancora, ma l'origine di quello che cercava è..."
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2 font-semibold text-amber-300">
-            [PAUSA — decidi DM: cosa cercava la bussola?]
-          </p>
-        </div>
-        <div class="bg-amber-900/30 border border-amber-700 rounded p-3 text-xs">
-          <p class="text-amber-400 font-bold mb-2">📋 Nota DM — Scegli una delle opzioni:</p>
-          <ul class="text-gray-400 space-y-2">
-            <li><strong class="text-yellow-400">Opzione A:</strong> Cercava la Riserva Sigillata (Zona 26). La bussola apparteneva a chi ha costruito quella stanza. Vex: <em>"Il Collettore. L'origine di quella bussola è qualcuno che costruiva cose per durare secoli. Non contrabbandieri."</em></li>
-            <li><strong class="text-yellow-400">Opzione B:</strong> Cercava Riven. L'ago ora punta verso di lui (o verso la cicatrice). Vex lo nota, non lo dice, ma le ali si fermano di nuovo. <em>"Cercava... qualcosa di irregolare. Qualcosa che non dovrebbe stare dove sta."</em></li>
-            <li><strong class="text-yellow-400">Opzione C:</strong> Cercava Piano 3 — puntava in direzione della scala verso il basso. Vex: <em>"Cercava quello che c'è sotto. Non posso aggiungere altro."</em> Le ali si agitano. Fine della risposta.</li>
-          </ul>
-        </div>
       </div>
 
       <!-- Lettera Sigillata dell'Architetto -->
       <div class="bg-cyan-900/20 border border-cyan-700/30 rounded-lg p-5 mb-5">
         <h3 class="text-lg font-bold text-cyan-400 mb-3">📜 La Lettera Sigillata dell'Architetto <span class="text-xs text-gray-500 font-normal">(solo se trovata dalla Riserva Sigillata)</span></h3>
-
-        <div class="bg-amber-900/20 border border-amber-700/30 rounded p-4 mb-3">
-          <p class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-2">📢 Read-Aloud — Apertura del baule nella Riserva Sigillata</p>
-          <p class="italic text-amber-100 text-sm leading-relaxed">
-            Sul fondo del baule, sotto tutto il resto, c'è una busta. Carta spessa — non pergamena, non cuoio, qualcosa di intermedio. Vecchia, ma integra come se il tempo non l'avesse toccata.
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            Il sigillo di cera non ha un colore preciso. Guardarla da angolazioni diverse cambia qualcosa — ora dorato, ora blu scuro, ora niente. Il simbolo impressovi non è un simbolo divino che riconoscete, non è un'insegna di gilda. Somiglia a una notazione architettonica — il timbro di chi ha progettato qualcosa, non di chi l'ha santificato.
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            Sul fronte, in una scrittura formale e precisa: <em>"Al Custode del Pianerottolo."</em>
-          </p>
-          <p class="italic text-amber-100 text-sm leading-relaxed mt-2">
-            Nessun nome. Nessuna data. Nessun mittente. La carta non odora di muffa nonostante l'età — odora di minerale pulito, di roccia dopo la pioggia.
-          </p>
-        </div>
 
         <div class="bg-black/40 border-l-4 border-cyan-500 p-4 rounded-r mb-3">
           <p class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2">📢 Reazione di Vex</p>
@@ -485,13 +429,13 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             <div class="bg-gray-800/60 border border-amber-800/50 rounded p-3">
               <p class="font-bold text-amber-200 text-sm">Frammento di Grazia Primaria</p>
               <p class="text-gray-500 text-xs italic mb-1">Cristallo — singolo uso</p>
-              <p class="text-xs text-gray-300 leading-relaxed">Azione bonus: tutti i membri del party entro 9 metri recuperano 2d6 PF e rimuovono una condizione a scelta tra <em>spaventato</em>, <em>avvelenato</em> o <em>trattenuto</em>.</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Azione bonus: tutti i membri del party entro 9 metri recuperano 3d6 PF e rimuovono una condizione a scelta tra <em>spaventato</em>, <em>avvelenato</em> o <em>trattenuto</em>.</p>
             </div>
 
             <div class="bg-gray-800/60 border border-red-800/50 rounded p-3">
               <p class="font-bold text-red-200 text-sm">Tavoletta dell'Ultimo Accordo</p>
               <p class="text-gray-500 text-xs italic mb-1">Tavoletta sottile — singolo uso</p>
-              <p class="text-xs text-gray-300 leading-relaxed">Reazione: quando un alleato scende a 0 PF per effetto di un meccanismo divino — campo, aura, trappola, non un attacco diretto — si frantuma la tavoletta. Il danno viene annullato e il personaggio resta a 1 PF.</p>
+              <p class="text-xs text-gray-300 leading-relaxed">Reazione: quando un alleato nel raggio di 15 metri scende a 0 PF si frantuma la tavoletta. Il danno viene annullato e il personaggio resta a 1 PF.</p>
             </div>
 
             <div class="bg-gray-800/60 border border-purple-800/50 rounded p-3">
@@ -514,9 +458,6 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <div class="bg-black/40 border-l-4 border-gray-500 p-4 rounded-r">
           <p class="italic text-gray-200 text-sm leading-relaxed">
             Guarda le fiale. Non le tocca. "Avete raccolto campioni." Le venature dorate pulsano piano. "Bene."
-          </p>
-          <p class="italic text-gray-200 text-sm leading-relaxed mt-2">
-            "L'acqua ambrata è il prodotto di qualcosa che viene fatto al dungeon da molto tempo. Non so da quanto." Pausa. "So che la colonna ascendente del Piano 2 — quella che avete visto — non è naturale. Qualcuno ha fatto qualcosa all'acqua. A tutta l'acqua qui sotto. Queste fiale sono campioni di un processo che non ho nel mandato."
           </p>
           <p class="italic text-gray-200 text-sm leading-relaxed mt-2">
             <em>"Il fatto che dissolva incantesimi attivi — questo lo sapevo già. Il fatto che abbia reagito con la magia selvaggia di Riven nel modo in cui l'ha fatto —"</em> Si ferma. <em>"Quello no. Quello è nuovo."</em>
@@ -574,16 +515,16 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               Non è forte. È quasi un canto — una nota singola, bassa, che dura forse tre secondi. I cinque simboli sul pavimento della Pietra si dispongono in un pattern diverso da quello in cui erano: non più casuali, ma in forma di cerchio. Come se stessero guardando qualcosa al centro.
             </p>
             <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
-              Al centro dei cinque simboli, per la durata del suono, appare qualcosa: non un sesto simbolo. Una forma — il contorno di una capsula. Cilindrica, alta. Poi svanisce.
+              In un angolo del Pianerottolo, il terzo portale — gemello di quelli di Tymora e Tempus, rimasto fin qui silenzioso e inerte — risponde. I filamenti blu e argento che lo attraversano si accendono tutti insieme, per la prima volta, e cominciano a scorrere.
             </p>
             <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
               <span class="text-gray-400 not-italic">[Pausa. Aspetta che elaborino.]</span>
             </p>
           </div>
           <div class="bg-gray-800/60 rounded p-3 text-xs text-gray-300">
-            <strong class="text-purple-400">📋 Nota DM:</strong> La capsula è quella di Kethrar al Piano 3. I cinque Nodi del Piano 2 sono i cinque "campioni" del suo esperimento — l'acqua ascendente, il cristallo levitante, le spirali, la bussola, il laboratorio rotante. Sono tutti tracce di Kethrar. La pietra li ha connessi.
+            <strong class="text-purple-400">📋 Nota DM:</strong> I cinque Nodi della Trama non sono stranezze isolate: sono i frammenti che completano la Prova di Mystra. Registrarli tutti è la condizione che apre il terzo portale del Pianerottolo (vedi <code>/dm/prove-divine/mystra</code>) — fino a questo momento presente ma inerte, visibile ma non attraversabile.
             <br><br>
-            Vex vede la reazione della Pietra. Vex sa cosa significa. Non può dirlo. Può solo dire: <em>"Il Piano 3 chiarirà molte cose. Preparatevi a capire."</em> Le ali smettono di muoversi del tutto per un secondo. Poi: <em>"Comprate quello che vi serve."</em>
+            Vex percepisce l'attivazione — le sue venature dorate rispondono a qualunque flusso divino nel dungeon — ma non commenta il significato della prova. Può solo dire: <em>"Quello è nuovo."</em> Pausa. <em>"Comprate quello che vi serve, se volete affrontarlo prima del Piano 3."</em>
           </div>
         </div>
       </div>
@@ -629,9 +570,14 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               <p class="text-gray-400">Vuole sapere tutto sulla Matriarca. Ogni dettaglio tattico. Farà domande sulla Fase 1 (la membrana), sul pannello delle chiuse, su come si sono posizionati. Se Valoris o Morgrim rispondono bene: li guarda con rispetto diverso da prima.</p>
             </div>
 
-            <div class="bg-gray-800/60 rounded p-3 text-xs">
-              <p class="text-purple-400 font-bold mb-1">Arianna "Whispersong" Moonwhisper — Triumvirato Intel</p>
-              <p class="text-gray-400">Vuole informazioni sulle altre gilde. Come stavano? Avevano perso qualcuno? Aveva visto tracce delle loro esplorazioni? Se Thalio è presente, le parla prima. Ha già le sue ipotesi — vuole conferme.</p>
+            <div class="bg-gray-800/60 rounded p-3 text-xs border border-purple-700/50">
+              <p class="text-purple-400 font-bold mb-1">Arianna "Whispersong" Moonwhisper — Triumvirato Intel, maestra di Riven</p>
+              <p class="text-gray-400">
+                Vuole informazioni sulle altre gilde. Come stavano? Avevano perso qualcuno? Aveva visto tracce delle loro esplorazioni? Se Thalio è presente, le parla prima. Ha già le sue ipotesi — vuole conferme.
+                <br><br>
+                <strong class="text-purple-300">Ma prima di tutto questo, chiederà di Riven.</strong> È lei che lo ha trovato e addestrato per tre mesi (Sessione 0) — il party ha già dichiarato l'intenzione di parlarle della cicatrice (Sessioni 6-7), quindi aspettatelo come argomento centrale dell'incontro, non un dettaglio a margine. Quando la vede — o quando gliela descrivono — resta genuinamente sorpresa: l'espansione fino al gomito, le venature blu, il fatto che l'acqua ambrata abbia dissolto la trasformazione anziché limitarsi a bloccarla, non rientrano in niente che gli ha insegnato o osservato prima in lui. <em>"Questo non l'ho mai visto. E io ho visto molto."</em> Vuole esaminarlo di persona con calma, non un'occhiata veloce tra un debrief e l'altro.
+                <span class="block mt-1 text-yellow-400">→ Decidi se l'esame avviene subito o se lei chiede tempo e un luogo dedicato — è un momento narrativo importante, non va affrettato.</span>
+              </p>
             </div>
 
             <div class="bg-gray-800/60 rounded p-3 text-xs">
@@ -640,14 +586,10 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             </div>
 
             <div class="bg-gray-800/60 rounded p-3 text-xs border border-yellow-700/50">
-              <p class="text-yellow-400 font-bold mb-1">Myra — <span class="text-gray-500 font-normal">[⚠️ PLACEHOLDER — definire prima della sessione]</span></p>
+              <p class="text-yellow-400 font-bold mb-1">Mira Greenleaf — la druida che non scese</p>
               <p class="text-gray-400">
-                Chi è Myra? Alcune possibilità:
-                <span class="block mt-1 text-gray-500">• <strong>Sacerdotessa di Tymora</strong> (Tempio di Waterdeep) — Valoris la conosce, è il contatto divino della gilda</span>
-                <span class="block text-gray-500">• <strong>Alchimista della gilda</strong> — sarebbe affascinata dall'Essenza Purificata, dai componenti, dall'acqua ambrata nelle fiale</span>
-                <span class="block text-gray-500">• <strong>Medico/chirurgo della gilda</strong> — reagisce alla cicatrice di Riven con preoccupazione clinica</span>
-                <span class="block text-gray-500">• <strong>Informatore esterno</strong> — ha notizie sulle altre gilde che Arianna non ha</span>
-                <span class="block mt-1 text-yellow-400">→ Definisci ruolo, luogo e una battuta chiave prima di sederti a tavola.</span>
+                La halfling del Cerchio della Terra che si ritirò la notte prima della discesa, sostituita da Fealer (Sessione 0, "Il Druido Che Non Scese"). Se il party torna in città è naturale incrociarla — probabilmente vuole sapere come sta andando la squadra che ha lasciato, con un misto di senso di colpa e sollievo di non essere scesa. Racconti come la corruzione del dungeon (l'acqua ambrata, la Matriarca, la cicatrice di Riven) potrebbero colpirla in modo particolare: è esattamente il genere di cosa che l'ha spezzata.
+                <span class="block mt-1 text-yellow-400">→ Decidi tono, luogo dell'incontro (probabilmente presso il tempio/circolo druidico o nei pressi della piazza dell'Arco) e se è presente affatto, prima di sederti a tavola.</span>
               </p>
             </div>
           </div>
@@ -701,6 +643,76 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               Non aspetta risposta. Si gira verso la fontana.
             </p>
           </div>
+        </div>
+      </div>
+
+      <!-- ARIANNA ESAMINA RIVEN -->
+      <div class="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6 mt-6">
+        <h3 class="text-xl font-bold text-purple-400 mb-2">🔬 Approfondimento — Arianna Esamina la Cicatrice di Riven</h3>
+        <p class="text-gray-400 text-sm mb-4 italic">Solo se tornano in città e incontrano Arianna. Il party ha già dichiarato l'intenzione di parlargliene (Sessioni 6-7) — non trattarlo come facoltativo: aspettati che Riven lo metta in cima alla lista, spesso prima ancora del debrief con Serath.</p>
+
+        <div class="bg-gray-800/60 rounded p-3 text-xs mb-4">
+          <strong class="text-purple-400">📋 Nota DM — comportamento atteso al tavolo:</strong> 99 su 100, appena sa che Arianna è raggiungibile, Riven chiede di essere esaminato subito — non aspetta un momento comodo, non lo minimizza davanti agli altri PNG. Se il giocatore di Riven non lo propone spontaneamente, fai insistere Valoris (coerente con la leadership che ha già mostrato in Sessione 6). Lascia che la scena prenda il tempo che serve — non tagliarla per correre al resto del debrief.
+        </div>
+
+        <!-- Fase 1: la prima reazione -->
+        <div class="bg-black/40 border-l-4 border-purple-500 p-4 rounded-r mb-4">
+          <p class="italic text-purple-100 text-sm leading-relaxed">
+            Arianna prende il braccio di Riven senza chiedere permesso — un gesto che in tre mesi di addestramento lui conosce bene. Le sue dita, fredde e precise, seguono la linea delle venature blu fino al gomito.
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            Il silenzio dura più del solito. Poi: <em>"Ripeti."</em> Non è una richiesta gentile. <em>"Quando è successo. Cosa hai sentito. Parola per parola, se riesci."</em>
+          </p>
+        </div>
+
+        <!-- Domande -->
+        <div class="bg-gray-800/60 rounded p-3 text-xs mb-4">
+          <p class="text-purple-300 font-bold mb-2">Le domande di Arianna — usa quelle che servono, non tutte in fila</p>
+          <ul class="text-gray-400 space-y-1.5">
+            <li>• <em>"L'acqua ambrata — l'hai toccata direttamente, o eri immerso?"</em></li>
+            <li>• <em>"Cosa hai provato mentre la trasformazione si dissolveva? Dolore? Sollievo? Niente?"</em></li>
+            <li>• <em>"Riesci a richiamarla adesso, volontariamente? Prova. Una scarica piccola, niente di aggressivo."</em> <span class="text-gray-500 not-italic">[Se Riven prova: un piccolo effetto di magia selvaggia a scelta tua, tenuto minore — è un test, non uno scontro.]</span></li>
+            <li>• <em>"Le venature pulsano quando sei calmo, o solo sotto stress?"</em></li>
+          </ul>
+        </div>
+
+        <!-- Scoperte / esclamazioni -->
+        <div class="bg-black/40 border-l-4 border-purple-500 p-4 rounded-r mb-4">
+          <p class="italic text-purple-100 text-sm leading-relaxed">
+            A un certo punto — probabilmente quando sente che l'acqua ha <em>dissolto</em> la trasformazione invece di limitarsi a interromperla — Arianna si blocca. Non ha ali dorate come Vex, ma ha un tic riconoscibile: quando è genuinamente sorpresa, smette di respirare per un secondo intero. Fallo notare al party.
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            <em>"Questo non è resistenza."</em> Lo dice quasi tra sé. <em>"La Trama non si è solo difesa da quell'acqua. Ha imparato qualcosa da lei. L'ha usata."</em>
+          </p>
+          <p class="italic text-purple-100 text-sm leading-relaxed mt-2">
+            Alza gli occhi su Riven, e per la prima volta da quando il party la conosce, sembra incerta. <em>"In tre secoli non ho mai visto un condotto di magia selvaggia assorbire un contro-effetto e uscirne più integrato. Di solito si spegne, o esplode. Questo non fa né l'uno né l'altro."</em>
+          </p>
+        </div>
+
+        <!-- Insegnamenti -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-3 text-xs">
+            <p class="text-green-400 font-bold mb-2">Per Riven</p>
+            <p class="text-gray-300 leading-relaxed">
+              Gli insegna un esercizio di radicamento rapido (respirazione in quattro tempi, mano sul petto, una singola parola arcana ripetuta) da usare quando sente le venature attivarsi senza volerlo — non per soffocarle, ma per scegliere lui il canale invece di subirlo. <em>"Non provare a chiuderla. Prova a indirizzarla. È più facile guidare un fiume che fermarlo."</em> Lo avverte senza mezzi termini di non affidarsi alla cicatrice come fonte di potere in combattimento finché non capiscono meglio cosa sta diventando — soprattutto al Piano 3.
+            </p>
+          </div>
+          <div class="bg-blue-900/20 border border-blue-700/40 rounded-lg p-3 text-xs">
+            <p class="text-blue-400 font-bold mb-2">Per Valoris (capo squadra)</p>
+            <p class="text-gray-300 leading-relaxed">
+              Gli dà segnali concreti da sorvegliare sul campo: venature che pulsano fuori sincrono col respiro, sguardo che si perde per più di un istante, pelle calda intorno alla cicatrice. Se li nota, la priorità è farlo respirare, non farlo combattere. <em>"Tu tieni unita la squadra. Tieni ancorato anche lui — letteralmente, se serve: a volte basta una mano sulla spalla."</em>
+            </p>
+          </div>
+          <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-3 text-xs">
+            <p class="text-amber-400 font-bold mb-2">Per tutto il gruppo</p>
+            <p class="text-gray-300 leading-relaxed">
+              Rassicura che non è un pericolo per gli altri — la magia selvaggia di Riven non ha mai colpito un alleato di proposito, e non ha motivo di pensare che questo cambi. Chiede solo una cosa: se lo vedono in difficoltà vicino ad acqua ambrata o cristalli simili, che glielo dicano subito. Vuole essere avvertita a ogni nuovo sviluppo, non solo a cose fatte.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/60 rounded p-3 text-xs mt-4">
+          <strong class="text-purple-400">📋 Nota DM:</strong> Arianna non ha risposte definitive, ed è giusto che lo ammetta — è più interessante di lei che finge di sapere. Chiude l'esame con qualcosa che suona come un impegno personale, non una rassicurazione vuota: <em>"Non so ancora cosa stai diventando, Riven. Ma ho intenzione di scoprirlo con te, non dopo di te."</em>
         </div>
       </div>
     </div>

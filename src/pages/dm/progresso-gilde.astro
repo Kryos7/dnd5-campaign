@@ -1,0 +1,250 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../components/dm/DMAuthGuard';
+import InfoBox from '../../components/InfoBox.astro';
+---
+
+<MainLayout title="Progresso Gilde [DM] — D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-[1440px] mx-auto p-6">
+
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm" class="text-blue-400 hover:text-blue-300">
+            ← Dashboard DM
+          </a>
+        </div>
+        <h1 class="text-4xl font-bold text-red-400 mb-1">📊 Progresso Gilde</h1>
+        <p class="text-slate-400 mt-2">
+          Tracking dell'avanzamento de <strong class="text-blue-300">Lo Scudo Radiante</strong> e
+          <strong class="text-yellow-300">Gli Sciocchi Fortunati</strong> nel dungeon, piano per piano — da aggiornare dopo ogni sessione.
+        </p>
+      </div>
+
+      <!-- Banner SOLO DM -->
+      <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-8 text-center">
+        <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+        <p class="text-red-300 text-sm mt-1">
+          I giocatori conoscono solo il posizionamento relativo filtrato da Vex e il Favore Divino totale delle rivali — mai il dettaglio qui sotto.
+        </p>
+      </div>
+
+      <!-- Nota importante: piani paralleli -->
+      <InfoBox type="dm" title="Regola di continuità: piani paralleli">
+        <p>
+          Ogni gilda affronta la <strong>propria istanza</strong> dei piani del dungeon — stessa sfida concettuale, stesso boss,
+          ma nessuno spazio fisico condiviso (sono realtà parallele all'interno del dungeon divino). Questo significa:
+        </p>
+        <ul>
+          <li>Nessun ritrovamento ambientale di tracce lasciate da un'altra gilda dentro un piano.</li>
+          <li>Le uniche zone effettivamente condivise sono i <strong>Pianerottoli</strong>, dove le gilde possono incrociarsi (o mancarsi per poco).</li>
+          <li>Ogni informazione sulle rivali passa filtrata da Vex, dalle voci in città, o dalla bacheca classifica — mai da scoperte dirette nel dungeon.</li>
+        </ul>
+      </InfoBox>
+
+      <!-- Colpo d'occhio -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">🔎 Colpo d'occhio — stato attuale</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gradient-to-br from-purple-900/30 via-slate-800/30 to-blue-900/30 border-2 border-purple-500 rounded-lg p-6">
+            <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-purple-900/50 text-purple-300 border border-purple-700">🎭 PARTY</span>
+            <h3 class="text-xl font-bold text-purple-300 mb-1">Guardiani della Trama</h3>
+            <p class="text-sm text-slate-400 mb-3">Piano 3 — Kethrar</p>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-900/50 text-yellow-300 border border-yellow-600">🟡 IN CORSO (imminente)</span>
+            <p class="text-slate-300 text-sm mt-3">Pianerottolo 2 completato. Pronti a scendere all'Arena della Capsula.</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-900/30 to-slate-800/30 border-2 border-blue-500 rounded-lg p-6">
+            <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-blue-900/50 text-blue-300 border border-blue-700">⚖️ RIVALI (LG)</span>
+            <h3 class="text-xl font-bold text-blue-300 mb-1">Lo Scudo Radiante</h3>
+            <p class="text-sm text-slate-400 mb-3">Piano 3 — Kethrar</p>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-900/50 text-yellow-300 border border-yellow-600">🟡 IN CORSO</span>
+            <p class="text-slate-300 text-sm mt-3">Recuperati completamente dopo la Matriarca. Avanzano con cautela, nessuna perdita.</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-yellow-900/30 to-red-900/20 border-2 border-yellow-500 rounded-lg p-6">
+            <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-yellow-900/50 text-yellow-300 border border-yellow-700">🎲 RIVALI (CN)</span>
+            <h3 class="text-xl font-bold text-yellow-300 mb-1">Gli Sciocchi Fortunati</h3>
+            <p class="text-sm text-slate-400 mb-3">Piano 3 — Kethrar</p>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-300 border border-red-600">🔴 TENTATIVO FALLITO — RITIRATI</span>
+            <p class="text-slate-300 text-sm mt-3">Grom gravemente ferito coprendo la ritirata. Nessun Sigillo Divino attivato. Rientrati in città dal Velo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PIANO 1 -->
+      <section class="bg-slate-800 border border-slate-700 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">Piano 1 — Fogne Superiori (Grolnek)</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Aspetto</th>
+                <th class="text-center pb-2 px-4 font-semibold text-blue-400">Scudo Radiante</th>
+                <th class="text-center pb-2 px-4 font-semibold text-yellow-400">Sciocchi Fortunati</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Esito</td>
+                <td class="py-3 px-4 text-center align-top">🥇 Primi a completarlo</td>
+                <td class="py-3 px-4 text-center align-top">Ancora dentro all'arrivo dei Guardiani al Pianerottolo A</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Come</td>
+                <td class="py-3 px-4 align-top">Durak e Mira scoutano in anticipo (incontrati dal party in Stanza 25), tattica pianificata contro la marea di Grolnek, zero feriti gravi.</td>
+                <td class="py-3 px-4 align-top">Deviano per saccheggiare un covo di contrabbandieri; un gadget di Zax quasi causa un crollo e li rallenta parecchio.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Dopo</td>
+                <td class="py-3 px-4 align-top">Rientrano in superficie dal Velo per rifornirsi coi fondi di Lord Haventree.</td>
+                <td class="py-3 px-4 align-top">Non rientrano — spingono avanti stanchi, senza le risorse per un rifornimento comodo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PIANO 2 -->
+      <section class="bg-slate-800 border border-slate-700 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">Piano 2 — Fogne Profonde (Matriarca dei Sommersi)</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Aspetto</th>
+                <th class="text-center pb-2 px-4 font-semibold text-blue-400">Scudo Radiante</th>
+                <th class="text-center pb-2 px-4 font-semibold text-yellow-400">Sciocchi Fortunati</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Esito</td>
+                <td class="py-3 px-4 text-center align-top">Alla pari coi Guardiani — ma con un costo</td>
+                <td class="py-3 px-4 text-center align-top">🍀 Balzo enorme (pattern "a strappi")</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Come</td>
+                <td class="py-3 px-4 align-top">Esplorazione completa e metodica (verosimilmente tutti i Nodi della Trama), ma la strategia rigida di Caelum non regge la natura adattiva della Matriarca: Durak va a 0 PF, salvato da Elira.</td>
+                <td class="py-3 px-4 align-top">Whisper percepisce un "disturbo" (lo stesso che avverte Fealer) e li guida a un passaggio segreto: trovano la Riserva Sigillata, la Matriarca va bene con perdite minime.</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Dopo</td>
+                <td class="py-3 px-4 align-top">Arrivano al Pianerottolo 2 scossi ma <strong class="text-blue-300">riposano completamente</strong> prima di proseguire — disciplinati come sempre.</td>
+                <td class="py-3 px-4 align-top">Arrivano pieni di sé e <strong class="text-yellow-300">ripartono subito</strong> verso il Piano 3 senza riposare del tutto — overconfidence dopo la striscia fortunata.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PIANO 3 -->
+      <section class="bg-slate-800 border border-amber-700 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-amber-400 mb-4">Piano 3 — L'Arena della Capsula (Kethrar)</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Aspetto</th>
+                <th class="text-center pb-2 px-4 font-semibold text-blue-400">Scudo Radiante</th>
+                <th class="text-center pb-2 px-4 font-semibold text-yellow-400">Sciocchi Fortunati</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Stato</td>
+                <td class="py-3 px-4 text-center align-top">🟡 In corso, nessuna perdita</td>
+                <td class="py-3 px-4 text-center align-top">🔴 Ritirata, un membro grave</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Cosa è successo</td>
+                <td class="py-3 px-4 align-top">Entrano dopo il pieno recupero, avanzano con cautela attraverso le fasi di Kethrar. Ancora dentro quando i Guardiani li superano.</td>
+                <td class="py-3 px-4 align-top">Arrivano per primi a Kethrar, ma l'ossessione di Zax per la magia selvaggia lo rende avventato durante una transizione di fase: la trasformazione si innesca in anticipo e la squadra viene travolta. Grom si sacrifica per coprire la ritirata (ferito grave, non morto).</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium align-top">Conseguenze</td>
+                <td class="py-3 px-4 align-top">Nessuna, per ora — restano in corsa.</td>
+                <td class="py-3 px-4 align-top">Ritiro senza attivare nessun Sigillo Divino, rientro dal Velo. La notizia del fallimento gira in città (i Guardiani lo scoprono solo indirettamente: da Vex al Pianerottolo 2, o dalle voci in giro).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-slate-500 text-xs mt-4">
+          Riferimento meccanico completo del boss: <a href="/dm/ecosistema-1-piano-3" class="text-amber-400 hover:text-amber-300">Piano 3 — Kethrar</a>.
+        </p>
+      </section>
+
+      <!-- FAVORE DIVINO -->
+      <section class="bg-slate-800 border border-purple-700 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-purple-400 mb-4">✨ Favore Divino — proiezione al ritorno in città</h2>
+        <p class="text-slate-400 text-sm mb-4">
+          Numeri di riferimento per la scena "tirare le somme" a fine Ecosistema 1. Il Favore reale dei Guardiani va confermato con la
+          meccanica ufficiale di tracking a fine sessione — qui è riportato come proiezione per coerenza con la bacheca classifica.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4 font-semibold">Gilda</th>
+                <th class="text-center pb-2 px-4 font-semibold text-red-400">Tempus</th>
+                <th class="text-center pb-2 px-4 font-semibold text-yellow-400">Tymora</th>
+                <th class="text-center pb-2 px-4 font-semibold text-cyan-400">Mystra</th>
+                <th class="text-center pb-2 px-4 font-semibold text-white">Totale</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr class="bg-purple-900/10">
+                <td class="py-3 pr-4 font-bold text-purple-300">🎭 Guardiani della Trama</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center font-bold text-purple-300">560</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-bold text-blue-300">⚖️ Scudo Radiante</td>
+                <td class="py-3 px-4 text-center">220</td>
+                <td class="py-3 px-4 text-center">170</td>
+                <td class="py-3 px-4 text-center">150</td>
+                <td class="py-3 px-4 text-center font-bold text-blue-300">540</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-bold text-yellow-300">🎲 Sciocchi Fortunati</td>
+                <td class="py-3 px-4 text-center">90</td>
+                <td class="py-3 px-4 text-center">250</td>
+                <td class="py-3 px-4 text-center">140</td>
+                <td class="py-3 px-4 text-center font-bold text-yellow-300">480</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="text-slate-400 text-sm mt-4 space-y-1 list-disc list-inside">
+          <li><strong class="text-blue-300">Scudo Radiante</strong>: onore e disciplina pagano con Tempus, ma i pochi rischi presi limitano il Favore di Tymora.</li>
+          <li><strong class="text-yellow-300">Sciocchi Fortunati</strong>: la striscia fortunata al Piano 2 fa esplodere Tymora, ma la ritirata disonorevole da Kethrar quasi affossa Tempus.</li>
+        </ul>
+        <p class="text-slate-500 text-xs mt-4">
+          Ricorda: i giocatori vedono <strong>solo il totale</strong> delle gilde rivali, mai il breakdown per divinità
+          (vedi <a href="/meccaniche/favore-divino" class="text-purple-400 hover:text-purple-300">meccanica Favore Divino</a>).
+        </p>
+      </section>
+
+      <!-- NOTE DM -->
+      <InfoBox type="dm" title="Come aggiornare questa pagina">
+        <p>Questa pagina va tenuta viva sessione dopo sessione. Dopo ogni sessione in cui il party avanza:</p>
+        <ul>
+          <li>Aggiorna il box "Colpo d'occhio" con piano attuale e stato di ciascuna gilda.</li>
+          <li>Aggiungi una riga/sezione per il piano successivo appena decidi cosa è successo alle rivali (usa lo stesso schema di opzioni A/B/C già visto in <a href="/dm/sessioni/sessione-8">Sessione 8</a>).</li>
+          <li>Aggiorna la tabella del Favore Divino quando confermi i numeri reali dei Guardiani a fine Ecosistema 1.</li>
+          <li>Quando l'Ecosistema 1 si chiude per tutti, congela questa pagina come storico e apri la sezione equivalente per l'Ecosistema 2.</li>
+        </ul>
+      </InfoBox>
+
+      <!-- Navigazione fondo pagina -->
+      <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+        <a href="/dm" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">← Dashboard DM</a>
+        <a href="/gilde/overview" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">Overview Gilde →</a>
+      </div>
+
+    </div>
+  </DMAuthGuard>
+</MainLayout>

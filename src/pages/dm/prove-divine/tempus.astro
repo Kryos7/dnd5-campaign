@@ -336,8 +336,11 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <p class="text-sm font-bold text-purple-400 mb-2">📍 Meccanica</p>
         <p class="text-sm text-gray-300">
           Tutte e 3 le unità in campo per entrambi i lati. I PG dichiarano <strong>disposizione + ordine</strong> con
-          pedina-unità + pedina numerata per ciascuna. Vittoria = assegnazione corretta (Fanteria-passo, Arcieri-collina,
-          Cavalleria-fianco) <strong>E</strong> numero della Cavalleria più alto (ultima ad attivarsi) di quello del Generale.
+          pedina-unità + pedina numerata per ciascuna. Le posizioni giuste dei PG non rispecchiano quelle del Generale:
+          <strong>ruotano il triangolo</strong> di Manche 1 (Fanteria batte Cavalleria, Cavalleria batte Arcieri, Arcieri
+          battono Fanteria) di una casella, così ogni unità PG affronta il tipo che batte per natura, non lo stesso tipo
+          del Generale. Vittoria = assegnazione ruotata corretta <strong>E</strong> tempistica giusta per ciascuna unità
+          (vedi sotto) — copiare lo schieramento del Generale è parità, e a parità vince sempre lui.
         </p>
       </div>
 
@@ -366,19 +369,21 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           </ul>
         </div>
         <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
-          <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta corretta dei PG</p>
+          <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta corretta dei PG (triangolo ruotato)</p>
           <ul class="text-sm text-gray-300 space-y-1">
-            <li>• <strong>Fanteria → Passo</strong> (fissa il nemico)</li>
-            <li>• <strong>Arcieri → Collina</strong> (fuoco di supporto)</li>
-            <li>• <strong>Cavalleria → Fianco</strong>, ma con <strong>numero più alto</strong> (carica per ultima, quando il Generale si è già scoperto)</li>
+            <li>• <strong>Cavalleria → Collina</strong>, pedina 1 (raggiunge gli Arcieri del Generale — pedina 3 — prima che possano sfruttare l'altura e tirare)</li>
+            <li>• <strong>Fanteria → Fianco</strong>, pedina 2 (scudi e lance già pronti quando la Cavalleria del Generale — pedina 1 — si getta nella carica)</li>
+            <li>• <strong>Arcieri → Passo</strong>, pedina 3 (aspettano che la Fanteria del Generale — pedina 2 — sia incanalata nella strettoia, poi tirano a bersaglio fermo)</li>
           </ul>
         </div>
       </div>
 
       <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-4 mb-6 text-xs text-amber-200">
-        <strong class="text-amber-400">Il vero test:</strong> non serve indovinare posizioni diverse dal Generale — le posizioni giuste sono le stesse per
-        chiunque legga bene il terreno. Vince chi dimostra più disciplina di lui: aspettare che la sua carica anticipata si esaurisca,
-        prima di sferrare la propria. Se i PG caricano anche loro presto (Cavalleria con numero 1 o 2), è uno scontro alla pari — valoroso ma non magistrale.
+        <strong class="text-amber-400">Il vero test:</strong> le posizioni giuste dei PG sono l'opposto di uno specchio — è il triangolo
+        di Manche 1 applicato testa a testa su ogni casella. Ma il triangolo da solo non basta: ogni vantaggio ha una finestra di tempo
+        per essere sfruttato — l'altura serve solo se c'è tempo di tirare, la strettoia intrappola solo chi ci è già dentro, la carica
+        travolge solo chi non è ancora pronto a riceverla. La pedina numerata decide se quella finestra si apre o si chiude prima.
+        Se i PG copiano lo schieramento del Generale (stessa unità sulla stessa casella), è parità — e a parità vince sempre lui.
       </div>
 
       <div class="space-y-4">
@@ -398,12 +403,12 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           </div>
         </div>
         <div>
-          <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se i PG vincono con disciplina (Cavalleria per ultima)</p>
+          <p class="text-xs font-bold text-green-400 uppercase mb-2">📢 Se i PG indovinano lo schieramento (triangolo ruotato + tempistica giusta)</p>
           <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r">
-            <p class="text-gray-400 text-sm not-italic">Il Generale rimane immobile un lungo momento, gli occhi fissi sul tavolo.</p>
-            <p class="italic text-green-100 text-sm leading-relaxed mt-2">"...Avete aspettato." Non è una domanda. "Avete guardato la mia carica esaurirsi. E POI avete colpito."</p>
+            <p class="text-gray-400 text-sm not-italic">Il Generale rimane immobile un lungo momento, gli occhi fissi sul tavolo — la sua Cavalleria si è infranta contro un muro di scudi che l'aspettava già pronto, i suoi Arcieri sono stati travolti prima di poter scoccare una freccia, la sua Fanteria si è ritrovata bersagliata a bersaglio fermo nella strettoia.</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-2">"...Non avete copiato il mio schieramento." Non è una domanda. "Lo avete capovolto — e avete atteso ciascuno dei miei pezzi nel momento in cui era più debole, non più forte."</p>
             <p class="text-gray-400 text-sm not-italic mt-2">Si raddrizza lentamente, un gesto quasi cerimoniale.</p>
-            <p class="italic text-green-100 text-sm leading-relaxed mt-1">"Questo, avventurieri, è quello che io non ho mai imparato del tutto in tremila anni di battaglie di sabbia. Il dominio del campo non è la spada più veloce. È la pazienza di chi sa aspettare il momento giusto per usarla."</p>
+            <p class="italic text-green-100 text-sm leading-relaxed mt-1">"Questo, avventurieri, è quello che io non ho mai imparato del tutto in tremila anni di battaglie di sabbia. Il dominio del campo non è la spada più veloce. È la pazienza di chi sa aspettare il momento giusto per usarla — su ogni fronte, non solo su uno."</p>
           </div>
         </div>
       </div>
