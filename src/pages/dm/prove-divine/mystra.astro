@@ -56,74 +56,90 @@ const turni = [
   {
     numero: 1,
     fase: "Fase I — Fondamentali",
-    fenomeno: "Un Muro di Forza dell'Arcimago si materializza tra il Campione e il centro della sala, sbarrando l'unico passaggio.",
+    fenomeno: "Le mani dell'Arcimago tracciano un rettangolo netto nell'aria. Una lastra trasparente inizia a condensarsi tra il Campione e il centro della sala — il tempo si ferma a metà della sua formazione: non ancora del tutto solida, ma già abbastanza densa da promettere di sbarrare il passo.",
     ideale: "Disintegrare",
     idealeNota: "RAW, solo Disintegrare distrugge un Muro di Forza.",
     valida: null,
-    validaNota: "Nessuna alternativa: le altre 7 magie non si applicano affatto a un Muro di Forza. Turno a risposta secca — 2 punti o 0."
+    validaNota: "Nessuna alternativa: le altre 7 magie non si applicano affatto a un Muro di Forza. Turno a risposta secca — 2 punti o 0.",
+    reazioneIdeale: "Il muro cade in polvere. Le dita dell'Arcimago, ancora tese dal gesto, si rilassano una a una. Non un solo suono — ma le venature sulle sue mani si accendono per un istante, un lampo dorato che scompare subito.",
+    reazioneErrata: "Il muro resta. L'Arcimago non muove un muscolo — letteralmente: resta immobile più a lungo del necessario, come chi conta mentalmente fino a un numero che non vi dirà mai."
   },
   {
     numero: 2,
     fase: "Fase I — Fondamentali",
-    fenomeno: "L'Arcimago scaglia un singolo colpo magico diretto e onesto contro il Campione — nessun trucco, nessuna finta.",
+    fenomeno: "Le mani dell'Arcimago si stringono in un gesto secco. Un dardo di luce bianca scatta dritto verso il Campione — il tempo si ferma a metà strada: abbastanza vicino da capirne la traiettoria, abbastanza lontano da lasciare il tempo di rispondere.",
     ideale: "Scudo",
     idealeNota: "La risposta più pulita a una minaccia diretta e onesta.",
     valida: "Spell Turning",
-    validaNota: "Rimanda comunque il colpo, ma è uno strumento di 7° livello sprecato per un attacco così semplice."
+    validaNota: "Rimanda comunque il colpo, ma è uno strumento di 7° livello sprecato per un attacco così semplice.",
+    reazioneIdeale: "Il colpo si infrange senza rumore. Le linee del non-volto si incurvano appena verso l'alto. \"Pulito.\" La parola esce lenta, quasi assaporata — il segno, per lui, di un vero complimento.",
+    reazioneValida: "Il colpo torna indietro, sprecato. L'Arcimago inclina il capo di pochi gradi, un gesto che in un volto vero sarebbe un sopracciglio alzato. Non dice nulla — e il silenzio si allunga un secondo più del normale."
   },
   {
     numero: 3,
     fase: "Fase II — Inganni",
-    fenomeno: "L'Arcimago si moltiplica in una nebbia di doppioni illusori identici. Solo uno è reale.",
+    fenomeno: "Le dita dell'Arcimago si aprono a ventaglio, e la sua sagoma si moltiplica all'istante in una dozzina di riflessi identici, disposti in cerchio. Il movimento si blocca appena completato — sagome immobili, indistinguibili, in attesa. Solo una è reale.",
     ideale: "Vista Vera",
     idealeNota: "Rivela immediatamente quale sia reale.",
     valida: null,
-    validaNota: "Nessuna alternativa pulita: le altre magie non permettono di distinguere il vero dal falso in questo modo diretto."
+    validaNota: "Nessuna alternativa pulita: le altre magie non permettono di distinguere il vero dal falso in questo modo diretto.",
+    reazioneIdeale: "Le sagome false si dissolvono, tranne una. Per un istante le linee di luce sul suo non-volto si sdoppiano anch'esse — un piccolo eco visivo, quasi uno scherzo interno. \"Non tutti ci riescono al primo sguardo,\" dice, e la voce ha un'ombra di calore.",
+    reazioneErrata: "Colpiscono la sagoma sbagliata. Tutte le illusioni rimaste sembrano fremere all'unisono — un fruscio secco, come carta smossa dal vento. L'Arcimago resta fermo, le mani intrecciate dietro la schiena. Aspetta."
   },
   {
     numero: 4,
     fase: "Fase II — Inganni",
-    fenomeno: "Un fascio di energia arcana, lanciato con chiaro intento, vola dritto verso il Campione.",
+    fenomeno: "Un gesto ampio, quasi teatrale. Un fascio di energia colorata scatta dal palmo dell'Arcimago dritto verso il Campione — il tempo si congela a metà tragitto, la scia ancora ben visibile alle sue spalle.",
     ideale: "Spell Turning",
     idealeNota: "Rimanda l'energia alla fonte, silenzioso e definitivo.",
     valida: "Scudo",
-    validaNota: "Blocca il colpo, funziona, ma non lo rimanda indietro — non punisce, non insegna nulla all'Arcimago."
+    validaNota: "Blocca il colpo, funziona, ma non lo rimanda indietro — non punisce, non insegna nulla all'Arcimago.",
+    reazioneIdeale: "Il fascio torna al mittente. Per una frazione di secondo le linee del suo non-volto si scompongono e si riformano di scatto, come inchiostro versato in acqua — l'equivalente più vicino a uno sussulto che possa permettersi.",
+    reazioneValida: "Il colpo si ferma, bloccato. L'Arcimago annuisce una sola volta, un movimento netto e breve del capo. Nessuna parola: solo le venature che si accendono a metà intensità, un'approvazione tiepida."
   },
   {
     numero: 5,
     fase: "Fase III — Sottigliezza",
-    fenomeno: "Un costrutto ostile, intrecciato di pura Trama, si anima e attacca. È alimentato in tempo reale da un incantesimo attivo dell'Arcimago.",
+    fenomeno: "Un gesto circolare, e i fili di Trama sparsi nella sala si raccolgono in un costrutto ostile vagamente umanoide. Si volta verso il Campione e alza un arto per colpire — il tempo si ferma proprio lì, a metà del movimento, il filo che lo alimenta ancora visibile e pulsante fino all'Arcimago.",
     ideale: "Dissolvi Magie",
     idealeNota: "Scioglie il legame che lo alimenta: il costrutto crolla e non si riforma.",
     valida: "Disintegrare",
-    validaNota: "Lo riduce in polvere, ma il legame magico resta intatto — si rianima poco dopo. Rimedio temporaneo."
+    validaNota: "Lo riduce in polvere, ma il legame magico resta intatto — si rianima poco dopo. Rimedio temporaneo.",
+    reazioneIdeale: "Il legame si scioglie, il costrutto crolla per non rialzarsi. Le dita dell'Arcimago, che fino a un istante prima erano tese nel tenere vivo l'incantesimo, si aprono lentamente, quasi a lasciar andare qualcosa. \"Bene,\" dice, quasi tra sé.",
+    reazioneValida: "Il costrutto si rialza poco dopo. Un angolo delle linee del suo non-volto si piega — non un sorriso, qualcosa di più vicino a un'alzata di spalle disegnata di luce. Se lo aspettava."
   },
   {
     numero: 6,
     fase: "Fase III — Sottigliezza",
-    fenomeno: "Una macchia di magia corrotta e instabile si diffonde su un piccolo altare in miniatura al centro della sala, come una malattia arcana.",
+    fenomeno: "Un gesto lento, quasi controvoglia. Una macchia scura e instabile cola dalle dita dell'Arcimago verso il piccolo altare in miniatura al centro della sala — si ferma a metà della sua diffusione, un confine netto tra la pietra ancora pulita e quella già corrotta.",
     ideale: "Rimuovi Maledizione",
     idealeNota: "Guarisce la fonte: la corruzione non ritorna.",
     valida: "Dissolvi Magie",
-    validaNota: "Rimuove l'effetto attivo in quel momento, ma non cura la causa — la corruzione può tornare a diffondersi."
+    validaNota: "Rimuove l'effetto attivo in quel momento, ma non cura la causa — la corruzione può tornare a diffondersi.",
+    reazioneIdeale: "La macchia si ritira e non torna. Le linee del non-volto restano ferme più a lungo del solito, quasi in una forma di quiete che assomiglia a sollievo — un'emozione strana, su qualcosa che ancora non ha un volto per portarla davvero.",
+    reazioneValida: "La macchia scompare, per ora. L'Arcimago tiene lo sguardo — o quello che ne fa le veci — sull'altare un secondo di troppo. Le venature si affievoliscono lentamente, come chi sa già cosa succederà dopo."
   },
   {
     numero: 7,
     fase: "Fase IV — Il vero giudizio",
-    fenomeno: "Uno spirito arcano innocuo e spaventato, generato per errore dall'esperimento dell'Arcimago, tenta di fuggire portando con sé un frammento di conoscenza che Mystra vuole preservare.",
+    fenomeno: "Un piccolo spirito arcano innocuo e tremante, generato per errore dall'esperimento dell'Arcimago, scatta verso l'unica fessura di luce rimasta nella sala, portando con sé un frammento di conoscenza che Mystra vuole preservare. Il tempo si ferma a metà della sua fuga — abbastanza vicino da vedere cosa porta con sé, abbastanza lontano da capire che sta per sparire per sempre.",
     ideale: "Immobilizzare Mostri",
     idealeNota: "Lo cattura senza fargli del male, preservando ciò che sa.",
     valida: null,
-    validaNota: "Nessuna alternativa: Disintegrare vale esplicitamente 0 punti, non 1 — distruggerebbe anche la conoscenza che lo spirito porta con sé. Coerente con dei.json: Mystra odia la distruzione di conoscenza."
+    validaNota: "Nessuna alternativa: Disintegrare vale esplicitamente 0 punti, non 1 — distruggerebbe anche la conoscenza che lo spirito porta con sé. Coerente con dei.json: Mystra odia la distruzione di conoscenza.",
+    reazioneIdeale: "Lo spirito si ferma, intatto. Per la prima volta in tutta la prova la voce dell'Arcimago trema — appena, ma trema. Le sue mani, di solito così ferme, si stringono una nell'altra. \"Questo,\" dice, \"conta più di tutto il resto.\"",
+    reazioneErrata: "Il frammento di conoscenza si perde per sempre in polvere (specialmente se scelto Disintegrare). Le venature dell'Arcimago si spengono quasi del tutto — un buio che dura solo un istante, ma che si nota. Quando riparla, la voce arriva da più lontano, più fredda. \"Quello non si poteva riavere.\""
   },
   {
     numero: 8,
     fase: "Fase IV — Il vero giudizio",
-    fenomeno: "L'Arcimago libera un nucleo di energia arcana grezza e instabile al centro della sala: cresce, e detonerà se colpito con forza o disperso con violenza.",
+    fenomeno: "Le mani dell'Arcimago si aprono, e un nucleo di energia arcana grezza prende forma al centro della sala, crescendo rapidamente. Il tempo si ferma un istante prima del punto critico — ancora contenibile, ma già abbastanza carico da detonare se colpito con forza o disperso con violenza.",
     ideale: "Assorbi Elementi",
     idealeNota: "La neutralizza assorbendola in sicurezza — l'unica risposta che non rischia di farla esplodere, e trasforma il pericolo in una risorsa per il colpo successivo.",
     valida: "Scudo",
-    validaNota: "Riduce il danno della detonazione, ma non la previene né la trasforma in risorsa."
+    validaNota: "Riduce il danno della detonazione, ma non la previene né la trasforma in risorsa.",
+    reazioneIdeale: "L'energia viene assorbita, trasformata in risorsa. Le linee del non-volto si incurvano completamente verso l'alto e restano così — il primo sorriso pieno di tutta la prova. Le venature lungo tutto il suo corpo si accendono in un lampo dorato, e per un istante anche i filamenti sulle pareti pulsano tutti insieme, come un applauso silenzioso. \"Questa,\" dice, quasi con calore, \"era la vera domanda.\"",
+    reazioneValida: "Il danno si attenua, ma l'energia si disperde comunque. L'Arcimago annuisce lentamente, le mani ancora incrociate. \"Sopravvivere non è la stessa cosa che capire.\""
   }
 ];
 ---
@@ -189,7 +205,7 @@ const turni = [
         </li>
         <li class="flex items-start gap-2">
           <span class="text-amber-400 mt-0.5">□</span>
-          <span><strong>Tono e personalità dell'Arcimago Illusorio</strong>: 📝 <em>da definire</em>. Per questa versione della pagina, la sua caratterizzazione narrativa (voce, battute, reazioni) non è ancora scritta — usa un tono neutro, analitico e pacato coerente con Mystra (calma, contemplativa, non giudica la moralità ma solo l'uso della magia — vedi <code>dei.json</code>) finché non viene definita una voce più specifica.</span>
+          <span><strong>Tono e personalità dell'Arcimago Illusorio</strong>: saggio, fiero, misterioso — voce e battute definite in Parte I (apertura), Parte IV (reazione per ogni turno) e Parte VI (giudizio finale).</span>
         </li>
       </ul>
     </div>
@@ -220,12 +236,35 @@ const turni = [
         </p>
       </div>
 
+      <div class="bg-black/50 border-l-4 border-purple-500 p-6 my-4 rounded-r">
+        <p class="text-xs font-bold text-purple-400 uppercase tracking-widest mb-3">🎭 L'Arcimago prende la parola</p>
+        <p class="text-sm text-gray-400 italic mb-3">
+          L'Arcimago Illusorio inclina il capo, come se ascoltasse qualcosa che voi non potete sentire. Quando parla, la
+          voce non viene dalla sua bocca ancora indefinita, ma da ogni filamento blu-argento sulle pareti insieme.
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed">
+          "Otto modi di toccare la Trama. Otto errori possibili, per ognuno." Una pausa che dura più del necessario, come
+          chi è abituato a essere ascoltato senza fretta. "Non vi chiederò di vincere. Vi chiederò di capire. Sono due
+          cose diverse, e solo una delle due mi interessa davvero."
+        </p>
+      </div>
+
       <div class="bg-gray-800/60 rounded p-4 mt-4">
-        <p class="text-sm font-bold text-purple-400 mb-3">📝 Nota DM</p>
-        <p class="text-gray-300 text-sm">
-          L'aspetto e la voce dell'Arcimago Illusorio non sono ancora stati definiti nel dettaglio — questa descrizione
-          resta volutamente vaga ("il volto ancora indistinto") in attesa di una caratterizzazione più specifica. Il resto
-          della prova (Parti II–VI) è invece meccanicamente completo e utilizzabile da subito.
+        <p class="text-sm font-bold text-purple-400 mb-3">📝 Nota DM — Vocabolario espressivo dell'Arcimago</p>
+        <p class="text-gray-300 text-sm mb-2">
+          L'Arcimago non ha un volto vero: un intreccio di linee di luce che si comporta come un volto senza esserlo.
+          Usa questi elementi anche a braccio, oltre alle reazioni scritte in Parte IV e VI:
+        </p>
+        <ul class="text-gray-300 text-sm space-y-1.5 list-disc list-inside">
+          <li><strong>Il non-volto:</strong> compiaciuto → le linee si incurvano verso l'alto e restano ferme un istante di troppo, come un sorriso trattenuto apposta. Deluso → le linee si irrigidiscono, immobili e taglienti per un paio di secondi — più inquietante di qualsiasi smorfia vera.</li>
+          <li><strong>Le venature</strong> (come quelle di Vex, ma più grandi, lungo braccia e mani): si accendono più intense quando è sorpreso o approva con decisione; si affievoliscono quasi a sparire quando è deluso o rattristato.</li>
+          <li><strong>Le mani:</strong> gesticolano con precisione chirurgica solo nell'atto di lanciare l'incantesimo; nel resto del tempo restano quasi sempre ferme. Il primo segno di un'emozione forte è spesso lì — dita che si stringono, un dito che si alza a metà gesto e poi si ferma.</li>
+          <li><strong>La voce:</strong> arriva da ogni filo di luce della sala insieme, leggermente sfasata. Calmo → lenta, misurata. Sorpreso → si sovrappone a se stessa per una frazione di secondo. Fiero → rallenta ancora, quasi ad assaporare la parola.</li>
+          <li><strong>La sala stessa</strong> reagisce con lui: i filamenti blu-argento pulsano più veloci quando approva, rallentano quasi a spegnersi quando è deluso.</li>
+        </ul>
+        <p class="text-gray-400 text-xs mt-3">
+          Coerente con la personalità di Mystra (calma, contemplativa, non giudica la moralità ma solo l'uso della magia
+          — vedi <code>dei.json</code>), ma con più fierezza e mistero: l'Arcimago è un suo riflesso, non lei in persona.
         </p>
       </div>
     </div>
@@ -336,16 +375,25 @@ const turni = [
               <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
                 <p class="text-sm font-bold text-green-400 mb-2">✓ Risposta ideale — 2 punti</p>
                 <p class="text-sm text-gray-300 mb-1"><strong>{turno.ideale}</strong></p>
-                <p class="text-xs text-gray-400">{turno.idealeNota}</p>
+                <p class="text-xs text-gray-400 mb-3">{turno.idealeNota}</p>
+                <p class="text-xs text-gray-500 italic border-t border-green-800/40 pt-2">🎭 {turno.reazioneIdeale}</p>
               </div>
               <div class={turno.valida ? "bg-amber-900/20 border border-amber-700/40 rounded-lg p-4" : "bg-gray-800/40 border border-gray-600 rounded-lg p-4"}>
                 <p class={turno.valida ? "text-sm font-bold text-amber-400 mb-2" : "text-sm font-bold text-gray-400 mb-2"}>
                   {turno.valida ? "△ Risposta valida — 1 punto" : "— Nessuna alternativa — risposta secca"}
                 </p>
                 {turno.valida && <p class="text-sm text-gray-300 mb-1"><strong>{turno.valida}</strong></p>}
-                <p class="text-xs text-gray-400">{turno.validaNota}</p>
+                <p class="text-xs text-gray-400 mb-3">{turno.validaNota}</p>
+                {turno.reazioneValida && <p class="text-xs text-gray-500 italic border-t border-amber-800/40 pt-2">🎭 {turno.reazioneValida}</p>}
               </div>
             </div>
+
+            {turno.reazioneErrata && (
+              <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mt-4">
+                <p class="text-sm font-bold text-gray-400 mb-2">✗ Risposta errata (0 punti)</p>
+                <p class="text-xs text-gray-500 italic">🎭 {turno.reazioneErrata}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -386,10 +434,54 @@ const turni = [
       </div>
     </div>
 
-    <!-- ==================== PARTE VI: RICOMPENSE ==================== -->
+    <!-- ==================== PARTE VI: IL GIUDIZIO DELL'ARCIMAGO ==================== -->
+    <div class="bg-violet-900/20 border border-violet-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-violet-400">🎭</span> PARTE VI: IL GIUDIZIO DELL'ARCIMAGO
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere subito dopo l'ottavo turno, prima di tornare al portale. Scegliere il blocco corrispondente al punteggio totale.</p>
+
+      <div class="space-y-5">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-green-300">13–16 — Eccellente</p>
+          </div>
+          <p class="italic text-green-100 text-sm leading-relaxed">
+            Le rune si spengono una a una. Le linee del non-volto, per la prima volta, restano ferme in una forma quasi
+            completa — non ancora un volto, ma qualcosa che gli assomiglia più che mai. "La Trama ricorderà questo. E io,
+            con lei." Con queste parole, china il capo — un vero inchino, breve ma inequivocabile.
+          </p>
+        </div>
+
+        <div class="bg-amber-900/20 border border-amber-700/40 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-amber-300">7–12 — Buono / solido</p>
+          </div>
+          <p class="italic text-amber-100 text-sm leading-relaxed">
+            Le rune si spengono senza fretta. L'Arcimago resta con le mani lungo i fianchi, le venature a intensità
+            costante — né acceso né spento. "C'è virtù, in questo — meno di quanta ce ne sia nella vera comprensione, ma
+            non meno di quanta ne serva per andare avanti."
+          </p>
+        </div>
+
+        <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-5">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <p class="font-bold text-gray-300">0–6 — Insufficiente</p>
+          </div>
+          <p class="italic text-gray-300 text-sm leading-relaxed">
+            Le venature si affievoliscono fino quasi a sparire, ma non del tutto — non è rabbia, solo pazienza. La sua
+            sagoma comincia a dissolversi in luce sulle pareti mentre parla, la voce sempre più distante. "Tornate,
+            quando avrete altre domande da farvi."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: RICOMPENSE ==================== -->
     <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-8 mb-8">
       <h2 class="text-3xl font-bold mb-6 text-center">
-        <span class="text-green-400">🎁</span> PARTE VI: RICOMPENSE
+        <span class="text-green-400">🎁</span> PARTE VII: RICOMPENSE
       </h2>
 
       <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
@@ -444,10 +536,10 @@ const turni = [
       </div>
     </div>
 
-    <!-- ==================== PARTE VII: L'USCITA E VEX ==================== -->
+    <!-- ==================== PARTE VIII: L'USCITA E VEX ==================== -->
     <div class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
       <h2 class="text-3xl font-bold mb-6 text-center">
-        <span class="text-indigo-400">👤</span> PARTE VII: L'USCITA E VEX
+        <span class="text-indigo-400">👤</span> PARTE VIII: L'USCITA E VEX
       </h2>
 
       <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando riattraversano il portale e tornano sul Pianerottolo.</p>
@@ -486,7 +578,7 @@ const turni = [
         </li>
         <li class="flex items-start gap-2">
           <span class="text-purple-400 mt-0.5">→</span>
-          <span><strong class="text-purple-400">Parti ancora da definire:</strong> caratterizzazione narrativa dell'Arcimago Illusorio (voce, tono, reazioni turno per turno). La struttura meccanica (magie, turni, punteggio, ricompense) è completa e finalizzata.</span>
+          <span><strong class="text-purple-400">Stato della prova:</strong> struttura meccanica e caratterizzazione narrativa dell'Arcimago Illusorio (voce, tono, reazioni turno per turno, giudizio finale) sono entrambe complete e finalizzate.</span>
         </li>
       </ul>
     </div>

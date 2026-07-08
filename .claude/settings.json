@@ -21,10 +21,12 @@
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/mummia-assistente.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/pseudopodo-minore.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
       "Bash(node -e ' *)",
-      "Bash(node \"C:\\\\Users\\\\Lorenzo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--dev-dnd5-campaign-visual-app\\\\a16a9a57-5785-4e2a-a4b3-9d97b9c87fb2\\\\scratchpad\\\\checktags.js\")"
+      "Bash(node \"C:\\\\Users\\\\Lorenzo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--dev-dnd5-campaign-visual-app\\\\a16a9a57-5785-4e2a-a4b3-9d97b9c87fb2\\\\scratchpad\\\\checktags.js\")",
+      "Bash(rm -rf /tmp/astro-build-check)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\Lorenzo\\.claude"
+      "C:\\Users\\Lorenzo\\.claude",
+      "\\tmp"
     ]
   }
 }
