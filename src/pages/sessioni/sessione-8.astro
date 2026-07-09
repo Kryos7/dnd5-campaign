@@ -1,0 +1,591 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 8 - Il Secondo Pianerottolo"
+  description="Ottava sessione: la ricompensa della lettera sigillata, i segreti della Pietra Misteriosa, il mercato di Vex, il Duello dell'Arcano nella Prova di Mystra e l'inizio della Prova di Tempus"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">08</span>
+        <h1 class="text-4xl font-bold">Il Secondo Pianerottolo</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 TBD</span>
+        <span>⏱️ ~2h30</span>
+        <span>🎭 Ricompense, Duello Arcano e Strategia</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Nessun combattimento, questa volta. Il gruppo sceglie la ricompensa della lettera sigillata,
+        scopre da Vex il vero ruolo della Pietra Misteriosa, fa acquisti al mercato — e poi affronta
+        la Prova di Mystra: un duello magico contro un Arcimago illusorio, giocato di puro ragionamento
+        arcano. La Prova di Tempus si apre subito dopo, ma il tempo reale finisce prima che la squadra
+        possa concluderla.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">Scelta della ricompensa di Vex, riposo lungo, mercato, Prova di Mystra (completata), Prova di Tempus (iniziata)</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Oggetti Ottenuti</p>
+          <p class="text-gray-300">Frammento di Grazia Primaria (a Riven), Siero di Stabilizzazione Arcana, pozioni di guarigione, arco di Thalio riparato</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Prove Divine</p>
+          <p class="text-gray-300">Mystra: superata con 14/16 (Eccellente) — Dono della Tessitrice. Tempus: iniziata, da continuare</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🎁</span> PARTE I: LA SCELTA DELLA RICOMPENSA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">I.</span> Sfide o Piano 3?
+          </h3>
+          <p class="leading-relaxed">
+            Il gruppo discute a lungo se affrontare subito le Prove Divine sbloccate su questo Pianerottolo o
+            scendere direttamente al Piano 3. <strong class="text-green-400">Riven</strong> nota che l'ecosistema
+            sembra legato all'acqua fin qui, e propone di cercare tra gli oggetti di Vex qualcosa che possa
+            tornare utile anche sotto. <strong class="text-purple-400">Fealer</strong> è per riposare e studiare
+            con calma invece di rincorrere le altre gilde, rischiando la vita per un vantaggio che non ritiene
+            così importante.
+          </p>
+          <p class="leading-relaxed">
+            Chiesto conferma a <strong class="text-gray-300">Vex</strong>, la risposta è netta: le prove sono
+            esclusive di questo piano, sbloccate dalle imprese al Piano 2 — se non le affrontano ora, saranno
+            perse per sempre. Questo chiude la discussione: <strong class="text-orange-400">Thalio</strong>,
+            pur rammaricato che non ci sia una prova dedicata alla sua divinità, accetta di affrontare le altre.
+            <strong class="text-green-400">Riven</strong> fa notare che completarle potrebbe anche guadagnare il
+            favore delle divinità per il Piano 3 — <strong class="text-red-400">Morgrim</strong> concorda, purché
+            il gruppo sia unanime.
+          </p>
+          <p class="leading-relaxed">
+            Vex conferma anche lo stato delle altre gilde: la squadra che non è scesa subito al Piano 3 ha
+            sbloccato gli stessi portali di sfida del gruppo e sta riposando; l'altra, quella già scesa, non ne
+            ha sbloccato nessuno.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">II.</span> La Cicatrice, di Nuovo
+          </h3>
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> chiede a Vex se sappia qualcosa delle venature dorate
+            che continuano a diramarsi dalla sua cicatrice — ormai arrivate quasi alla spalla — e se rappresentino
+            un pericolo. Si scopre la spalla per mostrargliela.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-5 my-4 rounded-r">
+            <p class="italic text-red-100 leading-relaxed">
+              Vex scende dal suo sgabello e gli gira il braccio tra le mani, osservando ogni angolatura della
+              cicatrice. "L'acqua ambrata sembra aver dissolto la trasformazione. Ma non avrebbe dovuto farlo —
+              il suo compito è sospendere magia attiva, non riassorbire un'alterazione della struttura. Una
+              trasformazione da magia selvaggia non è magia attiva: è diventata parte di te." Le venature dorate
+              pulsano più forte. "Quindi non è stata l'acqua a dissolvere niente. Sei stato tu." Una pausa. "Questo
+              significa che stai imparando a fare cose che il mandato non ti ha dato. Non so se questo è buono."
+            </p>
+            <p class="italic text-red-100 leading-relaxed mt-3">
+              Pressato oltre, ammette: "Quello che vedo non corrisponde a nulla nei miei riferimenti. Vorrei
+              poterti dire di più. Non è la stessa cosa che sapere."
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">III.</span> Quattro Oggetti, uno Solo
+          </h3>
+          <p class="leading-relaxed">
+            Vex tira fuori il bauletto promesso in cambio della lettera sigillata: un <strong>Sigillo di
+            Passaggio</strong> (sospende un effetto ambientale del dungeon in un'area di 6 metri per un minuto),
+            la <strong>Tavoletta dell'Ultimo Accordo</strong> (annulla la morte di un alleato a 0 PF, lasciandolo a
+            1), il <strong>Frammento di Grazia Primaria</strong> (azione bonus, 9 metri di raggio: 3d6 PF recuperati
+            e rimozione di una condizione a scelta per tutto il gruppo) e la <strong>Sfera dell'Intervallo</strong>
+            (zona di 3 metri attraversabile solo dal party, per 3 round).
+          </p>
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> guida la discussione: il gruppo è ancora poco
+            organizzato in combattimento e rischierebbe di sprecare la Sfera o le tavolette; il cristallo, invece,
+            è utile in ogni situazione. Dopo un breve giro di pareri il gruppo converge sul
+            <strong>Frammento di Grazia Primaria</strong>. <strong class="text-yellow-400">Valoris</strong>,
+            già ricco di incantesimi di cura come guaritore del party, suggerisce di affidarlo a chi sta più
+            nelle retrovie — così l'oggetto finisce nelle mani di <strong class="text-green-400">Riven</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🔮</span> PARTE II: IL RIPOSO E I SEGRETI DELLA PIETRA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">I.</span> Cosa Serviva Davvero la Pietra
+          </h3>
+          <p class="leading-relaxed">
+            Mentre gli altri dormono, <strong class="text-purple-400">Fealer</strong> rimane sveglio a catalogare
+            le proprie annotazioni, tra cui la Pietra Misteriosa con i cinque Nodi della Trama raccolti. Vex,
+            incuriosito, si avvicina e rivela finalmente a cosa serviva davvero: era uno dei requisiti per
+            aprire il portale di Mystra su questo Pianerottolo.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-400 p-5 my-4 rounded-r">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Vex aggiunge che al Piano 1 esisteva una prova identica — la raccolta dei tomi di Mystra — che il
+              gruppo non è riuscito a completare. È il motivo per cui nessun portale delle prove si era aperto
+              al primo Pianerottolo.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Nota anche, quasi di passaggio, che un'altra squadra ha avuto la stessa cura nell'annotare i dettagli
+            della propria pietra — e ricorda al gruppo un dettaglio dimenticato: la fontana al centro di questo
+            Pianerottolo scorre con un'acqua ora visibilmente ambrata.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">II.</span> Una Richiesta Rifiutata
+          </h3>
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> chiede a Vex se sia disposto a infondere una delle
+            sue magie nel proprio anello. Vex rifiuta, gentile ma fermo: <em>"Non mi permetterei mai."</em>
+            Nel frattempo, durante il riposo, si avvicina anche a <strong class="text-green-400">Riven</strong>
+            (continuando a studiare la cicatrice) e a <strong class="text-yellow-400">Valoris</strong>, che lo
+            sorprende fermarsi pensieroso davanti al simbolo di Tymora prima di allontanarsi senza dire nulla.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-green-900/20 border border-green-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">💰</span> PARTE III: IL MERCATO DI VEX
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-green-400">I.</span> Nuova Mercanzia
+          </h3>
+          <p class="leading-relaxed">
+            Oltre agli oggetti standard già noti (pozioni di guarigione in varie gradazioni, antidoti, bende
+            sterili, pillole della chiarezza), Vex mostra una serie di fiale e unguenti mai visti prima:
+            concentrato di ghiaccio, unguento ignifero, fiala tonante, antitossina rinforzata, unguento isolante,
+            proiettile radiante, pergamena di passo velato e un sacchetto di sale delle profondità.
+          </p>
+          <div class="bg-black/40 border-l-4 border-blue-500 p-5 my-4 rounded-r">
+            <p class="italic text-blue-100 leading-relaxed">
+              Guardando dritto <strong class="text-green-400">Riven</strong>, tira fuori un siero azzurro brillante
+              — il <strong>Siero di Stabilizzazione Arcana</strong>. Lo ha formulato lui stesso, osservando cosa
+              succede quando la magia selvaggia interagisce con l'instabilità arcana — proprio guardando la sua
+              cicatrice. Non garantisce funzioni al cento per cento, non l'ha mai testato in combattimento vero.
+              Ma i suoi calcoli, dice, "sono sempre stati la parte di me che ha funzionato meglio."
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Il gruppo scopre inoltre che la Pietra Misteriosa non è più recuperabile: è stata consumata per
+            soddisfare il requisito del portale di Mystra, e Vex non ha nulla da offrire in cambio per un
+            oggetto che, di fatto, non esiste già più.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-green-400">II.</span> Acquisti e Conti
+          </h3>
+          <p class="leading-relaxed">
+            Dopo un lungo giro di conversioni tra cristalli minuscoli, piccoli, medi e grandi, il gruppo acquista
+            un rifornimento di pozioni di guarigione e il Siero di Stabilizzazione Arcana per
+            <strong class="text-green-400">Riven</strong>. <strong class="text-orange-400">Thalio</strong> fa
+            inoltre riparare l'arco, rimasto senza corda, per un cristallo minuscolo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-purple-900/20 border border-purple-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">✨</span> PARTE IV: LA PROVA DI MYSTRA — IL DUELLO DELL'ARCANO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">I.</span> Otto Modi di Toccare la Trama
+          </h3>
+          <p class="leading-relaxed">
+            Il gruppo attraversa il portale di Mystra ed entra in una sala circolare dove filamenti blu-argento
+            scorrono lungo le pareti come vene. Al centro, otto rune fluttuanti e due sagome traslucide: un
+            <strong>Arcimago Illusorio</strong> dal volto ancora indistinto, e un <strong>Campione della
+            Trama</strong> vuoto, pronto a essere guidato dal gruppo.
+          </p>
+          <div class="bg-black/40 border-l-4 border-purple-500 p-5 my-4 rounded-r">
+            <p class="italic text-purple-100 leading-relaxed">
+              "Otto modi di toccare la Trama. Otto errori possibili, per ognuno." Una pausa lunga. "Non vi
+              chiederò di vincere. Vi chiederò di capire. Sono due cose diverse, e solo una delle due mi interessa
+              davvero."
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Il duello è a otto turni: l'Arcimago lancia un effetto, il gruppo sceglie una delle otto rune per
+            rispondere — mai conoscendo il nome reale dell'incantesimo, solo l'illusione di cosa fa.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">II.</span> Il Muro e il Ragionamento di Valoris
+          </h3>
+          <p class="leading-relaxed">
+            Il primo turno mette subito il gruppo alla prova: una lastra trasparente e solida si condensa
+            davanti al Campione. Nessuno riconosce l'incantesimo con certezza, ma <strong class="text-yellow-400">
+            Valoris</strong> guida un ragionamento metodico — non è un attacco da deflettere, quindi non è
+            Scudo; non è una difesa da un colpo, quindi non è Rifletti Incantesimo — dev'essere qualcosa da
+            distruggere direttamente. Dopo un lungo confronto con <strong class="text-green-400">Riven</strong>
+            e <strong class="text-orange-400">Thalio</strong> sulla possibilità che sia in realtà un Rifletti
+            Incantesimo travestito, il gruppo si affida alla logica di Valoris e sceglie
+            <strong>Disintegrazione</strong>.
+          </p>
+          <div class="bg-black/40 border-l-4 border-green-500 p-5 my-4 rounded-r">
+            <p class="italic text-green-100 leading-relaxed">
+              Il muro cade in polvere. Le venature dell'Arcimago si accendono per un istante di un lampo dorato.
+              Primo turno superato.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">III.</span> Sei Turni in Rapida Successione
+          </h3>
+          <p class="leading-relaxed">
+            Con il ritmo preso, il gruppo procede più spedito. Un dardo unico e semplice viene fermato con
+            <strong>Scudo</strong>, che <strong class="text-green-400">Riven</strong> riconosce a memoria dagli
+            allenamenti con la sua maestra. Una dozzina di sagome identiche dell'Arcimago si moltiplicano nella
+            sala: senza esitazione il gruppo sceglie <strong>Vista Vera</strong>, che rivela l'unica reale tra
+            le copie.
+          </p>
+          <p class="leading-relaxed">
+            Un fascio di energia colorata divide il gruppo tra <em>Assorbi Elementi</em> e <em>Rifletti
+            Incantesimo</em>: <strong class="text-orange-400">Thalio</strong>, indeciso tra i due, fa da ago
+            della bilancia e alla fine il gruppo opta per <strong>Rifletti Incantesimo</strong> — la scelta
+            corretta, che rimanda il colpo dritto all'Arcimago, scomponendo per un istante le linee del suo
+            volto di luce.
+          </p>
+          <p class="leading-relaxed">
+            Il quinto turno è l'unico a fallire: davanti a un costrutto umanoide animato dai fili della Trama,
+            <strong class="text-green-400">Riven</strong> è certo che <strong>Blocca Mostri</strong> sia l'unica
+            scelta sensata — ma la risposta si rivela sbagliata, il colpo del costrutto raggiunge il Campione.
+            Il gruppo si riprende subito dopo: una macchia scura che corrompe un piccolo altare viene fermata con
+            <strong>Rimuovi Maledizione</strong>, scelta corretta dopo un breve tentennamento verso
+            Disintegrazione.
+          </p>
+          <p class="leading-relaxed">
+            Il settimo turno regala il momento più teso della prova: un piccolo spirito arcano, innocuo e
+            spaventato, fugge portando con sé un frammento di conoscenza che Mystra vuole preservare. Questa
+            volta <strong>Blocca Mostri</strong> è la scelta giusta — lo spirito viene catturato intatto, e per
+            la prima volta la voce dell'Arcimago trema. <em>"Questo," dice, "conta più di tutto il resto."</em>
+          </p>
+          <p class="leading-relaxed">
+            L'ultimo turno chiude in bellezza: una sfera di scariche elettriche viene neutralizzata con
+            <strong>Assorbi Elementi</strong>, trasformando il pericolo in una risorsa. Per la prima volta in
+            tutta la prova, l'Arcimago sorride pienamente.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">IV.</span> Il Dono della Tessitrice
+          </h3>
+          <p class="leading-relaxed">
+            Sette turni su otto superati — punteggio nella fascia più alta. Le rune si spengono, e le linee del
+            volto dell'Arcimago restano ferme per la prima volta in una forma quasi completa.
+          </p>
+          <div class="bg-black/50 border-l-4 border-green-500 p-5 my-4 rounded-r">
+            <p class="italic text-green-100 leading-relaxed">
+              "La Trama ricorderà questo. E io, con lei." Un vero inchino, breve ma inequivocabile.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Il gruppo riceve <strong class="text-purple-300">Il Dono della Tessitrice</strong>: l'intero party
+            ignorerà il terreno difficile creato dalla Zona Cristallina di Kethrar al Piano 3, otterrà vantaggio
+            al primo attacco sferrato contro di lui, e chi lancia incantesimi vedrà i propri incantesimi di primo
+            e secondo livello funzionare sempre entro il suo raggio, senza bisogno di superare il tiro
+            salvezza arcano.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE V -->
+    <div class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">⚔️</span> PARTE V: LA PROVA DI TEMPUS — L'INIZIO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Il Tavolo di Sabbia
+          </h3>
+          <p class="leading-relaxed">
+            Con ancora un po' di tempo a disposizione, il gruppo decide di tentare anche il secondo portale
+            attivo. Dall'altra parte, una sala bassa e rettangolare, incisioni che a uno sguardo attento si
+            rivelano mappe di battaglie sconosciute, e un tavolo enorme coperto di sabbia viva, con un paesaggio
+            in miniatura che respira. Dietro il tavolo, un generale veterano di Tempus, alto quasi tre metri,
+            corazza ammaccata da tremila anni di battaglie — eppure il sorriso che rivolge al gruppo è enorme e
+            sincero.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-5 my-4 rounded-r">
+            <p class="italic text-red-100 leading-relaxed">
+              "Tre battaglie. Tre plance. Voi contro me — non con le vostre spade, per una volta, ma con la
+              vostra testa. Tempus non giudica solo chi colpisce più forte. Giudica chi capisce perché colpisce."
+              Un ghigno enorme. "Vediamo se sapete ancora pensare, prima di sanguinare."
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            La sabbia si solleva a formare la prima plancia: un canyon stretto e dritto, con le pedine del
+            gruppo schierate alla radura d'ingresso e quelle del generale all'imbocco opposto. Il gruppo inizia
+            a valutare quale unità schierare in risposta — ma il tempo reale della sessione finisce proprio in
+            questo momento, prima che la prima manche possa concludersi.
+          </p>
+          <p class="leading-relaxed mt-4 text-gray-500 italic text-sm">
+            La Prova di Tempus continua nella prossima sessione. Fine sessione 8.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Combattimento:</strong> nessuno — sessione senza scontri, interamente dedicata a ricompense, mercato e Prove Divine
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Tutti i personaggi</h3>
+        <div class="text-sm text-center">
+          <p class="text-gray-400">PX Presenza</p>
+          <p class="text-green-300 font-bold">750 PX <span class="text-xs font-normal text-gray-500">— da segnare</span></p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- RIVEN -->
+        <div class="bg-gradient-to-r from-green-900/40 to-teal-900/40 border-2 border-green-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🔥</span>
+            <h4 class="text-xl font-bold text-green-400">Riven</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza: 750</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 400</p>
+              <p class="text-gray-300">
+                Ha guidato quasi ogni scelta del Duello dell'Arcano attingendo alla conoscenza reale del proprio
+                personaggio (Scudo, Vista Vera, Blocca Mostri due volte), incluso l'unico errore della prova,
+                assunto con lo stesso impegno delle risposte giuste. Il confronto con Vex sulla cicatrice, mostrando
+                apertamente il proprio braccio, resta il momento più personale della sessione.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VALORIS -->
+        <div class="bg-gradient-to-r from-yellow-900/30 to-amber-900/30 border-2 border-yellow-600/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">⚔️</span>
+            <h4 class="text-xl font-bold text-yellow-400">Valoris</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1000 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza: 750</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Il ragionamento metodico sul primo turno del Duello dell'Arcano — escludere per esclusione logica
+                cosa il muro di forza non poteva essere — ha dato al gruppo un punto di partenza solido per il
+                turno più discusso di tutta la prova. Ha anche proposto di destinare il Frammento di Grazia
+                Primaria a chi poteva usarlo nel modo più efficace dalle retrovie invece di tenerlo per sé.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEALER -->
+        <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border-2 border-purple-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🌿</span>
+            <h4 class="text-xl font-bold text-purple-400">Fealer</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1000 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza: 750</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Ha guidato la discussione sulla scelta del Frammento di Grazia Primaria con un'argomentazione
+                pratica e convincente, ed è rimasto sveglio durante il riposo a catalogare la Pietra Misteriosa —
+                proprio quella curiosità che ha spinto Vex a rivelare il suo vero scopo e altri dettagli interessanti.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THALIO -->
+        <div class="bg-gradient-to-r from-orange-900/30 to-red-900/20 border-2 border-orange-500/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🗡️</span>
+            <h4 class="text-xl font-bold text-orange-400">Thalio</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1000 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza: 750</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Ha fatto da ago della bilancia nel turno più incerto del Duello dell'Arcano, e ha spiegato al
+                tavolo il funzionamento del potenziamento degli incantesimi di livello superiore — un chiarimento
+                che ha aiutato tutto il gruppo a ragionare meglio nei turni successivi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MORGRIM -->
+        <div class="bg-gradient-to-r from-red-900/30 to-orange-900/30 border-2 border-red-700/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🪓</span>
+            <h4 class="text-xl font-bold text-red-400">Morgrim</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1150 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza: 750</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 400</p>
+              <p class="text-gray-300">
+                Pur ammettendo apertamente di non intendersi di magia arcana, ha azzeccato di getto — "da
+                stupido", come dice lui — ben due risposte del Duello dell'Arcano: <strong>Disintegrazione</strong>
+                al primo turno, semplicemente leggendo il nome della runa alla lettera, e
+                <strong>Rifletti Incantesimo</strong> al quarto, quando il resto del gruppo era ancora diviso.
+                Si è anche fatto sentire più del solito al tavolo, con più interventi diretti rispetto alle
+                sessioni precedenti.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-5 gap-4 text-center">
+          <div>
+            <p class="text-purple-400 font-bold">Fealer</p>
+            <p class="text-xl text-yellow-400">1000 PX</p>
+          </div>
+          <div>
+            <p class="text-orange-400 font-bold">Thalio</p>
+            <p class="text-xl text-yellow-400">1000 PX</p>
+          </div>
+          <div>
+            <p class="text-yellow-400 font-bold">Valoris</p>
+            <p class="text-xl text-yellow-400">1000 PX</p>
+          </div>
+          <div>
+            <p class="text-red-400 font-bold">Morgrim</p>
+            <p class="text-xl text-yellow-400">1150 PX</p>
+          </div>
+          <div>
+            <p class="text-green-400 font-bold">Riven</p>
+            <p class="text-xl text-yellow-400">1150 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-7" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 7 - La Matriarca dei Sommersi
+      </a>
+      <span class="text-gray-500 italic">Sessione 9 in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

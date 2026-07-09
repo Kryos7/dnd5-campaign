@@ -29,3 +29,6 @@ Thumbs.db
 # Documentation and notes (optional)
 # docs/
 # notes/
+
+# Craig session audio recordings (not for deployment)
+craig-regs/

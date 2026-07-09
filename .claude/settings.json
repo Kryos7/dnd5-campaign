@@ -22,11 +22,30 @@
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('foundry-exports/pseudopodo-minore.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
       "Bash(node -e ' *)",
       "Bash(node \"C:\\\\Users\\\\Lorenzo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--dev-dnd5-campaign-visual-app\\\\a16a9a57-5785-4e2a-a4b3-9d97b9c87fb2\\\\scratchpad\\\\checktags.js\")",
-      "Bash(rm -rf /tmp/astro-build-check)"
+      "Bash(rm -rf /tmp/astro-build-check)",
+      "Bash(where whisper *)",
+      "Bash(where ffmpeg *)",
+      "Bash(pip show *)",
+      "Bash(mkdir -p craig-regs && ls -la | grep craig)",
+      "Bash(ffmpeg -version)",
+      "Bash(ffprobe -version)",
+      "Bash(pip list *)",
+      "Bash(nvidia-smi)",
+      "PowerShell(Get-CimInstance Win32_VideoController)",
+      "PowerShell(Get-Command ffmpeg -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command nvidia-smi -ErrorAction SilentlyContinue)",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Bash(python craig-regs/transcribe.py)",
+      "Bash(python -u craig-regs/transcribe.py)",
+      "Bash(python craig-regs/merge.py)",
+      "Bash(ls \"C:\\\\Users\\\\Lorenzo\\\\.claude\\\\projects\\\\c--dev-dnd5-campaign-visual-app\\\\memory\\\\\")",
+      "Read(//c/Users/Lorenzo/.claude/projects/c--dev-dnd5-campaign-visual-app/**)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude",
-      "\\tmp"
+      "\\tmp",
+      "C:\\dev\\dnd5-campaign-visual-app"
     ]
   }
 }

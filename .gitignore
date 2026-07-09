@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Craig session audio recordings (not for deployment)
+craig-regs/
