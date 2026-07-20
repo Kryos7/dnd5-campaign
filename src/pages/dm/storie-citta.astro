@@ -1,0 +1,336 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import DMAuthGuard from "../../components/dm/DMAuthGuard";
+---
+
+<MainLayout title="Storie in Città [DM]" description="Filoni narrativi da sviluppare in città per Valoris, Thalio e Morgrim">
+  <DMAuthGuard client:load>
+    <div class="max-w-[1440px] mx-auto p-6">
+
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm" class="text-blue-400 hover:text-blue-300">← Dashboard DM</a>
+        </div>
+        <h1 class="text-4xl font-bold text-amber-400 mb-1">🏙️ Storie in Città</h1>
+        <p class="text-slate-400 mt-2">
+          Filoni narrativi di prep per <strong class="text-yellow-300">Valoris</strong>,
+          <strong class="text-orange-300">Thalio</strong> e <strong class="text-red-300">Morgrim</strong> — i tre
+          personaggi rimasti indietro rispetto allo sviluppo già dedicato a Fealer e Riven. Non ancora assegnati a
+          una sessione: materiale pronto da innestare quando deciderete il momento.
+        </p>
+      </div>
+
+      <!-- Banner SOLO DM -->
+      <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-8 text-center">
+        <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+        <p class="text-red-300 text-sm mt-1">
+          Contiene NPC, dialoghi e svolte narrative non ancora giocate. Non condividere con il party.
+        </p>
+      </div>
+
+      <!-- Nota di contesto -->
+      <div class="bg-slate-800/60 border border-slate-600 rounded-lg p-5 mb-8 text-sm text-slate-300 space-y-2">
+        <p>
+          <strong class="text-slate-100">Vincolo di ambientazione:</strong> Waterdeep è sigillata in una bolla,
+          nessuno può entrare o uscire dal Giorno dell'Annuncio. Ogni NPC qui sotto è già cittadino di Waterdeep
+          da prima del sigillo — niente arrivi dall'esterno, a meno di un intervento divino esplicito.
+        </p>
+        <p>
+          Fonti usate: <code class="text-amber-300">documentazione/backgrounds/*.md</code>, i box "Prescelti del
+          Destino" e "Il Muro di Pietra" in <code class="text-amber-300">sessione-0.astro</code>, le note DM per
+          il rientro in città in <code class="text-amber-300">sessione-8.astro</code>.
+        </p>
+      </div>
+
+      <!-- Indice -->
+      <div class="bg-amber-950/20 border border-amber-800/30 rounded-lg p-4 mb-10 flex flex-wrap gap-4 text-sm">
+        <a href="#valoris" class="text-yellow-400 hover:text-yellow-300">⚔️ Valoris</a>
+        <span class="text-amber-800">·</span>
+        <a href="#thalio" class="text-orange-400 hover:text-orange-300">🗡️ Thalio</a>
+        <span class="text-amber-800">·</span>
+        <a href="#morgrim" class="text-red-400 hover:text-red-300">🛡️ Morgrim</a>
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- VALORIS -->
+      <!-- ===================================================== -->
+      <div id="valoris" class="mb-14">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-2 flex items-center gap-2">⚔️ Valoris</h2>
+        <p class="text-slate-400 text-sm mb-6">
+          Fonti: <code class="text-amber-300">Bg Valoris.md</code> (memorie della Cittadella, discorso di Moonfest),
+          nota "Tempio di Tymora" già in <code class="text-amber-300">sessione-8.astro</code>.
+        </p>
+
+        <!-- Valoris I -->
+        <div class="bg-yellow-950/20 border-l-4 border-yellow-400 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-yellow-300 mb-3">I. Il Peso della Carovana</h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            <strong class="text-yellow-300">Dresk Colhollow</strong>, ex membro della banda di Valoris ai tempi di
+            Baldur's Gate. Non era presente all'imboscata alla carovana scortata — era di vedetta al campo, per
+            questo è vivo. Suo fratello minore, <strong>Tam</strong>, no: è uno dei nomi che Valoris porta ancora
+            nelle notti di Moonfest. Dopo la disfatta della banda, Dresk finì per stabilirsi a Waterdeep circa sei
+            anni fa, stalliere vicino al Campo di Marte — senza sapere che Valoris fosse lì, finché il nome non ha
+            iniziato a circolare dopo le Prove Divine.
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs font-bold text-yellow-300 mb-2">LA SCENA</p>
+            <p class="text-xs text-gray-300 mb-2">
+              Dresk non tende un agguato. Aspetta fuori dalla sede della gilda, o intercetta Valoris a un mercato,
+              in un momento in cui è solo o quasi.
+            </p>
+            <p class="text-xs italic text-yellow-200">
+              "Ti hanno dato un'armatura lucida e una fila di persone che ti chiamano 'signore'. Tam avrebbe
+              compiuto trent'anni quest'anno. Lo sai questo, mentre benedici gli altri e parli di 'sacrifici che
+              non devono essere vani'? L'ho sentito, il tuo discorso di Moonfest. Bella retorica, per uno che è
+              tornato a casa mentre mio fratello marciva in una fossa comune fuori Baldur's Gate."
+            </p>
+          </div>
+
+          <p class="text-xs font-bold text-yellow-300 mb-2">POSSIBILI DIREZIONI</p>
+          <ul class="text-xs text-gray-400 space-y-1 mb-2">
+            <li>• <strong>Colpa accettata, non respinta</strong> — Valoris non si difende, chiede a Dresk cosa vorrebbe da lui.</li>
+            <li>• <strong>Non vuole vendetta, vuole un rito</strong> — che il nome di Tam venga onorato pubblicamente, non solo in un aneddoto privato.</li>
+            <li>• <strong>Gancio di squadra</strong> — se qualcuno del party assiste, vede un lato di Valoris normalmente tenuto sotto controllo.</li>
+          </ul>
+          <p class="text-xs text-gray-500 italic">
+            Nota: non serve chiudere in una scena. Dresk può restare un filo aperto, anche verso una reintegrazione futura (es. nuovo contatto della gilda).
+          </p>
+        </div>
+
+        <!-- Valoris II -->
+        <div class="bg-yellow-950/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-yellow-300 mb-3">II. La Prova della Fortuna (Tempio di Tymora)</h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            Con gli dèi fisicamente presenti, il tempio non deve restare una preghiera muta — può essere un
+            contatto reale. Momento ideale: subito dopo la scena con Dresk, quando Valoris ha bisogno di una
+            risposta, non solo di un rito.
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs text-gray-300 mb-2">
+              Richiama il dialogo con <strong>Regal</strong> (background): "Un piano perfetto è tale finché non
+              incontra la realtà." Tymora può rispondere proprio a questo, o al senso di colpa lasciato da Dresk:
+            </p>
+            <p class="text-xs italic text-yellow-200">
+              "Tu pianifichi per non perdere nessuno. Io gioco perché perdere è sempre possibile — e vale comunque
+              la pena tirare i dadi. Non sono in contraddizione, chierico. Il tuo dio ti ha insegnato a minimizzare
+              il rischio. Io ti ricordo perché, alla fine, qualcuno deve comunque rischiare."
+            </p>
+          </div>
+
+          <p class="text-xs font-bold text-yellow-300 mb-2">POSSIBILI ESITI</p>
+          <ul class="text-xs text-gray-400 space-y-1">
+            <li>• Un dono meccanico — fonte di Ispirazione ricorrente, o un piccolo oggetto legato a un effetto di fortuna.</li>
+            <li>• Un dono narrativo — Tymora non assolve Dresk né Tam, offre una cornice diversa: la fortuna è la possibilità di riprovarci, non l'assenza di conseguenze.</li>
+            <li>• Gancio verso Thalio (vedi sotto) — scena condivisa tra due devoti della stessa Dea con approcci opposti.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- THALIO -->
+      <!-- ===================================================== -->
+      <div id="thalio" class="mb-14">
+        <h2 class="text-3xl font-bold text-orange-400 mb-2 flex items-center gap-2">🗡️ Thalio</h2>
+        <p class="text-slate-400 text-sm mb-2">
+          Fonti: <code class="text-amber-300">Background Thalio Vaelaris.md</code>, box "La Scelta di Silas
+          Greycloak" in <code class="text-amber-300">sessione-0.astro</code>.
+        </p>
+        <p class="text-amber-300 text-sm mb-6 italic">
+          ⚠️ La pista su Lirael (madre scomparsa, ciondolo) resta deliberatamente congelata per più avanti — non introdurla ancora.
+        </p>
+
+        <!-- Thalio I -->
+        <div class="bg-orange-950/20 border-l-4 border-orange-400 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-orange-300 mb-3">I. I Conti con le Monete Fortunate <span class="text-xs font-normal text-orange-400/70">— filone prioritario</span></h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            La <strong>Squadra B</strong>, ex compagni di Thalio ne Le Monete Fortunate. Vennero scoperti a rubare
+            lo stendardo durante la Prova I di Tempus, eliminati, umiliati pubblicamente ("Astuzia senza onore è
+            codardia"). Da allora relegati a compiti minori nella gilda fusa, mentre Thalio — il "traditore" che
+            Silas aveva strappato al gruppo — è finito nella squadra principale vincitrice.
+          </p>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong class="text-orange-300">Sorrel "Rooks" Fenmarsh</strong> — il più vicino a Thalio prima della
+            separazione, quasi un fratello maggiore dentro Le Monete Fortunate. Porta il peso più personale del
+            "tradimento": non era solo la squadra sbagliata, era <em>lui</em> che Thalio aveva scelto di lasciare indietro.
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs font-bold text-orange-300 mb-2">APERTURA SUGGERITA</p>
+            <p class="text-xs italic text-orange-200 mb-2">
+              "Guarda chi si vede. Il prediletto di Shadowstep in persona." Rooks non alza la voce, ma nemmeno ti
+              guarda negli occhi. "Sai cosa ci hanno fatto fare, dopo l'Assedio? Pulire le latrine della caserma
+              per un mese. 'Astuzia senza onore.' Bella roba, detto da uno che manda un ragazzino a rubare uno
+              stendardo mentre lui coordina la squadra vincente."
+            </p>
+            <p class="text-xs italic text-orange-200">Una pausa. Poi, più basso: "Non sono venuto per questo, comunque."</p>
+          </div>
+
+          <p class="text-xs font-bold text-orange-300 mb-2">POSSIBILI SVILUPPI</p>
+          <ul class="text-xs text-gray-400 space-y-1 mb-2">
+            <li>• <strong>Ostilità aperta</strong> — accuse in faccia, magari un piccolo sabotaggio per fargli perdere credibilità con Silas o Serath.</li>
+            <li>• <strong>Il favore scomodo</strong> — un membro della Squadra B è nei guai (debito, furto sbagliato) e chiede aiuto a Thalio nonostante tutto.</li>
+            <li>• <strong>Il test implicito</strong> — qualunque scelta faccia Thalio, è la prima volta che decide da solo se Silas aveva ragione a separarlo da loro.</li>
+          </ul>
+          <p class="text-xs text-gray-500 italic">
+            Decidere in anticipo se Rooks resta rivale permanente o se questa è l'inizio di una riconciliazione parziale.
+          </p>
+        </div>
+
+        <!-- Thalio II -->
+        <div class="bg-orange-950/20 border-l-4 border-orange-400 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-orange-300 mb-3">II. Coda al Tempio di Tymora <span class="text-xs font-normal text-orange-400/70">— secondario, sacrificabile</span></h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            Più debole come storia a sé — trattalo come epilogo breve alla scena con Rooks, non come contenuto
+            indipendente. Dopo aver chiuso (o lasciato aperti) i conti con la Squadra B, Thalio passa dal tempio di
+            Tymora, magari con <strong class="text-yellow-300">Valoris</strong> (vedi sopra, filone II) — entrambi
+            devoti della Dea Bendata con approcci opposti.
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs italic text-orange-200">
+              "Tu preghi Tymora come se fosse un generale," potrebbe dire Thalio, guardando Valoris chiudere gli
+              occhi prima di lanciare i dadi sull'altare. "Io la prego come si prega un'amica che ti deve un favore."
+            </p>
+          </div>
+
+          <p class="text-xs text-gray-500 italic">
+            Se dopo la scena con Rooks sembra non aggiungere nulla, è del tutto sacrificabile.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- MORGRIM -->
+      <!-- ===================================================== -->
+      <div id="morgrim" class="mb-8">
+        <h2 class="text-3xl font-bold text-red-400 mb-2 flex items-center gap-2">🛡️ Morgrim</h2>
+        <p class="text-slate-400 text-sm mb-6">
+          Fonti: box "Il Muro di Pietra" in <code class="text-amber-300">sessione-0.astro</code> (unica lore
+          ufficiale), note DM su Mira in <code class="text-amber-300">sessione-8.astro</code>, più un testo di
+          background alternativo condiviso dal giocatore il 2026-07-09.
+        </p>
+
+        <!-- Nota continuità -->
+        <div class="bg-slate-800/60 border border-slate-600 rounded-lg p-5 mb-6 text-sm text-slate-300">
+          <p class="font-bold text-slate-100 mb-2">Nota sulla continuità</p>
+          <p class="mb-2">
+            Il giocatore è entrato in corsa e ha sviluppato poco il personaggio finora — l'unica lore canonica è
+            quella del reclutamento: nano veterano di tre guerre, sopravvissuto all'Assedio di Mithral Hall,
+            mercenario freelance senza legami arrivato a Waterdeep otto anni fa, reclutato personalmente da Magnus
+            Ironfist. Meccanicamente è giocato come guerriero tank con ascia e scudo.
+          </p>
+          <p class="mb-2">
+            Il testo alternativo del giocatore lo dipinge invece come un <strong>fabbro di Khar-Dûm</strong>,
+            esiliato dopo che un'ascia da lui forgiata si spezzò per l'uso scorretto di chi la impugnava, uccidendo
+            il portatore — da cui la filosofia "un'arma non tradisce, è la mano che mente a se stessa" e il vizio
+            di mettere alla prova chi si fida di lui.
+          </p>
+          <p>
+            <strong class="text-amber-300">Scelta di continuità:</strong> non è un retcon meccanico (resta il
+            veterano tank già giocato), il testo del fabbro diventa <strong>voce interiore e filosofia di vita</strong>,
+            coerente con un mercenario che ha visto la guerra deformare la gente. Le due scene sotto la fanno
+            emergere senza contraddire la timeline già giocata.
+          </p>
+        </div>
+
+        <!-- Morgrim I -->
+        <div class="bg-red-950/20 border-l-4 border-red-400 p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-bold text-red-300 mb-3">I. Lo Specchio di Mira</h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            <strong class="text-yellow-300">Mira Greenleaf</strong>, halfling del Cerchio della Terra, il membro
+            originale del party ritiratosi la notte prima della discesa, sostituita da Fealer. Durante
+            l'addestramento era lei — non Fealer — ad avere il legame diretto con Morgrim: lo chiamava "Zio
+            Morgrim". Le note DM per il rientro in città la posizionano già come possibile incontro presso il
+            tempio/circolo druidico vicino alla piazza dell'Arco. Il legame emotivo reale appartiene a Morgrim, non
+            a Fealer (che l'ha solo sostituita in squadra).
+          </p>
+          <p class="text-sm text-gray-300 mb-3">
+            <strong>Trigger:</strong> Morgrim la cerca di proposito, spinto da un dubbio che si porta dietro da
+            mesi — l'ha addestrata troppo duramente? L'ha spinta oltre il suo limite prima ancora che il dungeon la
+            spezzasse?
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs italic text-red-200 mb-2">
+              "Zio Morgrim." La voce le trema, ma sorride — genuinamente, per un istante. "Pensavo... pensavo che
+              mi avresti guardata come una che ha mollato."
+            </p>
+            <p class="text-xs text-gray-300 mb-2">
+              Morgrim non risponde subito. La osserva come osserverebbe un'arma tornata dal campo — cercando il
+              punto di cedimento. Non lo trova dove pensava.
+            </p>
+            <p class="text-xs italic text-red-200">
+              "Un'ascia che si spezza non è sempre colpa della lega," dice alla fine, più a se stesso che a lei. "A
+              volte è colpa di chi l'ha temprata troppo in fretta."
+            </p>
+          </div>
+
+          <p class="text-xs font-bold text-red-300 mb-2">POSSIBILI DIREZIONI</p>
+          <ul class="text-xs text-gray-400 space-y-1">
+            <li>• <strong>Lei lo assolve</strong> — non è stato l'addestramento, è il dungeon stesso ("qualcosa che la natura rifiuta").</li>
+            <li>• <strong>Lui non si assolve comunque</strong> — resta col dubbio, che informa silenziosamente come tratta il resto del party.</li>
+            <li>• <strong>Gancio di squadra</strong> — se Fealer è presente, tensione naturale non ostile: due sensi di colpa diversi per la stessa persona (clinico per Fealer, personale per Morgrim).</li>
+          </ul>
+        </div>
+
+        <!-- Morgrim II -->
+        <div class="bg-red-950/20 border-l-4 border-red-400 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-red-300 mb-3">II. L'Occhio Onesto (Magnus Ironfist)</h3>
+
+          <p class="text-sm text-gray-300 mb-3">
+            <strong class="text-blue-300">Magnus "Ironfist" Thorne</strong>, del Triumvirato, veterano della
+            Guerra dei Signori ferito gravemente cinque anni fa — l'unico capace di reclutare Morgrim di persona.
+            Chiede un momento privato, non un debrief da Triumvirato: due vecchi soldati, non un capogilda e un mercenario.
+          </p>
+
+          <div class="bg-black/30 rounded p-4 mb-3">
+            <p class="text-xs italic text-blue-200 mb-2">
+              "Ti ho chiamato tu perché sei l'unico che non mi dirà quello che voglio sentire." Magnus fa girare il
+              boccale tra le mani, senza berne. "Ho raccomandato io Valoris per la squadra principale. Ho
+              scommesso il nome della gilda su un ragazzo che porta ancora le cicatrici di essere stato un ladro di
+              carovane. Se ho sbagliato, dimmelo adesso, non quando sarà troppo tardi per rimediare."
+            </p>
+            <p class="text-xs text-gray-400 mb-2">Oppure, versione più personale:</p>
+            <p class="text-xs italic text-blue-200">
+              "Cinque anni fa quella ferita mi ha tolto il campo. Da allora giudico gli altri invece di combattere
+              al loro fianco. Dimmi la verità, Sangueombra: sono ancora un soldato, o sono solo un vecchio che dà
+              ordini da dietro un tavolo?"
+            </p>
+          </div>
+
+          <p class="text-xs font-bold text-red-300 mb-2">POSSIBILI ESITI</p>
+          <ul class="text-xs text-gray-400 space-y-1 mb-2">
+            <li>• <strong>Il verdetto sull'ascia</strong> — Morgrim applica la sua filosofia del fabbro: dove regge, dove rischia di cedere, sotto quale pressione. Giudizio onesto, non consolatorio.</li>
+            <li>• <strong>Legame rafforzato</strong> — a prescindere dal contenuto, il gesto di Magnus è probabilmente il primo vero segno che Morgrim è più della "muta di lavoro" che dice di essere per gli altri (contrasto diretto con la filosofia di Fealer).</li>
+          </ul>
+          <p class="text-xs text-gray-500 italic">
+            Le due scene possono restare indipendenti o essere sequenziali: l'incontro con Mira lascia un dubbio
+            irrisolto sul metodo di Morgrim, e la richiesta di Magnus arriva mentre quel dubbio è ancora aperto —
+            buona occasione per far trapelare per la prima volta un accenno della "filosofia del fabbro" senza
+            dover spiegare tutto il retroscena di Khar-Dûm.
+          </p>
+        </div>
+      </div>
+
+      <!-- Link di navigazione -->
+      <div class="flex justify-between items-center mt-10 pt-6 border-t border-gray-700">
+        <a href="/dm" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          Torna al DM
+        </a>
+        <span class="text-gray-500 text-sm italic">Creato 2026-07-09 — nessuna sessione ancora assegnata</span>
+      </div>
+
+    </div>
+  </DMAuthGuard>
+</MainLayout>

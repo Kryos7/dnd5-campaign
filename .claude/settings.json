@@ -40,7 +40,9 @@
       "Bash(python -u craig-regs/transcribe.py)",
       "Bash(python craig-regs/merge.py)",
       "Bash(ls \"C:\\\\Users\\\\Lorenzo\\\\.claude\\\\projects\\\\c--dev-dnd5-campaign-visual-app\\\\memory\\\\\")",
-      "Read(//c/Users/Lorenzo/.claude/projects/c--dev-dnd5-campaign-visual-app/**)"
+      "Read(//c/Users/Lorenzo/.claude/projects/c--dev-dnd5-campaign-visual-app/**)",
+      "Bash(timeout 120 npm run build)",
+      "Bash(git log *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude",
