@@ -18,9 +18,25 @@ import InfoBox from '../../components/InfoBox.astro';
         <h1 class="text-4xl font-bold text-red-400 mb-1">📊 Progresso Gilde</h1>
         <p class="text-slate-400 mt-2">
           Tracking dell'avanzamento de <strong class="text-blue-300">Lo Scudo Radiante</strong> e
-          <strong class="text-yellow-300">Gli Sciocchi Fortunati</strong> nel dungeon, piano per piano — da aggiornare dopo ogni sessione.
+          <strong class="text-orange-300">La Compagnia del Dado Nero</strong> nel dungeon, piano per piano — da aggiornare dopo ogni sessione.
+          <span class="text-slate-500"> (Gli Sciocchi Fortunati, gilda rivale originale, sono stati spazzati via da Kethrar al Piano 3 — vedi nota sotto.)</span>
         </p>
       </div>
+
+      <!-- Nota chiarimento regola ritirata -->
+      <InfoBox type="dm" title="Regola chiarita: quando è possibile ritirarsi">
+        <p>
+          Il Velo verso la città esiste <strong>solo ai Pianerottoli</strong> (i checkpoint tra un piano e l'altro). Una volta scesi
+          dentro un piano — arena compresa — <strong>non si può tornare indietro finché non lo si completa o non si muore</strong>.
+          Questo vale anche per le gilde rivali, non solo per il party.
+        </p>
+        <p>
+          Di conseguenza l'esito originale scritto per <strong>Gli Sciocchi Fortunati</strong> (ritirata dall'Arena della Capsula, rientro
+          in città dal Velo) era incoerente con questa regola ed è stato corretto: la squadra non aveva via di fuga una volta
+          impegnata contro Kethrar. Sono morti tutti. Una nuova gilda rivale, <strong>La Compagnia del Dado Nero</strong>, ne ha preso
+          il posto, ripartendo dal Piano 1.
+        </p>
+      </InfoBox>
 
       <!-- Banner SOLO DM -->
       <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-8 text-center">
@@ -63,13 +79,20 @@ import InfoBox from '../../components/InfoBox.astro';
             <p class="text-slate-300 text-sm mt-3">Recuperati completamente dopo la Matriarca. Avanzano con cautela, nessuna perdita.</p>
           </div>
 
-          <div class="bg-gradient-to-br from-yellow-900/30 to-red-900/20 border-2 border-yellow-500 rounded-lg p-6">
-            <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-yellow-900/50 text-yellow-300 border border-yellow-700">🎲 RIVALI (CN)</span>
-            <h3 class="text-xl font-bold text-yellow-300 mb-1">Gli Sciocchi Fortunati</h3>
-            <p class="text-sm text-slate-400 mb-3">Piano 3 — Kethrar</p>
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-300 border border-red-600">🔴 TENTATIVO FALLITO — RITIRATI</span>
-            <p class="text-slate-300 text-sm mt-3">Grom gravemente ferito coprendo la ritirata. Nessun Sigillo Divino attivato. Rientrati in città dal Velo.</p>
+          <div class="bg-gradient-to-br from-orange-900/30 to-slate-800/30 border-2 border-orange-500 rounded-lg p-6">
+            <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-orange-900/50 text-orange-300 border border-orange-700">🎲 RIVALI (CN) — NUOVA GILDA</span>
+            <h3 class="text-xl font-bold text-orange-300 mb-1">La Compagnia del Dado Nero</h3>
+            <p class="text-sm text-slate-400 mb-3">Piano 1 — Fogne Superiori</p>
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-900/50 text-yellow-300 border border-yellow-600">🟡 APPENA ENTRATA</span>
+            <p class="text-slate-300 text-sm mt-3">Subentra dopo la notizia del disastro degli Sciocchi Fortunati. Riparte da zero — placeholder, roster e stile ancora da definire.</p>
           </div>
+        </div>
+        <div class="mt-4 bg-gradient-to-br from-red-950/40 to-slate-800/30 border-2 border-red-800 rounded-lg p-6">
+          <span class="inline-block px-2 py-1 rounded text-xs font-semibold mb-2 bg-red-950/60 text-red-400 border border-red-800">🎲 RIVALI (CN) — ELIMINATI</span>
+          <h3 class="text-xl font-bold text-red-400 mb-1">Gli Sciocchi Fortunati <span class="text-sm font-normal text-slate-500">(storico)</span></h3>
+          <p class="text-sm text-slate-400 mb-3">Piano 3 — Kethrar</p>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-950 text-red-400 border border-red-800">💀 TPK — NESSUN SOPRAVVISSUTO</span>
+          <p class="text-slate-300 text-sm mt-3">Nessuna via di fuga a metà piano: impegnati contro Kethrar, travolti dalla trasformazione anticipata innescata dall'ossessione di Zax. Nessun Sigillo Divino attivato.</p>
         </div>
       </section>
 
@@ -155,17 +178,17 @@ import InfoBox from '../../components/InfoBox.astro';
               <tr>
                 <td class="py-3 pr-4 font-medium align-top">Stato</td>
                 <td class="py-3 px-4 text-center align-top">🟡 In corso, nessuna perdita</td>
-                <td class="py-3 px-4 text-center align-top">🔴 Ritirata, un membro grave</td>
+                <td class="py-3 px-4 text-center align-top">💀 TPK — squadra eliminata</td>
               </tr>
               <tr>
                 <td class="py-3 pr-4 font-medium align-top">Cosa è successo</td>
                 <td class="py-3 px-4 align-top">Entrano dopo il pieno recupero, avanzano con cautela attraverso le fasi di Kethrar. Ancora dentro quando i Guardiani li superano.</td>
-                <td class="py-3 px-4 align-top">Arrivano per primi a Kethrar, ma l'ossessione di Zax per la magia selvaggia lo rende avventato durante una transizione di fase: la trasformazione si innesca in anticipo e la squadra viene travolta. Grom si sacrifica per coprire la ritirata (ferito grave, non morto).</td>
+                <td class="py-3 px-4 align-top">Arrivano per primi a Kethrar, ma l'ossessione di Zax per la magia selvaggia lo rende avventato durante una transizione di fase: la trasformazione si innesca in anticipo e la squadra viene travolta. Impegnati dentro l'Arena, senza via di fuga a metà piano: nessuno sopravvive, Grom compreso.</td>
               </tr>
               <tr>
                 <td class="py-3 pr-4 font-medium align-top">Conseguenze</td>
                 <td class="py-3 px-4 align-top">Nessuna, per ora — restano in corsa.</td>
-                <td class="py-3 px-4 align-top">Ritiro senza attivare nessun Sigillo Divino, rientro dal Velo. La notizia del fallimento gira in città (i Guardiani lo scoprono solo indirettamente: da Vex al Pianerottolo 2, o dalle voci in giro).</td>
+                <td class="py-3 px-4 align-top">Fine della gilda. Nessun Sigillo Divino attivato. La notizia gira in città (i Guardiani lo scoprono indirettamente: da Vex al Pianerottolo 2, o dalle voci in giro). <strong class="text-orange-300">La Compagnia del Dado Nero</strong> subentra come nuova rivale, ripartendo dal Piano 1.</td>
               </tr>
             </tbody>
           </table>
@@ -208,19 +231,27 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-3 px-4 text-center">150</td>
                 <td class="py-3 px-4 text-center font-bold text-blue-300">540</td>
               </tr>
-              <tr>
-                <td class="py-3 pr-4 font-bold text-yellow-300">🎲 Sciocchi Fortunati</td>
+              <tr class="opacity-60">
+                <td class="py-3 pr-4 font-bold text-red-400">💀 Sciocchi Fortunati (TPK, fuori gioco)</td>
                 <td class="py-3 px-4 text-center">90</td>
                 <td class="py-3 px-4 text-center">250</td>
                 <td class="py-3 px-4 text-center">140</td>
-                <td class="py-3 px-4 text-center font-bold text-yellow-300">480</td>
+                <td class="py-3 px-4 text-center font-bold text-red-400">480*</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-bold text-orange-300">🎲 Compagnia del Dado Nero</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center">—</td>
+                <td class="py-3 px-4 text-center font-bold text-orange-300">0 (appena partiti)</td>
               </tr>
             </tbody>
           </table>
         </div>
         <ul class="text-slate-400 text-sm mt-4 space-y-1 list-disc list-inside">
           <li><strong class="text-blue-300">Scudo Radiante</strong>: onore e disciplina pagano con Tempus, ma i pochi rischi presi limitano il Favore di Tymora.</li>
-          <li><strong class="text-yellow-300">Sciocchi Fortunati</strong>: la striscia fortunata al Piano 2 fa esplodere Tymora, ma la ritirata disonorevole da Kethrar quasi affossa Tempus.</li>
+          <li><strong class="text-red-400">Sciocchi Fortunati</strong>: la striscia fortunata al Piano 2 fa esplodere Tymora, ma il totale resta congelato al momento della morte (*) — non hanno completato l'Ecosistema, quindi non entrano nella classifica finale.</li>
+          <li><strong class="text-orange-300">Compagnia del Dado Nero</strong>: subentrata dopo il disastro, nessun dato ancora — placeholder da sviluppare quando entrano in gioco.</li>
         </ul>
         <p class="text-slate-500 text-xs mt-4">
           Ricorda: i giocatori vedono <strong>solo il totale</strong> delle gilde rivali, mai il breakdown per divinità
