@@ -44,7 +44,8 @@
       "Bash(timeout 120 npm run build)",
       "Bash(git log *)",
       "Bash(git config *)",
-      "Bash(rundll32.exe keymgr.dll,KRShowKeyMgr)"
+      "Bash(rundll32.exe keymgr.dll,KRShowKeyMgr)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude",
