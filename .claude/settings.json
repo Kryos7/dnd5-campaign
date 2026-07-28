@@ -42,7 +42,8 @@
       "Bash(ls \"C:\\\\Users\\\\Lorenzo\\\\.claude\\\\projects\\\\c--dev-dnd5-campaign-visual-app\\\\memory\\\\\")",
       "Read(//c/Users/Lorenzo/.claude/projects/c--dev-dnd5-campaign-visual-app/**)",
       "Bash(timeout 120 npm run build)",
-      "Bash(git log *)"
+      "Bash(git log *)",
+      "Bash(git config *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Lorenzo\\.claude",
