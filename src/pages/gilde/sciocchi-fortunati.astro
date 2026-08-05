@@ -1,0 +1,240 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+import fs from 'fs';
+import path from 'path';
+
+const gildePath = path.join(process.cwd(), 'public', 'data', 'gilde.json');
+const gildeData = JSON.parse(fs.readFileSync(gildePath, 'utf-8'));
+
+const guild = gildeData.find((g: any) => g.slug === 'sciocchi-fortunati');
+
+const colorMap: Record<string, string> = {
+  Bianco: '#e5e7eb',
+  Oro: '#fbbf24',
+  Rosso: '#dc2626',
+  Nero: '#1f2937'
+};
+---
+
+<MainLayout title={guild.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/gilde/overview" class="hover:text-yellow-400">Gilde</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{guild.name}</span>
+  </nav>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-yellow-900 via-slate-800 to-red-900 border-2 border-yellow-500 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <h1 class="text-5xl text-yellow-400">{guild.name}</h1>
+          <span class="bg-yellow-900/50 text-yellow-300 px-4 py-2 rounded-full text-sm border border-yellow-700 font-bold">
+            🎲 RIVALI (CN)
+          </span>
+        </div>
+        <p class="text-2xl italic text-yellow-300">"{guild.motto}"</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400">Simbolo</div>
+        <div class="text-lg text-slate-300">{guild.symbol}</div>
+        <div class="flex gap-2 mt-2 justify-end">
+          {guild.colors.map((color: string) => (
+            <div
+              class="w-6 h-6 rounded-full border-2 border-slate-600"
+              style={`background-color: ${colorMap[color] || '#94a3b8'}`}
+              title={color}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-3xl font-bold text-emerald-400">{guild.totalMembers}</div>
+        <div class="text-sm text-slate-400">Membri Totali</div>
+        <div class="text-xs text-slate-500 mt-1">{guild.mainTeam} principali + {guild.reserves} riserve</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center dm-only">
+        <div class="text-3xl font-bold text-yellow-400">{guild.budget}</div>
+        <div class="text-sm text-slate-400">Budget</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-lg font-bold text-blue-400">{guild.founded}</div>
+        <div class="text-sm text-slate-400">Fondazione</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quartier Generale -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Quartier Generale</h2>
+    <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+      <div class="space-y-2 text-slate-300">
+        <p><strong>Posizione:</strong> {guild.headquarters.location}</p>
+        <p><strong>Tipo:</strong> {guild.headquarters.type}</p>
+        {guild.headquarters.dualPurpose && <p><strong>Doppio Uso:</strong> {guild.headquarters.dualPurpose}</p>}
+      </div>
+    </div>
+  </section>
+
+  <!-- Filosofia e Reputazione -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-2 gap-6">
+      <InfoBox type="lore" title="Filosofia della Gilda">
+        <p class="text-slate-300 italic">"{guild.philosophy}"</p>
+      </InfoBox>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-yellow-300 mb-3">Reputazione a Waterdeep</h3>
+        <div class="space-y-3">
+          {Object.entries(guild.reputation).map(([key, value]: [string, any]) => (
+            <div class="text-sm">
+              <div class="text-slate-300 font-semibold capitalize">{key}</div>
+              <div class="text-slate-400">{value}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Punti di Forza e Debolezza -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-emerald-900/20 border border-emerald-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-emerald-300 mb-3">Punti di Forza</h3>
+        <ul class="space-y-2">
+          {guild.strengths.map((s: string) => (
+            <li class="text-sm text-slate-300 flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              {s}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="bg-red-900/20 border border-red-700 rounded-lg p-6">
+        <h3 class="text-xl font-bold text-red-300 mb-3">Debolezze</h3>
+        <ul class="space-y-2">
+          {guild.weaknesses.map((w: string) => (
+            <li class="text-sm text-slate-300 flex items-start">
+              <span class="text-red-400 mr-2">▸</span>
+              {w}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    {guild.progression && (
+      <div class="mt-4 bg-slate-900/50 rounded-lg p-3 border border-slate-700 dm-only">
+        <p class="text-sm text-slate-400"><strong>Progressione:</strong> {guild.progression}</p>
+      </div>
+    )}
+  </section>
+
+  <!-- Team Principale -->
+  <section class="mb-12">
+    <h2 class="text-4xl font-bold mb-6 text-yellow-400 text-center">Il Team Principale</h2>
+    <p class="text-center text-slate-300 mb-8 text-lg">I cinque membri che rappresentano la gilda nel Gioco Divino</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {guild.mainTeamMembers.map((member: any) => (
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-yellow-600 rounded-lg p-6">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h3 class="text-2xl font-bold text-slate-100">{member.name}</h3>
+              <p class="text-sm text-yellow-400">{member.role}</p>
+            </div>
+            <div class="text-right text-xs text-slate-400">
+              <div>{member.race}</div>
+              <div>{member.class}</div>
+            </div>
+          </div>
+
+          <div class="flex gap-4 text-xs text-slate-400 mb-3">
+            {member.age && <span>Età: {member.age}</span>}
+            {member.alignment && <span>Allineamento: {member.alignment}</span>}
+          </div>
+
+          {member.personality && (
+            <p class="text-sm text-slate-300 italic mb-2">{member.personality}</p>
+          )}
+
+          {member.background && (
+            <p class="text-sm text-slate-400 mb-2">{member.background}</p>
+          )}
+
+          {member.weapon && (
+            <p class="text-xs text-slate-400 mb-1"><strong class="text-yellow-300">Arma:</strong> {member.weapon}</p>
+          )}
+
+          {member.inventions && (
+            <p class="text-xs text-slate-400 mb-1"><strong class="text-yellow-300">Invenzioni:</strong> {member.inventions}</p>
+          )}
+
+          {member.abilities && (
+            <div class="bg-slate-900/50 rounded p-2 border-l-2 border-yellow-500 mt-2 text-xs text-slate-400 space-y-1">
+              {Object.entries(member.abilities).map(([key, value]: [string, any]) => (
+                <p><strong class="capitalize text-slate-300">{key}:</strong> {value}</p>
+              ))}
+            </div>
+          )}
+
+          {member.role_in_team && (
+            <div class="bg-slate-900/50 rounded p-2 border-l-2 border-yellow-500 mt-2">
+              <p class="text-xs text-slate-400">{member.role_in_team}</p>
+            </div>
+          )}
+
+          {member.quote && (
+            <p class="text-sm italic text-yellow-300 mt-3 border-l-2 border-yellow-500 pl-3">"{member.quote}"</p>
+          )}
+
+          {member.quotes && (
+            <div class="space-y-1 mt-3">
+              {member.quotes.map((q: string) => (
+                <p class="text-sm italic text-yellow-300 border-l-2 border-yellow-500 pl-3">"{q}"</p>
+              ))}
+            </div>
+          )}
+
+          {(member.note || member.secretGoal) && (
+            <div class="dm-only mt-3 bg-red-900/20 border border-red-800 rounded p-2 text-xs text-red-200">
+              <strong>Nota DM:</strong> {member.note || member.secretGoal}
+            </div>
+          )}
+
+          {typeof member.dmOnly === 'string' && (
+            <div class="dm-only mt-3 bg-purple-900/20 border border-purple-800 rounded p-2 text-xs text-purple-200">
+              <strong>Solo DM:</strong> {member.dmOnly}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-slate-700">
+    <a href="/gilde/scudo-radiante" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Gilda Precedente: Lo Scudo Radiante
+    </a>
+    <a href="/gilde/overview" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      Torna a Tutte le Gilde
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</MainLayout>

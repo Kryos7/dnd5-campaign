@@ -1,0 +1,177 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import InfoBox from '../../components/InfoBox.astro';
+
+const guild = {
+  name: 'La Compagnia del Dado Nero',
+  motto: 'Il caos non si è spaventato. Ha raddoppiato la posta.',
+  type: 'rival-chaotic',
+  founded: 'Subito dopo la notizia del disastro degli Sciocchi Fortunati a Kethrar (Piano 3)',
+  headquarters: {
+    location: 'Dock Ward',
+    type: 'La vecchia taverna "The Lucky Shot", ancora aperta al pubblico — insegna del Dado Nero aggiunta sotto quella originale'
+  },
+  status: 'Piano 1 — Fogne Superiori (appena entrati)',
+  odds: '10 a 1 contro (nuovi)',
+  guildmaster: {
+    name: 'Dorin "Il Libro" Hask',
+    subtitle: 'Mezz\'orco, ex-contabile del Lucky Shot — guildmaster non combattente',
+    text: 'Non ha mai messo piede nel dungeon — gestiva i conti e il bancone mentre Kessa guidava la squadra. Sopravvive al disastro proprio perché non c\'era. Raccoglie i pezzi con un misto di lutto e determinazione pragmatica.',
+    quote: 'Non posso riportarli indietro. Posso fare in modo che quello che hanno costruito non muoia con loro.'
+  },
+  identity: 'Non prende solo gli scarti degli Sciocchi Fortunati. È un contenitore per gli avventurieri di seconda scelta di tutta Waterdeep — comprese le riserve mai chiamate di una gilda morta, e i membri di altre gilde rimasti indietro dopo un errore.',
+  mainTeamMembers: [
+    {
+      name: 'Rooks Fenmarsh',
+      role: 'Ladro — leader/scout',
+      origin: 'Squadra B / Le Monete Fortunate (defezione dai Guardiani della Trama)',
+      note: 'Il recruiter di Thalio. Finalmente titolare.'
+    },
+    {
+      name: 'Mira Swiftfoot',
+      role: 'Ladra (Arcane Trickster) — utility',
+      origin: 'Defezione dallo Scudo Radiante',
+      note: 'Mai davvero a suo agio tra i rigidi.'
+    },
+    {
+      name: 'Barda Once-Silver',
+      role: 'Guerriera — tank',
+      origin: 'Riserva degli Sciocchi Fortunati',
+      note: 'Addestrata da Grom. Colpa del sopravvissuto.'
+    },
+    {
+      name: 'Fenn Cindertongue',
+      role: 'Stregone/Warlock — caster',
+      origin: 'Riserva degli Sciocchi Fortunati',
+      note: 'Eredita pezzi del patto di Whisper, non li capisce ancora.'
+    },
+    {
+      name: 'Toz "Le Mani" Varren',
+      role: 'Chierico minore di Waukeen — support',
+      origin: 'Freelance, nuovo in città',
+      note: 'Crede nei margini di profitto, non in Tymora.'
+    }
+  ]
+};
+---
+
+<MainLayout title={guild.name}>
+  <!-- Breadcrumbs -->
+  <nav class="mb-6 text-sm text-slate-400">
+    <a href="/" class="hover:text-yellow-400">Home</a>
+    <span class="mx-2">/</span>
+    <a href="/gilde/overview" class="hover:text-yellow-400">Gilde</a>
+    <span class="mx-2">/</span>
+    <span class="text-slate-300">{guild.name}</span>
+  </nav>
+
+  <!-- Nota DM: pagina non ancora collegata -->
+  <div class="dm-only bg-red-900/30 border-2 border-red-700 rounded-lg p-4 mb-8 text-sm text-red-200">
+    <strong>🔒 Nota DM:</strong> pagina pronta in anticipo per la Sessione 10 ("Rooks e il Dado Nero", checklist pre-sessione).
+    Non è ancora linkata da <code>/gilde/overview</code> né dalle altre pagine gilda — il party non ha ancora incontrato
+    la Compagnia del Dado Nero in game. Collegarla solo dopo che la scena con Rooks è stata giocata al tavolo.
+  </div>
+
+  <!-- Hero Header -->
+  <div class="bg-gradient-to-br from-orange-950 via-slate-900 to-black border-2 border-orange-600 rounded-lg p-8 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <h1 class="text-5xl text-orange-400">{guild.name}</h1>
+          <span class="bg-orange-900/50 text-orange-300 px-4 py-2 rounded-full text-sm border border-orange-700 font-bold">
+            🎲 RIVALI (CN) — NUOVA GILDA
+          </span>
+        </div>
+        <p class="text-2xl italic text-orange-300">"{guild.motto}"</p>
+      </div>
+    </div>
+    <div class="bg-black/40 rounded-lg p-4 mt-4">
+      <p class="text-slate-200 leading-relaxed">{guild.identity}</p>
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <section class="mb-8">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-2xl font-bold text-orange-400">{guild.status}</div>
+        <div class="text-sm text-slate-400">Posizione Attuale</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center dm-only">
+        <div class="text-2xl font-bold text-yellow-400">{guild.odds}</div>
+        <div class="text-sm text-slate-400">Quote al Banco</div>
+        <div class="text-xs text-slate-500 mt-1">Considerati sfavoriti dopo il disastro</div>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
+        <div class="text-sm text-slate-300">{guild.founded}</div>
+        <div class="text-sm text-slate-400 mt-1">Fondazione</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quartier Generale -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-emerald-400">Quartier Generale</h2>
+    <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+      <div class="space-y-2 text-slate-300">
+        <p><strong>Posizione:</strong> {guild.headquarters.location}</p>
+        <p><strong>Sede:</strong> {guild.headquarters.type}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guildmaster -->
+  <section class="mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-orange-400">Guildmaster</h2>
+    <div class="bg-gradient-to-br from-orange-900/30 to-slate-800/30 border-2 border-orange-600 rounded-lg p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-5xl">📖</div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-orange-300 mb-1">{guild.guildmaster.name}</h3>
+          <p class="text-slate-400 text-sm mb-3 italic">{guild.guildmaster.subtitle}</p>
+          <p class="text-slate-300 text-sm leading-relaxed mb-3">{guild.guildmaster.text}</p>
+          <div class="text-sm italic text-orange-300 border-l-2 border-orange-500 pl-3">
+            "{guild.guildmaster.quote}"
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoBox type="lore" title="Chi Sono">
+    <p class="text-slate-300">
+      Nascono dalle ceneri degli Sciocchi Fortunati, spazzati via da Kethrar senza via di scampo. Non è però solo una
+      gilda di superstiti: raccoglie chiunque a Waterdeep non abbia trovato posto altrove — riserve mai chiamate,
+      avventurieri lasciati indietro da altre squadre, freelance di passaggio.
+    </p>
+  </InfoBox>
+
+  <!-- Team Principale -->
+  <section class="mb-12">
+    <h2 class="text-4xl font-bold mb-6 text-orange-400 text-center">La Squadra Principale</h2>
+    <p class="text-center text-slate-300 mb-8 text-lg">Cinque volti nuovi, radunati sotto un'insegna riciclata</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {guild.mainTeamMembers.map((member) => (
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 border-2 border-orange-700 rounded-lg p-6">
+          <h3 class="text-2xl font-bold text-slate-100 mb-1">{member.name}</h3>
+          <p class="text-sm text-orange-400 mb-2">{member.role}</p>
+          <p class="text-xs text-slate-400 mb-3"><strong class="text-slate-300">Provenienza:</strong> {member.origin}</p>
+          <div class="dm-only bg-red-900/20 border border-red-800 rounded p-2 text-xs text-red-200">
+            <strong>Nota DM:</strong> {member.note}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <div class="flex justify-start mt-12 pt-6 border-t border-slate-700">
+    <a href="/gilde/overview" class="inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Torna a Tutte le Gilde
+    </a>
+  </div>
+</MainLayout>
