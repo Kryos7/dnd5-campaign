@@ -1,0 +1,697 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 10 - Il Ritorno a Waterdeep [DM]"
+  description="Note del Dungeon Master - Sessione 10"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">10</span>
+        <h1 class="text-4xl font-bold">Il Ritorno a Waterdeep</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>📅 05/08/2026</span>
+        <span>⏱️ 4–5 ore</span>
+        <span>🎭 Città, Rivelazioni, Mercati</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Dopo la morte di Kethrar, i Guardiani della Trama risalgono finalmente in superficie. Waterdeep li accoglie
+        con due monumenti che non avevano mai notato davvero, un banco di scommesse davanti al Velo, una nuova gilda
+        nata dalle ceneri di una vecchia rivale — e un'offerta che Thalio non si aspettava.
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Tempo trascorso:</strong> ~4 giorni dentro al dungeon (3 riposi lunghi + esplorazione + permanenza ai Pianerottoli). Non "settimane" — la città non è cambiata radicalmente, ma il tempo dentro il dungeon corre più lento del previsto. Vedi Parte I.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Stele del Mandato:</strong> decidi se far succedere la "riga che si spegne" degli Sciocchi Fortunati mentre il party è fisicamente davanti al monumento — è il momento più forte della sessione, non sprecarlo fuori scena. Vedi Parte III.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Stele delle Altre Città:</strong> decidi in anticipo quanto esplicita rendere la visione di Menzoberranzan/Luskan in base alla sensibilità del tuo tavolo — le note in Parte IV danno una versione dosabile su e giù. Vedi Parte IV.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Fennick al Banco delle Quote:</strong> decidi quando si avvicina a Valoris — meglio non subito all'arrivo, lascia respirare la scena delle stele prima. Vedi Parte V.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Rooks e il Dado Nero:</strong> prepara il contratto scritto per Thalio — usa le cifre di Parte VI, non improvvisarle al tavolo.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Cristalli:</strong> se qualcuno prova a vendere Cristalli Grandi o Frammenti Ambrati fuori dal circuito di Vex, hai i prezzi pronti in Parte VII — molto più alti di quanto il gruppo si aspetti.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Pausa forzata:</strong> 7 giorni di mandato prima che si possa scendere all'Ecosistema 2. Annuncia lo Scudo Radiante che chiude Kethrar poco dopo il vostro arrivo. Vedi Parte VIII.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#arrivo" class="text-gray-300 hover:text-white">🏙️ Arrivo</a>
+      <span class="text-gray-600">·</span>
+      <a href="#stele-mandato" class="text-indigo-400 hover:text-indigo-300">🗿 Stele del Mandato</a>
+      <span class="text-gray-600">·</span>
+      <a href="#sciocchi-fortunati" class="text-yellow-400 hover:text-yellow-300">🎲 Indifferenza degli Dèi</a>
+      <span class="text-gray-600">·</span>
+      <a href="#stele-altre-citta" class="text-red-400 hover:text-red-300">🕯️ Stele delle Altre Città</a>
+      <span class="text-gray-600">·</span>
+      <a href="#scommesse" class="text-green-400 hover:text-green-300">💰 Banco delle Quote</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dado-nero" class="text-orange-400 hover:text-orange-300">🎲 Compagnia del Dado Nero</a>
+      <span class="text-gray-600">·</span>
+      <a href="#cristalli" class="text-cyan-400 hover:text-cyan-300">💎 Commercio dei Cristalli</a>
+      <span class="text-gray-600">·</span>
+      <a href="#pausa" class="text-gray-400 hover:text-gray-200">⏸️ Pausa Forzata</a>
+      <span class="text-gray-600">·</span>
+      <a href="#riepilogo" class="text-amber-400 hover:text-amber-300">📋 Riepilogo</a>
+    </div>
+
+    <!-- ==================== PARTE I: ARRIVO ==================== -->
+    <div id="arrivo" class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-gray-400">🏙️</span> PARTE I: L'ARRIVO — QUANTO TEMPO È PASSATO
+      </h2>
+
+      <div class="bg-gray-700/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-yellow-400 mb-2">📍 Cronologia reale</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contando i riposi lunghi effettivamente presi (uno tra Piano 1 e Piano 2, uno al primo Pianerottolo, uno al secondo)
+          più il tempo di esplorazione e la permanenza ai due Pianerottoli, il party è stato dentro al dungeon
+          <strong class="text-white">circa 4 giorni</strong> — non settimane. La città non ha avuto il tempo di trasformarsi:
+          quello che segue in questa sessione (le stele, il banco delle quote, il Dado Nero) esisteva già in forma nascente,
+          semplicemente il party non aveva mai avuto motivo di guardarlo con attenzione. Non serve inventare grandi cambiamenti
+          urbani — la novità è nello sguardo, non nella città.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere ad alta voce appena attraversano il Velo verso la superficie.</p>
+
+      <div class="bg-black/50 border-l-4 border-blue-500 p-6 my-4 rounded-r">
+        <p class="italic text-blue-100 text-lg leading-relaxed">
+          Il Velo cede alle vostre spalle, e la luce cambia.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Non è l'alba né il tramonto — è pomeriggio, un pomeriggio qualunque, con quella luce piatta e generosa che
+          non sembra sapere cosa avete passato per guadagnarvela. Piazza dell'Arco vi accoglie con lo stesso rumore
+          di sempre: venditori, passi, un cane che abbaia da qualche parte. Quattro giorni, e la città non ha notato
+          la vostra assenza più di quanto noterebbe una nuvola che passa.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Ma la piazza, questa volta, vi restituisce lo sguardo. Perché per la prima volta vi fermate a guardarla davvero.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: STELE DEL MANDATO ==================== -->
+    <div id="stele-mandato" class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🗿</span> PARTE II: LA STELE DEL MANDATO
+      </h2>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded p-4 mb-6">
+        <p class="text-sm font-bold text-indigo-400 mb-2">📖 Cos'è</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Un obelisco di pietra nera liscia, alto forse cinque metri, piantato al centro di Piazza dell'Arco a poca
+          distanza dal Velo. Rune dorate scorrono sulla sua superficie come inchiostro vivo, riordinandosi da sole.
+          Tre canali di luce — cremisi, oro, blu-argento — risalgono a spirale dalla base e convergono in alto, dove
+          tre sigilli divini (una spada fiammeggiante, una moneta sorridente, una trama di sette stelle) restano
+          incastonati nella pietra, sempre presenti. Sotto di loro, i nomi delle gilde di Waterdeep, con un numero
+          che pulsa piano — il Favore Divino totale. Mai il dettaglio per divinità: solo il totale, esattamente come
+          Vex non lo darebbe mai nel dungeon.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          Non ha bisogno di nessuno che la aggiorni. Non c'è un impiegato, non c'è un banditore — è mandato puro,
+          la stessa voce burocratica e impersonale di Vex, semplicemente proiettata in superficie invece che
+          confinata sotto terra.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando si avvicinano — pausa lunga prima di leggere i nomi.</p>
+
+      <div class="bg-black/50 border-l-4 border-indigo-400 p-6 my-4 rounded-r">
+        <p class="italic text-indigo-100 text-lg leading-relaxed">
+          Non l'avevate mai notata con questa attenzione. Chi la guarda da lontano, ci passa vicino di sfuggita —
+          un obelisco nero tra i tanti monumenti della piazza. Ma da vicino, le rune sulla sua superficie non sono
+          decorazione. Si muovono. Si riordinano, lettera per lettera, come se qualcosa le stesse scrivendo in questo
+          preciso istante.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          In alto, tre sigilli — una spada, una moneta, una trama di stelle — restano fissi, incastonati nella pietra
+          come se fossero sempre stati lì. Sotto, tre righe di luce dorata:
+        </p>
+        <p class="italic text-indigo-200 text-lg leading-relaxed mt-4 pl-4 border-l-2 border-indigo-600">
+          I Guardiani della Trama — <span class="text-white font-bold">690</span><br/>
+          Lo Scudo Radiante — <span class="text-white font-bold">610</span><br/>
+          Gli Sciocchi Fortunati — <span class="text-gray-500">480</span>
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          La terza riga non pulsa come le altre due. È immobile, opaca, quasi spenta — come una candela lasciata
+          bruciare troppo a lungo senza che nessuno se ne accorga.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — mentre la osservano</p>
+        <p class="text-sm text-gray-300">
+          Lascia che il gruppo faccia domande, tocchi la pietra, provi a chiedere a un passante. Le risposte della gente comune
+          sono vaghe e disinteressate: <em>"È sempre stata lì. Dicono che gli dèi la tengono d'occhio."</em> Nessuno sa
+          spiegare il meccanismo — semplicemente è così, dal Giorno dell'Annuncio. Questo è il momento in cui il party
+          collega finalmente la "bacheca classifica" di cui Vex parla con questo oggetto fisico.
+        </p>
+      </div>
+
+      <div class="bg-gray-900/60 border border-indigo-800/40 rounded p-4 mt-4">
+        <p class="text-xs font-bold text-indigo-400 uppercase mb-2">🎨 Prompt immagine (per generare il render della stele)</p>
+        <pre class="text-xs text-gray-400 whitespace-pre-wrap leading-relaxed">A tall obsidian-black obelisk of smooth, seamless stone standing in a torchlit
+medieval fantasy plaza at dusk, its surface etched with glowing golden runes
+that shift and rearrange like living script. Three thin channels of light —
+crimson, gold, and blue — spiral up from its base and converge near the top,
+where three faint divine sigils (a flaming sword, a smiling coin, a
+seven-star weave) hover embedded in the stone. Below them, carved guild
+names glow faintly with numeric totals, updating as if alive. A small
+crowd of townsfolk in medieval clothing watches from a respectful distance,
+some pointing, one merchant taking notes. The plaza is cobblestone, framed
+by a massive stone archway shimmering with a pale white veil of magic
+(a sealed dungeon entrance) in the background. Atmosphere: reverent,
+slightly eerie, impersonal bureaucratic divinity — not friendly, not cruel.
+Cinematic fantasy illustration, painterly digital art style, dramatic
+torchlight and cool blue ambient glow contrast, high detail, vertical
+composition, similar mood to Baldur's Gate 3 key art.</pre>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: SCIOCCHI FORTUNATI ==================== -->
+    <div id="sciocchi-fortunati" class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🎲</span> PARTE III: L'INDIFFERENZA DEGLI DÈI
+      </h2>
+
+      <div class="bg-yellow-900/30 border border-yellow-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          L'Annuncio degli Dèi lo aveva detto fin dall'inizio: <em>"Coloro che falliranno conosceranno la nostra
+          indifferenza."</em> Non punizione. Non fulmini. Tempus, Tymora e Mystra non hanno bisogno di vendicarsi
+          di cinque persone morte per un'ossessione alchemica — smettono semplicemente di guardare. Questo è il
+          momento in cui quella frase, finora solo lore, diventa qualcosa che i giocatori <em>vedono accadere</em>.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-yellow-300 mb-3">Il momento — se sono ancora davanti alla Stele</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Il momento ideale: proprio mentre il gruppo osserva la Stele del Mandato (Parte II), o poco dopo. Se la
+        sessione lo permette, falla accadere in scena — è molto più forte che raccontarla come notizia di seconda mano.
+      </p>
+
+      <div class="bg-black/50 border-l-4 border-yellow-500 p-6 my-4 rounded-r">
+        <p class="italic text-yellow-100 text-lg leading-relaxed">
+          Nessuno grida. Nessun lampo, nessun boato. La terza riga della Stele — <em>Gli Sciocchi Fortunati — 480</em> —
+          semplicemente smette di essere dorata. Il colore le esce dalle lettere come sabbia da un pugno chiuso,
+          lasciando dietro di sé una scritta grigia, poi grigio cenere, poi niente. In pochi secondi, dove c'erano
+          un nome e un numero, non resta che pietra nuda — la stessa superficie liscia e nera del resto dell'obelisco,
+          come se quella riga non fosse mai esistita.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          Nessuno tra la folla in piazza sembra accorgersene. Un paio di passanti proseguono senza voltarsi.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          È più silenzioso di qualsiasi cosa abbiate visto gli dèi fare finora. E per questo, forse, più agghiacciante.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-purple-300 mb-2">✨ Gli Dèi</p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Nessuna vendetta. Tymora si annoia di chi non gioca, non lo punisce. Tempus disprezza il disonore, non lo brucia.
+            Mystra osserva con curiosità clinica cosa ha causato il collasso di Kethrar, non con collera. Il "castigo"
+            è semplicemente aver smesso di contare. Se qualcuno chiede a un chierico o a Vex al prossimo Pianerottolo:
+            <em>"Non c'è stato nessun Sigillo Divino. Nessuna risposta. È tutto quello che significa."</em>
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-blue-300 mb-2">⚖️ Le Altre Gilde</p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Lo Scudo Radiante non gongola — Ser Aldric è troppo onorevole per farlo pubblicamente — ma Caelum lo dice
+            a chi vuole sentirlo: <em>"Una vittoria non pianificata è solo fortuna. L'ho sempre detto."</em> La Compagnia
+            del Dado Nero (Parte VI) nasce proprio da questo disastro: il caos non si è spaventato, ha raddoppiato la posta.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-green-300 mb-2">👥 I Cittadini</p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Gli Sciocchi Fortunati erano i beniamini della folla. Se il party passa vicino a <strong>The Lucky Shot</strong>
+            (l'ex taverna-quartier generale), trova monetine, dadi e piccoli fiori lasciati sul bancone e sul davanzale —
+            un lutto informale, non organizzato, di gente comune che li seguiva come si segue una squadra sportiva.
+            Qualcuno canta ancora una ballata improvvisata su Kessa nelle taverne vicine.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: STELE DELLE ALTRE CITTÀ ==================== -->
+    <div id="stele-altre-citta" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🕯️</span> PARTE IV: LA STELE DELLE ALTRE CITTÀ
+      </h2>
+
+      <div class="bg-red-950/30 border border-red-800/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Un secondo monumento, più piccolo e più scuro della Stele del Mandato, si trova ai margini della piazza —
+          quasi in ombra, come se non volesse essere il centro dell'attenzione. È di pietra grigia opaca, non nera
+          lucida, senza rune che scorrono in superficie. Da lontano sembra spenta. Non mostra nulla a chi la osserva
+          da distanza — <strong class="text-red-300">si attiva solo per chi si avvicina fino a toccarla o quasi</strong>,
+          proiettando un'immagine olografica visibile solo a chi è abbastanza vicino da vederla bene. Chi resta a
+          due passi non vede niente di più che pietra grigia.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando qualcuno si avvicina abbastanza da attivarla — pausa lunga dopo "la pietra si apre".</p>
+
+      <div class="bg-black/50 border-l-4 border-red-600 p-6 my-4 rounded-r">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          Da vicino, la pietra non è più grigia. È come se l'intera superficie fosse una finestra appannata,
+          e qualcosa dall'altra parte stesse aspettando che la puliate con lo sguardo.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          La pietra si apre — non fisicamente, ma come si apre l'acqua quando ci si immerge: un'immagine sospesa
+          a mezz'aria, semi-trasparente, visibile solo a chi è a un passo di distanza. Sette nomi di città,
+          disposti in cerchio. Sotto ognuno, righe di luce come quelle della Stele del Mandato — gilde, numeri,
+          stati.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Waterdeep è lì, tra le altre. I vostri stessi nomi, gli stessi numeri che avete appena visto.
+          Ma due delle sette città non mostrano solo numeri.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <div class="bg-gray-900/60 border-2 border-purple-800 rounded-lg p-5">
+          <p class="text-purple-300 font-bold mb-2">🕷️ Menzoberranzan — Lolth, Vhaeraun, Kiaransalee</p>
+          <div class="bg-black/40 border-l-4 border-purple-600 p-4 rounded-r text-sm">
+            <p class="italic text-purple-100 leading-relaxed">
+              L'immagine accanto al nome della città non è un numero. È una sagoma — translucida, tremolante come
+              fumo, ma inequivocabile: figure avvolte in fili argentei che pendono da un arco di pietra nera, immobili.
+              Non si vede sangue, non si vedono volti — solo forme e la certezza di cosa rappresentano. Una scritta
+              sottile, quasi un sussurro visivo più che leggibile: <em>"la debolezza è imperdonabile."</em>
+            </p>
+          </div>
+          <p class="text-purple-400 text-xs mt-3 italic">
+            Nota DM: dosa l'esplicitezza in base al tuo tavolo. La versione qui sopra è già "attutita" (sagome, non
+            dettagli anatomici) — puoi renderla ancora più astratta (solo la scritta, nessuna immagine) o lasciarla
+            così. Non serve mai andare oltre "sagome e silhouette".
+          </p>
+        </div>
+        <div class="bg-gray-900/60 border-2 border-blue-800 rounded-lg p-5">
+          <p class="text-blue-300 font-bold mb-2">⚡ Luskan — Talos, Beshaba, Mask</p>
+          <div class="bg-black/40 border-l-4 border-blue-600 p-4 rounded-r text-sm">
+            <p class="italic text-blue-100 leading-relaxed">
+              Qui l'immagine si muove — lampi silenziosi dentro una nuvola grigia, e sotto, sagome legate agli
+              alberi di navi che ondeggiano senza vento reale. La "voce" della visione non è udibile, ma qualcosa
+              nell'aria attorno alla stele vibra appena, come un tuono troppo lontano per sentirlo davvero.
+              Sembra quasi... festoso, dall'altra parte. Come se qualcuno stesse applaudendo.
+            </p>
+          </div>
+          <p class="text-blue-400 text-xs mt-3 italic">
+            Nota DM: la differenza di tono tra Menzoberranzan (rituale, silenzioso, quasi religioso) e Luskan
+            (spettacolo, rumore, quasi carnevalesco) è il punto — due modi diversi di essere crudeli, nessuno dei
+            due come Waterdeep.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — l'effetto voluto</p>
+        <p class="text-sm text-gray-300">
+          Il contrasto è il punto della scena: i tre dèi di Waterdeep spengono una riga in silenzio (Parte III).
+          Lolth e Talos ne fanno un monito pubblico e cruento. I giocatori dovrebbero uscire da questa stele con la
+          sensazione — mai dichiarata esplicitamente — che i loro dèi, per quanto indifferenti, sono comunque i più
+          "clementi" del lotto. Se chiedono a Vex al prossimo Pianerottolo, lui confermerà solo il fatto asettico:
+          <em>"Sette città. Sette mandati diversi. Il mio non è né il più severo né il più gentile. È soltanto il mio."</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: BANCO DELLE QUOTE ==================== -->
+    <div id="scommesse" class="bg-green-900/20 border border-green-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">💰</span> PARTE V: IL BANCO DELLE QUOTE
+      </h2>
+
+      <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Un vero banco fisico, di legno scuro e tela verde bottiglia, piazzato a pochi passi dal Velo stesso —
+          posizione scelta apposta perché chi scommette possa vedere con i propri occhi quando una gilda entra o
+          esce dal dungeon. Non è discreto: ha un'insegna, una lavagna con le quote aggiornate a gesso, e un piccolo
+          capannello di curiosi quasi sempre presente. Lo gestisce <strong class="text-green-300">Fennick "Tre Dita" Corvale</strong>,
+          un uomo magro con un sorriso troppo largo, parte del network di Silas ma formalmente indipendente
+          ("così, se qualcosa va storto, non è colpa sua" — parole di Silas).
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-green-300 mb-3">Come lo scoprono</h3>
+      <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r mb-6 text-sm">
+        <p class="italic text-green-100 leading-relaxed">
+          Silas, naturalmente — è il primo a intercettarli, o il primo a cui chiedono novità. Lo dice con un sorriso
+          che non si scusa di niente: <em>"Sai quanti soldi si muovono su di voi ogni settimana? No, sul serio,
+          chiedimelo. Perché ora lo sai anche tu, e non puoi più fingere di non saperlo."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-6">
+        <p class="text-sm font-bold text-yellow-400 mb-3">📊 Le quote — lavagna del Banco, aggiornate a oggi</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+                <th class="text-left pb-2 pr-4">Gilda</th>
+                <th class="text-center pb-2 px-4">All'inizio</th>
+                <th class="text-center pb-2 px-4">Oggi</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr>
+                <td class="py-2 pr-4 font-bold text-purple-300">I Guardiani della Trama</td>
+                <td class="py-2 px-4 text-center text-gray-500">3 a 1 contro</td>
+                <td class="py-2 px-4 text-center text-green-400 font-bold">1.5 a 1 favoriti</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 font-bold text-blue-300">Lo Scudo Radiante</td>
+                <td class="py-2 px-4 text-center text-gray-500">2 a 1 favoriti</td>
+                <td class="py-2 px-4 text-center text-gray-300">2 a 1 favoriti</td>
+              </tr>
+              <tr class="opacity-50">
+                <td class="py-2 pr-4 font-bold text-red-400">Gli Sciocchi Fortunati</td>
+                <td class="py-2 px-4 text-center text-gray-500">5 a 1 contro</td>
+                <td class="py-2 px-4 text-center text-red-400">ritirati dal tabellone</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 font-bold text-orange-300">Compagnia del Dado Nero</td>
+                <td class="py-2 px-4 text-center text-gray-500">—</td>
+                <td class="py-2 px-4 text-center text-gray-400">10 a 1 contro (nuovi)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-gray-500 text-xs mt-3 italic">
+          Un dettaglio da dare se chiedono: Fennick ha perso una piccola fortuna quando Riven ha chiuso Kethrar con
+          la magia selvaggia proprio nel round in cui aveva già pagato chi aveva puntato sullo Scudo Radiante come
+          "primi al Piano 3". Se lo incontrano, potrebbe scherzarci sopra con un misto di rancore e ammirazione.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-green-300 mb-3">L'avvicinamento a Valoris</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Non subito all'arrivo — lascia respirare le stele prima. Il momento giusto è quando il gruppo si sta
+        allontanando dalla piazza, magari verso il quartier generale.
+      </p>
+      <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r text-sm">
+        <p class="italic text-green-100 leading-relaxed">
+          Fennick si materializza al fianco di Valoris con la naturalezza di chi lo fa da anni, anche se è la prima
+          volta che si parlano. <em>"Capitano. Un minuto, se permetti."</em> Non aspetta il permesso. <em>"Non ti sto
+          chiedendo di perdere. Ti sto chiedendo di... respirare un po' più lentamente, all'inizio del prossimo
+          Ecosistema. Le prime due settimane, diciamo. Nessuno se ne accorgerebbe — tranne me, e io sarei molto,
+          molto grato."</em>
+        </p>
+        <p class="italic text-green-100 leading-relaxed mt-2">
+          Se Valoris chiede quanto: <em>"Duecento monete d'oro subito. E se il mio banco tiene botta grazie a voi,
+          un altro pagamento a fine Ecosistema. Nessuno saprà mai che sei stato tu a decidere il ritmo — sarà solo
+           'prudenza tattica'."</em>
+        </p>
+      </div>
+      <p class="text-gray-500 text-xs mt-3 italic">
+        Nota DM: Valoris è "onesto fino alla rigidità" — questa non è una tentazione economica banale, è un affronto
+        al suo codice. Lascia che il giocatore reagisca come vuole; Fennick non insiste se rifiutato, si defila con
+        garbo (<em>"Capito. Peccato. In bocca al lupo comunque, sinceramente."</em>) e resta un NPC riutilizzabile,
+        non un rivale permanente.
+      </p>
+    </div>
+
+    <!-- ==================== PARTE VI: COMPAGNIA DEL DADO NERO ==================== -->
+    <div id="dado-nero" class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🎲</span> PARTE VI: LA COMPAGNIA DEL DADO NERO
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non prende solo gli scarti degli Sciocchi Fortunati. È un contenitore per gli avventurieri di seconda
+          scelta di tutta Waterdeep — comprese le riserve mai chiamate di una gilda morta, e i membri di altre gilde
+          rimasti indietro dopo un errore. Sede: la vecchia taverna <strong>The Lucky Shot</strong>, ancora aperta al
+          pubblico, ora con un'insegna aggiunta sotto quella originale.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-orange-300 mb-3">Guildmaster — non combattente</h3>
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4 mb-6">
+        <p class="font-bold text-orange-200">Dorin "Il Libro" Hask</p>
+        <p class="text-xs text-gray-500 italic mb-2">Mezz'orco, ex-contabile del Lucky Shot</p>
+        <p class="text-sm text-gray-300">
+          Non ha mai messo piede nel dungeon — gestiva i conti e il bancone mentre Kessa guidava la squadra.
+          Sopravvive al disastro proprio perché non c'era. Raccoglie i pezzi con un misto di lutto e determinazione
+          pragmatica: <em>"Non posso riportarli indietro. Posso fare in modo che quello che hanno costruito non muoia
+          con loro."</em>
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-orange-300 mb-3">Squadra principale</h3>
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+              <th class="text-left pb-2 pr-4">Nome</th>
+              <th class="text-left pb-2 px-4">Provenienza</th>
+              <th class="text-left pb-2 px-4">Ruolo</th>
+              <th class="text-left pb-2 pl-4">Nota</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/60 text-gray-300">
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Rooks Fenmarsh</td>
+              <td class="py-2 px-4 text-gray-400">Squadra B / Monete Fortunate (defezione dai Guardiani)</td>
+              <td class="py-2 px-4 text-gray-400">Ladro — leader/scout</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Il recruiter di Thalio. Finalmente titolare.</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Mira Swiftfoot</td>
+              <td class="py-2 px-4 text-gray-400">Defezione dallo Scudo Radiante</td>
+              <td class="py-2 px-4 text-gray-400">Ladra (Arcane Trickster) — utility</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Mai davvero a suo agio tra i rigidi.</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Barda Once-Silver</td>
+              <td class="py-2 px-4 text-gray-400">Riserva Sciocchi Fortunati</td>
+              <td class="py-2 px-4 text-gray-400">Guerriera — tank</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Addestrata da Grom. Colpa del sopravvissuto.</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Fenn Cindertongue</td>
+              <td class="py-2 px-4 text-gray-400">Riserva Sciocchi Fortunati</td>
+              <td class="py-2 px-4 text-gray-400">Stregone/Warlock — caster</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Eredita pezzi del patto di Whisper, non li capisce ancora.</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Toz "Le Mani" Varren</td>
+              <td class="py-2 px-4 text-gray-400">Freelance, nuovo in città</td>
+              <td class="py-2 px-4 text-gray-400">Chierico minore di Waukeen — support</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Crede nei margini di profitto, non in Tymora.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-bold text-orange-300 mb-3">La scena — Rooks e Thalio</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Ambientazione: magazzino equipaggiamento, mensa, o cortile d'addestramento dei Guardiani — uno spazio
+        condiviso della gilda, non un luogo neutro. Non è un incontro casuale se è Rooks a cercarlo.
+      </p>
+
+      <div class="bg-black/50 border-l-4 border-orange-500 p-6 my-4 rounded-r">
+        <p class="italic text-orange-100 text-lg leading-relaxed">
+          <em>"Guarda chi si vede."</em> Rooks non ha più l'amarezza sorda di un anno fa — ha l'energia nervosa di
+          chi ha appena firmato qualcosa di importante. <em>"Il Dado Nero mi vuole in squadra principale. Vera
+          squadra, non riserva che pulisce le latrine."</em> Una pausa. <em>"E io voglio te."</em>
+        </p>
+        <p class="italic text-orange-100 text-lg leading-relaxed mt-4">
+          Non aspetta la reazione. <em>"Non per fartela pagare. O — non solo. Sei l'unico di noi che ha visto
+          l'Ecosistema fino in fondo. Vale più di qualsiasi cristallo che potremmo portare su."</em> Tira fuori un
+          rotolo di pergamena, già sigillato. <em>"Silas ti ha scelto una volta. Stavolta scelgo io."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4 mt-4 mb-4">
+        <p class="text-sm font-bold text-yellow-400 mb-2">📜 Il contratto — cifre concrete, non improvvisare</p>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>• <strong class="text-white">800 MO</strong> di "buonuscita" alla firma</li>
+          <li>• Posto fisso in squadra principale del Dado Nero (Rooks come co-leader, non subordinato)</li>
+          <li>• Una quota del futuro Favore Divino del Dado Nero convertito in MO, oltre allo stipendio base</li>
+        </ul>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-3 text-xs">
+          <p class="text-green-400 font-bold mb-2">Se accetta (o considera seriamente)</p>
+          <p class="text-gray-300 leading-relaxed">
+            Silas lo scopre rapidamente (il suo network non perde nulla) e non la prende come un tradimento personale
+            — piuttosto come una lezione di mercato: <em>"Tutto ha un prezzo. Bentornato alla lezione, ragazzo."</em>
+            Serath potrebbe intervenire per trattenerlo con un'offerta rivale. Ottima leva per sviluppi futuri sulla
+            "compravendita di avventurieri" come meccanica ricorrente della città.
+          </p>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-3 text-xs">
+          <p class="text-red-400 font-bold mb-2">Se rifiuta</p>
+          <p class="text-gray-300 leading-relaxed">
+            Rooks non la prende bene, ma non è più il rancore cieco di un anno fa — è delusione più adulta:
+            <em>"Certo. Perché dovresti. Sei tu quello che ha vinto."</em> Lascia la porta aperta per il futuro,
+            non chiudere questo NPC — può tornare in Ecosistema 2 come rivale diretto sul campo.
+          </p>
+        </div>
+        <div class="bg-blue-900/20 border border-blue-700/40 rounded-lg p-3 text-xs">
+          <p class="text-blue-400 font-bold mb-2">Se negozia / prende tempo</p>
+          <p class="text-gray-300 leading-relaxed">
+            Rooks concede qualche giorno — "fino a quando scendete di nuovo" — ma non all'infinito. Buon gancio per
+            far scoprire al party quanto sia normale, ora, che le gilde si contendano gli avventurieri altrui: il seme
+            della compravendita non ha bisogno che Thalio accetti per essere piantato, basta che l'offerta sia reale
+            e pubblica in gilda.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: COMMERCIO DEI CRISTALLI ==================== -->
+    <div id="cristalli" class="bg-cyan-900/20 border border-cyan-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-cyan-400">💎</span> PARTE VII: IL COMMERCIO DEI CRISTALLI
+      </h2>
+
+      <div class="bg-cyan-900/30 border border-cyan-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Il Sigillo Divino limita il commercio in entrata ai "beni essenziali" — quasi certamente vale anche in
+          uscita: <strong class="text-cyan-300">i cristalli non possono lasciare Waterdeep finché il Sigillo non si apre</strong>.
+          Questo non li rende inutili — li rende <em>speculativi</em>. I nobili di Sea Ward non li comprano per usarli
+          ora, li comprano come investimento per il giorno in cui la città si riaprirà e potranno rivenderli a
+          mercanti da fuori. Sono unici, magici, e non replicabili — la scarsità reale li fa schizzare molto oltre
+          il valore "da dungeon" che Vex offre dentro il mandato.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+              <th class="text-left pb-2 pr-4">Materiale</th>
+              <th class="text-center pb-2 px-4">Vex (dentro il dungeon)</th>
+              <th class="text-center pb-2 px-4">Mercato legale (Thea, tassato)</th>
+              <th class="text-center pb-2 pl-4">Mercato nero (Silas)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/60 text-gray-300">
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Cristallo Grande</td>
+              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon (Parte VIII, ecosistema-1-piano-3)</td>
+              <td class="py-3 px-4 text-center text-cyan-300 font-bold">3.000–4.000 MO</td>
+              <td class="py-3 px-4 text-center text-red-300 font-bold">5.000+ MO</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Cristallo Medio</td>
+              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon</td>
+              <td class="py-3 px-4 text-center text-cyan-300">800–1.200 MO</td>
+              <td class="py-3 px-4 text-center text-red-300">1.500 MO</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Frammento di Cristallo Ambrato</td>
+              <td class="py-3 px-4 text-center text-gray-500">~80–120 MO (a peso, da Vex)</td>
+              <td class="py-3 px-4 text-center text-cyan-300">400–600 MO</td>
+              <td class="py-3 px-4 text-center text-red-300">800–1.000 MO</td>
+            </tr>
+            <tr class="opacity-60">
+              <td class="py-3 pr-4 text-gray-400">Cristalli Piccoli/Minuscoli</td>
+              <td class="py-3 px-4 text-center text-gray-500" colspan="3">restano valuta interna del dungeon — nessun mercato esterno, non ne vale la pena</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — canale legale vs mercato nero</p>
+        <p class="text-sm text-gray-300">
+          <strong class="text-white">Thea Ironhand</strong> (quartiermastro dei Guardiani) è il canale legale: prezzo
+          più basso, ma tracciato, tassato dalla gilda (una percentuale finisce nel budget comune) e sicuro. <strong
+          class="text-white">Silas</strong> offre di più proprio perché è sottobanco — nessuna tassa di gilda, ma
+          rischio reale se le autorità cittadine (o Serath) lo scoprono. Stesso schema morale del punto sulla
+          compravendita di avventurieri: soldi veloci contro lealtà istituzionale. Buona leva per differenziare le
+          scelte dei singoli giocatori.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VIII: PAUSA FORZATA ==================== -->
+    <div id="pausa" class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-gray-400">⏸️</span> PARTE VIII: LA PAUSA FORZATA
+      </h2>
+
+      <div class="bg-gray-700/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non è una scelta dei giocatori — è una regola del mandato divino. Il Gioco è multi-città e gli dèi vogliono
+          spettacolo pacato, non un distacco netto: chi chiude un Ecosistema entra in un periodo di "consolidamento"
+          di <strong class="text-white">7 giorni</strong> prima che il blocco successivo si apra per tutti.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Se chiedono a Vex, o se qualcuno tenta di rientrare subito nel dungeon:</p>
+      <div class="bg-black/40 border-l-4 border-gray-500 p-4 rounded-r text-sm mb-6">
+        <p class="italic text-gray-200 leading-relaxed">
+          "Il mandato non apre il blocco successivo finché il campo non si riequilibra." Nessuna emozione nella voce.
+          "Sette giorni. Non prima."
+        </p>
+      </div>
+
+      <div class="bg-blue-900/20 border border-blue-700/30 rounded p-4">
+        <p class="text-sm font-bold text-blue-300 mb-2">⚖️ Lo Scudo Radiante chiude Kethrar</p>
+        <p class="text-sm text-gray-300">
+          Da annunciare quando è narrativamente comodo (non necessariamente subito): poco dopo l'arrivo dei Guardiani
+          in città, arriva voce — dalla Stele, da Vex al prossimo Pianerottolo, o da un passante — che anche lo
+          Scudo Radiante ha completato l'Ecosistema 1, senza perdite. Sono la seconda gilda a farlo. La Compagnia del
+          Dado Nero resta l'unica ancora al Piano 1: la pausa di 7 giorni le dà una finestra reale per rimettersi in
+          corsa prima che i Guardiani e lo Scudo Radiante scendano all'Ecosistema 2.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== RIEPILOGO ==================== -->
+    <div id="riepilogo" class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• <strong class="text-white">Tempo trascorso:</strong> ~4 giorni dentro il dungeon. La città non è cambiata — lo sguardo del party sì.</li>
+        <li>• <strong class="text-white">Stele del Mandato:</strong> Guardiani 690, Scudo Radiante 610, Sciocchi Fortunati si spegne in scena davanti a loro.</li>
+        <li>• <strong class="text-white">Stele delle Altre Città:</strong> proiezione olografica solo a distanza ravvicinata — Menzoberranzan e Luskan mostrano punizioni esemplari, Waterdeep no.</li>
+        <li>• <strong class="text-white">Banco delle Quote:</strong> Fennick Corvale, davanti al Velo, quote in tabella — avvicina Valoris con un'offerta di corruzione soft.</li>
+        <li>• <strong class="text-white">Compagnia del Dado Nero:</strong> Dorin Hask al comando gestionale, Rooks Fenmarsh offre a Thalio 800 MO + quota Favore per unirsi.</li>
+        <li>• <strong class="text-white">Cristalli:</strong> valore esterno molto più alto del previsto — Cristallo Grande 3.000-5.000+ MO, doppio canale legale/nero.</li>
+        <li>• <strong class="text-white">Pausa forzata:</strong> 7 giorni di mandato. Scudo Radiante chiude Kethrar poco dopo il vostro arrivo — resta solo il Dado Nero al Piano 1.</li>
+      </ul>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-9" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 9 - Sangue sulla Sabbia
+      </a>
+      <a href="/dm/progresso-gilde" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Progresso Gilde
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
