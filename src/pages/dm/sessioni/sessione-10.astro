@@ -75,7 +75,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
     <!-- ==================== PARTE I: ARRIVO ==================== -->
     <div id="arrivo" class="bg-gray-800/30 border border-gray-700 rounded-lg p-8 mb-8">
       <h2 class="text-3xl font-bold mb-6 text-center">
-        <span class="text-gray-400">🏙️</span> PARTE I: L'ARRIVO — QUANTO TEMPO È PASSATO
+        <span class="text-gray-400">🏙️</span> PARTE I: L'ARRIVO — UNA CITTÀ CAMBIATA IN 4 GIORNI
       </h2>
 
       <div class="bg-gray-700/40 border border-gray-600 rounded p-4 mb-6">
@@ -83,10 +83,10 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <p class="text-sm text-gray-300 leading-relaxed">
           Contando i riposi lunghi effettivamente presi (uno tra Piano 1 e Piano 2, uno al primo Pianerottolo, uno al secondo)
           più il tempo di esplorazione e la permanenza ai due Pianerottoli, il party è stato dentro al dungeon
-          <strong class="text-white">circa 4 giorni</strong> — non settimane. La città non ha avuto il tempo di trasformarsi:
-          quello che segue in questa sessione (le stele, il banco delle quote, il Dado Nero) esisteva già in forma nascente,
-          semplicemente il party non aveva mai avuto motivo di guardarlo con attenzione. Non serve inventare grandi cambiamenti
-          urbani — la novità è nello sguardo, non nella città.
+          <strong class="text-white">circa 4 giorni</strong> — non settimane. Ma per una città sigillata sotto una cupola
+          divina, senza notizie dall'esterno, con l'unica fonte di speranza reale che sono le gilde nel dungeon, 4 giorni
+          bastano e avanzano per un cambiamento visibile: la piazza davanti al Velo è più piena, più rumorosa, più
+          carica di attesa di quanto il party l'abbia mai vista. Non è la stessa città che hanno lasciato.
         </p>
       </div>
 
@@ -94,16 +94,40 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 
       <div class="bg-black/50 border-l-4 border-blue-500 p-6 my-4 rounded-r">
         <p class="italic text-blue-100 text-lg leading-relaxed">
-          Il Velo cede alle vostre spalle, e la luce cambia.
+          Il Velo cede alle vostre spalle, e il rumore vi travolge prima ancora della luce.
         </p>
         <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
-          Non è l'alba né il tramonto — è pomeriggio, un pomeriggio qualunque, con quella luce piatta e generosa che
-          non sembra sapere cosa avete passato per guadagnarvela. Piazza dell'Arco vi accoglie con lo stesso rumore
-          di sempre: venditori, passi, un cane che abbaia da qualche parte. Quattro giorni, e la città non ha notato
-          la vostra assenza più di quanto noterebbe una nuvola che passa.
+          Piazza dell'Arco non è la piazza che avete lasciato. C'è il triplo della gente di quattro giorni fa —
+          forse più. Bancarelle nuove, tirate su in fretta, vendono nastri nei colori delle gilde, ciondoli a forma
+          di scudo o di dado, focacce a forma di moneta sorridente. Qualcuno grida i nomi dei propri cari appena
+          intravede sagome emergere dal Velo, prima ancora di capire chi siete davvero. Una donna anziana con un
+          fazzoletto giallo al collo si sporge sulle punte dei piedi, poi si accascia di delusione quando realizza
+          che non siete chi aspettava.
         </p>
         <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
-          Ma la piazza, questa volta, vi restituisce lo sguardo. Perché per la prima volta vi fermate a guardarla davvero.
+          C'è un'energia nell'aria che non avevate mai sentito qui — non festa, non paura: <em>attesa</em>. Come se
+          l'intera città avesse trattenuto il fiato per giorni, contando le ore, chiedendosi se qualcuno tornerà a
+          dire che la cupola sopra le loro teste ha finalmente un termine.
+        </p>
+        <p class="italic text-blue-100 text-lg leading-relaxed mt-4">
+          Poi qualcuno vi riconosce — <em>"I Guardiani! Sono i Guardiani della Trama!"</em> — e per un istante siete
+          il centro della piazza. Domande arrivano da ogni direzione, sovrapposte, quasi impossibili da distinguere:
+          <em>quanto manca? quanti piani restano? è vero che una gilda è morta? mio fratello è con lo Scudo Radiante,
+          l'avete visto?</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — cosa vuole sapere la gente</p>
+        <p class="text-sm text-gray-300">
+          Tre bisogni concreti, utili per improvvisare le voci della folla: <strong class="text-white">speranza di
+          liberazione</strong> (quanto siamo lontani dalla fine del Sigillo?), <strong class="text-white">notizie dei
+          propri cari</strong> (chi ha un parente in una delle tre gilde spera di vederlo tra chi risale — buona
+          occasione per un cammeo emotivo, anche solo un NPC che chiede a Valoris/Morgrim se hanno visto suo figlio
+          nello Scudo Radiante), <strong class="text-white">certezza che si può ancora vincere</strong> (la notizia
+          degli Sciocchi Fortunati, Parte III, ha scosso più di quanto la città voglia ammettere). L'aumento di folla
+          ha già attirato mercanti opportunisti — il Banco delle Quote di Fennick (Parte V) non è isolato, è solo il
+          più organizzato di una decina di bancarelle improvvisate nate nell'ultima settimana.
         </p>
       </div>
     </div>
@@ -115,15 +139,24 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       </h2>
 
       <div class="bg-indigo-900/30 border border-indigo-700/30 rounded p-4 mb-6">
-        <p class="text-sm font-bold text-indigo-400 mb-2">📖 Cos'è</p>
+        <p class="text-sm font-bold text-indigo-400 mb-2">📖 Come è nata — non è sempre stata lì</p>
         <p class="text-sm text-gray-300 leading-relaxed">
-          Un obelisco di pietra nera liscia, alto forse cinque metri, piantato al centro di Piazza dell'Arco a poca
-          distanza dal Velo. Rune dorate scorrono sulla sua superficie come inchiostro vivo, riordinandosi da sole.
-          Tre canali di luce — cremisi, oro, blu-argento — risalgono a spirale dalla base e convergono in alto, dove
-          tre sigilli divini (una spada fiammeggiante, una moneta sorridente, una trama di sette stelle) restano
-          incastonati nella pietra, sempre presenti. Sotto di loro, i nomi delle gilde di Waterdeep, con un numero
-          che pulsa piano — il Favore Divino totale. Mai il dettaglio per divinità: solo il totale, esattamente come
-          Vex non lo darebbe mai nel dungeon.
+          La Stele non esisteva prima del Gioco. È spuntata dal terreno di Piazza dell'Arco — letteralmente, pietra
+          che ha rotto il selciato — nel momento esatto in cui una gilda ha completato per la prima volta un intero
+          piano del dungeon: fu <strong class="text-blue-300">Lo Scudo Radiante</strong>, primi ad uscire dal Piano 1.
+          All'inizio era poco più di un cippo, alto quanto un uomo, con una sola riga incisa. Da allora è cresciuta
+          — letteralmente, in altezza e dettaglio — ogni volta che una gilda completava un piano o un intero
+          Ecosistema: un anello nuovo che si aggiunge al tronco, o una pergamena che continua a srotolarsi verso
+          l'alto. Oggi è alta cinque metri.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          Le iscrizioni più basse sono più vecchie: pietra opaca, lettere scolpite e ferme, la storia già scritta —
+          il primo completamento del Piano 1, poi del Piano 2. Salendo, la pietra si fa più levigata e le rune più
+          vive, fino alla fascia più alta, dove tre canali di luce — cremisi, oro, blu-argento — risalgono a spirale
+          e convergono nei tre sigilli divini (una spada fiammeggiante, una moneta sorridente, una trama di sette
+          stelle) sempre presenti in cima. Sotto di loro, i nomi delle gilde di Waterdeep con un numero che pulsa
+          piano — il Favore Divino totale, mai il dettaglio per divinità, esattamente come Vex non lo darebbe mai nel
+          dungeon. Quella fascia più alta è l'unica ancora "viva" — si riscrive da sola, in tempo reale.
         </p>
         <p class="text-sm text-gray-300 leading-relaxed mt-3">
           Non ha bisogno di nessuno che la aggiorni. Non c'è un impiegato, non c'è un banditore — è mandato puro,
@@ -132,18 +165,19 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando si avvicinano — pausa lunga prima di leggere i nomi.</p>
+      <p class="text-gray-400 text-sm mb-5 italic">📢 Leggere quando si avvicinano — pausa lunga prima di leggere i nomi. Per il party è la prima volta che la osservano da vicino: sono stati sottoterra per tutta la sua crescita più recente.</p>
 
       <div class="bg-black/50 border-l-4 border-indigo-400 p-6 my-4 rounded-r">
         <p class="italic text-indigo-100 text-lg leading-relaxed">
-          Non l'avevate mai notata con questa attenzione. Chi la guarda da lontano, ci passa vicino di sfuggita —
-          un obelisco nero tra i tanti monumenti della piazza. Ma da vicino, le rune sulla sua superficie non sono
-          decorazione. Si muovono. Si riordinano, lettera per lettera, come se qualcosa le stesse scrivendo in questo
-          preciso istante.
+          L'ultima volta che uno di voi l'ha guardata bene, era la metà di adesso. Ora vi arriva al petto solo alla
+          base — bisogna alzare lo sguardo per vedere dove finisce.
         </p>
         <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
-          In alto, tre sigilli — una spada, una moneta, una trama di stelle — restano fissi, incastonati nella pietra
-          come se fossero sempre stati lì. Sotto, tre righe di luce dorata:
+          Le rune più basse sono scolpite, ferme, quasi erose dal tempo — anni condensati in giorni, la prima volta
+          che qualcuno ha attraversato un piano intero e ne è uscito vivo. Salendo, la pietra cambia: più liscia, più
+          luminosa, come se ogni fascia successiva fosse stata scritta con più urgenza dell'ultima. In alto, tre
+          sigilli — una spada, una moneta, una trama di stelle — restano fissi, incastonati come se fossero sempre
+          stati lì. Sotto, tre righe di luce dorata, le uniche che si muovono davvero:
         </p>
         <p class="italic text-indigo-200 text-lg leading-relaxed mt-4 pl-4 border-l-2 border-indigo-600">
           I Guardiani della Trama — <span class="text-white font-bold">690</span><br/>
@@ -159,10 +193,12 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-4">
         <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — mentre la osservano</p>
         <p class="text-sm text-gray-300">
-          Lascia che il gruppo faccia domande, tocchi la pietra, provi a chiedere a un passante. Le risposte della gente comune
-          sono vaghe e disinteressate: <em>"È sempre stata lì. Dicono che gli dèi la tengono d'occhio."</em> Nessuno sa
-          spiegare il meccanismo — semplicemente è così, dal Giorno dell'Annuncio. Questo è il momento in cui il party
-          collega finalmente la "bacheca classifica" di cui Vex parla con questo oggetto fisico.
+          Lascia che il gruppo faccia domande, tocchi la pietra, chieda a un passante quanto sia cresciuta. La gente
+          comune la segue come si segue un termometro cittadino: <em>"L'ho vista spuntare io, quel giorno — era alta
+          così. Guardala adesso."</em> Qualcuno la misura ogni settimana, quasi per gioco, quasi per superstizione —
+          più cresce, più significa che qualcuno, da qualche parte, sta ancora vincendo. Questo è il momento in cui
+          il party collega finalmente la "bacheca classifica" di cui Vex parla con questo oggetto fisico — e capisce
+          che la città la guarda crescere da mesi, mentre loro erano sottoterra a farla crescere senza saperlo.
         </p>
       </div>
 
@@ -201,25 +237,31 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
         </p>
       </div>
 
-      <h3 class="text-xl font-bold text-yellow-300 mb-3">Il momento — se sono ancora davanti alla Stele</h3>
+      <h3 class="text-xl font-bold text-yellow-300 mb-3">Non è una notizia — è già un fatto acquisito</h3>
       <p class="text-gray-400 text-sm mb-4 italic">
-        Il momento ideale: proprio mentre il gruppo osserva la Stele del Mandato (Parte II), o poco dopo. Se la
-        sessione lo permette, falla accadere in scena — è molto più forte che raccontarla come notizia di seconda mano.
+        Il party lo sa già da Vex, ai piedi del Pianerottolo, ore prima ("sembra aver fallito" — Sessione 9). Per la
+        città sono passati alcuni giorni. Non trattarlo come un evento che accade ora davanti a loro: è un lutto già
+        in corso, statico, che loro incontrano fisicamente per la prima volta solo adesso che sono in superficie.
       </p>
 
       <div class="bg-black/50 border-l-4 border-yellow-500 p-6 my-4 rounded-r">
         <p class="italic text-yellow-100 text-lg leading-relaxed">
-          Nessuno grida. Nessun lampo, nessun boato. La terza riga della Stele — <em>Gli Sciocchi Fortunati — 480</em> —
-          semplicemente smette di essere dorata. Il colore le esce dalle lettere come sabbia da un pugno chiuso,
-          lasciando dietro di sé una scritta grigia, poi grigio cenere, poi niente. In pochi secondi, dove c'erano
-          un nome e un numero, non resta che pietra nuda — la stessa superficie liscia e nera del resto dell'obelisco,
-          come se quella riga non fosse mai esistita.
+          La terza riga della Stele è già così com'è quando arrivate: opaca, grigio cenere, spenta — non un nome che
+          si spegne sotto i vostri occhi, ma una cicatrice già rimarginata male. <em>Gli Sciocchi Fortunati — 480</em>,
+          leggibile ancora per contrasto, ma senza più luce propria. Nessuno in piazza la fissa più: è già diventata
+          normale, in questi pochi giorni, come una tomba che si passa ogni mattina senza più fermarsi a leggerla.
         </p>
         <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
-          Nessuno tra la folla in piazza sembra accorgersene. Un paio di passanti proseguono senza voltarsi.
+          Ai piedi della Stele, però, qualcosa non è normale. Un piccolo cumulo di fiori appassiti, monetine
+          incrociate a formare una X, un dado di legno intagliato a mano — offerte lasciate da chi non aveva altro
+          modo di dire addio. Una giovane gnoma, forse una quindicina d'anni, siede sul bordo della fontana più vicina
+          con un piccolo automa rotto in grembo — qualcosa che assomiglia a un giocattolo, forse un prototipo mai
+          finito. Non piange rumorosamente. Piange nel modo di chi lo fa da giorni e ha smesso di aspettarsi che
+          serva a qualcosa.
         </p>
         <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
-          È più silenzioso di qualsiasi cosa abbiate visto gli dèi fare finora. E per questo, forse, più agghiacciante.
+          Se qualcuno le si avvicina, alza appena gli occhi. <em>"Ero l'apprendista di Zax."</em> Una pausa, poi,
+          quasi vergognandosi della domanda: <em>"Voi li avete visti, laggiù? Prima che... "</em> Non finisce la frase.
         </p>
       </div>
 
@@ -295,31 +337,33 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
           <div class="bg-black/40 border-l-4 border-purple-600 p-4 rounded-r text-sm">
             <p class="italic text-purple-100 leading-relaxed">
               L'immagine accanto al nome della città non è un numero. È una sagoma — translucida, tremolante come
-              fumo, ma inequivocabile: figure avvolte in fili argentei che pendono da un arco di pietra nera, immobili.
-              Non si vede sangue, non si vedono volti — solo forme e la certezza di cosa rappresentano. Una scritta
-              sottile, quasi un sussurro visivo più che leggibile: <em>"la debolezza è imperdonabile."</em>
+              fumo, ma inequivocabile: due figure avvolte insieme in fili argentei spessi come corde, pendenti da un
+              arco di pietra nera tra due guglie. Non immobili — si muovono appena, un tremito lento che non è vento.
+              Attorno a loro, altre sagome più piccole, ferme, che sembrano guardare. Una scritta sottile, quasi un
+              sussurro visivo più che leggibile: <em>"la debolezza è imperdonabile."</em>
             </p>
           </div>
           <p class="text-purple-400 text-xs mt-3 italic">
-            Nota DM: dosa l'esplicitezza in base al tuo tavolo. La versione qui sopra è già "attutita" (sagome, non
-            dettagli anatomici) — puoi renderla ancora più astratta (solo la scritta, nessuna immagine) o lasciarla
-            così. Non serve mai andare oltre "sagome e silhouette".
+            Nota DM: dettaglio completo (chi erano, perché, la ragnatela lasciata due giorni) in
+            <a href="/dm/altre-citta-gilde" class="underline text-purple-300">Le Gilde delle Altre Città</a> — dosa
+            quanto raccontarne a voce in base al tavolo. La versione qui sopra basta per l'effetto in scena.
           </p>
         </div>
         <div class="bg-gray-900/60 border-2 border-blue-800 rounded-lg p-5">
           <p class="text-blue-300 font-bold mb-2">⚡ Luskan — Talos, Beshaba, Mask</p>
           <div class="bg-black/40 border-l-4 border-blue-600 p-4 rounded-r text-sm">
             <p class="italic text-blue-100 leading-relaxed">
-              Qui l'immagine si muove — lampi silenziosi dentro una nuvola grigia, e sotto, sagome legate agli
-              alberi di navi che ondeggiano senza vento reale. La "voce" della visione non è udibile, ma qualcosa
-              nell'aria attorno alla stele vibra appena, come un tuono troppo lontano per sentirlo davvero.
-              Sembra quasi... festoso, dall'altra parte. Come se qualcuno stesse applaudendo.
+              Qui l'immagine si muove — lampi silenziosi dentro una nuvola grigia stretta attorno a una nave
+              ancorata, e sotto, sagome legate a un albero maestro che si inclina lentamente mentre il resto dello
+              scafo si scompone tavola dopo tavola. La "voce" della visione non è udibile, ma qualcosa nell'aria
+              attorno alla stele vibra appena, come un tuono troppo lontano per sentirlo davvero. Sembra quasi
+              festoso, dall'altra parte — come una folla che applaude a un fuoco d'artificio.
             </p>
           </div>
           <p class="text-blue-400 text-xs mt-3 italic">
-            Nota DM: la differenza di tono tra Menzoberranzan (rituale, silenzioso, quasi religioso) e Luskan
-            (spettacolo, rumore, quasi carnevalesco) è il punto — due modi diversi di essere crudeli, nessuno dei
-            due come Waterdeep.
+            Nota DM: dettaglio completo (la tempesta contenuta, il tentativo di fuga fallito) in
+            <a href="/dm/altre-citta-gilde" class="underline text-blue-300">Le Gilde delle Altre Città</a> — stesso
+            principio: la versione qui sopra basta per l'effetto in scena.
           </p>
         </div>
       </div>
@@ -327,11 +371,14 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
       <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-6">
         <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — l'effetto voluto</p>
         <p class="text-sm text-gray-300">
-          Il contrasto è il punto della scena: i tre dèi di Waterdeep spengono una riga in silenzio (Parte III).
-          Lolth e Talos ne fanno un monito pubblico e cruento. I giocatori dovrebbero uscire da questa stele con la
-          sensazione — mai dichiarata esplicitamente — che i loro dèi, per quanto indifferenti, sono comunque i più
-          "clementi" del lotto. Se chiedono a Vex al prossimo Pianerottolo, lui confermerà solo il fatto asettico:
-          <em>"Sette città. Sette mandati diversi. Il mio non è né il più severo né il più gentile. È soltanto il mio."</em>
+          Il contrasto è il punto della scena: i tre dèi di Waterdeep hanno lasciato spegnere una riga in silenzio
+          (Parte III), senza spettacolo. Lolth e Talos ne fanno un monito pubblico e cruento. I giocatori dovrebbero
+          uscire da questa stele con la sensazione — mai dichiarata esplicitamente — che i loro dèi, per quanto
+          indifferenti, sono comunque i più "clementi" del lotto. Se chiedono a Vex al prossimo Pianerottolo, lui
+          confermerà solo il fatto asettico: <em>"Sette città. Sette mandati diversi. Il mio non è né il più severo
+          né il più gentile. È soltanto il mio."</em> Il pannello completo con tutte le 21 gilde e i relativi
+          punteggi — utile se i giocatori chiedono "come stiamo andando rispetto al resto del mondo" — è in
+          <a href="/dm/altre-citta-gilde" class="text-red-300 underline">Le Gilde delle Altre Città</a>.
         </p>
       </div>
     </div>
@@ -398,9 +445,15 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
           </table>
         </div>
         <p class="text-gray-500 text-xs mt-3 italic">
-          Un dettaglio da dare se chiedono: Fennick ha perso una piccola fortuna quando Riven ha chiuso Kethrar con
-          la magia selvaggia proprio nel round in cui aveva già pagato chi aveva puntato sullo Scudo Radiante come
-          "primi al Piano 3". Se lo incontrano, potrebbe scherzarci sopra con un misto di rancore e ammirazione.
+          Importante: da fuori nessuno sa cosa accada dentro il dungeon — nessun dettaglio tattico, nessun nome di
+          mostro, nessuna meccanica. Le scommesse esistono solo su fatti verificabili dall'esterno, al Velo stesso:
+          <strong class="text-gray-300">chi entra e chi esce, quando, e in quanti</strong>. Un dettaglio da dare se
+          chiedono: Fennick aveva puntato forte sullo Scudo Radiante come "primi a uscire dall'Ecosistema 1" — ha
+          perso quando i Guardiani sono emersi dal Velo prima di loro. Se lo incontrano, potrebbe scherzarci sopra
+          con un misto di rancore e ammirazione: <em>"Vi davo per spacconi sicuri di sé. Mi sono sbagliato sul
+          'spacconi', non sul resto."</em> Altre quote plausibili da citare al bisogno: quanti membri delle 5 di
+          ciascuna squadra usciranno vivi, quanti giorni impiegherà il Dado Nero per completare il solo Piano 1,
+          se qualcuno tornerà indietro a metà Ecosistema come già fatto da altri.
         </p>
       </div>
 
@@ -579,6 +632,17 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
         </p>
       </div>
 
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mb-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Due famiglie di materiale diverse — non confonderle</p>
+        <p class="text-sm text-gray-300">
+          I <strong class="text-white">Cristalli</strong> (Minuscolo → Piccolo → Medio → Grande) sono la valuta
+          generica del dungeon, quella che Vex accetta per pozioni e oggetti in ogni suo negozio (vedi tabelle in
+          Sessione 8). Il <strong class="text-amber-300">Frammento di Cristallo Ambrato</strong> è un materiale
+          completamente diverso e specifico: loot esclusivo di Kethrar (Piano 3), che Vex compra "a peso" separatamente
+          dal sistema a taglie. Le tabelle sotto li trattano come due righe distinte proprio per questo.
+        </p>
+      </div>
+
       <div class="overflow-x-auto mb-4">
         <table class="w-full text-sm">
           <thead>
@@ -592,7 +656,7 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
           <tbody class="divide-y divide-gray-800/60 text-gray-300">
             <tr>
               <td class="py-3 pr-4 font-bold text-white">Cristallo Grande</td>
-              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon (Parte VIII, ecosistema-1-piano-3)</td>
+              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon</td>
               <td class="py-3 px-4 text-center text-cyan-300 font-bold">3.000–4.000 MO</td>
               <td class="py-3 px-4 text-center text-red-300 font-bold">5.000+ MO</td>
             </tr>
@@ -603,18 +667,31 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
               <td class="py-3 px-4 text-center text-red-300">1.500 MO</td>
             </tr>
             <tr>
-              <td class="py-3 pr-4 font-bold text-white">Frammento di Cristallo Ambrato</td>
+              <td class="py-3 pr-4 font-bold text-white">Cristallo Piccolo</td>
+              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon</td>
+              <td class="py-3 px-4 text-center text-cyan-300">150–250 MO</td>
+              <td class="py-3 px-4 text-center text-red-300">350 MO</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Cristallo Minuscolo</td>
+              <td class="py-3 px-4 text-center text-gray-500">valuta dungeon</td>
+              <td class="py-3 px-4 text-center text-cyan-300">20–40 MO</td>
+              <td class="py-3 px-4 text-center text-red-300">60 MO</td>
+            </tr>
+            <tr class="border-t-2 border-amber-800">
+              <td class="py-3 pr-4 font-bold text-amber-300">Frammento di Cristallo Ambrato <span class="text-gray-500 text-xs font-normal">(solo da Kethrar)</span></td>
               <td class="py-3 px-4 text-center text-gray-500">~80–120 MO (a peso, da Vex)</td>
               <td class="py-3 px-4 text-center text-cyan-300">400–600 MO</td>
               <td class="py-3 px-4 text-center text-red-300">800–1.000 MO</td>
             </tr>
-            <tr class="opacity-60">
-              <td class="py-3 pr-4 text-gray-400">Cristalli Piccoli/Minuscoli</td>
-              <td class="py-3 px-4 text-center text-gray-500" colspan="3">restano valuta interna del dungeon — nessun mercato esterno, non ne vale la pena</td>
-            </tr>
           </tbody>
         </table>
       </div>
+      <p class="text-gray-500 text-xs italic mb-4">
+        I Minuscoli/Piccoli fuori dal dungeon valgono comunque poco rispetto allo sforzo di venderli uno a uno — la
+        maggior parte del gruppo continuerà a usarli con Vex. Chi porta su Cristalli Grandi o Frammenti Ambrati,
+        invece, sta seduto su una piccola fortuna.
+      </p>
 
       <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
         <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — canale legale vs mercato nero</p>
@@ -667,12 +744,13 @@ composition, similar mood to Baldur's Gate 3 key art.</pre>
     <div id="riepilogo" class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
       <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
       <ul class="space-y-2 text-sm text-gray-300">
-        <li>• <strong class="text-white">Tempo trascorso:</strong> ~4 giorni dentro il dungeon. La città non è cambiata — lo sguardo del party sì.</li>
-        <li>• <strong class="text-white">Stele del Mandato:</strong> Guardiani 690, Scudo Radiante 610, Sciocchi Fortunati si spegne in scena davanti a loro.</li>
-        <li>• <strong class="text-white">Stele delle Altre Città:</strong> proiezione olografica solo a distanza ravvicinata — Menzoberranzan e Luskan mostrano punizioni esemplari, Waterdeep no.</li>
-        <li>• <strong class="text-white">Banco delle Quote:</strong> Fennick Corvale, davanti al Velo, quote in tabella — avvicina Valoris con un'offerta di corruzione soft.</li>
+        <li>• <strong class="text-white">Tempo trascorso:</strong> ~4 giorni dentro il dungeon, ma la città è visibilmente cambiata — piazza sovraffollata, ansiosa, mercanti opportunisti, gente che chiede notizie dei propri cari.</li>
+        <li>• <strong class="text-white">Stele del Mandato:</strong> nata al primo completamento assoluto del Piano 1 (Scudo Radiante), cresciuta come un anello/pergamena a ogni traguardo. Oggi: Guardiani 690, Scudo Radiante 610, Sciocchi Fortunati già spenta e ferma a 480.</li>
+        <li>• <strong class="text-white">Sciocchi Fortunati:</strong> lutto già in corso da giorni, non un evento dal vivo — fiori, monetine, l'apprendista di Zax in lacrime ai piedi della Stele.</li>
+        <li>• <strong class="text-white">Stele delle Altre Città:</strong> proiezione olografica solo a distanza ravvicinata — Menzoberranzan e Luskan mostrano punizioni esemplari (dettaglio completo in <a href="/dm/altre-citta-gilde" class="text-amber-300 underline">Le Gilde delle Altre Città</a>), Waterdeep no.</li>
+        <li>• <strong class="text-white">Banco delle Quote:</strong> Fennick Corvale, davanti al Velo, quote solo su fatti osservabili dall'esterno (ordine d'uscita, superstiti, tempi) — avvicina Valoris con un'offerta di corruzione soft.</li>
         <li>• <strong class="text-white">Compagnia del Dado Nero:</strong> Dorin Hask al comando gestionale, Rooks Fenmarsh offre a Thalio 800 MO + quota Favore per unirsi.</li>
-        <li>• <strong class="text-white">Cristalli:</strong> valore esterno molto più alto del previsto — Cristallo Grande 3.000-5.000+ MO, doppio canale legale/nero.</li>
+        <li>• <strong class="text-white">Cristalli:</strong> valore esterno molto più alto del previsto, scala completa Minuscolo→Grande più il Frammento Ambrato (materiale separato, solo da Kethrar) — Cristallo Grande 3.000-5.000+ MO.</li>
         <li>• <strong class="text-white">Pausa forzata:</strong> 7 giorni di mandato. Scudo Radiante chiude Kethrar poco dopo il vostro arrivo — resta solo il Dado Nero al Piano 1.</li>
       </ul>
     </div>

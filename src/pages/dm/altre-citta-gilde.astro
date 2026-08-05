@@ -1,0 +1,297 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import DMAuthGuard from '../../components/dm/DMAuthGuard';
+import InfoBox from '../../components/InfoBox.astro';
+---
+
+<MainLayout title="Le Gilde delle Altre Città [DM] — D&D 5e Campaign">
+  <DMAuthGuard client:load>
+    <div class="max-w-[1440px] mx-auto p-6">
+
+      <!-- Header -->
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <a href="/dm" class="text-blue-400 hover:text-blue-300">← Dashboard DM</a>
+        </div>
+        <h1 class="text-4xl font-bold text-red-400 mb-1">🌍 Le Gilde delle Altre Città</h1>
+        <p class="text-slate-400 mt-2">
+          Pannello completo delle 21 gilde protagoniste del Gioco Divino nelle sette città sigillate — quello che la
+          <strong class="text-red-300">Stele delle Altre Città</strong> (vedi <a href="/dm/sessioni/sessione-10#stele-altre-citta" class="text-red-300 underline">Sessione 10</a>)
+          mostra a chi si avvicina abbastanza. I giocatori vedono solo nomi, stato e totale di Favore — mai il dettaglio
+          per divinità, stesso principio della Stele del Mandato.
+        </p>
+      </div>
+
+      <!-- Banner SOLO DM -->
+      <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-8 text-center">
+        <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+        <p class="text-red-300 text-sm mt-1">Le descrizioni delle punizioni sono materiale per il tuo uso narrativo, dosabile in base al tavolo — non testo da leggere verbatim senza filtro.</p>
+      </div>
+
+      <InfoBox type="dm" title="Come sono organizzate">
+        <p>
+          Ogni città ha tre gilde protagoniste, coerenti con il carattere delle sue tre divinità (vedi <a href="/dei/pantheon" class="text-purple-400 hover:text-purple-300">Il Pantheon Divino</a>).
+          Il Favore Divino è sulla stessa scala di Waterdeep — confrontabile riga per riga sulla Stele.
+        </p>
+      </InfoBox>
+
+      <!-- PANNELLO GLOBALE -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">📊 Pannello Globale — tutte le città</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border border-slate-700">
+            <thead>
+              <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700 bg-slate-800">
+                <th class="text-left py-2 pl-3 pr-4">Città</th>
+                <th class="text-left py-2 px-4">Dèi Patroni</th>
+                <th class="text-left py-2 px-4">Gilda</th>
+                <th class="text-center py-2 px-4">Stato</th>
+                <th class="text-center py-2 pr-3">Favore</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-800/60 text-gray-300">
+              <tr class="bg-purple-900/10">
+                <td class="py-2 pl-3 pr-4 font-bold text-purple-300" rowspan="3">Waterdeep</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Tempus · Tymora · Mystra</td>
+                <td class="py-2 px-4 font-semibold">I Guardiani della Trama</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">690</td>
+              </tr>
+              <tr class="bg-purple-900/10">
+                <td class="py-2 px-4">Lo Scudo Radiante</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">610</td>
+              </tr>
+              <tr class="bg-purple-900/10">
+                <td class="py-2 px-4">Compagnia del Dado Nero <span class="text-gray-500 text-xs">(ex Sciocchi Fortunati 💀)</span></td>
+                <td class="py-2 px-4 text-center text-orange-400">🟠 Ripartita da zero</td>
+                <td class="py-2 pr-3 text-center font-bold">0</td>
+              </tr>
+
+              <tr>
+                <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Mithral Hall</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Moradin · Clangeddin · Dumathoin</td>
+                <td class="py-2 px-4 font-semibold">I Martelli di Runa</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">640</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">La Vena Perduta</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">590</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">La Fucina Vivente</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (lenta)</td>
+                <td class="py-2 pr-3 text-center font-bold">410</td>
+              </tr>
+
+              <tr class="bg-red-950/10">
+                <td class="py-2 pl-3 pr-4 font-bold text-red-300" rowspan="3">Menzoberranzan</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Lolth · Vhaeraun · Kiaransalee</td>
+                <td class="py-2 px-4 font-semibold">La Casa dei Ragni d'Ossidiana</td>
+                <td class="py-2 px-4 text-center text-green-400">🥇 Leader globale</td>
+                <td class="py-2 pr-3 text-center font-bold">710</td>
+              </tr>
+              <tr class="bg-red-950/10">
+                <td class="py-2 px-4">I Servi del Vuoto</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">520</td>
+              </tr>
+              <tr class="bg-red-950/30">
+                <td class="py-2 px-4">I Tessitori di Seta Nera</td>
+                <td class="py-2 px-4 text-center text-red-400">💀 Eliminata — punizione esemplare</td>
+                <td class="py-2 pr-3 text-center font-bold text-red-400">—</td>
+              </tr>
+
+              <tr>
+                <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Myth Drannor</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Corellon · Sehanine · Hanali</td>
+                <td class="py-2 px-4 font-semibold">I Canti dell'Alba</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">600</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">I Sognatori di Luna</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">560</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">La Lama Ritrovata</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (lenta)</td>
+                <td class="py-2 pr-3 text-center font-bold">380</td>
+              </tr>
+
+              <tr>
+                <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Baldur's Gate</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Waukeen · Umberlee · Gond</td>
+                <td class="py-2 px-4 font-semibold">La Borsa d'Oro</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">650</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">Il Tributo delle Onde</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">590</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">I Meccanici della Marea</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (instabile)</td>
+                <td class="py-2 pr-3 text-center font-bold">470</td>
+              </tr>
+
+              <tr>
+                <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Candlekeep</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Oghma · Savras · Vecna</td>
+                <td class="py-2 px-4 font-semibold">Gli Occhi del Fato</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">680</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">I Custodi del Sussurro</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">540</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4">Gli Amanuensi Errantі</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (metodica)</td>
+                <td class="py-2 pr-3 text-center font-bold">500</td>
+              </tr>
+
+              <tr class="bg-blue-950/10">
+                <td class="py-2 pl-3 pr-4 font-bold text-blue-300" rowspan="3">Luskan</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Talos · Beshaba · Mask</td>
+                <td class="py-2 px-4 font-semibold">I Corsari della Folgore</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">630</td>
+              </tr>
+              <tr class="bg-blue-950/10">
+                <td class="py-2 px-4">L'Ombra di Luskan</td>
+                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 pr-3 text-center font-bold">560</td>
+              </tr>
+              <tr class="bg-blue-950/30">
+                <td class="py-2 px-4">La Ciurma del Tridente Spezzato</td>
+                <td class="py-2 px-4 text-center text-red-400">💀 Eliminata — punizione esemplare</td>
+                <td class="py-2 pr-3 text-center font-bold text-red-400">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-slate-500 text-xs mt-3 italic">
+          Nota: i Guardiani della Trama (690) sono terzi nella classifica globale, dietro solo alla Casa dei Ragni
+          d'Ossidiana di Menzoberranzan (710) e appena sopra la propria rivale interna. Buon dato da lasciar trapelare
+          se i giocatori chiedono "come stiamo andando rispetto al resto del mondo" — la Stele lo mostra comunque.
+        </p>
+      </section>
+
+      <!-- MENZOBERRANZAN DETTAGLIO -->
+      <section class="bg-slate-900 border-2 border-purple-800 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-purple-400 mb-2">🕷️ Menzoberranzan — La Fine dei Tessitori di Seta Nera</h2>
+        <p class="text-slate-400 text-sm mb-4 italic">Materiale completo per te — dosalo per il tavolo secondo le note in Sessione 10.</p>
+        <div class="text-slate-200 text-sm leading-relaxed space-y-3">
+          <p>
+            Erano una gilda piccola per gli standard drow — sette membri contando le riserve — ma erano arrivati
+            all'Ecosistema 1 con il punteggio più alto delle tre gilde di Menzoberranzan. Il loro errore non fu
+            tattico. Fu morale, ed è esattamente per questo che Lolth lo trovò intollerabile.
+          </p>
+          <p>
+            Alla prova finale del loro Ecosistema, il dungeon chiese loro — come chiede sempre, lì — di sacrificare
+            un membro per proseguire. <strong class="text-purple-300">Sirin Nightweb</strong>, la loro capogruppo,
+            si rifiutò di scegliere. Convinse gli altri a cercare un'alternativa, la trovarono, e la usarono. Vinsero
+            senza versare il sangue di nessuno dei propri.
+          </p>
+          <p>
+            Per Lolth fu un insulto pubblico. Non punisce chi perde — punisce chi si comporta come se la lealtà
+            valesse più della prova di forza che il tradimento richiede. Ogni Tessitore che scelga la pietà dice,
+            implicitamente, che il modo di Lolth non è necessario. Bestemmia.
+          </p>
+          <p>
+            La cattura avvenne in città, tre giorni dopo. Sirin e <strong class="text-purple-300">Fenthir</strong>,
+            il più giovane — quello che si era rifiutata di sacrificare — furono avvolti insieme nella Ragnatela del
+            Giudizio, eretta tra due guglie della piazza principale. Un incantesimo di silenziamento fu applicato
+            solo a loro due: la città doveva sentire il ronzio delle ragnatele che si stringevano, ma non le loro voci.
+          </p>
+          <p>
+            Le ragni-tessitrici si mossero lente per quasi due giorni. Non per fame — per teatro. La folla arrivava,
+            se ne andava, tornava, portava i bambini a vedere. Qualcuno lasciò offerte di ringraziamento a Lolth ai
+            piedi della Ragnatela, come si farebbe a un tempio.
+          </p>
+          <p class="text-purple-300 italic">
+            Nell'ultima ora, il silenziamento fu rimosso brevemente per rituale, non per grazia. Sirin mosse la testa
+            verso Fenthir. Non poteva parlare. Il movimento assomigliava a una scusa. Poi il silenzio scese di nuovo.
+          </p>
+        </div>
+      </section>
+
+      <!-- LUSKAN DETTAGLIO -->
+      <section class="bg-slate-900 border-2 border-blue-800 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-blue-400 mb-2">⚡ Luskan — La Fine della Ciurma del Tridente Spezzato</h2>
+        <p class="text-slate-400 text-sm mb-4 italic">Materiale completo per te — dosalo per il tavolo secondo le note in Sessione 10.</p>
+        <div class="text-slate-200 text-sm leading-relaxed space-y-3">
+          <p>
+            Erano pescatori e contrabbandieri diventati avventurieri per fame di gloria — il tipo di gilda che
+            Luskan produce in abbondanza. Il loro Ecosistema li aveva messi davanti a una scelta: attraversare una
+            voragine durante una tempesta magica di prova, o aspettare che passasse. Scelsero di aspettare.
+            Tatticamente sensato. Per Talos, imperdonabile.
+          </p>
+          <p>
+            Il capitano, <strong class="text-blue-300">Wrack Hollowmast</strong>, provò a giustificarsi: non era
+            paura, era prudenza. Le sacerdotesse di Talos non ascoltano distinzioni del genere — la prudenza è la
+            forma di codardia che disprezza di più, perché si maschera da virtù.
+          </p>
+          <p>
+            La punizione a Luskan non ha l'atmosfera rituale di Menzoberranzan. È uno spettacolo pubblico, quasi una
+            festa — bancarelle di cibo intorno al porto, gente che scommette su quanto dureranno. Wrack e i tre
+            superstiti furono legati agli alberi maestri della loro stessa nave, ancorata al centro della baia,
+            mentre i sacerdoti di Talos evocavano — non simulavano, evocavano davvero — una tempesta contenuta in un
+            raggio di poche centinaia di metri, visibile a tutta la città.
+          </p>
+          <p>
+            Non li ha uccisi in fretta. I fulmini colpivano vicino, non addosso — abbastanza da far bruciare il
+            legno, mantenerli coscienti mentre la nave si scomponeva sotto di loro, tavola dopo tavola, per ore.
+          </p>
+          <p>
+            A un certo punto <strong class="text-blue-300">Dessa</strong>, una dei quattro, riuscì a liberarsi un
+            braccio e provò a slegarsi. Fu allora che Beshaba intervenne, personalmente: la corda dell'ultimo nodo si
+            strinse da sola, mentre tre corde di salvataggio lanciate dalla riva si spezzavano in aria per "pura
+            sfortuna" — uno dei soccorritori, colpito da una scheggia impossibile, morì lui stesso, e la folla
+            applaudì credendo fosse parte dello spettacolo.
+          </p>
+          <p class="text-blue-300 italic">
+            Un fulmine più grande degli altri spezzò l'ultimo albero maestro. La nave sparì sotto l'acqua in pochi
+            secondi. Nessun corpo è mai stato recuperato. A Luskan questa storia si racconta ancora nelle taverne —
+            non come tragedia, ma come una delle più belle dell'anno.
+          </p>
+        </div>
+      </section>
+
+      <InfoBox type="dm" title="Le altre 17 gilde — una riga ciascuna, se serve improvvisare">
+        <ul class="space-y-1 text-sm">
+          <li><strong class="text-slate-200">I Martelli di Runa</strong> (Mithral Hall) — disciplina nanica, zero perdite, procedono come un orologio.</li>
+          <li><strong class="text-slate-200">La Vena Perduta</strong> (Mithral Hall) — cercatori di tesori, pazienti, seguono le vene di Dumathoin.</li>
+          <li><strong class="text-slate-200">La Fucina Vivente</strong> (Mithral Hall) — artefici perfezionisti, lenti ma solidissimi.</li>
+          <li><strong class="text-slate-200">La Casa dei Ragni d'Ossidiana</strong> (Menzoberranzan) — leader globale, vincono tradendosi a vicenda con metodo.</li>
+          <li><strong class="text-slate-200">I Servi del Vuoto</strong> (Menzoberranzan) — drow maschi ribelli, infiltrazione e furti audaci.</li>
+          <li><strong class="text-slate-200">I Canti dell'Alba</strong> (Myth Drannor) — bardi ed elfi, favoriti da Corellon e Hanali per la grazia in battaglia.</li>
+          <li><strong class="text-slate-200">I Sognatori di Luna</strong> (Myth Drannor) — usano visioni oniriche di Sehanine per anticipare il dungeon.</li>
+          <li><strong class="text-slate-200">La Lama Ritrovata</strong> (Myth Drannor) — provano a riportare gloria a Myth Drannor, il peso della storia li appesantisce.</li>
+          <li><strong class="text-slate-200">La Borsa d'Oro</strong> (Baldur's Gate) — sponsorizzati da Waukeen, ricchi ed equipaggiati al meglio.</li>
+          <li><strong class="text-slate-200">Il Tributo delle Onde</strong> (Baldur's Gate) — pagano tributi costanti a Umberlee, morali grigia ma efficaci.</li>
+          <li><strong class="text-slate-200">I Meccanici della Marea</strong> (Baldur's Gate) — automi e gadget di Gond, innovativi ma instabili.</li>
+          <li><strong class="text-slate-200">Gli Occhi del Fato</strong> (Candlekeep) — divinazione di Savras, quasi mai un passo falso.</li>
+          <li><strong class="text-slate-200">I Custodi del Sussurro</strong> (Candlekeep) — legati a Vecna, avanzano bene ma sabotano gli altri due nell'ombra.</li>
+          <li><strong class="text-slate-200">Gli Amanuensi Errantі</strong> (Candlekeep) — fedeli di Oghma, catalogano tutto, lenti ma meticolosi.</li>
+          <li><strong class="text-slate-200">I Corsari della Folgore</strong> (Luskan) — pura aggressività, favoriti da Talos.</li>
+          <li><strong class="text-slate-200">L'Ombra di Luskan</strong> (Luskan) — ladri di Mask, rubano scorciatoie (e forse Favore) ai rivali.</li>
+        </ul>
+      </InfoBox>
+
+      <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+        <a href="/dm/sessioni/sessione-10" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">← Sessione 10</a>
+        <a href="/dm/progresso-gilde" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">Progresso Gilde (Waterdeep) →</a>
+      </div>
+
+    </div>
+  </DMAuthGuard>
+</MainLayout>
