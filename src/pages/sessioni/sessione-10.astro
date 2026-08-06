@@ -1,0 +1,628 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 10 - Il Ritorno a Waterdeep"
+  description="Decima sessione: il ritorno in superficie dopo la morte di Kethrar, il Conto alla Rovescia sull'Arco, le Steli di Piazza dell'Arco, il tentativo di corruzione di Fennick e la prima crisi di fiducia con il Consiglio della Gilda"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">10</span>
+        <h1 class="text-4xl font-bold">Il Ritorno a Waterdeep</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 05/08/2026</span>
+        <span>⏱️ ~3h30</span>
+        <span>🎭 Città, Politica di Gilda e Rivelazioni</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Dopo la morte di Kethrar, i Guardiani della Trama risalgono finalmente in superficie e trovano
+        una Waterdeep diversa da quella che avevano lasciato: una folla in attesa, due monumenti mai
+        visti prima, un uomo che offre oro per farli rallentare — e una gilda che, per proteggerli o
+        per controllarli, ha appena chiuso le porte dietro di loro.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">Il ritorno in superficie, il Conto alla Rovescia sull'Arco, le due Steli di Piazza dell'Arco, il blocco della Gilda e la tesa cena del Consiglio</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Nuovi Volti</p>
+          <p class="text-gray-300">Fennick "Tre Dita" Corvale e il suo banco delle scommesse, Rooks e la Compagnia del Dado Nero, il "codice nero" di Silas</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Resta in Sospeso</p>
+          <p class="text-gray-300">Rooks in custodia alla Gilda, l'offerta del Dado Nero a Thalio, lo studio della mutazione di Riven, 7 giorni di pausa forzata prima dell'Ecosistema 2</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🕯️</span> PARTE I: L'ENIGMA PERDUTO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">I.</span> Il Loot di Kethrar
+          </h3>
+          <p class="leading-relaxed">
+            Prima di lasciare l'arena, il gruppo si divide quello che resta di Kethrar: un taccuino con
+            formule alchemiche (affidato a <strong class="text-purple-400">Fealer</strong>), due fiale di
+            un liquido verde non identificato e due frammenti di cristallo ambrato, oltre ai due cristalli
+            grandi già recuperati.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">II.</span> Tre Piattaforme, Troppo Tardi
+          </h3>
+          <p class="leading-relaxed">
+            Studiando la stanza, il gruppo nota tre gradini di pietra sormontati da simboli — due chiavi
+            incrociate, una bilancia, e uno identico a quello sulla copertina del tomo di Mystra che Vex
+            aveva loro affidato. Provano a posare il libro, le chiavi raccolte nei piani precedenti,
+            persino a salire loro stessi sulle piattaforme, sperando in un qualche tipo di attivazione.
+            Non succede nulla. È <strong class="text-yellow-400">Valoris</strong> a intuire, dopo un lungo
+            studio della stanza e dei segni lasciati dallo scontro, la verità: quei meccanismi erano
+            probabilmente attivi <em>durante</em> il combattimento contro Kethrar, pensati per premiare chi
+            li sapesse sfruttare nel pieno della battaglia. Ora che Kethrar è morto, si sono spenti per
+            sempre. Non è un enigma ancora da risolvere — è un'occasione già persa.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">III.</span> L'Ultimo Vex per l'Ecosistema 1
+          </h3>
+          <p class="leading-relaxed">
+            La scala a chiocciola scavata in fretta li porta al Terzo Pianerottolo: piccolo, spoglio,
+            senza fontana, un solo velo verso la superficie. Vex li aspetta già lì. <strong>"Ecosistema 1.
+            Completato,"</strong> dice, prima di aggiungere, con quel suo tono impassibile, che avrebbero
+            potuto ottenere di più se avessero risolto l'enigma delle piattaforme — ma che dovrebbero
+            comunque essere contenti. Riprende poi il tomo di Mystra e tutte le chiavi raccolte nei tre
+            piani: sono oggetti legati al mandato del dungeon, non possono lasciarlo, e sarebbero
+            comunque scomparsi dagli inventari anche senza il suo intervento. Restano solo i cristalli.
+            Confermati i sette giorni di pausa forzata e il fatto che sono, per ora, i primi ad aver
+            completato l'intero Ecosistema.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-blue-900/20 border border-blue-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-blue-400">🔔</span> PARTE II: IL CONTO ALLA ROVESCIA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-blue-400">I.</span> Sette
+          </h3>
+          <p class="leading-relaxed">
+            Il marchio dietro al collo brucia più forte del solito lungo tutta la salita. In cima, il velo
+            cede alle loro spalle e per un istante c'è solo silenzio. Poi l'Arco Divino reagisce: un
+            respiro di pietra, rune mai viste che si accendono disponendosi in un numero —
+            <span class="text-amber-300 font-bold not-italic">7</span> — e un rintocco di campana che si
+            propaga per tutta Waterdeep, con altre campane che rispondono in lontananza.
+          </p>
+          <div class="bg-black/50 border-l-4 border-blue-500 p-5 my-4 rounded-r">
+            <p class="italic text-blue-100 leading-relaxed">
+              Piazza dell'Arco non è la piazza che hanno lasciato. Il triplo della gente, bancarelle
+              nuove, nastri nei colori delle gilde. Qualcuno grida i nomi dei propri cari appena vede
+              sagome emergere dal velo. Poi qualcuno li riconosce: <em>"I Guardiani! I Guardiani della
+              Trama! Sono loro il Sette!"</em> — e in un istante sono il centro della piazza, sommersi da
+              domande sovrapposte da ogni direzione.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> tenta di alzare la voce per chiedere silenzio
+            — inutile, tra migliaia di persone. Il gruppo si fa scudo a vicenda e taglia dritto verso la
+            Gilda, scortato da una folla che continua a incalzarli con domande su quanto manchi, su chi
+            sia morto, su parenti scesi con lo Scudo Radiante.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🗿</span> PARTE III: LE STELE DI PIAZZA DELL'ARCO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">I.</span> La Stele del Mandato
+          </h3>
+          <p class="leading-relaxed">
+            Un obelisco di pietra nera che non esisteva quando sono scesi nel dungeon attira la loro
+            attenzione. Rune dorate scorrono sulla superficie; in alto, i tre sigilli divini; sotto,
+            tre righe di luce. <strong class="text-white">I Guardiani della Trama — 690.</strong> Lo Scudo
+            Radiante non ha ancora un numero, non essendo ancora risalito. <strong class="text-white">
+            Gli Sciocchi Fortunati — 480,</strong> ma la scritta non è illuminata come le altre due: è
+            spenta, di un grigio opaco che dice più di qualsiasi parola. Un passante spiega loro che è
+            "la stele del mandato, la classifica degli dei."
+          </p>
+          <p class="leading-relaxed">
+            Ai piedi della stele, un piccolo cumulo di fiori freschi, monetine incrociate a formare una X,
+            un dado di legno intagliato a mano. Una giovane gnoma piange in silenzio sul bordo di una
+            pietra vicina, un piccolo automa rotto in grembo. <strong class="text-orange-400">Thalio</strong>,
+            che riconosce nel nome della gilda scomparsa alcuni suoi ex compagni, chiede al Master se può
+            avvicinarsi e parlarle — ma non è il momento: resta un lutto che il gruppo osserva da fuori,
+            senza entrarci.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">II.</span> La Stele delle Altre Città
+          </h3>
+          <p class="leading-relaxed">
+            A pochi passi, un secondo monumento più piccolo e spento si attiva solo per chi si avvicina
+            a un passo di distanza. <strong class="text-orange-400">Thalio</strong> è il primo a
+            soffermarcisi: un'immagine sospesa a mezz'aria, sette città disposte in cerchio, ognuna con le
+            proprie gilde e i propri punteggi. Waterdeep è lì tra le altre. Ma due città non mostrano
+            solo numeri.
+          </p>
+          <div class="bg-black/40 border-l-4 border-purple-600 p-5 my-4 rounded-r">
+            <p class="italic text-purple-100 leading-relaxed">
+              A <strong>Menzoberranzan</strong>, una ragnatela di fili argentei con decine di figure
+              avvolte, che si muovono appena come bruchi in un bozzolo. Una voce senza suono, dentro la
+              testa: <em>"La debolezza è imperdonabile."</em> A <strong>Luskan</strong>, lampi silenziosi
+              e una nave che affonda lentamente, sagome legate all'albero maestro. L'aria intorno alla
+              stele vibra appena, quasi festosa — come un pubblico che applaude un fuoco d'artificio.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Le altre città (tra cui Mitral Hall, una città elfica, Baldur's Gate, Candlekeep) mostrano
+            solo nomi di gilde senza punteggio: nessuno lì ha ancora completato un intero ecosistema. In
+            totale, sei gilde nel mondo hanno già finito una prova come la loro, e tre sono già state
+            eliminate o distrutte.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-green-900/20 border border-green-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">💰</span> PARTE IV: L'OFFERTA DI FENNICK
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-green-400">I.</span> Duecento Monete per Respirare Più Lentamente
+          </h3>
+          <p class="leading-relaxed">
+            Mentre si allontanano dalla piazza, un uomo magro con un sorriso troppo largo si materializza
+            al fianco di <strong class="text-yellow-400">Valoris</strong>: <strong>Fennick "Tre Dita"
+            Corvale</strong>, gestore del banco delle scommesse cittadino, chiede un minuto in privato.
+          </p>
+          <div class="bg-black/40 border-l-4 border-green-500 p-4 rounded-r text-sm">
+            <p class="italic text-green-100 leading-relaxed">
+              Non chiede di perdere — solo di "respirare un po' più lentamente" all'inizio del prossimo
+              Ecosistema. Duecento monete d'oro subito, altre cento a fine Ecosistema se il suo banco
+              tiene botta grazie a loro.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            <strong class="text-yellow-400">Valoris</strong> non lo prende nemmeno in considerazione:
+            lo liquida in poche parole gelide, quasi arrivando a minacciarlo. Fennick si defila senza
+            insistere, promettendo di tornare "in un momento in cui sarà più riposato."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE V -->
+    <div class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🔒</span> PARTE V: SIGILLATI NELLA GILDA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Nessuno Esce
+          </h3>
+          <p class="leading-relaxed">
+            La Gilda li accoglie con un calore inedito — capo Gilda e Triumvirato si alzano in piedi per
+            farli sedere, come si fa con degli eroi. Ma quando <strong class="text-red-400">Morgrim</strong>
+            e <strong class="text-orange-400">Thalio</strong> tentano di uscire per andare a bere, due
+            guardie li fermano: ordine del Consiglio, nessuno può lasciare la Gilda per il momento.
+            <strong class="text-yellow-400">Valoris</strong> lo scopre e va direttamente da
+            <strong>Serath</strong>, il capo Gilda, a chiedere spiegazioni — non ottiene una vera
+            giustificazione immediata, solo la promessa che ne discuteranno tutti insieme più tardi.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> Rooks e la Compagnia del Dado Nero
+          </h3>
+          <p class="leading-relaxed">
+            Nei corridoi della Gilda, <strong>Rooks</strong> — un vecchio compagno della squadra di
+            riserva di <strong class="text-orange-400">Thalio</strong> — lo ferma. Non ha più il rancore
+            di un tempo: ha l'energia di chi ha appena firmato qualcosa di importante.
+          </p>
+          <div class="bg-black/50 border-l-4 border-orange-500 p-5 my-4 rounded-r">
+            <p class="italic text-orange-100 leading-relaxed">
+              <em>"Il Dado Nero mi vuole nella squadra principale. Vera squadra, non riserva."</em> Tira
+              fuori un rotolo di pergamena già sigillato. <em>"Sei l'unico di noi che ha visto
+              l'ecosistema fino in fondo. Silas ti ha scelto una volta. Stavolta ti scelgo io."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Il contratto offre 800 monete d'oro d'ingresso più una quota futura. <strong class="text-orange-400">
+            Thalio</strong> non accetta, ma non rifiuta nemmeno: prende tempo, chiede chi altro farebbe
+            parte della squadra, e decide di tenersi l'offerta in tasca — non per andarsene, ma come leva
+            da giocare con la propria Gilda. Rooks promette di tornare il giorno dopo per la risposta.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">III.</span> Voci in Taverna
+          </h3>
+          <p class="leading-relaxed">
+            Alla taverna della Gilda, <strong class="text-orange-400">Thalio</strong> offre da bere a
+            vecchie conoscenze e raccoglie informazioni senza svelare nulla del dungeon: la caduta degli
+            Sciocchi Fortunati ha sconvolto la città nel silenzio più totale (nessun segno divino, solo
+            l'assenza), e dal loro scioglimento è nata la <strong>Compagnia del Dado Nero</strong>,
+            finanziata dal ricco <strong>Dorin Hask</strong> (mai stato un avventuriero, solo un uomo
+            d'affari) e capitanata da Rooks, che sta reclutando a piene mani riserve di tutte le gilde.
+            Nessuno sa ancora se gli dèi accetteranno una terza gilda partecipante. Scopre anche che
+            Fennick fa parte della rete di <strong>Silas</strong>, e che aveva perso una fortuna
+            scommettendo sullo Scudo Radiante come primi a uscire dal Piano 1.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE VI -->
+    <div class="bg-purple-900/20 border border-purple-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">🕵️</span> PARTE VI: OMBRE NEL CONSIGLIO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">I.</span> Due Conversazioni Private
+          </h3>
+          <p class="leading-relaxed">
+            Prima di cena, <strong class="text-green-400">Riven</strong> raggiunge la sua maestra
+            <strong>Arianna</strong>, che gli prende il braccio cicatrizzato senza neanche chiedere
+            permesso. Le racconta tutto: la trasformazione in pianta durante uno scontro, l'immersione
+            nell'acqua ambrata per farlo tornare umano, l'esplosione magica, la cicatrice che da allora si
+            allarga, e l'incantesimo lanciato dopo con una potenza che non sa spiegare. Le dice anche di
+            aver toccato di nuovo l'acqua ambrata con <strong class="text-purple-400">Fealer</strong>, per
+            esperimento, fermandosi solo quando le venature hanno iniziato a correre verso il petto.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-400 p-5 my-4 rounded-r">
+            <p class="italic text-indigo-100 leading-relaxed">
+              <em>"Non ho mai visto un condotto di magia selvaggia assorbire qualcosa del genere. Di
+              solito si spegne, esplode. Ma dal tuo racconto, qualcosa è esploso ed è rimasto dentro.
+              Stai mutando. Non so quanto questo sia buono per la tua salute."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven, senza volerlo, le fa notare che sono le stesse identiche parole usate da Vex quando ha
+            osservato la sua cicatrice al Secondo Pianerottolo — coincidenza che lascia Arianna
+            visibilmente scossa. Chiede di tenerlo sotto osservazione per almeno un giorno e di studiare
+            insieme a lui e a Fealer, nei sette giorni di pausa, il liquido ambrato portato dal dungeon.
+          </p>
+          <p class="leading-relaxed">
+            Nel frattempo, <strong class="text-purple-400">Fealer</strong> si confida in privato con
+            <strong class="text-yellow-400">Valoris</strong>: non si fida ciecamente della Gilda e
+            vorrebbe tenere per sé alcune informazioni, in particolare l'esistenza del mercato di Vex, per
+            non dare vantaggi gratuiti alle altre gilde. Valoris capisce le sue ragioni ma propone una via
+            di mezzo: prima di parlare col Consiglio, il gruppo si riunisce da solo per decidere insieme
+            cosa condividere e cosa no.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">II.</span> Il Codice Nero
+          </h3>
+          <p class="leading-relaxed">
+            La cena del Consiglio si tiene con Serath, e i tre membri del Triumvirato — Magnus, Arianna e
+            Silas — trattati con un rispetto quasi cerimoniale: tutti in piedi finché il gruppo non si
+            siede. Serath si scusa per il blocco della Gilda, spiegando che la caduta degli Sciocchi
+            Fortunati ha scatenato in città un mercato di scommesse e compravendita di avventurieri che
+            rendeva rischioso lasciarli circolare liberamente, tanto più ora che anche lo Scudo Radiante è
+            rientrato.
+          </p>
+          <p class="leading-relaxed">
+            Ma durante la conversazione, <strong class="text-green-400">Riven</strong> e
+            <strong class="text-purple-400">Fealer</strong> notano <strong>Silas</strong> parlare
+            sottovoce a una spilla appuntata al bavero, e riescono a leggergli le labbra: <strong>
+            "Codice nero. Occupatevi di Rooks."</strong> Un ordine in codice per far tacere o trattenere
+            Rooks, dato in diretta durante la cena, per aver tentato di reclutare Thalio in un'altra gilda.
+            Notano anche Arianna voltarsi di scatto, come se avesse percepito lo stesso segnale.
+          </p>
+          <div class="bg-black/50 border-l-4 border-amber-500 p-5 my-4 rounded-r">
+            <p class="italic text-amber-100 leading-relaxed">
+              <strong class="text-yellow-400">Valoris</strong> lo affronta apertamente: se il Consiglio
+              prende decisioni che riguardano il gruppo — arrestare qualcuno, impedire loro di uscire —
+              vuole che il gruppo ne sia almeno informato, visto che sono loro a rischiare la vita nel
+              dungeon. Serath si irrigidisce, ribatte che la gestione della Gilda non è affar loro, che
+              trovare fuori luogo un simile sospetto è quasi un insulto. Alla fine ammette solo che Rooks
+              è "in custodia" in attesa di ulteriori decisioni, e chiude l'argomento con un secco
+              <em>"nessuno è insostituibile."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            <strong class="text-purple-400">Fealer</strong> tenta di smorzare i toni, presentando la
+            protesta di Valoris come un gesto a tutela del gruppo piuttosto che un'accusa. Valoris non è
+            del tutto convinto, ma lascia cadere l'argomento per il momento.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">III.</span> Cristalli, Debriefing e una Pausa di Sette Giorni
+          </h3>
+          <p class="leading-relaxed">
+            Il resto della cena è un debriefing più tranquillo: quasi cinque giorni passati nel dungeon,
+            nessun contatto con le altre gilde all'interno (esperienze parallele), la descrizione del
+            "custode" incontrato ai Pianerottoli (Vex, incapace di dare informazioni per mandato) e la
+            struttura a tre piani appena completata. <strong class="text-yellow-400">Valoris</strong>
+            mostra un cristallo raccolto: <strong>Silas</strong> lo valuta tra le 30 e le 60 monete d'oro
+            e chiede di vederne altri, ma Valoris frena — i cristalli sono la valuta del dungeon stesso,
+            necessaria per acquistare da Vex, e non tutti vanno ceduti alla Gilda. Si concorda un
+            compromesso: fondi e sponsor cittadini per l'equipaggiamento in superficie, cristalli riservati
+            per gli acquisti nel dungeon. Vengono anche fissati incontri separati con Magnus (tattiche di
+            combattimento) e Thea (equipaggiamento) per il giorno dopo.
+          </p>
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong> solleva anche l'offerta del Dado Nero come
+            leva per ottenere condizioni migliori dalla propria Gilda; <strong class="text-yellow-400">
+            Valoris</strong> preferirebbe invece investire ogni risorsa disponibile nell'equipaggiare
+            meglio tutto il gruppo, ricordando che delle tre squadre che hanno affrontato le prove, solo
+            due sono tornate. Chiude la serata un pensiero che Thalio si tiene per sé più che condividere
+            ad alta voce: se qualcuno ha già provato a corrompere uno di loro (come ha fatto Fennick con
+            Valoris), chi garantisce che qualcun altro nel gruppo non abbia già accettato?
+          </p>
+          <p class="leading-relaxed mt-4 text-gray-500 italic text-sm">
+            Sette giorni di pausa forzata prima di poter scendere all'Ecosistema 2. Fine sessione 10.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Sessione Interpretativa:</strong> Bonus base per sessioni senza combattimento, dove tutto il progresso passa dall'interpretazione e dalle decisioni — nessuno scontro questa volta, solo scelte, politica di gilda e roleplay
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Tutti i personaggi</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">PX Presenza</p>
+            <p class="text-green-300 font-bold">750 PX</p>
+          </div>
+          <div>
+            <p class="text-gray-400">PX Sessione Interpretativa</p>
+            <p class="text-amber-300 font-bold">750 PX</p>
+          </div>
+        </div>
+        <p class="text-center text-green-400 font-bold mt-3">Totale base: 1500 PX a testa</p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- VALORIS -->
+        <div class="bg-gradient-to-r from-yellow-900/40 to-amber-900/40 border-2 border-yellow-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">⚔️</span>
+            <h4 class="text-xl font-bold text-yellow-400">Valoris</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1900 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 400</p>
+              <p class="text-gray-300">
+                Ha respinto senza esitazione il tentativo di corruzione di Fennick, guidato quasi ogni
+                interazione col Consiglio della Gilda e portato avanti — da solo, contro le resistenze di
+                Serath — la battaglia per il diritto del gruppo a essere informato sulle decisioni che lo
+                riguardano, culminata nello scontro diretto sul "codice nero" contro Rooks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THALIO -->
+        <div class="bg-gradient-to-r from-orange-900/40 to-red-900/30 border-2 border-orange-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🗡️</span>
+            <h4 class="text-xl font-bold text-orange-400">Thalio</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1900 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 400</p>
+              <p class="text-gray-300">
+                Ha gestito con lucidità l'offerta di Rooks e del Dado Nero — né accettando né rifiutando,
+                trasformandola in leva per la propria Gilda — e raccolto in taverna, senza svelare nulla
+                del dungeon, tutte le informazioni sul collasso degli Sciocchi Fortunati e sulla nuova
+                compagnia rivale.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIVEN -->
+        <div class="bg-gradient-to-r from-green-900/30 to-teal-900/20 border-2 border-green-600/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🔥</span>
+            <h4 class="text-xl font-bold text-green-400">Riven</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1750 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Ha raccontato ad Arianna, senza filtri, tutta la sua trasformazione e la sua paura di
+                mutare in qualcosa che non controlla — un momento di vulnerabilità genuina — e ha
+                contribuito a scoprire il messaggio segreto di Silas leggendogli le labbra.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEALER -->
+        <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border-2 border-purple-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🌿</span>
+            <h4 class="text-xl font-bold text-purple-400">Fealer</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1750 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Ha portato al tavolo il tema della fiducia nella Gilda, spingendo Valoris a organizzare
+                una riunione di gruppo prima del Consiglio, e ha contribuito a intercettare il messaggio
+                segreto di Silas, oltre a mediare i toni durante lo scontro con Serath.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MORGRIM -->
+        <div class="bg-gradient-to-r from-red-900/30 to-orange-900/30 border-2 border-red-700/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🪓</span>
+            <h4 class="text-xl font-bold text-red-400">Morgrim</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1600 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 100</p>
+              <p class="text-gray-300">
+                Sessione di basso profilo per lui — qualche birra di troppo e una chiacchierata sui
+                combattimenti con Magnus, poco altro.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-5 gap-4 text-center">
+          <div>
+            <p class="text-yellow-400 font-bold">Valoris</p>
+            <p class="text-xl text-yellow-400">1900 PX</p>
+          </div>
+          <div>
+            <p class="text-orange-400 font-bold">Thalio</p>
+            <p class="text-xl text-yellow-400">1900 PX</p>
+          </div>
+          <div>
+            <p class="text-green-400 font-bold">Riven</p>
+            <p class="text-xl text-yellow-400">1750 PX</p>
+          </div>
+          <div>
+            <p class="text-purple-400 font-bold">Fealer</p>
+            <p class="text-xl text-yellow-400">1750 PX</p>
+          </div>
+          <div>
+            <p class="text-red-400 font-bold">Morgrim</p>
+            <p class="text-xl text-yellow-400">1600 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-9" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 9 - Sangue sulla Sabbia
+      </a>
+      <span class="text-gray-500 italic">Sessione 11 in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>
