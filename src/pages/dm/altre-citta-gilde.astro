@@ -35,9 +35,59 @@ import InfoBox from '../../components/InfoBox.astro';
         </p>
       </InfoBox>
 
+      <!-- STORICO -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-cyan-400 mb-4">🕓 Storico delle Classifiche</h2>
+        <InfoBox type="dm" title="Come funziona questa sezione">
+          <p>
+            Ogni voce è uno snapshot datato del Pannello Globale sotto. <strong>Non sovrascrivere le voci
+            precedenti</strong>: quando il Favore cambia in modo significativo (fine di un Ecosistema, eliminazione
+            di una gilda, un balzo notevole), aggiungi una nuova voce in cima a questa lista con la sessione di
+            riferimento, e lascia intatte quelle già scritte. Il Pannello Globale sotto va invece aggiornato per
+            riflettere sempre lo stato <em>attuale</em> — è la voce più recente dello storico a doverlo rispecchiare,
+            non il contrario.
+          </p>
+        </InfoBox>
+
+        <div class="space-y-3 mt-4">
+          <details class="bg-slate-800 border-2 border-cyan-700 rounded-lg p-4" open>
+            <summary class="cursor-pointer font-bold text-cyan-300">Sessione 11 — L'Ecosistema 1 si chiude nel mondo</summary>
+            <div class="text-sm text-slate-300 mt-3 leading-relaxed space-y-2">
+              <p>
+                Nella finestra finale prima dell'apertura del blocco successivo, tutte le gilde ancora in corsa
+                chiudono l'Ecosistema 1 — con una sola eccezione: la <strong class="text-orange-300">Compagnia del
+                Dado Nero</strong>, appena entrata al Piano 1 a Waterdeep, resta l'unica gilda al mondo ancora dentro
+                l'Ecosistema 1. Classifica completa e dettagli dei completamenti in
+                <a href="/dm/sessioni/sessione-11#classifica-globale" class="underline text-cyan-300">Sessione 11, Parte V</a>.
+                Il Pannello Globale sotto riflette questo stato.
+              </p>
+              <p class="text-slate-500 text-xs italic">
+                Variazione notevole: I Guardiani della Trama restano fermi a 690 (Ecosistema chiuso da Sessione 9),
+                ma scendono dal 1° al 3° posto globale — superati da Casa dei Ragni d'Ossidiana (745) e Gli Occhi
+                del Fato (715), che completano nel frattempo.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-slate-800 border border-slate-700 rounded-lg p-4">
+            <summary class="cursor-pointer font-bold text-slate-300">Sessione 10 — Prima comparsa della Stele delle Altre Città</summary>
+            <div class="text-sm text-slate-400 mt-3 leading-relaxed space-y-2">
+              <p>
+                Stato al momento del ritorno dei Guardiani in superficie dopo Kethrar: solo tre gilde al mondo
+                avevano completato un intero Ecosistema (Casa dei Ragni d'Ossidiana 710, Guardiani della Trama 690,
+                Scudo Radiante non ancora rientrato). Due gilde già eliminate con punizione esemplare (I Tessitori
+                di Seta Nera a Menzoberranzan, La Ciurma del Tridente Spezzato a Luskan), una terza (Gli Sciocchi
+                Fortunati) appena spazzata via a Waterdeep e rimpiazzata dal Dado Nero. Tutte le altre gilde ancora
+                dentro l'Ecosistema 1, nessun punteggio finale.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
       <!-- PANNELLO GLOBALE -->
       <section class="mb-12">
-        <h2 class="text-2xl font-bold text-yellow-400 mb-4">📊 Pannello Globale — tutte le città</h2>
+        <h2 class="text-2xl font-bold text-yellow-400 mb-4">📊 Pannello Globale — stato attuale (Sessione 11)</h2>
         <div class="overflow-x-auto">
           <table class="w-full text-sm border border-slate-700">
             <thead>
@@ -54,17 +104,17 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-2 pl-3 pr-4 font-bold text-purple-300" rowspan="3">Waterdeep</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Tempus · Tymora · Mystra</td>
                 <td class="py-2 px-4 font-semibold">I Guardiani della Trama</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
                 <td class="py-2 pr-3 text-center font-bold">690</td>
               </tr>
               <tr class="bg-purple-900/10">
                 <td class="py-2 px-4">Lo Scudo Radiante</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">610</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">645</td>
               </tr>
               <tr class="bg-purple-900/10">
                 <td class="py-2 px-4">Compagnia del Dado Nero <span class="text-gray-500 text-xs">(ex Sciocchi Fortunati 💀)</span></td>
-                <td class="py-2 px-4 text-center text-orange-400">🟠 Ripartita da zero</td>
+                <td class="py-2 px-4 text-center text-orange-400">🟠 In corso — unica gilda ancora nell'Ecosistema 1</td>
                 <td class="py-2 pr-3 text-center font-bold">0</td>
               </tr>
 
@@ -72,31 +122,31 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Mithral Hall</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Moradin · Clangeddin · Dumathoin</td>
                 <td class="py-2 px-4 font-semibold">I Martelli di Runa</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">640</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">680</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">La Vena Perduta</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">590</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">615</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">La Fucina Vivente</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (lenta)</td>
-                <td class="py-2 pr-3 text-center font-bold">410</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato (lenta ma senza perdite)</td>
+                <td class="py-2 pr-3 text-center font-bold">460</td>
               </tr>
 
               <tr class="bg-red-950/10">
                 <td class="py-2 pl-3 pr-4 font-bold text-red-300" rowspan="3">Menzoberranzan</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Lolth · Vhaeraun · Kiaransalee</td>
                 <td class="py-2 px-4 font-semibold">La Casa dei Ragni d'Ossidiana</td>
-                <td class="py-2 px-4 text-center text-green-400">🥇 Leader globale</td>
-                <td class="py-2 pr-3 text-center font-bold">710</td>
+                <td class="py-2 px-4 text-center text-green-400">🥇 Leader globale — Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">745</td>
               </tr>
               <tr class="bg-red-950/10">
                 <td class="py-2 px-4">I Servi del Vuoto</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">520</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">555</td>
               </tr>
               <tr class="bg-red-950/30">
                 <td class="py-2 px-4">I Tessitori di Seta Nera</td>
@@ -108,67 +158,67 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Myth Drannor</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Corellon · Sehanine · Hanali</td>
                 <td class="py-2 px-4 font-semibold">I Canti dell'Alba</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">600</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">625</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">I Sognatori di Luna</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">560</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">585</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">La Lama Ritrovata</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (lenta)</td>
-                <td class="py-2 pr-3 text-center font-bold">380</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato (lenta ma senza perdite)</td>
+                <td class="py-2 pr-3 text-center font-bold">415</td>
               </tr>
 
               <tr>
                 <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Baldur's Gate</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Waukeen · Umberlee · Gond</td>
                 <td class="py-2 px-4 font-semibold">La Borsa d'Oro</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">650</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">675</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">Il Tributo delle Onde</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">590</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">610</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">I Meccanici della Marea</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (instabile)</td>
-                <td class="py-2 pr-3 text-center font-bold">470</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato (per il rotto della cuffia — un gadget di Gond esplode nella fase finale, ferito ma vivo)</td>
+                <td class="py-2 pr-3 text-center font-bold">500</td>
               </tr>
 
               <tr>
                 <td class="py-2 pl-3 pr-4 font-bold text-slate-200" rowspan="3">Candlekeep</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Oghma · Savras · Vecna</td>
                 <td class="py-2 px-4 font-semibold">Gli Occhi del Fato</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">680</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">715</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">I Custodi del Sussurro</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">540</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">590</td>
               </tr>
               <tr>
                 <td class="py-2 px-4">Gli Amanuensi Errantі</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso (metodica)</td>
-                <td class="py-2 pr-3 text-center font-bold">500</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato (metodica)</td>
+                <td class="py-2 pr-3 text-center font-bold">525</td>
               </tr>
 
               <tr class="bg-blue-950/10">
                 <td class="py-2 pl-3 pr-4 font-bold text-blue-300" rowspan="3">Luskan</td>
                 <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Talos · Beshaba · Mask</td>
                 <td class="py-2 px-4 font-semibold">I Corsari della Folgore</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">630</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">655</td>
               </tr>
               <tr class="bg-blue-950/10">
                 <td class="py-2 px-4">L'Ombra di Luskan</td>
-                <td class="py-2 px-4 text-center text-yellow-400">🟡 In corso</td>
-                <td class="py-2 pr-3 text-center font-bold">560</td>
+                <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
+                <td class="py-2 pr-3 text-center font-bold">580</td>
               </tr>
               <tr class="bg-blue-950/30">
                 <td class="py-2 px-4">La Ciurma del Tridente Spezzato</td>
@@ -179,9 +229,10 @@ import InfoBox from '../../components/InfoBox.astro';
           </table>
         </div>
         <p class="text-slate-500 text-xs mt-3 italic">
-          Nota: i Guardiani della Trama (690) sono terzi nella classifica globale, dietro solo alla Casa dei Ragni
-          d'Ossidiana di Menzoberranzan (710) e appena sopra la propria rivale interna. Buon dato da lasciar trapelare
-          se i giocatori chiedono "come stiamo andando rispetto al resto del mondo" — la Stele lo mostra comunque.
+          Nota: i Guardiani della Trama (690) sono terzi nella classifica globale, dietro alla Casa dei Ragni
+          d'Ossidiana di Menzoberranzan (745) e a Gli Occhi del Fato di Candlekeep (715). Il Dado Nero resta l'unica
+          gilda al mondo ancora dentro l'Ecosistema 1. Classifica completa ordinata e dettagli in
+          <a href="/dm/sessioni/sessione-11#classifica-globale" class="text-yellow-300 underline">Sessione 11, Parte V</a>.
         </p>
       </section>
 

@@ -456,14 +456,16 @@
         "weapon": "Ascia da battaglia nanica (eredità)"
       },
       {
-        "name": "Mira Swiftfoot",
+        "name": "Ilsa Doncaster",
         "role": "Scout",
-        "race": "Halfling Piedilesti",
-        "class": "Ladra (Arcane Trickster) 4",
-        "age": 28,
-        "alignment": "NG",
-        "personality": "Outsider del gruppo (moralità grigia), pragmatica, schietta",
-        "note": "Tollerata da Aldric per necessità. Potenziale amicizia/rivalità con Thalio"
+        "race": "Umana",
+        "class": "Ranger 4",
+        "age": 34,
+        "alignment": "LN",
+        "personality": "Metodica, fredda, professionale. Pianifica ogni movimento in anticipo, scettica verso l'improvvisazione",
+        "background": "Ex-investigatrice della Guardia Cittadina. Reclutata da Aldric dopo la defezione di Mira Swiftfoot (passata alla Compagnia del Dado Nero, vedi Sessione 10) proprio perché opposto netto: nessuna moralità grigia, nessun metodo poco ortodosso.",
+        "note": "Aldric la presenta con un sollievo mai dichiarato ad alta voce; Caelum la trova un netto miglioramento rispetto a Mira. Contrasto naturale con Thalio: dove lui improvvisa, lei pianifica e lo trova temerario quasi per principio.",
+        "quote": "Ho letto il rapporto del Banco delle Quote. Dieci a uno che sareste morti al Piano 2. Come avete fatto a non esserlo?"
       },
       {
         "name": "Caelum Starweaver",
