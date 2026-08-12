@@ -50,6 +50,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Scudo Radiante:</strong> decidi il luogo dell'incontro (proposta: ricevimento cittadino congiunto) prima di sederti al tavolo — cambia molto il tono. Vedi Parte VI.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Valoris:</strong> prepara la lettera di ammonimento su un foglio vero, se puoi — un prop fisico pesa di più di una lettura a voce. Vedi Parte VII.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Sottotrame cittadine:</strong> scegli quali delle 6 proposte in Parte VIII seminare oggi (anche solo un accenno) e quali tenere in tasca per le prossime sessioni — è un menu, non un compito da esaurire tutto in una volta. Vedi Parte VIII.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Candidati Sponsor:</strong> decidi se far comparire uno dei tre candidati (anche solo per un saluto) al Ricevimento di Parte VI, o rimandare tutto a dopo — non serve introdurli tutti oggi. Vedi Parte IX.</span></li>
       </ul>
     </div>
 
@@ -70,6 +71,8 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <a href="#paga-guardiani" class="text-green-400 hover:text-green-300">💰 Paga e Ammonimento</a>
       <span class="text-gray-600">·</span>
       <a href="#sottotrame-cittadine" class="text-teal-400 hover:text-teal-300">🏙️ Sottotrame Cittadine</a>
+      <span class="text-gray-600">·</span>
+      <a href="#candidati-sponsor" class="text-rose-400 hover:text-rose-300">🎗️ Candidati Sponsor</a>
     </div>
 
     <!-- ==================== PARTE I: AMMISSIONE DADO NERO ==================== -->
@@ -849,6 +852,38 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         una serata contenuta (25-30 invitati in tutto), pensata apposta per essere gestibile al tavolo.
       </p>
 
+      <div class="bg-gray-900/60 border-2 border-blue-700 rounded-lg p-6 mb-6">
+        <p class="text-xs text-blue-500 uppercase tracking-widest mb-3">Prop fisico — da leggere ad alta voce ai giocatori</p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          Al Comando della Squadra Principale dei Guardiani della Trama,
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          È con grande piacere che Lord Eravien Haventree, mercante di questa città e umile servitore di Tempus, vi
+          invita a un ricevimento serale presso la propria dimora di Sea Ward, in onore delle vittorie che le vostre
+          due Gilde — i Guardiani della Trama e, sotto il mio patronato, Lo Scudo Radiante — hanno saputo conquistare
+          in questi mesi difficili.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          In un'epoca in cui il Velo ci tiene rinchiusi e il cielo stesso sembra essersi voltato altrove, è nostro
+          dovere, come cittadini di Waterdeep, ricordare a questa città che il Gioco Divino non porta soltanto
+          pericolo, ma anche motivo di orgoglio. Ho ottenuto il benestare del Consiglio cittadino per offrire, per
+          una sola serata, un luogo e un tavolo dove le due Gilde che più hanno onorato Waterdeep possano incontrarsi
+          non come rivali, ma come pari.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          Sarete miei ospiti nella serata di vostra scelta, prima che questa breve tregua finisca — il mio
+          maggiordomo attende solo un cenno per fissare l'ora. Non aspettatevi un banchetto formale: preferisco che
+          le persone circolino, parlino, si conoscano — è la conversazione, non il protocollo, che desidero offrire
+          questa sera. Un abito di rappresentanza è ben accolto, ma non obbligatorio: il vostro valore, per questa
+          casa, è già invito sufficiente.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed">
+          Con sincera ammirazione, e con la speranza di conoscervi finalmente di persona,<br />
+          <strong class="text-white">Lord Eravien Haventree</strong><br />
+          Sea Ward, Waterdeep
+        </p>
+      </div>
+
       <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
         <p class="font-bold text-blue-200 mb-2">Dove e quando</p>
         <p class="text-sm text-gray-300 leading-relaxed">
@@ -1429,6 +1464,142 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       </div>
     </div>
 
+    <!-- ==================== PARTE IX: CANDIDATI SPONSOR ==================== -->
+    <div id="candidati-sponsor" class="bg-rose-900/20 border border-rose-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-rose-400">🎗️</span> PARTE IX: TRE CANDIDATI SPONSOR PER I GUARDIANI
+      </h2>
+
+      <div class="bg-rose-900/30 border border-rose-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Aggancio da <a href="/meccaniche/favore-divino" class="underline text-rose-300">Sistema di Favore
+          Divino</a>: i Guardiani della Trama restano indipendenti — nessuno sponsor, a differenza dello Scudo
+          Radiante (Lord Haventree) — proprio perché non ne hanno mai avuto bisogno. Ma un Favore alto (690, terzi
+          al mondo) e la fama crescente di Valoris attirano offerte non richieste. Tre candidati, tre agende
+          diverse: <strong class="text-white">controllo</strong>, <strong class="text-white">denaro puro</strong>
+          e <strong class="text-white">ideologia</strong>. Nessuno dei tre va risolto in questa sessione — sono
+          materiale da cui pescare quando serve un innesco, anche solo comparendo di sfuggita al Ricevimento di
+          Parte VI.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          <strong class="text-white">Sulla decisione:</strong> a scegliere lo sponsor è il Consiglio di Gilda
+          (Serath, Magnus, Silas) — non la Squadra Principale. È lo stesso confine appena tracciato con la lettera
+          di Parte VII: il party può essere <em>consultato</em>, la sua opinione pubblica pesa (sono loro il volto
+          della Gilda), ma la firma finale non è sua. Buona occasione per testare se Valoris ha davvero imparato la
+          lezione appena ricevuta, senza dover ripetergliela.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <!-- CANDIDATO 1: CONTROLLO -->
+        <div class="bg-gray-800/50 border-2 border-rose-700 rounded-lg p-5">
+          <p class="font-bold text-rose-200 mb-1">1. 🏛️ Consigliere Ammon Drayce — il Controllo</p>
+          <p class="text-xs text-gray-500 italic mb-2">Membro del Consiglio cittadino, ambizioso, cortese fino a quando non gli si nega qualcosa</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Drayce non vuole i Guardiani per prestigio personale come Haventree — li vuole come leva politica. Un
+            seggio nel Consiglio cittadino con una Gilda vincente "sotto patronato" pesa più di dieci discorsi in
+            aula. La sua offerta è generosa in superficie: fondi per equipaggiamento, protezione legale rafforzata,
+            una parola buona con la Guardia Cittadina per qualsiasi problema minore. La contropartita, mai detta
+            così esplicitamente ma chiara a chi ascolta bene: un seggio consultivo permanente per lui (o un suo
+            delegato) alle riunioni del Triumvirato, con diritto di veto informale sulle decisioni "che riguardano
+            l'immagine pubblica della città" — una formula elastica quanto basta per coprire quasi tutto.
+          </p>
+          <div class="bg-black/50 border-l-4 border-rose-500 p-6 my-4 rounded-r">
+            <p class="italic text-rose-100 text-lg leading-relaxed">
+              <em>"Non chiedo di comandare la vostra Gilda — il cielo mi guardi dal pensarlo."</em> Drayce sorride
+              con la calma di chi ha già vinto discussioni simili altre volte. <em>"Chiedo solo una voce al
+              tavolo, quando le vostre decisioni finiscono per riguardare l'intera città e non solo voi. Waterdeep
+              vi ama, Triumviri. Io posso assicurarmi che continui ad amarvi anche il giorno in cui qualcosa andrà
+              storto — perché andrà storto, prima o poi, e in quel giorno vorrete un amico al Consiglio, non un
+              cronista."</em>
+            </p>
+          </div>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: è il candidato con l'eco più diretta dell'ammonimento a Valoris (Parte VII) — accettarlo
+            significherebbe reintrodurre dall'esterno esattamente l'ingerenza che il Consiglio ha appena vietato
+            dall'interno. Buon terreno per far discutere il Triumvirato davanti al party, se la scena lo richiede.
+          </p>
+        </div>
+
+        <!-- CANDIDATO 2: DENARO -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-rose-200 mb-1">2. 💰 Berenice Talmoor — il Denaro</p>
+          <p class="text-xs text-gray-500 italic mb-2">Erede della Compagnia dei Talmoor, mercanti di spezie e seta tagliati fuori dalle rotte dal Sigillo, pragmatica e diretta</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            La Compagnia dei Talmoor viveva di commercio oltremare — con le rotte tagliate dal Sigillo, il loro
+            magazzino si riempie e il loro oro no. Berenice non ha alcuna agenda politica o dottrinale: vede nei
+            Guardiani un marchio vincente in un momento in cui la città ha pochissimo altro su cui investire, e
+            vuole comprare visibilità, non influenza. Offre la cifra più alta dei tre candidati, senza fondi
+            riservati né condizioni sul comando — ma vuole il nome e lo stemma della Gilda su tutto quello che
+            vende ancora: banner alla locanda, un "sigillo di Guardiani della Trama" su equipaggiamento certificato,
+            forse persino un'insegna con i loro volti sulla facciata del suo magazzino principale.
+          </p>
+          <div class="bg-black/50 border-l-4 border-rose-500 p-6 my-4 rounded-r">
+            <p class="italic text-rose-100 text-lg leading-relaxed">
+              <em>"Non voglio sapere come gestite il vostro dungeon, e non voglio un posto al vostro tavolo — non
+              capirei nemmeno di cosa parlate."</em> Berenice conta già mentalmente, lo si vede dagli occhi.
+              <em>"Voglio solo il vostro nome sulle mie casse vuote. Ogni bambino di questa città sa chi siete. Io
+              vendo tessuti che nessuno può più permettersi di sognare — datemi il vostro stemma, e vi prometto che
+              torneranno a sognarli."</em>
+            </p>
+          </div>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: il candidato più "sicuro" meccanicamente (più oro, meno ingerenza reale) ma con un costo
+            d'immagine sottile — i Guardiani diventerebbero un marchio commerciale, non solo un'istituzione. Buon
+            contrasto silenzioso con Drayce: soldi senza potere, contro potere travestito da protezione.
+          </p>
+        </div>
+
+        <!-- CANDIDATO 3: IDEOLOGIA -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-rose-200 mb-1">3. ⚔️ L'Ordine dei Paladini del Falco Rosso — l'Ideologia</p>
+          <p class="text-xs text-gray-500 italic mb-2">Lo stesso Ordine che ha offerto a Valoris un posto personale in Parte III — ora punta all'intera Gilda</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Non è un'offerta nuova travestita: è un'escalation diretta di quella già in corso con Valoris. Se lui
+            prende tempo o rifiuta l'offerta personale (Parte III), il Gran Maestro cambia approccio e punta più in
+            alto — sponsorizzare l'intera Gilda, non solo un cavaliere. Il messaggero è di nuovo <strong
+            class="text-white">Regal</strong>, che stavolta non parla da vecchio confratello ma da rappresentante
+            ufficiale dell'Ordine. L'offerta: risorse e prestigio dell'Ordine del Falco Rosso, addestramento per
+            i membri che lo desiderano, protezione dottrinale. La contropartita è l'unica davvero non negoziabile
+            dei tre candidati: la Gilda dovrebbe adottare formalmente il codice di condotta di Tempus nella sua
+            versione più rigida — disciplina, catena di comando, resoconti regolari all'Ordine — e Valoris, con la
+            sua fama recente, ne diventerebbe il liaison naturale, che lo voglia o no.
+          </p>
+          <div class="bg-black/50 border-l-4 border-rose-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"Il Gran Maestro non chiede più solo un cavaliere. Chiede una Gilda che meriti il nome che porta
+              già nei fatti."</em> Regal parla con più formalità del solito — non è più solo un amico che porta un
+              messaggio. <em>"Voi vincete come se aveste dottrina, anche se non ne avete una scritta. Immaginate
+              cosa potreste fare con entrambe le cose insieme. E immaginate,"</em> aggiunge, più piano, guardando
+              Valoris, <em>"quanto peserebbe il tuo nome, se fossi tu a portare quella dottrina dentro le vostre
+              mura, invece che fuori."</em>
+            </p>
+          </div>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: il candidato più carico di posta personale — trascina Valoris in una decisione di Gilda
+            proprio mentre gli è stato detto di starne fuori, e lo fa proponendogli un ruolo (liaison/leader
+            dell'Ordine dentro i Guardiani) che assomiglia sospettosamente a quello che il Consiglio gli ha appena
+            negato con altre parole. Non introdurlo prima che il giocatore abbia risposto (o preso tempo) sull'offerta
+            personale di Parte III — è la sua naturale escalation, non un filone indipendente.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — sequencing suggerito</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Se vuoi introdurli oggi, il Ricevimento di Parte VI è il palcoscenico naturale per un primo contatto
+          informale (Drayce e Berenice sono esattamente il tipo di "nobili minori e mercanti di Sea Ward" già
+          previsti tra gli invitati) — bastano un paio di battute a testa, non serve la proposta completa. L'Ordine
+          del Falco Rosso resta legato al ritmo del filone di Valoris (Parte III) e va tenuto separato. La decisione
+          formale del Triumvirato può restare aperta per una sessione futura, dopo che il party ha avuto modo di
+          farsi un'opinione su tutti e tre.
+        </p>
+      </div>
+    </div>
+
     <!-- ==================== RIEPILOGO ==================== -->
     <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
       <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
@@ -1441,6 +1612,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <li>• <strong class="text-white">Scudo Radiante:</strong> primo incontro diretto a un ricevimento cittadino — pannello completo dei 5 membri (Ilsa Doncaster sostituisce Mira Swiftfoot, defezionata al Dado Nero).</li>
         <li>• <strong class="text-white">Consiglio:</strong> Rooks trattato come un caso di sabotaggio interno (non un semplice reclutamento) — cella per alcune notti se Valoris modera il Consiglio, di più se non interviene — più ammonimento formale (lettera) a Valoris sui confini di ruolo e nuova struttura di paga (incluso premio di 200 MO a testa per Ecosistema completato) per il Team Principale.</li>
         <li>• <strong class="text-white">Sottotrame cittadine:</strong> menu di 6 gancio-quest indipendenti dal dungeon (Parte VIII) — tra cui un riconoscimento di nome sulla Stele per Morgrim/Valoris/Fealer verso le gilde di Mithral Hall, Baldur's Gate e Myth Drannor — da centellinare in questa e nelle prossime sessioni, non da esaurire oggi.</li>
+        <li>• <strong class="text-white">Candidati Sponsor:</strong> tre offerte non richieste per i Guardiani, senza fretta di scegliere — Ammon Drayce (controllo politico), Berenice Talmoor (denaro puro, marchio commerciale), l'Ordine del Falco Rosso (dottrina, escalation dell'offerta personale a Valoris). Decide il Consiglio di Gilda, il party viene solo consultato. Vedi Parte IX.</li>
       </ul>
     </div>
 
