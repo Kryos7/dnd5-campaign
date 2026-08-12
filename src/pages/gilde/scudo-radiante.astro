@@ -141,6 +141,21 @@ const colorMap: Record<string, string> = {
     )}
   </section>
 
+  <!-- Storico Roster -->
+  {guild.rosterHistory && (
+    <section class="mb-8 dm-only">
+      <h2 class="text-2xl font-bold mb-4 text-cyan-400">🕓 Storico Roster</h2>
+      <div class="space-y-2">
+        {guild.rosterHistory.map((entry: any) => (
+          <div class="bg-slate-800 border border-cyan-800 rounded-lg p-3 text-sm">
+            <p class="text-cyan-300 font-bold">{entry.session} — {entry.event}: <span class="text-slate-100">{entry.member}</span></p>
+            <p class="text-slate-400 text-xs mt-1">{entry.note}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
   <!-- Team Principale -->
   <section class="mb-12">
     <h2 class="text-4xl font-bold mb-6 text-yellow-400 text-center">Il Team Principale</h2>

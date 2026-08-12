@@ -28,22 +28,16 @@ const guild = {
       note: 'Promossa da Dorin all\'ultimo momento dopo che Rooks è finito in custodia dai Guardiani (codice nero, Sessione 10). Addestrata da Grom il Silenzioso, morto al Piano 3: guida per colpa del sopravvissuto, non per ambizione.'
     },
     {
-      name: 'Rooks Fenmarsh',
-      role: 'Ladro — scout',
-      origin: 'Squadra B / Le Monete Fortunate (defezione dai Guardiani della Trama)',
-      note: 'Il recruiter di Thalio. Espulso dai Guardiani dopo interrogatorio del Consiglio (Sessione 11) e finito comunque nel Dado Nero — ma come membro qualsiasi, non come Capitano. Frizione aperta con Barda sul ruolo che pensava suo.'
-    },
-    {
       name: 'Mira Swiftfoot',
       role: 'Ladra (Arcane Trickster) — utility',
       origin: 'Defezione dallo Scudo Radiante',
       note: 'Mai davvero a suo agio tra i rigidi.'
     },
     {
-      name: 'Barda Once-Silver',
-      role: 'Guerriera — tank',
-      origin: 'Riserva degli Sciocchi Fortunati',
-      note: 'Addestrata da Grom. Colpa del sopravvissuto.'
+      name: 'Yorick "Cricket" Sallow',
+      role: 'Ladro — scout',
+      origin: 'Freelance, rifiutato da altre due gilde prima di questa',
+      note: 'Reclutato in meno di un giorno per riempire lo slot lasciato vuoto da Rooks. Dorin non ha avuto tempo di controllare le referenze — "countermeasure" presa in anticipo nel caso Rooks non fosse tornato in tempo (vedi Sessione 11, Parte VII: non torna).'
     },
     {
       name: 'Fenn Cindertongue',
@@ -56,6 +50,26 @@ const guild = {
       role: 'Chierico minore di Waukeen — support',
       origin: 'Freelance, nuovo in città',
       note: 'Crede nei margini di profitto, non in Tymora.'
+    }
+  ],
+  rosterHistory: [
+    {
+      session: 'Sessione 11',
+      event: 'Promozione a Capitano',
+      member: 'Barda Once-Silver',
+      note: 'Rooks non torna in tempo per l\'ammissione all\'Arco Divino (vedi sotto) — Dorin la promuove all\'ultimo momento.'
+    },
+    {
+      session: 'Sessione 11',
+      event: 'Non presente all\'ammissione',
+      member: 'Rooks Fenmarsh',
+      note: 'Imprigionato dai Guardiani della Trama per alcune notti dopo il tentativo di reclutare Thalio dal loro quartier generale — il Consiglio nega la sua esistenza a chiunque chieda. Perde la finestra per presentarsi con la squadra all\'Arco. Non è (ancora) membro della Compagnia.'
+    },
+    {
+      session: 'Sessione 11',
+      event: 'Nuovo ingresso',
+      member: 'Yorick "Cricket" Sallow',
+      note: 'Reclutato in fretta per riempire lo slot lasciato vuoto da Rooks, come contromisura presa da Dorin in anticipo.'
     }
   ]
 };
@@ -162,10 +176,23 @@ const guild = {
     </p>
   </InfoBox>
 
+  <!-- Storico Roster -->
+  <section class="mb-8 dm-only">
+    <h2 class="text-2xl font-bold mb-4 text-cyan-400">🕓 Storico Roster</h2>
+    <div class="space-y-2">
+      {guild.rosterHistory.map((entry) => (
+        <div class="bg-slate-800 border border-cyan-800 rounded-lg p-3 text-sm">
+          <p class="text-cyan-300 font-bold">{entry.session} — {entry.event}: <span class="text-slate-100">{entry.member}</span></p>
+          <p class="text-slate-400 text-xs mt-1">{entry.note}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
   <!-- Team Principale -->
   <section class="mb-12">
     <h2 class="text-4xl font-bold mb-6 text-orange-400 text-center">La Squadra Principale</h2>
-    <p class="text-center text-slate-300 mb-8 text-lg">Cinque volti nuovi, radunati sotto un'insegna riciclata</p>
+    <p class="text-center text-slate-300 mb-8 text-lg">Cinque volti, radunati in fretta sotto un'insegna riciclata</p>
 
     <div class="grid md:grid-cols-2 gap-6">
       {guild.mainTeamMembers.map((member) => (

@@ -6,8 +6,74 @@ import InfoBox from '../../components/InfoBox.astro';
 <MainLayout title="Favore Divino">
   <h1 class="mb-8">Sistema di Favore Divino</h1>
 
-  <InfoBox type="mechanic" title="Work in Progress">
-    <p>Questa sezione è ancora in sviluppo. Arriveranno presto informazioni complete sul sistema di Favore Divino.</p>
+  <InfoBox type="mechanic" title="Cos'è">
+    <p>
+      Il Favore Divino è il punteggio che ogni gilda accumula agli occhi dei tre dèi patroni del proprio Gioco
+      (Tempus, Tymora e Mystra a Waterdeep). Ogni divinità tiene il proprio conteggio, in base al proprio dominio —
+      Tempus premia onore e strategia in combattimento, Tymora premia rischio calcolato e audacia, Mystra premia
+      conoscenza arcana e problemi risolti con l'intelletto — ma il mandato mostra pubblicamente solo il
+      <strong>totale</strong>, mai il dettaglio per divinità (nemmeno alla propria gilda, figuriamoci alle rivali).
+      È il numero che cresce sulla <a href="/dm/sessioni/sessione-10#stele-mandato" class="text-purple-300">Stele
+      del Mandato</a>.
+    </p>
+  </InfoBox>
+
+  <InfoBox type="mechanic" title="Come si guadagna">
+    <p>Ogni azione in gioco che rientra nel dominio di un dio genera Favore per quel dio, sommato al totale:</p>
+    <ul>
+      <li><strong>Tempus</strong> — vittorie in combattimento ottenute con tattica, coraggio in battaglia, onore
+      verso nemici e alleati (non necessariamente ogni uccisione: un massacro vile vale meno di una vittoria
+      difficile ottenuta con onore).</li>
+      <li><strong>Tymora</strong> — rischi calcolati che pagano, scelte audaci, improvvisazione che funziona
+      nonostante le probabilità contrarie.</li>
+      <li><strong>Mystra</strong> — enigmi risolti, uso creativo della magia, conoscenza scoperta e applicata,
+      oggetti magici identificati e compresi.</li>
+    </ul>
+    <p>
+      Le Prove Divine (vedi <a href="/dm/prove-divine" class="text-purple-300">Prove Divine</a>) sono le fonti di
+      Favore più concentrate e visibili, ma non le uniche: qualsiasi sessione contribuisce, anche fuori da un
+      trial dedicato.
+    </p>
+  </InfoBox>
+
+  <InfoBox type="mechanic" title="A cosa serve — i tre sbocchi concreti">
+    <p>Il Favore Divino non è solo un punteggio da guardare crescere sulla Stele. Ha tre usi concreti:</p>
+    <ul>
+      <li>
+        <strong>1. Conversione in oro (tasso fisso: 100 Favore = 50 MO).</strong> Il mandato permette a qualsiasi
+        gilda di convertire una parte del proprio Favore accumulato in moneta sonante, tramite Vex o tramite un
+        rito equivalente in superficie. È la fonte concreta della paga della Gilda (vedi
+        <a href="/dm/sessioni/sessione-11#paga-guardiani" class="text-purple-300">Sessione 11, Parte VII</a>): il
+        Favore che finisce nel fondo comune si trasforma in MO reali, spendibili su equipaggiamento, sponsor e
+        stipendi.
+      </li>
+      <li>
+        <strong>2. Soglie che sbloccano Doni Divini.</strong> Il Favore accumulato <em>durante</em> una singola
+        Prova Divina determina la qualità del dono ricevuto alla sua conclusione — non è un interruttore
+        acceso/spento, è una scala (vedi il "2/3" di Valoris alla Prova di Tempus, che gli è costato un dono ridotto
+        rispetto a una vittoria piena). Più il Favore guadagnato durante la prova è alto, migliore e più potente è
+        il Dono Divino finale.
+      </li>
+      <li>
+        <strong>3. Prestigio e sponsorizzazioni.</strong> Il Favore totale pubblico sulla Stele è ciò che attira
+        l'attenzione di nobili e mecenati cittadini — è così che Lo Scudo Radiante ha ottenuto Lord Eravien
+        Haventree come sponsor. I Guardiani della Trama restano indipendenti (nessuno sponsor) proprio perché non ne
+        hanno mai davvero avuto bisogno, ma un Favore molto alto può attirare offerte non richieste — buon gancio
+        narrativo se in futuro serve introdurre un mecenate per i Guardiani.
+      </li>
+    </ul>
+  </InfoBox>
+
+  <InfoBox type="dm" title="Nota DM — coerenza con la paga di Sessione 11">
+    <p>
+      Quando <a href="/dm/sessioni/sessione-11#paga-guardiani" class="text-red-300">Sessione 11</a> parla di "10% del
+      Favore convertito in MO diviso individualmente", si riferisce esattamente allo sbocco 1 qui sopra: la Gilda
+      convertisce una parte del Favore accumulato in oro reale al tasso ufficiale, e di quell'oro una quota va ai
+      singoli membri del Team Principale come parte della paga. Non è un numero arbitrario: è l'unico sbocco del
+      Favore Divino che produce direttamente moneta spendibile, motivo per cui è quello scelto per la paga
+      personale — gli altri due sbocchi (soglie di Dono Divino, prestigio/sponsor) restano benefici a livello di
+      Gilda, non individuali.
+    </p>
   </InfoBox>
 
   <div class="mt-8 text-center">

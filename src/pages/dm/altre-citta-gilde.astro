@@ -55,9 +55,13 @@ import InfoBox from '../../components/InfoBox.astro';
             <div class="text-sm text-slate-300 mt-3 leading-relaxed space-y-2">
               <p>
                 Nella finestra finale prima dell'apertura del blocco successivo, tutte le gilde ancora in corsa
-                chiudono l'Ecosistema 1 — con una sola eccezione: la <strong class="text-orange-300">Compagnia del
-                Dado Nero</strong>, appena entrata al Piano 1 a Waterdeep, resta l'unica gilda al mondo ancora dentro
-                l'Ecosistema 1. Classifica completa e dettagli dei completamenti in
+                chiudono l'Ecosistema 1 — con tre eccezioni: le gilde nate dalle ceneri di una squadra sterminata,
+                appena ripartite da zero. <strong class="text-orange-300">Compagnia del Dado Nero</strong>
+                (Waterdeep, sostituisce Gli Sciocchi Fortunati), <strong class="text-red-300">Le Vedove di
+                Kiaransalee</strong> (Menzoberranzan, sostituisce I Tessitori di Seta Nera) e <strong
+                class="text-blue-300">I Maledetti del Faro</strong> (Luskan, sostituisce La Ciurma del Tridente
+                Spezzato) restano le uniche gilde al mondo ancora dentro l'Ecosistema 1. Classifica completa e
+                dettagli dei completamenti in
                 <a href="/dm/sessioni/sessione-11#classifica-globale" class="underline text-cyan-300">Sessione 11, Parte V</a>.
                 Il Pannello Globale sotto riflette questo stato.
               </p>
@@ -137,8 +141,8 @@ import InfoBox from '../../components/InfoBox.astro';
               </tr>
 
               <tr class="bg-red-950/10">
-                <td class="py-2 pl-3 pr-4 font-bold text-red-300" rowspan="3">Menzoberranzan</td>
-                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Lolth · Vhaeraun · Kiaransalee</td>
+                <td class="py-2 pl-3 pr-4 font-bold text-red-300" rowspan="4">Menzoberranzan</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="4">Lolth · Vhaeraun · Kiaransalee</td>
                 <td class="py-2 px-4 font-semibold">La Casa dei Ragni d'Ossidiana</td>
                 <td class="py-2 px-4 text-center text-green-400">🥇 Leader globale — Completato</td>
                 <td class="py-2 pr-3 text-center font-bold">745</td>
@@ -148,10 +152,15 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
                 <td class="py-2 pr-3 text-center font-bold">555</td>
               </tr>
-              <tr class="bg-red-950/30">
-                <td class="py-2 px-4">I Tessitori di Seta Nera</td>
-                <td class="py-2 px-4 text-center text-red-400">💀 Eliminata — punizione esemplare</td>
+              <tr class="bg-red-950/30 opacity-60">
+                <td class="py-2 px-4">I Tessitori di Seta Nera 💀 <span class="text-gray-500 text-xs">(storico)</span></td>
+                <td class="py-2 px-4 text-center text-red-400">Eliminata — punizione esemplare</td>
                 <td class="py-2 pr-3 text-center font-bold text-red-400">—</td>
+              </tr>
+              <tr class="bg-red-950/10">
+                <td class="py-2 px-4 font-semibold">Le Vedove di Kiaransalee <span class="text-gray-500 text-xs">(sostituisce i Tessitori)</span></td>
+                <td class="py-2 px-4 text-center text-orange-400">🟠 In corso — appena ripartita da zero</td>
+                <td class="py-2 pr-3 text-center font-bold">0</td>
               </tr>
 
               <tr>
@@ -209,8 +218,8 @@ import InfoBox from '../../components/InfoBox.astro';
               </tr>
 
               <tr class="bg-blue-950/10">
-                <td class="py-2 pl-3 pr-4 font-bold text-blue-300" rowspan="3">Luskan</td>
-                <td class="py-2 px-4 text-xs text-gray-500" rowspan="3">Talos · Beshaba · Mask</td>
+                <td class="py-2 pl-3 pr-4 font-bold text-blue-300" rowspan="4">Luskan</td>
+                <td class="py-2 px-4 text-xs text-gray-500" rowspan="4">Talos · Beshaba · Mask</td>
                 <td class="py-2 px-4 font-semibold">I Corsari della Folgore</td>
                 <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
                 <td class="py-2 pr-3 text-center font-bold">655</td>
@@ -220,18 +229,24 @@ import InfoBox from '../../components/InfoBox.astro';
                 <td class="py-2 px-4 text-center text-green-400">✅ Completato</td>
                 <td class="py-2 pr-3 text-center font-bold">580</td>
               </tr>
-              <tr class="bg-blue-950/30">
-                <td class="py-2 px-4">La Ciurma del Tridente Spezzato</td>
-                <td class="py-2 px-4 text-center text-red-400">💀 Eliminata — punizione esemplare</td>
+              <tr class="bg-blue-950/30 opacity-60">
+                <td class="py-2 px-4">La Ciurma del Tridente Spezzato 💀 <span class="text-gray-500 text-xs">(storico)</span></td>
+                <td class="py-2 px-4 text-center text-red-400">Eliminata — punizione esemplare</td>
                 <td class="py-2 pr-3 text-center font-bold text-red-400">—</td>
+              </tr>
+              <tr class="bg-blue-950/10">
+                <td class="py-2 px-4 font-semibold">I Maledetti del Faro <span class="text-gray-500 text-xs">(sostituisce la Ciurma)</span></td>
+                <td class="py-2 px-4 text-center text-orange-400">🟠 In corso — appena ripartita da zero</td>
+                <td class="py-2 pr-3 text-center font-bold">0</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p class="text-slate-500 text-xs mt-3 italic">
           Nota: i Guardiani della Trama (690) sono terzi nella classifica globale, dietro alla Casa dei Ragni
-          d'Ossidiana di Menzoberranzan (745) e a Gli Occhi del Fato di Candlekeep (715). Il Dado Nero resta l'unica
-          gilda al mondo ancora dentro l'Ecosistema 1. Classifica completa ordinata e dettagli in
+          d'Ossidiana di Menzoberranzan (745) e a Gli Occhi del Fato di Candlekeep (715). Dado Nero, Vedove di
+          Kiaransalee e Maledetti del Faro restano le uniche gilde al mondo ancora dentro l'Ecosistema 1 — tutte
+          nate da uno sterminio recente. Classifica completa ordinata e dettagli in
           <a href="/dm/sessioni/sessione-11#classifica-globale" class="text-yellow-300 underline">Sessione 11, Parte V</a>.
         </p>
       </section>
@@ -317,13 +332,14 @@ import InfoBox from '../../components/InfoBox.astro';
         </div>
       </section>
 
-      <InfoBox type="dm" title="Le altre 17 gilde — una riga ciascuna, se serve improvvisare">
+      <InfoBox type="dm" title="Le altre 19 gilde — una riga ciascuna, se serve improvvisare">
         <ul class="space-y-1 text-sm">
           <li><strong class="text-slate-200">I Martelli di Runa</strong> (Mithral Hall) — disciplina nanica, zero perdite, procedono come un orologio.</li>
           <li><strong class="text-slate-200">La Vena Perduta</strong> (Mithral Hall) — cercatori di tesori, pazienti, seguono le vene di Dumathoin.</li>
           <li><strong class="text-slate-200">La Fucina Vivente</strong> (Mithral Hall) — artefici perfezionisti, lenti ma solidissimi.</li>
           <li><strong class="text-slate-200">La Casa dei Ragni d'Ossidiana</strong> (Menzoberranzan) — leader globale, vincono tradendosi a vicenda con metodo.</li>
           <li><strong class="text-slate-200">I Servi del Vuoto</strong> (Menzoberranzan) — drow maschi ribelli, infiltrazione e furti audaci.</li>
+          <li><strong class="text-slate-200">Le Vedove di Kiaransalee</strong> (Menzoberranzan, nuova) — vendicatrici di Kiaransalee, rancore metodico più che caos, appena ripartite da zero.</li>
           <li><strong class="text-slate-200">I Canti dell'Alba</strong> (Myth Drannor) — bardi ed elfi, favoriti da Corellon e Hanali per la grazia in battaglia.</li>
           <li><strong class="text-slate-200">I Sognatori di Luna</strong> (Myth Drannor) — usano visioni oniriche di Sehanine per anticipare il dungeon.</li>
           <li><strong class="text-slate-200">La Lama Ritrovata</strong> (Myth Drannor) — provano a riportare gloria a Myth Drannor, il peso della storia li appesantisce.</li>
@@ -335,6 +351,7 @@ import InfoBox from '../../components/InfoBox.astro';
           <li><strong class="text-slate-200">Gli Amanuensi Errantі</strong> (Candlekeep) — fedeli di Oghma, catalogano tutto, lenti ma meticolosi.</li>
           <li><strong class="text-slate-200">I Corsari della Folgore</strong> (Luskan) — pura aggressività, favoriti da Talos.</li>
           <li><strong class="text-slate-200">L'Ombra di Luskan</strong> (Luskan) — ladri di Mask, rubano scorciatoie (e forse Favore) ai rivali.</li>
+          <li><strong class="text-slate-200">I Maledetti del Faro</strong> (Luskan, nuova) — naufraghi fatalisti di Beshaba, già sfortunati di natura, appena ripartiti da zero.</li>
         </ul>
       </InfoBox>
 

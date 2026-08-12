@@ -484,9 +484,24 @@
           "with_aldric": "Rispetto reciproco. Caelum pianifica, Aldric esegue.",
           "with_elira": "Collaborazione accademica. Discutono teoria magica.",
           "with_durak": "Caelum apprezza il suo silenzio e affidabilità.",
-          "with_mira": "Tensione. Caelum disapprova i suoi metodi 'poco ortodossi'."
+          "with_ilsa": "Approvazione piena. La trova un netto miglioramento rispetto a Mira: pianifica invece di improvvisare.",
+          "with_mira_storico": "Tensione, quando c'era ancora lei. Caelum disapprovava i suoi metodi 'poco ortodossi' — uno dei motivi per cui la sua partenza non gli è pesata."
         },
         "note": "Aggiunto per fornire controllo campo e strategia arcana. Bilanciamento perfetto per team lawful."
+      }
+    ],
+    "rosterHistory": [
+      {
+        "session": "Sessione 10",
+        "event": "Defezione",
+        "member": "Mira Swiftfoot",
+        "note": "Ladra (Arcane Trickster), mai a suo agio tra i rigidi dello Scudo Radiante. Passata alla Compagnia del Dado Nero come membro della nuova squadra principale."
+      },
+      {
+        "session": "Sessione 11",
+        "event": "Nuovo ingresso",
+        "member": "Ilsa Doncaster",
+        "note": "Ex-investigatrice della Guardia Cittadina, reclutata da Aldric come scout al posto di Mira — contrasto voluto: metodica dove Mira era imprevedibile."
       }
     ],
     "strengths": ["Strategia militare impeccabile", "Equipaggiamento superiore", "Esperienza"],

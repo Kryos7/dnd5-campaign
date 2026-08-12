@@ -49,6 +49,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Classifica Globale:</strong> aggiorna <a href="/dm/altre-citta-gilde" class="underline text-amber-300">Le Gilde delle Altre Città</a> con lo storico prima della sessione, così puoi rispondere a colpo sicuro se chiedono alla Stele. Vedi Parte V.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Scudo Radiante:</strong> decidi il luogo dell'incontro (proposta: ricevimento cittadino congiunto) prima di sederti al tavolo — cambia molto il tono. Vedi Parte VI.</span></li>
         <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Valoris:</strong> prepara la lettera di ammonimento su un foglio vero, se puoi — un prop fisico pesa di più di una lettura a voce. Vedi Parte VII.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Sottotrame cittadine:</strong> scegli quali delle 6 proposte in Parte VIII seminare oggi (anche solo un accenno) e quali tenere in tasca per le prossime sessioni — è un menu, non un compito da esaurire tutto in una volta. Vedi Parte VIII.</span></li>
       </ul>
     </div>
 
@@ -67,6 +68,8 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <a href="#scudo-radiante" class="text-blue-400 hover:text-blue-300">⚖️ Lo Scudo Radiante</a>
       <span class="text-gray-600">·</span>
       <a href="#paga-guardiani" class="text-green-400 hover:text-green-300">💰 Paga e Ammonimento</a>
+      <span class="text-gray-600">·</span>
+      <a href="#sottotrame-cittadine" class="text-teal-400 hover:text-teal-300">🏙️ Sottotrame Cittadine</a>
     </div>
 
     <!-- ==================== PARTE I: AMMISSIONE DADO NERO ==================== -->
@@ -140,7 +143,17 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         per ambizione.
       </p>
 
-      <h3 class="text-xl font-bold text-orange-300 mb-3">Squadra Principale del Dado Nero — aggiornata</h3>
+      <h3 class="text-xl font-bold text-orange-300 mb-3">Un quinto nome — Rooks non torna in tempo</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Con Barda promossa a Capitano, la squadra non è ancora completa: senza Rooks restano solo quattro (Barda,
+        Mira, Fenn, Toz). Il Consiglio dei Guardiani, nel frattempo, ha deciso di tenerlo in cella per alcune notti
+        (vedi Parte VII — non una semplice espulsione) e di negare la sua esistenza a chiunque chieda. Dorin non lo
+        sa con certezza, ma non se lo può permettere di aspettare: recluta in meno di un giorno <strong
+        class="text-orange-200">Yorick "Cricket" Sallow</strong>, un ladro freelance già rifiutato da altre due
+        gilde, per riempire lo slot vuoto. Nessun controllo di referenze — non c'è tempo.
+      </p>
+
+      <h3 class="text-xl font-bold text-orange-300 mb-3">Squadra Principale del Dado Nero — le cinque presenze all'Arco</h3>
       <div class="overflow-x-auto mb-6">
         <table class="w-full text-sm">
           <thead>
@@ -156,11 +169,6 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               <td class="py-2 px-4 text-gray-400">Guerriera — <strong class="text-white">Capitano</strong> (nuovo)</td>
               <td class="py-2 pl-4 text-gray-500 text-xs">Guida per colpa, non per ambizione. Il ruolo che Grom avrebbe voluto per lei, non quello che lei voleva per sé.</td>
             </tr>
-            <tr class="opacity-50">
-              <td class="py-2 pr-4 font-bold text-orange-200">Rooks Fenmarsh</td>
-              <td class="py-2 px-4 text-gray-400">Ladro — assente</td>
-              <td class="py-2 pl-4 text-gray-500 text-xs">In custodia dai Guardiani. Il posto di Capitano che avrebbe dovuto occupare resta vuoto senza di lui.</td>
-            </tr>
             <tr>
               <td class="py-2 pr-4 font-bold text-orange-200">Mira Swiftfoot</td>
               <td class="py-2 px-4 text-gray-400">Ladra (Arcane Trickster) — utility</td>
@@ -175,6 +183,16 @@ import MainLayout from "../../../layouts/MainLayout.astro";
               <td class="py-2 pr-4 font-bold text-orange-200">Toz "Le Mani" Varren</td>
               <td class="py-2 px-4 text-gray-400">Chierico minore di Waukeen — support</td>
               <td class="py-2 pl-4 text-gray-500 text-xs">Invariata.</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-4 font-bold text-orange-200">Yorick "Cricket" Sallow</td>
+              <td class="py-2 px-4 text-gray-400">Ladro — scout (nuovo)</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">Riempie lo slot di Rooks. Nessuno lo conosce davvero — buon seme per una futura complicazione.</td>
+            </tr>
+            <tr class="opacity-50">
+              <td class="py-2 pr-4 font-bold text-orange-200">Rooks Fenmarsh</td>
+              <td class="py-2 px-4 text-gray-400">Ladro — non presente</td>
+              <td class="py-2 pl-4 text-gray-500 text-xs">In cella dai Guardiani. Non fa parte delle cinque presenze all'Arco — resta un membro futuro possibile, non uno attuale.</td>
             </tr>
           </tbody>
         </table>
@@ -249,6 +267,36 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         membri del party possono affacciarsi tra un esperimento e l'altro, ma il cuore della scena è questo trio.
       </p>
 
+      <div class="bg-gray-900/60 border-2 border-indigo-700 rounded-lg p-5 mb-6">
+        <p class="text-xs text-indigo-400 uppercase tracking-widest mb-3">🧙 Scheda Rapida — Arianna "Whispersong" Moonwhisper</p>
+        <p class="text-sm text-gray-400 italic mb-3">Elfa Alta, 312 anni, Maga 10 (Divinazione), semi-ritirata — non scende più in missione, ma resta una delle menti arcane più forti di Waterdeep.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-sm mb-3">
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Intelligenza</p>
+            <p class="text-white font-bold">20 (+5)</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Bonus Competenza</p>
+            <p class="text-white font-bold">+4</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Arcana / Storia</p>
+            <p class="text-white font-bold">+9 (esperta)</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">CD Incantesimi</p>
+            <p class="text-white font-bold">18</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Per i tiri degli esperimenti sotto, usa <strong class="text-indigo-300">+9</strong> come bonus di Arianna
+          su qualsiasi prova di Arcana/Storia legata alla cicatrice o al liquido ambrato (esperta, quindi raddoppia
+          competenza), e CD 18 / +9 per gli incantesimi di divinazione che lancia. Non tira mai "alla cieca": con un
+          bonus così alto, il fallimento netto (esperimento 4) va narrato come un'anomalia che sfida le sue capacità,
+          non come un tiro sbagliato — è importante per la credibilità del personaggio.
+        </p>
+      </div>
+
       <h3 class="text-xl font-bold text-indigo-300 mb-3">Cinque esperimenti — usa quelli che ti servono, in qualsiasi ordine</h3>
       <p class="text-gray-400 text-sm mb-4 italic">
         Non serve giocarli tutti: scegline 2-3 in base al tempo disponibile. Ognuno ha un piccolo tiro associato e
@@ -285,14 +333,18 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </div>
 
         <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
-          <p class="font-bold text-indigo-200 mb-1">3. Induzione Controllata di una Piccola Sovraccarica</p>
-          <p class="text-xs text-gray-500 italic mb-2">Riven lancia un trucchetto minimo in un cerchio di contenimento; tiro di Sovraccarica di Magia Selvaggia come da regole standard</p>
+          <p class="font-bold text-indigo-200 mb-1">3. Dose Controllata di Ambra + Trucchetto</p>
+          <p class="text-xs text-gray-500 italic mb-2">Arianna somministra a Riven una goccia diluitissima del liquido ambrato prima che lanci un trucchetto minimo in un cerchio di contenimento; tiro di Sovraccarica di Magia Selvaggia come da regole standard</p>
           <p class="text-sm text-gray-300 leading-relaxed">
-            L'unico esperimento che coinvolge Riven attivamente e comporta un vero rischio narrativo (non
-            necessariamente mccanico: puoi anche non tirare davvero sulla tabella delle sovraccariche, e limitarti a
-            descriverne una a scelta). <strong class="text-white">Risultato garantito:</strong> l'effetto è più
-            intenso del previsto per un trucchetto così minore — qualsiasi manifestazione scegli, falla sproporzionata
-            rispetto all'incantesimo lanciato. <strong class="text-indigo-300">Buon momento per il beat emotivo:</strong>
+            Non è un test generico sulla magia selvaggia — è il vero cuore della giornata: verificare se l'ambra,
+            introdotta di nuovo nel suo corpo in dose minima e controllata, amplifica o distorce l'effetto rispetto
+            a un lancio "pulito". Arianna insiste su protocolli precisi (quantità, tempo di assorbimento, distanza
+            di sicurezza) — è pericoloso e lo sa. <strong class="text-white">Risultato garantito:</strong> con
+            l'ambra in circolo, l'effetto è nettamente più intenso del previsto per un trucchetto così minore —
+            qualsiasi manifestazione scegli, falla sproporzionata rispetto all'incantesimo lanciato, e Arianna nota
+            esplicitamente che <em>senza</em> l'ambra un test di controllo identico (se lo fai fare anche a vuoto,
+            per confronto) non produce lo stesso effetto. L'ambra non è inerte nel suo corpo — reagisce ancora, mesi
+            dopo il contatto originale. <strong class="text-indigo-300">Buon momento per il beat emotivo:</strong>
             Riven, per un istante dopo l'esplosione di caos, sorride prima di ricomporsi — lo stesso sorriso, se vuoi
             un accenno sottile e mai confermato, con cui pensa a Leira quando la sua magia fa qualcosa di
             assurdamente irriverente (vedi il suo background). Non serve nominarla: basta il sorriso.
@@ -301,17 +353,34 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 
         <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
           <p class="font-bold text-indigo-200 mb-1">4. Lettura Divinatoria — la specialità di Arianna</p>
-          <p class="text-xs text-gray-500 italic mb-2">Arianna lancia un incantesimo di divinazione minore (es. Detect Magic potenziato, o un rituale personale a tua discrezione) puntato su Riven</p>
-          <p class="text-sm text-gray-300 leading-relaxed">
+          <p class="text-xs text-gray-500 italic mb-2">Arianna lancia un incantesimo di divinazione minore (es. Detect Magic potenziato, o un rituale personale a tua discrezione) puntato su Riven — usa il suo bonus (CD 18 / +9) dalla scheda rapida sopra</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
             Come Maga di Divinazione, Arianna tenta l'approccio più diretto: leggere la "trama" magica di Riven
             stesso, non solo la cicatrice. <strong class="text-white">Risultato garantito:</strong> la lettura si
             comporta in modo anomalo — non si offusca e non fallisce, ma <em>si duplica</em> per un istante, come se
-            stesse leggendo due firme magiche sovrapposte nello stesso corpo. Arianna non ha una spiegazione pronta,
-            e questo la scuote più di quanto vorrebbe mostrare. <strong class="text-indigo-300">Callback
-            deliberato:</strong> è il momento giusto per farle ripetere, questa volta consapevolmente e con
-            inquietudine, che l'ultima volta ha usato senza saperlo le stesse parole di Vex — e per farle proporre
-            di andare a chiedere spiegazioni a Vex di persona, al prossimo Pianerottolo, cosa che apre un gancio per
-            l'Ecosistema 2.
+            stesse leggendo due firme magiche sovrapposte nello stesso corpo.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            312 anni di studio non le lasciano restare semplicemente sgomenta: propone subito, come farebbe
+            qualsiasi accademica di quel calibro, due o tre ipotesi rivali — nessuna confermata, tutte plausibili:
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-3">
+            <li><strong class="text-indigo-300">Teoria del Vaso Incompleto:</strong> il condotto di magia selvaggia
+            di Riven non si è mai richiuso del tutto dopo il contatto con l'ambra — la firma "in eccesso" che legge
+            sarebbe l'energia ancora immagazzinata, non canalizzata, coerente con l'esperimento 1.</li>
+            <li><strong class="text-indigo-300">Teoria della Doppia Fonte:</strong> due firme distinte convivono
+            nello stesso corpo — la sua magia selvaggia originaria e qualcosa che l'ambra ha lasciato dietro di sé,
+            non ancora integrato né espulso.</li>
+            <li><strong class="text-indigo-300">Teoria della Risonanza del Mandato:</strong> la coincidenza con la
+            frase di Vex non sarebbe casuale — entrambi potrebbero star "leggendo" la stessa fonte di fondo, come
+            se il mandato del dungeon e la magia di Riven toccassero, per motivi diversi, la stessa Trama.</li>
+          </ul>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-indigo-300">Callback deliberato:</strong> è il momento giusto per farle ripetere,
+            consapevolmente e con inquietudine, che l'ultima volta ha usato senza saperlo le stesse parole di Vex —
+            e per farle proporre, in linea con la Teoria della Risonanza del Mandato, di andare a chiedergli
+            spiegazioni di persona al prossimo Pianerottolo. Buon gancio per l'Ecosistema 2, ma resta una sua
+            iniziativa accademica, non un'ammissione di sconfitta.
           </p>
         </div>
 
@@ -322,10 +391,16 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             Fealer osserva la cicatrice non come un condotto arcano ma come farebbe con una pianta malata o un
             terreno corrotto — la sua specialità. <strong class="text-white">Risultato garantito:</strong> nota
             qualcosa che ad Arianna, pura arcanista, non salterebbe agli occhi: la cicatrice si comporta come un
-            <em>ciclo</em>, non come un danno lineare — cresce, si stabilizza, cresce di nuovo, come una stagione.
-            Coerente col suo sospetto personale (secretGoal di Fealer) che qualcosa non vada con gli Dèi stessi:
-            propone, sottovoce e solo se il gruppo è ristretto, che l'ambra potrebbe non essere un sottoprodotto del
-            dungeon ma una parte <em>voluta</em> del suo funzionamento.
+            <em>ciclo</em>, non come un danno lineare — cresce, si stabilizza, cresce di nuovo, come una stagione o
+            come qualcosa che <em>reagisce</em> a stimoli invece di limitarsi a peggiorare. Non tira una conclusione
+            sul dungeon nel suo insieme — resta, per ora, un'osservazione sul corpo di Riven, non una teoria
+            cosmologica. <strong class="text-indigo-300">Nota DM — non spingere oltre:</strong> evita di far dire a
+            Fealer che l'ambra è "una parte voluta" del dungeon in generale: i prossimi Ecosistemi cambieranno
+            ambientazione e materiali radicalmente (l'ambra potrebbe semplicemente non ricomparire più, o essere
+            sostituita da qualcosa di completamente diverso), quindi non blindare oggi una teoria che il resto della
+            campagna potrebbe contraddire. Se vuoi comunque dargli un momento da secretGoal, fallo restare vago:
+            "qualcosa qui non si comporta come dovrebbe, e non parlo solo del ragazzo" — sospetto generico sul
+            mandato/gli Dèi, non un'affermazione specifica sull'ambra.
           </p>
         </div>
       </div>
@@ -342,126 +417,159 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       </div>
     </div>
 
-    <!-- ==================== PARTE III: TEMPIO DI TYMORA ==================== -->
+    <!-- ==================== PARTE III: TEMPIO DI TEMPUS/CAVALIERE ROSSO ==================== -->
     <div id="tempio-valoris" class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
       <h2 class="text-3xl font-bold mb-6 text-center">
-        <span class="text-amber-400">🎴</span> PARTE III: LA GITA DI VALORIS AL TEMPIO DI TYMORA
+        <span class="text-amber-400">🎴</span> PARTE III: LA GITA DI VALORIS AL TEMPIO
       </h2>
 
-      <div class="bg-amber-900/30 border border-amber-700/30 rounded p-4 mb-6">
+      <div class="bg-red-900/30 border border-red-700/30 rounded p-4 mb-6">
         <p class="text-sm text-gray-300 leading-relaxed">
-          Materiale sviluppato in <a href="/dm/storie-citta" class="underline text-amber-300">Storie in Città —
-          Valoris</a> (filone II, "La Prova della Fortuna"): con gli dèi fisicamente presenti nel mondo, il tempio
-          non è più una preghiera muta, può essere un contatto reale. Questa Parte lo prepara per il tavolo con
-          dettagli su accoglienza, importanza acquisita e risposte pronte alle giocate più probabili.
+          <strong class="text-red-300">Correzione importante:</strong> Valoris è chierico/paladino del
+          <strong class="text-white">Cavaliere Rosso</strong>, campionessa di Tempus — è quello il suo tempio di
+          riferimento, con un altare dedicato a lei. Il ciondolo di Tymora è un dono personale d'infanzia (vedi
+          <em>Bg Valoris.md</em>, il dialogo con Regal), non un segno di devozione: lui non è un fedele di Tymora e
+          non avrebbe motivo di frequentarne il tempio come pratica di routine. La Parte principale qui sotto è
+          quindi il <strong class="text-white">Tempio di Tempus</strong>. Una visita <em>occasionale e personale</em>
+          al tempio di Tymora resta possibile e sensata — vedi la sezione secondaria in fondo — ma è l'eccezione,
+          non la regola.
         </p>
       </div>
 
-      <h3 class="text-xl font-bold text-amber-300 mb-3">Come viene accolto</h3>
+      <h3 class="text-xl font-bold text-red-300 mb-3">Il Tempio di Tempus — dove Valoris ha davvero un altare</h3>
       <p class="text-sm text-gray-300 leading-relaxed mb-4">
-        Il tempio di Tymora a Waterdeep non è solenne: è pieno di scommettitori, ex-nullatenenti diventati ricchi,
-        dadi consacrati sull'altare. Valoris non è un volto anonimo qui — un chierico del Cavaliere Rosso che porta
-        pubblicamente l'amuleto della Dea Bendata è raro, e la sua Compagnia è ora la prima ad aver chiuso un intero
-        Ecosistema. Ad accoglierlo è <strong class="text-amber-200">Madre Yssa Featherdice</strong>, l'alta
-        sacerdotessa: energica, tagliente nell'ironia, sinceramente affezionata a lui pur senza mai smettere di
-        provocarlo sulla sua fede "in prestito".
+        Un luogo disciplinato, quasi militare: campo di addestramento coperto sul retro, armi consacrate esposte
+        lungo le pareti, una grande statua della Cavaliere Rosso china su un tavolo da guerra intagliato in pietra —
+        non una dea in posa da guerriera, una dea che <em>pianifica</em>. Valoris non è un fedele anonimo qui: è un
+        cavaliere quartiermastro della Compagnia Rossa, e la sua Compagnia (i Guardiani della Trama) è ora la prima
+        ad aver chiuso un intero Ecosistema. Ad accoglierlo è <strong class="text-amber-200">Regal</strong> — il suo
+        vecchio "confratello" di addestramento (vedi <em>Bg Valoris.md</em>, la scena della conversazione notturna
+        sul ciondolo), oggi ufficiale della guarnigione della Compagnia Rossa a Waterdeep: era già di stanza qui da
+        prima della Discesa degli Dèi, coerente con la città sigillata.
       </p>
-      <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r text-sm mb-6">
-        <p class="italic text-amber-100 leading-relaxed">
-          <em>"Il chierico della strategia che prega la fortuna. Lo sai che ti chiamano così, in giro?"</em> Yssa non
-          alza gli occhi dal tavolo di dadi che sta ripulendo. <em>"Non in cattiveria. È che nessun altro qui riesce
-          a vincere quanto vinci tu senza mai davvero rischiare niente. La Signora trova la cosa... divertente. Non
-          me lo ha detto. Lo sento."</em>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-6">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Il ragazzo di strada che porta ancora quel ciondolo."</em> Regal non è cambiato molto — stessa
+          corporatura da paladino, stesso sguardo curioso. Sorride prima di stringergli il braccio invece della
+          mano, come tra vecchi commilitoni. <em>"Ho sentito il tuo nome tre volte in una settimana, e non da
+          fratelli dell'Ordine — da gente comune, al mercato. Non so se congratularmi o preoccuparmi per te."</em>
         </p>
       </div>
 
       <h3 class="text-xl font-bold text-amber-300 mb-3">Che importanza ha assunto</h3>
       <p class="text-sm text-gray-300 leading-relaxed mb-6">
-        Non è più un visitatore occasionale: è diventato, senza cercarlo, una specie di mascotte teologica per i
-        devoti più giovani — la prova vivente che disciplina e fortuna non si escludono. Novizi gli chiedono
-        benedizioni prima di scommesse importanti (non per lui, per la sua vicinanza percepita alla Dea). Un
-        novizio in particolare, se vuoi una scena concreta, gli chiede di benedire un lancio di dadi che deciderà se
-        può permettersi di pagare un debito o no — piccola prova di cosa significhi, in pratica, essere preso sul
-        serio da una fede che non è la propria.
+        Non è più solo un nome nei registri della Cittadella: è diventato, senza cercarlo, un esempio che l'Ordine
+        cita ai nuovi cadetti — l'orfano di strada che ha applicato la dottrina della Cavaliere Rosso fino a
+        chiudere per primo un intero Ecosistema del Gioco Divino. Il suo discorso di Moonfest (vedi <em>Bg
+        Valoris.md</em>) viene ora ripetuto, quasi come un piccolo testo sacro minore, tra i cadetti più giovani.
+        Questo aumenta la posta di quello che sta per succedere: non è più solo un soldato che torna a fare rapporto,
+        è una figura che l'Ordine vuole formalmente reclamare.
       </p>
 
-      <h3 class="text-xl font-bold text-amber-300 mb-3">Cosa gli viene chiesto</h3>
-      <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r text-sm mb-4">
-        <p class="italic text-amber-100 leading-relaxed">
-          Yssa lo porta davanti all'altare — non per un rituale formale, per una chiacchierata che sa già dove
-          vuole andare. <em>"Tu pianifichi per non perdere nessuno. Io gioco perché perdere è sempre possibile — e
-          vale comunque la pena tirare i dadi. Non sono in contraddizione, chierico. Il tuo dio ti ha insegnato a
-          minimizzare il rischio. Io ti ricordo perché, alla fine, qualcuno deve comunque rischiare."</em>
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Cosa gli viene chiesto — l'offerta dell'Ordine del Falco Rosso</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Regal non è qui solo per salutarlo: porta un'offerta formale per conto dell'<strong class="text-white">Ordine
+        dei Paladini del Falco Rosso</strong> — lo stesso ordine più rigido di cui lui stesso fa parte, quello che
+        anni fa, secondo la battuta di Regal nel dialogo originale, "gli avrebbe impedito di portare in bella vista"
+        l'amuleto di Tymora. Con la fama recente, l'Ordine vuole reclutarlo formalmente nei propri ranghi — status,
+        struttura, riconoscimento pubblico — invece di lasciarlo come cavaliere quartiermastro indipendente che
+        risponde solo alla propria dea.
+      </p>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Il Gran Maestro mi ha chiesto di parlartene di persona, non tramite un messaggero."</em> Regal pesa le
+          parole. <em>"Un posto nel Falco Rosso. Vero riconoscimento, non solo la gente che ti ferma per strada. Ti
+          chiederebbero solo una cosa che già sospetto tu non voglia dare: rispondere a un Gran Maestro, non solo
+          alla Signora in Rosso. Io l'ho fatto, e non me ne pento. Ma io non sono te."</em>
         </p>
       </div>
       <p class="text-sm text-gray-300 leading-relaxed mb-6">
-        Quello che gli chiede concretamente: un lancio, sull'altare, senza sapere in anticipo per cosa conta — un
-        atto di fede letterale invece che strategico. Non è un test da superare o fallire: qualunque cosa esca, Yssa
-        (o Tymora stessa, se vuoi alzare la posta) lo tratta come significativo.
+        È deliberatamente la stessa tensione del dialogo originale con Regal (dottrina/struttura contro fede
+        diretta e indipendente), ma questa volta con conseguenze reali: accettare significa status e risorse
+        dell'Ordine, ma anche una catena di comando sopra la sua testa — esattamente il tipo di ingerenza
+        istituzionale su cui il Consiglio dei Guardiani lo sta già ammonendo nella stessa sessione (vedi Parte VII).
+        Non serve risolverla oggi: può restare una proposta aperta, con Regal che aspetta una risposta "quando sarai
+        pronto, non prima".
       </p>
 
-      <h3 class="text-xl font-bold text-amber-300 mb-3">Cosa potrebbe voler fare — la ragazza dell'amuleto</h3>
-      <div class="bg-indigo-900/20 border border-indigo-700/40 rounded-lg p-4 mb-4">
-        <p class="text-sm text-gray-300 leading-relaxed">
-          Aggancio potente e finora inutilizzato: il <strong class="text-white">secretGoal</strong> ufficiale di
-          Valoris è ritrovare la ragazza che gli donò l'amuleto da bambino, a Baldur's Gate. Il tempio è il luogo più
-          naturale in cui lui stesso potrebbe chiederlo — e la città sigillata (nessuno entra o esce, vedi
-          <a href="/dm/storie-citta" class="underline text-indigo-300">continuità città sigillata</a>) rende
-          plausibile che lei sia, semplicemente, già dentro le mura.
-        </p>
-      </div>
-      <p class="text-sm text-gray-300 leading-relaxed mb-2">
-        Se il giocatore lo chiede (a Yssa, o direttamente pregando): non sciogliere il mistero, dai un frammento
-        dosato:
-      </p>
-      <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-6">
-        <p class="italic text-indigo-100 leading-relaxed">
-          Yssa lo guarda più a lungo del solito, quasi sorpresa che glielo chieda sul serio. <em>"Non ti do un nome.
-          Non lo ho. Ma se hai portato quel ciondolo attraverso mezzo dungeon divino senza mai romperlo, un pezzettino
-          di quella fortuna gliela devi ancora."</em> Una pausa, più seria. <em>"Posso dirti questo, e basta: se è
-          ancora a Waterdeep — e dove altro potrebbe essere, ora — qualcuno che porta il nome di Tymora l'ha vista.
-          Non io. Ma qualcuno."</em>
-        </p>
-      </div>
-      <p class="text-gray-500 text-xs mb-6 italic">
-        Nota DM: questo è un gancio deliberatamente aperto per una scena futura (un'altra sacerdotessa, un devoto
-        minore, un ricordo di un altro NPC) — non risolverlo qui. Se il giocatore non lo chiede spontaneamente, non
-        forzarlo: resta materiale pronto, non un obbligo di trama.
-      </p>
-
-      <h3 class="text-xl font-bold text-amber-300 mb-3">Risposte pronte alle giocate più probabili</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Risposte pronte alle giocate più probabili (Tempio di Tempus)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-3 text-xs">
-          <p class="text-green-400 font-bold mb-2">Se accetta il lancio senza fare domande</p>
+          <p class="text-green-400 font-bold mb-2">Se accetta (o considera seriamente)</p>
           <p class="text-gray-300 leading-relaxed">
-            Yssa apprezza sinceramente — è raro. Offre un piccolo dono meccanico coerente con l'amuleto già portato:
-            una fonte di Ispirazione ricorrente, o un piccolo oggetto (dado, moneta) legato a un effetto minore di
-            fortuna. Non è un potenziamento enorme, è un simbolo che diventa utile.
+            Regal è sincero contento, non manipolatorio — non spinge oltre. L'ingresso formale nel Falco Rosso può
+            restare un filo aperto per sessioni future (comporterebbe cambiamenti reali di ruolo/gilda, da pianificare
+            con calma, non improvvisare al tavolo).
           </p>
         </div>
-        <div class="bg-yellow-900/20 border border-yellow-700/40 rounded-lg p-3 text-xs">
-          <p class="text-yellow-400 font-bold mb-2">Se porta con sé Thalio</p>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-3 text-xs">
+          <p class="text-red-400 font-bold mb-2">Se rifiuta</p>
           <p class="text-gray-300 leading-relaxed">
-            Diventa la coda condivisa già prevista in <a href="/dm/storie-citta" class="underline text-yellow-300">Storie
-            in Città — Thalio</a>: un piccolo confronto di fede tra approccio strutturato e istintivo, buona scena
-            leggera se la sessione ha bisogno di respirare dopo momenti più pesanti.
+            Regal non la prende male — la aspettava, in parte. <em>"Non pensavo che avresti detto sì. Ma il Gran
+            Maestro doveva sentirselo dire da te, non doversi accontentare di quello che gli riferisco io."</em>
+            Resta un legame personale caldo, riutilizzabile.
           </p>
         </div>
         <div class="bg-blue-900/20 border border-blue-700/40 rounded-lg p-3 text-xs">
-          <p class="text-blue-400 font-bold mb-2">Se rifiuta o resta scettico</p>
+          <p class="text-blue-400 font-bold mb-2">Se prende tempo</p>
           <p class="text-gray-300 leading-relaxed">
-            Yssa non si offende — è il genere di reazione che si aspetta da un chierico del Cavaliere Rosso.
-            <em>"Va bene anche così. La Signora non ha bisogno che tu creda in lei. Le basta che tu continui a
-            portare il ciondolo."</em> Nessuna conseguenza negativa: il tempio resta un luogo riutilizzabile.
+            Probabilmente l'esito più realistico per un personaggio "onesto fino alla rigidità" ma non impulsivo —
+            Regal è disposto ad aspettare, e questo lascia la porta aperta per farne un tema ricorrente nelle
+            prossime sessioni, magari in tensione con l'ammonimento del Consiglio (Parte VII).
           </p>
         </div>
       </div>
 
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Visita secondaria (opzionale) — il tempio di Tymora</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Da usare solo se il giocatore stesso decide di andarci — non è una tappa automatica, è una scelta personale
+        di Valoris fuori dalla sua fede ufficiale, ed è proprio per questo che una sacerdotessa la nota e la ricorda.
+        Materiale ripreso da <a href="/dm/storie-citta" class="underline text-amber-300">Storie in Città —
+        Valoris</a> (filone II).
+      </p>
+      <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-amber-100 leading-relaxed">
+          <strong class="text-amber-200">Madre Yssa Featherdice</strong>, l'alta sacerdotessa, lo riconosce appena
+          entra — non come devoto, come curiosità ricorrente. <em>"Il chierico che non è dei nostri, ma porta il
+          nostro ciondolo. Torni più spesso di quanto vorresti ammettere."</em> Non alza gli occhi dal tavolo di
+          dadi che sta ripulendo. <em>"Non in cattiveria. È che nessun altro qui riesce a vincere quanto vinci tu
+          senza mai davvero rischiare niente. La Signora trova la cosa... divertente. Non me lo ha detto. Lo
+          sento."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Se resta, Yssa lo porta davanti all'altare per una chiacchierata più che per un rituale formale — richiama
+        esplicitamente il suo dialogo con Regal sul "piano perfetto che non incontra la realtà". Chiede un lancio di
+        dadi sull'altare, senza dirgli in anticipo per cosa conta: un atto di fede letterale invece che strategico.
+      </p>
+
+      <div class="bg-indigo-900/20 border border-indigo-700/40 rounded-lg p-4 mb-4">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Aggancio potente e finora inutilizzato, da usare <strong class="text-white">solo se il giocatore chiede
+          spontaneamente</strong>: il <strong class="text-white">secretGoal</strong> ufficiale di Valoris è ritrovare
+          la ragazza che gli donò l'amuleto da bambino. Il tempio di Tymora — non quello di Tempus — è il luogo
+          giusto per chiederlo, ed è proprio perché lui non è un devoto abituale che la domanda ha peso quando la
+          fa.
+        </p>
+      </div>
+      <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-indigo-100 leading-relaxed">
+          Yssa lo guarda più a lungo del solito. <em>"Non ti do un nome. Non lo ho. Ma se hai portato quel ciondolo
+          attraverso mezzo dungeon divino senza mai romperlo, un pezzettino di quella fortuna gliela devi ancora."</em>
+          Una pausa, più seria. <em>"Posso dirti questo, e basta: se è ancora a Waterdeep — e dove altro potrebbe
+          essere, ora — qualcuno che porta il nome di Tymora l'ha vista. Non io. Ma qualcuno."</em>
+        </p>
+      </div>
+      <p class="text-gray-500 text-xs mb-4 italic">
+        Nota DM: gancio deliberatamente aperto, non risolverlo qui. Se il giocatore non lo chiede spontaneamente, non
+        forzarlo.
+      </p>
+
       <p class="text-gray-500 text-xs mt-4 italic">
         Nota DM sul sequencing: se stai anche giocando il filone di Dresk Colhollow (il sopravvissuto della carovana,
-        vedi <a href="/dm/storie-citta" class="underline text-gray-400">Storie in Città — Valoris, filone I</a>), il
-        tempio funziona meglio <em>dopo</em> quella scena — Valoris arriva qui non per routine, ma perché ha bisogno
-        di una risposta.
+        vedi <a href="/dm/storie-citta" class="underline text-gray-400">Storie in Città — Valoris, filone I</a>),
+        qualsiasi visita al tempio funziona meglio <em>dopo</em> quella scena — Valoris arriva non per routine, ma
+        perché ha bisogno di una risposta.
       </p>
     </div>
 
@@ -484,31 +592,34 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <h3 class="text-xl font-bold text-red-300 mb-3">L'incarico di Magnus</h3>
       <p class="text-sm text-gray-300 leading-relaxed mb-4">
         <strong class="text-white">Magnus "Ironfist" Thorne</strong> chiama Morgrim per un compito pratico durante i
-        sette giorni di pausa — non una richiesta emotiva diretta (quella, se vuoi, arriva come coda naturale a fine
-        incarico, vedi sotto), ma un ordine operativo da vecchio soldato a vecchio soldato: due mansioni concrete,
-        entrambe con un chiaro "vai, fai, torna a riferire".
+        sette giorni di pausa — non una richiesta emotiva diretta (quella arriva come sviluppo naturale del
+        compito stesso, vedi sotto), ma un ordine operativo da vecchio soldato a vecchio soldato, con un problema
+        concreto e urgente da risolvere: il controllo attuale dell'armeria ha appena fatto un danno vero, e Magnus
+        non si fida più di lasciarlo fare a chiunque.
       </p>
 
       <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
         <p class="italic text-red-100 text-lg leading-relaxed">
-          <em>"Thea ha comprato un lotto di armi e armature nuove per la Gilda — sponsor cittadini, fondi del
-          Consiglio, poco importa. Prima che finiscano nelle mani di qualche riserva che non sa distinguere un buon
-          filo di lama da uno scadente, voglio che qualcuno con l'occhio giusto le controlli."</em> Magnus non
-          alza lo sguardo dal registro che sta compilando. <em>"Tu hai quell'occhio. Non chiedo un miracolo, chiedo
-          che tu mi dica cosa reggerà e cosa cederà prima che lo scopra qualcuno sul campo, nel modo peggiore."</em>
+          <em>"Bregan Fallow — l'aiutante di Thea — ha certificato buono un lotto intero di lame nuove due settimane
+          fa. Una si è spezzata a metà durante l'addestramento e ha mandato un recluta in infermeria con un taglio
+          che non doveva esserci."</em> Magnus non alza lo sguardo dal registro che sta compilando. <em>"Bregan ha
+          l'occhio di chi ha imparato sui libri, non sul campo. Tu no. Non sto chiedendo un favore, Sangueombra: mi
+          posso fidare solo di te per questo, e non ho tempo di scoprire a mie spese chi altro potrei fidarmi."</em>
         </p>
       </div>
 
       <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
-        <p class="font-bold text-red-200 mb-2">Compito 1 — Il Controllo dell'Armeria</p>
+        <p class="font-bold text-red-200 mb-2">Il Controllo dell'Armeria</p>
         <p class="text-sm text-gray-300 leading-relaxed mb-3">
-          Struttura semplice e a basso rischio sociale, perfetta per iniziare: Morgrim ispeziona un lotto di 5-6
-          pezzi (spade, scudi, un'armatura, un arco) e per ciascuno fa una <strong class="text-white">prova di
-          Intelligenza (Storia) o Saggezza (Percezione)</strong> — a seconda di cosa preferisci enfatizzare, la sua
-          competenza tecnica o il suo istinto da veterano. Ogni pezzo ha un piccolo difetto o pregio da scoprire:
+          Struttura semplice e a basso rischio sociale, perfetta per un giocatore nuovo: Morgrim rifà da zero
+          l'ispezione che Bregan ha fatto male, un lotto di 5-6 pezzi (spade, scudi, un'armatura, un arco), con una
+          <strong class="text-white">prova di Intelligenza (Storia) o Saggezza (Percezione)</strong> per pezzo — a
+          seconda di cosa preferisci enfatizzare, la sua competenza tecnica o il suo istinto da veterano. Ogni pezzo
+          ha un piccolo difetto o pregio da scoprire:
         </p>
         <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
-          <li>Una spada con un difetto di forgiatura nascosto nella lama — si romperebbe al terzo o quarto colpo pesante.</li>
+          <li>Una seconda spada dello stesso lotto di quella già rotta, con lo stesso identico difetto di forgiatura
+          nella lama — la prova concreta che Bregan non aveva controllato per niente, solo timbrato.</li>
           <li>Uno scudo perfetto, meglio di quanto Thea l'abbia pagato — merita di andare a chi tiene la linea in prima fila.</li>
           <li>Un'armatura a piastre tagliata per un corpo più grande del previsto — utilizzabile, ma solo dopo aggiustamenti.</li>
           <li>Un arco con la corda già visibilmente logora — inutile finché non viene sostituita.</li>
@@ -521,29 +632,30 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-6">
-        <p class="font-bold text-red-200 mb-2">Compito 2 — L'Errand al Circolo Druidico</p>
-        <p class="text-sm text-gray-300 leading-relaxed mb-3">
-          Il secondo compito porta Morgrim, senza forzature, dritto verso Mira. Magnus lo incarica di andare a
-          ritirare una fornitura di erbe medicinali per l'infermeria di Lira Dawnwhisper, ordinata al circolo
-          druidico vicino alla piazza dell'Arco — e aggiunge, quasi di passaggio, l'unica riga che rende l'incarico
-          personale:
-        </p>
-        <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-3">
-          <p class="italic text-red-100 leading-relaxed">
-            <em>"Già che ci sei — mi hanno detto che la ragazza che chiamavi 'nipote' è tornata a farsi vedere da
-            quelle parti. Non ti sto chiedendo di parlarle. Ti sto chiedendo di controllare che il circolo consegni
-            la merce giusta. Il resto, se capita, capita."</em>
-          </p>
-        </div>
-        <p class="text-sm text-gray-300 leading-relaxed">
-          Struttura consigliata per il tavolo: Morgrim arriva, gestisce la consegna (piccola interazione a bassa
-          posta con un druido qualsiasi — conta le erbe, verifica la qualità, magari una prova di Persuasione o
-          Intimidazione leggera se qualcosa non torna), e solo <em>dopo</em> che il compito principale è concluso,
-          Mira compare sullo sfondo. Questo dà al giocatore il permesso implicito di "aver già finito il suo
-          lavoro" prima di dover reggere una scena emotiva — meno pressione a improvvisare dialogo sul momento.
+      <h3 class="text-xl font-bold text-red-300 mb-3">Da lì, senza soluzione di continuità — il recluta ferito</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-3">
+        Non un secondo incarico separato, ma la conseguenza diretta e quasi automatica del primo — Morgrim non va a
+        fare una commissione, va a chiudere il cerchio di quello che ha appena scoperto. Trovare la seconda spada
+        difettosa gli dà il nome del recluta rimasto ferito: è ancora in cura, non nell'infermeria di Lira
+        (sovraffollata dopo il rientro dall'Ecosistema 1), ma presso il circolo druidico vicino alla piazza
+        dell'Arco, dove la Gilda manda i casi che richiedono cure più lente e naturali.
+      </p>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-3">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Se è stata la mia armeria a tagliarlo, voglio che sia uno dei miei a guardarlo in faccia — non un
+          messaggero, non una nota su un registro."</em> Magnus non lo formula come una richiesta emotiva, ma come
+          una questione di responsabilità e di onore da soldato: chi controlla l'equipaggiamento risponde di chi si
+          fa male per colpa sua.
         </p>
       </div>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Struttura consigliata per il tavolo: Morgrim arriva al circolo con un compito preciso e dignitoso (verificare
+        le condizioni del recluta, valutare se serva altro equipaggiamento di riserva, magari una prova di Intuizione
+        per capire se il ragazzo nasconde quanto è grave), e solo mentre è lì scopre che una delle druide che lo
+        assistono è <strong class="text-white">Mira Greenleaf</strong>. Questo dà al giocatore un motivo concreto e
+        rispettabile per essere sul posto — non un'errand da sguattero — prima di dover reggere l'emotività della
+        reunion.
+      </p>
 
       <h3 class="text-xl font-bold text-red-300 mb-3">L'incontro con Mira</h3>
       <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
@@ -570,7 +682,7 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           maniera piacevole": Magnus, sentendo il resoconto, promuove informalmente Morgrim a "controllore
           d'armeria" non ufficiale della Gilda (un titolo minore ma reale, buona base per futuri agganci in cui è
           lui il primo a essere consultato su nuovo equipaggiamento). Se hai bisogno di un incentivo meccanico
-          concreto, uno dei pezzi controllati (lo scudo "perfetto" del Compito 1) può diventare suo, a discrezione
+          concreto, uno dei pezzi controllati durante l'ispezione dell'armeria (lo scudo "perfetto") può diventare suo, a discrezione
           del tavolo.
         </p>
       </div>
@@ -587,12 +699,43 @@ import MainLayout from "../../../layouts/MainLayout.astro";
           Perché "da qui a domani": il conto alla rovescia sull'Arco Divino non è un capriccio locale di Waterdeep —
           è la stessa pressione ovunque nel mondo. Nell'ultima finestra prima che il blocco successivo si apra, ogni
           gilda ancora dentro l'Ecosistema 1 in ogni città sta correndo per chiuderlo. Questa Parte fissa il momento
-          in cui — quasi ovunque — ci riescono, con una sola eccezione vistosa: <strong class="text-orange-300">il
-          Dado Nero</strong>, che è appena entrato al Piano 1 e non ha nessuna possibilità di raggiungerli in tempo.
-          Restano gli unici, in tutto il mondo, ancora dentro l'Ecosistema 1 — coerente col loro essere gli sfavoriti
-          assoluti (10 a 1 contro al Banco delle Quote).
+          in cui — quasi ovunque — ci riescono, con tre eccezioni: le gilde che, come il Dado Nero a Waterdeep,
+          sono nate dalle ceneri di una squadra eliminata e sono appena rientrate in gioco da zero. Restano le uniche,
+          in tutto il mondo, ancora dentro l'Ecosistema 1.
         </p>
       </div>
+
+      <h3 class="text-xl font-bold text-purple-300 mb-3">Le altre due gilde rimpiazzate</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Coerenza con la regola già stabilita per il Dado Nero (nessuna Prova Divina se non ci sono rivali interni,
+        Parte I): quando una gilda muore del tutto, il mandato non lascia il posto vuoto per sempre — semplicemente
+        non c'è nessuna urgenza a riempirlo subito, e infatti ci sono voluti mesi prima che Menzoberranzan e Luskan
+        trovassero un rimpiazzo, contro i pochi giorni di Waterdeep.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-red-950/20 border border-red-800/40 rounded-lg p-4">
+          <p class="font-bold text-red-300 mb-1">Le Vedove di Kiaransalee <span class="text-gray-500 text-xs font-normal">(Menzoberranzan, sostituisce I Tessitori di Seta Nera)</span></p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Un gruppo di drow femmine, ex-sacerdotesse minori e guerriere che hanno perso mariti, fratelli o intere
+            case nelle purghe dei Ragni d'Ossidiana e di altre faide interne. Si sono raccolte sotto il patronato di
+            Kiaransalee — dea della vendetta contro il patriarcato drow e dei non-morti — con un'estetica di rancore
+            metodico più che di caos. Appena entrate al Piano 1, punteggio a zero.
+          </p>
+        </div>
+        <div class="bg-blue-950/20 border border-blue-800/40 rounded-lg p-4">
+          <p class="font-bold text-blue-300 mb-1">I Maledetti del Faro <span class="text-gray-500 text-xs font-normal">(Luskan, sostituisce La Ciurma del Tridente Spezzato)</span></p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Marinai e naufraghi che si consideravano già maledetti da Beshaba molto prima delle Prove — uniti dalla
+            superstizione condivisa che, essendo già le persone più sfortunate di Luskan, non hanno più nulla da
+            temere da un dungeon divino. Toni fatalisti, quasi allegri nella propria disgrazia. Appena entrati al
+            Piano 1, punteggio a zero.
+          </p>
+        </div>
+      </div>
+      <p class="text-gray-500 text-xs italic mb-6">
+        Nota DM: sviluppo minimo per ora — bastano nome, patronato e un tratto distintivo se emerge il bisogno di
+        improvvisare. Approfondisci solo se il party le incontra o ne chiede specificamente in futuro.
+      </p>
 
       <h3 class="text-xl font-bold text-purple-300 mb-3">Classifica finale — Ecosistema 1, tutte le città</h3>
       <p class="text-gray-400 text-sm mb-4 italic">
@@ -636,6 +779,8 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             <tr class="opacity-50"><td class="py-2 pl-3 pr-4 text-gray-500">—</td><td class="py-2 px-4 font-bold text-red-400">I Tessitori di Seta Nera 💀</td><td class="py-2 px-4 text-xs text-gray-500">Menzoberranzan</td><td class="py-2 pr-3 text-center font-bold text-red-400">—</td></tr>
             <tr class="opacity-50"><td class="py-2 pl-3 pr-4 text-gray-500">—</td><td class="py-2 px-4 font-bold text-red-400">La Ciurma del Tridente Spezzato 💀</td><td class="py-2 px-4 text-xs text-gray-500">Luskan</td><td class="py-2 pr-3 text-center font-bold text-red-400">—</td></tr>
             <tr class="opacity-70"><td class="py-2 pl-3 pr-4 text-gray-500">—</td><td class="py-2 px-4 font-bold text-orange-300">🎲 Compagnia del Dado Nero</td><td class="py-2 px-4 text-xs text-gray-500">Waterdeep</td><td class="py-2 pr-3 text-center font-bold text-orange-300">0 (ancora al Piano 1)</td></tr>
+            <tr class="opacity-70"><td class="py-2 pl-3 pr-4 text-gray-500">—</td><td class="py-2 px-4 font-bold text-red-300">Le Vedove di Kiaransalee</td><td class="py-2 px-4 text-xs text-gray-500">Menzoberranzan</td><td class="py-2 pr-3 text-center font-bold text-red-300">0 (ancora al Piano 1)</td></tr>
+            <tr class="opacity-70"><td class="py-2 pl-3 pr-4 text-gray-500">—</td><td class="py-2 px-4 font-bold text-blue-300">I Maledetti del Faro</td><td class="py-2 px-4 text-xs text-gray-500">Luskan</td><td class="py-2 pr-3 text-center font-bold text-blue-300">0 (ancora al Piano 1)</td></tr>
           </tbody>
         </table>
       </div>
@@ -682,33 +827,99 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         <span class="text-blue-400">⚖️</span> PARTE VI: L'INCONTRO CON LO SCUDO RADIANTE — PANNELLO COMPLETO
       </h2>
 
-      <div class="bg-blue-900/30 border border-blue-700/30 rounded p-4 mb-6">
+      <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4 mb-6">
         <p class="text-sm text-gray-300 leading-relaxed">
-          Le due gilde non si sono ancora mai incontrate da pari a pari: sempre nel dungeon, mai in città, mai allo
-          stesso tavolo. Con entrambe reduci dall'Ecosistema 1 e bloccate dallo stesso conto alla rovescia, questo è
-          il momento naturale per il primo faccia a faccia diretto.
+          <strong class="text-red-300">Correzione importante di continuità:</strong> le due gilde non si sono MAI
+          incontrate dentro il dungeon — ogni gilda affronta la propria istanza parallela dei piani (vedi
+          <a href="/dm/progresso-gilde" class="underline text-red-300">Progresso Gilde</a>, "piani paralleli"). Al
+          massimo si sono intraviste ai Pianerottoli, di sfuggita, senza vero contatto. Prima della Discesa degli
+          Dèi potrebbero essersi incrociate casualmente in città come cittadini qualsiasi, e forse si sono viste da
+          lontano durante le rispettive Prove Divine pubbliche o all'ingresso comune dell'Arco — nulla di più.
+          <strong class="text-white">In quanto squadre, non hanno mai avuto un contatto ufficiale né tra tutti i
+          membri.</strong> Questo ricevimento è a tutti gli effetti il primo vero incontro tra le due gilde come
+          collettivi.
         </p>
       </div>
 
-      <h3 class="text-xl font-bold text-blue-300 mb-3">L'occasione</h3>
-      <p class="text-sm text-gray-300 leading-relaxed mb-6">
-        Proposta: un ricevimento cittadino congiunto organizzato dal Consiglio di Waterdeep (o da Lord Eravien
-        Haventree, lo sponsor dello Scudo Radiante, con il tacito benestare del Consiglio) per celebrare le due
-        gilde che hanno chiuso l'Ecosistema 1 — buona PR per la città sigillata, che ha bisogno di mostrare vittorie
-        ai propri cittadini in attesa. Formale ma non rigido: abbastanza pubblico da imporre educazione, abbastanza
-        piccolo (una ventina di persone) da permettere conversazioni vere.
+      <h3 class="text-xl font-bold text-blue-300 mb-3">L'occasione — Il Ricevimento delle Due Gilde</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Organizzato da <strong class="text-white">Lord Eravien Haventree</strong> (sponsor dello Scudo Radiante) con
+        il benestare del Consiglio cittadino: un evento di rappresentanza per mostrare alla città sigillata, in
+        ansia da mesi, che il Gioco Divino produce ancora vittorie vere. Non un ballo di gala pieno di sconosciuti —
+        una serata contenuta (25-30 invitati in tutto), pensata apposta per essere gestibile al tavolo.
       </p>
 
-      <h3 class="text-xl font-bold text-blue-300 mb-3">Nota di continuità — la scout è cambiata</h3>
-      <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4 mb-6">
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-blue-200 mb-2">Dove e quando</p>
         <p class="text-sm text-gray-300 leading-relaxed">
-          <strong class="text-red-300">Mira Swiftfoot</strong> ha lasciato lo Scudo Radiante per il Dado Nero (vedi
-          Sessione 10 e Parte I) — non è più nel loro Team Principale. Al suo posto: <strong
-          class="text-blue-200">Ilsa Doncaster</strong>, umana, ex-investigatrice della Guardia Cittadina, Ranger
-          metodica reclutata da Aldric proprio perché l'opposto di Mira — nessuna moralità grigia, nessun metodo
-          "poco ortodosso". Aldric la presenta con un certo sollievo mai dichiarato ad alta voce; Caelum, che
-          disapprovava Mira, la trova un netto miglioramento. <em>gilde.json</em> e la pagina pubblica dello Scudo
-          Radiante sono già stati aggiornati di conseguenza.
+          La villa di Lord Haventree a Sea Ward, la stessa donata come quartier generale allo Scudo Radiante — un
+          dettaglio che i Guardiani noteranno subito: la rivale gioca in casa. Giardino interno illuminato da
+          globi di luce continua (dono di un mago di corte), un salone con vetrate alte, tavoli di rinfresco lungo
+          le pareti invece di una cena servita — pensato per far circolare le persone, non per farle sedere in
+          silenzio. Serata, verso la metà dei sette giorni di pausa, quando entrambe le gilde sono ancora bloccate
+          dal conto alla rovescia e non hanno "urgenze" di dungeon a distrarle.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-blue-200 mb-2">Chi c'è, oltre alle due squadre</p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li><strong class="text-white">Lord Eravien Haventree</strong> — l'ospite, mercante nobile devoto di
+          Tempus, cordiale e visibilmente orgoglioso del "suo" investimento (lo Scudo Radiante). Parla di loro come
+          farebbe un padrino, non un semplice sponsor.</li>
+          <li>Un rappresentante del Consiglio cittadino (a scelta, o una figura ricorrente se ne hai già una) — fa un
+          breve discorso ufficiale, cita la Stele del Mandato, ringrazia entrambe le gilde "per aver dato alla città
+          qualcosa da guardare oltre alla cupola sopra le nostre teste".</li>
+          <li>Una manciata di nobili minori e mercanti di Sea Ward, curiosi più che coinvolti — buon rumore di fondo,
+          non richiedono gestione attiva.</li>
+          <li><strong class="text-green-300">Fennick "Tre Dita" Corvale</strong>, se vuoi farlo comparire — lavora la
+          sala per raccogliere voci utili al Banco delle Quote, discreto ma presente.</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-6">
+        <p class="font-bold text-blue-200 mb-2">Scaletta della serata — struttura pronta per il tavolo</p>
+        <ol class="text-sm text-gray-300 space-y-2 list-decimal list-inside">
+          <li><strong class="text-white">Arrivo e primo mescolamento (10-15 minuti di gioco):</strong> le due
+          squadre arrivano separatamente, si notano da lontano prima di parlarsi. Buon momento per un primo scambio
+          di sguardi tra "specchi" (Morgrim/Durak, Valoris/Aldric) senza dialogo ancora.</li>
+          <li><strong class="text-white">Discorso ufficiale:</strong> Lord Haventree e il rappresentante del
+          Consiglio parlano brevemente, citano i numeri della Stele, fanno un toast. Punto morto naturale per far
+          rispondere il party se qualcuno vuole intervenire pubblicamente.</li>
+          <li><strong class="text-white">Mescolamento libero guidato:</strong> qui vivono le conversazioni del
+          pannello dei personaggi sotto — lascia che i giocatori scelgano chi avvicinare, ma tieni pronte le coppie
+          naturali (Durak/Morgrim, Caelum/Valoris, Elira/Riven o Arianna, Ilsa/Thalio) come agganci di riserva se
+          nessuno si muove spontaneamente.</li>
+          <li><strong class="text-white">Complicazione leggera (opzionale):</strong> un piccolo incidente sociale a
+          scelta — Fennick che tenta di sfruttare la vicinanza tra i due gruppi per un'altra offerta, un nobile che
+          fa una domanda imbarazzante sulla morte degli Sciocchi Fortunati, o Caelum che sfida apertamente Valoris
+          su un punto tattico davanti a tutti. Non deve degenerare: è colore, non un combattimento.</li>
+          <li><strong class="text-white">Chiusura:</strong> Lord Haventree ringrazia tutti, le due squadre si
+          separano — lascia un'ultima battuta scambiata tra due personaggi a scelta come nota finale della serata.</li>
+        </ol>
+      </div>
+
+      <h3 class="text-xl font-bold text-blue-300 mb-3">Nota di continuità — la scout è cambiata (confermato)</h3>
+      <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Confermato al 100%, e non è un'invenzione di questa sessione: la defezione di <strong
+          class="text-red-300">Mira Swiftfoot</strong> dallo Scudo Radiante alla Compagnia del Dado Nero è già
+          scritta in <a href="/dm/sessioni/sessione-10#dado-nero" class="underline text-red-300">Sessione 10, Parte
+          VI</a> — la tabella della squadra principale del Dado Nero la lista esplicitamente come "Defezione dallo
+          Scudo Radiante". Il bug era altrove: <code>public/data/gilde.json</code> (la fonte dati della pagina
+          pubblica dello Scudo Radiante) non era stato aggiornato di conseguenza e la mostrava ancora nel loro
+          roster — per questo non compariva "coerente" quando è stata controllata la pagina. Corretto in questa
+          sessione: al suo posto <strong class="text-blue-200">Ilsa Doncaster</strong>, umana, ex-investigatrice
+          della Guardia Cittadina, Ranger metodica reclutata da Aldric proprio perché l'opposto di Mira. Aldric la
+          presenta con un certo sollievo mai dichiarato ad alta voce; Caelum, che disapprovava Mira, la trova un
+          netto miglioramento.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          <strong class="text-white">Storico persistente:</strong> sia <em>gilde.json</em> (per lo Scudo Radiante)
+          sia <code>gilde/dado-nero.astro</code> hanno ora un array <code>rosterHistory</code> renderizzato come
+          sezione "🕓 Storico Roster" nelle rispettive pagine — box dm-only con sessione, evento (defezione/nuovo
+          ingresso/promozione) e nota. Aggiungi una nuova voce lì ogni volta che il roster di una gilda cambia,
+          invece di limitarti a sovrascrivere il membro uscente.
         </p>
       </div>
 
@@ -828,25 +1039,58 @@ import MainLayout from "../../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <h3 class="text-xl font-bold text-green-300 mb-3">L'interrogatorio di Rooks — chiusura del filone</h3>
+      <h3 class="text-xl font-bold text-green-300 mb-3">L'interrogatorio di Rooks — più grave di un semplice tentativo di reclutamento</h3>
       <p class="text-sm text-gray-300 leading-relaxed mb-4">
-        Prima della riunione, il Consiglio interroga formalmente Rooks per il tentativo di reclutare Thalio per una
-        gilda rivale mentre era ancora, tecnicamente, riserva dei Guardiani. Non serve giocarlo per intero: bastano
-        gli esiti.
+        Il Consiglio non tratta questo caso come un semplice tentativo di poaching su un membro di riserva. Rooks ha
+        agito da <em>dentro</em> il quartier generale dei Guardiani, da membro ancora tecnicamente attivo, per
+        sottrarre un membro del Team Principale a una gilda che sta ancora disputando il Gioco Divino — agli occhi
+        del Consiglio, questo è a tutti gli effetti un tentativo di sabotare la propria stessa squadra dall'interno
+        a favore di una rivale. Non è archiviabile con una semplice espulsione.
       </p>
       <div class="bg-black/50 border-l-4 border-green-500 p-6 my-4 rounded-r">
         <p class="italic text-green-100 text-lg leading-relaxed">
-          Serath è pragmatico, non vendicativo: Rooks non ha rubato nulla, non ha tradito segreti di missione — ha
-          solo cercato di portarsi via un membro <em>di riserva</em>, cosa tecnicamente permessa dal contratto di
-          gilda anche se malvista. La sentenza: espulsione dai Guardiani (non era mai stato nel Team Principale,
-          quindi il "danno" è minimo), nessuna punizione ulteriore. <em>"Nessuno è insostituibile, Rooks. Nemmeno
-          tu."</em> È libero di andarsene — dritto tra le braccia del Dado Nero, se Barda è già Capitano, come
-          membro qualsiasi della squadra principale invece che come suo comandante.
+          <em>"Non stiamo parlando di un ladro che ruba per fame."</em> Serath è più freddo del solito. <em>"Stiamo
+          parlando di qualcuno che ha usato la fiducia di questa Gilda per minare la squadra che la rappresenta nel
+          Gioco. Se fosse successo a un'altra Gilda, il Falco Rosso lo chiamerebbe tradimento."</em> Le opzioni sul
+          tavolo, prima di qualsiasi intervento del party, sono pesanti: detenzione prolungata, un processo formale
+          davanti al Consiglio, possibile marchiatura pubblica come sleale.
         </p>
       </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="bg-yellow-900/20 border border-yellow-700/40 rounded-lg p-4 text-sm">
+          <p class="text-yellow-400 font-bold mb-2">Se Valoris si oppone fermamente (probabile, subito dopo il proprio ammonimento)</p>
+          <p class="text-gray-300 leading-relaxed">
+            Tensione voluta: è la stessa identica dinamica per cui è stato appena ammonito, testata di nuovo a
+            distanza di minuti. Se insiste per una pena proporzionata, Serath cede — non per debolezza, ma perché
+            l'argomento di Valoris (nessun segreto di missione tradito, solo un tentativo di reclutamento aggressivo)
+            ha un fondamento reale. Compromesso: <strong class="text-white">alcune notti in cella, in silenzio</strong>
+            — se qualcuno chiede di lui, la Gilda nega semplicemente di sapere dove sia. Sufficiente a fargli perdere
+            comunque la finestra per presentarsi con la squadra all'Arco (vedi Parte I).
+          </p>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4 text-sm">
+          <p class="text-red-400 font-bold mb-2">Se Valoris non interviene, o il party resta neutrale</p>
+          <p class="text-gray-300 leading-relaxed">
+            Il Consiglio procede con la linea più dura di sua iniziativa: detenzione più lunga, marchio permanente
+            di sleale nei registri di Gilda, nessuna possibilità realistica di essere accettato altrove a breve
+            termine. Più severo, ma non necessario per la trama — usalo solo se il party lascia davvero correre.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-300 leading-relaxed mb-2">
+        In entrambi i casi, l'effetto pratico sul Dado Nero è lo stesso: Rooks perde comunque la finestra per
+        presentarsi all'Arco Divino con la squadra (Parte I) — un vero e proprio sabotaggio indiretto della terza
+        gilda, anche se involontario da parte del Consiglio. Dorin, non sapendo se e quando Rooks sarebbe tornato,
+        aveva già preso le sue contromisure (Barda promossa, Yorick reclutato) — la Compagnia del Dado Nero non ne
+        risente concretamente, ma Rooks sì: quando eventualmente uscirà di cella, troverà un posto già occupato.
+      </p>
       <p class="text-gray-500 text-xs mb-6 italic">
-        Nota DM: questo chiude elegantemente il filone — Rooks finisce comunque nel Dado Nero, solo non da capitano.
-        Buon gancio per una futura scena di frizione interna tra lui e Barda ("il posto che dovevo avere io").
+        Nota DM: dopo la detenzione resta espulso dai Guardiani in ogni caso — non era mai stato nel Team
+        Principale, quindi non serve una scena di espulsione formale separata, basta una riga di narrazione. Buon
+        gancio per il futuro: se e quando si ripresenta al Dado Nero, troverà Yorick al suo posto e Barda al comando
+        — frizione pronta per riprendere in una sessione successiva.
       </p>
 
       <h3 class="text-xl font-bold text-green-300 mb-3">L'ammonimento a Valoris</h3>
@@ -902,8 +1146,10 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       <p class="text-sm text-gray-300 leading-relaxed mb-4">
         Segue immediatamente l'ammonimento, quasi a bilanciarlo — il Consiglio dà con una mano quello che ha appena
         limitato con l'altra, formalizzando il compromesso già discusso in Sessione 10 (fondi cittadini per
-        l'equipaggiamento, cristalli riservati per gli acquisti nel dungeon). Numeri concreti, da non improvvisare
-        al tavolo:
+        l'equipaggiamento, cristalli riservati per gli acquisti nel dungeon). Il Favore Divino, ora che ha uno
+        sbocco meccanico chiaro (vedi <a href="/meccaniche/favore-divino" class="underline text-green-300">Sistema
+        di Favore Divino</a>), rende queste percentuali concrete: si converte in MO reali al tasso ufficiale, non è
+        un numero astratto. Cifre concrete, da non improvvisare al tavolo:
       </p>
       <div class="overflow-x-auto mb-4">
         <table class="w-full text-sm">
@@ -920,7 +1166,9 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             </tr>
             <tr>
               <td class="py-3 pr-4 font-bold text-white">Quota Favore Divino</td>
-              <td class="py-3 pl-4">10% del Favore convertito in MO (tasso attuale: 100 Favore = 50 MO) va diviso individualmente a fine Ecosistema, oltre alla parte che resta al fondo comune.</td>
+              <td class="py-3 pl-4">10% del Favore convertito in MO (tasso ufficiale: 100 Favore = 50 MO, vedi
+              <a href="/meccaniche/favore-divino" class="underline text-green-300">meccanica dedicata</a>) va diviso
+              individualmente a fine Ecosistema, oltre alla parte che resta al fondo comune.</td>
             </tr>
             <tr>
               <td class="py-3 pr-4 font-bold text-white">Vendita cristalli — canale legale (Thea)</td>
@@ -929,6 +1177,10 @@ import MainLayout from "../../../layouts/MainLayout.astro";
             <tr>
               <td class="py-3 pr-4 font-bold text-amber-300">Paga di rischio</td>
               <td class="py-3 pl-4">Bonus una tantum di 100 MO a chi ha affrontato Kethrar — riconoscimento esplicito che delle tre squadre che hanno affrontato le Prove Divine, solo due sono tornate.</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-cyan-300">Premio di completamento Ecosistema</td>
+              <td class="py-3 pl-4"><strong class="text-white">200 MO a testa</strong>, oltre allo stipendio mensile, ogni volta che il Team Principale completa un intero Ecosistema — pagato subito al ritorno in superficie, prima ancora della quota Favore (che richiede più tempo per essere calcolata). Per l'Ecosistema 1, già maturato: da versare a inizio sessione se non è ancora stato fatto in narrazione.</td>
             </tr>
           </tbody>
         </table>
@@ -940,17 +1192,255 @@ import MainLayout from "../../../layouts/MainLayout.astro";
       </p>
     </div>
 
+    <!-- ==================== PARTE VIII: SOTTOTRAME CITTADINE ==================== -->
+    <div id="sottotrame-cittadine" class="bg-teal-900/20 border border-teal-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">🏙️</span> PARTE VIII: SOTTOTRAME CITTADINE — WATERDEEP VIVA
+      </h2>
+
+      <div class="bg-teal-900/30 border border-teal-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Obiettivo esplicito di questa Parte: dare ai giocatori motivi per girare Waterdeep di propria iniziativa,
+          non solo per attraversarla tra una scena di trama e la prossima discesa nel dungeon divino. Le sei
+          proposte sotto sono un <strong class="text-white">menu, non un programma</strong> — non servono tutte
+          in Sessione 11, anzi probabilmente nessuna esaurisce oggi: seminane una o due come rumor/incontro
+          marginale, e tieni le altre in tasca per il downtime delle prossime sessioni. Sono pensate per reggersi
+          in piedi da sole, staccate dall'Ecosistema del dungeon e dal Gioco Divino — la città come luogo con una
+          vita propria, non come corridoio tra due porte del Velo.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-teal-300 mb-3">Verifica preliminare — chi può già conoscere qualcuno nelle gilde delle altre città?</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Controllo richiesto su background/legami/provenienze dei cinque personaggi rispetto alle 21 gilde delle
+        sette città (vedi <a href="/dm/altre-citta-gilde" class="underline text-teal-300">Le Gilde delle Altre
+        Città</a>). Ricorda il vincolo di continuità: le città sono sigillate, quindi nessun incontro fisico è
+        possibile — l'unico contatto plausibile è il <strong class="text-white">riconoscimento di un nome</strong>
+        letto sulla Stele delle Altre Città o sentito in una voce di corridoio, mai una rimpatriata. Risultato,
+        onesto anche dove non c'è materiale:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div class="bg-gray-800/50 border border-teal-700/40 rounded-lg p-4 text-sm">
+          <p class="text-teal-300 font-bold mb-2">✅ Morgrim → Mithral Hall</p>
+          <p class="text-gray-300 leading-relaxed">
+            Canonico, non inventato: Morgrim è <strong class="text-white">sopravvissuto all'Assedio di Mithral Hall
+            (1484 DR)</strong> (vedi <em>Sessione 0</em>, "Il Muro di Pietra"). Le tre gilde di Mithral Hall — I
+            Martelli di Runa, La Vena Perduta, La Fucina Vivente — sono l'aggancio più solido di tutto il gruppo.
+            Base per il Sottoquest 1 sotto.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-teal-700/40 rounded-lg p-4 text-sm">
+          <p class="text-teal-300 font-bold mb-2">✅ Valoris → Baldur's Gate</p>
+          <p class="text-gray-300 leading-relaxed">
+            Canonico: Valoris è nato e cresciuto a <strong class="text-white">Baldur's Gate</strong>, capo di una
+            banda di ragazzini di strada prima dell'imboscata che gli costò quasi tutto (<em>Bg Valoris.md</em>).
+            Le tre gilde locali — La Borsa d'Oro, Il Tributo delle Onde, I Meccanici della Marea — sono terreno
+            plausibile per un vecchio compagno di banda scampato e rifattosi una vita altrove, prima del Sigillo.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-teal-700/40 rounded-lg p-4 text-sm">
+          <p class="text-teal-300 font-bold mb-2">✅ Fealer → Myth Drannor</p>
+          <p class="text-gray-300 leading-relaxed">
+            Plausibile: Fealer è un Elfo Alto con un secolo di vita nella <strong class="text-white">società
+            elfica</strong> prima di rinnegarla per disillusione verso la sua gerarchia (<em>Copia di Fealer
+            Corvonero.md</em>, Parte I). Myth Drannor — patronata da Corellon, Sehanine, Hanali — è la città elfica
+            del set: un nome familiare lì, specie tra chi cerca ancora "gloria", colpirebbe nel segno del suo cinismo.
+          </p>
+        </div>
+      </div>
+      <div class="bg-gray-800/30 border border-gray-600 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-400 font-bold mb-2">⚠️ Thalio e Riven — nessun aggancio forzato</p>
+        <p class="text-gray-300 leading-relaxed">
+          Detto per completezza, non per riempire lo spazio: <strong class="text-white">Thalio</strong> è cresciuto
+          a Waterdeep stessa (Le Monete Fortunate, poi fuse nei Guardiani — vedi <em>Sessione 0</em>, "La Scelta di
+          Silas Greycloak"), quindi non ha radici in un'altra città sigillata. <strong class="text-white">Riven</strong>
+          viene da <strong>Daggerford</strong>, che non è una delle sette città del Gioco Divino. Forzare un
+          aggancio per entrambi produrrebbe un placeholder senza base nel background — meglio lasciarli fuori da
+          questo specifico gancio e continuare a svilupparli sui filoni già aperti (Squadra B per Thalio, la
+          cicatrice/Leira per Riven).
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-teal-300 mb-3">Le sei sottoquest — usa quelle che ti servono, in qualsiasi ordine</h3>
+
+      <div class="space-y-5">
+
+        <!-- SOTTOQUEST 1 -->
+        <div class="bg-gray-800/50 border-2 border-teal-700 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">1. 🕸️ Il Nome sulla Stele</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · emotiva · non risolvibile subito — Morgrim, Valoris o Fealer, a scelta o in sequenza in sessioni diverse</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Durante una consultazione qualsiasi della Stele delle Altre Città (per la Classifica Globale di Parte
+            V, o in una sessione futura), uno dei tre personaggi sopra nota un nome — o un soprannome, un titolo,
+            un modo di firmarsi — tra i membri elencati di una gilda rivale in un'altra città. Non serve inventare
+            i dettagli ora: lascialo vago quanto serve ("un nome che non sentivi da anni") finché non decidi tu
+            quale sviluppo vuoi dargli.
+          </p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-3">
+            <li><strong class="text-teal-300">Morgrim / Mithral Hall:</strong> un nome tra I Martelli di Runa o La
+            Vena Perduta — un commilitone che credeva morto durante l'Assedio, o il figlio di uno che lo era
+            davvero.</li>
+            <li><strong class="text-teal-300">Valoris / Baldur's Gate:</strong> un nome (vero o un alias della
+            strada) tra La Borsa d'Oro, Il Tributo delle Onde o I Meccanici della Marea — qualcuno della sua banda
+            che non finì nell'imboscata, sopravvissuto e rifattosi una vita legittima molto prima del Sigillo.</li>
+            <li><strong class="text-teal-300">Fealer / Myth Drannor:</strong> un nome elfico tra I Canti dell'Alba
+            o I Sognatori di Luna — meglio ancora se tra <strong>La Lama Ritrovata</strong>, la gilda che insegue
+            "la gloria di Myth Drannor": ironia pronta per il suo disprezzo della retorica elfica.</li>
+          </ul>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-white">Il punto della scena non è risolvere nulla:</strong> il Sigillo non si apre,
+            nessuno può muoversi tra città, e nessun canale di comunicazione è mai stato stabilito (se il personaggio
+            chiede in giro — ad Arianna, a Blackstaff — la risposta onesta è "no, non esiste modo di contattare
+            l'esterno"). Il valore è nel momento di caratterizzazione e nel gancio aperto per l'Ecosistema 2 o 3, se
+            e quando il Sigillo dovesse mai vacillare.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: non forzarlo su tutti e tre insieme — anche solo uno, sviluppato bene in una sessione dedicata,
+            vale più di tre accenni superficiali nello stesso pomeriggio.
+          </p>
+        </div>
+
+        <!-- SOTTOQUEST 2 -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">2. 🏃 La Corsa dei Tetti</p>
+          <p class="text-xs text-gray-500 italic mb-2">Leggera · competitiva · nessun rischio reale — ottima per Thalio, ma aperta a chiunque</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Con la città sigillata e ansiosa, le tradizioni cittadine minori sono diventate, se possibile, più
+            popolari di prima — la gente ha bisogno di qualcosa da guardare che non sia la cupola sopra le teste
+            (lo stesso principio dietro il Ricevimento di Parte VI). La <strong class="text-white">Corsa dei
+            Tetti</strong> è una gara di parkour informale tra i quartieri di Waterdeep — Sea Ward e Dock Ward,
+            un percorso diverso ogni edizione — organizzata da un ex-ladro ora taverniere, aperta a chiunque abbia
+            gambe buone e poca paura dell'altezza. Premio in monete e in fama di quartiere, nulla di più.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Buon terreno per una prova di Acrobazia/Atletica in serie senza posta reale, un rivale sboccato da
+            battibeccare, e un piccolo imbroglio da scoprire a metà gara (un concorrente che taglia per un vicolo,
+            una scommessa truccata al Banco delle Quote di Fennick). Nessuna conseguenza grave in palio — è colore
+            puro, la città che festeggia se stessa.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: perfetta come scena di apertura o intermezzo leggero dopo una Parte pesante (es. subito dopo
+            l'ammonimento di Valoris, Parte VII) — cambia registro senza richiedere setup.
+          </p>
+        </div>
+
+        <!-- SOTTOQUEST 3 -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">3. 👻 Il Fantasma del Molo Vecchio</p>
+          <p class="text-xs text-gray-500 italic mb-2">Mistero leggero · soprannaturale finto · risoluzione mondana</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Voci al Molo Vecchio, nel Dock Ward: luci fioche tra i magazzini abbandonati dopo il tramonto, gemiti
+            portati dal vento, un facchino che si è licenziato dopo aver "visto qualcosa". La storia si è già
+            gonfiata in tre versioni diverse prima ancora che il party se ne occupi — buon materiale per una scena
+            di raccolta voci in taverna prima dell'indagine vera e propria.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-white">Risoluzione consigliata:</strong> non è un fantasma. Un piccolo gruppo di
+            contrabbandieri (nessuna gilda ufficiale, solo opportunisti) usa un semplice trucco — lanterne velate,
+            un complice che geme dietro una parete cava, magari un innocuo incantesimo di illusione minore comprato
+            a caro prezzo — per tenere lontani i curiosi da un magazzino dove stipano merce che preferiscono non
+            far vedere alla Guardia Cittadina. Non serve renderli minacciosi: la sorpresa comica di "smascherare"
+            un finto fantasma con un tiro di Percezione o Indagare ben riuscito è il punto della scena.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: se vuoi allungarla, la merce nascosta può essere un piccolo indizio per il Sottoquest 5 sotto
+            (un rivale minore dello stesso giro), oppure restare fine a se stessa — non è necessario collegarla.
+          </p>
+        </div>
+
+        <!-- SOTTOQUEST 4 -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">4. 📜 Il Registro Contraffatto</p>
+          <p class="text-xs text-gray-500 italic mb-2">Corruzione minore · investigativo · buon eco per Morgrim (armeria, Parte IV), ma apribile da chiunque</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Un fornitore che serve diverse gilde e compagnie minori della città — non i Guardiani, che si servono
+            da Thea — vende equipaggiamento "certificato" con marchi di qualità falsificati: le stesse identiche
+            crepe di forgiatura scoperte da Morgrim durante l'ispezione dell'armeria (Parte IV), ma su scala molto
+            più ampia e verso clienti che non hanno un veterano a controllare di persona.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il gancio arriva meglio per caso che per incarico: una voce al mercato, un mercenario ferito da
+            un'arma che si è spezzata "come non dovrebbe", o Magnus stesso che chiede un secondo parere informale
+            dopo aver sentito la stessa storia da un collega di un'altra compagnia. Non è (necessariamente) un
+            crimine capitale — può restare una questione di reputazione cittadina, con il Consiglio interessato a
+            intervenire se il party porta prove solide, o un dilemma morale se il fornitore è un piccolo artigiano
+            disperato più che un truffatore cinico.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: buon callback per Morgrim se il giocatore ha apprezzato l'ispezione dell'armeria — gli dà
+            l'occasione di applicare la stessa competenza fuori da un incarico assegnato, di propria iniziativa.
+          </p>
+        </div>
+
+        <!-- SOTTOQUEST 5 -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">5. 💰 Il Taglio del Prezzo</p>
+          <p class="text-xs text-gray-500 italic mb-2">Intrigo economico · politica di gilda · tocca il canale di Thea e quello di Silas</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Qualcuno sta vendendo cristalli recuperati dal dungeon a un prezzo più basso sia del canale legale di
+            <strong class="text-white">Thea</strong> sia di quello nero di <strong class="text-white">Silas</strong>
+            (Sessione 10, Parte VII) — abbastanza da far notare un calo negli introiti della Gilda in una delle
+            prossime riunioni di Consiglio. Non è un'invenzione dal nulla: qualcuno, forse un membro minore della
+            Gilda con accesso ai cristalli, forse un intermediario esterno che ha trovato un modo di procurarsene,
+            sta bypassando entrambi i canali ufficiali.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Buon gancio politico interno: <strong class="text-white">Thea</strong> vuole scoprirlo perché le sta
+            rosicchiando clienti fidati; <strong class="text-white">Silas</strong> lo vuole scoprire perché, se è
+            un fuoriuscito dal suo stesso giro, è un problema di controllo, non solo di soldi. Il party può essere
+            chiamato da uno dei due (o da entrambi, con richieste leggermente in conflitto) a indagare — dà
+            l'occasione di vedere la politica interna della Gilda con un caso concreto, non solo in riunione.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: non serve una grande rivelazione — anche un singolo membro di riserva scoperto a vendere di
+            nascosto per arrotondare è una risoluzione perfettamente soddisfacente, con conseguenze interne
+            (espulsione, debito da ripagare) invece che un arresto.
+          </p>
+        </div>
+
+        <!-- SOTTOQUEST 6 -->
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">6. 🕯️ La Setta del Velo Spezzato</p>
+          <p class="text-xs text-gray-500 italic mb-2">Cospirazione · arco lungo · da seminare piano, non da risolvere in una sessione</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Non tutti a Waterdeep accettano il Sigillo come una condizione da sopportare in silenzio. Un piccolo
+            gruppo clandestino — pochi membri per ora, nessuna gilda ufficiale, reclutati tra chi ha perso di più
+            con la chiusura della città (mercanti tagliati fuori dalle rotte, famiglie divise dal Sigillo nel
+            momento esatto in cui è caduto) — si è convinto che il Velo sia un'imposizione divina da rompere, non
+            un evento naturale da rispettare, e sperimenta in segreto rituali proibiti per forzarlo dall'interno.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Non sanno cosa rischiano davvero: un tentativo riuscito a metà potrebbe non liberare nessuno e
+            danneggiare la struttura stessa del Sigillo in modo imprevedibile — buona tensione per un arco che
+            cresce nel tempo invece di essere un pericolo immediato.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Semina minima per oggi, se vuoi introdurla: un graffito ricorrente non gilda-correlato (un occhio
+            attraversato da una crepa), sparizioni piccole e apparentemente innocue di componenti magiche rare dal
+            mercato, o un sermone udito per caso in un vicolo da qualcuno che il party non rivedrà per un po'. Non
+            serve altro finché non decidi di farla emergere sul serio.
+          </p>
+          <p class="text-gray-500 text-xs mt-3 italic">
+            Nota DM: è la più pesante delle sei — tienila come riserva per quando serve un arco cittadino a lungo
+            termine, non come contenuto da esaurire in una singola sessione di downtime.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
     <!-- ==================== RIEPILOGO ==================== -->
     <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
       <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
       <ul class="space-y-2 text-sm text-gray-300">
-        <li>• <strong class="text-white">Dado Nero:</strong> Barda Once-Silver diventa Capitano al posto di Rooks (in custodia), la squadra si presenta all'Arco senza Prova Divina ed entra.</li>
+        <li>• <strong class="text-white">Dado Nero:</strong> Barda Once-Silver diventa Capitano al posto di Rooks (che non torna in tempo), Yorick Sallow recluta al volo il quinto posto, le cinque presenze all'Arco entrano senza Prova Divina.</li>
         <li>• <strong class="text-white">Arianna/Riven:</strong> giornata di 5 esperimenti possibili sulla cicatrice — nessuna diagnosi definitiva, indizi coerenti per l'Ecosistema 2.</li>
         <li>• <strong class="text-white">Valoris:</strong> visita al tempio di Tymora, Madre Yssa Featherdice, un lancio di dadi sull'altare, primo frammento sulla ragazza dell'amuleto.</li>
         <li>• <strong class="text-white">Morgrim:</strong> incarico di Magnus in due fasi (controllo armeria + errand al circolo druidico) che porta naturalmente alla reunion con Mira Greenleaf.</li>
-        <li>• <strong class="text-white">Classifica globale:</strong> l'Ecosistema 1 si chiude ovunque tranne che per il Dado Nero — 18 gilde completate, storico aggiornato su <a href="/dm/altre-citta-gilde" class="text-amber-300 underline">Le Gilde delle Altre Città</a>.</li>
+        <li>• <strong class="text-white">Classifica globale:</strong> l'Ecosistema 1 si chiude ovunque tranne che per le tre gilde appena rinate da uno sterminio (Dado Nero a Waterdeep, Vedove di Kiaransalee a Menzoberranzan, Maledetti del Faro a Luskan) — 18 gilde completate, storico aggiornato su <a href="/dm/altre-citta-gilde" class="text-amber-300 underline">Le Gilde delle Altre Città</a>.</li>
         <li>• <strong class="text-white">Scudo Radiante:</strong> primo incontro diretto a un ricevimento cittadino — pannello completo dei 5 membri (Ilsa Doncaster sostituisce Mira Swiftfoot, defezionata al Dado Nero).</li>
-        <li>• <strong class="text-white">Consiglio:</strong> Rooks espulso senza drammi, ammonimento formale (lettera) a Valoris sui confini di ruolo, nuova struttura di paga per il Team Principale.</li>
+        <li>• <strong class="text-white">Consiglio:</strong> Rooks trattato come un caso di sabotaggio interno (non un semplice reclutamento) — cella per alcune notti se Valoris modera il Consiglio, di più se non interviene — più ammonimento formale (lettera) a Valoris sui confini di ruolo e nuova struttura di paga (incluso premio di 200 MO a testa per Ecosistema completato) per il Team Principale.</li>
+        <li>• <strong class="text-white">Sottotrame cittadine:</strong> menu di 6 gancio-quest indipendenti dal dungeon (Parte VIII) — tra cui un riconoscimento di nome sulla Stele per Morgrim/Valoris/Fealer verso le gilde di Mithral Hall, Baldur's Gate e Myth Drannor — da centellinare in questa e nelle prossime sessioni, non da esaurire oggi.</li>
       </ul>
     </div>
 
