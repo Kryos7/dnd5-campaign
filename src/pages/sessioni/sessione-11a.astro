@@ -1,0 +1,473 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11a - Il Cantiere e la Terza Campana"
+  description="Sessione 11a: la giornata di studio di Arianna sulla cicatrice di Riven, la rivelazione di Anders Voss e l'ammissione della Compagnia del Dado Nero, spiata da Thalio dai tetti di Waterdeep"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11a</span>
+        <h1 class="text-4xl font-bold">Il Cantiere e la Terza Campana</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 19/08/2026</span>
+        <span>⏱️ ~1h30</span>
+        <span>🎭 Sessione parallela · Studio Arcano e Spionaggio di Gilda</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso durante la pausa dei sette giorni, stasera al tavolo ci sono solo Riven,
+        Fealer e Thalio. Mentre Riven affida la propria cicatrice alle mani di Arianna e scopre di non
+        essere l'unico segnato dalla Discesa degli Dèi, Thalio segue da un tetto l'ammissione della
+        Compagnia del Dado Nero al Gioco Divino — e il marchio dietro il collo brucia per tutti e cinque
+        i Guardiani, ovunque si trovino.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">Gli esperimenti di Arianna sulla cicatrice di Riven, la rivelazione di Anders Voss, l'indagine di Thalio sul Dado Nero e l'ammissione della terza gilda al Gioco Divino</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Scoperte</p>
+          <p class="text-gray-300">La cicatrice di Riven è un "cantiere", non un canale; il siero di Vex mette a dormire l'ambra invece di distruggerla; l'energia in Riven è duplice, arcana e divina</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Resta in Sospeso</p>
+          <p class="text-gray-300">La visita ad Anders Voss a Blackstaff, l'incontro con un sacerdote di Mystra all'alba, la traduzione del taccuino di Kethrar, il quinto membro non identificato del Dado Nero</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-slate-800/20 border border-slate-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-slate-400">🌙</span> PARTE I: LA NOTTE PRIMA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            Subito dopo la tesa cena del Consiglio, prima di andare a dormire, <strong class="text-purple-400">Fealer</strong>
+            si ferma a discutere di equipaggiamento: chiede un set alchemico portatile e un oggetto in
+            grado di fornirgli cariche di Individuazione del Magico. Ne approfitta anche per spiegare
+            nel dettaglio come funzioni la sua Forma Selvatica — vorrebbe un equipaggiamento pensato apposta
+            per mantenere determinati vantaggi anche da trasformato, cosa che al momento non gli riesce con
+            i suoi oggetti attuali. <strong class="text-green-400">Riven</strong>, dal canto suo, chiede solo
+            un oggetto che gli permetta di vedere al buio — l'unica mancanza che ha notato nei primi tre
+            livelli del dungeon.
+          </p>
+          <p class="leading-relaxed mt-4">
+            La notte passa tranquilla, a parte un po' di baraonda nel corridoio al rientro di
+            <strong class="text-red-400">Morgrim</strong> dalla taverna. <strong class="text-green-400">Riven</strong>
+            si chiude semplicemente a chiave, ormai di casa nella sua stanza da tempo. <strong class="text-purple-400">
+            Fealer</strong>, ancora nuovo e consapevole di essere guardato con un certo sospetto, chiude a
+            chiave, blocca la porta con una sedia e dorme per terra nel proprio giaciglio, per prudenza.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🧪</span> PARTE II: IL CANTIERE NELLA CICATRICE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">I.</span> Lo Studio di Arianna
+          </h3>
+          <p class="leading-relaxed">
+            La mattina, mentre <strong class="text-yellow-400">Valoris</strong> esce di buon'ora verso il
+            tempio e <strong class="text-orange-400">Thalio</strong> si defila per farsi i fatti suoi in
+            città, <strong class="text-green-400">Riven</strong> e <strong class="text-purple-400">Fealer</strong>
+            raggiungono lo studio di <strong>Arianna</strong>. Riven porta con sé sia il siero di Vex sia
+            la fiala di liquido ambrato recuperata nel dungeon — dettaglio che finora non aveva condiviso
+            con lei. La stanza, coperta di scaffali fino al soffitto, ha un unico tavolo sgombro: preparato
+            apposta per oggi. Arianna li accoglie con un secco <em>"Bene. Siete puntuali,"</em> poi traccia
+            un cerchio di gesso perfetto intorno a Riven.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Alla domanda di Arianna su chi abbia prodotto il siero, <strong class="text-green-400">Riven</strong>
+              spiega di averlo ricevuto da Vex stesso, dopo che questi aveva saputo cosa gli fosse successo:
+              <em>"Per ogni evenienza"</em> — virgolettato con le dita.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">II.</span> "Non è una Cicatrice. È un Cantiere."
+          </h3>
+          <p class="leading-relaxed">
+            Con un pennello sottilissimo intinto in un inchiostro argenteo che si muove come mercurio,
+            Arianna traccia i bordi della cicatrice di Riven. Le linee non scrivono: seguono le ramificazioni
+            del segno, si arrestano, ripartono, come acqua che cerca un canale già scavato. Per qualche
+            secondo si immobilizza del tutto, il viso a pochi centimetri dal braccio di Riven, mormorando
+            qualcosa di impercettibile — poi si irrigidisce e sussurra un secco <em>"Fermo. Non ti muovere."</em>
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Quando si raddrizza, si passa il dorso della mano sulla fronte — un gesto quasi umano, fuori
+              posto per lei — ed esordisce: <em>"Questa non è una cicatrice. È un cantiere. Qualcosa, lì
+              dentro, si sta ancora scavando."</em> Borbotta poi la parola <em>"immagazzinamento"</em>: quello
+              che ha in Riven non si comporta come un canale che elabora e restituisce, ma come un deposito
+              che trattiene.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Tutto resta un'ipotesi, mai una certezza — cosa che stona con una maga di 312 anni abituata a
+            essere sicura di ciò che dice.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">III.</span> Ambra e Siero — "L'ha Messa a Dormire"
+          </h3>
+          <p class="leading-relaxed">
+            Secondo esperimento: una goccia di liquido ambrato viene esposta a una goccia del siero di Vex
+            in una fialetta separata, lontano da Riven. La goccia d'ambra resta sferica, quasi mercurio,
+            finché il siero non la tocca.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Un sibilo sottile, un filo di vapore bluastro che sale freddo al tatto — non caldo, come
+              Arianna si aspettava. L'ambra non scompare: si appiattisce, si disattiva, come se fosse
+              tornata acqua normale. <em>"Non l'ha distrutta. L'ha messa a dormire. Chi ha fatto questo
+              siero sapeva qualcosa che noi non sappiamo."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            <strong class="text-green-400">Riven</strong> ne trae la propria conclusione a voce alta: il
+            siero dev'essere più potente della magia contenuta nell'ambra. Arianna, scossa, non lo conferma
+            né lo smentisce — resta a fissare la fiala con uno sguardo cupo.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">IV.</span> La Trama che si Sdoppia
+          </h3>
+          <p class="leading-relaxed">
+            Arianna chiude gli occhi, apre le mani sopra la testa di Riven senza toccarlo. Fealer e Thalio,
+            da dietro, notano le venature d'argento nei suoi capelli iniziare a pulsare — il segno di una
+            maga elfa di secoli che sta risvegliando qualcosa dentro di sé per leggere qualcun altro.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Sopra Riven compare per un istante una trama dorata, sottilissima, che ne ricama il contorno.
+              Poi, con uno scatto luminoso, si <em>sdoppia</em>: una seconda sagoma identica, sfalsata di
+              una frazione di secondo, prima che le due si riuniscano. Arianna spalanca gli occhi di scatto
+              e interrompe lei stessa l'incantesimo, prima del previsto — cosa che non fa mai. <em>"Si è
+              sdoppiata. Datemi due secondi e vi do un paio di ipotesi."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Si siede — la prima volta in tutta la mattinata — e per un momento sembra vecchia quanto i suoi
+            312 anni. Poi, ricomposta, propone la sua ipotesi migliore: non un'imposizione dall'esterno, ma
+            un <strong class="text-white">risveglio</strong>. La magia era già dentro Riven, dormiente,
+            finché qualcosa non ne ha fatto germogliare il seme. Solo che quell'energia, dice, è
+            <strong class="text-white">duplice</strong>: dentro di lui scorrono sia magia arcana sia magia
+            divina — quest'ultima non riconducibile a nessuna divinità che lei conosca.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">🕯️</span> V. "Ne è rimasto un altro" — Anders Voss
+          </h3>
+          <p class="leading-relaxed">
+            Mentre parla, Arianna si sposta dietro Riven e sfiora con le dita il marchio che porta dietro
+            il collo. <em>"È come se ti avessero marchiato due volte."</em> Solo allora ammette una cosa che
+            il gruppo dava per certa non fosse vera: il giorno della Discesa degli Dèi, davanti al Tempio
+            di Mystra, un piccolo gruppo di persone fu investito dalla stessa energia che ha risvegliato
+            Riven. La maggior parte morì sul colpo o poco dopo. Una sola persona sopravvisse:
+            <strong class="text-white">Anders Voss</strong> — oggi rinchiuso in una cella di contenimento
+            a Blackstaff, incapace di controllare la propria magia come invece è riuscito a fare Riven.
+          </p>
+          <p class="leading-relaxed">
+            Arianna ammette con un filo di disagio di non averlo mai visitato — "negligenza", la chiama lei
+            stessa — e riconosce che potrebbe essere l'occasione buona per farlo. Il gruppo non ci va
+            stasera: resta un'ipotesi aperta, insieme alla proposta di Arianna
+            di parlare con un sacerdote di Mystra per identificare quella "nota divina" che nessuno sa
+            attribuire a nulla di conosciuto. Arianna organizza un incontro per l'indomani all'alba.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-purple-900/20 border border-purple-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">📖</span> PARTE III: IL TACCUINO DI KETHRAR
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            Mentre Riven si ritira a meditare sulle parole di Arianna — una persona normale diventata
+            stregone, e ora anche portatrice di magia divina, è troppo da digerire in una mattina —
+            <strong class="text-purple-400">Fealer</strong> dedica il resto della giornata al taccuino
+            alchemico recuperato da Kethrar e a qualche esperimento personale sulle spore e sull'acqua
+            ambrata. Riesce a intuire lo schema delle rune di Kethrar abbastanza da capire che il testo
+            riguardi il <strong class="text-white">trattamento di corpi morti</strong> — non abbastanza
+            per una traduzione completa. Inoltre si convince ancora di più di un proprio sospetto: quello che Vex vendeva, o cercava di
+            vendere, al mercato del Secondo Pianerottolo derivava dalle spore.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-orange-900/20 border border-orange-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🎲</span> PARTE IV: THALIO E IL DADO NERO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">I.</span> Il Parkour e la Nuova Insegna
+          </h3>
+          <p class="leading-relaxed">
+            <strong class="text-orange-400">Thalio</strong> gira per la città da solo. Nota per prima cosa
+            i manifesti di una gara di parkour sui tetti di Waterdeep tra un paio di giorni — una
+            competizione a cui partecipava spesso da giovane, sempre ben piazzato ma mai vincitore, col
+            solito banco scommesse di <strong>Fennick</strong> a farla da contorno. Poi si dirige verso
+            il vecchio <strong class="text-white">Lucky Shot</strong>, la taverna di Dorin: la facciata è
+            irriconoscibile, non più un'insegna da locanda ma l'ingresso blindato di una gilda, con un dado
+            nero al posto del vecchio logo e guardie all'entrata.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">II.</span> Tre Nomi dalla Rete di Silas
+          </h3>
+          <p class="leading-relaxed">
+            Attingendo ai propri contatti nella rete di <strong>Silas</strong>, Thalio raccoglie informazioni
+            su tre dei cinque membri della squadra principale del Dado Nero: <strong class="text-white">
+            Fenn Cindertongue</strong> (stregone, ex riserva degli Sciocchi Fortunati), <strong class="text-white">
+            Mira "Piede Lesto"</strong> (ladra halfling, defezione dallo <strong>Scudo Radiante</strong> —
+            non dagli Sciocchi Fortunati come si aspettava) e <strong class="text-white">Toz "Le Mani"
+            Varren</strong> (chierico minore di Waukeen, arrivato in città solo dopo la sigillatura sotto la
+            cupola). La sua rete gli conferma anche che <strong>Rooks</strong> è già stato sostituito, e che
+            in mattinata sono arrivati diversi carichi di equipaggiamento nuovo alla gilda. Ringrazia i suoi
+            quattro informatori con una moneta d'oro a testa.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">III.</span> Cinque Figure verso il Portale
+          </h3>
+          <p class="leading-relaxed">
+            Thalio si appiatta su un tetto vicino alla piazza del dungeon e aspetta. Verso mezzogiorno, dieci
+            figure escono dalla gilda: cinque membri del Consiglio e cinque della nuova squadra principale.
+            Riconosce <strong class="text-white">Mira</strong>, <strong class="text-white">Fenn</strong> e
+            <strong class="text-white">Toz</strong> dalle vesti; riconosce anche <strong class="text-white">
+            Barda</strong>, un'altra ex riserva degli Sciocchi Fortunati, guerriera di tutto rispetto — un
+            nome che la sua rete di contatti non gli aveva ancora dato. Il quinto, vestito in modo simile a
+            lui, resta un volto sconosciuto. <strong>Dorin</strong> gira personalmente tra i cinque, dando
+            indicazioni fino all'ultimo, prima che si dirigano verso il portale.
+          </p>
+          <div class="bg-black/40 border-l-4 border-orange-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-orange-100 leading-relaxed">
+              Nel momento in cui i cinque toccano il campo magico dell'Arco, non solo <strong class="text-orange-400">
+              Thalio</strong> — anche <strong class="text-green-400">Riven</strong> e <strong class="text-purple-400">
+              Fealer</strong>, ancora nelle loro stanze alla gilda, sentono bruciare il marchio dietro il collo,
+              esattamente come alla loro discesa. Lo stesso accade, altrove in città, a <strong class="text-yellow-400">
+              Valoris</strong> e <strong class="text-red-400">Morgrim</strong>: il legame del mandato non
+              conosce distanza. Un rintocco di campana si propaga per tutta Waterdeep — la terza gilda si è
+              unita al Gioco Divino.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-orange-400">IV.</span> La Stele Aggiornata
+          </h3>
+          <p class="leading-relaxed">
+            Thalio si ferma alla Stele delle Altre Città. A Waterdeep, la voce <strong class="text-gray-400">
+            Gli Sciocchi Fortunati</strong> resta ma depennata, e sotto è comparsa <strong class="text-white">
+            Compagnia del Dado Nero</strong>. Non è l'unica sostituzione: a <strong>Menzoberranzan</strong>
+            i Tessitori di Seta Nera sono stati rimpiazzati dalle Vedove di Ciaransley, a <strong>Luskan</strong>
+            la Ciurma del Tridente Spezzato dai Maledetti del Faro — altre due gilde cadute nel mondo,
+            sostituite come gli Sciocchi Fortunati. In totale, tre gilde nel mondo restano ancora a zero,
+            senza aver completato il primo Ecosistema.
+          </p>
+          <p class="text-gray-500 text-sm italic mt-4">
+            Mercoledì a mezzogiorno. Nessun combattimento questa sessione — solo scelte, studio e spionaggio.
+            Fine sessione 11a.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Sessione Interpretativa:</strong> Bonus base per sessioni senza combattimento, dove tutto il progresso passa dall'interpretazione e dalle decisioni — nessuno scontro questa volta, solo scelte, studio e spionaggio
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Personaggi presenti</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">PX Presenza</p>
+            <p class="text-green-300 font-bold">750 PX</p>
+          </div>
+          <div>
+            <p class="text-gray-400">PX Sessione Interpretativa</p>
+            <p class="text-amber-300 font-bold">750 PX</p>
+          </div>
+        </div>
+        <p class="text-center text-green-400 font-bold mt-3">Totale base: 1500 PX a testa</p>
+        <p class="text-center text-gray-500 text-xs mt-2 italic">Solo Riven, Fealer e Thalio erano presenti stasera — Valoris e Morgrim recuperano alla prossima sessione di gruppo.</p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- THALIO -->
+        <div class="bg-gradient-to-r from-orange-900/40 to-red-900/30 border-2 border-orange-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🗡️</span>
+            <h4 class="text-xl font-bold text-orange-400">Thalio</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1750 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 250</p>
+              <p class="text-gray-300">
+                Un'intera sequenza di spionaggio giocata di iniziativa propria: dai contatti pagati di
+                tasca sua alla veglia sul tetto, fino alla lettura della Stele — ha portato a casa la
+                conferma dell'ammissione del Dado Nero senza farsi notare da nessuno.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEALER -->
+        <div class="bg-gradient-to-r from-purple-900/40 to-indigo-900/40 border-2 border-purple-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🌿</span>
+            <h4 class="text-xl font-bold text-purple-400">Fealer</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1700 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 200</p>
+              <p class="text-gray-300">
+                Osservatore attento e metodico durante tutta la scena con Arianna, con richieste di
+                equipaggiamento coerenti col proprio stile di gioco (Forma Selvatica), e da solo ha
+                fatto progressi concreti sul taccuino di Kethrar e sulle spore.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIVEN -->
+        <div class="bg-gradient-to-r from-green-900/30 to-teal-900/20 border-2 border-green-600/60 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🔥</span>
+            <h4 class="text-xl font-bold text-green-400">Riven</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1700 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 200</p>
+              <p class="text-gray-300">
+                Ha condiviso apertamente con Arianna sia il siero sia il liquido ambrato, si è prestato
+                senza remore a ogni esperimento e ha reagito con curiosità genuina, invece che con paura,
+                alla scoperta della propria doppia natura.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p class="text-orange-400 font-bold">Thalio</p>
+            <p class="text-xl text-yellow-400">1750 PX</p>
+          </div>
+          <div>
+            <p class="text-purple-400 font-bold">Fealer</p>
+            <p class="text-xl text-yellow-400">1700 PX</p>
+          </div>
+          <div>
+            <p class="text-green-400 font-bold">Riven</p>
+            <p class="text-xl text-yellow-400">1700 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-10" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 10 - Il Ritorno a Waterdeep
+      </a>
+      <span class="text-gray-500 italic">Sessione 11b in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

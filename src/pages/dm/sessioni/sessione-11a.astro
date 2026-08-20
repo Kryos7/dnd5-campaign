@@ -1,0 +1,867 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11a - Riven e Fealer [DM]"
+  description="Note del Dungeon Master - Sessione parallela dedicata a Riven e Fealer"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11a</span>
+        <h1 class="text-4xl font-bold">Il Laboratorio e l'Ombra — Riven e Fealer</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>⏱️ 2–3 ore</span>
+        <span>🎭 Sessione parallela · Solo due giocatori</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso per giocare i filoni personali separatamente, stasera al tavolo ci sono solo Riven e
+        Fealer. È una fortuna di scheduling che si incastra bene con la lore: la giornata di studio sulla cicatrice
+        di Riven (<a href="/dm/sessioni/sessione-11#arianna-riven" class="underline text-indigo-300">già scritta in
+        Sessione 11, Parte II</a>) è pensata esplicitamente come una scena a tre — Arianna, Riven, Fealer — quindi
+        non serve adattare quasi nulla. Questa pagina isola quel materiale, aggiunge una scheda rapida sui due
+        personaggi e propone un menu di "poi chissà" pensato solo per questa coppia.
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Props:</strong> liquido ambrato conservato e Siero di Stabilizzazione Arcana di Vex, anche solo come descrizione pronta — la scena degli esperimenti regge meglio con dettagli concreti. Vedi Parte II.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Scheda di Arianna:</strong> tieni a portata di mano il bonus rapido (+9 Arcana/Storia, CD 18) — è nella Parte II qui sotto, ripreso identico da Sessione 11.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Decidi in anticipo</strong> quali 2-3 dei 5 esperimenti giocare per intero in base al tempo che hai stasera — non serve farli tutti.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>"E poi?":</strong> scegli già ora, o decidi al tavolo in base all'energia della serata, quale (se una) delle opzioni della Parte III giocare dopo la cicatrice.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#personaggi" class="text-teal-400 hover:text-teal-300">🧾 Riven e Fealer — Specchietto</a>
+      <span class="text-gray-600">·</span>
+      <a href="#cicatrice" class="text-indigo-400 hover:text-indigo-300">🧪 La Cicatrice di Riven</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dopo" class="text-orange-400 hover:text-orange-300">🌙 E poi? — Menu per la coppia</a>
+      <span class="text-gray-600">·</span>
+      <a href="#anders-voss" class="text-red-400 hover:text-red-300">🕯️ Anders Voss — Se Vogliono Andarci Stasera</a>
+    </div>
+
+    <!-- ==================== PARTE I: SPECCHIETTO PERSONAGGI ==================== -->
+    <div id="personaggi" class="bg-teal-900/20 border border-teal-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">🧾</span> PARTE I: SPECCHIETTO — RIVEN E FEALER
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- RIVEN -->
+        <div class="bg-gray-900/60 border-2 border-green-700 rounded-lg p-5">
+          <p class="text-xs text-green-400 uppercase tracking-widest mb-2">🌀 Riven Solas</p>
+          <p class="text-sm text-gray-400 italic mb-3">
+            Umano Variante, Stregone Selvaggio 5, Caotico Neutrale. Marchiato dal dungeon.
+          </p>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Carisma</p>
+              <p class="text-white font-bold">20 (+5)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Costituzione</p>
+              <p class="text-white font-bold">14 (+2)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Arcano</p>
+              <p class="text-white font-bold">+4</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Originario di <strong class="text-white">Daggerford</strong> (non una delle sette città del Gioco Divino
+            — nessun aggancio "nome sulla Stele" per lui, deciso e confermato), ma già trasferito a Waterdeep prima
+            della Discesa degli Dèi. Il Giorno dell'Annuncio lo trova lì, in città, sigillato sotto la cupola insieme
+            a chiunque altro — nessuna distanza, nessuna eccezione per lui. La stessa energia che ha investito
+            Waterdeep quel giorno risveglia in Riven una magia selvaggia che nessuno, nemmeno lui, sapeva di avere:
+            non un dono calato dall'esterno, qualcosa di già sopito che solo quel giorno ha trovato la scintilla per
+            manifestarsi. Continua a mandare alla famiglia rimasta a Daggerford denaro e aiuti <em>di nascosto</em> —
+            ma solo fino a quando la cupola non sigilla la città: da quel momento nessuno entra, nessuno esce, per
+            nessun motivo, quel canale è di fatto interrotto, e Riven non ha modo di sapere se la sua famiglia stia
+            bene. Entra nel dungeon volontariamente, accettando il Marchio — da quel momento il caos si manifesta
+            pienamente.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            <strong class="text-green-300">Personalità:</strong> impulsivo, curioso, ironico e un po' cinico, fatica
+            a fidarsi ma diventa alleato leale una volta conquistata la fiducia. Non cerca gloria né ricchezza — agisce
+            per sopravvivenza, esplorazione, comprensione di sé. <strong class="text-green-300">Legami:</strong> la
+            famiglia lontana che non può più proteggere da qui dentro; una simpatia concettuale (non devozione) per
+            <strong class="text-white">Leira</strong>, dea dell'illusione e dell'ambiguità — non crede nella
+            protezione divina, ma è l'unica dea di cui gli piace ascoltare le storie, perché come la sua magia "non
+            segue mai le regole". <strong class="text-green-300">Ambizione/secretGoal implicito:</strong> capire e
+            dominare la magia selvaggia, spingersi oltre i limiti, lasciare un segno — non per potere sugli altri, ma
+            per diventare qualcuno che il caos stesso deve rispettare. <strong class="text-green-300">Difetto:</strong>
+            rischia più del dovuto per portare alla luce un frammento di conoscenza.
+          </p>
+          <p class="text-xs text-gray-500 italic">
+            Stato attuale dell'arco: sotto osservazione di Arianna da quando lei ha detto, senza averlo sentito da
+            nessuno, "stai mutando" (Sessione 10) — la stessa frase di Vex.
+          </p>
+        </div>
+
+        <!-- FEALER -->
+        <div class="bg-gray-900/60 border-2 border-purple-700 rounded-lg p-5">
+          <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">🐦‍⬛ Fealer Corvonero</p>
+          <p class="text-sm text-gray-400 italic mb-3">
+            Elfo Alto, Druido (Circolo della Luna) 5, Caotico Neutrale. <em>"Fedele al Tessuto, non alla Sarta."</em>
+          </p>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Saggezza</p>
+              <p class="text-white font-bold">20 (+5)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Intelligenza</p>
+              <p class="text-white font-bold">16 (+3)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Natura</p>
+              <p class="text-white font-bold">+3/+5*</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Oltre un secolo di disillusione verso la gerarchia elfica prima di rinnegarla; 84 anni di pellegrinaggio
+            selvaggio (da cui le sue Forme Selvatiche); 50 anni da eremita/spia sul Monte Waterdeep, infiltrato in
+            città in forma di ratto o corvo. Per lui gli dèi scesi fisicamente sono una <strong class="text-white">
+            Malattia Cosmica</strong> e il dungeon una escrescenza innaturale. Si è unito ai Guardiani per puro
+            pragmatismo: la Gilda è "un male necessario", uno scudo tattico dietro cui operare.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            <strong class="text-purple-300">Personalità:</strong> clinico, cinico, freddo con estranei e rivali
+            (sacrificabili, "dato statistico"), ma ferocemente protettivo verso i compagni di Gilda — non per affetto,
+            per necessità logica: senza i suoi strumenti, il chirurgo non può operare. <strong class="text-purple-300">
+            Missione dichiarata:</strong> raggiungere il cuore del dungeon per analizzare e neutralizzare l'anomalia —
+            deve essere lui a trovare la cura, perché non si fida dei motivi religiosi o mercantili di nessun altro.
+          </p>
+          <div class="bg-black/40 border-l-4 border-purple-500 p-3 rounded-r text-xs mt-3">
+            <p class="text-purple-200 font-bold mb-1">⚠️ La sua relazione con Riven — canonica, dal suo background</p>
+            <p class="italic text-purple-100 leading-relaxed">
+              "Lo Stregone Selvaggio (Il Paziente Zero): Fealer lo considera un'anomalia vivente della Trama. Ogni
+              suo picco di magia selvaggia viene osservato con distacco clinico come sintomo della Malattia Cosmica.
+              Va protetto come un esperimento unico."
+            </p>
+          </div>
+          <p class="text-xs text-gray-500 italic mt-3">
+            *Usa questo registro per la sua voce stasera: non è "il secondo parere gentile", è un clinico che vede in
+            Riven il proprio esperimento più prezioso — protezione ferocemente pragmatica, mai calda. Vedi Parte II.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: LA CICATRICE DI RIVEN ==================== -->
+    <div id="cicatrice" class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🧪</span> PARTE II: LA GIORNATA DI STUDIO — ARIANNA E LA CICATRICE
+      </h2>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto identico a <a href="/dm/sessioni/sessione-11#arianna-riven" class="underline text-indigo-300">Sessione
+          11, Parte II</a> — qui isolato perché è esattamente la scena di stasera, non un pezzo di qualcosa più
+          grande. Setup: Arianna ha chiesto di tenere Riven sotto osservazione e di studiare, insieme a lui e a
+          Fealer, durante i sette giorni di pausa, il liquido ambrato portato dal dungeon.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-indigo-300 mb-3">Dove e chi</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        Lo studio privato di Arianna al quartier generale dei Guardiani (o una stanza dell'Accademia di Blackstaff,
+        se preferisci un luogo più carico di storia) — scaffali di tomi, un piccolo laboratorio alchemico
+        improvvisato, il liquido verde di Kethrar e il Siero di Stabilizzazione Arcana di Vex allineati su un tavolo
+        insieme al frammento di cristallo ambrato. Presenti: <strong class="text-green-400">Riven</strong> (soggetto,
+        riluttante ma curioso), <strong class="text-white">Arianna</strong> (guida, metodica),
+        <strong class="text-purple-400">Fealer</strong> (secondo parere, prospettiva naturalistica anziché arcana —
+        e osservatore clinico del proprio "esperimento unico", vedi Parte I). Stasera è l'intera scena, non un trio
+        dentro un cast più grande: nessun altro personaggio si affaccia.
+      </p>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Leggere ad alta voce quando Riven e Fealer arrivano allo studio di Arianna, prima ancora che lei parli.</p>
+
+      <div class="bg-black/50 border-l-4 border-indigo-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-indigo-100 text-lg leading-relaxed">
+          La porta dello studio di Arianna non cigola quando si apre — è stata oliata troppe volte perché lo faccia
+          ancora. Dentro, l'aria ha quel peso particolare delle stanze dove si pensa da secoli: polvere di
+          pergamena, cera d'api, e sotto tutto, qualcosa di più freddo — ozono, forse, o quello che resta nell'aria
+          dopo un incantesimo lanciato con troppa cura.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          Gli scaffali coprono ogni parete fino al soffitto, così fitti di tomi che alcuni sono infilati orizzontali
+          sopra le file verticali, come se lo spazio fosse finito prima dei libri. Un unico grande tavolo occupa il
+          centro della stanza, sgombro apposta — non è il tavolo di tutti i giorni, è stato preparato per oggi.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          Sopra, in fila, tre cose. Una fiala di vetro spesso, tappata con cera nera, dentro la quale il liquido
+          ambrato si muove più lentamente di quanto dovrebbe — quasi contro la gravità, per un istante, prima di
+          ricomporsi. Accanto, un flaconcino più piccolo e ordinario, etichettato con una grafia che riconoscete:
+          il Siero di Stabilizzazione Arcana di Vex. E tra i due, isolato su un piccolo piedistallo, il frammento di
+          cristallo ambrato recuperato dal dungeon — l'unica delle tre cose che nessuno ha toccato a mani nude.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          Arianna è già lì, ma non seduta — in piedi accanto al tavolo, le maniche rimboccate come chi si aspetta di
+          sporcarsi le mani, non come chi tiene una lezione. Non alza subito lo sguardo: sta finendo di tracciare un
+          cerchio di gesso e polvere d'argento sul pavimento, con la precisione ossessiva di chi lo ha già disegnato
+          decine di volte nella propria testa prima di stanotte.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          Solo quando finisce l'ultima linea, si volta. <em>"Bene. Siete puntuali."</em> Uno sguardo veloce a Riven,
+          poi a Fealer — non un saluto, una valutazione, come se stesse già decidendo da dove cominciare.
+          <em>"Ho passato la notte a preparare questo. Non perché sia elegante — perché se qualcosa va storto,
+          voglio che vada storto qui dentro, e non da qualche altra parte."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-900/60 border-2 border-indigo-700 rounded-lg p-5 mb-6">
+        <p class="text-xs text-indigo-400 uppercase tracking-widest mb-3">🧙 Scheda Rapida — Arianna "Whispersong" Moonwhisper</p>
+        <p class="text-sm text-gray-400 italic mb-3">Elfa Alta, 312 anni, Maga 10 (Divinazione), semi-ritirata — non scende più in missione, ma resta una delle menti arcane più forti di Waterdeep.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-sm mb-3">
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Intelligenza</p>
+            <p class="text-white font-bold">20 (+5)</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Bonus Competenza</p>
+            <p class="text-white font-bold">+4</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">Arcana / Storia</p>
+            <p class="text-white font-bold">+9 (esperta)</p>
+          </div>
+          <div class="bg-black/40 rounded p-2">
+            <p class="text-gray-500 text-xs">CD Incantesimi</p>
+            <p class="text-white font-bold">18</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          Per i tiri degli esperimenti sotto, usa <strong class="text-indigo-300">+9</strong> come bonus di Arianna
+          su qualsiasi prova di Arcana/Storia legata alla cicatrice o al liquido ambrato, e CD 18 / +9 per gli
+          incantesimi di divinazione che lancia. Non tira mai "alla cieca": con un bonus così alto, il fallimento
+          netto (esperimento 4) va narrato come un'anomalia che sfida le sue capacità, non come un tiro sbagliato.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-indigo-300 mb-3">Cinque esperimenti — scegline 2-3 per stasera</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Ognuno ha un piccolo tiro associato e un risultato narrativo indipendente dal successo/fallimento meccanico —
+        qui non si "perde", si scopre qualcosa di parziale in ogni caso.
+      </p>
+
+      <div class="space-y-4 mb-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-indigo-200 mb-1">1. Mappatura Arcana della Cicatrice</p>
+          <p class="text-xs text-gray-500 italic mb-2">Arianna (Arcana, alto bonus) + assistenza di chi vuole provare</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Arianna traccia con inchiostro sensibile alla magia i contorni della cicatrice, cercando di "leggerla"
+            come leggerebbe un diagramma di incantamento. <strong class="text-white">Risultato garantito:</strong> la
+            cicatrice non è statica — ha una struttura che si riorganizza lentamente, come un condotto che si sta
+            ancora scavando un percorso. <strong class="text-indigo-300">Su un successo alto (20+):</strong> nota che
+            il disegno ricorda vagamente la struttura di un incantesimo di "immagazzinamento" più che di
+            "canalizzazione" — come se qualcosa fosse entrato in Riven per restare, non per passare.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-indigo-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-indigo-100 leading-relaxed">
+              Arianna intinge un pennello sottilissimo in un calamaio che non contiene inchiostro comune — è
+              argenteo, e si muove con un peso innaturale, come mercurio vivo. Quando lo posa sulla pelle di Riven,
+              lungo il bordo della cicatrice, non scrive: <em>segue</em>. Le linee scivolano da sole verso i margini
+              del segno, si arrestano, ripartono in un'altra direzione, come acqua che cerca un canale già scavato.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Arianna si china di scatto, il viso a una spanna dalla pelle di Riven, gli occhi socchiusi in quella
+              concentrazione totale che le ruba ogni altra espressione. Le labbra si muovono in un mormorio quasi
+              impercettibile — non un incantesimo, solo il conteggio silenzioso di chi sta leggendo qualcosa lettera
+              per lettera. Poi si irrigidisce. <em>"Fermo. Non muoverti."</em> La voce è bassa, piatta, il tono di
+              chi non vuole far trasparire quanto la sorprende quello che sta vedendo.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Quando si raddrizza, si passa il dorso della mano sulla fronte — un gesto quasi umano, fuori posto per
+              lei. <em>"Non è una cicatrice. È un cantiere."</em> Una pausa. <em>"Qualcosa, lì dentro, sta ancora
+              scavando."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-indigo-200 mb-1">2. Confronto Controllato — Liquido Ambrato + Siero di Vex</p>
+          <p class="text-xs text-gray-500 italic mb-2">Prova di Intelligenza (Arcana) di Arianna o Fealer, in un ambiente protetto (cerchio di contenimento improvvisato)</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Una goccia di liquido ambrato viene esposta a una goccia diluita del Siero di Stabilizzazione Arcana, in
+            un piccolo contenitore lontano da Riven. <strong class="text-white">Risultato garantito:</strong> il
+            Siero non neutralizza l'ambra — la <em>stabilizza</em>, la rende inerte ma non la distrugge, quasi come
+            se il Siero fosse pensato per "congelare" processi magici instabili piuttosto che curarli.
+            <strong class="text-indigo-300">Nota inquietante da lasciar cadere:</strong> questo significa che chi ha
+            creato il Siero (Vex? il mandato stesso?) conosceva già l'esistenza di sostanze come l'ambra, prima che
+            Riven ci entrasse in contatto. <strong class="text-purple-300">Buon momento per Fealer:</strong> è
+            esattamente il tipo di dato che la sua "Malattia Cosmica" prevede — lascialo commentare a freddo,
+            quasi compiaciuto di avere ragione.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-indigo-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-indigo-100 leading-relaxed">
+              Con una pinzetta d'argento, Arianna lascia cadere una singola goccia di liquido ambrato in una
+              piccola coppa di cristallo. La goccia non si appiattisce come farebbe un liquido normale — resta quasi
+              sferica per un istante, tremolante, prima di cedere. Poi aggiunge, goccia a goccia, il Siero diluito
+              di Vex.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Il contatto produce un sibilo sottile, quasi un sospiro, e un filo di vapore bluastro si alza dalla
+              coppa — freddo al tatto, non caldo, lo capite dal modo in cui appanna l'aria intorno invece di
+              disperdersi verso l'alto. L'ambra, che pulsava di una luce interna debolissima, smette di muoversi.
+              Non scompare: si <em>ferma</em>, come un cuore che smette di battere ma resta intatto.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Arianna osserva la coppa per un tempo troppo lungo prima di parlare, la testa leggermente inclinata,
+              un'espressione che oscilla tra il sollievo professionale e qualcosa di più cupo. <em>"Non l'ha
+              distrutta."</em> La voce le esce più sottile del solito. <em>"L'ha messa a dormire. Chi ha fatto
+              questo siero sapeva già cosa stava congelando."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-indigo-200 mb-1">3. Dose Controllata di Ambra + Trucchetto</p>
+          <p class="text-xs text-gray-500 italic mb-2">Arianna somministra a Riven una goccia diluitissima del liquido ambrato prima che lanci un trucchetto minimo in un cerchio di contenimento; tiro di Sovraccarica di Magia Selvaggia come da regole standard</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Non è un test generico sulla magia selvaggia — è il vero cuore della giornata: verificare se l'ambra,
+            introdotta di nuovo nel suo corpo in dose minima e controllata, amplifica o distorce l'effetto rispetto
+            a un lancio "pulito". Arianna insiste su protocolli precisi (quantità, tempo di assorbimento, distanza
+            di sicurezza) — è pericoloso e lo sa. <strong class="text-white">Risultato garantito:</strong> con
+            l'ambra in circolo, l'effetto è nettamente più intenso del previsto per un trucchetto così minore —
+            qualsiasi manifestazione scegli, falla sproporzionata rispetto all'incantesimo lanciato, e Arianna nota
+            esplicitamente che <em>senza</em> l'ambra un test di controllo identico (se lo fai fare anche a vuoto,
+            per confronto) non produce lo stesso effetto. Non è l'ambra in sé a reagire nel suo corpo — è quello che
+            l'ambra veicola: la stessa energia di fondo che lo ha marchiato il giorno della Discesa degli Dèi, mai
+            davvero spenta, mesi dopo il contatto nel dungeon. <strong class="text-indigo-300">Buon momento per il beat emotivo:</strong>
+            Riven, per un istante dopo l'esplosione di caos, sorride prima di ricomporsi — lo stesso sorriso con cui
+            pensa a Leira quando la sua magia fa qualcosa di assurdamente irriverente. Non serve nominarla: basta il
+            sorriso.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-indigo-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-indigo-100 leading-relaxed">
+              Arianna misura la goccia d'ambra con una precisione quasi ossessiva — la lascia cadere su un panno,
+              poi la trasferisce con uno stuzzicadenti di vetro sulla lingua di Riven, contando i secondi ad alta
+              voce, piano, come una nenia. <em>"Uno. Due. Tre."</em> Solo allora annuisce, e lui lancia il
+              trucchetto.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              La goccia non fa in tempo a scendere in gola: la cicatrice si accende prima ancora che l'incantesimo
+              parta. Le venature blu che la percorrono — le stesse che al Piano 2, immerse nell'acqua ambrata della
+              caverna sommersa, si erano espanse di pochi millimetri verso il palmo e la spalla tra bruciore e
+              prurito, costringendo Riven a rinunciare per paura che arrivassero al cuore — questa volta non si
+              limitano a espandersi: si <em>ramificano</em>, nuove diramazioni sottili che si aprono in tempo reale
+              come crepe su un vetro, risalendo dal polso verso il gomito. Per un istante la pelle intorno diventa
+              quasi traslucida, e sotto si vede la luce — non calda, blu-bianca, pulsante a un ritmo che non è
+              quello del suo cuore.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              L'aria dentro il cerchio di contenimento si <em>piega</em> — letteralmente, per una frazione di
+              secondo, come se qualcuno avesse tirato un lenzuolo invisibile. L'effetto che ne esce è molto più
+              grande di quanto un trucchetto dovrebbe permettere: luci, suoni, o qualsiasi manifestazione tu scelga,
+              amplificati fino a far tremare i vetri sugli scaffali. Il gesso del cerchio si scioglie in una sottile
+              nuvola di polvere bianca che resta sospesa a mezz'aria un istante di troppo prima di cadere.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Arianna non arretra — resta ferma, una mano già alzata a mezz'aria pronta a lanciare una
+              contromisura che alla fine non le serve. Il suo viso, per un attimo, è puro allarme professionale:
+              mascella serrata, occhi spalancati che seguono ogni scintilla. Poi, quando l'eco svanisce, l'allarme
+              si scioglie in qualcosa di più vicino all'eccitazione controllata. <em>"Rifallo. Senza l'ambra
+              stavolta."</em> Il secondo lancio, "pulito", è visibilmente più debole — quasi anticlimatico al
+              confronto. Arianna lo nota ad alta voce, per il verbale, con la soddisfazione asciutta di chi ha
+              appena confermato un'ipotesi che avrebbe preferito veder smentita.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-indigo-200 mb-1">4. Lettura Divinatoria — la specialità di Arianna</p>
+          <p class="text-xs text-gray-500 italic mb-2">Arianna lancia un incantesimo di divinazione minore (es. Detect Magic potenziato, o un rituale personale a tua discrezione) puntato su Riven — usa il suo bonus (CD 18 / +9) dalla scheda rapida sopra</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Come Maga di Divinazione, Arianna tenta l'approccio più diretto: leggere la "trama" magica di Riven
+            stesso, non solo la cicatrice. <strong class="text-white">Risultato garantito:</strong> la lettura si
+            comporta in modo anomalo — non si offusca e non fallisce, ma <em>si duplica</em> per un istante, come se
+            stesse leggendo due firme magiche sovrapposte nello stesso corpo.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            312 anni di studio non le lasciano restare semplicemente sgomenta: propone subito, come farebbe
+            qualsiasi accademica di quel calibro, due o tre ipotesi rivali — nessuna confermata, tutte plausibili:
+          </p>
+          <div class="bg-red-900/20 border border-red-700/40 rounded p-3 mb-3 text-xs">
+            <p class="text-red-300 leading-relaxed">
+              <strong class="text-white">Punto fermo di cosmologia — non dimenticarlo mentre scrivi queste ipotesi:</strong>
+              l'ambra non è la fonte di nulla. È un <em>mezzo</em>, un conduttore — l'energia vera viene dalla Discesa
+              degli Dèi a <strong class="text-white">Waterdeep</strong> il Giorno dell'Annuncio, la stessa che ha
+              investito Riven come chiunque altro in città, sigillato dalla stessa cupola. Nessuna distanza, nessuna
+              eccezione ricevuta in anticipo: qualcosa in lui ha semplicemente risuonato con quell'energia dove in
+              altri non lo ha fatto (vedi Teoria del Risveglio sotto). L'ambra nel dungeon si limita a farla passare
+              di nuovo attraverso di lui, mesi dopo. Nessuna delle tre teorie sotto deve implicare che l'ambra
+              "agisca" di sua iniziativa, né che qualcuno abbia "scelto" Riven in anticipo — se una lo fa, correggila
+              prima di leggerla al tavolo.
+            </p>
+          </div>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-3">
+            <li><strong class="text-indigo-300">Teoria del Risveglio:</strong> non è un'imposizione dall'esterno — è
+            più simile a un risveglio. La struttura interna che l'inchiostro sensibile ha già rivelato (esperimento
+            1) non è stata scavata da un agente estraneo: qualcosa, in Riven, era già lì, sopito, forse comune quanto
+            un seme che non aveva mai trovato la stagione giusta per germogliare. L'onda del Giorno dell'Annuncio non
+            lo ha scelto, non lo ha marchiato in anticipo — lo ha semplicemente trovato pronto a risuonare, dove
+            altri, esposti alla stessa energia nella stessa città, non lo erano. Dettaglio che inquieta Arianna più
+            di quanto ammetta: la grammatica di quella struttura, letta all'esperimento 1, somiglia sorprendentemente
+            a quella di un <strong class="text-white">Marchio Divino</strong> — non perché qualcuno lo abbia
+            marchiato prima del tempo, ma perché qualunque cosa fosse sopita in lui era già, in qualche modo,
+            sintonizzata sulla stessa frequenza che il mandato usa per i propri.</li>
+            <li><strong class="text-indigo-300">Teoria dell'Ospite Non Invitato:</strong> le due firme non sono la
+            stessa energia letta due volte. Da maga di divinazione, Arianna riconosce per addestramento la "grana"
+            delle firme divine sanzionate dal Gioco — e la seconda non corrisponde a nessuna di quelle che conosce:
+            non Tempus, non Tymora, non Mystra, né alcuno dei pantheon delle altre sei città su cui ha mai potuto
+            studiare. Non riesce a identificarne la fonte, non con la strumentazione che ha qui — ma è sicura di una
+            cosa: non è registrata. Qualcosa, o qualcuno, si è infilato nella stessa onda che ha colpito Riven, senza
+            passare dal Gioco ufficiale.</li>
+            <li><strong class="text-indigo-300">Teoria del Conto Nascosto:</strong> il Favore Divino che il mandato
+            mostra sulla <a href="/dm/sessioni/sessione-10#stele-mandato" class="underline text-indigo-200">Stele</a>
+            è sempre un totale aggregato — mai il dettaglio, nemmeno alla gilda che lo ha guadagnato (vedi
+            <a href="/meccaniche/favore-divino" class="underline text-indigo-200">il sistema di Favore Divino</a>).
+            Se il mandato tiene una contabilità che nessuno vede per intero, Arianna si chiede ad alta voce se Riven
+            — con la sua doppia firma — non sia diventato una voce di quel libro mastro che nessuno ha mai
+            autorizzato: un conto che si aggiorna da solo, silenziosamente, ogni volta che la sua magia esplode,
+            dentro o fuori dal dungeon, dentro o fuori dalla pausa dei sette giorni.</li>
+          </ul>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-indigo-300">Callback deliberato:</strong> è il momento giusto per farle ripetere,
+            consapevolmente e con inquietudine, che l'ultima volta ha usato senza saperlo le stesse parole di Vex —
+            e per farle proporre, in linea con la Teoria del Conto Nascosto, di andare a chiedergli spiegazioni di
+            persona al prossimo Pianerottolo: se qualcosa di suo si muove nella contabilità del mandato senza il suo
+            controllo, è l'unico che potrebbe confermarlo o smentirlo. Buon gancio per l'Ecosistema 2, ma resta una
+            sua iniziativa accademica, non un'ammissione di sconfitta.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-indigo-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-indigo-100 leading-relaxed">
+              Arianna chiude gli occhi e apre le mani sopra la testa di Riven, i palmi rivolti verso il basso senza
+              mai toccarlo. Le venature d'argento nei suoi capelli — quel dettaglio che i secoli lasciano solo agli
+              Alti Elfi più vecchi — iniziano a pulsare debolmente, sincronizzate col suo respiro, sempre più lento.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Per un istante, nell'aria sopra Riven, compare qualcosa che quasi si vede: una trama di linee dorate,
+              sottilissime, che tracciano il contorno della sua figura come un ricamo di luce. Poi, senza preavviso,
+              l'immagine <em>sdoppia</em> — due trame quasi identiche, sfalsate di una frazione di secondo l'una
+              dall'altra, come un'eco visiva che non riesce a spegnersi.
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Arianna spalanca gli occhi di scatto, un attimo prima del previsto — non è un incantesimo che finisce
+              da sé, è lei che lo interrompe. Per la prima volta da quando siete arrivati, la sua compostezza si
+              incrina: le labbra si schiudono, il respiro le si ferma a metà. Solo un secondo. Poi la maschera
+              accademica torna al suo posto, ma la voce, quando arriva, è più incerta del solito. <em>"Non si è
+              offuscata. Non ha fallito."</em> Una pausa che sembra costarle qualcosa. <em>"Si è sdoppiata."</em>
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Si siede — la prima volta in tutta la giornata — e per un momento sembra molto più vecchia dei suoi
+              312 anni. Poi, quasi a difesa di se stessa, la voce si fa più ferma, quasi da lezione: <em>"Va bene.
+              Ipotesi. Datemi un momento e ve ne do tre."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-900/60 border-2 border-red-800 rounded-lg p-5">
+          <p class="font-bold text-red-300 mb-1">🕯️ Coda dell'Esperimento 4 — "Non sei il primo"</p>
+          <p class="text-xs text-gray-500 italic mb-2">
+            Nuovo per stasera, costruito su un fatto già stabilito in Sessione 0 (altre persone colpite dall'onda del
+            Giorno dell'Annuncio, un paio morte in una piazza davanti a un tempio) — non è mai stato sviluppato oltre
+            quel dettaglio, quindi i nomi propri sotto sono proposte, non canone rigido: cambiali pure se stasera o
+            in futuro decidi diversamente.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Dopo aver esposto la Teoria del Risveglio o quella dell'Ospite Non Invitato — qualunque delle due scegli
+            di enfatizzare — è il momento buono per far ricordare ad Arianna che il caso di Riven non è teorico
+            quanto vorrebbe far credere: <strong class="text-white">non è l'unico</strong>. Il giorno della Discesa
+            degli Dèi, la stessa energia che ha risvegliato la magia selvaggia di Riven ha investito anche un piccolo
+            gruppo di persone radunate in una piazza davanti a un tempio — probabilmente il
+            <strong class="text-white">Tempio di Mystra</strong>, dato che è lì che la folla si sarebbe riversata per
+            prima nel sentire che la dea della magia era scesa fisicamente. Stessa città, stesso giorno, stessa
+            energia: ma su di loro ha "risuonato" molto peggio che su Riven. Due morirono quasi sul colpo. Una sola
+            persona sopravvisse.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-red-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-red-100 leading-relaxed">
+              Arianna resta in silenzio più a lungo del solito, lo sguardo fisso su un punto vuoto oltre la spalla di
+              Riven. <em>"C'è un altro caso. Uno solo, che io sappia."</em> Non lo dice con la sicurezza di chi
+              recita un fatto studiato: lo dice come chi tira fuori qualcosa che aveva deciso di non nominare.
+              <em>"Il giorno dell'Annuncio, davanti al Tempio di Mystra. Due morirono. Uno no."</em>
+            </p>
+            <p class="italic text-red-100 leading-relaxed mt-3">
+              <em>"Non l'ho mai visitato."</em> Lo ammette senza vergogna apparente, ma con un filo di disagio nella
+              voce — la prima ammissione di negligenza professionale che le sentite fare in tutta la giornata.
+              <em>"Non c'era motivo accademico per farlo, allora. Il Blackstaff lo tiene in una cella arcana da
+              anni — contenimento, non prigione, se la differenza vi interessa. Non è mai riuscito a controllarla
+              come ha fatto Riven. Ogni volta che qualcosa lo turba, la magia esce da sola."</em>
+            </p>
+            <p class="italic text-red-100 leading-relaxed mt-3">
+              Una pausa, gli occhi che tornano su Riven con un'attenzione nuova, quasi clinica nel modo in cui lo è
+              Fealer più che nel proprio. <em>"Mi hanno detto che il segno, su di lui, non è sul braccio. È sul
+              volto. Non me lo hanno descritto meglio di così, e forse è un bene."</em> Poi, più piano, quasi a se
+              stessa: <em>"Forse dovrei andare a vederlo, adesso che ho un motivo vero."</em>
+            </p>
+          </div>
+          <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+            <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — come e quando usarlo</p>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Non è pensato per essere risolto stasera — è un gancio, non una scena da giocare fino in fondo: se
+              Riven o Fealer chiedono di andare a vedere il sopravvissuto <strong class="text-white">subito</strong>,
+              puoi assecondarli (buona scena drammatica, il "cosa sarei potuto diventare io" per Riven), ma va bene
+              anche lasciarlo come promessa di Arianna per una prossima sessione o per l'Ecosistema 2. Nome proposto
+              per il sopravvissuto, se ti serve prima di averne uno tuo: <strong class="text-white">Anders
+              Voss</strong>, umano, sulla trentina al momento dell'incidente. Tienilo distinto da Riven sul piano
+              tematico: dove Riven ha trovato — faticosamente — un equilibrio con la propria magia selvaggia, Anders
+              è la prova vivente di cosa succede a chi quell'equilibrio non lo trova mai. Non serve dargli dialogo
+              oggi; basta che esista, per adesso, come nome e come minaccia potenziale se il gruppo lo cerca prima
+              del previsto.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-indigo-200 mb-1">5. Il Secondo Parere — Fealer</p>
+          <p class="text-xs text-gray-500 italic mb-2">Prova di Natura di Fealer, in contrasto/completamento a Arianna</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Fealer osserva la cicatrice non come un condotto arcano ma come farebbe con una pianta malata o un
+            terreno corrotto — la sua specialità. <strong class="text-white">Risultato garantito:</strong> nota
+            qualcosa che ad Arianna, pura arcanista, non salterebbe agli occhi: la cicatrice si comporta come un
+            <em>ciclo</em>, non come un danno lineare — cresce, si stabilizza, cresce di nuovo, come una stagione o
+            come qualcosa che <em>reagisce</em> a stimoli invece di limitarsi a peggiorare. Non tira una conclusione
+            sul dungeon nel suo insieme — resta, per ora, un'osservazione sul corpo di Riven, non una teoria
+            cosmologica. <strong class="text-indigo-300">Nota DM — non spingere oltre:</strong> evita di far dire a
+            Fealer che l'ambra è "una parte voluta" del dungeon in generale: i prossimi Ecosistemi cambieranno
+            ambientazione e materiali radicalmente, quindi non blindare oggi una teoria che il resto della campagna
+            potrebbe contraddire. Se vuoi comunque dargli un momento da secretGoal, fallo restare vago:
+            "qualcosa qui non si comporta come dovrebbe, e non parlo solo del ragazzo" — sospetto generico sul
+            mandato/gli Dèi, non un'affermazione specifica sull'ambra. <strong class="text-purple-300">Voce di
+            Fealer:</strong> qui è dove il suo "Paziente Zero" prende corpo in scena — non tenerezza, ma la stessa
+            attenzione clinica con cui osserverebbe una ferita su un lupo della sua muta: va capita perché va
+            protetta, non perché fa pena.
+          </p>
+          <div class="bg-black/50 border-l-4 border-purple-500 p-5 my-3 rounded-r">
+            <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+            <p class="italic text-purple-100 leading-relaxed">
+              Fealer non si avvicina come ha fatto Arianna. Si accovaccia accanto a Riven — non si siede mai su una
+              sedia se può farne a meno — e inclina la testa di lato, lo sguardo vitreo e fisso di un rapace che
+              osserva un movimento nell'erba. Non tocca la cicatrice. Appoggia due dita a un dito di distanza dalla
+              pelle, come se ne sentisse il calore senza che serva il contatto.
+            </p>
+            <p class="italic text-purple-100 leading-relaxed mt-3">
+              Resta così, immobile, abbastanza a lungo che Riven inizia a sentirsi osservato più che esaminato. Poi
+              Fealer parla, senza smettere di guardare la cicatrice, con quella voce piatta e priva di calore che
+              usa per constatare fatti: <em>"Respira."</em> Una pausa. <em>"Non in senso letterale. Si espande.
+              Si ritira. Poi di nuovo. Come una stagione, o come qualcosa che risponde a uno stimolo — non come una
+              ferita che marcisce e basta."</em>
+            </p>
+            <p class="italic text-purple-100 leading-relaxed mt-3">
+              Si raddrizza, e per un istante il suo sguardo incontra quello di Arianna — non ostile, ma con la
+              soddisfazione fredda di chi ha appena notato qualcosa che lei, con tutto il suo Arcano, si è lasciata
+              sfuggire. <em>"Voi cercate incantesimi. Io ho passato ottant'anni a guardare cose che crescono e cose
+              che muoiono. Questa non sta morendo."</em> Un ultimo sguardo a Riven, quasi clinico, quasi — ma non
+              del tutto — qualcos'altro: <em>"È viva. E qualunque cosa sia, la sta tenendo viva anche lui."</em>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — cosa NON risolvere oggi</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Il punto della giornata è accumulare indizi coerenti, non chiudere il mistero. Alla fine, Arianna dovrebbe
+          ammettere onestamente di non avere una diagnosi definitiva — solo la certezza che Riven non si sta
+          "guastando", si sta <em>trasformando in qualcosa</em>, e che il liquido ambrato non è né un veleno né una
+          fonte, ma un mezzo — un conduttore per la stessa energia della Discesa degli Dèi che lo aveva già investito
+          una volta, il Giorno dell'Annuncio a Waterdeep. Tienilo aperto per l'Ecosistema 2: idealmente, la vera risposta arriva solo quando il
+          gruppo scoprirà più sull'origine dell'acqua ambrata nel dungeon stesso, e su come si collega a ciò che è
+          sceso quel giorno.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: E POI? ==================== -->
+    <div id="dopo" class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🌙</span> PARTE III: E POI? — MENU PER LA COPPIA
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tre opzioni indipendenti, pensate apposta per funzionare con <strong class="text-white">solo Riven e
+          Fealer</strong> al tavolo — nessuna richiede gli altri personaggi. Sono un menu, non un compito: usa quella
+          che si incastra meglio con l'energia della serata dopo la scena della cicatrice, o nessuna se il tempo è
+          finito. Non sono pre-scritte scena per scena come la Parte II — sono ganci con materiale di base solido,
+          da giocare in modo più libero.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-gray-800/50 border-2 border-green-700 rounded-lg p-5">
+          <p class="font-bold text-green-200 mb-1">A. Il Peso del Sigillo — Riven e la famiglia a Daggerford</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · quieta · nessun tiro necessario</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Non è lore già scritta altrove — è una conseguenza logica di due fatti già canonici: Riven manda da
+            sempre denaro e aiuti in segreto alla sua famiglia a Daggerford, e Waterdeep è sigillata sotto la cupola
+            divina da quando gli dèi sono scesi (nessuno entra, nessuno esce — vedi
+            <a href="/dm/sessioni/sessione-10" class="underline text-green-300">Sessione 10</a>). Se il Sigillo è
+            totale, anche i suoi canali segreti per far arrivare aiuto a casa si sono interrotti da mesi, e lui non
+            ha modo di sapere se la sua famiglia stia bene, abbia bisogno, o abbia semplicemente smesso di aspettarsi
+            sue notizie.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Buon momento per farlo emergere: durante una pausa negli esperimenti, o subito dopo — magari innescato da
+            Arianna che gli chiede, quasi di passaggio, se ha "qualcuno fuori" a cui pensare mentre studia la sua
+            mutazione. Fealer, con la sua lente clinica, potrebbe leggerlo come "dato irrilevante alla missione" e
+            dirlo esplicitamente — buona frizione in carattere, non serve che sia gentile per essere una buona scena.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-purple-700 rounded-lg p-5">
+          <p class="font-bold text-purple-200 mb-1">B. Un Nome sulla Stele — Fealer e Myth Drannor</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · emotiva sotto la superficie cinica · non risolvibile subito</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Ripreso da <a href="/dm/sessioni/sessione-11#sottotrame-cittadine" class="underline text-purple-300">Sessione
+            11, Parte VIII, Sottoquest 1</a>: durante una consultazione della Stele delle Altre Città in Piazza
+            dell'Arco, Fealer nota un nome — o un titolo, o un modo di firmarsi — tra i membri elencati di una gilda
+            di Myth Drannor. Meglio ancora se tra <strong class="text-white">La Lama Ritrovata</strong>, la gilda
+            che insegue esplicitamente "la gloria di Myth Drannor" — ironia pronta per il suo disprezzo della
+            retorica elfica e della gerarchia che ha rinnegato un secolo fa.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il punto non è risolvere nulla: il Sigillo non si apre, nessun canale di comunicazione esiste tra città.
+            Il valore è nel momento di caratterizzazione — lascialo reagire con distacco, poi lascia che quel
+            distacco si incrini per un secondo solo, davanti a Riven, prima di richiudersi. Buon gancio aperto per
+            l'Ecosistema 2 o 3, se il Sigillo dovesse mai vacillare.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-slate-600 rounded-lg p-5">
+          <p class="font-bold text-slate-200 mb-1">C. Incursione Notturna — Fealer e Riven contro il Dado Nero</p>
+          <p class="text-xs text-gray-500 italic mb-2">Nuova per stasera · costruita su elementi già canonici · scena d'azione leggera</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Non è lore pre-scritta — è una scena che puoi costruire stasera usando solo pezzi già stabiliti: il
+            comportamento di Fealer verso le gilde rivali ("le sedi delle gilde rivali sono giacimenti di risorse
+            mal gestite... uso Wild Shape per infiltrare i santuari nemici di notte, non è furto, è riallocazione
+            vitale" — suo background) e la sede fisica già nota della
+            <a href="/dm/sessioni/sessione-10#dado-nero" class="underline text-slate-300">Compagnia del Dado Nero</a>,
+            la taverna <strong class="text-white">The Lucky Shot</strong> — una gilda appena nata, con pochissime
+            risorse, il target perfetto per il suo pragmatismo.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Fealer propone la cosa a Riven con la stessa logica fredda di sempre ("una gilda che non sa ancora
+            proteggere quello che ha non merita di tenerlo"): Fealer entra in forma di Gatto o Ratto per la parte
+            silenziosa, Riven resta fuori o dentro come supporto magico a distanza. Buona occasione per un paio di
+            tiri di Furtività/Percezione senza combattimento vero, e per Riven — che non ruba per natura — a
+            decidere se partecipare, fare da palo con riluttanza, o tirarsi fuori. Non è necessario che vada storto:
+            anche un successo pulito dice qualcosa su entrambi.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: ANDERS VOSS ==================== -->
+    <div id="anders-voss" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🕯️</span> PARTE IV: ANDERS VOSS — SE VOGLIONO ANDARCI STASERA
+      </h2>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Scena pronta da giocare per intero, non solo un accenno — perché la reazione più probabile, dopo che
+          Arianna dice <em>"Forse dovrei andare a vederlo, adesso che ho un motivo vero"</em> (fine dell'Esperimento
+          4, Parte II), è "andiamo subito". Se Riven e Fealer vogliono muoversi stasera stesso, questa è la scena.
+          Se invece preferiscono aspettare, resta qui pronta per quando la richiederanno.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Il luogo — l'Ala di Contenimento Arcano del Blackstaff</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Non una prigione nell'aspetto — più simile a un'infermeria che nessuno vuole visitare. Un'ala isolata
+        nei sotterranei dell'Accademia di Blackstaff, raggiungibile solo passando per tre porte via via più semplici
+        e più spesse, l'ultima delle quali priva di maniglia dal lato dei visitatori. L'aria, oltre quella porta,
+        ha un odore particolare — non di chiuso, ma di ozono, lo stesso che si sente dopo un fulmine caduto vicino.
+        Le pareti sono incise con sigilli di soppressione magica, non abbastanza forti da spegnere del tutto un
+        Wild Surge, ma sufficienti a smorzarne la portata entro la stanza. Una sola cella, al momento occupata:
+        Blackstaff non ha mai avuto bisogno di una seconda, finora.
+      </p>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Il Custode — Maestro Orlin Thess</h3>
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4 mb-6">
+        <p class="font-bold text-red-200">Orlin Thess</p>
+        <p class="text-xs text-gray-500 italic mb-2">Umano, mago di mezza età, incaricato del contenimento arcano da Blackstaff — non un carceriere, un infermiere con troppa magia intorno</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-2">
+          Cura Anders da anni, con la pazienza stanca di chi ha smesso di sperare in una cura ma non ha mai smesso
+          di presentarsi al lavoro. Non ostacola la visita se Arianna la richiede — la conosce di fama, e il suo nome
+          basta a scavalcare la burocrazia — ma è protettivo, quasi materno, verso il suo unico paziente: dà regole
+          precise prima di far entrare chiunque.
+        </p>
+        <div class="bg-black/40 border-l-4 border-red-500 p-3 rounded-r text-sm">
+          <p class="italic text-red-100 leading-relaxed">
+            <em>"Tre regole, e non sono negoziabili. Non lo toccate. Non alzate la voce, qualunque cosa dica. E se
+            vi chiedo di uscire, uscite subito, senza fare domande — io guardo cose che voi non potete vedere."</em>
+            Una pausa, più gentile. <em>"Non è pericoloso apposta. Non lo è mai stato. Ma non è mai stato al
+            sicuro nemmeno per sé stesso, e io sono qui per tutti e due i motivi."</em>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Anders Voss</h3>
+      <div class="bg-gray-900/60 border-2 border-red-800 rounded-lg p-5 mb-6">
+        <p class="text-xs text-red-400 uppercase tracking-widest mb-2">Umano, 30+ anni all'epoca dell'incidente, oggi qualche anno più vecchio — Stregone Selvaggio mai stabilizzato</p>
+        <p class="font-bold text-white mb-3">Aspetto</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          Il lato sinistro del suo viso non è più esattamente carne. È come cera che si è sciolta e poi è tornata
+          dura a metà movimento — la pelle liscia, tesa, quasi vitrea, percorsa da crepe sottilissime color
+          blu-bianco che corrono come le venature di un vetro rotto e mai sostituito. Sotto quelle crepe, quando è
+          calmo, filtra solo un bagliore debolissimo, quasi impercettibile. L'occhio sinistro ha perso il colore che
+          doveva avere: l'iride è ora un vortice cangiante, madreperlaceo, che si muove lentissimamente anche quando
+          lui resta immobile — e non è mai perfettamente puntato dove lui sta davvero guardando, un dettaglio che
+          mette a disagio chiunque lo fissi troppo a lungo. I capelli su quel lato sono bianchi, cinerei, mentre
+          sull'altro lato sono ancora scuri. Il resto di lui è ordinario fino quasi al dolore — un uomo qualunque,
+          spezzato solo a metà.
+        </p>
+        <p class="font-bold text-white mb-3">Personalità e voce</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          Anni di isolamento lo hanno reso pacato con uno sforzo evidente — parla lentamente, quasi scandendo le
+          parole, come chi ha imparato a controllare il proprio corpo respiro per respiro perché l'alternativa è
+          pericolosa. Non è ostile, ma nemmeno caloroso: è diffidente verso l'entusiasmo altrui, e ha un umorismo
+          secco, tagliente, che usa come valvola di sicurezza più che come cortesia. Verso Riven, la prima persona
+          "come lui" che incontra di persona, la curiosità è reale e immediata — ma sotto, non riesce a nascondere
+          del tutto un'invidia amara: Riven ce l'ha fatta, lui no, e la differenza tra loro due gli sembra ingiusta
+          quanto arbitraria.
+        </p>
+        <div class="bg-black/40 border-l-4 border-red-500 p-3 rounded-r text-xs">
+          <p class="text-gray-400 uppercase tracking-widest mb-1">⚠️ Piccolo rischio meccanico, opzionale</p>
+          <p class="text-gray-300 leading-relaxed">
+            Se la conversazione lo turba visibilmente (una domanda insensibile, un argomento su Riven che lo tocca
+            nel vivo), puoi far scattare un piccolo Wild Surge smorzato dai sigilli della cella — niente di
+            distruttivo, solo inquietante: una candela che si spegne e si riaccende da sola, un libro che sfoglia
+            le proprie pagine, un bicchiere che si incrina senza motivo, un attimo di buio totale nella stanza. Orlin
+            interviene subito con voce calma ("Respira, Anders. Con me.") e la situazione si placa da sola in pochi
+            secondi. Usalo per tensione atmosferica, non per minaccia reale — Anders resta più pericoloso per sé
+            stesso che per chiunque altro nella stanza.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Leggere ad alta voce quando Orlin apre l'ultima porta e i giocatori vedono Anders per la prima volta.</p>
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          La cella non ha sbarre. Ha un cerchio inciso nel pavimento, largo quanto l'intera stanza, che pulsa di una
+          luce grigia e sorda — non magia visibile come quella di Arianna, ma la sua assenza, attivamente imposta.
+          Dentro il cerchio, seduto su una branda troppo semplice per l'importanza di chi ci dorme, un uomo alza lo
+          sguardo verso la porta.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Per un istante, prima che i vostri occhi si abituino, sembra che stia piangendo luce dal lato sinistro del
+          viso — poi capite che è solo la pelle, le crepe sottilissime che catturano il bagliore della lanterna di
+          Orlin e lo rimandano indietro, sbagliato, troppo blu per essere naturale.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          <em>"Visite."</em> Non è una domanda. La voce è piatta, controllata fino all'ultima sillaba. Poi vede
+          Riven — davvero lo vede, con un'attenzione improvvisa che non ha riservato a nessun altro nella stanza — e
+          per un secondo, solo un secondo, qualcosa nel suo unico occhio "normale" si incrina. <em>"Oh."</em> Una
+          pausa più lunga del previsto. <em>"Ne è arrivato un altro."</em>
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Domande classiche — risposte pronte</h3>
+      <div class="space-y-3 mb-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Cosa è successo quel giorno?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Ero in piazza. Tutti eravamo in piazza — dove altro si va, quando ti dicono che una dea è appena
+            scesa sul mondo? Poi il cielo si è piegato, o forse ero io a piegarmi, non lo so ancora oggi. Il resto
+            non è un ricordo. È come provare a ricordare un incubo mentre lo stai ancora sognando: sai che è
+            successo, non sai cosa."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Riesci a controllarla, almeno un po'?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Se potessi controllarla, non sarei seduto dentro un cerchio che mi impedisce di farlo. Ho provato
+            tutto quello che Orlin e prima di lui altri tre mastri hanno saputo suggerire. Meditazione. Digiuno.
+            Preghiera, anche, per un po' — non sono mai stato devoto, ma ero disperato. Niente regge più di qualche
+            settimana."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Senti qualcosa quando la magia esplode? Una presenza, una voce?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            (Buon gancio per la Teoria dell'Ospite Non Invitato — lascia che confermi con la propria esperienza,
+            non con teoria) "I sacerdoti che mi hanno esaminato, i primi tempi, dicevano tutti la stessa cosa: quello
+            che sentono da me 'non ha il sapore giusto'. Non sapevano spiegarsi meglio, o non volevano. Io lo sento
+            anch'io, se proprio lo chiedete: quando sale, non sembra mia. Sembra in prestito da qualcun altro che
+            non si è mai presentato."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Vuoi essere libero? Vuoi guarire?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Ogni giorno. E ogni giorno sono contento che qualcuno più saggio di me tenga la porta chiusa. Sapete
+            cosa ho fatto, la prima volta che qualcuno mi ha fatto arrabbiare qui dentro? Non ve lo dico. Basti
+            sapere che da allora Orlin non alza mai la voce con me, e io ho smesso di chiedere di uscire."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Hai famiglia? Qualcuno viene a trovarti?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "All'inizio sì. Gliel'ho chiesto io di smettere. Non per orgoglio — per lo stesso motivo per cui il tuo
+            amico manda soldi a casa senza farsi vedere, immagino." (Se Riven non ha detto nulla della propria
+            famiglia, Anders lo intuisce comunque: è un'osservazione generica su "chi ha qualcosa di instabile
+            dentro", non una prova che sappia qualcosa di specifico.) "Certe cose si proteggono meglio da lontano."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Perché io sono riuscito a controllarla e tu no?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            Qui l'umorismo secco si spegne per un momento vero. "Non lo so. Ci ho pensato più di quanto pensi
+            qualunque altra cosa, in questi anni. L'unica risposta che mi sono dato, e non mi piace: forse non è
+            questione di quanto ti alleni o quanto sei forte. Forse è solo questione di cosa hai trovato dentro,
+            quel giorno, prima ancora di sapere che c'era. Tu hai trovato qualcosa che si lasciava tenere. Io no."
+            Non lo dice con rancore vero — ma nemmeno riesce a dirlo senza che gli tremi la voce.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — tono e cosa non risolvere</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Anders non è un mostro né un mentore — è uno specchio scomodo. Non deve offrire risposte definitive sulla
+          natura della cicatrice di Riven (quelle restano nelle ipotesi di Arianna, Parte II), solo conferme
+          esperienziali che le rendono più concrete. Non farlo supplicare per la libertà in modo patetico, e non
+          farlo diventare minaccioso: il registro giusto è la dignità stanca di chi ha fatto pace, a fatica, con un
+          destino che non ha scelto. Se il gruppo propone soluzioni (portarlo con loro, provare un rituale, chiedere
+          a Vex), Orlin e Anders stesso sono scettici ma non ostili — è un filo che puoi lasciare aperto per
+          l'Ecosistema 2, non qualcosa da risolvere stasera.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</MainLayout>
