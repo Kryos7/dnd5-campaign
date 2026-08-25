@@ -1,0 +1,424 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11b - Il Ciondolo e la Sabbia"
+  description="Sessione 11b: Valoris affronta un fantasma del proprio passato a Baldur's Gate, rifiuta di rispondere subito all'Ordine del Falco Rosso e riceve un segno diretto dal Cavaliere Rosso su un tavolo di sabbia"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11b</span>
+        <h1 class="text-4xl font-bold">Il Ciondolo e la Sabbia</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 23/08/2026</span>
+        <span>⏱️ ~1h35</span>
+        <span>🎭 Sessione parallela · Solo Valoris</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso durante la pausa dei sette giorni, stasera al tavolo c'è solo Valoris. Una lettera
+        di ammonimento, un volto dal suo passato a Baldur's Gate, un'offerta che metterebbe in discussione tutto
+        ciò che porta al collo, e infine una risposta diretta della sua dea — data non a parole, ma nella sabbia
+        di un altare.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">La lettera di ammonimento del Consiglio, il confronto con Dresk Colhollow, l'offerta del Falco Rosso da Regal, l'ammissione della Compagnia del Dado Nero vista dal tempio, il segno del Cavaliere Rosso nella sabbia, la cena con Dresk</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Scoperte</p>
+          <p class="text-gray-300">Tempus è apparso al proprio tempio pochi giorni dopo la Discesa; tre dei cinque membri del Dado Nero arrivano da altre gilde; il passato oscuro di Dresk dopo l'imboscata, legato allo gnomo che sarebbe diventato il migliore amico di Valoris</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Resta in Sospeso</p>
+          <p class="text-gray-300">La risposta a Regal sull'Ordine del Falco Rosso, il destino di Rooks lasciato al Consiglio, la nuova struttura di paga, la ricerca della ragazza dell'amuleto, il requiem per Tam fissato per domani sera</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">📜</span> PARTE I: IL CONFINE E IL CIONDOLO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">I.</span> La Lettera sulla Porta
+          </h3>
+          <p class="leading-relaxed">
+            La mattina dopo la cena del Consiglio, Valoris si prepara con cura — bagno, armatura, le fasce
+            sacerdotali sopra il sopravveste — e trova appesa alla porta della propria stanza una lettera
+            sigillata col simbolo dei Guardiani della Trama.
+          </p>
+          <div class="bg-gray-900/60 border-2 border-amber-700 rounded-lg p-6 mb-4">
+            <p class="text-xs text-amber-500 uppercase tracking-widest mb-3">Lettera del Consiglio — ai Guardiani della Trama</p>
+            <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+              A Valoris, Cavaliere della Compagnia Rossa, membro della Squadra Principale.
+            </p>
+            <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+              Il Consiglio riconosce il valore del tuo servizio e la sincerità delle tue intenzioni nelle recenti
+              contestazioni verso le decisioni di questo Triumvirato. Riconosce, altresì, che tale condotta — per
+              quanto motivata — costituisce un'ingerenza reiterata in materie di esclusiva competenza del
+              Consiglio di Gilda, non della Squadra Principale.
+            </p>
+            <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+              Questo documento non è una destituzione né una minaccia. È un confine, tracciato una volta, perché
+              non debba esserlo una seconda. Il tuo comando si esercita nel dungeon. Il nostro, in questa città.
+              Nessuno dei due sostituisce l'altro.
+            </p>
+            <p class="italic text-amber-100 text-sm leading-relaxed">
+              — Serath Vael'Toran, per il Consiglio
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Valoris mette via la lettera per dirigersi al tempio di Tempus. Lungo il corridoio incrocia Riven e Fealer diretti allo studio di Arianna, con Thalio al
+            seguito senza motivo apparente. Uscendo dalla gilda riceve sorrisi e pacche sulle spalle da diversi
+            membri — promette a tutti una futura serata di racconti, per tenere aggiornato chi non era nel
+            dungeon.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">II.</span> Dresk Colhollow
+          </h3>
+          <p class="leading-relaxed">
+            Appena fuori dalla porta, un uomo magro è appoggiato al muro di fronte, le braccia conserte. Valoris
+            lo riconosce con un sussulto: è <strong class="text-white">Dresk Colhollow</strong>, un tempo la
+            vedetta più fidata della sua banda a Baldur's Gate — l'uomo a cui affidava sempre la sicurezza degli
+            altri, non perché fosse il più debole, ma perché era quello di cui ci si poteva fidare.
+          </p>
+          <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-amber-100 leading-relaxed">
+              <em>"Ti hanno dato un'armatura lucida e una fila di persone che ti chiamano signore."</em> Dresk lo
+              fissa. <em>"Tam avrebbe compiuto trent'anni quest'anno. Lo sai, mentre in giro si racconta già di te
+              come del cavaliere che ha chiuso da solo un intero Ecosistema, e nessuno nomina mai il prezzo che
+              qualcun altro ha pagato per portarti fin qui?"</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Valoris non arretra: ricorda a Dresk che il rischio era condiviso da tutti quella notte, compreso Tam
+            stesso, e che non porta un senso di colpa per quella morte — solo tristezza per un fratello perso.
+            Dresk, incrinandosi per un istante, chiarisce di non volere vendetta: vuole solo che il nome di Tam
+            venga onorato pubblicamente, un giorno. Valoris propone di rivedersi — Dresk lavora alle stalle del
+            Campo di Marte fino al tramonto, poi è libero. Prima di lasciarlo andare, Valoris si ripromette di
+            scoprire se altri membri della vecchia banda sono ancora vivi, e in particolare se lo è <strong
+            class="text-white">lei</strong> — la ragazza che gli donò il ciondolo di Tymora da bambino.
+          </p>
+          <p class="text-gray-500 text-xs italic mt-3">
+            Lungo la strada verso il tempio, un paio di tiri di Percezione alti (18, 26) gli fanno notare i
+            manifesti della Corsa dei Tetti tra due giorni, e due membri della rete di informatori di Silas che
+            lo riconoscono e lo osservano con attenzione senza avvicinarsi — nessuna ostilità, solo un promemoria
+            silenzioso che la Gilda ha occhi ovunque, anche dopo lo scontro sul "codice nero".
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🦅</span> PARTE II: L'OFFERTA DEL FALCO ROSSO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Regal
+          </h3>
+          <p class="leading-relaxed">
+            Al Tempio di Tempus, Valoris conferma quello che la città ormai sussurra: gli dèi scesi sono presenze
+            reali, sospese a mezz'aria — avatar o specchi della divinità stessa, nessuno sa dire con certezza se
+            sia il vero corpo del dio. Ad accoglierlo è <strong class="text-amber-200">Regal</strong>, il suo
+            vecchio confratello d'addestramento, oggi ufficiale del Falco Rosso — secondo solo al Gran Maestro
+            dell'Ordine. Valoris lo saluta col saluto formale del proprio ordine, riconoscendogli il grado
+            superiore.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"Il ragazzo di strada che porta ancora quel ciondolo."</em> Regal ride, gli stringe l'avambraccio.
+              <em>"Ho sentito il tuo nome tre volte in una settimana, e non da fratelli dell'ordine — da gente
+              comune, al mercato. Non so se congratularmi o preoccuparmi per te."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> "Da una parte vi dicono stai al tuo posto..."
+          </h3>
+          <p class="leading-relaxed">
+            In una stanza più privata sul retro del tempio, Regal porta l'offerta per conto del Gran Maestro: un
+            posto formale nell'Ordine del Falco Rosso. Status, riconoscimento, risorse — in cambio di rispondere
+            a una catena di comando, non solo alla propria dea. Lui stesso nota l'ironia: la Gilda gli ha appena
+            chiesto di stare al proprio posto, e ora il Falco Rosso gli chiede l'esatto contrario.
+          </p>
+          <p class="leading-relaxed">
+            Valoris non accetta né rifiuta. Toglie per un istante il ciondolo di Tymora dal collo per mostrarlo a
+            Regal e spiega tre ragioni per cui non può separarsene con leggerezza: rappresenta una persona a lui
+            cara che non vede da sedici anni; non ha mai messo in dubbio la sua fede nel Cavaliere Rosso, come ha
+            dimostrato in tutti questi anni; e con tre divinità che osservano da vicino il Gioco in questo
+            momento, contrariarne anche solo una — rinunciando pubblicamente al dono di un'altra — non gli sembra
+            una mossa tatticamente saggia. Chiede a Regal di riferire tutto questo, parola per parola, al Gran
+            Maestro. Si confida anche, da fratello a fratello, sulla sconfitta subita nell'ultima prova di Tempus
+            e sul bisogno di riflettere su come guida il proprio gruppo — Regal si offre come confronto per la
+            gestione strategica, quando servirà.
+          </p>
+          <p class="leading-relaxed">
+            Prima di separarsi, Valoris chiede notizie del tempio: pochi giorni dopo la Discesa degli Dèi, Tempus
+            stesso è apparso — nessuna comunicazione diretta, ma un segno di benevolenza che ha rinvigorito tutta
+            la congregazione. Regal aggiunge un dettaglio che Valoris non aveva considerato: il quartier generale
+            del Falco Rosso si trova a Baldur's Gate, non a Waterdeep — lui e una parte dell'Ordine sono rimasti
+            di stanza qui, intrappolati come chiunque altro dal Sigillo, quando è calato.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-orange-900/20 border border-orange-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🔔</span> PARTE III: IL RINTOCCO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            Valoris si ritira in una cappella privata del tempio per pregare, chiedendo alla sua dea consiglio su
+            come gestire meglio il gruppo e le tensioni con la Gilda e col Falco Rosso. Circa due ore dopo, verso
+            mezzogiorno, un rintocco di campana fortissimo arriva dalla piazza dell'Arco Divino — e nello stesso
+            istante il Marchio dietro il collo di Valoris comincia a bruciare, esattamente come già accaduto a
+            Riven, Fealer e Thalio quella stessa mattina (vedi <a href="/sessioni/sessione-11a" class="underline text-orange-300">Sessione
+            11a</a>).
+          </p>
+          <p class="leading-relaxed">
+            Interrompe la preghiera e corre alla piazza, un po' impacciato dall'armatura. I cinque membri della
+            <strong class="text-white">Compagnia del Dado Nero</strong> sono già entrati nell'Arco — quello che
+            Valoris trova è la delegazione della loro Gilda rimasta fuori a festeggiare, strette di mano e
+            sorrisi, con <strong class="text-white">Dorin</strong>, il proprietario del Lucky Shot, che si atteggia
+            a capo della delegazione. Sui tetti della piazza opposta, nota anche <strong class="text-orange-400">
+            Thalio</strong>, che osserva la stessa scena.
+          </p>
+          <div class="bg-black/40 border-l-4 border-orange-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-orange-100 leading-relaxed">
+              Alla Stele delle Altre Città, sotto Guardiani della Trama e Scudo Radiante, è comparsa una nuova
+              voce: <strong class="text-white">Compagnia del Dado Nero</strong>, zero punti. Lo stesso quadro
+              globale che Thalio aveva già letto lì (due gilde cadute rimpiazzate altrove, tre gilde ancora a
+              zero nel mondo) si conferma anche da questo lato della piazza.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Un tiro di Percezione alto (23) gli fa cogliere voci di passanti: tre dei cinque membri del Dado Nero
+            arrivano da altre gilde, uno addirittura dalle riserve dello Scudo Radiante. Valoris affida
+            l'informazione a un membro dei Guardiani incrociato per strada, così che arrivi comunque alla Gilda,
+            poi torna verso il tempio per riprendere la preghiera interrotta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🏜️</span> PARTE IV: IL SEGNO NELLA SABBIA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            Tornato in cappella, Valoris riprende la veglia, questa volta chiedendo alla propria dea una guida più
+            diretta: come comportarsi con l'offerta del Falco Rosso, come guidare meglio il gruppo. Il flusso
+            della connessione divina si fa via via più stabile — finché un fruscio alla sua sinistra lo richiama
+            verso un grande vaso di ferro pieno di sabbia, circondato da candele e simboli sacri, sul quale la
+            sabbia stessa comincia a muoversi da sola.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-6 my-4 rounded-r">
+            <p class="italic text-indigo-100 text-lg leading-relaxed">
+              Cinque miniature prendono forma nella sabbia — quattro disposte dietro, una davanti che si volta di
+              scatto verso Valoris e alza una spada lunga, restando immobile in quella posa. Valoris la legge
+              subito: sono loro cinque, i Guardiani della Trama, e la figura davanti — quella che comanda,
+              quella che guida senza voltare le spalle agli altri — è lui.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Chiede conferma ad alta voce: gli sta dicendo di restare al comando dei suoi compagni e guidarli nel
+            dungeon? La miniatura si impettisce, il petto in fuori, fiera. Poi Valoris pone la domanda che più gli
+            pesa: restare a capo del gruppo è incompatibile con l'entrare anche nel Falco Rosso? La figura lascia
+            cadere la spada, si volta verso uno spazio vuoto, e due simboli si tracciano nella sabbia — un falco e
+            il simbolo di Tymora — solo per confondersi e sparire insieme non appena lui insiste di volerli
+            tenere entrambi.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-6 my-4 rounded-r">
+            <p class="italic text-indigo-100 text-lg leading-relaxed">
+              <em>"Mia signora, siete voi la mia divinità. Se ritenete più saggio che io resti nel gruppo e
+              rifiuti i Falchi Rossi, è una scelta che prenderò volentieri."</em> Un cavallo appare sotto la
+              miniatura in testa: impugna un'arma e galoppa dritta verso un piccolo arco divino disegnato nella
+              sabbia, sparendoci dentro a tutta velocità. Poi la sabbia si appiattisce, e tutto tace.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Per Valoris non ci sono più dubbi: rimanere alla guida dei Guardiani della Trama, rifiutare l'Ordine
+            del Falco Rosso. Ringrazia la propria dea, promette di pregare ogni sera prima di rientrare nel
+            dungeon, e chiude la veglia visibilmente scosso — <em>"emotivamente scosso, e anche un po'
+            orgoglioso"</em> di aver ricevuto un contatto così diretto. Saluta i sacerdoti del Cavaliere Rosso e
+            dedica una preghiera anche a Tempus, come è naturale per un ordine che, per quanto parallelo, serve
+            infine la stessa causa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE V -->
+    <div class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🍺</span> PARTE V: LA CENA CON DRESK
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            La sera, Valoris ritrova Dresk fuori dalla Gilda e lo porta in una taverna tranquilla, non troppo
+            elegante né troppo malfamata. Dresk racconta la propria vita a Waterdeep: un lavoro umile alle stalle,
+            vicino a un presidio militare che gli permette di restare informato, un'esistenza volutamente solitaria
+            — non ha mai smesso di pensare al fratello, e la paura che gli è rimasta addosso da allora gli ha
+            impedito di riprendere la vita da avventuriero.
+          </p>
+          <div class="bg-black/40 border-l-4 border-yellow-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-yellow-100 leading-relaxed">
+              Accecato dal dolore dopo l'imboscata, Dresk diede la caccia alle guardie coinvolte e ne uccise una.
+              Un'altra guardia dello stesso manipolo gli lasciò la cicatrice che porta ancora sul braccio — la
+              stessa guardia, gnomo di piccola statura, che sarebbe poi diventata il migliore amico di Valoris
+              alla Cittadella. Ricercato per l'omicidio, Dresk fuggì da Baldur's Gate: da lì la nuova vita a
+              Waterdeep, sei anni fa.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Valoris non lo giudica — nella stessa situazione, ammette, avrebbe probabilmente reagito allo stesso
+            modo — e lo invita a vedere in questa nuova vita qualcosa di cui Tam sarebbe stato contento. Propone
+            un requiem privato per il fratello, dato che i riti ufficiali della Compagnia Rossa cadono solo due
+            volte l'anno: lo celebrerà lui stesso, al Tempio di Tempus, la sera successiva. Dresk accetta, a bassa
+            voce, gli occhi lucidi. Rimasto solo in questi anni, non ha nessuno da portare con sé.
+          </p>
+          <p class="leading-relaxed">
+            Su richiesta di Valoris, alcuni aneddoti allegri del loro passato insieme (raccontati con vantaggio)
+            strappano finalmente un sorriso a Dresk, e il resto della serata scorre più leggero, tra vino e
+            ricordi. Sulla ragazza dell'amuleto, Dresk conferma solo di aver saputo, tempo fa, che era viva e
+            aveva un piccolo lavoro a Baldur's Gate — nessuna notizia più recente, avendo perso i contatti dopo
+            la propria fuga. Promette di scrivere su un foglio tutto ciò che ricorda, per l'indomani; Valoris, dal
+            canto suo, valuterà un tentativo di comunicazione divina o magica per rintracciarla.
+          </p>
+          <p class="leading-relaxed mt-4 text-gray-500 italic text-sm">
+            Appuntamento fissato per il tramonto di domani, al Tempio di Tempus, per il requiem di Tam. Fine
+            sessione 11b.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Sessione Interpretativa:</strong> Bonus base per sessioni senza combattimento, dove tutto il progresso passa dall'interpretazione e dalle decisioni — nessuno scontro questa volta, solo un confronto personale, una scelta di fede e una veglia
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Personaggio presente</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">PX Presenza</p>
+            <p class="text-green-300 font-bold">750 PX</p>
+          </div>
+          <div>
+            <p class="text-gray-400">PX Sessione Interpretativa</p>
+            <p class="text-amber-300 font-bold">750 PX</p>
+          </div>
+        </div>
+        <p class="text-center text-green-400 font-bold mt-3">Totale base: 1500 PX</p>
+        <p class="text-center text-gray-500 text-xs mt-2 italic">Solo Valoris era presente stasera — gli altri quattro recuperano alla prossima sessione di gruppo.</p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- VALORIS -->
+        <div class="bg-gradient-to-r from-yellow-900/40 to-amber-900/40 border-2 border-yellow-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">⚔️</span>
+            <h4 class="text-xl font-bold text-yellow-400">Valoris</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1900 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 400</p>
+              <p class="text-gray-300">
+                Un'intera sessione retta da solo: ha tenuto testa a Dresk senza cadere né nella difesa piatta né
+                nel senso di colpa a comando, ha negoziato con Regal un rifiuto morbido e ben argomentato invece
+                di un sì o un no secco, e ha vissuto con grande intensità interpretativa la veglia alla propria
+                dea — chiedendo, interpretando e infine sottomettendosi a un segno tutto muto e simbolico. Ha
+                chiuso la serata riportando Dresk da un dolore aperto a un sorriso, con un requiem offerto di sua
+                iniziativa.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-1 gap-4 text-center">
+          <div>
+            <p class="text-yellow-400 font-bold">Valoris</p>
+            <p class="text-xl text-yellow-400">1900 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-11a" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 11a - Il Cantiere e la Terza Campana
+      </a>
+      <span class="text-gray-500 italic">Prossima sessione in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

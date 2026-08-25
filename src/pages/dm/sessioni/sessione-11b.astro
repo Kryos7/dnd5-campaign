@@ -1,0 +1,615 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11b - Valoris [DM]"
+  description="Note del Dungeon Master - Sessione parallela dedicata a Valoris da solo"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11b</span>
+        <h1 class="text-4xl font-bold">Il Confine del Comando — Valoris</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>⏱️ 1–2 ore</span>
+        <span>🎭 Sessione parallela · Solo un giocatore</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso durante la pausa dei sette giorni, stasera al tavolo c'è solo <strong
+        class="text-white">Valoris</strong>. Terzo tassello dello spacchettamento della Sessione 11 dopo la
+        <a href="/dm/sessioni/sessione-11a" class="underline text-indigo-300">11a di Riven e Fealer</a> (già
+        giocata): qui isoliamo tutto il materiale pensato per lui da <a href="/dm/sessioni/sessione-11#tempio-valoris"
+        class="underline text-amber-300">Sessione 11, Parte III</a> e <a href="/dm/sessioni/sessione-11#paga-guardiani"
+        class="underline text-green-300">Parte VII</a>, e aggiungiamo il filone personale di Dresk Colhollow (da
+        <a href="/dm/storie-citta#valoris" class="underline text-yellow-300">Storie in Città</a>) come apertura,
+        perché la sua ombra rende più pesante tutto quello che segue — il tempio, l'ammonimento, l'offerta del
+        Falco Rosso sono tutti, in fondo, la stessa domanda posta in modi diversi: <em>a chi risponde davvero
+        Valoris?</em>
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Dresk:</strong> decidi se giocarlo stasera o rimandarlo — non è ancora stato assegnato a nessuna sessione ufficiale, è del tutto opzionale ma è l'apertura consigliata. Vedi Parte II.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Tempio di Tempus:</strong> ricorda che è il tempio primario di Valoris (il Cavaliere Rosso, non Tymora) — il ciondolo di Tymora resta un dono personale, non un segno di devozione. Vedi Parte III.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Lettera di ammonimento:</strong> prepara il testo su un foglio vero, se puoi — un prop fisico pesa di più di una lettura a voce. Vedi Parte IV.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Rooks:</strong> tieni a portata di mano entrambi gli esiti (si oppone / resta neutrale) — la sua reazione all'ammonimento decide direttamente cosa succede a Rooks. Vedi Parte IV.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>"E poi?":</strong> scegli già ora, o decidi al tavolo, quale (se una) delle opzioni della Parte V giocare per chiudere la serata. Vedi Parte V.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#personaggio" class="text-teal-400 hover:text-teal-300">🧾 Valoris — Specchietto</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dresk" class="text-yellow-400 hover:text-yellow-300">🗡️ Il Peso della Carovana</a>
+      <span class="text-gray-600">·</span>
+      <a href="#tempio" class="text-amber-400 hover:text-amber-300">🎴 La Gita al Tempio</a>
+      <span class="text-gray-600">·</span>
+      <a href="#consiglio" class="text-green-400 hover:text-green-300">📜 Il Consiglio</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dopo" class="text-orange-400 hover:text-orange-300">🌙 E poi? — Menu per uno</a>
+    </div>
+
+    <!-- ==================== PARTE I: SPECCHIETTO PERSONAGGIO ==================== -->
+    <div id="personaggio" class="bg-teal-900/20 border border-teal-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">🧾</span> PARTE I: SPECCHIETTO — VALORIS E IL FALCO ROSSO
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- VALORIS -->
+      <div class="bg-gray-900/60 border-2 border-red-700 rounded-lg p-6">
+        <p class="text-xs text-red-400 uppercase tracking-widest mb-2">⚔️ Valoris</p>
+        <p class="text-sm text-gray-400 italic mb-3">
+          Umano, Cavaliere Quartiermastro della Compagnia Rossa — chierico/paladino del <strong
+          class="text-white">Cavaliere Rosso</strong> (campionessa di Tempus, domini di strategia, disciplina,
+          guerra pianificata). Legale Buono. Leader designato della Squadra Principale dei Guardiani della Trama
+          nel dungeon.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Nato e cresciuto a <strong class="text-white">Baldur's Gate</strong>, orfano di strada e capo di una
+          piccola banda di ragazzini prima di finire, per orgoglio e presunzione, a guidare un assalto a una
+          carovana che si rivelò un'imboscata: alcuni dei suoi compagni morirono, lui fu risparmiato dal capitano
+          scortato, che vide in lui qualcosa di diverso e lo portò alla Cittadella. Da allora ha fatto della
+          disciplina e della pianificazione la propria religione pratica — non per negare il caso, ma per ridurne
+          al minimo il costo in vite.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          <strong class="text-red-300">Personalità:</strong> onesto fino alla rigidità, portato a farsi carico
+          delle colpe altrui come proprie, comanda per responsabilità più che per ambizione.
+          <strong class="text-red-300">Legami:</strong> <strong class="text-white">Regal</strong>, confratello di
+          addestramento oggi ufficiale del Falco Rosso a Waterdeep; il ciondolo di Tymora, dono d'infanzia di
+          un'amica di strada mai dimenticata, non un segno di fede. <strong class="text-red-300">SecretGoal:</strong>
+          ritrovare quell'amica, se è ancora a Waterdeep. <strong class="text-red-300">Difetto/tensione
+          ricorrente:</strong> fatica a distinguere tra il comando che gli compete nel dungeon e quello che non gli
+          compete in città — pretende di essere consultato dal Consiglio di Gilda come se ne facesse parte.
+        </p>
+        <p class="text-xs text-gray-500 italic">
+          Stato attuale dell'arco: reduce dalla vittoria su Kethrar e dalla chiusura dell'Ecosistema 1 — la sua
+          fama è cresciuta abbastanza da farne un simbolo per l'Ordine del Falco Rosso e un problema di equilibri
+          per il Consiglio dei Guardiani, nella stessa settimana.
+        </p>
+      </div>
+
+      <!-- ORDINE DEL FALCO ROSSO -->
+      <div class="bg-gray-900/60 border-2 border-rose-700 rounded-lg p-6">
+        <p class="text-xs text-rose-400 uppercase tracking-widest mb-2">🦅 Ordine dei Paladini del Falco Rosso</p>
+        <p class="text-sm text-gray-400 italic mb-3">
+          Ordine paladino di Tempus, la versione più rigida e gerarchica della stessa fede che Valoris pratica in
+          modo indipendente. Guidato da un <strong class="text-white">Gran Maestro</strong> (mai nominato finora),
+          non da una singola congregazione locale.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Dove Valoris è cavaliere quartiermastro della <strong class="text-white">Compagnia Rossa</strong> e
+          risponde solo alla propria dea (vedi <em>Bg Valoris.md</em>, il dialogo notturno con Regal), il Falco
+          Rosso è un'istituzione sopra le singole compagnie: stessa dottrina di disciplina e pianificazione, ma
+          filtrata attraverso catena di comando, resoconti regolari e un codice di condotta scritto — non fede
+          diretta, fede amministrata.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          <strong class="text-rose-300">Rappresentante in scena:</strong> <strong class="text-white">Regal</strong>,
+          vecchio confratello di addestramento di Valoris, oggi ufficiale della guarnigione della Compagnia Rossa a
+          Waterdeep e membro del Falco Rosso — di stanza in città da prima della Discesa degli Dèi.
+          <strong class="text-rose-300">Cosa vogliono da Valoris ora:</strong> reclutarlo formalmente nei propri
+          ranghi (status, struttura, riconoscimento pubblico) in cambio dell'unica cosa che l'Ordine chiede sempre:
+          rispondere a un Gran Maestro, non solo alla propria dea. Vedi Parte III.
+        </p>
+        <div class="bg-black/40 border-l-4 border-rose-500 p-3 rounded-r text-xs">
+          <p class="text-rose-200 font-bold mb-1">⚠️ L'eco con l'ammonimento del Consiglio (Parte IV)</p>
+          <p class="italic text-rose-100 leading-relaxed">
+            Non è un caso di world-building: è la stessa domanda posta da due direzioni opposte nella stessa
+            serata. Il Consiglio dei Guardiani gli dice "il tuo comando ha un confine, rispettalo". Il Falco Rosso
+            gli offre esattamente l'opposto — una catena di comando più grande in cui entrare volontariamente.
+            Tienilo presente se il giocatore fatica a decidere: le due pressioni dovrebbero sentirsi collegate, non
+            come due sottotrame separate.
+          </p>
+        </div>
+        <p class="text-xs text-gray-500 italic mt-3">
+          Nota di continuità: se in futuro Regal torna con un'offerta rivolta all'intera Gilda (non solo a Valoris),
+          è la naturale escalation di questa stessa proposta — vedi Parte V, opzione C.
+        </p>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: DRESK COLHOLLOW ==================== -->
+    <div id="dresk" class="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-yellow-400">🗡️</span> PARTE II: IL PESO DELLA CAROVANA
+      </h2>
+
+      <div class="bg-yellow-900/30 border border-yellow-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto ripreso da <a href="/dm/storie-citta#valoris" class="underline text-yellow-300">Storie in
+          Città — Valoris, filone I</a>, qui espanso con scena pronta. Apertura consigliata della serata: è privato,
+          non richiede altri personaggi, e dà un peso concreto a tutto quello che segue nel tempio e col Consiglio.
+        </p>
+      </div>
+
+      <div class="bg-red-900/30 border border-red-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          <strong class="text-red-300">Correzione di continuità:</strong> il discorso di Moonfest di Valoris (<em>Bg
+          Valoris.md</em>, "Honoring the Dead") <strong class="text-white">non è ancora stato giocato</strong> — è
+          previsto per l'undicesima sessione vera e propria, quando tutto il gruppo sarà di nuovo al tavolo. Dresk,
+          stasera, non può quindi averlo sentito né farvi riferimento: la scena sotto è stata corretta per basare la
+          sua rabbia solo sulla fama recente di Valoris dopo le Prove Divine, non su un discorso pubblico che ancora
+          non esiste nella cronologia di gioco.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-yellow-300 mb-3">Chi è Dresk</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        <strong class="text-white">Dresk Colhollow</strong>, ex membro della banda di Valoris ai tempi di Baldur's
+        Gate. Non era presente all'imboscata alla carovana scortata — era di vedetta al campo, per questo è vivo.
+        Suo fratello minore, <strong class="text-white">Tam</strong>, no: è uno dei nomi che Valoris porta ancora
+        dentro, un peso privato che non ha mai condiviso pubblicamente (il momento in cui lo farà, nel discorso di
+        Moonfest riportato in <em>Bg Valoris.md</em>, deve ancora arrivare — vedi nota sopra). Dopo la disfatta
+        della banda, Dresk finì per stabilirsi a Waterdeep circa sei anni fa, stalliere vicino al Campo di Marte —
+        senza sapere che Valoris fosse in città, finché il suo nome non ha iniziato a circolare dopo le Prove
+        Divine.
+      </p>
+
+      <h3 class="text-xl font-bold text-yellow-300 mb-3">Il ricordo — da leggere a Valoris appena riconosce Dresk</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">💭 Prima che Dresk apra bocca, dagli questo — è il ricordo che gli si accende addosso, non ancora la scena presente.</p>
+      <div class="bg-black/50 border-l-4 border-yellow-600 p-6 my-4 rounded-r">
+        <p class="italic text-yellow-100 text-lg leading-relaxed">
+          Il volto di Dresk, invecchiato, si sovrappone per un istante a uno più giovane e più magro — sedici anni,
+          forse diciassette, sempre un passo indietro rispetto agli altri, mai per pigrizia: per calcolo. Era
+          Dresk quello che contava due volte le uscite di un vicolo prima ancora di sedersi a mangiare, quello a
+          cui Valoris affidava sempre la vedetta, non perché fosse il più debole del gruppo, ma perché era l'unico
+          di cui si fidava a restare vivo qualunque cosa succedesse dall'altra parte del muro.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          E dietro Dresk, sempre, <strong class="text-white">Tam</strong> — più piccolo di lui di quattro anni,
+          incapace di stare fermo, che imitava ogni sua mossa con l'entusiasmo di chi non ha ancora imparato ad
+          avere paura. Quel giorno Tam non volle restare di vedetta col fratello: supplicò Valoris di essere messo
+          nella squadra che colpiva la carovana, per una volta al centro dell'azione invece che ai margini. Valoris
+          disse di sì. Fu una decisione da capobanda tra tante, presa in un attimo, mai più ripensata finché non fu
+          troppo tardi per farlo.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          L'ultima immagine chiara che ha di lui è la schiena di Tam che si allontana di corsa verso i carri, mentre
+          Dresk resta indietro, esattamente dove Valoris lo aveva messo — vivo, come previsto. Il resto — le urla,
+          la scorta che si rivela un'imboscata, i corpi — è un ricordo che ha smesso da anni di lasciarsi guardare
+          per intero.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Dresk non tende un agguato — aspetta fuori dalla sede della Gilda, o intercetta Valoris a un mercato, in un momento in cui è solo o quasi.</p>
+
+      <div class="bg-black/50 border-l-4 border-yellow-500 p-6 my-4 rounded-r">
+        <p class="italic text-yellow-100 text-lg leading-relaxed">
+          Lo riconosce prima di essere riconosciuto — un uomo magro, i capelli più radi di quanto dovrebbero essere
+          alla sua età, appoggiato allo stipite di una porta con le braccia conserte, come se aspettasse da un pezzo
+          e non avesse fretta di smettere.
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          <em>"Ti hanno dato un'armatura lucida e una fila di persone che ti chiamano 'signore'."</em> Non si muove
+          dallo stipite. <em>"Tam avrebbe compiuto trent'anni quest'anno. Lo sai questo, mentre in giro si racconta
+          già di te come del cavaliere che ha chiuso da solo un intero Ecosistema del Gioco Divino, e nessuno
+          nomina mai il prezzo che qualcun altro ha pagato per portarti fin qui?"</em>
+        </p>
+        <p class="italic text-yellow-100 text-lg leading-relaxed mt-4">
+          Non alza la voce. Non ha bisogno di alzarla — sei anni non gli hanno tolto la certezza che quelle parole
+          gli spettino di diritto.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-yellow-300 mb-3">Possibili direzioni</h3>
+      <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-4">
+        <li><strong class="text-yellow-300">Colpa accettata, non respinta</strong> — la reazione più in carattere:
+        Valoris non si difende, chiede a Dresk cosa vorrebbe da lui, invece di giustificarsi.</li>
+        <li><strong class="text-yellow-300">Non vuole vendetta, vuole un rito</strong> — se spinto a chiarire cosa
+        cerca davvero, Dresk ammette che vuole solo che il nome di Tam venga onorato pubblicamente, un giorno —
+        buon seme per il discorso di Moonfest che arriverà nella sessione con tutto il gruppo, se vuoi far sapere
+        che è nato da questa scena.</li>
+        <li><strong class="text-yellow-300">Gancio di squadra</strong> — se in futuro qualcun altro del party
+        assiste a una scena simile, vede un lato di Valoris normalmente tenuto sotto controllo.</li>
+      </ul>
+      <p class="text-gray-500 text-xs italic">
+        Nota DM: non serve chiudere la scena in una sera. Dresk può restare un filo aperto, anche verso una
+        reintegrazione futura (per esempio come nuovo contatto della Gilda) — è più utile vivo come tensione
+        ricorrente che risolto in un colpo solo.
+      </p>
+    </div>
+
+    <!-- ==================== PARTE III: LA GITA AL TEMPIO ==================== -->
+    <div id="tempio" class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🎴</span> PARTE III: LA GITA AL TEMPIO
+      </h2>
+
+      <div class="bg-amber-900/30 border border-amber-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto identico a <a href="/dm/sessioni/sessione-11#tempio-valoris" class="underline text-amber-300">Sessione
+          11, Parte III</a> — qui isolato perché è esattamente la scena di stasera. Se hai giocato Dresk, questa
+          visita funziona meglio subito dopo: Valoris arriva non per routine, ma perché ha bisogno di una risposta.
+        </p>
+      </div>
+
+      <div class="bg-red-900/30 border border-red-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          <strong class="text-red-300">Promemoria:</strong> Valoris è chierico/paladino del <strong
+          class="text-white">Cavaliere Rosso</strong>, campionessa di Tempus — è quello il suo tempio di
+          riferimento, con un altare dedicato a lei. Il ciondolo di Tymora è un dono personale d'infanzia, non un
+          segno di devozione: lui non è un fedele di Tymora. La visita al tempio di Tymora resta possibile come
+          eccezione personale (vedi sotto), non come tappa automatica.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Il Tempio di Tempus — dove Valoris ha davvero un altare</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Un luogo disciplinato, quasi militare: campo di addestramento coperto sul retro, armi consacrate esposte
+        lungo le pareti, una grande statua della Cavaliere Rosso china su un tavolo da guerra intagliato in pietra —
+        non una dea in posa da guerriera, una dea che <em>pianifica</em>. Ad accoglierlo è <strong
+        class="text-amber-200">Regal</strong> — il suo vecchio "confratello" di addestramento (vedi <em>Bg
+        Valoris.md</em>), oggi ufficiale della guarnigione della Compagnia Rossa a Waterdeep, di stanza qui da prima
+        della Discesa degli Dèi.
+      </p>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-6">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Il ragazzo di strada che porta ancora quel ciondolo."</em> Regal non è cambiato molto. Sorride prima
+          di stringergli il braccio invece della mano, come tra vecchi commilitoni. <em>"Ho sentito il tuo nome tre
+          volte in una settimana, e non da fratelli dell'Ordine — da gente comune, al mercato. Non so se
+          congratularmi o preoccuparmi per te."</em>
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-amber-300 mb-3">L'offerta dell'Ordine del Falco Rosso</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Regal non è qui solo per salutarlo: porta un'offerta formale per conto dell'<strong class="text-white">Ordine
+        dei Paladini del Falco Rosso</strong> — lo stesso ordine più rigido di cui lui stesso fa parte. Con la fama
+        recente, l'Ordine vuole reclutarlo formalmente nei propri ranghi — status, struttura, riconoscimento
+        pubblico — invece di lasciarlo cavaliere quartiermastro indipendente che risponde solo alla propria dea.
+      </p>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Il Gran Maestro mi ha chiesto di parlartene di persona, non tramite un messaggero."</em> Regal pesa
+          le parole. <em>"Un posto nel Falco Rosso. Vero riconoscimento, non solo la gente che ti ferma per strada.
+          Ti chiederebbero solo una cosa che già sospetto tu non voglia dare: rispondere a un Gran Maestro, non solo
+          alla Signora in Rosso. Io l'ho fatto, e non me ne pento. Ma io non sono te."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        Deliberatamente la stessa tensione del dialogo originale con Regal (dottrina/struttura contro fede diretta
+        e indipendente), ma stavolta con conseguenze reali: accettare significa status e risorse dell'Ordine, ma
+        anche una catena di comando sopra la sua testa — esattamente il tipo di ingerenza istituzionale su cui il
+        Consiglio dei Guardiani lo sta per ammonire nella stessa serata (Parte IV). Non serve risolverla oggi: può
+        restare una proposta aperta, con Regal che aspetta una risposta "quando sarai pronto, non prima".
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-3 text-xs">
+          <p class="text-green-400 font-bold mb-2">Se accetta (o considera seriamente)</p>
+          <p class="text-gray-300 leading-relaxed">
+            Regal è sinceramente contento, non manipolatorio. L'ingresso formale nel Falco Rosso resta un filo
+            aperto per sessioni future — comporterebbe cambiamenti reali di ruolo, da pianificare con calma.
+          </p>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-3 text-xs">
+          <p class="text-red-400 font-bold mb-2">Se rifiuta</p>
+          <p class="text-gray-300 leading-relaxed">
+            Regal non la prende male — la aspettava, in parte. <em>"Non pensavo che avresti detto sì. Ma il Gran
+            Maestro doveva sentirselo dire da te."</em> Resta un legame personale caldo, riutilizzabile.
+          </p>
+        </div>
+        <div class="bg-blue-900/20 border border-blue-700/40 rounded-lg p-3 text-xs">
+          <p class="text-blue-400 font-bold mb-2">Se prende tempo</p>
+          <p class="text-gray-300 leading-relaxed">
+            L'esito più realistico per un personaggio "onesto fino alla rigidità" ma non impulsivo — Regal aspetta,
+            e la porta resta aperta per un tema ricorrente in tensione con l'ammonimento del Consiglio (Parte IV).
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Visita secondaria (opzionale) — il tempio di Tymora</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Da usare solo se il giocatore stesso decide di andarci — non è una tappa automatica, è una scelta personale
+        di Valoris fuori dalla sua fede ufficiale, ed è proprio per questo che una sacerdotessa la nota e la
+        ricorda.
+      </p>
+      <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-indigo-100 leading-relaxed">
+          <strong class="text-amber-200">Madre Yssa Featherdice</strong>, l'alta sacerdotessa, lo riconosce appena
+          entra — non come devoto, come curiosità ricorrente. <em>"Il chierico che non è dei nostri, ma porta il
+          nostro ciondolo. Torni più spesso di quanto vorresti ammettere."</em> Non alza gli occhi dal tavolo di
+          dadi che sta ripulendo. <em>"Non in cattiveria. È che nessun altro qui riesce a vincere quanto vinci tu
+          senza mai davvero rischiare niente. La Signora trova la cosa... divertente. Non me lo ha detto. Lo
+          sento."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Se resta, Yssa lo porta davanti all'altare per una chiacchierata più che per un rituale formale — richiama
+        esplicitamente il suo dialogo con Regal sul "piano perfetto che non incontra la realtà". Chiede un lancio
+        di dadi sull'altare, senza dirgli in anticipo per cosa conta: un atto di fede letterale invece che
+        strategico.
+      </p>
+      <div class="bg-indigo-900/20 border border-indigo-700/40 rounded-lg p-4 mb-4">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Aggancio potente e finora inutilizzato, da usare <strong class="text-white">solo se il giocatore chiede
+          spontaneamente</strong>: il suo secretGoal ufficiale è ritrovare la ragazza che gli donò l'amuleto da
+          bambino. Il tempio di Tymora — non quello di Tempus — è il luogo giusto per chiederlo, ed è proprio
+          perché lui non è un devoto abituale che la domanda ha peso quando la fa.
+        </p>
+      </div>
+      <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-indigo-100 leading-relaxed">
+          Yssa lo guarda più a lungo del solito. <em>"Non ti do un nome. Non lo ho. Ma se hai portato quel ciondolo
+          attraverso mezzo dungeon divino senza mai romperlo, un pezzettino di quella fortuna gliela devi
+          ancora."</em> Una pausa, più seria. <em>"Posso dirti questo, e basta: se è ancora a Waterdeep — e dove
+          altro potrebbe essere, ora — qualcuno che porta il nome di Tymora l'ha vista. Non io. Ma qualcuno."</em>
+        </p>
+      </div>
+      <p class="text-gray-500 text-xs italic">
+        Nota DM: gancio deliberatamente aperto, non risolverlo qui. Se il giocatore non lo chiede spontaneamente,
+        non forzarlo.
+      </p>
+    </div>
+
+    <!-- ==================== PARTE IV: IL CONSIGLIO ==================== -->
+    <div id="consiglio" class="bg-green-900/20 border border-green-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-green-400">📜</span> PARTE IV: IL CONSIGLIO
+      </h2>
+
+      <div class="bg-green-900/30 border border-green-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto ripreso da <a href="/dm/sessioni/sessione-11#paga-guardiani" class="underline text-green-300">Sessione
+          11, Parte VII</a> — due questioni distinte ma sequenziate nella stessa riunione: l'ammonimento formale a
+          Valoris sui confini di ruolo, e la formalizzazione della struttura di paga del Team Principale. In mezzo,
+          un test diretto: come reagisce Valoris quando il Consiglio interroga Rooks per il tentativo di
+          reclutamento di una riserva a favore del Dado Nero (vedi <a href="/dm/sessioni/sessione-10#stele-mandato"
+          class="underline text-green-300">Sessione 10</a>).
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-green-300 mb-3">L'ammonimento</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Il tono da tenere: <strong class="text-white">Serath</strong> (con Magnus e Silas presenti) non tratta
+        Valoris come un traditore né minimizza le sue ragioni — le riconosce esplicitamente, e proprio per questo
+        la reprimenda pesa di più: non è un errore di intenzione, è un errore di ruolo.
+      </p>
+      <div class="bg-black/50 border-l-4 border-amber-500 p-6 my-4 rounded-r">
+        <p class="italic text-amber-100 text-lg leading-relaxed">
+          <em>"Non ti sto rimproverando di aver voluto proteggere i tuoi compagni. Lo farei anche io, nella tua
+          posizione."</em> Serath parla piano, senza il calore cerimoniale del ricevimento di Sessione 10.
+          <em>"Ti sto rimproverando di aver deciso, da solo, che le decisioni del Consiglio ti spettassero. Non ti
+          spettano. Sei il leader della tua squadra nel dungeon — non un membro del Triumvirato, non un giudice di
+          questa Gilda. Un soldato che pretende di comandare il proprio generale, per quanto abbia ragione nel
+          merito, mette a rischio ogni struttura che lo tiene in vita."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Consegna, se vuoi un prop fisico, una vera lettera scritta:
+      </p>
+      <div class="bg-gray-900/60 border-2 border-amber-700 rounded-lg p-6 mb-6">
+        <p class="text-xs text-amber-500 uppercase tracking-widest mb-3">Lettera del Consiglio — ai Guardiani della Trama</p>
+        <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+          A Valoris, Cavaliere della Compagnia Rossa, membro della Squadra Principale.
+        </p>
+        <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+          Il Consiglio riconosce il valore del tuo servizio e la sincerità delle tue intenzioni nelle recenti
+          contestazioni verso le decisioni di questo Triumvirato. Riconosce, altresì, che tale condotta — per
+          quanto motivata — costituisce un'ingerenza reiterata in materie di esclusiva competenza del Consiglio di
+          Gilda, non della Squadra Principale.
+        </p>
+        <p class="italic text-amber-100 text-sm leading-relaxed mb-3">
+          Questo documento non è una destituzione né una minaccia. È un confine, tracciato una volta, perché non
+          debba esserlo una seconda. Il tuo comando si esercita nel dungeon. Il nostro, in questa città. Nessuno
+          dei due sostituisce l'altro.
+        </p>
+        <p class="italic text-amber-100 text-sm leading-relaxed">
+          — Serath Vael'Toran, per il Consiglio
+        </p>
+      </div>
+      <p class="text-gray-500 text-xs mb-6 italic">
+        Nota DM: lascia che il giocatore reagisca liberamente — accettazione, rabbia trattenuta, un'ammissione
+        parziale sono tutte risposte in carattere per "onesto fino alla rigidità". Non è pensata come punizione
+        dura: è caratterizzazione e confine istituzionale, non l'inizio di un conflitto aperto con la Gilda.
+      </p>
+
+      <h3 class="text-xl font-bold text-green-300 mb-3">Il caso Rooks — la prova a distanza di minuti</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Il Consiglio non tratta il tentativo di Rooks come un semplice poaching: ha agito da <em>dentro</em> il
+        quartier generale, da membro ancora tecnicamente attivo, per sottrarre un membro del Team Principale a una
+        gilda rivale — a tutti gli effetti un sabotaggio interno. Sul tavolo: detenzione prolungata, processo
+        formale, possibile marchiatura pubblica come sleale.
+      </p>
+      <div class="bg-black/50 border-l-4 border-green-500 p-6 my-4 rounded-r">
+        <p class="italic text-green-100 text-lg leading-relaxed">
+          <em>"Non stiamo parlando di un ladro che ruba per fame."</em> Serath è più freddo del solito. <em>"Stiamo
+          parlando di qualcuno che ha usato la fiducia di questa Gilda per minare la squadra che la rappresenta nel
+          Gioco. Se fosse successo a un'altra Gilda, il Falco Rosso lo chiamerebbe tradimento."</em>
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="bg-yellow-900/20 border border-yellow-700/40 rounded-lg p-4 text-sm">
+          <p class="text-yellow-400 font-bold mb-2">Se Valoris si oppone fermamente (probabile, subito dopo il proprio ammonimento)</p>
+          <p class="text-gray-300 leading-relaxed">
+            Tensione voluta: la stessa identica dinamica per cui è stato appena ammonito, testata di nuovo a
+            distanza di minuti. Se insiste per una pena proporzionata, Serath cede — non per debolezza, ma perché
+            l'argomento di Valoris (nessun segreto di missione tradito, solo un tentativo di reclutamento
+            aggressivo) ha un fondamento reale. Compromesso: <strong class="text-white">alcune notti in cella, in
+            silenzio</strong> — se qualcuno chiede di lui, la Gilda nega semplicemente di sapere dove sia.</p>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4 text-sm">
+          <p class="text-red-400 font-bold mb-2">Se Valoris non interviene, o resta neutrale</p>
+          <p class="text-gray-300 leading-relaxed">
+            Il Consiglio procede con la linea più dura di sua iniziativa: detenzione più lunga, marchio permanente
+            di sleale nei registri di Gilda, nessuna possibilità realistica di essere accettato altrove a breve
+            termine. Più severo, ma non necessario per la trama — usalo solo se il giocatore lascia davvero
+            correre.
+          </p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        In entrambi i casi, l'effetto pratico è lo stesso: Rooks perde comunque la finestra per presentarsi
+        all'Arco Divino con la squadra — Dorin aveva già preso le sue contromisure (Barda promossa, Yorick
+        reclutato, già raccontate in <a href="/sessioni/sessione-11a" class="underline text-gray-300">Sessione
+        11a</a>), quindi il Dado Nero non ne risente concretamente, ma Rooks sì: quando eventualmente uscirà di
+        cella, troverà un posto già occupato.
+      </p>
+
+      <h3 class="text-xl font-bold text-green-300 mb-3">La nuova struttura di paga — Team Principale</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Segue immediatamente l'ammonimento, quasi a bilanciarlo — il Consiglio dà con una mano quello che ha appena
+        limitato con l'altra. Il Favore Divino, ora che ha uno sbocco meccanico chiaro (vedi <a
+        href="/meccaniche/favore-divino" class="underline text-green-300">Sistema di Favore Divino</a>), rende
+        queste percentuali concrete:
+      </p>
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-gray-500 text-xs uppercase tracking-widest border-b border-gray-700">
+              <th class="text-left pb-2 pr-4">Voce</th>
+              <th class="text-left pb-2 pl-4">Importo / Meccanica</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/60 text-gray-300">
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Stipendio base</td>
+              <td class="py-3 pl-4">50 MO/mese a testa, pagati dal budget comune — copre vitto, alloggio in Gilda, spese minori.</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Quota Favore Divino</td>
+              <td class="py-3 pl-4">10% del Favore convertito in MO (100 Favore = 50 MO) va diviso individualmente a fine Ecosistema, oltre alla parte che resta al fondo comune.</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-white">Vendita cristalli — canale legale (Thea)</td>
+              <td class="py-3 pl-4">80% del valore al singolo che vende, 20% trattenuto come "tassa di gilda" nel fondo comune. Tracciato, sicuro, nessun rischio.</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-amber-300">Paga di rischio</td>
+              <td class="py-3 pl-4">Bonus una tantum di 100 MO a chi ha affrontato Kethrar.</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-bold text-cyan-300">Premio di completamento Ecosistema</td>
+              <td class="py-3 pl-4"><strong class="text-white">200 MO a testa</strong>, oltre allo stipendio mensile, ogni volta che il Team Principale completa un intero Ecosistema — per l'Ecosistema 1, già maturato: da versare a inizio sessione se non è ancora stato fatto in narrazione.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-500 text-xs italic">
+        Nota DM: il canale nero di Silas (vedi Sessione 10, Parte VII) resta disponibile e resta più remunerativo —
+        buona leva se Valoris, dopo l'ammonimento, si mostra più rigido sul rispettare i canali "ufficiali".
+      </p>
+    </div>
+
+    <!-- ==================== PARTE V: E POI? ==================== -->
+    <div id="dopo" class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🌙</span> PARTE V: E POI? — MENU PER UNO
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tre opzioni indipendenti, pensate apposta per funzionare con <strong class="text-white">solo
+          Valoris</strong> al tavolo — nessuna richiede gli altri personaggi. Sono un menu, non un compito: usa
+          quella che si incastra meglio con l'energia della serata dopo il Consiglio, o nessuna se il tempo è
+          finito.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-gray-800/50 border-2 border-teal-700 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">A. Un Nome sulla Stele — Baldur's Gate</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · emotiva · non risolvibile subito — ripreso da <a href="/dm/sessioni/sessione-11#sottotrame-cittadine" class="underline text-teal-300">Sessione 11, Parte VIII, Sottoquest 1</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Durante una consultazione della Stele delle Altre Città in Piazza dell'Arco, Valoris nota un nome — vero
+            o un alias della strada — tra i membri elencati di una gilda di Baldur's Gate: <strong
+            class="text-white">La Borsa d'Oro</strong>, <strong class="text-white">Il Tributo delle Onde</strong> o
+            <strong class="text-white">I Meccanici della Marea</strong>. Qualcuno della sua vecchia banda che non
+            finì nell'imboscata, sopravvissuto e rifattosi una vita legittima molto prima del Sigillo — non serve
+            decidere ora se è un nome amico o un altro debito come Dresk.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il punto non è risolvere nulla: il Sigillo non si apre, nessun canale di comunicazione esiste tra
+            città. Il valore è nel momento di caratterizzazione — lascialo reagire, poi lascia la porta aperta come
+            gancio per l'Ecosistema 2 o 3, se il Sigillo dovesse mai vacillare.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-slate-600 rounded-lg p-5">
+          <p class="font-bold text-slate-200 mb-1">B. La Corsa dei Tetti</p>
+          <p class="text-xs text-gray-500 italic mb-2">Leggera · competitiva · nessun rischio reale — ripresa da <a href="/dm/sessioni/sessione-11#sottotrame-cittadine" class="underline text-slate-300">Sessione 11, Parte VIII, Sottoquest 2</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Con la città sigillata e ansiosa, le tradizioni cittadine minori sono diventate più popolari di prima.
+            La Corsa dei Tetti è una gara di parkour informale tra Sea Ward e Dock Ward, organizzata da un ex-ladro
+            ora taverniere, aperta a chiunque abbia gambe buone e poca paura dell'altezza. Buon cambio di registro
+            dopo una Parte pesante come il Consiglio — colore puro, nessuna posta reale, un rivale sboccato da
+            battibeccare.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-rose-700 rounded-lg p-5">
+          <p class="font-bold text-rose-200 mb-1">C. L'Ombra del Falco Rosso</p>
+          <p class="text-xs text-gray-500 italic mb-2">Anticipazione · non richiede il Consiglio · ripresa da <a href="/dm/sessioni/sessione-11#candidati-sponsor" class="underline text-rose-300">Sessione 11, Parte IX, Candidato 3</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Se in Parte III Valoris ha rifiutato o preso tempo sull'offerta personale, Regal torna una seconda volta
+            nella stessa serata, o il giorno dopo, con un tono diverso — non più da confratello, da rappresentante
+            ufficiale: il Gran Maestro non punta più solo a lui, ma a sponsorizzare l'intera Gilda dei Guardiani in
+            cambio dell'adozione formale del codice di Tempus.
+          </p>
+          <div class="bg-black/50 border-l-4 border-rose-500 p-5 my-3 rounded-r">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"Il Gran Maestro non chiede più solo un cavaliere. Chiede una Gilda che meriti il nome che porta
+              già nei fatti."</em> Regal parla con più formalità del solito. <em>"E immaginate,"</em> aggiunge,
+              più piano, <em>"quanto peserebbe il tuo nome, se fossi tu a portare quella dottrina dentro le vostre
+              mura, invece che fuori."</em>
+            </p>
+          </div>
+          <p class="text-gray-500 text-xs italic">
+            Nota DM: non è la scena completa di Parte IX (quella richiede il Triumvirato al completo per la
+            decisione formale) — qui è solo l'anticipazione personale a Valoris, che lo mette di fronte a un ruolo
+            di liaison che somiglia sospettosamente a quello che il Consiglio gli ha appena vietato con altre
+            parole in Parte IV. Buon gancio di chiusura per la serata, da riprendere con tutto il gruppo quando
+            deciderete di giocare la Parte IX per intero.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</MainLayout>

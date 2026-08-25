@@ -1,0 +1,447 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11c - Morgrim [DM]"
+  description="Note del Dungeon Master - Sessione parallela dedicata a Morgrim da solo"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11c</span>
+        <h1 class="text-4xl font-bold">Il Muro e il Rintocco — Morgrim</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>⏱️ 1–2 ore</span>
+        <span>🎭 Sessione parallela · Solo un giocatore</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso durante la pausa dei sette giorni, stasera al tavolo c'è solo <strong
+        class="text-white">Morgrim</strong>. Quarto tassello dello spacchettamento della Sessione 11, dopo la
+        <a href="/dm/sessioni/sessione-11a" class="underline text-indigo-300">11a di Riven e Fealer</a> e la
+        <a href="/dm/sessioni/sessione-11b" class="underline text-amber-300">11b di Valoris</a> (già giocate): qui
+        isoliamo il materiale pensato per lui da <a href="/dm/sessioni/sessione-11#morgrim" class="underline
+        text-red-300">Sessione 11, Parte IV</a>, aggiungiamo un evento nuovo — condiviso con tutti gli altri portatori
+        del Marchio Divino, ma raccontato qui per la prima volta — legato all'ammissione del Dado Nero
+        (<a href="/dm/sessioni/sessione-11#dado-nero-ammissione" class="underline text-orange-300">Parte I</a>), e
+        chiudiamo con un filone mai giocato da <a href="/dm/storie-citta#morgrim" class="underline
+        text-red-300">Storie in Città — Morgrim</a>.
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Il giocatore è nuovo:</strong> priorità a compiti concreti con esito misurabile, non a scene introspettive che deve portare avanti da solo — l'emotività arriva come conseguenza del fare, non come richiesta di iniziativa sociale. Vedi Parte III.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Il Rintocco:</strong> tieni a mente l'orario — verso mezzogiorno, mentre Morgrim è impegnato nel suo compito, senza preavviso. Non spiegare subito la causa: la conferma arriva solo dopo. Vedi Parte II.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Props:</strong> se puoi, prepara 5-6 "pezzi" di equipaggiamento (anche solo descritti a voce) per il controllo dell'armeria — spade, uno scudo, un'armatura, un arco. Vedi Parte III.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Mira Greenleaf:</strong> ricordati che il legame emotivo reale è con Morgrim, non con Fealer (che l'ha solo sostituita in squadra) — tienilo breve e guidato, due o tre scambi bastano. Vedi Parte III.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>"E poi?":</strong> scegli già ora, o decidi al tavolo, quale (se una) delle opzioni della Parte IV giocare per chiudere la serata. Vedi Parte IV.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#personaggio" class="text-teal-400 hover:text-teal-300">🧾 Morgrim — Specchietto</a>
+      <span class="text-gray-600">·</span>
+      <a href="#rintocco" class="text-amber-400 hover:text-amber-300">🔔 Il Rintocco di Mezzogiorno</a>
+      <span class="text-gray-600">·</span>
+      <a href="#incarico" class="text-red-400 hover:text-red-300">🪓 L'Incarico di Magnus</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dopo" class="text-orange-400 hover:text-orange-300">🌙 E poi? — Menu per uno</a>
+    </div>
+
+    <!-- ==================== PARTE I: SPECCHIETTO PERSONAGGIO ==================== -->
+    <div id="personaggio" class="bg-teal-900/20 border border-teal-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">🧾</span> PARTE I: SPECCHIETTO — MORGRIM E MAGNUS
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- MORGRIM -->
+        <div class="bg-gray-900/60 border-2 border-red-700 rounded-lg p-6">
+          <p class="text-xs text-red-400 uppercase tracking-widest mb-2">🪓 Morgrim Sangueombra</p>
+          <p class="text-sm text-gray-400 italic mb-3">
+            Nano di Scudo, Guerriero (Battle Master) 5, Legale Neutrale. Ascia (<strong
+            class="text-white">Spezzaroccia</strong>) e scudo. Membro della Squadra Principale dei Guardiani della
+            Trama nel dungeon.
+          </p>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Forza</p>
+              <p class="text-white font-bold">18 (+4)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Costituzione</p>
+              <p class="text-white font-bold">16 (+3)</p>
+            </div>
+            <div class="bg-black/40 rounded p-2">
+              <p class="text-gray-500">Percezione</p>
+              <p class="text-white font-bold">+5</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Veterano di tre guerre, sopravvissuto all'<strong class="text-white">Assedio di Mithral Hall (1484
+            DR)</strong>, il soprannome "Sangueombra" gli venne per come si muoveva in battaglia — silenzioso,
+            inesorabile, mai il proprio sangue versato. Arrivato a Waterdeep otto anni fa come mercenario freelance,
+            senza legami né bandiere, reclutato personalmente da <strong class="text-white">Magnus
+            Ironfist</strong> alla Locanda del Drago Sornione per essere "il muro che non crolla" della squadra.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            <strong class="text-red-300">Personalità:</strong> stoico, di poche parole, giudica tutto in base a
+            "quello che regge" e "quello che cede" — un'eredità della sua vita precedente come fabbro di Khar-Dûm,
+            esiliato dopo che un'ascia da lui forgiata si spezzò per l'uso scorretto di chi la impugnava, uccidendo
+            il portatore. Da qui la sua filosofia interiore, mai dichiarata ad alta voce finora:
+            <em>"un'arma non tradisce, è la mano che mente a se stessa."</em> Testa duramente chi si fida di lui,
+            non per crudeltà — per assicurarsi che regga davvero. <strong class="text-red-300">Legami:</strong>
+            Magnus Ironfist, che lo ha reclutato e a cui risponde con la lealtà silenziosa di un vecchio soldato;
+            Mira Greenleaf, la halfling che lo chiamava "Zio Morgrim" prima di ritirarsi la notte precedente la
+            discesa nel dungeon.
+          </p>
+          <p class="text-xs text-gray-500 italic">
+            Nota tavolo: il giocatore è nuovo a D&D e timido — dagli compiti concreti con esito misurabile, non
+            scene che deve portare avanti lui di iniziativa. Vedi checklist sopra.
+          </p>
+        </div>
+
+        <!-- MAGNUS IRONFIST -->
+        <div class="bg-gray-900/60 border-2 border-blue-700 rounded-lg p-5">
+          <p class="text-xs text-blue-400 uppercase tracking-widest mb-2">🛡️ Magnus "Ironfist" Thorne</p>
+          <p class="text-sm text-gray-400 italic mb-3">
+            Umano, ex-capogilda de Le Lame d'Argento, oggi membro del Triumvirato dei Guardiani della Trama.
+            Veterano della Guerra dei Signori, ferito gravemente cinque anni fa — dal campo alla scrivania.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            L'unico capace di smuovere Morgrim da un boccale alla Locanda del Drago Sornione con un discorso su
+            "il muro che non crolla" (<a href="/sessioni/sessione-0" class="underline text-blue-300">Sessione
+            0</a>). Da allora un rapporto di fiducia reciproca tra due vecchi soldati — non un capogilda e un
+            mercenario.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            <strong class="text-blue-300">Cosa vuole da Morgrim ora:</strong> qualcuno di cui fidarsi ciecamente
+            per un problema concreto e urgente — il controllo dell'armeria, appena fallito da un altro. Non gli
+            chiede un favore: gli affida un incarico, da soldato a soldato. Vedi Parte III.
+          </p>
+          <div class="bg-black/40 border-l-4 border-blue-500 p-3 rounded-r text-xs">
+            <p class="text-blue-200 font-bold mb-1">⚠️ Non ancora giocato — riserva per la Parte IV</p>
+            <p class="italic text-blue-100 leading-relaxed">
+              Magnus porta il peso della propria ferita più di quanto lo dia a vedere: da cinque anni giudica gli
+              altri invece di combattere al loro fianco, e la scelta di raccomandare Valoris per la squadra
+              principale lo turba più di quanto ammetterebbe al Triumvirato. Se la serata regge, questo può
+              emergere come richiesta di un giudizio onesto — non oggi per forza, ma è lì, pronto.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: IL RINTOCCO DI MEZZOGIORNO ==================== -->
+    <div id="rintocco" class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🔔</span> PARTE II: IL RINTOCCO DI MEZZOGIORNO
+      </h2>
+
+      <div class="bg-amber-900/30 border border-amber-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Materiale nuovo, non ancora scritto altrove, ma condiviso da tutti i portatori del Marchio Divino —
+          Riven, Fealer e Valoris lo hanno già percepito nelle rispettive sessioni parallele (<a
+          href="/dm/sessioni/sessione-11a" class="underline text-amber-300">11a</a>, <a
+          href="/dm/sessioni/sessione-11b" class="underline text-amber-300">11b</a>); questa è la prima volta che
+          viene messo per iscritto, qui per Morgrim. Il trigger è l'<a
+          href="/dm/sessioni/sessione-11#dado-nero-ammissione" class="underline text-amber-300">ammissione del
+          Dado Nero all'Arco Divino</a> (Sessione 11, Parte I) — la quinta squadra della città riceve il proprio
+          Marchio esattamente a mezzogiorno.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Cosa succede — e a chi</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Non è il rintocco pubblico e sonoro che l'intera città sentì al momento dell'annuncio dei sette giorni
+        (<a href="/dm/sessioni/sessione-10" class="underline text-amber-300">Sessione 10</a>) — quello lo sente
+        chiunque, ovunque a Waterdeep. Questo è privato, percepibile solo da chi porta già un Marchio Divino: ogni
+        volta che il mandato ne registra uno nuovo all'Arco, l'evento risuona — una sola volta, un solo istante —
+        in tutti i Marchi già esistenti in città, indipendentemente da dove si trovi chi li porta. Nessuno lo ha
+        mai teorizzato prima d'ora: prima del Dado Nero, l'ultima volta che qualcuno ha ricevuto il Marchio è stato
+        il giorno stesso in cui Fealer ha sostituito Mira, e nessuno si aspettava di sentire qualcosa quel giorno
+        per un rimpiazzo interno, non una nuova gilda.
+      </p>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Leggere ad alta voce a mezzogiorno, senza preavviso, qualunque cosa Morgrim stia facendo — idealmente a metà del controllo dell'armeria (Parte III).</p>
+      <div class="bg-black/50 border-l-4 border-amber-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-amber-100 text-lg leading-relaxed">
+          Per un istante, senza preavviso, il punto dove il Marchio Divino segna la pelle di Morgrim smette di
+          essere solo un segno. Brucia — non come una fiamma, più come un ferro che qualcuno ha tenuto sul fuoco
+          un attimo di troppo e ora preme, una sola volta, netto. Insieme al bruciore, un rintocco che non arriva
+          dalle orecchie: lo sente nelle ossa, basso, unico, come una campana suonata a un solo colpo da qualche
+          parte troppo vicina per essere lontana e troppo lontana per essere qui.
+        </p>
+        <p class="italic text-amber-100 text-lg leading-relaxed mt-4">
+          Poi finisce. Il segno torna a essere solo un segno. Se c'è qualcun altro vicino — Magnus, un recluta, chi
+          capita — non ha sentito niente, non ha visto niente: la reazione di Morgrim, per chi guarda da fuori, è
+          tutta interna. Un lampo sul volto, forse un grugnito, una mano che corre per un attimo verso il punto del
+          Marchio prima di fermarsi a metà gesto, come se si vergognasse del riflesso.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-amber-300 mb-3">Se chiede spiegazioni</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Nessuno intorno a lui ha una risposta pronta — non è mai successo a memoria di chi lavora nella Gilda oggi.
+        La conferma arriva solo più tardi e solo indirettamente, non come diagnosi immediata:
+      </p>
+      <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-4">
+        <li><strong class="text-amber-300">Voce di corridoio, nel pomeriggio:</strong> qualcuno di ritorno da
+        Piazza dell'Arco racconta che verso mezzogiorno una quinta gilda — il Dado Nero, quelli della carovana
+        rimasti orfani di squadra — è entrata "senza nessuna Prova, dritti dentro, come se il portale li aspettasse
+        già". Nessuno lì presente parla di rintocchi o bruciori: è un dettaglio amministrativo, raccontato con la
+        stessa indifferenza con cui Vex lo ha trattato (vedi Sessione 11, Parte I).</li>
+        <li><strong class="text-amber-300">Se Morgrim mette insieme i pezzi da solo</strong> (buona occasione per
+        una prova di Intelligenza, anche non richiesta meccanicamente — lascialo dedurre "a naso" da veterano):
+        l'orario coincide esattamente. Non gli serve una prova per sentirsi sicuro di questo — un soldato che ha
+        contato i minuti prima di troppe battaglie non dimentica un'ora precisa.</li>
+        <li><strong class="text-amber-300">Se lo racconta a qualcun altro del party</strong> (in una sessione
+        futura, quando tutti saranno di nuovo al tavolo): buona occasione per scoprire che non è stato l'unico —
+        confrontando gli orari, Riven, Fealer e Valoris hanno sentito la stessa identica cosa, nello stesso istante,
+        in punti diversi della città.</li>
+      </ul>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — cosa NON risolvere oggi</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non è pensato per essere spiegato stasera — è un gancio, non un mistero da chiudere: il Marchio Divino
+          come "rete" condivisa tra chi lo porta, che si attiva ogni volta che il mandato ne registra uno nuovo, è
+          un dettaglio di cosmologia che vale la pena lasciare aperto per l'Ecosistema 2 (buon eco con la Teoria
+          del Conto Nascosto di Arianna, <a href="/dm/sessioni/sessione-11a#cicatrice" class="underline
+          text-amber-300">Sessione 11a</a>: se il Favore Divino è un libro mastro che nessuno vede per intero,
+          forse anche i Marchi lo sono). Morgrim non deve arrivare a nessuna di queste conclusioni da solo — solo
+          al fatto grezzo: gli è successo qualcosa, ed è successo esattamente quando il Dado Nero è entrato.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: L'INCARICO DI MAGNUS ==================== -->
+    <div id="incarico" class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🪓</span> PARTE III: L'INCARICO DI MAGNUS — L'OCCHIO DEL FORGIATORE
+      </h2>
+
+      <div class="bg-red-900/30 border border-red-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto identico a <a href="/dm/sessioni/sessione-11#morgrim" class="underline text-red-300">Sessione
+          11, Parte IV</a> — qui isolato perché è esattamente la scena di stasera. Il giocatore è nuovo a D&D e
+          timido: la priorità non è una scena introspettiva che deve portare avanti da solo, è un
+          <strong class="text-white">incarico concreto con obiettivi chiari</strong> — qualcosa da <em>fare</em>,
+          con dialoghi pronti da appoggiare, in cui l'emotività (la reunion con Mira Greenleaf) arriva come
+          conseguenza del compito, non come richiesta di iniziativa sociale da parte sua. Se hai giocato la Parte
+          II, il Rintocco cade bene proprio a metà di questo incarico.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">L'incarico di Magnus</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        <strong class="text-white">Magnus "Ironfist" Thorne</strong> chiama Morgrim per un compito pratico durante
+        i sette giorni di pausa — non una richiesta emotiva diretta (quella arriva come sviluppo naturale del
+        compito stesso, vedi sotto), ma un ordine operativo da vecchio soldato a vecchio soldato, con un problema
+        concreto e urgente da risolvere: il controllo attuale dell'armeria ha appena fatto un danno vero, e Magnus
+        non si fida più di lasciarlo fare a chiunque.
+      </p>
+
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          <em>"Bregan Fallow — l'aiutante di Thea — ha certificato buono un lotto intero di lame nuove due
+          settimane fa. Una si è spezzata a metà durante l'addestramento e ha mandato un recluta in infermeria con
+          un taglio che non doveva esserci."</em> Magnus non alza lo sguardo dal registro che sta compilando.
+          <em>"Bregan ha l'occhio di chi ha imparato sui libri, non sul campo. Tu no. Non sto chiedendo un favore,
+          Sangueombra: mi posso fidare solo di te per questo, e non ho tempo di scoprire a mie spese chi altro
+          potrei fidarmi."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-red-200 mb-2">Il Controllo dell'Armeria</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Struttura semplice e a basso rischio sociale, perfetta per un giocatore nuovo: Morgrim rifà da zero
+          l'ispezione che Bregan ha fatto male, un lotto di 5-6 pezzi (spade, scudi, un'armatura, un arco), con una
+          <strong class="text-white">prova di Intelligenza (Storia) o Saggezza (Percezione)</strong> per pezzo — a
+          seconda di cosa preferisci enfatizzare, la sua competenza tecnica o il suo istinto da veterano. Ogni
+          pezzo ha un piccolo difetto o pregio da scoprire:
+        </p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li>Una seconda spada dello stesso lotto di quella già rotta, con lo stesso identico difetto di
+          forgiatura nella lama — la prova concreta che Bregan non aveva controllato per niente, solo timbrato.</li>
+          <li>Uno scudo perfetto, meglio di quanto Thea l'abbia pagato — merita di andare a chi tiene la linea in
+          prima fila.</li>
+          <li>Un'armatura a piastre tagliata per un corpo più grande del previsto — utilizzabile, ma solo dopo
+          aggiustamenti.</li>
+          <li>Un arco con la corda già visibilmente logora — inutile finché non viene sostituita.</li>
+        </ul>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          Ogni scoperta è un piccolo successo indipendente, non un tiro "a vuoto" — dagli sempre qualcosa da
+          riportare a Magnus, anche su un fallimento (magari nota il difetto sbagliato, ma nota comunque qualcosa).
+          Il valore per il giocatore nuovo è avere un compito con esito misurabile e ripetibile, non un'unica
+          giocata ad alta posta.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Da lì, senza soluzione di continuità — il recluta ferito</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-3">
+        Non un secondo incarico separato, ma la conseguenza diretta e quasi automatica del primo — Morgrim non va
+        a fare una commissione, va a chiudere il cerchio di quello che ha appena scoperto. Trovare la seconda spada
+        difettosa gli dà il nome del recluta rimasto ferito: è ancora in cura, non nell'infermeria di Lira
+        (sovraffollata dopo il rientro dall'Ecosistema 1), ma presso il circolo druidico vicino alla piazza
+        dell'Arco, dove la Gilda manda i casi che richiedono cure più lente e naturali.
+      </p>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-3">
+        <p class="italic text-red-100 leading-relaxed">
+          <em>"Se è stata la mia armeria a tagliarlo, voglio che sia uno dei miei a guardarlo in faccia — non un
+          messaggero, non una nota su un registro."</em> Magnus non lo formula come una richiesta emotiva, ma come
+          una questione di responsabilità e di onore da soldato: chi controlla l'equipaggiamento risponde di chi si
+          fa male per colpa sua.
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Struttura consigliata per il tavolo: Morgrim arriva al circolo con un compito preciso e dignitoso
+        (verificare le condizioni del recluta, valutare se serva altro equipaggiamento di riserva, magari una
+        prova di Intuizione per capire se il ragazzo nasconde quanto è grave), e solo mentre è lì scopre che una
+        delle druide che lo assistono è <strong class="text-white">Mira Greenleaf</strong>. Questo dà al giocatore
+        un motivo concreto e rispettabile per essere sul posto — non un'errand da sguattero — prima di dover
+        reggere l'emotività della reunion.
+      </p>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">L'incontro con Mira</h3>
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          <em>"Zio Morgrim."</em> La voce le trema, ma sorride — genuinamente, per un istante. <em>"Pensavo...
+          pensavo che mi avresti guardata come una che ha mollato."</em>
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Morgrim non risponde subito. La osserva come osserverebbe un'arma tornata dal campo — cercando il punto
+          di cedimento. Non lo trova dove pensava. <em>"Un'ascia che si spezza non è sempre colpa della lega,"</em>
+          dice alla fine, più a se stesso che a lei. <em>"A volte è colpa di chi l'ha temprata troppo in
+          fretta."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Per un giocatore timido, tieni la scena breve e guidata: due o tre scambi di battute bastano. Non serve che
+        risolva tutto — Mira può assolverlo esplicitamente ("non è stato l'addestramento, è stato il dungeon
+        stesso"), lasciando a lui la scelta più semplice possibile: crederle o no, con un solo gesto o frase.
+      </p>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — la "svegliata" e il pagamento</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Chiudi la Parte con un piccolo riconoscimento meccanico o narrativo tangibile: Magnus, sentendo il
+          resoconto, promuove informalmente Morgrim a "controllore d'armeria" non ufficiale della Gilda (un titolo
+          minore ma reale, buona base per futuri agganci in cui è lui il primo a essere consultato su nuovo
+          equipaggiamento). Se hai bisogno di un incentivo meccanico concreto, uno dei pezzi controllati durante
+          l'ispezione dell'armeria (lo scudo "perfetto") può diventare suo, a discrezione del tavolo.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: E POI? ==================== -->
+    <div id="dopo" class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🌙</span> PARTE IV: E POI? — MENU PER UNO
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tre opzioni indipendenti, pensate apposta per funzionare con <strong class="text-white">solo
+          Morgrim</strong> al tavolo — nessuna richiede gli altri personaggi. Sono un menu, non un compito: usa
+          quella che si incastra meglio con l'energia della serata dopo l'incarico di Magnus, o nessuna se il
+          tempo è finito.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+
+        <div class="bg-gray-800/50 border-2 border-blue-700 rounded-lg p-5">
+          <p class="font-bold text-blue-200 mb-1">A. L'Occhio Onesto</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · introspettiva per Magnus, non per Morgrim · nessun tiro necessario — ripresa da <a href="/dm/storie-citta#morgrim" class="underline text-blue-300">Storie in Città, Morgrim II</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Buona chiusura naturale se ha appena consegnato un resoconto impeccabile dell'incarico: Magnus, invece
+            di limitarsi a ringraziarlo, chiede un momento privato — non un debrief da Triumvirato, qualcosa di più
+            informale. Due vecchi soldati, non un capogilda e un mercenario. Quello che chiede non è aiuto
+            tattico: è un giudizio onesto, lo stesso tipo di valutazione spietata che un fabbro darebbe su
+            un'arma, applicata a una decisione o a se stesso.
+          </p>
+          <div class="bg-black/50 border-l-4 border-blue-500 p-5 my-3 rounded-r">
+            <p class="italic text-blue-100 leading-relaxed">
+              <em>"Ti ho chiamato tu perché sei l'unico che non mi dirà quello che voglio sentire."</em> Magnus fa
+              girare il boccale tra le mani, senza berne. <em>"Ho raccomandato io Valoris per la squadra
+              principale. Ho scommesso il nome della gilda su un ragazzo che porta ancora le cicatrici di essere
+              stato un ladro di carovane. Se ho sbagliato, dimmelo adesso, non quando sarà troppo tardi per
+              rimediare."</em>
+            </p>
+            <p class="text-xs text-gray-400 mt-2 mb-1">Oppure, versione più personale:</p>
+            <p class="italic text-blue-100 leading-relaxed">
+              <em>"Cinque anni fa quella ferita mi ha tolto il campo. Da allora giudico gli altri invece di
+              combattere al loro fianco. Dimmi la verità, Sangueombra: sono ancora un soldato, o sono solo un
+              vecchio che dà ordini da dietro un tavolo?"</em>
+            </p>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-blue-300">Il verdetto sull'ascia:</strong> lascia che Morgrim applichi letteralmente
+            la sua filosofia del fabbro — dove regge, dove rischia di cedere, sotto quale pressione. Un giudizio
+            onesto, non consolatorio. A prescindere dal contenuto, il gesto di Magnus — chiedere proprio a lui, e a
+            nessun altro — è probabilmente il primo vero segno che Morgrim è diventato più della "muta di lavoro"
+            che dice di essere per gli altri personaggi.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-teal-700 rounded-lg p-5">
+          <p class="font-bold text-teal-200 mb-1">B. Un Nome sulla Stele — Mithral Hall</p>
+          <p class="text-xs text-gray-500 italic mb-2">Personale · emotiva · non risolvibile subito — ripreso da <a href="/dm/sessioni/sessione-11#sottotrame-cittadine" class="underline text-teal-300">Sessione 11, Parte VIII, Sottoquest 1</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Durante una consultazione della Stele delle Altre Città in Piazza dell'Arco, Morgrim nota un nome tra i
+            membri elencati di una gilda di Mithral Hall — <strong class="text-white">I Martelli di Runa</strong>
+            o <strong class="text-white">La Vena Perduta</strong>. Un commilitone che credeva morto durante
+            l'Assedio, o il figlio di uno che lo era davvero. Non serve decidere ora quale delle due.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il punto non è risolvere nulla: il Sigillo non si apre, nessun canale di comunicazione esiste tra
+            città. Il valore è nel momento di caratterizzazione — lascialo reagire, con la stessa economia di
+            parole con cui reagisce a tutto, poi lascia la porta aperta come gancio per l'Ecosistema 2 o 3, se il
+            Sigillo dovesse mai vacillare.
+          </p>
+        </div>
+
+        <div class="bg-gray-800/50 border-2 border-slate-600 rounded-lg p-5">
+          <p class="font-bold text-slate-200 mb-1">C. Il Registro Contraffatto</p>
+          <p class="text-xs text-gray-500 italic mb-2">Corruzione minore · investigativo · eco diretto dell'armeria (Parte III) — ripreso da <a href="/dm/sessioni/sessione-11#sottotrame-cittadine" class="underline text-slate-300">Sessione 11, Parte VIII, Sottoquest 4</a></p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-2">
+            Un fornitore che serve diverse gilde e compagnie minori della città — non i Guardiani, che si servono
+            da Thea — vende equipaggiamento "certificato" con marchi di qualità falsificati: le stesse identiche
+            crepe di forgiatura appena scoperte da Morgrim nell'armeria, ma su scala molto più ampia e verso
+            clienti che non hanno un veterano a controllare di persona.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Il gancio arriva meglio per caso che per incarico: una voce al mercato, un mercenario ferito da
+            un'arma che si è spezzata "come non dovrebbe", o Magnus stesso che chiede un secondo parere informale
+            dopo aver sentito la stessa storia da un collega di un'altra compagnia. Buona occasione per Morgrim di
+            applicare la stessa competenza appena dimostrata, ma di propria iniziativa invece che su incarico.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</MainLayout>

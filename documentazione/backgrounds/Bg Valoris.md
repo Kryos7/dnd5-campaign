@@ -20,7 +20,7 @@ Sorrisi a quella affermazione, distolsi lo sguardo dalla luna e lo rivolsi al mi
 *Capisco le tue perplessità Regal .* Alzai il calice per bere un sorso di Vino *Ma ti asssicuro che non c’è nessuna reale contrapposizione e credo che La signora in rosso non si senta toccata o offesa da questo.. anzi ho il forte sospetto che l abbia preso in simpatia, chiaramente non sono tanto supponente da affermarlo con certezza.. ma a volte nelle preghiere .. mi sembra di sentire … sentire che è più divertita che altro.*  
 *Ma non fare quella faccia shoccata e lascimi spiegare\!* 
 
-*Tymona non è solo la Dea della fortuna, i suoi domini comprendono anche abilità , vittoria e rischio.. e ora ti chiedo… non ci vuole forse abilità in battaglia o nel campo di addestramento?  non puntiamo noi forse al fine ultimo della vittoria?  e non ci capita nelle nostre strategie di prendere dei rischi? si calcolati ma sempre rieschi e in base a come evolve .. strutturiamo altre strategie. Quindi amico mio per me questa non è in diretta oposizione … anzi … è complementare\!*   
+*Tymora non è solo la Dea della fortuna, i suoi domini comprendono anche abilità , vittoria e rischio.. e ora ti chiedo… non ci vuole forse abilità in battaglia o nel campo di addestramento?  non puntiamo noi forse al fine ultimo della vittoria?  e non ci capita nelle nostre strategie di prendere dei rischi? si calcolati ma sempre rieschi e in base a come evolve .. strutturiamo altre strategie. Quindi amico mio per me questa non è in diretta oposizione … anzi … è complementare\!*   
 *E poi cmq anche nel piano perfetto qualcosa può andare storto , qualcosa che non poteva essere prevista , calcolata … Un bravo stratega non è colui che trova sempre il piano perfetto… un piano perfetto è tale finche non incontra la realtà … Il bravo stratega è colui che è in grado velocemente di riformulare cambiare adattare il piano agli eventi che appunto non potevano essere previsti …  Quindi si credo che anche a noi possa servire sempre un pizzio di fortuna… se non altro per allontanare la dea della malasorte Beshaba.*  
 Bevvi Un altro sorso e attesi la replica del mio compagno che non tardò ad arrivare  
 *Credo di avere capito, almeno in parte ma penso che possa passare un messaggio sbagliato,  se avessi una cosa del genere è probabile che il gran maestro dell'ordine del falco rosso mi impedirebbe di portarla in bella vista o probabilmente di portarla proprio\!* 
@@ -46,8 +46,7 @@ Il Sole era allo zenit e picchiava sulle nostre teste, caldo come non mai… Com
 
 «Sono il lord comandante Zuric e oggi, come nelle prossime quattro settimane… sarete miei…»
 
-Una voce alla mia destra:  
- «Grandioso… non vedevo l’ora.»
+Una voce alla mia destra: «Grandioso… non vedevo l’ora.»
 
 Girai la testa per vedere chi avesse parlato, ma non vidi niente…
 
@@ -59,8 +58,7 @@ Cercai meglio… abbassai lo sguardo e vidi…
 
 Uno gnomo. Alto, se va bene, un metro.
 
-Sorrisi e dissi:  
- «Amico, magari hai ragione, ma so per certo che sente bene. Non so se ti conviene farti sentire\!»
+Sorrisi e dissi: «Amico, magari hai ragione, ma so per certo che sente bene. Non so se ti conviene farti sentire\!»
 
 ALL’IMPROVVISO, UN URLO.
 
@@ -72,22 +70,17 @@ Girai la testa.
 
 Guardava proprio me… non aveva senso fare finta di niente. Sospirai e mi diressi verso di lui… e con me lo gnomo.
 
-Mi passò accanto, mezzo correndo, e sussurrò:  
- «Coglione… questa me la paghi.»
+Mi passò accanto, mezzo correndo, e sussurrò: «Coglione… questa me la paghi.»
 
 «Prima devi arrivare a colpirmi, nanetto», risposi.
 
-Il lord comandante:  
- «Ecco, abbiamo due volontari. Vediamo un po’ cosa sapete fare.»
+Il lord comandante: «Ecco, abbiamo due volontari. Vediamo un po’ cosa sapete fare.»
 
-Io risposi in maniera arrogante:  
- «Signore, non penso che questo sia uno scontro equo\! Lo gnomo non arriva all’altezza delle mie…»
+Io risposi in maniera arrogante: «Signore, non penso che questo sia uno scontro equo\! Lo gnomo non arriva all’altezza delle mie…»
 
-Lo gnomo rispose:  
- «Concordo. Questo ragazzino me lo mangio in trenta secondi: non è una sfida degna di me\!»
+Lo gnomo rispose: «Concordo. Questo ragazzino me lo mangio in trenta secondi: non è una sfida degna di me\!»
 
-Sentendo questo, girai la testa e dissi:  
- «A breve mangerai la polvere più di quanto già fai.»
+Sentendo questo, girai la testa e dissi: «A breve mangerai la polvere più di quanto già fai.»
 
 Il lord comandante:  
  «Smettetela di fare i mocciosi e prendete un’arma dalla rastrelliera\! Poi posizionatevi e, al mio via, partite\! Il primo che cade a terra ha perso\!»
@@ -116,22 +109,19 @@ In una questione di un attimo… ero a terra, di culo.
 
 Era una finta. Lui aveva voluto che mi avvicinassi per potermi agganciare con l’altra parte dell’alabarda e sbilanciarmi, facendomi cadere.
 
-Che botta memorabile… ricordo ancora il dolore e l’umiliazione.
+Che botta memorabile...ricordo ancora il dolore e l’umiliazione.
 
 Avevo sottovalutato il mio avversario e ne avevo pagato le conseguenze: una delle prime lezioni, nonché una delle più importanti.
 
-Lo gnomo:  
- «Chi è che avrebbe mangiato la polvere, spilungone?»
+Lo gnomo: «Chi è che avrebbe mangiato la polvere, spilungone?»
 
 Lo guardai in cagnesco, ma poi iniziai a pensare… beh, l’idiota sono io e lui me l’ha mostrato apertamente. Non ha senso prendersela con lui: al massimo devo ringraziarlo.
 
-Questo mi fece scoppiare in una risata genuina…
+Questo mi fece scoppiare in una risata genuina...
 
-Lui mi guardò:  
- «Cosa hai da ridere? Vuoi un’altra ripassata?»
+Lui mi guardò: «Cosa hai da ridere? Vuoi un’altra ripassata?»
 
-Io smisi di ridere:  
- «No, no, ti prego: una è bastata.»
+Io smisi di ridere: «No, no, ti prego: una è bastata.»
 
 Gli porsi la mano e lui ricambiò, aiutandomi ad alzarmi.
 
