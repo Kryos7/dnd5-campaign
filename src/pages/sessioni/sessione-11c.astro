@@ -1,0 +1,381 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 11c - Il Colpo di Pancia e le Due Campane"
+  description="Sessione 11c: Morgrim racconta la sua storia preferita alla taverna della Gilda, riceve da Magnus l'incarico di controllare l'armeria, ritrova Mira Greenleaf e sente il Marchio Divino rispondere all'ammissione della Compagnia del Dado Nero"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">11c</span>
+        <h1 class="text-4xl font-bold">Il Colpo di Pancia e le Due Campane</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 26/08/2026</span>
+        <span>⏱️ ~1h30</span>
+        <span>🎭 Sessione parallela · Solo Morgrim</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Con il gruppo diviso durante la pausa dei sette giorni, stasera al tavolo c'è solo Morgrim. Una serata
+        di birra e racconti alla taverna della Gilda, un incarico d'onore da Magnus sul controllo dell'armeria,
+        una reunion inattesa con Mira Greenleaf al circolo druidico, e infine un dolore netto dietro il collo
+        che lo trascina fino a Piazza dell'Arco, dove la Compagnia del Dado Nero festeggia la propria ammissione
+        al Gioco Divino.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">La serata alla taverna della Gilda e il racconto del colpo di pancia, l'incarico di Magnus sul controllo dell'armeria, la visita a Bran Osgood e la reunion con Mira Greenleaf al circolo druidico, il doppio rintocco di mezzogiorno e la scoperta della Compagnia del Dado Nero ammessa all'Arco Divino.</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Scoperte</p>
+          <p class="text-gray-300">Bran teme di non potersi più fidare della propria arma dopo l'incidente in addestramento. Mira assolve Morgrim: la colpa non è stata sua, ma del dungeon stesso. Il Marchio Divino risponde con una fitta dolorosa dietro il collo quando una nuova gilda viene ammessa all'Arco, un fenomeno mai notato prima d'ora. Tre gilde nuove sono comparse quasi insieme sulla Stele delle Altre Città, a Waterdeep, Menzoberranzan e Luskan.</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Resta in Sospeso</p>
+          <p class="text-gray-300">Il confronto con il resto della squadra su cosa abbiano sentito tutti nello stesso istante, la causa esatta del Rintocco, la promessa fatta a Mira di tornare a riferirle cosa ha scoperto, se Bran ritroverà fiducia nel proprio equipaggiamento.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-amber-900/20 border border-amber-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🍺</span> PARTE I: LA TAVERNA DELLA GILDA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">I.</span> Il Colpo di Pancia
+          </h3>
+          <p class="leading-relaxed">
+            Subito dopo la cena del Consiglio, Morgrim torna alla taverna della Gilda per riprendere da dove
+            aveva interrotto. Il boccale lasciato a metà lo aspetta ancora, e il locandiere glielo sostituisce
+            senza nemmeno chiedere. La sala è piena solo di gente della Gilda, guarnigione, magazzinieri,
+            istruttori: nessuno di loro sa cosa sia successo quella sera al Consiglio, né cosa ci sia davvero
+            sotto l'Arco. Sanno solo che lo hanno visto addestrarsi, mesi prima che il portale si aprisse.
+          </p>
+          <p class="leading-relaxed">
+            Girando tra i tavoli, Morgrim si lascia coinvolgere volentieri nelle chiacchiere, senza mai
+            infrangere il patto sul silenzio riguardo al dungeon. Il racconto che gli viene meglio è quello
+            della porta sbarrata al Piano 1: la vecchia tattica nanica del colpo di pancia, due colpi per
+            spezzare la sbarra, e lui finito a faccia in giù sul pavimento come un sacco di farina.
+          </p>
+          <div class="bg-black/40 border-l-4 border-amber-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-amber-100 leading-relaxed">
+              <em>"Due colpi. La sbarra si è spezzata in due."</em> Pausa, un sorso. <em>"Io un po' meno. Sono
+              finito a faccia in giù sul pavimento come un sacco di farina."</em> Risate vere, un magazziniere
+              che tra le lacrime chiede se è vero anche il bagno non richiesto in un canale, la stessa notte.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Per un istante, mentre ride con gli altri, qualcosa gli passa dietro gli occhi: non la storia della
+            porta a pesargli, ma tutto quello che non può raccontare, quanto sia diventato grande. Dura un
+            respiro, poi qualcuno gli rimette in mano un boccale pieno e il pensiero scivola via. Quando un
+            istruttore più insistente chiede <em>"ma laggiù, davvero, com'è?"</em>, basta un'occhiata e un
+            <em>"quello no"</em> per chiudere la porta. Nessuno insiste: il muro non crolla nemmeno brillo.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-amber-400">II.</span> A Letto
+          </h3>
+          <p class="leading-relaxed">
+            Stanco e appesantito dalla birra, Morgrim torna verso la propria camera tra un po' di baraonda nel
+            corridoio (la stessa che, quella notte, tiene svegli Riven e Fealer nelle loro stanze, vedi
+            <a href="/sessioni/sessione-11a" class="underline text-amber-300">Sessione 11a</a>). Si butta sul
+            letto ancora con gli stivali, e il sonno lo prende prima che riesca a togliersene anche uno solo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🪓</span> PARTE II: L'INCARICO DI MAGNUS
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Un Lotto da Ricontrollare
+          </h3>
+          <p class="leading-relaxed">
+            La mattina dopo, Magnus in persona bussa alla sua porta: <strong class="text-white">Bregan
+            Fallow</strong>, l'aiutante di Thea, ha certificato buono un lotto di lame due settimane fa, e una
+            si è spezzata in addestramento mandando un recluta in infermeria. Magnus non chiede un favore,
+            affida un incarico: solo Morgrim ha l'occhio giusto per rifare il controllo come si deve.
+          </p>
+          <p class="leading-relaxed">
+            Morgrim accetta senza esitazione, e nel farlo prova una soddisfazione diversa dal solito: un gesto
+            normale, quotidiano, in un momento in cui la normalità gli sembrava qualcosa che il dungeon gli
+            avesse tolto per sempre.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> Cinque Pezzi, Cinque Verdetti
+          </h3>
+          <p class="leading-relaxed">
+            In armeria, Magnus ha già disposto il lotto: due spade corte, uno scudo rotondo, un'armatura a
+            piastre, un arco lungo. Morgrim divide il controllo tra occhio da fabbro (spade e armatura) e
+            istinto da veterano (scudo e arco), pezzo per pezzo.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"Questa si sarebbe rotta uguale,"</em> dice, trovando sulla prima spada la stessa identica
+              imperfezione della lama già spezzata. <em>"Bregan non l'ha controllata. L'ha solo timbrata."</em>
+              La seconda spada risulta pulita. L'armatura è tagliata per un corpo più largo del previsto,
+              inutilizzabile senza aggiustamenti. Lo scudo è addirittura migliore di quanto pagato. L'arco ha
+              la corda visibilmente logora.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Magnus chiude il registro con un colpo secco: <em>"Stessa lama. Allora sappiamo che ha timbrato
+            senza controllare."</em> Il recluta ferito si chiama <strong class="text-white">Bran
+            Osgood</strong>, ed è in cura al
+            circolo druidico vicino a Piazza dell'Arco. Magnus chiede esplicitamente a Morgrim di andarci di
+            persona: se è stata la sua armeria a tagliarlo, deve sentirlo da uno dei suoi, non da un messaggero.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-purple-900/20 border border-purple-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">🌿</span> PARTE III: BRAN E MIRA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">I.</span> Nessuna Promessa Facile
+          </h3>
+          <p class="leading-relaxed">
+            Al circolo druidico, Morgrim va dritto al punto con Bran, senza promesse consolatorie sul recupero:
+            gli dice di aver trovato personalmente lo stesso difetto sulla lama che lo ha ferito, e che non è
+            stata sfortuna. Gli chiede cosa sia successo esattamente (la lama ha ceduto durante un contatto di
+            media potenza, di scatto, senza nessun errore da parte sua) e se abbia ancora fiducia
+            nell'equipaggiamento ricevuto.
+          </p>
+          <div class="bg-black/40 border-l-4 border-purple-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-purple-100 leading-relaxed">
+              Un tiro di Intuizione alto rivela che Bran non ha paura del braccio ferito, quello è già il
+              suo problema minore. Ha paura di una cosa più semplice e più dura da dire ad alta voce: non è
+              stata la sua guardia a cedere, non è stata la sua tecnica. È stata la lama, un oggetto di cui
+              doveva fidarsi ciecamente e non poteva controllare.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Morgrim non lo dice ad alta voce, ma quella lettura basta a rendere più gentile del previsto la sua
+            ultima frase: <em>"Non è stata sfortuna, Bran. Ho trovato il difetto sulla lama e ho trovato altri
+            pezzi che non avrebbero dovuto passare il controllo. La Gilda ha sbagliato a lasciarli uscire
+            dall'armeria. Sono venuto io perché dovevi sentirlo da qualcuno che quelle lame le sa leggere."</em>
+            Bran lo ringrazia non per averglielo detto, ma per essere venuto di persona.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-purple-400">II.</span> "Zio Morgrim"
+          </h3>
+          <p class="leading-relaxed">
+            Mentre si allontana dalla branda di Bran, una delle druide che lo assistono alza lo sguardo su di
+            lui e si ferma a metà movimento: è <strong class="text-white">Mira Greenleaf</strong>, il membro
+            originale della squadra ritiratosi la notte prima della discesa nel dungeon, sostituito da Fealer.
+            Non si vedevano da allora.
+          </p>
+          <div class="bg-black/50 border-l-4 border-purple-500 p-6 my-4 rounded-r">
+            <p class="italic text-purple-100 text-lg leading-relaxed">
+              <em>"Zio Morgrim."</em> La voce le trema, ma sorride. <em>"Pensavo che mi avresti guardata come
+              una che ha mollato."</em> Morgrim la osserva a lungo prima di rispondere, come osserverebbe
+              un'arma tornata dal campo, cercando il punto di cedimento. Non lo trova dove pensava.
+              <em>"Certo che pensavo l'avessi mollato. Quella notte ero furioso con te. Pensavo che avessi avuto
+              paura."</em> Una pausa. <em>"Adesso so che avevi ragione ad averne. E so anche che non dovevi
+              venire con noi solo perché io volevo che venissi."</em> Le sorride, poco ma abbastanza.
+              <em>"Non ti guardo come una che ha mollato. Ti guardo come Mira. Anche se avrei preferito vederti
+              in altre circostanze, diciamo meno sanguinose."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Mira ride, commossa, e gli restituisce l'assoluzione che si porta dietro da mesi: non è stato
+            l'addestramento a spezzarla, è stato quello che c'è nel dungeon, qualcosa che nessuno avrebbe potuto
+            prepararla ad affrontare (<em>"la squadra degli Sciocchi Fortunati..."</em>, dice, lasciando la
+            frase in sospeso). Non è stato un limite suo che lui ha spinto troppo oltre: è stato qualcosa che la
+            natura stessa rifiuta di riconoscere come possibile. Alla battuta di Morgrim risponde con ironia da
+            infermiera: <em>"Zio Morgrim, io lavoro qui dentro. 'Meno sanguinose' per me è un giorno buono."</em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🔔</span> PARTE IV: IL RINTOCCO E L'ARCO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">I.</span> Due Rintocchi
+          </h3>
+          <p class="leading-relaxed">
+            Mentre Mira sta per aggiungere altro, un rintocco di campana rimbomba su tutta la città: un suono
+            che non viene da nessun campanile vero, qualcosa di più. Un istante dopo, Morgrim ne sente un
+            secondo, non con le orecchie: il Marchio Divino dietro il suo collo brucia netto, una sola fitta,
+            intensa e dolorosissima. Mira non sente nulla del secondo suono, ma vede il suo volto e si spaventa
+            per lui, lasciando la fasciatura di Bran per correre a sostenerlo.
+          </p>
+          <p class="leading-relaxed">
+            Non ha una ferita da bendare, ragiona Mira ad alta voce, quindi non è il corpo: è quella cosa dietro
+            il collo. Il primo suono lo ha sentito tutta la città, ma tutta la città non ha un pezzo di pelle
+            che brucia come il suo. L'unica cosa a Waterdeep capace di "scegliere chi deve sentire" qualcosa
+            legato al Marchio è l'Arco. Lo spinge ad andare a controllare, restando lei con Bran, e si fa
+            promettere che tornerà a riferirle cosa scopre.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">II.</span> La Terza Gilda, di Nuovo
+          </h3>
+          <p class="leading-relaxed">
+            Morgrim raggiunge Piazza dell'Arco di corsa, seguendo solo il ragionamento di Mira: nessun secondo
+            segnale lo guida, la fitta era già passata. La piazza è ancora in subbuglio, non si è affatto
+            calmata. Davanti ai gradini dell'Arco, cinque membri della <strong class="text-white">Compagnia del
+            Dado Nero</strong> festeggiano apertamente, insieme al loro gestionale <strong
+            class="text-white">Dorin Hask</strong>, sollevato più della loro stessa gioia.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              Alla Stele delle Altre Città, sotto Waterdeep, compare una riga nuova: <strong
+              class="text-white">Compagnia del Dado Nero</strong>. Quasi nello stesso istante ne sono comparse
+              altre due, a Menzoberranzan e a Luskan, gilde nate dalle ceneri di altre spazzate via. Dorin
+              conferma di averle notate anche lui, ma non sa altro: <em>"Sembra che non siamo gli unici ad
+              averci pensato. Buon per loro."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Dorin racconta con orgoglio che tutti e cinque sono entrati senza nessuna Prova Divina, e invita
+            Morgrim a unirsi al brindisi. Morgrim declina gentilmente, si congratula con la squadra, e torna
+            invece verso la Gilda: quello che ha visto e sentito va riferito a Magnus, e vuole confrontarsi coi
+            propri compagni, sparsi però tra i loro incarichi. Quel confronto, quello vero, dovrà aspettare la
+            prossima volta che la squadra sarà di nuovo al completo.
+          </p>
+          <p class="leading-relaxed mt-4 text-gray-500 italic text-sm">
+            Giovedì, poco dopo mezzogiorno. Nessun combattimento questa sessione, solo un incarico, una reunion
+            e un mistero appena aperto. Fine sessione 11c.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUNTI ESPERIENZA -->
+    <div class="bg-gradient-to-br from-yellow-900/30 via-amber-900/20 to-orange-900/30 border-2 border-yellow-500/50 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6 text-sm">
+        <p class="text-gray-300 mb-2">
+          <strong class="text-green-400">PX Presenza:</strong> Premia la partecipazione alla sessione per un livellamento più costante
+        </p>
+        <p class="text-gray-300 mb-2">
+          <strong class="text-amber-400">PX Sessione Interpretativa:</strong> Bonus base per sessioni senza combattimento, dove tutto il progresso passa dall'interpretazione e dalle decisioni, nessuno scontro questa volta, solo un incarico, una reunion e una scoperta inquietante
+        </p>
+        <p class="text-gray-300">
+          <strong class="text-purple-400">PX Interpretazione:</strong> Premio individuale per idee, scelte teatrali o momenti memorabili
+        </p>
+      </div>
+
+      <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-6">
+        <h3 class="text-lg font-bold text-green-400 mb-3">🟢 PX Base — Personaggio presente</h3>
+        <div class="grid grid-cols-2 gap-4 text-sm text-center">
+          <div>
+            <p class="text-gray-400">PX Presenza</p>
+            <p class="text-green-300 font-bold">750 PX</p>
+          </div>
+          <div>
+            <p class="text-gray-400">PX Sessione Interpretativa</p>
+            <p class="text-amber-300 font-bold">750 PX</p>
+          </div>
+        </div>
+        <p class="text-center text-green-400 font-bold mt-3">Totale base: 1500 PX</p>
+        <p class="text-center text-gray-500 text-xs mt-2 italic">Solo Morgrim era presente stasera, gli altri quattro recuperano alla prossima sessione di gruppo.</p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- MORGRIM -->
+        <div class="bg-gradient-to-r from-red-900/40 to-orange-900/30 border-2 border-red-500 rounded-lg p-5">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="text-3xl">🪓</span>
+            <h4 class="text-xl font-bold text-red-400">Morgrim</h4>
+            <div class="ml-auto text-right">
+              <p class="text-2xl font-bold text-yellow-400">1700 PX</p>
+              <p class="text-xs text-gray-400">da segnare</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="bg-green-900/30 rounded p-3">
+              <p class="text-green-400 font-bold mb-1">PX Presenza + Sessione Interpretativa: 1500</p>
+            </div>
+            <div class="bg-purple-900/30 rounded p-3">
+              <p class="text-purple-400 font-bold mb-1">PX Interpretazione: 200</p>
+              <p class="text-gray-300">
+                Una sessione retta da solo con grande coerenza di carattere: ha tenuto il patto del silenzio
+                anche brillo alla taverna, ha affrontato Bran senza promesse consolatorie ma con un'onestà che
+                gli ha guadagnato più rispetto di qualsiasi conforto, e ha vissuto la reunion con Mira con un
+                equilibrio raro tra durezza e affetto, senza mai scadere nel sentimentale. Ha retto il dolore
+                del Rintocco restando lucido abbastanza da correre a indagare invece di lasciarsi sopraffare.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 bg-gray-900/50 rounded-lg p-4">
+        <h3 class="text-lg font-bold text-yellow-400 mb-3">📋 Riepilogo da Segnare</h3>
+        <div class="grid grid-cols-1 gap-4 text-center">
+          <div>
+            <p class="text-red-400 font-bold">Morgrim</p>
+            <p class="text-xl text-yellow-400">1700 PX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-11b" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 11b - Il Ciondolo e la Sabbia
+      </a>
+      <span class="text-gray-500 italic">Prossima sessione in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

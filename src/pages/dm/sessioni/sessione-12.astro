@@ -1,0 +1,532 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 12 - Prep [DM]"
+  description="Note del Dungeon Master - Preparazione Sessione 12"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">12</span>
+        <h1 class="text-4xl font-bold">Tutti i Fili Convergono</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>⏱️ 4–5 ore</span>
+        <span>🎭 Sessione piena · Tutto il gruppo, in call</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione — bozza da affinare</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Primo tavolo pieno dopo lo spacchettamento della <a href="/dm/sessioni/sessione-11" class="underline text-red-300">Sessione 11</a>
+        in tre giocate parallele — <a href="/dm/sessioni/sessione-11a" class="underline text-amber-300">11a (Riven e
+        Fealer)</a>, <a href="/dm/sessioni/sessione-11b" class="underline text-amber-300">11b (Valoris)</a> e
+        <a href="/dm/sessioni/sessione-11c" class="underline text-amber-300">11c (Morgrim)</a>. Stasera il gruppo
+        torna a giocare insieme: la lista degli oggetti richiesti alla Gilda, la lettera di invito al Ricevimento
+        con lo Scudo Radiante, la scelta dello sponsor dei Guardiani, la visita ad Anders Voss, la visita al sacerdote
+        di Mystra per Riven, e tutti i filoni personali rimasti sospesi dalle tre sessioni parallele.
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Apertura consigliata — il confronto sul Rintocco:</strong> Morgrim ha chiesto esplicitamente, a fine 11c, di riunire la squadra per confrontare cosa ognuno ha sentito nello stesso istante. È il gancio narrativo più naturale per aprire la serata — vedi Parte I.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Oggetti richiesti:</strong> Parte II è solo lo spazio, la lista vera arriva dai giocatori — non aprirla al tavolo finché non l'hai compilata. Vedi Parte II.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Chi sa cosa:</strong> dopo tre sessioni giocate separatamente, i personaggi non condividono automaticamente le informazioni — decidi quanto tempo dedicare a farli aggiornare a vicenda a inizio serata (Anders Voss, la doppia firma di Riven, il segno della sabbia di Valoris, Rooks, le tre gilde comparse insieme sulla Stele). Vedi Parte I.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Sponsor:</strong> ricorda che la decisione finale spetta al Consiglio di Gilda (Serath/Magnus/Silas) — il party viene solo consultato. Vedi Parte IV.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Anders Voss + sacerdote di Mystra:</strong> probabile che il gruppo voglia fare entrambe le visite nella stessa serata — tienile pronte in sequenza. Vedi Parte V e VI.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Non è un tavolo da esaurire tutto:</strong> sei blocchi di contenuto sono tanti per una sola serata — decidi già ora (o al tavolo) cosa è prioritario stasera e cosa scivola alla prossima. Vedi Riepilogo in fondo.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#stato-attuale" class="text-slate-300 hover:text-white">🧭 Stato Attuale</a>
+      <span class="text-gray-600">·</span>
+      <a href="#oggetti-richiesti" class="text-emerald-400 hover:text-emerald-300">🎒 Oggetti Richiesti</a>
+      <span class="text-gray-600">·</span>
+      <a href="#ricevimento" class="text-blue-400 hover:text-blue-300">✉️ Il Ricevimento</a>
+      <span class="text-gray-600">·</span>
+      <a href="#sponsor" class="text-rose-400 hover:text-rose-300">🎗️ Lo Sponsor</a>
+      <span class="text-gray-600">·</span>
+      <a href="#anders-voss" class="text-red-400 hover:text-red-300">🕯️ Anders Voss</a>
+      <span class="text-gray-600">·</span>
+      <a href="#tempio-mystra" class="text-violet-400 hover:text-violet-300">🔮 Il Tempio di Mystra</a>
+      <span class="text-gray-600">·</span>
+      <a href="#filoni-aperti" class="text-amber-400 hover:text-amber-300">🧵 Filoni Aperti</a>
+    </div>
+
+    <!-- ==================== PARTE I: STATO ATTUALE ==================== -->
+    <div id="stato-attuale" class="bg-slate-800/20 border border-slate-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-slate-400">🧭</span> PARTE I: STATO ATTUALE — DOVE ERAVAMO RIMASTI
+      </h2>
+
+      <div class="bg-slate-900/40 border border-slate-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non un recap da leggere ad alta voce — un promemoria per te. Ogni personaggio ha vissuto la propria parte
+          dei sette giorni per conto proprio: nessuno sa automaticamente cosa è successo agli altri. Buona apertura
+          di serata: un giro di tavolo veloce in cui ciascun giocatore racconta agli altri (in game) cosa ha fatto,
+          più che un tuo riassunto.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          <strong class="text-white">Gancio pronto per aprire la scena:</strong> a fine 11c, Morgrim ha promesso a
+          Mira Greenleaf di scoprire cosa fosse il Rintocco e ha chiesto esplicitamente di riunire la squadra per
+          confrontare cosa ognuno ha sentito nello stesso istante — lui, Riven, Fealer e Valoris hanno tutti percepito
+          bruciore + rintocco quando il Dado Nero è entrato all'Arco, ma nessuno dei quattro ne ha ancora parlato con
+          gli altri. Lascia che sia lui a portare l'argomento al tavolo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-gray-900/60 border-2 border-green-700 rounded-lg p-5">
+          <p class="text-xs text-green-400 uppercase tracking-widest mb-2">🔥 Riven e 🌿 Fealer — da <a href="/dm/sessioni/sessione-11a" class="underline text-green-300">Sessione 11a</a>, giocata</p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+            <li>Cinque esperimenti di Arianna sulla cicatrice: nessuna diagnosi definitiva, ma la scoperta che la firma di Riven si è <strong class="text-white">sdoppiata</strong> — energia arcana più una seconda energia divina non registrata in nessun pantheon noto (Teoria dell'Ospite Non Invitato).</li>
+            <li>Rivelazione di <strong class="text-white">Anders Voss</strong>, sopravvissuto sfigurato dello stesso evento — non ancora visitato. Vedi Parte V.</li>
+            <li>Appuntamento fissato per l'alba con un sacerdote di Mystra, per identificare la "nota divina" — mai giocato. Vedi Parte VI.</li>
+            <li>Fealer: progressi parziali sul taccuino di Kethrar (tratta di corpi morti) e sospetto rafforzato che Vex vendesse derivati delle spore.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-900/60 border-2 border-orange-700 rounded-lg p-5">
+          <p class="text-xs text-orange-400 uppercase tracking-widest mb-2">🗡️ Thalio — da <a href="/dm/sessioni/sessione-11a" class="underline text-orange-300">Sessione 11a</a>, giocata</p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+            <li>Ha spiato di persona l'ammissione del Dado Nero all'Arco, senza farsi notare.</li>
+            <li>Tre nomi confermati sulla squadra principale rivale (Fenn Cindertongue, Mira "Piede Lesto", Toz "Le Mani" Varren) più Barda come Capitano — il quinto membro resta un volto sconosciuto.</li>
+            <li>Era altrove durante la scena con Arianna: non sa ancora nulla della doppia firma di Riven né di Anders Voss, a meno che qualcuno non gliel'abbia raccontato dopo la sessione.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-900/60 border-2 border-yellow-700 rounded-lg p-5">
+          <p class="text-xs text-yellow-400 uppercase tracking-widest mb-2">🎴 Valoris — da <a href="/dm/sessioni/sessione-11b" class="underline text-yellow-300">Sessione 11b</a>, giocata 23/08/2026</p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+            <li>Segno divino ambiguo nella sabbia del Cavaliere Rosso, letto con certezza come "resta, rifiuta il Falco Rosso" — <strong class="text-white">non è detto sia la lettura giusta</strong>, twist tenuto in riserva.</li>
+            <li>Ha deciso interiormente di rifiutare l'offerta di Regal, ma non gliel'ha ancora comunicato.</li>
+            <li>Disinteressandosi del caso Rooks, ha lasciato che il Consiglio procedesse duro di propria iniziativa: Rooks marchiato pubblicamente traditore ed espulso dalla Gilda.</li>
+            <li>Dresk gli porterà appunti scritti sulla ragazza dell'amuleto; Requiem per Tam fissato per la sera successiva al Tempio di Tempus.</li>
+            <li>La nuova struttura di paga del Team Principale resta ancora del tutto non affrontata in gioco.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-900/60 border-2 border-red-700 rounded-lg p-5">
+          <p class="text-xs text-red-400 uppercase tracking-widest mb-2">🪓 Morgrim — da <a href="/dm/sessioni/sessione-11c" class="underline text-red-300">Sessione 11c</a>, giocata e chiusa</p>
+          <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+            <li>Incarico di Magnus completato: controllo dell'armeria (spada gemella difettosa trovata, scudo "perfetto", armatura da aggiustare, arco da ricordare), reunion emotiva e risolta con Mira Greenleaf al circolo druidico.</li>
+            <li>Rintocco di Mezzogiorno sentito in prima persona (bruciore netto al Marchio) — corso a Piazza dell'Arco, dove Mira gli ha suggerito lei stessa che l'unica cosa capace di "rispondere" così è l'Arco.</li>
+            <li>Alla Stele delle Altre Città ha visto comparire <strong class="text-white">tre righe nuove quasi insieme</strong>: Compagnia del Dado Nero a Waterdeep, più una gilda ignota a Menzoberranzan e una a Luskan (per il DM: le Vedove di Kiaransalee e i Maledetti del Faro, vedi <a href="/dm/sessioni/sessione-11#classifica-globale" class="underline text-red-300">Sessione 11, Parte V</a> — Morgrim non conosce questi nomi).</li>
+            <li>Ha parlato di persona con <strong class="text-white">Dorin Hask</strong>, che ha confermato l'ingresso senza Prova Divina di tutti e cinque i membri del Dado Nero e lo ha invitato a un brindisi (rifiutato, non ostilmente).</li>
+            <li>Ha riferito tutto a Magnus, che porterà il resoconto al Consiglio — ma <strong class="text-white">non ha ancora parlato con nessuno del party</strong>: vuole confrontare cosa ognuno ha sentito nello stesso istante, promessa fatta a Mira. Buon aggancio d'apertura per stasera, vedi Parte I sopra.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: OGGETTI RICHIESTI ==================== -->
+    <div id="oggetti-richiesti" class="bg-emerald-900/20 border border-emerald-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-emerald-400">🎒</span> PARTE II: LA LISTA DEGLI OGGETTI RICHIESTI ALLA GILDA
+      </h2>
+
+      <div class="bg-emerald-900/30 border border-emerald-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Spazio riservato — la lista definitiva arriva dai giocatori e va incollata qui. Struttura pensata per
+          gestirla al volo al tavolo: chi la chiede, cosa, perché, e l'esito (disponibile in Gilda / da acquistare /
+          da negoziare col Consiglio). Legata alla nuova struttura di paga del Team Principale, ancora sospesa da
+          <a href="/dm/sessioni/sessione-11b#paga" class="underline text-emerald-300">Sessione 11b</a> — buona
+          occasione per affrontare entrambe le cose insieme stasera.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg overflow-hidden mb-4">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-gray-900/60 text-gray-400 uppercase text-xs">
+            <tr>
+              <th class="p-3">Personaggio</th>
+              <th class="p-3">Oggetto richiesto</th>
+              <th class="p-3">Motivazione</th>
+              <th class="p-3">Esito / Note DM</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-700">
+            <tr>
+              <td class="p-3 text-gray-500 italic" colspan="4">— in attesa della lista dal gruppo —</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — cose da tenere a mente quando arriva la lista</p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li>Chi decide è ancora il Consiglio di Gilda (Serath/Magnus/Silas), non un automatismo — coerente col confine appena tracciato con l'ammonimento a Valoris.</li>
+          <li>Morgrim ha appena ottenuto un titolo informale di "controllore d'armeria" (Sessione 11c) — buon aggancio se qualcuno chiede equipaggiamento fisico: può essere lui a valutarlo/procurarlo in game.</li>
+          <li>Se la lista include qualcosa di raro o fuori portata, è un'occasione naturale per introdurre un costo narrativo (favore, missione, tempo) invece di un semplice no.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: IL RICEVIMENTO ==================== -->
+    <div id="ricevimento" class="bg-blue-900/20 border border-blue-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-blue-400">✉️</span> PARTE III: LA LETTERA DEL RICEVIMENTO — SCUDO RADIANTE
+      </h2>
+
+      <div class="bg-blue-900/30 border border-blue-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto ripreso da <a href="/dm/sessioni/sessione-11#scudo-radiante" class="underline text-blue-300">Sessione
+          11, Parte VI</a> — mai consegnato al tavolo perché la Sessione 11 non è mai stata giocata per intero. La
+          lettera è pronta da leggere ad alta voce stasera; qui sotto la versione compatta per l'uso diretto, il
+          pannello completo dei 5 membri dello Scudo Radiante resta nella pagina originale.
+        </p>
+      </div>
+
+      <div class="bg-gray-900/60 border-2 border-blue-700 rounded-lg p-6 mb-6">
+        <p class="text-xs text-blue-500 uppercase tracking-widest mb-3">Prop fisico — da leggere ad alta voce</p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          Al Comando della Squadra Principale dei Guardiani della Trama,
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          È con grande piacere che Lord Eravien Haventree, mercante di questa città e umile servitore di Tempus, vi
+          invita a un ricevimento serale presso la propria dimora di Sea Ward, in onore delle vittorie che le vostre
+          due Gilde — i Guardiani della Trama e, sotto il mio patronato, Lo Scudo Radiante — hanno saputo conquistare
+          in questi mesi difficili.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          In un'epoca in cui il Velo ci tiene rinchiusi e il cielo stesso sembra essersi voltato altrove, è nostro
+          dovere, come cittadini di Waterdeep, ricordare a questa città che il Gioco Divino non porta soltanto
+          pericolo, ma anche motivo di orgoglio. Ho ottenuto il benestare del Consiglio cittadino per offrire, per
+          una sola serata, un luogo e un tavolo dove le due Gilde che più hanno onorato Waterdeep possano incontrarsi
+          non come rivali, ma come pari.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed mb-3">
+          Sarete miei ospiti nella serata di vostra scelta, prima che questa breve tregua finisca — il mio
+          maggiordomo attende solo un cenno per fissare l'ora. Non aspettatevi un banchetto formale: preferisco che
+          le persone circolino, parlino, si conoscano — è la conversazione, non il protocollo, che desidero offrire
+          questa sera. Un abito di rappresentanza è ben accolto, ma non obbligatorio: il vostro valore, per questa
+          casa, è già invito sufficiente.
+        </p>
+        <p class="italic text-blue-100 text-sm leading-relaxed">
+          Con sincera ammirazione, e con la speranza di conoscervi finalmente di persona,<br />
+          <strong class="text-white">Lord Eravien Haventree</strong><br />
+          Sea Ward, Waterdeep
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-blue-200 mb-2">Se stasera decidono di andarci — scaletta pronta</p>
+        <ol class="text-sm text-gray-300 space-y-1 list-decimal list-inside">
+          <li>Arrivo separato delle due squadre, primo mescolamento a distanza.</li>
+          <li>Discorso ufficiale di Lord Haventree e di un rappresentante del Consiglio cittadino.</li>
+          <li>Mescolamento libero — coppie naturali pronte: Durak/Morgrim, Caelum/Valoris, Elira/Riven o Arianna, Ilsa/Thalio.</li>
+          <li>Complicazione leggera opzionale (Fennick, una domanda imbarazzante, una frizione Caelum/Valoris).</li>
+          <li>Chiusura e separazione delle due squadre.</li>
+        </ol>
+        <p class="text-xs text-gray-500 italic mt-3">
+          Pannello completo dei 5 membri dello Scudo Radiante (Aldric, Elira, Durak, Ilsa, Caelum), frizioni e
+          alleanze potenziali: <a href="/dm/sessioni/sessione-11#scudo-radiante" class="underline text-blue-300">Sessione 11, Parte VI</a>.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — se stasera non c'è tempo</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non serve giocare il Ricevimento per intero stasera: basta che la lettera arrivi e che il gruppo scelga
+          (anche solo a voce, senza giocare la scena) una sera per andarci — buon gancio aperto per la prossima
+          sessione piena, con la scaletta già pronta qui sopra.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: LO SPONSOR ==================== -->
+    <div id="sponsor" class="bg-rose-900/20 border border-rose-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-rose-400">🎗️</span> PARTE IV: LO SPONSOR DEI GUARDIANI — LA DECISIONE
+      </h2>
+
+      <div class="bg-rose-900/30 border border-rose-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tre candidati già sviluppati in <a href="/dm/sessioni/sessione-11#candidati-sponsor" class="underline text-rose-300">Sessione
+          11, Parte IX</a>, mai presentati al tavolo. Decide il Consiglio di Gilda (Serath/Magnus/Silas), il party
+          viene solo <em>consultato</em> — stesso confine appena tracciato con l'ammonimento a Valoris. Buon
+          contesto per farli comparire stasera: il Ricevimento di Parte III (Drayce e Berenice come ospiti) o una
+          scena dedicata col Triumvirato.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-gray-800/50 border-2 border-rose-700 rounded-lg p-4">
+          <p class="font-bold text-rose-200 mb-1">1. 🏛️ Consigliere Ammon Drayce — il Controllo</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Fondi ed equipaggiamento in cambio di un seggio consultivo permanente al Triumvirato con veto informale
+            sulle decisioni "di immagine pubblica". Eco diretta dell'ammonimento a Valoris — accettarlo significa
+            reintrodurre dall'esterno l'ingerenza appena vietata dall'interno.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="font-bold text-rose-200 mb-1">2. 💰 Berenice Talmoor — il Denaro</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            L'offerta più ricca dei tre, zero ingerenza sul comando — ma vuole nome e stemma dei Guardiani su tutto
+            ciò che vende ancora. I Guardiani diventerebbero un marchio commerciale, non solo un'istituzione.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="font-bold text-rose-200 mb-1">3. ⚔️ Ordine dei Paladini del Falco Rosso — l'Ideologia</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Escalation diretta dell'offerta personale a Valoris (Parte III di Sessione 11, sviluppata poi in 11b):
+            sponsorizzazione dell'intera Gilda in cambio dell'adozione formale del codice di Tempus, con Valoris
+            liaison naturale. <strong class="text-white">Non introdurlo</strong> prima che Valoris comunichi a
+            Regal la propria risposta personale — vedi Parte VII, resta ancora in sospeso da Sessione 11b.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non serve chiudere la scelta stasera — l'obiettivo minimo è che il party conosca tutti e tre i candidati e
+          si formi un'opinione da riportare al Consiglio. Dettagli completi, citazioni pronte e note di sequencing:
+          <a href="/dm/sessioni/sessione-11#candidati-sponsor" class="underline text-rose-300">Sessione 11, Parte IX</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: ANDERS VOSS ==================== -->
+    <div id="anders-voss" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🕯️</span> PARTE V: ANDERS VOSS — LA VISITA
+      </h2>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Scena già scritta per intero in <a href="/dm/sessioni/sessione-11a#anders-voss" class="underline text-red-300">Sessione
+          11a, Parte IV</a> — non giocata perché il gruppo, in 11a, ha scelto di non andarci subito. Resta
+          interamente valida e pronta all'uso: luogo (Ala di Contenimento Arcano del Blackstaff), custode (Maestro
+          Orlin Thess, tre regole prima di entrare), aspetto e voce di Anders, testo teatrale d'ingresso e un banco
+          di domande classiche con risposte pronte.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-red-200 mb-2">In breve</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Umano sfigurato dallo stesso evento che ha risvegliato Riven (Giorno dell'Annuncio, Tempio di Mystra), ma
+          senza mai aver trovato equilibrio con la propria magia selvaggia — foil tematico di Riven, non un mostro
+          né un mentore. Curiosità genuina verso Riven, mescolata a un'invidia amara mai del tutto nascosta. Non
+          offre risposte definitive sulla cicatrice: solo conferme esperienziali ("quando sale, non sembra mia").
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Chi può parteciparvi in modo credibile stasera: Riven e Fealer per certo (erano presenti agli esperimenti
+          di Arianna); gli altri possono unirsi come accompagnamento, ma la scena resta centrata su Riven. Non
+          risolvere il mistero della cicatrice qui — è un gancio per l'Ecosistema 2, non un capitolo da chiudere.
+          Testo completo, domande e risposte pronte:
+          <a href="/dm/sessioni/sessione-11a#anders-voss" class="underline text-red-300">Sessione 11a, Parte IV</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: IL TEMPIO DI MYSTRA ==================== -->
+    <div id="tempio-mystra" class="bg-violet-900/20 border border-violet-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-violet-400">🔮</span> PARTE VI: IL TEMPIO DI MYSTRA — LA NOTA DIVINA
+      </h2>
+
+      <div class="bg-violet-900/30 border border-violet-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contenuto nuovo, mai sviluppato prima d'ora: in <a href="/dm/sessioni/sessione-11a#cicatrice" class="underline text-violet-300">Sessione
+          11a</a> Arianna aveva promesso di organizzare, per l'indomani all'alba, un incontro con un sacerdote di
+          Mystra per far identificare da una fonte esterna la seconda firma scoperta sulla cicatrice di Riven — la
+          "nota divina" che non corrisponde a Tempus, Tymora, Mystra né a nessun pantheon delle altre sei città
+          (Teoria dell'Ospite Non Invitato). L'appuntamento non è mai stato giocato: è pronto per stasera.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-violet-300 mb-3">Il luogo — Tempio di Mystra</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Lo stesso tempio davanti al quale, il Giorno dell'Annuncio, l'onda che ha risvegliato Riven colpì il piccolo
+        gruppo di cui Anders Voss è l'unico sopravvissuto (vedi Parte V) — un dettaglio che vale la pena lasciare
+        emergere in scena, se nessuno lo nota da sé. Un edificio silenzioso all'alba, ancora vuoto di fedeli,
+        biblioteche e sale di studio più che altari: qui la fede in Mystra si esprime come cura ossessiva per la
+        catalogazione di ogni firma magica conosciuta, non come devozione plateale.
+      </p>
+
+      <h3 class="text-xl font-bold text-violet-300 mb-3">Il sacerdote — Sorella Nerys Vantry</h3>
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4 mb-6">
+        <p class="font-bold text-violet-200">Sorella Nerys Vantry, Custode del Velo</p>
+        <p class="text-xs text-gray-500 italic mb-2">Mezz'elfa, sacerdotessa-studiosa di mezza età, incaricata dell'archivio delle firme magiche del tempio — precisa, poco incline alle emozioni altrui, onesta fino a risultare brusca</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-2">
+          Contattata da Arianna come collega di fatto più che come sacerdotessa — le due si conoscono per
+          corrispondenza accademica, mai di persona prima d'ora. Accetta di ricevere il gruppo all'alba proprio
+          perché è l'ora in cui il tempio è vuoto: preferisce lavorare senza pubblico, e un caso non catalogato la
+          incuriosisce più di quanto ammetterebbe.
+        </p>
+        <div class="bg-black/40 border-l-4 border-violet-500 p-3 rounded-r text-sm">
+          <p class="italic text-violet-100 leading-relaxed">
+            <em>"Arianna mi ha scritto che avete una firma che non torna. Bene: io ho un archivio che, in
+            trecent'anni, non ha mai avuto bisogno di una voce 'sconosciuto'. Vediamo chi dei due si sbaglia."</em>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold text-violet-300 mb-3">Il rito — lo Specchio del Velo</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Nerys non usa la stessa magia di Arianna: porta il gruppo in una sala interna dove un grande specchio
+        d'argento, incrostato di sigilli, occupa un'intera parete — l'archivio vivente del tempio, in cui ogni firma
+        divina "sanzionata" dal Gioco lascia un'eco permanente. Chiede a Riven di posare la mano scoperta vicino
+        (non sopra) la superficie, senza toccarla.
+      </p>
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Leggere ad alta voce quando lo specchio reagisce.</p>
+      <div class="bg-black/50 border-l-4 border-violet-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-violet-100 text-lg leading-relaxed">
+          Lo specchio non riflette più la stanza. Per un istante mostra una costellazione di piccole fiamme
+          d'argento, ciascuna una firma nota — Tempus una lama dritta di luce, Tymora una moneta che gira senza mai
+          fermarsi, Mystra stessa una trama di fili che si intrecciano all'infinito. Poi, accanto a tutte loro,
+          compare qualcosa che lo specchio non sa disegnare bene: una macchia di luce che non ha una forma fissa,
+          che lo specchio stesso sembra "correggere" più volte senza riuscire a farla stare ferma.
+        </p>
+        <p class="italic text-violet-100 text-lg leading-relaxed mt-4">
+          Nerys resta zitta più a lungo del previsto. Quando parla, ha perso la sicurezza brusca di poco prima.
+          <em>"Non è corrotta. Non è ostile — lo specchio lo saprebbe, e non sta suonando alcun allarme."</em> Una
+          pausa. <em>"È solo... non registrata. In trecent'anni, ogni singola energia divina che ha toccato questa
+          città è passata da un tempio, un patto, un nome. Questa no."</em>
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-violet-300 mb-3">Se insistono per saperne di più</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Nerys non ha una risposta pronta, ma offre un dettaglio genuino, non una diagnosi — pensato per restare un
+        gancio, non una soluzione:
+      </p>
+      <div class="bg-black/40 border-l-4 border-violet-500 p-4 rounded-r text-sm mb-4">
+        <p class="italic text-violet-100 leading-relaxed">
+          <em>"C'è una cosa che mi disturba più delle altre. La 'grana' di questa firma — la sua trama, se preferite
+          — non somiglia a niente di ciò che il Gioco Divino ha portato in questa città negli ultimi anni. Somiglia,
+          se devo essere onesta, a certe voci più vecchie nei nostri archivi. Cose che risalgono a prima che
+          qualcuno chiamasse questa città 'sigillata'. Non vi dico altro perché non lo so per certo — e perché
+          alcune di quelle voci, per buoni motivi, il tempio ha smesso di indagare molto tempo fa."</em>
+        </p>
+      </div>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Se qualcuno chiede di indagare più a fondo con lei, Nerys prende tempo — è disponibilità istituzionale, non
+        personale: deve consultare i suoi superiori prima di aprire archivi più vecchi a degli esterni, quali che
+        siano le loro credenziali. Buon gancio aperto, non un rifiuto secco.
+      </p>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mt-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — cosa NON risolvere oggi</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Il valore della scena è la conferma <em>esterna e ufficiale</em> di ciò che Arianna sospettava da sola —
+          non una nuova rivelazione che chiuda il mistero. Nerys non deve nominare il mandato, il dungeon, l'ambra o
+          il Marchio Divino: la sua allusione a "voci più vecchie" resta vaga apposta, materiale per l'Ecosistema 2.
+          Buon eco silenzioso con <a href="/dm/sessioni/sessione-11c#rintocco" class="underline text-violet-300">la
+          Risonanza del Marchio Divino</a> introdotta in Sessione 11c, se in futuro vorrai farli combaciare — non
+          farlo notare da nessun personaggio stasera.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: FILONI APERTI ==================== -->
+    <div id="filoni-aperti" class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🧵</span> PARTE VII: FILONI APERTI DALLE SESSIONI PARALLELE
+      </h2>
+
+      <div class="bg-amber-900/30 border border-amber-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tutto quello che 11a, 11b e 11c hanno lasciato in sospeso, consolidato in un unico posto per non perderne
+          nessuno stasera. Non sono da risolvere tutti — usa questa lista per pescare quello che si incastra meglio
+          con come va la serata.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="font-bold text-amber-200 mb-2">Da Sessione 11a</p>
+          <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+            <li>Anders Voss mai visitato — Parte V.</li>
+            <li>Sacerdote di Mystra mai incontrato — Parte VI.</li>
+            <li>Taccuino di Kethrar tradotto solo in parte da Fealer (tratta di corpi morti).</li>
+            <li>Quinto membro del Dado Nero ancora non identificato da Thalio.</li>
+            <li>Thalio non sa ancora nulla della doppia firma di Riven né di Anders Voss.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="font-bold text-amber-200 mb-2">Da Sessione 11b</p>
+          <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+            <li>Rooks marchiato traditore ed espulso — buon gancio per una vendetta o ricomparsa ostile futura.</li>
+            <li>Segno divino nella sabbia letto con certezza da Valoris ("resta, rifiuta il Falco Rosso") — ambiguità voluta, mai smentita apertamente.</li>
+            <li>Regal ancora in attesa della risposta di Valoris sull'offerta personale del Falco Rosso.</li>
+            <li>Ricerca della ragazza dell'amuleto: appunti di Dresk in arrivo.</li>
+            <li>Requiem per Tam fissato al Tempio di Tempus, con Dresk.</li>
+            <li>Struttura di paga del Team Principale ancora del tutto non affrontata in gioco — vedi anche Parte II.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4 md:col-span-2">
+          <p class="font-bold text-amber-200 mb-2">Da Sessione 11c</p>
+          <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+            <li><strong class="text-white">Il confronto sul Rintocco è il filo più urgente:</strong> Morgrim ha promesso a Mira Greenleaf di scoprire cos'era e vuole riunire la squadra per confrontare cosa ognuno ha sentito — nessuno dei quattro (Morgrim, Riven, Fealer, Valoris) ne ha ancora parlato con gli altri. Buon modo di aprire la serata, vedi Parte I.</li>
+            <li>Titolo informale di "controllore d'armeria" ottenuto da Morgrim — vedi Parte II.</li>
+            <li>Bran Osgood, il recluta ferito, ha perso fiducia nel proprio equipaggiamento più che nel proprio braccio (Intuizione 16 di Morgrim) — piccolo filo umano da riprendere, non urgente.</li>
+            <li>Magnus ha promesso di riferire il Rintocco al Consiglio — se emerge al tavolo, buona occasione per farlo confermare o aggiungere dettagli.</li>
+            <li>Riserva narrativa non ancora usata: Magnus e il proprio giudizio su Valoris (Parte IV di 11c, "L'Occhio Onesto") — se non giocata lì, resta disponibile anche stasera.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== RIEPILOGO ==================== -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• <strong class="text-white">Stato attuale:</strong> tre giocate parallele con informazioni non condivise tra i personaggi — apri con un giro di racconto in game. Vedi Parte I.</li>
+        <li>• <strong class="text-white">Oggetti richiesti:</strong> spazio pronto, lista da compilare con i giocatori. Vedi Parte II.</li>
+        <li>• <strong class="text-white">Ricevimento:</strong> lettera di Lord Haventree pronta da consegnare, scaletta pronta se la giocano stasera. Vedi Parte III.</li>
+        <li>• <strong class="text-white">Sponsor:</strong> tre candidati da presentare (Drayce, Talmoor, Falco Rosso), decisione del Consiglio non del party. Vedi Parte IV.</li>
+        <li>• <strong class="text-white">Anders Voss:</strong> scena completa e pronta, mai giocata. Vedi Parte V.</li>
+        <li>• <strong class="text-white">Tempio di Mystra:</strong> nuovo — Sorella Nerys Vantry conferma dall'esterno la firma non registrata sulla cicatrice di Riven, senza risolvere il mistero. Vedi Parte VI.</li>
+        <li>• <strong class="text-white">Filoni aperti:</strong> il confronto di squadra sul Rintocco (promesso da Morgrim, priorità d'apertura), Rooks, Falco Rosso, ragazza dell'amuleto, Requiem per Tam, paga del Team Principale. Vedi Parte VII.</li>
+      </ul>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/sessioni/sessione-11c" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 11c - Il Muro e il Rintocco
+      </a>
+      <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Torna alle Sessioni
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
