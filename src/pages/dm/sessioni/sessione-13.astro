@@ -1,0 +1,327 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 13 - Bozza [DM]"
+  description="Note del Dungeon Master - Idee raccolte in attesa della Sessione 13"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">13</span>
+        <h1 class="text-4xl font-bold">Bozza — Idee Raccolte</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span class="px-2 py-1 bg-gray-500/20 text-gray-400 rounded">✏️ Bozza — non ancora una prep vera</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Non è ancora la preparazione della Sessione 13: <a href="/dm/sessioni/sessione-12" class="underline
+        text-blue-300">Sessione 12</a> non è nemmeno stata giocata. Questa pagina è solo un contenitore per idee
+        pensate in anticipo, da sviluppare quando arriverà davvero il momento.
+      </p>
+    </div>
+
+    <!-- ==================== IDEA: L'ARCO PRIMA DEL TEMPO ==================== -->
+    <div id="arco-prima-del-tempo" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🔥</span> IDEA — SE QUALCUNO PROVA A FORZARE L'ARCO PRIMA DEL TEMPO
+      </h2>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Contesto: la <a href="/dm/sessioni/sessione-11c#rintocco" class="underline text-red-300">Città
+          Sigillata</a> blocca ogni ingresso/uscita per sette giorni dall'ammissione del Dado Nero; se qualcuno del
+          party decide di provare comunque a varcare l'Arco Divino prima della scadenza (invece di aspettare), deve
+          succedere qualcosa — non un semplice "non funziona". Idea nata parlando col giocatore/DM, non ancora
+          testata al tavolo.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-red-300 mb-3">Meccanica proposta</h3>
+      <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-6">
+        <li><strong class="text-white">Telegrafare prima di far scattare i dadi.</strong> Appena si avvicinano alla soglia, il Marchio Divino inizia a scaldarsi visibilmente/percepibilmente, prima ancora di toccare l'Arco. Danno reale solo se insistono <em>dopo</em> l'avviso.</li>
+        <li><strong class="text-white">Danno automatico e crescente per round di insistenza:</strong> 1d4 al primo round in cui restano dentro la soglia, 2d4 al secondo, 3d4 al terzo, e così via. Non è un tiro salvezza contro il danno: il danno arriva comunque finché restano lì.</li>
+        <li><strong class="text-white">Il tiro salvezza serve a tornare indietro, non a evitare il danno.</strong> Ogni round può tentare una prova (CON, per resistere fisicamente al dolore e riuscire a muoversi — non Saggezza/Volontà, qui è dolore fisico puro) per riuscire a ritirarsi. Fallirla non significa danno extra: significa restare bloccato un altro round, e quindi subire il danno del round successivo.</li>
+        <li><strong class="text-white">Tetto di sicurezza:</strong> dopo 3-4 round consecutivi (da tarare), l'Arco stesso li respinge fisicamente — un colpo forte più l'espulsione dalla soglia, non un altro tiro danno libero. Serve a evitare che un tiro sfortunato in sequenza porti a morte per puro caso ai round alti (4d4-5d4 di media è già letale per un personaggio non altissimo livello).</li>
+        <li><strong class="text-white">Morte vera riservata a chi ignora ripetutamente gli avvertimenti</strong> (continua da solo oltre il primo round) o a un tentativo di soccorso di un alleato fallito, non a un singolo tiro brutto.</li>
+      </ul>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Da decidere prima di usarla al tavolo</p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li>DC della prova di Costituzione per ritirarsi (probabilmente crescente col numero di round, da tarare sul livello del party).</li>
+          <li>Se l'effetto è individuale (solo chi tocca la soglia) o si estende a chi lo tocca per tirarlo via.</li>
+          <li>Testo da leggere ad alta voce per il primo avviso (il bruciore prima di toccare l'Arco) e per l'eventuale espulsione finale.</li>
+          <li>Se ha senso legarla esplicitamente alla <a href="/dm/sessioni/sessione-11c#rintocco" class="underline text-red-300">Risonanza del Marchio Divino</a> già introdotta in 11c, o tenerla come effetto a sé.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== IDEA: UNA GILDA ESTRANEA PROVA A FORZARE L'ARCO ==================== -->
+    <div id="gilda-estranea-forza-arco" class="bg-purple-950/20 border border-purple-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-purple-400">💀</span> IDEA — SE UNA GILDA ESTRANEA PROVA A FORZARE L'INGRESSO
+      </h2>
+
+      <div class="bg-purple-900/20 border border-purple-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Caso diverso da quello sopra: qui non si tratta di membri già marchiati che insistono per uscire, ma di
+          una gilda esterna (senza Marchio Divino, mai passata per una Prova) che tenta di forzare l'Arco durante il
+          sigillo dei sette giorni, per farsi ammettere con la forza invece che dagli dèi. È un atto di
+          disobbedienza diretta al Gioco Divino, non un tentativo disperato di tornare da qualcuno — merita una
+          risposta più dura di quella dei PG. Gli dèi di questa città (Tempus, Tymora, Mystra) sono buoni, ma non
+          vanno contrariati: la punizione deve far capire che le regole del Gioco non si aggirano con la forza,
+          nemmeno quando chi le infrange non ha cattive intenzioni.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-purple-300 mb-3">Il Marchio Spezzato — punizione in due parti</h3>
+      <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-6">
+        <li><strong class="text-white">Non hanno un Marchio da far bruciare</strong> — quindi la reazione dell'Arco non riattiva niente di esistente: lo crea sul posto. La reiezione fisica (stessa escalation 1d4/2d4/3d4 di danno, vedi sopra) culmina, se insistono, in un'espulsione violenta che lascia un segno permanente, non in un semplice "torna indietro".</li>
+        <li><strong class="text-white">Il marchio visibile:</strong> una cicatrice nera, frastagliata, che pulsa debolmente invece di scaldarsi — riconoscibile a vista da chiunque porti già un Marchio Divino legittimo come "sbagliato". Non attiva mai nessuno dei tre sbocchi del <a href="/meccaniche/favore-divino" class="underline text-purple-300">Favore Divino</a>: è un marchio di rifiuto, non di ammissione. Comparirebbe anche sulla Stele delle Altre Città come voce pubblica, non solo a Waterdeep — l'onta è nota ovunque il Gioco viene seguito.</li>
+        <li><strong class="text-white">L'afflizione corporea (la parte "incurabile"):</strong> non una malattia convenzionale rimuovibile con Restoration/Remove Curse — è un giudizio divino diretto, non una maledizione arcana. Meccanicamente: una riduzione permanente dei PF massimi (la "ferita divina"), proporzionale a quanto hanno insistito prima dell'espulsione. Non guarisce con niente di standard: l'unica via è un vero atto di penitenza narrativo verso il dio offeso (non uno slot incantesimo), coerente col fatto che qui gli dèi sono duri ma non crudeli fini a se stessi — lasciano sempre una porta, mai una condanna a vita senza speranza.</li>
+        <li><strong class="text-white">Non colpisce tutti allo stesso modo:</strong> valuta di far ricadere l'afflizione corporea soprattutto su chi ha guidato il tentativo o ha insistito oltre gli avvertimenti, e lasciare agli altri membri "solo" il marchio nero visibile — altrimenti un'intera gilda, compresi membri trascinati controvoglia, viene punita in modo uniforme e sembra arbitrario.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-purple-300 mb-3 mt-8">Il casting — "L'Ultima Mano", la gilda improvvisata di Rooks</h3>
+      <div class="bg-purple-900/20 border border-purple-700/30 rounded p-4 mb-4">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Risposta concreta alla domanda "chi sarebbe questa gilda estranea": <strong class="text-white">Rooks
+          Fenmarsh</strong>. Doppiamente respinto: marchiato pubblicamente traditore ed espulso dai Guardiani della
+          Trama per il tentativo di reclutare Thalio dall'interno (<a href="/dm/sessioni/sessione-11b#consiglio"
+          class="underline text-purple-300">Sessione 11b</a>), e mai ammesso dal Dado Nero perché la detenzione gli
+          ha fatto perdere la finestra all'Arco, con Yorick reclutato in fretta al suo posto
+          (<a href="/gilde/dado-nero" class="underline text-purple-300">Dado Nero</a>). Non appartiene più a nessuna
+          gilda: né quella che l'ha rinnegato, né quella per cui aveva tradito. Non gli resta che mettersi in proprio,
+          in fretta e senza permesso.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          <strong class="text-white">Il suo autoinganno:</strong> Rooks ha visto con i propri occhi il Dado Nero
+          entrare "senza Prova, per assenza di rivali" (vedi <a href="/dm/sessioni/sessione-11c#rintocco"
+          class="underline text-purple-300">Sessione 11c</a>). Non ha gli strumenti per capire che è stata una
+          scelta degli dèi, non una scappatoia nelle regole — crede davvero che basti presentarsi con una squadra
+          completa perché il Gioco lo debba considerare. Non è cinismo: è la logica disperata di chi ha già perso
+          tutto due volte e si aggrappa all'unico precedente che ha visto.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg overflow-hidden mb-6">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-gray-900/60 text-gray-400 uppercase text-xs">
+            <tr>
+              <th class="p-3">Nome</th>
+              <th class="p-3">Ruolo / razza</th>
+              <th class="p-3">Perché è lì</th>
+              <th class="p-3">Nota DM</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-700 align-top">
+            <tr>
+              <td class="p-3 font-bold text-purple-200">Rooks Fenmarsh</td>
+              <td class="p-3 text-gray-400">Ladro, leader autoproclamato</td>
+              <td class="p-3 text-gray-400">Vuole dimostrare (a sé stesso più che agli altri) che conta ancora qualcosa.</td>
+              <td class="p-3 text-gray-400">Se qualcuno del party è presente, conosce già Thalio: reazione personale possibile, non neutra.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-200">Sella "Topolino" Rask</td>
+              <td class="p-3 text-gray-400">Mezzelfa, ladra — vecchia compagna di riserva dai tempi delle Monete Fortunate</td>
+              <td class="p-3 text-gray-400">Fiducia cieca in Rooks: è l'unico che le ha mai scritto dopo la fusione nei Guardiani.</td>
+              <td class="p-3 text-gray-400">La più sinceramente spaventata del gruppo. Buona candidata per restare "solo" col marchio nero, non con l'afflizione peggiore: segue, non guida.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-200">Grendel Ashpike</td>
+              <td class="p-3 text-gray-400">Umano, mercenario — muscolo a pagamento</td>
+              <td class="p-3 text-gray-400">Soldi promessi da Rooks (a credito: non li ha ancora). Non gliene importa nulla del Gioco Divino.</td>
+              <td class="p-3 text-gray-400">Primo a voler mollare al primo segno serio di pericolo — buona leva per una via di fuga parziale, se il tavolo la vuole.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-200">Vess Marrow</td>
+              <td class="p-3 text-gray-400">Tiefling, investigatrice/patto oscuro — rifiutata da due gilde minori in passato</td>
+              <td class="p-3 text-gray-400">Non segue Rooks: lo spinge. Ha un rancore personale verso il sistema delle gilde, non verso una gilda in particolare.</td>
+              <td class="p-3 text-gray-400">La vera istigatrice — è lei che insiste oltre gli avvertimenti se qualcuno deve farlo. Miglior candidata per l'afflizione corporea peggiore, non necessariamente Rooks.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-200">Tobin Quill</td>
+              <td class="p-3 text-gray-400">Gnomo, artificiere — assoldato per un compenso fisso</td>
+              <td class="p-3 text-gray-400">Crede di essere stato ingaggiato per "forzare una porta magica", non per sfidare gli dèi. Capisce la verità solo quando è già davanti all'Arco.</td>
+              <td class="p-3 text-gray-400">Il candidato più tragico: prova a tirarsi indietro appena capisce, forse troppo tardi. Buon momento per mostrare che il "marchio" può colpire anche chi non voleva davvero esserci.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — dinamica del gruppo in scena</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Non farli agire come un blocco unico: Sella segue per lealtà, Grendel per soldi, Vess per rabbia, Tobin per
+          equivoco. Se il tavolo li vede in scena (non solo per voce di piazza), la loro reazione all'avvertimento
+          iniziale (il bruciore prima del danno vero) può già dividerli — chi vuole fermarsi e chi no, con Vess che
+          spinge avanti e Tobin che capisce troppo tardi cosa sta succedendo. Rooks resta nel mezzo, combattuto tra
+          l'orgoglio e il rendersi conto, magari troppo tardi anche lui, di aver trascinato altre quattro persone in
+          qualcosa che non controlla.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-purple-300 mb-3">Il discorso di Rooks in piazza</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Ambientazione: Piazza dell'Arco, subito prima di entrare. Rooks sale su qualcosa (il bordo di una fontana, una
+        cassa) per farsi vedere. Sella, Grendel, Vess e Tobin restano dietro di lui, in ordine sparso, non schierati.
+        📢 Leggere ad alta voce.
+      </p>
+      <div class="bg-black/50 border-l-4 border-purple-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-purple-100 text-lg leading-relaxed">
+          "Waterdeep! Brava gente di Waterdeep, fermatevi un momento. Guardatemi bene, perché è l'ultima volta che
+          dovrete chiedervi chi sono."
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          "Mi chiamo Rooks Fenmarsh. Due anni di riserva per i Guardiani della Trama, buono solo a scaldare un posto
+          finché a qualcuno serviva. Il giorno che ho provato a prendermi quello che avevo guadagnato, il Consiglio
+          mi ha marchiato traditore in pubblica piazza. Belle parole, per gente che non mi ha mai degnato di un
+          nome vero finché non gli ho fatto comodo."
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          "Sono andato dal Dado Nero. Sapete cosa ho trovato quando sono uscito di cella? Un gnomo al posto mio,
+          reclutato in un giorno, perché nessuno lì aspetta chi non è comodo tenere d'occhio. Dorin Hask, se stai
+          ascoltando: tienitelo pure, quel posto. Non lo volevo per stare in coda dietro un altro capitano."
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          "Quindi no. Non chiedo più permesso a nessuno. Non ai Guardiani, non al Dado Nero, non a un Consiglio di
+          vecchi che decide chi merita la gloria da dietro una scrivania. Non mi serve una gilda che mi dica cosa
+          valgo. Entro io. Oggi. Con le mie regole. E se gli dèi hanno davvero occhi per vedere chi merita, mi
+          vedranno arrivare con le mie gambe, non con le loro benedizioni."
+        </p>
+        <p class="italic text-purple-100 text-lg leading-relaxed mt-4">
+          "Chi ha bisogno di un mandato? Chi ha bisogno di una Prova, di un Consiglio, di un capitano che ti dice
+          quando sei pronto? Io no. Non più. La gloria non si chiede in ginocchio: si prende." Una pausa, gli occhi
+          fissi sull'Arco. <em>"E io me la prendo da solo."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM — l'ironia da lasciare in scena, non da spiegare</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Rooks dice "da solo" con quattro persone alle spalle: non fargli notare la contraddizione, lascia che sia
+          il tavolo a coglierla da sé. È autoinganno, non bugia consapevole. Buon momento per la reazione muta dei
+          quattro dietro di lui: Sella annuisce troppo convinta, Grendel controlla la borsa dei soldi promessi più
+          che ascoltare, Vess sorride con approvazione genuina (è l'unica che ci crede davvero fino in fondo), Tobin
+          comincia solo ora a capire cosa significhi davvero "entrare senza permesso".
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-purple-300 mb-3">L'effetto sul corpo, minuto per minuto</h3>
+      <p class="text-gray-400 text-sm mb-4 italic">
+        Testo crudo, pensato per essere letto ad alta voce nel momento in cui toccano davvero la soglia. Segue la
+        stessa scansione a round della meccanica sopra: un blocco per round di insistenza, poi l'espulsione finale.
+        📢 Leggere ad alta voce, un blocco alla volta, mano a mano che il round passa.
+      </p>
+
+      <div class="bg-black/60 border-l-4 border-purple-500 p-6 my-4 rounded-r mb-3">
+        <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">Al contatto (round 1, 1d4)</p>
+        <p class="italic text-purple-100 leading-relaxed">
+          Il gesto sembra innocuo: una mano che si allunga, un piede che avanza oltre la linea invisibile dove finisce
+          la piazza e comincia l'Arco. Poi il mondo si stringe. Non è un muro: è qualcosa che si accorge di loro. La
+          pelle, nel punto di contatto, si increspa come cera vicino a una fiamma, e sotto la superficie compaiono
+          crepe sottili, nere come inchiostro versato sotto vetro, che risalgono verso il polso in un istante che
+          dura troppo a lungo per essere naturale. Non è calore. È qualcosa di più preciso, più cattivo: come se ogni
+          nervo di quel braccio venisse afferrato uno per uno e tirato, con calma, nella direzione sbagliata. Il
+          primo urlo non è una scelta. È un riflesso.
+        </p>
+      </div>
+
+      <div class="bg-black/60 border-l-4 border-purple-500 p-6 my-4 rounded-r mb-3">
+        <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">Se restano (round 2, 2d4)</p>
+        <p class="italic text-purple-100 leading-relaxed">
+          Chi resta lo sente salire. Le crepe nere risalgono oltre il gomito, sotto la pelle, come vene che si
+          spengono una dopo l'altra, e con loro qualcosa dentro comincia a incrinarsi: il respiro si spezza a metà,
+          le ginocchia cedono da sole. Sopra il rumore della piazza, un rintocco basso e storto rimbomba una sola
+          volta: lo stesso suono che sentono da tempo i portatori di un Marchio vero, ma sporco, rovesciato, sbagliato
+          di un'ottava, come una campana incrinata che suona comunque.
+        </p>
+      </div>
+
+      <div class="bg-black/60 border-l-4 border-purple-500 p-6 my-4 rounded-r mb-3">
+        <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">Se insistono ancora (round 3, 3d4)</p>
+        <p class="italic text-purple-100 leading-relaxed">
+          Ormai non è più dolore isolato in un arto: è tutto il corpo che sembra volersi staccare da dentro. Capillari
+          scoppiano sotto gli occhi, disegnando ragnatele rosse sul bianco. Chi cerca di parlare sputa solo saliva
+          scura, come se le parole stesse si fossero incrinate insieme al resto. È a questo punto che qualcuno,
+          per la prima volta, potrebbe smettere di respirare da solo.
+        </p>
+      </div>
+
+      <div class="bg-black/60 border-l-4 border-purple-500 p-6 my-4 rounded-r mb-6">
+        <p class="text-xs text-purple-400 uppercase tracking-widest mb-2">L'espulsione</p>
+        <p class="italic text-purple-100 leading-relaxed">
+          Poi, tutto insieme, la barriera si stanca di loro. Non è una spinta: è un rifiuto secco e totale, come una
+          mano enorme che scaraventa via un peso di cui non vuole più occuparsi. Il corpo vola, colpisce il selciato,
+          e per un istante, prima che il dolore torni a farsi sentire, resta immobile abbastanza a lungo perché chi
+          guarda tema il peggio.
+        </p>
+        <p class="italic text-purple-100 leading-relaxed mt-4">
+          Quando si rialzano, chi ci riesce, la cicatrice è lì per restare: non una linea pulita come un Marchio
+          vero, ma una frattura nera e storta che pulsa debolmente al ritmo del cuore, come se qualcosa di vivo fosse
+          rimasto incastrato sotto la pelle. Chi la osserva da vicino giura di sentire, per una frazione di secondo,
+          un debolissimo rintocco a ogni battito.
+        </p>
+        <p class="italic text-purple-100 leading-relaxed mt-4">
+          Ma il segno sulla pelle non è la parte peggiore. Quello che è stato tolto non si vede: un vuoto, una
+          leggerezza sbagliata, come se un pezzo della loro stessa vitalità fosse rimasto dall'altra parte della
+          soglia (la riduzione permanente di PF massimi). Da quel giorno respirano un po' più corti, guariscono un
+          po' più lenti, e nelle notti fredde sentono, per una frazione di secondo, la stessa fame di calore che li
+          aveva presi la prima volta che la barriera li ha toccati.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Epilogo suggerito per "L'Ultima Mano"</p>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+          <li><strong class="text-white">Grendel</strong> molla al primo urlo, prima ancora del secondo round: si tira indietro da solo, se la cava con una bruciatura al polso che sparisce in una settimana. Sparisce anche lui, senza aspettare il resto, e senza essere mai stato pagato.</li>
+          <li><strong class="text-white">Sella</strong> si blocca al secondo round, paralizzata più dalla paura che dal dolore: qualcuno deve tirarla via con la forza. Esce con il marchio nero visibile, ma senza la ferita interna: segue, non guida, e la barriera sembra "accontentarsi" di questo.</li>
+          <li><strong class="text-white">Tobin</strong> capisce troppo tardi e cade mentre cerca di scappare, trascinato per un braccio da chi gli sta vicino: finisce comunque dentro il terzo round. Esce marchiato e con la ferita interna, l'unico che non voleva davvero essere lì: il momento più amaro da giocare, se il tavolo lo regge.</li>
+          <li><strong class="text-white">Vess</strong> non si ferma da sola: va avanti apposta, convinta fino alla fine che gli dèi la stiano "testando". È lei a prendersi il peggio, l'espulsione più violenta e la ferita più profonda, e persino a terra, marchiata, sorride.</li>
+          <li><strong class="text-white">Rooks</strong> resta fuori più a lungo degli altri, paralizzato dal vedere cosa sta succedendo alla sua gente, e attraversa la soglia solo all'ultimo per tirare fuori Tobin: esce marchiato anche lui, un taglio nero che gli attraversa una guancia, ma senza (a discrezione del DM) la ferita interna peggiore. Vive per portarsi dietro quello che ha fatto, non per essere finito lì stesso.</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Da decidere prima di usarla al tavolo</p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li>Quantificare la riduzione di PF massimi (es. legata al numero di round di insistenza, come il danno).</li>
+          <li>Che aspetto ha in concreto il percorso di penitenza per rimuovere l'afflizione — e se è persino possibile, o se resta un rischio reale e permanente per chi la subisce.</li>
+          <li><strong class="text-white">Quando succede:</strong> pomeriggio del giorno dopo la Sessione 12, o la sera stessa — ancora da decidere. Il pomeriggio lascia più margine per una voce di piazza che arriva al party lo stesso giorno; la sera è più cupa e isolata, meno testimoni, forse più coerente con un tentativo che Rooks vuole tenere nascosto finché non è già dentro.</li>
+          <li>Se ha senso che il party ne senta parlare solo per voce di piazza/Stele, o se lo vedano accadere in scena — se lo vedono, è quasi automatico un aggancio diretto con Thalio (Rooks lo conosce) o con chiunque del party l'abbia fatto arrestare.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/sessioni/sessione-12" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 12 - Tutti i Fili Convergono
+      </a>
+      <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Torna alle Sessioni
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
