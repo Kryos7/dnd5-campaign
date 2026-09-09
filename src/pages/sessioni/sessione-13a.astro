@@ -1,0 +1,646 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 13a - Il Ritmo e la Tregua"
+  description="Sessione 13a: Riven scende con Arianna nell'Ala di Contenimento del Blackstaff e incontra Anders Voss, l'unico altro sopravvissuto all'onda del Giorno dell'Annuncio"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">13a</span>
+        <h1 class="text-4xl font-bold">Il Ritmo e la Tregua</h1>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
+        <span>📅 09/09/2026</span>
+        <span>⏱️ ~40 min</span>
+        <span>🎭 Sessione parallela · Solo Riven</span>
+        <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded">✓ Completata</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Uscendo dal Tempio di Mystra il gruppo si divide: gli altri rientrano, e
+        <strong class="text-green-400">Riven</strong> va con <strong>Arianna</strong> all'Accademia di
+        Blackstaff, dove da quasi tre mesi è rinchiuso l'unico altro sopravvissuto all'onda del Giorno
+        dell'Annuncio. Quello che trova venti metri sotto terra non è un caso di studio: è un uomo con le
+        stesse venature che lui porta sul braccio, allargate a metà volto, che non controlla più niente, che
+        piange quando lo vede entrare e che, prima di lasciarlo andare, gli chiede di ucciderlo.
+      </p>
+    </div>
+
+    <!-- Riepilogo Veloce -->
+    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+        <span>⚡</span> In Breve
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-cyan-400 font-bold mb-1">Tappe Principali</p>
+          <p class="text-gray-300">La camminata con Arianna verso Blackstaff, le tre regole di Orlin Thess, la discesa tra i sigilli antimagia, l'incontro con Anders Voss, due crisi di magia selvaggia e il momento in cui le due cicatrici si sono sincronizzate</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-yellow-400 font-bold mb-1">Scoperte</p>
+          <p class="text-gray-300">La vicinanza di Riven placa le scariche di Anders; le venature dei due sono identiche e pulsano a un ritmo che non è quello del cuore; i sacerdoti che studiavano Anders hanno smesso tutti insieme, nello stesso momento, senza spiegazioni</p>
+        </div>
+        <div class="bg-gray-800/50 rounded p-3">
+          <p class="text-purple-400 font-bold mb-1">Resta in Sospeso</p>
+          <p class="text-gray-300">La richiesta di Anders di essere ucciso, la promessa di Riven di indagare e provare a salvarlo, l'idea di replicare il siero di Vex, il perché i sacerdoti si siano fermati e la ricerca sugli antichi testi del Tempio di Mystra</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE I -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🚶</span> PARTE I: LA STRADA VERSO BLACKSTAFF
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">I.</span> Una Domanda Rimasta Aperta
+          </h3>
+          <p class="leading-relaxed">
+            Appena fuori dal Tempio di Mystra il gruppo si separa: gli altri tornano indietro,
+            <strong class="text-green-400">Riven</strong> e <strong>Arianna</strong> si incamminano senza
+            fretta verso l'Accademia di Blackstaff. Sono passati tre mesi e una settimana dalla Discesa degli
+            Dèi: tre mesi esatti fino all'apertura dell'Arco Divino, più i giorni dell'Ecosistema 1. Anders
+            Voss è rinchiuso là sotto quasi da giorno uno, cioè da quando Riven stesso si è svegliato con la
+            cicatrice sul braccio.
+          </p>
+          <p class="leading-relaxed">
+            Lungo la strada Riven torna su una parola che <strong>Sorella Neris</strong> aveva usato senza
+            spiegarla: <em>pericolosa</em>. Pericolosa da usare, da incanalare, da studiare? Arianna rallenta il
+            passo ed evita di guardarlo, tenendo lo sguardo per terra o spostato dall'altro lato.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              <em>"Il motivo, o forse il più grande, è proprio quello verso cui ci stiamo dirigendo."</em>
+              La vicenda di Anders Voss, ammette, ha fatto rumore in tutti i luoghi dove la magia viene
+              trattata, sia quella arcana sia quella divina, nonostante lei non sia mai andata a visitarlo e un
+              po' se ne vergogni. <em>"La Discesa degli Dèi, per la gente comune, è vista come una benedizione:
+              gli dèi presenti tra noi, che possono aiutare, che possono benedire le famiglie. Ma Anders Voss, e
+              anche tu, e anche le altre decine di persone che non ce l'hanno fatta a sopportare quel peso, siete
+              tutt'altro che una benedizione."</em>
+            </p>
+            <p class="italic text-indigo-100 leading-relaxed mt-3">
+              Tra chi usa la magia, o tra chi sta vicino agli dèi, quello che è successo fa paura per un motivo
+              preciso: <em>"sembra quasi una punizione. O qualcosa che sfugge al controllo degli dèi, che è
+              ancora peggio."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">II.</span> "Una Minima Parte di Quello che Ha Lui"
+          </h3>
+          <p class="leading-relaxed">
+            Riven chiede se Anders sia rinchiuso per qualcosa che ha fatto con la magia. La risposta è più
+            semplice e più brutta: è rinchiuso perché è incontrollabile, e nessuno è in grado di controllarlo
+            tranne il campo di forza in cui lo tengono. Non è questione di volontà o di maestri che non hanno
+            saputo insegnargli.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              <em>"Riven, quello che hai tu è una minima parte di quello che ha lui. Lui, se vogliamo, è molto
+              più potente di te. Ma quell'energia è impossibile da controllare."</em> Le sue scariche non sono
+              normali e non sono provocate da niente. <em>"Tu, da quello che mi hai detto e da quello che abbiamo
+              visto durante gli esperimenti, hai comunque qualcosa di scatenante. Per lui invece sono scariche
+              autonome, spontanee, che arrivano ogni pochi minuti, e non riesce a fermarle."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Prima ancora di arrivare alla porta, Arianna mette in chiaro cosa non farà: niente da tracciargli
+            addosso, niente da leggergli dentro, nessuna richiesta di stare fermo mentre prova qualcosa. Non per
+            scortesia, ma perché Anders è chiuso lì esattamente per il motivo per cui a Riven certe cose si
+            possono fare e a lui no.
+          </p>
+          <div class="bg-black/40 border-l-4 border-indigo-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-indigo-100 leading-relaxed">
+              <em>"Quello che possiamo fare è guardare e parlare, niente di più, se ancora gli riesce di parlare.
+              Tu hai il diritto di fare tutte le domande che vuoi, ma le farai tu. Io non parlerò."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            È una promessa che Arianna manterrà per quasi tutta la scena. Riven, dal canto suo, arriva con una
+            domanda già pronta: vuole confrontare le due esperienze, capire come si è risvegliato l'altro, sempre
+            che l'altro sia ancora in grado di ricordare e di raccontare.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE II -->
+    <div class="bg-slate-800/30 border border-slate-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-slate-300">🚪</span> PARTE II: TRE REGOLE E VENTI METRI DI SCALE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-slate-300">I.</span> Maestro Orlin Thess
+          </h3>
+          <p class="leading-relaxed">
+            Ad accoglierli è <strong class="text-white">Orlin Thess</strong>, incaricato diretto del contenimento
+            arcano dell'Accademia. Non è un carceriere: è più un infermiere che usa la magia e che amministra
+            eventuali pazienti magici. Saluta con fare sommesso, e sembra una persona sconsolata, lasciata a un
+            compito che non le fa alcun piacere. Si occupa di Anders da quando sono scesi gli dèi, e lo tiene
+            sedato quanto basta per non ucciderlo.
+          </p>
+          <p class="leading-relaxed">
+            Mentre cominciano a scendere, enuncia tre regole non negoziabili.
+          </p>
+          <div class="bg-black/40 border-l-4 border-slate-400 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-slate-100 leading-relaxed">
+              <em>"Non lo toccate. Non entrate nel cerchio per nessun motivo, neanche se ve lo chiede lui. Non
+              alzate la voce, qualunque cosa dica, e vi dirà possibilmente di tutto. E quando vi dico di uscire,
+              uscite, senza fare domande e senza rallentare."</em>
+            </p>
+            <p class="italic text-slate-100 leading-relaxed mt-3">
+              Non lo dice arrabbiato. Lo dice come uno che non ce la fa più. Poi aggiunge:
+              <em>"Avrete forse qualche minuto buono, due o tre al massimo. Il resto del tempo saranno urla."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-slate-300">II.</span> La Scala a Chiocciola
+          </h3>
+          <p class="leading-relaxed">
+            La discesa è lunghissima, venti o trenta metri sotto il livello dell'Accademia. Sulle pareti ci sono
+            sigilli, e più si scende più diventano fitti: Riven li riconosce come sigilli antimagia. Man mano che
+            passa accanto a loro sente la propria magia farsi silenziosa, sia dalla parte della cicatrice sia dal
+            marchio sia da quella porzione di Trama che di solito ha a disposizione. Non sparisce: semplicemente
+            smette di rispondere.
+          </p>
+          <p class="leading-relaxed">
+            Alla domanda se, con la magia interdetta, siano al sicuro là sotto, Arianna risponde che il cerchio in
+            cui Anders è rinchiuso non è rompibile, a meno di oltrepassarlo di propria volontà. Poi, negli ultimi
+            dieci metri prima della porta, comincia il rumore: urla e suoni lunghi che si interrompono e
+            ricominciano. La voce è una sola, ma sembra arrivare da punti diversi della stanza verso cui stanno
+            andando. Orlin va dritto per dritto, non si gira, non spiega niente e non sembra preoccupato: per lui
+            è la normalità.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE III -->
+    <div class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🕯️</span> PARTE III: LA CELLA SENZA SBARRE
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Cinque Giri di Chiave
+          </h3>
+          <p class="leading-relaxed">
+            La porta è di legno massiccio, con intarsi e spranghe di ferro, e il maniglione richiede cinque giri
+            di chiave. Dentro c'è una stanza cilindrica, sui sei metri per sei, senza sbarre: un cerchio inciso
+            nel pavimento occupa quasi tutto lo spazio, lasciando solo uno stretto camminamento perimetrale, e
+            pulsa di una luce grigia e sorda. Non è magia visibile, ma Riven, abituato com'è, quasi riesce a
+            vederla: un campo di forza, a tutti gli effetti.
+          </p>
+          <p class="leading-relaxed">
+            La lanterna che Orlin ha portato giù, qui, non serve. Il motivo è al centro del cerchio.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              C'è un uomo seduto per terra, la schiena contro l'unica branda della stanza, e metà di lui è
+              illuminata da dentro. Quelle venature Riven le riconosce: sono le stesse che ha sul braccio, le
+              stesse che ha visto ramificarsi sotto la propria pelle mentre Arianna contava i secondi ad alta
+              voce, dopo il bagno nell'ambra, dopo ogni scarica di magia selvaggia involontaria.
+            </p>
+            <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+              Solo che qui non sono un tracciato sottile su un avambraccio. Partono dalla testa, ne prendono
+              metà, scendono lungo il collo e spariscono dentro la camicia, sbrindellata su tutto il lato
+              sinistro tra bruciature, buchi e pezzi mancanti. La pelle che si intravede è quasi trasparente, e
+              sotto c'è quella luce azzurrina che pulsa a un ritmo che non è il ritmo di un cuore. Su quel lato
+              non ha più capelli, e in qualche punto ci sono garze che hanno provato a tamponare qualcosa con
+              pochissimo effetto: bruciacchiate, gialle di calore, mezze sbrindellate.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> "Dimmi che la Senti Anche Tu"
+          </h3>
+          <p class="leading-relaxed">
+            Anders sta parlando da solo, a bassa voce e molto velocemente, e non si accorge nemmeno che la porta
+            si è aperta: sono sussurri, e non si capisce cosa dica. Poi Orlin pronuncia il suo nome, e lui alza la
+            testa. L'occhio destro è quello di un uomo qualunque di circa trent'anni. Al posto del sinistro non
+            c'è più niente: nessuna palpebra, nessuna pupilla, solo luce azzurra che esce dall'orbita.
+          </p>
+          <p class="leading-relaxed">
+            Guarda Riven per due secondi buoni, e in quei due secondi succede tutto: lo mette a fuoco, capisce
+            cosa sta guardando, e comincia a piangere dall'occhio buono. La voce è distrutta, roca come quella di
+            uno che ha urlato tutta la notte, ed è esattamente così.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"Sei venuto. Sapevo che qualcun altro c'era. Vieni vicino, vieni vicino, ti prego, fammi vedere
+              dove ce l'hai tu."</em> Resta un attimo interdetto, si guarda tutto il lato sinistro del corpo, poi
+              torna su Riven. <em>"Dimmi che la senti anche tu. Non il male. Il ritmo."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven, scioccato dall'immagine, si alza lentamente la manica sinistra e solleva il braccio per fargli
+            vedere la cicatrice. <em>"Tu invece dove ce l'hai?"</em> Anders comincia a picchiettarsi lo zigomo con
+            due dita, in modo compulsivo, con un gesto talmente familiare da tradire che lo ripete cento volte al
+            giorno.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"Non è il cuore. Non va col cuore. Tutti dicono che è il cuore, ma non è il cuore!"</em> Poi più
+              piano, con una lucidità di cui sembra riprendere possesso: <em>"Ho poco tempo prima che ricominci.
+              Cosa vuoi sapere? Chiedi le cose in ordine di importanza, ti conviene."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">III.</span> Un'Ora Esatta
+          </h3>
+          <p class="leading-relaxed">
+            Riven chiede cos'è il ritmo di cui parla, cosa sente dentro di sé oltre alla magia, e se si sia
+            risvegliato già in quello stato. La risposta è il racconto di una giornata che i due, senza saperlo,
+            hanno passato nella stessa città.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"Ero in piazza. Eravamo tutti in piazza, anche tu eri in piazza: dove vai, quando ti dicono che
+              una dea è scesa sul mondo? C'era una donna alla mia destra, un ragazzo davanti a me, non li
+              conoscevo."</em> Le due dita ricominciano a battere sullo zigomo. <em>"Poi il cielo si è piegato, o
+              mi sono piegato io, non lo so. Loro sono caduti subito, io no. E per un'ora ho creduto di essere
+              stato fortunato rispetto a loro. Un'ora esatta. Poi ho sentito caldo."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Poi ride, in una maniera convulsa e senza senso, perché in quella situazione non c'è niente che faccia
+            ridere.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"Guardami. Guarda dove sono. Ti sembra che io riesca a controllarlo?"</em> Ha provato tutto
+              quello che Orlin e gli altri due maghi prima di lui hanno saputo suggerire: respirare in un certo
+              modo, non mangiare, pregare, <em>"anche se è ridicolo, dato che non sono mai stato un devoto. Tre
+              respiri corti sono l'unica cosa che qualche volta funziona. E funziona per venti secondi."</em>
+              Mentre lo dice, prova davvero a farli.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Alla domanda se qualcosa acceleri il processo, la risposta dice più sul tempo perduto che sulla magia:
+            Anders non sa nemmeno che giorno sia.
+          </p>
+          <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-red-100 leading-relaxed">
+              <em>"È stato graduale. Sei settimane fa, o di più, che giorno è oggi non lo so, era una linea sullo
+              zigomo. Adesso guarda. Nessuno sa dirmi dove si fermerà, né quando si fermerà."</em> Una pausa.
+              <em>"Io un'idea me la sono fatta."</em> E poi, come se rispondesse a un'altra domanda:
+              <em>"Io sono qui da sempre. Da quando ho questa cosa."</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE IV -->
+    <div class="bg-orange-900/20 border border-orange-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">⚡</span> PARTE IV: LA PRIMA SCARICA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-4">
+          <p class="leading-relaxed">
+            L'occhio buono di Anders si gira verso l'alto, fino a lasciare visibile solo la parte bianca. Un
+            istante dopo, tutti gli oggetti di metallo che i visitatori hanno addosso diventano roventi.
+          </p>
+          <div class="bg-black/50 border-l-4 border-orange-500 p-6 my-4 rounded-r">
+            <p class="italic text-orange-100 text-lg leading-relaxed">
+              Arianna urla e getta a terra la borsa che teneva in mano, con tutti i suoi anelli di metallo. Orlin
+              lascia cadere la lanterna. L'anello di Riven brucia, e brucia sul serio.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven prova a toccare il proprio <strong class="text-white">anello di accumulo incantesimi</strong>
+            per attivare Assorbire Energia come reazione: non succede niente, perché là sotto la magia non
+            risponde. Non gli resta che sfilarsi tutto quello che ha di metallo, fibbie e pugnale compresi, e
+            buttarlo per terra. Poi arretra fino ad appoggiare le spalle al muro, il più lontano possibile dal
+            cerchio, senza però smettere di osservare: non vuole perdersi niente di quello che sta accadendo.
+          </p>
+          <p class="leading-relaxed">
+            Dentro il cerchio, l'unico oggetto metallico è la branda: il ferro diventa rosso rovente e il
+            materasso comincia a bruciacchiare. Anders è sollevato da terra, le braccia aperte, percorso da
+            scariche di energia azzurra che partono da tutta la metà segnata del corpo. Arianna lo fissa senza
+            muoversi, in uno stato che Riven non le ha mai visto addosso.
+          </p>
+          <div class="bg-black/40 border-l-4 border-orange-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-orange-100 leading-relaxed">
+              Dopo una decina di secondi rimette lentamente i piedi per terra, ma resta in una specie di trance.
+              Poi comincia a parlare con qualcuno che non è nella stanza: <em>"No, mamma, no. Ho detto che l'ho
+              spenta. L'ho spenta. L'HO SPENTA."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Una scarica devastante parte dal suo corpo, il materasso si abbrustolisce del tutto, e lui crolla
+            accasciato per terra, le gambe mezze incrociate. Poi, piano, rialza la testa e torna a guardare Riven,
+            ansimando.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE V -->
+    <div class="bg-red-900/20 border border-red-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🩸</span> PARTE V: "UCCIDIMI"
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">I.</span> Il Sapore Sbagliato
+          </h3>
+          <p class="leading-relaxed">
+            Riven gli chiede cosa sia appena successo, se ricordi qualcosa, e poi torna sui sacerdoti che lo hanno
+            esaminato. La risposta è la prima cosa davvero utile della serata, e arriva come conferma vissuta, non
+            come teoria.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"I sacerdoti che mi hanno guardato dentro, all'inizio, dicevano tutti la stessa frase: che
+              quello che sentono da me non ha il sapore giusto. Ma nessuno mi ha mai spiegato cosa volesse
+              dire."</em> Una pausa. <em>"Te lo dico io cosa vuol dire. Quando sale, sembra che qualcosa prenda
+              possesso di me. Qualcosa che non mi appartiene e che non riesco a controllare. E poi il dolore. Il
+              dolore."</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">II.</span> La Richiesta
+          </h3>
+          <p class="leading-relaxed">
+            E subito dopo, senza cambiare tono, come si dice una cosa a cui si è pensato a lungo:
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"Prima che tu te ne vada, devo chiederti una cosa. Uccidimi. Non oggi, se non riesci. Ma torna,
+              e fallo."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            <strong class="text-white">Orlin</strong> guarda Riven, gli fa un cenno con la testa e dice tre
+            parole soltanto: <em>"Lo chiede a tutti."</em> Anders accenna un mezzo sorriso storto, che sul lato
+            sinistro del viso non riesce nemmeno a formarsi.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-red-400">III.</span> Quelli che Hanno Smesso Tutti Insieme
+          </h3>
+          <p class="leading-relaxed">
+            Riven prova a portarlo su un terreno più concreto: quando lo hanno analizzato, hanno parlato di due
+            flussi di magia dentro di lui? Hanno scoperto qualcosa? La risposta apre una porta che nessuno si
+            aspettava.
+          </p>
+          <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r">
+            <p class="italic text-red-100 text-lg leading-relaxed">
+              <em>"Le prime settimane venivano in sei o sette. Mi studiavano, mi guardavano, mi toccavano. Poi,
+              per qualche motivo, hanno smesso tutti insieme, nello stesso momento. Nessuno è più venuto, nessuno
+              mi ha più detto niente."</em> Una pausa lunga. <em>"Ho pensato che si fossero arresi. Adesso che me
+              lo chiedi, però, mi viene il dubbio che qualcuno ci sia rimasto secco."</em>
+            </p>
+            <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+              Sui due flussi, non ha una risposta da dare. <em>"Non lo so, non ti so rispondere. Divino, arcano.
+              Quello che so è che mi ha tolto tutto."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven sospira profondamente, come se sentisse addosso una parte del dolore dell'altro, poi si volta
+            verso Arianna e le chiede se abbia domande da fare. Lei fa cenno di no con la testa, senza aggiungere
+            una parola, come aveva promesso sulla strada.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE VI -->
+    <div class="bg-violet-900/20 border border-violet-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-violet-400">🔵</span> PARTE VI: LA TREGUA
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-violet-400">I.</span> Trenta Centimetri dal Cerchio
+          </h3>
+          <p class="leading-relaxed">
+            Anders si alza e comincia a camminare verso di loro: la cella è abbastanza grande da lasciargli
+            qualche passo di libertà. Orlin abbassa spontaneamente una mano, il palmo rivolto verso Riven, come a
+            dire di stare indietro. Ma la richiesta di Anders è precisa, e si preoccupa di specificarne i limiti.
+          </p>
+          <div class="bg-black/40 border-l-4 border-violet-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-violet-100 leading-relaxed">
+              <em>"Non ti sto chiedendo di entrare. Avvicinati. Voglio vedere più da vicino la tua
+              cicatrice."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven fa un passo avanti, restando fuori dal cerchio, a una trentina di centimetri dal limite di
+            quella cupola trasparente che li separa. Poi si toglie il mantello e scopre del tutto l'avambraccio
+            sinistro, mostrandogli la cicatrice grossa e le venature che risalgono verso il palmo e verso la
+            spalla.
+          </p>
+        </div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-violet-400">II.</span> "Ora Ricordo Com'Era"
+          </h3>
+          <p class="leading-relaxed">
+            Lo sente prima ancora di vederlo.
+          </p>
+          <div class="bg-black/50 border-l-4 border-violet-500 p-6 my-4 rounded-r">
+            <p class="italic text-violet-100 text-lg leading-relaxed">
+              La cicatrice sul braccio si scalda: non abbastanza da bruciare, ma quanto basta perché Riven chiuda
+              la mano senza deciderlo. Ed è una cosa che non dovrebbe succedere, perché da quando è sceso sotto i
+              sigilli quella cicatrice era rimasta completamente silente, spenta come tutto il resto.
+            </p>
+            <p class="italic text-violet-100 text-lg leading-relaxed mt-4">
+              La seconda cosa è Anders. Sta sorridendo e piangendo insieme, e le scariche che fino a un attimo
+              prima lo attraversavano di continuo si sono placate. Ha la faccia di qualcuno a cui hanno appena
+              tolto un macigno dal petto dopo settimane. Fa un respiro intero, dentro e fuori, senza tremare.
+              <em>"Ora ricordo com'era."</em>
+            </p>
+            <p class="italic text-violet-100 text-lg leading-relaxed mt-4">
+              Poi lo guarda ancora, con le lacrime che gli scendono dall'occhio buono, e dice:
+              <em>"Non andartene."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Riven si volta verso Arianna e formula ad alta voce l'unica ipotesi possibile: che la sua cicatrice e
+            quella di Anders siano entrate in comunicazione, e che sia questo a placare la magia. Arianna nel
+            frattempo si è spostata sul suo lato sinistro, e sta osservando con attenzione i movimenti di energia
+            sulla cicatrice, alternando lo sguardo tra il braccio di Riven e l'uomo dentro il cerchio. Mentre lui
+            parla, lei annuisce. Lo fa senza pensarci, come si annuisce a una cosa che potrebbe davvero essere.
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-violet-400">III.</span> "Vuoi Essere Ridotto Così?"
+          </h3>
+          <p class="leading-relaxed">
+            Orlin, invece, si spaventa. Con insistenza mette una mano sul petto di Riven e lo spinge indietro.
+          </p>
+          <div class="bg-black/40 border-l-4 border-violet-500 p-4 rounded-r text-sm mb-4">
+            <p class="italic text-violet-100 leading-relaxed">
+              <em>"È pericoloso. Non sai cosa potrà succedere dopo. Forse stai accumulando la sua energia: vuoi
+              essere ridotto così?"</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Alla parola "accumulando", Arianna guarda di nuovo la cicatrice, poi afferra Riven per la collottola e
+            tira anche lei all'indietro. La tregua finisce nel momento esatto in cui si allontana.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE VII -->
+    <div class="bg-slate-900/40 border border-slate-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-slate-300">💀</span> PARTE VII: LO STRAPPO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <p class="leading-relaxed">
+            Il calore, il tepore, quell'attività che Riven stava sentendo lungo il braccio svaniscono quasi
+            immediatamente, come se la cicatrice si fosse riaddormentata di colpo. Anders tira un urlo, un
+            <em>"NO"</em> lunghissimo, e in mezzo secondo un'onda di pressione li avvolge tutti e tre.
+          </p>
+          <div class="bg-black/50 border-l-4 border-slate-400 p-6 my-4 rounded-r">
+            <p class="italic text-slate-100 text-lg leading-relaxed">
+              Le orecchie fischiano, il mal di testa è devastante, per due secondi sembra che la testa stia per
+              scoppiare. Riven e Arianna restano in piedi, pur nel dolore. Orlin finisce a terra accasciato,
+              urlando, e quando si rialza ha il sangue che gli esce dalle orecchie.
+            </p>
+            <p class="italic text-slate-100 text-lg leading-relaxed mt-4">
+              Poi qualcosa cade dal soffitto della cella. Con la vista ancora offuscata, sembrano esseri viventi:
+              uccellini, insetti, rane. Piovono letteralmente dentro il cerchio.
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Cinque secondi dopo Anders smette di urlare. Guarda per terra, poi guarda loro. Gli animali sono tutti
+            morti stecchiti, rimasti dove sono caduti. Abbassa la testa di colpo, sconsolato, fa qualche passo
+            indietro, prende un secchio da dietro il letto e comincia a raccoglierli uno a uno.
+          </p>
+          <p class="leading-relaxed">
+            Orlin si rialza, cerca di rimettersi in ordine, scuote la testa. È visibilmente confuso e provato.
+            <em>"Forse è il caso di uscire adesso."</em>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+            <span class="text-slate-300">La Promessa</span>
+          </h3>
+          <p class="leading-relaxed">
+            Prima di seguire Orlin fuori, Riven si gira un'ultima volta verso l'uomo nel cerchio.
+          </p>
+          <div class="bg-black/50 border-l-4 border-green-500 p-6 my-4 rounded-r">
+            <p class="italic text-green-100 text-lg leading-relaxed">
+              <em>"Anders, indagherò e proverò a salvarti."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            Anders resta zitto. Lo guarda per un attimo, poi torna a rivolgere lo sguardo verso terra, e riprende
+            a raccogliere gli animali morti. Orlin recupera quel che resta della lanterna e comincia a risalire le
+            scale, assicurandosi che entrambi abbiano oltrepassato la porta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE VIII -->
+    <div class="bg-indigo-900/20 border border-indigo-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🌇</span> PARTE VIII: LA STRADA DEL RITORNO
+      </h2>
+
+      <div class="prose prose-invert max-w-none space-y-6 text-gray-300">
+        <div class="mb-8">
+          <p class="leading-relaxed">
+            Mentre risalgono, Riven mette sul tavolo due idee. La prima: quando si riuscirà a replicarlo, potrebbe
+            valere la pena testare su Anders il <strong class="text-white">siero</strong> che gli era stato
+            venduto nel dungeon per placare gli impulsi di magia selvaggia. La seconda è la cosa che ha appena
+            visto con i propri occhi: la sua vicinanza calmava quell'uomo, e anche quella andrebbe capita.
+          </p>
+          <div class="bg-black/50 border-l-4 border-indigo-500 p-6 my-4 rounded-r">
+            <p class="italic text-indigo-100 text-lg leading-relaxed">
+              <em>"Potrebbe essere forse l'unico e ultimo tentativo a sua disposizione."</em> Arianna non ha altro
+              da offrire, e lo ammette: <em>"Non ho una risposta, purtroppo. Non adesso. Chiaramente penserò solo
+              a questo, probabilmente, fino al vostro prossimo ritorno. E cercheremo di dare a quell'uomo il
+              sollievo che merita, in un modo o nell'altro."</em>
+            </p>
+          </div>
+          <p class="leading-relaxed">
+            La voce con cui lo dice è più spenta del solito, meno autoritaria: oltre che colpita, è palesemente
+            preoccupata. Riven prova a sdrammatizzare, <em>"speriamo non mi accada lo stesso"</em>, e lei abbozza
+            un sorriso che si spegne quasi subito. Orlin li fa uscire dall'Accademia piuttosto in fretta, e si
+            ritrovano di nuovo per strada.
+          </p>
+          <p class="leading-relaxed">
+            Riven rientra alla Gilda, dove trova gli altri alle prese con la lettera arrivata quella mattina: il
+            ricevimento è fissato per la sera successiva, il che lascia un'intera giornata da riempire prima. E lui
+            sa già come vuole riempirla: cercare dove si possano recuperare informazioni sugli
+            <strong class="text-white">antichi testi</strong> nominati al Tempio di Mystra, in una biblioteca o in
+            un altro tempio che conservi documenti di storia antica, possibilmente insieme a Fealer e Valoris.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA PX -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-300 mb-3 flex items-center gap-2">
+        <span>⭐</span> Punti Esperienza
+      </h2>
+      <p class="text-sm text-gray-400 leading-relaxed">
+        Nessun PX assegnato per questa sessione. La 13a non è una sessione a sé: è un approfondimento giocato
+        separatamente per scelta del gruppo, per risparmiare tempo alle serate in cui ci si trova tutti insieme.
+        I punti esperienza relativi a questa parte della storia sono già stati assegnati con la
+        <a href="/sessioni/sessione-12" class="underline text-blue-400 hover:text-blue-300">Sessione 12</a>.
+      </p>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/sessioni/sessione-12" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 12 - Il Rintocco e lo Specchio
+      </a>
+      <span class="text-gray-500 italic">Prossima sessione in arrivo...</span>
+    </div>
+
+  </div>
+</MainLayout>

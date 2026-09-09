@@ -1,0 +1,1050 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Sessione 13a - Riven e Anders Voss [DM]"
+  description="Note del Dungeon Master - Sessione parallela dedicata solo a Riven: la visita ad Anders Voss insieme ad Arianna"
+>
+  <div class="max-w-[1440px] mx-auto">
+
+    <!-- DM ONLY Banner -->
+    <div class="bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mb-6 text-center">
+      <p class="text-red-400 font-bold text-2xl tracking-widest">🔒 SOLO DM — NON CONDIVIDERE</p>
+      <p class="text-red-300 text-sm mt-1">Questa pagina contiene spoiler, meccaniche nascoste e note riservate al Dungeon Master</p>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300">← Torna alle Sessioni</a>
+      </div>
+      <div class="flex items-baseline gap-4 mb-2">
+        <span class="text-6xl font-bold text-gray-600">13a</span>
+        <h1 class="text-4xl font-bold">L'Altro Sopravvissuto: Riven e Anders Voss</h1>
+      </div>
+      <div class="flex flex-wrap gap-3 text-sm text-gray-400 mb-4">
+        <span>⏱️ 1–2 ore</span>
+        <span>🎭 Sessione parallela · Solo Riven</span>
+        <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded">📋 In Preparazione</span>
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 rounded">🔒 Solo DM</span>
+      </div>
+      <p class="text-lg text-gray-300">
+        Una sotto-sessione con un solo giocatore al tavolo e una sola scena da giocare: Riven va con Arianna
+        all'Ala di Contenimento Arcano del Blackstaff, a vedere l'unica altra persona sopravvissuta all'onda del
+        Giorno dell'Annuncio. Niente politica di Gilda, niente dungeon, niente combattimento. Due uomini colpiti
+        dalla stessa cosa nello stesso giorno: uno ha trovato un equilibrio, l'altro è chiuso in un cerchio e
+        chiede di morire.
+      </p>
+      <p class="text-sm text-gray-400 mt-3">
+        La scena era stata proposta come coda opzionale in
+        <a href="/dm/sessioni/sessione-11a#anders-voss" class="underline text-red-300">Sessione 11a, Parte IV</a> e
+        riproposta come Parte V della <a href="/dm/sessioni/sessione-12#anders-voss" class="underline text-red-300">Sessione 12</a>,
+        senza mai essere giocata. Questa pagina la riscrive: Anders non è più il sopravvissuto rassegnato e
+        dignitoso di quelle bozze, è un uomo in agonia costante che non controlla niente, ed è aggiornata a quello
+        che il gruppo ha scoperto nel frattempo (lo specchio di Sorella Neris, Sessione 12).
+      </p>
+    </div>
+
+    <!-- Checklist pre-sessione -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-3">📋 Checklist Pre-Sessione</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Decidi in anticipo l'unico snodo:</strong> cosa succede quando Riven si avvicina al cerchio? Opzione consigliata: il dolore di Anders si ferma. Vedi Parte VII.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Nessun esperimento su Anders, mai.</strong> È sigillato lì proprio perché non contiene la propria magia: niente divinazioni, niente incantesimi puntati addosso, niente contatto. Si guarda e si parla. Vedi Parte VII.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Prepara i due registri di Anders</strong> e allenati a passare dall'uno all'altro di colpo, a metà frase: la lucidità e la crisi. È tutto il personaggio. Vedi Parte IV.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Tieni a portata la tabella dei sovraccarichi</strong> (Parte IV): servono almeno due o tre volte in scena, e uno deve fare male sul serio.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Immagine di Anders pronta</strong> da mostrare all'ingresso: il prompt è in fondo alla pagina. Vedi Parte XI.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Punto fermo di cosmologia:</strong> l'ambra è un mezzo, non una fonte. L'energia viene dalla Discesa degli Dèi a Waterdeep. Anders non ha mai visto il dungeon. Vedi Parte I.</span></li>
+        <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">□</span><span><strong>Non chiudere il mistero</strong> e non risolvere Anders in nessun senso, né curandolo né uccidendolo. È un gancio per l'Ecosistema 2.</span></li>
+      </ul>
+    </div>
+
+    <!-- INDICE -->
+    <div class="bg-gray-800/40 border border-gray-600 rounded-lg p-4 mb-10 flex flex-wrap gap-3 text-sm">
+      <a href="#stato" class="text-teal-400 hover:text-teal-300">🧾 Cosa Riven sa già</a>
+      <span class="text-gray-600">·</span>
+      <a href="#tragitto" class="text-indigo-400 hover:text-indigo-300">🚶 Arianna e il tragitto</a>
+      <span class="text-gray-600">·</span>
+      <a href="#luogo" class="text-slate-300 hover:text-white">🚪 Il luogo e Orlin Thess</a>
+      <span class="text-gray-600">·</span>
+      <a href="#anders" class="text-red-400 hover:text-red-300">🕯️ Anders Voss</a>
+      <span class="text-gray-600">·</span>
+      <a href="#ingresso" class="text-red-400 hover:text-red-300">📢 L'ingresso</a>
+      <span class="text-gray-600">·</span>
+      <a href="#domande" class="text-red-400 hover:text-red-300">💬 Le finestre di lucidità</a>
+      <span class="text-gray-600">·</span>
+      <a href="#firma" class="text-violet-400 hover:text-violet-300">🔮 La domanda chiave</a>
+      <span class="text-gray-600">·</span>
+      <a href="#tiri" class="text-emerald-400 hover:text-emerald-300">🎲 Tiri utili</a>
+      <span class="text-gray-600">·</span>
+      <a href="#chiusura" class="text-amber-400 hover:text-amber-300">🧵 Come chiudere</a>
+      <span class="text-gray-600">·</span>
+      <a href="#dopo" class="text-orange-400 hover:text-orange-300">🌙 Se avanza tempo</a>
+      <span class="text-gray-600">·</span>
+      <a href="#immagine" class="text-pink-400 hover:text-pink-300">🖼️ Prompt immagine</a>
+    </div>
+
+    <!-- ==================== PARTE I: COSA RIVEN SA GIÀ ==================== -->
+    <div id="stato" class="bg-teal-900/20 border border-teal-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-teal-400">🧾</span> PARTE I: COSA RIVEN SA GIÀ
+      </h2>
+
+      <div class="bg-teal-900/30 border border-teal-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Tutto quello che il giocatore ha in mano quando entra nella cella. Non è un recap da leggere ad alta
+          voce: è il materiale che rende pesanti le domande che farà. Se ha dimenticato qualcosa, ricordaglielo
+          prima di cominciare, non durante.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+
+        <div class="bg-gray-900/60 border-2 border-green-700 rounded-lg p-5">
+          <p class="text-xs text-green-400 uppercase tracking-widest mb-2">🔥 Riven Solas</p>
+          <p class="text-sm text-gray-400 italic mb-3">Umano Variante, Stregone Selvaggio 5, Caotico Neutrale. Carisma 20 (+5), Costituzione 14 (+2), Arcano +4. Competente in Arcano, Intuizione, Percezione, Persuasione.</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            Originario di <strong class="text-white">Daggerford</strong>, trasferito a Waterdeep prima della
+            Discesa. Il Giorno dell'Annuncio lo trova in città come chiunque altro: nessuna distanza, nessuna
+            eccezione. Manda soldi e aiuti alla famiglia di nascosto, fino a quando la cupola non sigilla la
+            città e quel canale si interrompe. Entra nel dungeon volontariamente e accetta il Marchio.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-green-300">Registro utile stasera:</strong> impulsivo, curioso, ironico, un po'
+            cinico. Non cerca gloria, cerca di capire cosa gli sta succedendo. Simpatia concettuale per
+            <strong class="text-white">Leira</strong>, non devozione. Difetto dichiarato: rischia più del dovuto
+            per un frammento di conoscenza, ed è esattamente quello che questa scena gli mette davanti.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/60 border-2 border-indigo-700 rounded-lg p-5">
+          <p class="text-xs text-indigo-400 uppercase tracking-widest mb-2">🧙 Arianna "Whispersong" Moonwhisper</p>
+          <p class="text-sm text-gray-400 italic mb-3">Elfa Alta, 312 anni, Maga 10 (Divinazione), semi-ritirata. Intelligenza 20 (+5), Arcana/Storia +9 (esperta), CD Incantesimi 18.</p>
+          <p class="text-sm text-gray-300 leading-relaxed mb-3">
+            È lei che ha notato Riven durante le iscrizioni di massa alla Gilda e lo ha addestrato per tre mesi.
+            È lei che gli ha detto "stai mutando" senza averlo sentito da nessuno, usando per caso le stesse
+            parole di Vex. È lei che ha condotto i cinque esperimenti sulla cicatrice e che ha visto la lettura
+            divinatoria sdoppiarsi.
+          </p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            <strong class="text-indigo-300">Registro utile stasera:</strong> metodica, asciutta, allergica alla
+            drammatizzazione. Ma questa visita la mette in una posizione scomoda: sa dell'esistenza di Anders dal
+            primo giorno e non è mai andata a vederlo. Non se ne vergogna in pubblico, ma glielo si legge addosso.
+            Non ha una diagnosi da offrire, e detesta non averla.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-teal-200 mb-3">Il dossier della cicatrice, in ordine di scoperta</p>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+          <li><strong class="text-white">Sessione 10:</strong> Arianna gli dice "stai mutando", le stesse parole usate da Vex al Pianerottolo. Da lì nasce l'osservazione.</li>
+          <li><strong class="text-white"><a href="/dm/sessioni/sessione-11a#cicatrice" class="underline text-teal-300">Sessione 11a</a>, esperimento 1:</strong> l'inchiostro sensibile rivela che la cicatrice ha una struttura interna, non è un danno casuale.</li>
+          <li><strong class="text-white">Sessione 11a, esperimento 3:</strong> con una goccia di ambra, le venature blu non si limitano a espandersi, si <em>ramificano</em> in tempo reale, la pelle diventa quasi traslucida e sotto si vede la luce blu-bianca pulsare a un ritmo che non è quello del suo cuore. Tienilo bene a mente: è la stessa cosa che Riven vedrà addosso ad Anders, moltiplicata.</li>
+          <li><strong class="text-white">Sessione 11a, esperimento 4:</strong> la lettura divinatoria di Arianna non fallisce e non si offusca, si <em>sdoppia</em>. Due firme magiche sovrapposte nello stesso corpo: una arcana, una divina che non corrisponde a nessun pantheon noto.</li>
+          <li><strong class="text-white">Sessione 11a, il secondo parere di Fealer:</strong> la cicatrice si comporta come un ciclo, non come una ferita. "Respira. Non in senso letterale."</li>
+          <li><strong class="text-white">Sessione 11a, coda:</strong> Arianna ammette che esiste un altro caso. Due morti davanti al Tempio di Mystra il Giorno dell'Annuncio, un solo sopravvissuto, mai visitato da lei. Il segno, su di lui, non è sul braccio: è sul volto.</li>
+          <li><strong class="text-white"><a href="/sessioni/sessione-12" class="underline text-teal-300">Sessione 12</a>, lo specchio ovale:</strong> Sorella Neris Vantry, Custode del Velo, conferma dall'esterno. Nessuna corruzione, nessuna ostilità, nessun allarme. Solo: <em>non registrata</em>. In trecento anni di archivio ogni energia divina che ha toccato la città è passata da un tempio, un patto o un nome. Questa no. Forse somiglia a qualcosa descritto in pagine scritte prima che alcuni degli dèi attuali esistessero, e parte di quelle pagine è andata perduta.</li>
+          <li><strong class="text-white">Sessione 12, il Rintocco:</strong> Riven, Fealer, Morgrim e Valoris hanno sentito lo stesso bruciore nello stesso istante, quando il Dado Nero è entrato all'Arco. La teoria dei marchi collegati fra loro è stata lanciata al tavolo da Riven stesso.</li>
+        </ul>
+      </div>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4 mb-4">
+        <p class="text-xs font-bold text-red-300 uppercase mb-2">⏱️ Cronologia, da non sbagliare</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Dalla Discesa degli Dèi sono passati <strong class="text-white">tre mesi e una settimana</strong>: tre
+          mesi esatti fino all'apertura dell'Arco Divino, più i giorni dell'Ecosistema 1. Anders è al Blackstaff
+          <strong class="text-white">quasi da giorno uno</strong>: colpito dall'onda del Giorno dell'Annuncio
+          esattamente come Riven, la cicatrice comparsa sullo zigomo si è espansa nel giro di pochi giorni e gli
+          episodi incontrollati di magia selvaggia lo hanno portato lì quasi subito. Niente anni di prigionia,
+          niente studiosi che lo osservano da una vita, niente rassegnazione da veterano.
+          <strong class="text-red-200">Lui però ha perso la cognizione del tempo</strong>, ed è Orlin che ogni
+          tanto gliela ricorda: se dice "sei settimane fa era una linea sullo zigomo", è una sua stima
+          inaffidabile, non un dato.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-2">
+          <strong class="text-red-200">Attenzione ai testi vecchi:</strong> in
+          <a href="/dm/sessioni/sessione-11a#cicatrice" class="underline text-red-300">Sessione 11a</a> Arianna dice
+          "il Blackstaff lo tiene in una cella arcana da anni", battuta scritta prima che la cronologia fosse
+          fissata. Se è stata detta al tavolo, trattala come un modo di dire impreciso, altrimenti ignorala.
+        </p>
+      </div>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4">
+        <p class="text-xs font-bold text-red-300 uppercase mb-2">⚠️ Punto fermo, da non violare in scena</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          L'ambra del dungeon non è la fonte di niente, è un conduttore. L'energia vera è quella della Discesa
+          degli Dèi a Waterdeep, la stessa che ha investito Riven, Anders e i due morti in piazza. Anders non è
+          mai stato nel dungeon, non ha mai toccato l'ambra e non porta nessun Marchio Divino: è la prova vivente
+          che il fenomeno viene da quel giorno e non dal dungeon. Se una battuta suggerisce il contrario,
+          correggila prima di dirla.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE II: IL TRAGITTO ==================== -->
+    <div id="tragitto" class="bg-indigo-900/20 border border-indigo-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-indigo-400">🚶</span> PARTE II: ARIANNA E IL TRAGITTO
+      </h2>
+
+      <div class="bg-indigo-900/30 border border-indigo-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Con un solo giocatore al tavolo puoi permetterti dieci minuti di camminata prima della scena vera. Serve
+          a due cose: dare ad Arianna lo spazio per essere una persona e non un manuale, e lasciare che sia Riven
+          a decidere con che intenzione entra in quella cella. Chiediglielo esplicitamente, in game, per bocca di
+          Arianna. Serve anche a preparare il colpo: lei sa già in che stato è Anders, per sentito dire, e non
+          glielo dice.
+        </p>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Da leggere quando si incontrano, all'ingresso dell'Accademia.</p>
+      <div class="bg-black/50 border-l-4 border-indigo-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-indigo-100 text-lg leading-relaxed">
+          Arianna è già lì quando arrivi. Non è una novità: c'era anche l'altra mattina al Tempio di Mystra, ferma
+          ai piedi della scala con Neris accanto, prima ancora che voi entraste. La differenza è che questa volta è
+          sola, e che quando ti vede non si muove verso la porta. Resta dov'è, sul gradino, al di qua di una soglia
+          che potrebbe attraversare quando vuole, con una borsa di cuoio consumato che non le hai mai visto portare
+          al quartier generale, stretta con tutte e due le mani.
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          <em>"Prima che entriamo, mettiamo in chiaro cosa non faremo."</em> Non ti guarda mentre lo dice, guarda
+          la porta. <em>"Non gli traccio niente addosso, non gli leggo niente dentro, non gli chiedo di stare fermo
+          mentre provo qualcosa. Non perché sia scortese: perché è chiuso lì sotto esattamente per il motivo per
+          cui a te certe cose posso farle e a lui no. Quello che possiamo fare è guardarlo e parlargli, se
+          parlare gli riesce ancora."</em>
+        </p>
+        <p class="italic text-indigo-100 text-lg leading-relaxed mt-4">
+          Solo adesso si volta. <em>"E tu hai il diritto di entrarci con la tua domanda, non con la mia. Quindi
+          decidila adesso, prima di vederlo in faccia: cosa vuoi da quell'uomo?"</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-indigo-200 mb-3">Le tre risposte tipiche, e cosa fanno alla serata</p>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+          <li><strong class="text-white">"Voglio capire cosa mi sta succedendo."</strong> La più probabile. Il problema è che Anders non è in condizione di essere intervistato, e la serata diventa la corsa a strappare qualcosa di utile a un uomo che ha pochi minuti buoni per volta. Vedi Parte VI.</li>
+          <li><strong class="text-white">"Voglio sapere cosa sarei potuto diventare."</strong> La più crudele, perché la risposta è letterale e sta seduta dentro un cerchio a venti passi da lui. Anders lo capisce subito e glielo dice in faccia in un momento di lucidità.</li>
+          <li><strong class="text-white">"Voglio aiutarlo."</strong> La più pericolosa, e Arianna lo dice apertamente: <em>"Nobile. Anche inutile, per adesso. Ma se glielo prometti, poi devi tornare, e devi tornare con qualcosa in mano."</em> Prendila come impegno vero, non come battuta, soprattutto dopo che Anders avrà chiesto l'unica forma di aiuto che vuole davvero.</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Se il giocatore chiede perché lei non ci sia mai andata prima, non farle inventare una scusa buona: la
+          risposta vera è che non c'era motivo accademico per farlo, e adesso c'è. Lo ha già ammesso in 11a e può
+          ripeterlo senza addolcirlo. È il primo momento in cui Riven vede la sua maestra sbagliare e saperlo, e
+          nella cella lo vedrà una seconda volta, molto peggio.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE III: IL LUOGO ==================== -->
+    <div id="luogo" class="bg-slate-800/30 border border-slate-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-slate-300">🚪</span> PARTE III: L'ALA DI CONTENIMENTO ARCANO
+      </h2>
+
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        Non una prigione nell'aspetto, più simile a un'infermeria che nessuno vuole visitare. Un'ala isolata nei
+        sotterranei dell'Accademia di Blackstaff, raggiungibile solo passando per tre porte via via più semplici e
+        più spesse, l'ultima delle quali priva di maniglia dal lato dei visitatori. L'aria, oltre quella porta, ha
+        un odore particolare, non di chiuso ma di ozono, lo stesso che resta dopo un fulmine caduto vicino, e sotto
+        c'è un secondo odore, più sgradevole e più umano: medicinali, sudore vecchio, tessuto bruciato. Le pareti
+        sono incise con sigilli di soppressione magica, non abbastanza forti da spegnere del tutto un Wild Surge,
+        ma sufficienti a smorzarne la portata entro la stanza. Una sola cella, al momento occupata: Blackstaff non
+        ha mai avuto bisogno di una seconda, finora.
+      </p>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4 mb-6">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">🎯 Due dettagli da giocare, non da descrivere</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          <strong class="text-white">Il silenzio.</strong> Man mano che scendono, i sigilli sulle pareti diventano
+          più fitti. Riven, che porta addosso sia il Marchio sia la cicatrice, sente la propria magia farsi più
+          silenziosa a ogni porta: non dolorosa, spenta. Per uno stregone selvaggio abituato al rumore di fondo del
+          caos è una sensazione nuova e non del tutto sgradevole, ed è esattamente il motivo per cui Anders vive lì
+          dentro. Fallo notare al giocatore e lascialo reagire: alcuni lo trovano un sollievo, e la cosa dovrebbe
+          spaventarlo un po'.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          <strong class="text-white">Il rumore.</strong> Oltre la seconda porta si sente qualcosa attraverso la
+          pietra. Non parole: un suono lungo, che si interrompe e ricomincia. Orlin non lo commenta e non accelera
+          il passo, il che è la cosa peggiore di tutte. Se il giocatore chiede cosa sia, la risposta è una sola
+          parola: <em>"È lui."</em>
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-slate-200 mb-3">Il Custode: Maestro Orlin Thess</h3>
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+        <p class="font-bold text-red-200">Orlin Thess</p>
+        <p class="text-xs text-gray-500 italic mb-2">Umano, mago di mezza età, incaricato del contenimento arcano da Blackstaff. Non un carceriere: un infermiere con troppa magia intorno, e da troppo poco tempo.</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-2">
+          Si occupa di Anders da quando lo hanno portato qui, poche settimane che gli si leggono tutte in faccia.
+          Nessuno gli ha spiegato cosa stia curando, e ha smesso di chiederlo: tiene il paziente sedato quanto
+          basta, gli medica ferite che non si chiudono, scrive tutto su un quaderno che nessuno legge. Non ostacola
+          la visita, il nome di Arianna basta a scavalcare la burocrazia, ma è protettivo, quasi materno, verso il
+          suo unico paziente, e dà le sue regole prima di far entrare chiunque.
+        </p>
+        <div class="bg-black/40 border-l-4 border-red-500 p-3 rounded-r text-sm">
+          <p class="italic text-red-100 leading-relaxed">
+            <em>"Tre regole, e non sono negoziabili. Non lo toccate, e non entrate nel cerchio per nessun motivo,
+            nemmeno se ve lo chiede lui. Non alzate la voce, qualunque cosa dica, e dirà di tutto. E quando vi dico
+            di uscire, uscite, senza fare domande e senza rallentare."</em> Una pausa. Non è gentile, è solo
+            stanco. <em>"Gli ho dato quanto posso senza ammazzarlo. Avrete qualche minuto buono, forse due o tre
+            volte. Il resto del tempo sarà quello che avete sentito dalle scale."</em>
+          </p>
+        </div>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          <strong class="text-slate-200">Cosa aggiunge stasera:</strong> se Riven gli chiede qualcosa in privato,
+          prima o dopo, Orlin ha tre informazioni che Anders non è in condizione di dare. Primo: le prime settimane
+          arrivavano visitatori, sacerdoti e studiosi, e a un certo punto hanno smesso tutti insieme, senza che
+          nessuno spiegasse perché. Secondo: negli ultimi giorni è peggiorato, le crisi sono più ravvicinate e la
+          sedazione dura meno. Terzo, detto guardando altrove: <em>"Lo chiede a tutti quelli che entrano. Anche a
+          me, ogni giorno. Non fategli una promessa solo per farlo smettere."</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IV: ANDERS VOSS ==================== -->
+    <div id="anders" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">🕯️</span> PARTE IV: ANDERS VOSS
+      </h2>
+
+      <div class="bg-gray-900/60 border-2 border-red-800 rounded-lg p-5 mb-6">
+        <p class="text-xs text-red-400 uppercase tracking-widest mb-2">Umano, sulla trentina. Colpito dall'onda del Giorno dell'Annuncio come Riven, contenuto al Blackstaff da allora: settimane, non anni. Nessun Marchio Divino, mai entrato nel dungeon, mai visto l'ambra.</p>
+
+        <p class="font-bold text-white mb-3">Aspetto</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          È la cicatrice di Riven, moltiplicata e messa su un viso. Le stesse venature blu, ma non un tracciato
+          sottile sull'avambraccio: una ramificazione che parte dallo zigomo sinistro e ha già preso mezza testa,
+          il collo, la spalla, sparendo sotto la camicia e ricomparendo sul dorso della mano. La pelle sopra è tesa
+          fino a sembrare traslucida, e sotto si vede la luce, blu-bianca, che pulsa a un ritmo che non è quello
+          del suo cuore ed è troppo veloce per esserlo. Nella cella quasi non serve la lanterna: illumina lui.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          Dove le venature sono più fitte la pelle non ha retto: si è aperta, in solchi che sembrano crepe di terra
+          secca e che non si chiudono, perché ogni volta che l'energia risale li riapre. Sono medicati alla meglio
+          con garze che il calore fa ingiallire in poche ore. I capelli su quel lato non ci sono più, bruciati fino
+          al cuoio capelluto, e sotto si vede il disegno azzurro proseguire sulla testa. L'occhio sinistro non è
+          più un occhio: l'orbita è piena della stessa luce, la palpebra non ci si chiude sopra, e per dormire deve
+          coprirla con uno straccio. Il resto di lui, la metà destra, è un uomo qualunque di trent'anni, magro e
+          consumato dal male, che ti guarda con un occhio solo perfettamente umano. È quella metà a fare
+          impressione, non l'altra.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          È caldo. Non febbricitante: caldo da vicino, come una stufa lasciata accesa. La coperta della branda è
+          bruciacchiata a chiazze, il muro dietro la testiera è annerito, e la stanza odora costantemente di
+          temporale.
+        </p>
+
+        <p class="font-bold text-white mb-3">Stato: dolore continuo, niente controllo</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          Non gli fa male ogni tanto: gli fa male sempre. L'energia gli passa attraverso senza fermarsi mai e lo
+          brucia da dentro, e non esiste posizione, sedativo o momento della giornata in cui questo si interrompa.
+          Quello che i farmaci di Orlin ottengono non è toglierglielo, è abbassarlo quanto basta perché riesca a
+          mettere in fila qualche frase. Non ha imparato niente, non ha trovato nessuna tecnica, non si è adattato:
+          in poche settimane si è solo consumato. Ogni volta che qualcosa lo agita, la magia esce da sola, e i
+          sigilli della cella la contengono senza spegnerla.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          <strong class="text-red-200">Vuole morire.</strong> Non è una posa da martire e non è un ricatto: è
+          l'unica cosa che chiede con costanza, e la chiede a chiunque entri, incluso Orlin, ogni giorno. Nei
+          momenti lucidi lo dice piano, con la logica ordinata di chi ha fatto i conti; durante le crisi lo urla.
+          Va giocato come una richiesta ragionevole formulata da una persona ragionevole, ed è esattamente questo
+          a renderla insostenibile.
+        </p>
+
+        <p class="font-bold text-white mb-3">I due registri, da alternare di colpo</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-black/40 border border-gray-600 rounded p-4">
+            <p class="text-sm font-bold text-red-200 mb-2">Lucido</p>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Voce bassa, roca, consumata dalle urla. Parla piano e in fretta, come chi sa di avere poco tempo e
+              vuole dire le cose importanti prima che finisca. È intelligente, era una persona normale poche
+              settimane fa, e in questi minuti si capisce chi era. Verso Riven prova una curiosità disperata e
+              un'invidia che non riesce a nascondere, e se ne accorge mentre la prova. Ogni tanto si interrompe per
+              respirare in un certo modo, tre respiri corti, che è l'unica cosa che ha imparato.
+            </p>
+          </div>
+          <div class="bg-black/40 border border-gray-600 rounded p-4">
+            <p class="text-sm font-bold text-red-200 mb-2">In crisi</p>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Ride, o urla, o entrambe le cose nella stessa frase. Parla con persone che non ci sono, sua madre,
+              un uomo di nome Halden, i due morti in piazza. Ripete la stessa parola per venti secondi. Si graffia
+              il lato sinistro del viso fino a farsi sanguinare. Dice cose che sembrano premonizioni e non lo sono,
+              e una o due che lo sono. Non riconosce Riven, o lo riconosce e lo chiama con un altro nome. Poi
+              crolla, e ricomincia da capo.
+            </p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-300 leading-relaxed mb-4">
+          La transizione non è mai graduale e non è mai annunciata: succede a metà di una frase, spesso della frase
+          più utile che stava per dire. Falla capitare almeno una volta nel punto peggiore possibile.
+        </p>
+
+        <p class="font-bold text-white mb-3">Tabella dei sovraccarichi, smorzati dai sigilli</p>
+        <p class="text-sm text-gray-400 italic mb-3">
+          Tirane uno (d6) o scegli, ogni volta che una crisi comincia. Non sono un combattimento e non vanno
+          risolti con l'iniziativa, ma almeno uno deve fare male sul serio, altrimenti la cella sembra un teatro.
+        </p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside mb-4">
+          <li><strong class="text-white">1.</strong> Tutte le luci della stanza si spengono insieme, tranne lui. Restano solo le venature blu che pulsano nel buio, sempre più veloci.</li>
+          <li><strong class="text-white">2.</strong> Il metallo si scalda: fibbie, anelli, la lanterna di Orlin, il pugnale di Riven. Chi non se ne libera in fretta si brucia (1 danno, e il punto non è il danno).</li>
+          <li><strong class="text-white">3.</strong> La sua voce arriva da tutti i punti della stanza contemporaneamente, compreso da dietro le spalle di Riven.</li>
+          <li><strong class="text-white">4.</strong> Un'onda di pressione: chi è vicino al cerchio deve superare TS su Forza CD 12 o finire a terra, con le orecchie che fischiano per un minuto.</li>
+          <li><strong class="text-white">5.</strong> Qualcosa di piccolo e vivo appare e muore subito: uccellini, insetti, una manciata di rane. Piovono dentro il cerchio e non si muovono più. Orlin li raccoglie dopo, con un secchio, senza commentare.</li>
+          <li><strong class="text-white">6.</strong> Il sovraccarico colpisce lui: la pelle si apre in un punto nuovo davanti agli occhi di tutti, e la luce esce più forte prima di rientrare. È il momento in cui Orlin dice di uscire.</li>
+        </ul>
+
+        <div class="bg-black/40 border-l-4 border-red-500 p-3 rounded-r text-xs">
+          <p class="text-gray-400 uppercase tracking-widest mb-1">⚠️ Quanto è pericoloso davvero</p>
+          <p class="text-gray-300 leading-relaxed">
+            Abbastanza da giustificare il cerchio, non abbastanza da trasformare la serata in uno scontro. Anders
+            non attacca nessuno di proposito e non prova mai a uscire: se qualcuno si fa male è perché era troppo
+            vicino nel momento sbagliato. La minaccia vera non è che uccida Riven, è che Riven capisca di essere
+            seduto davanti al proprio possibile futuro e che nessuno in quella stanza sappia perché a lui non stia
+            succedendo lo stesso.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE V: L'INGRESSO ==================== -->
+    <div id="ingresso" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">📢</span> PARTE V: L'INGRESSO
+      </h2>
+
+      <p class="text-gray-400 text-sm mb-4 italic">📢 Leggere ad alta voce quando Orlin apre l'ultima porta. Se hai generato l'immagine, mostrala qui.</p>
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r mb-6">
+        <p class="italic text-red-100 text-lg leading-relaxed">
+          La cella non ha sbarre. Ha un cerchio inciso nel pavimento, largo quanto l'intera stanza, che pulsa di
+          una luce grigia e sorda: non magia visibile come quella di Arianna, ma la sua assenza, attivamente
+          imposta. Dentro il cerchio non serve la lanterna di Orlin, e capisci perché nel momento esatto in cui
+          la porta si apre del tutto.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          C'è un uomo seduto per terra con la schiena contro la branda, e metà di lui è illuminata da dentro. Le
+          conosci, quelle venature: le hai sul braccio, le hai viste ramificarsi sotto la pelle mentre Arianna
+          contava i secondi ad alta voce. Solo che qui non sono un tracciato sottile su un avambraccio. Partono
+          dallo zigomo, hanno preso mezza testa, scendono lungo il collo e spariscono dentro la camicia, e la pelle
+          sopra è tesa fino a diventare quasi trasparente. Sotto, la luce blu-bianca pulsa a un ritmo che non è il
+          battito del suo cuore. Sul lato sinistro non ha più capelli. Dove ha smesso di essere pelle ci sono
+          garze, e le garze sono gialle di calore.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Sta parlando da solo, piano, veloce, e non si è accorto che la porta si è aperta. Poi Orlin dice il suo
+          nome, e lui alza la testa. L'occhio destro è quello di un uomo qualunque di trent'anni. Al posto del
+          sinistro c'è la stessa luce di sotto la pelle, senza pupilla, senza palpebra che ci si chiuda sopra.
+        </p>
+        <p class="italic text-red-100 text-lg leading-relaxed mt-4">
+          Ti guarda per due secondi buoni, e in quei due secondi succede tutto: ti mette a fuoco, capisce cosa sta
+          guardando, e comincia a piangere da un occhio solo. <em>"Oh."</em> La voce è distrutta, roca come se
+          avesse urlato tutta la notte, perché è così. <em>"Sei venuto. Sapevo che qualcun altro c'era. Vieni
+          vicino. Vieni vicino, ti prego, fammi vedere dove ce l'hai tu."</em>
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+        <p class="font-bold text-red-200 mb-3">Nei primi trenta secondi</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Non riempire il silenzio con Arianna: lei, per una volta, non ha niente da dire, ed è un dato che vale la
+          pena far notare. Se il giocatore resta muto, ci pensa Anders, che è lucido e non vuole sprecarlo. La
+          prima cosa che fa non è chiedere aiuto: è cercare conferma di non essere impazzito.
+        </p>
+        <div class="bg-black/40 border-l-4 border-red-500 p-3 rounded-r text-sm">
+          <p class="italic text-red-100 leading-relaxed">
+            <em>"Dimmi che la senti anche tu. Non il male. Il ritmo."</em> Si tocca lo zigomo con due dita, dove la
+            luce batte più forte, e lo fa con un gesto talmente familiare che capisci che lo ripete cento volte al
+            giorno. <em>"Non è il cuore. Non va col cuore. Lo dicono tutti che è il cuore e non è il
+            cuore."</em> Poi, più piano, con una lucidità che fa più paura del resto: <em>"Ho poco tempo prima che
+            ricominci. Cosa vuoi sapere? Chiedi le cose in ordine di importanza. Ti conviene."</em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VI: LE FINESTRE DI LUCIDITÀ ==================== -->
+    <div id="domande" class="bg-red-950/20 border border-red-800/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-red-400">💬</span> PARTE VI: LE FINESTRE DI LUCIDITÀ
+      </h2>
+
+      <div class="bg-red-900/20 border border-red-700/40 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          La struttura della serata, e l'unica regola che devi rispettare: Anders <strong class="text-white">non è
+          intervistabile</strong>. Ha tre finestre di lucidità, sempre più corte, separate da due crisi. Diglielo
+          in chiaro attraverso Orlin e attraverso Anders stesso, così che il giocatore sappia di dover scegliere
+          cosa chiedere: è la vera meccanica della sessione, e vale più di qualsiasi tiro.
+        </p>
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          Non contare i minuti col cronometro. Chiudi una finestra quando il giocatore ha ottenuto due o tre
+          risposte, e chiudila sempre a metà di qualcosa.
+        </p>
+      </div>
+
+      <!-- FINESTRA 1 -->
+      <h3 class="text-xl font-bold text-red-300 mb-3">Finestra 1: chi è, cosa è successo</h3>
+      <div class="space-y-3 mb-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Cosa è successo quel giorno?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Ero in piazza. Eravamo tutti in piazza, dove vai quando ti dicono che una dea è scesa sul mondo?
+            C'era una donna alla mia destra e un ragazzo davanti a me, non li conoscevo." Le due dita tornano allo
+            zigomo. "Poi il cielo si è piegato. O mi sono piegato io, non lo so. Loro sono caduti subito. Io no, e
+            per un'ora ho creduto di essere stato fortunato. Un'ora esatta. Poi ha cominciato a scaldarsi."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Riesci a controllarla, almeno un po'?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            Ride, e ridere gli costa. "Guardami. Guarda dove sono seduto e chiedimelo di nuovo." Poi, senza
+            ironia, come se rispondesse a se stesso: "Ho provato quello che Orlin e i due maghi prima di lui hanno
+            saputo suggerire. Respirare in un certo modo. Non mangiare. Pregare, anche, ed è ridicolo perché non
+            sono mai stato devoto. Tre respiri corti sono l'unica cosa che qualche volta funziona, e funziona per
+            venti secondi."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Ti fa male adesso?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            La domanda più semplice, e quella che dà la misura di tutto. "Adesso è il meglio della giornata."
+            Lo dice con una specie di gratitudine, e questa è la parte peggiore. "Orlin mi ha dato tutto quello
+            che poteva darmi senza uccidermi, e questo che vedi è come sto quando sto bene. Ricordatelo, dopo,
+            quando mi sentirai dall'altra parte della porta."
+          </p>
+        </div>
+      </div>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r mb-8">
+        <p class="text-xs text-red-400 uppercase tracking-widest mb-2">🎭 Prima crisi, a metà di una risposta</p>
+        <p class="italic text-red-100 leading-relaxed">
+          Si interrompe a metà di una parola. Non urla subito: prima si irrigidisce tutto, e la luce sotto la pelle
+          accelera, come una candela sotto un vetro quando qualcuno soffia. Poi comincia, e il suono non assomiglia
+          a niente che tu abbia sentito in un corpo umano. Orlin è già dentro il cerchio, in ginocchio accanto a
+          lui, e ripete il suo nome con la calma di uno che lo fa quattro volte al giorno. Sopra la sua voce, Anders
+          sta parlando con qualcuno che non è nella stanza: <em>"No, mamma, no, ho detto che l'ho spenta. L'ho
+          spenta. L'HO SPENTA."</em>
+        </p>
+      </div>
+
+      <!-- FINESTRA 2 -->
+      <h3 class="text-xl font-bold text-red-300 mb-3">Finestra 2: la parte utile</h3>
+      <p class="text-sm text-gray-400 italic mb-4">
+        La più lunga e la sola che contenga informazioni vere. Se il giocatore ha sprecato la prima, non punirlo:
+        lascia che Anders torni da solo sulle cose importanti, perché è quello che vuole dire prima di finire.
+      </p>
+      <div class="space-y-3 mb-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Senti qualcosa quando esce? Una presenza, una voce?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            (Il gancio per la Teoria dell'Ospite Non Invitato. Conferma sperimentale, mai teorica.) "I sacerdoti
+            che mi hanno guardato dentro, all'inizio, dicevano tutti la stessa frase: che quello che sentono da me
+            non ha il sapore giusto. Nessuno mi ha spiegato cosa volesse dire." Si sporge in avanti, e per la prima
+            volta abbassa la voce, come se qualcuno potesse sentirlo. "Te lo dico io cosa vuol dire. Quando sale,
+            non sembra mia. Sembra di qualcun altro che se ne serve, e che non si è mai presentato. Io sono il
+            posto dove passa, non quello a cui appartiene."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Un tempio ha guardato dentro di me e ha detto che quello che ho addosso non è registrato da nessuna parte. A te lo hanno mai detto?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Con quelle parole no. Con altre, tutti quanti." Un mezzo sorriso storto, che sul lato sinistro non si
+            forma. "Le prime settimane sono venuti in sei o sette a guardarmi dentro. Poi hanno smesso tutti
+            insieme, nello stesso momento, e nessuno mi ha più detto niente. Ho pensato che si fossero arresi.
+            Adesso che me lo chiedi, mi viene il dubbio che qualcuno abbia deciso che era meglio non scriverlo,
+            quello che avevano trovato."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Il giorno in cui il Dado Nero è entrato nell'Arco, a mezzogiorno, hai sentito qualcosa?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            (Domanda pesantissima. Consiglio: sì, ma senza saperlo nominare.) "Che giorno? Qui i giorni non me li
+            dicono." Poi si ferma, e lo trova da solo, e trovarlo lo agita. "Il giorno che ho perso la voce. C'è
+            stato un giorno, non so quale, in cui è successo a mezzogiorno preciso e per un attimo è stato
+            peggio di tutto il resto. Peggio dell'inizio. Chiedi a Orlin, lui scrive tutto." Ti guarda con
+            l'occhio buono. "Perché? Cos'è successo a mezzogiorno?"
+          </p>
+          <p class="text-xs text-gray-500 italic mt-2">
+            Anders non ha nessun Marchio Divino, non è mai entrato nel dungeon e non fa parte di nessuna gilda. Se
+            ha sentito comunque la Risonanza, quella non riguarda solo i marchiati. Dallo come sensazione riferita
+            da un uomo che non capisce cosa gli sia successo, mai come conferma, e non far dire a nessuno in scena
+            "allora è collegato".
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Perché io sono riuscito a controllarla e tu no?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            È la domanda su cui il registro si rompe, e va bene che si rompa. "Non lo so. Ci ho pensato più che a
+            qualsiasi altra cosa, e qui dentro non c'è nient'altro da fare che pensare." Comincia lucido e finisce
+            male: "Forse non è questione di quanto sei forte. Forse è questione di cosa hai trovato dentro quel
+            giorno, prima ancora di sapere che c'era. Tu hai trovato qualcosa che si lasciava tenere. Io ho trovato
+            una cosa che mi sta mangiando e non ho fatto niente di diverso da te, NIENTE di diverso da te, ero
+            in piedi a dieci strade da dove eri tu e ho alzato la testa come tutti gli altri..." Si ferma, si
+            costringe ai tre respiri corti, e torna indietro. "Scusa. Non è colpa tua. Lo so che non è colpa tua."
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+          <p class="text-sm font-bold text-red-200 mb-1">"Hai famiglia? Qualcuno viene a trovarti?"</p>
+          <p class="text-sm text-gray-300 leading-relaxed italic">
+            "Mia madre è venuta due volte." Pausa. "La prima volta ha resistito venti minuti. La seconda l'ho
+            pregata di non tornare, e lei ha detto di sì troppo in fretta." Non c'è rancore, e proprio per questo
+            fa male. "Non giudicarla. Tu non ti sei sentito, quando urlo."
+          </p>
+          <p class="text-xs text-gray-500 italic mt-2">
+            Gancio diretto sul filone di Riven: la famiglia a Daggerford che protegge stando lontano, e la cupola
+            che ha trasformato quella scelta in una condizione. Se il giocatore ci arriva da solo, dagli spazio.
+          </p>
+        </div>
+      </div>
+      <div class="bg-black/40 border-l-4 border-red-500 p-4 rounded-r mb-8">
+        <p class="text-xs text-red-400 uppercase tracking-widest mb-2">🎭 Seconda crisi, la peggiore</p>
+        <p class="italic text-red-100 leading-relaxed">
+          Questa volta non si irrigidisce: si alza. È la prima volta che lo vedi in piedi, ed è più alto di quanto
+          pensassi. Cammina fino al bordo interno del cerchio, dove la luce grigia del pavimento si alza in una
+          parete che non c'è, e ci appoggia contro la fronte, dal lato bruciato. Il contatto fa un rumore che non
+          dovrebbe fare. Poi comincia a ridere, e mentre ride guarda te, e dice una cosa che non stavi chiedendo:
+          <em>"Anche tu. Anche tu, anche tu, anche tu, un po' più lento e basta."</em> Orlin ti sta già dicendo di
+          arretrare.
+        </p>
+      </div>
+
+      <!-- LA RICHIESTA -->
+      <h3 class="text-xl font-bold text-red-300 mb-3">Finestra 3: la richiesta</h3>
+      <p class="text-sm text-gray-400 italic mb-4">
+        La più corta delle tre, e l'unica che conta davvero. Non è una domanda del giocatore: è Anders che chiede.
+        Arriva dopo la seconda crisi, quando è esausto e lucido nel modo in cui si è lucidi quando non resta più
+        energia nemmeno per la disperazione.
+      </p>
+      <div class="bg-black/50 border-l-4 border-red-500 p-6 my-4 rounded-r mb-4">
+        <p class="italic text-red-100 leading-relaxed">
+          È di nuovo seduto per terra, appoggiato alla branda, e respira come uno che ha corso. Quando parla lo fa
+          senza teatro, con l'ordine di chi ha preparato le frasi da giorni e aspettava solo qualcuno in grado di
+          capirle.
+        </p>
+        <p class="italic text-red-100 leading-relaxed mt-3">
+          <em>"Adesso ascoltami, perché a Orlin non posso chiederlo più e a lei non serve chiederlo."</em> Un cenno
+          verso Arianna, senza guardarla. <em>"Non peggiora e basta. Accelera. Sei settimane fa era una linea
+          sullo zigomo, guarda adesso dove arriva. Nessuno sa dove si ferma, e io ho una sola idea di dove si
+          ferma."</em>
+        </p>
+        <p class="italic text-red-100 leading-relaxed mt-3">
+          <em>"Tu hai una cosa che gli altri non hanno: puoi farlo senza che ti tremi la mano, perché sei fatto
+          della stessa roba. Non ti sto chiedendo di essere coraggioso. Ti sto chiedendo di essere pratico."</em>
+          L'occhio buono è perfettamente asciutto adesso. <em>"Uccidimi. Non oggi, se non riesci. Ma torna, e
+          fallo."</em>
+        </p>
+      </div>
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-6">
+        <p class="font-bold text-red-200 mb-2">Come gestirla al tavolo</p>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+          <li><strong class="text-white">Non lasciarla risolvere stasera, in nessuna direzione.</strong> Se Riven tenta qualcosa lì e ora, il cerchio e Orlin lo fermano prima ancora dei dadi: nessuno entra nel cerchio, e Orlin ha detto quella regola per prima proprio per questo.</li>
+          <li><strong class="text-white">Non far dire ad Arianna se è giusto o sbagliato.</strong> La cosa più forte che può fare è non rispondere affatto. Se il giocatore la interpella direttamente: <em>"Non lo so. E se te lo dicessi, ti starei solo prestando la mia coscienza per un lavoro che resterebbe tuo."</em></li>
+          <li><strong class="text-white">Orlin, invece, ha una posizione</strong>, ed è quella di uno che ci convive: <em>"Lo chiede a tutti. Se un giorno smettesse di chiederlo, vorrebbe dire che non c'è più nessuno lì dentro a chiedere. Finché lo chiede, io lo tengo in vita. È l'unico criterio che ho trovato."</em></li>
+          <li><strong class="text-white">Segnala la richiesta come filone aperto</strong> e lasciala pendere per le sessioni piene: è il tipo di cosa che il gruppo, quando lo saprà, non gestirà in modo unanime.</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Nota DM: tono</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Anders non è un mostro e non è un mentore: è quello che a Riven non è successo, senza nessuna ragione che
+          qualcuno sappia spiegare. Non farlo diventare minaccioso di proposito e non farlo diventare patetico:
+          resta un uomo intelligente, ridotto in pezzi in poche settimane, che nei minuti buoni ragiona meglio di
+          metà delle persone che Riven conosce. Il punto non è farlo compatire, è che il giocatore esca da quella
+          cella senza sapere perché lui è di qua del cerchio.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VII: LA DOMANDA CHIAVE ==================== -->
+    <div id="firma" class="bg-violet-900/20 border border-violet-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-violet-400">🔮</span> PARTE VII: LA DOMANDA CHIAVE, E PERCHÉ NON SI PUÒ RISPONDERE
+      </h2>
+
+      <div class="bg-violet-900/30 border border-violet-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Prima o poi il giocatore ci arriva: se Arianna ha letto Riven e ha visto la firma sdoppiarsi, perché non
+          legge anche Anders? La risposta è no, ed è una regola del posto, non un capriccio. Anders è chiuso lì
+          sotto proprio perché non contiene niente: qualsiasi cosa stimoli la sua magia, incantesimi puntati
+          addosso compresi, è esattamente ciò che il cerchio esiste per impedire, e lo pagherebbe lui. Nessun
+          esperimento, nessuna divinazione, nessun contatto. Si può solo guardare e parlare.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-6">
+        <p class="font-bold text-violet-200 mb-2">Come giocare il no, senza che sembri un muro del DM</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Non farlo dire a te: falla arrivare da tre voci diverse, che dicono la stessa cosa per tre motivi
+          diversi. È più convincente di qualsiasi spiegazione tecnica, e caratterizza tutti e tre.
+        </p>
+        <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside mb-3">
+          <li><strong class="text-white">Orlin, per mestiere.</strong> Non discute e non si scusa: <em>"No. Non su di lui, non qui dentro. Voi vedreste una luce per qualche secondo, e lui ci passerebbe la notte a urlare. L'ultima volta che qualcuno ci ha provato ho dovuto legarlo."</em></li>
+          <li><strong class="text-white">Arianna, per scelta sua.</strong> Lo aveva già detto sul gradino e non ci riprova nemmeno: la parte interessante è che le costa. È una maga di divinazione a pochi passi dall'unico altro caso al mondo, e deve stare ferma. Lasciale dire una frase che lo ammette: <em>"Trecento anni di studio, e la cosa più utile che posso fare qui è tacere. Non fingo che mi piaccia."</em></li>
+          <li><strong class="text-white">Anders, per esperienza.</strong> Il più duro dei tre, perché lo ha già passato: <em>"Fatelo pure, se vi serve. Poi però restate a sentire come vengo giù. Nessuno di quelli che ci hanno provato è tornato una seconda volta."</em></li>
+        </ul>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Se il giocatore insiste e prova a convincere Orlin, non concederglielo con un tiro: Orlin non ha
+          l'autorità per autorizzarlo nemmeno volendo, servirebbe il Blackstaff e nessuno lo ha mai chiesto
+          formalmente. Quello sì che è un filo da lasciare aperto, magari con Arianna che si offre di presentare
+          la richiesta.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold text-violet-300 mb-3">Quindi cosa può portarsi a casa Riven</h3>
+      <p class="text-sm text-gray-300 leading-relaxed mb-4">
+        Due cose, ed entrambe valgono più di una diagnosi: quello che Anders dice nelle finestre di lucidità (in
+        particolare "quando sale, non sembra mia", che conferma dall'esperienza la Teoria dell'Ospite Non Invitato
+        senza provare niente) e quello che succede da solo, senza che nessuno lo provochi. Quest'ultimo è l'unico
+        vero snodo della serata: scegli prima quale delle tre versioni giocare.
+      </p>
+
+      <div class="space-y-4 mb-6">
+        <div class="bg-gray-900/60 border-2 border-violet-700 rounded-lg p-5">
+          <p class="font-bold text-violet-200 mb-1">Opzione A, consigliata: quando Riven si avvicina, il dolore si ferma</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Nessuno lo sta provocando, ed è proprio questo il punto. Riven si avvicina al bordo del cerchio, le due
+            cicatrici pulsano insieme, e per una manciata di secondi Anders <em>sta bene</em>. Non migliora: smette
+            del tutto, per la prima volta da settimane. È l'unico dato oggettivo della serata, non spiega niente, e
+            mette in mano al giocatore la cosa peggiore possibile: la sua sola presenza è l'unica medicina
+            esistente, e lui non può restare lì. Perché è la migliore: conferma che Riven non è un caso isolato
+            senza dire cosa siano quelle firme, rende la richiesta di morte molto più complicata, e apre da sola
+            l'Ecosistema 2. Testo pronto qui sotto.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-violet-200 mb-1">Opzione B: non succede assolutamente niente</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Riven si avvicina quanto vuole e la sua cicatrice resta muta come da quando è sceso sotto i sigilli.
+            Esce con le parole di Anders e nient'altro, e con il dubbio che quello che ha lui non sia affatto la
+            stessa cosa. Rende la serata più solitaria e spinge sulla Teoria dell'Ospite Non Invitato: qualcosa si
+            è infilato nella stessa onda, ma in modo diverso dentro ognuno dei due. Usala se vuoi alzare la
+            paranoia invece della compassione.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-violet-200 mb-1">Opzione C: la vicinanza lo peggiora</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            L'esatto contrario di A: Riven si avvicina e la crisi che parte è la più violenta che Orlin abbia mai
+            visto, tanto da far finire la visita in trenta secondi e da far vietare una seconda volta. Riven esce
+            senza risposte e con la certezza di essere stato lui l'innesco, il che si sposa bene con il suo difetto
+            (spingersi troppo in là per un frammento di conoscenza) e con la colpa. Più dura, meno ricca di ganci.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5 mb-4">
+        <p class="font-bold text-violet-200 mb-2">Il silenzio, testo per l'opzione A</p>
+        <p class="text-sm text-gray-300 leading-relaxed mb-3">
+          Da giocare quando Riven si avvicina di sua iniziativa al cerchio, meglio se durante una crisi. Nessuno lo
+          sta provocando, e nessuno in scena ha gli strumenti per spiegarlo: non farlo commentare da nessuno con
+          autorevolezza.
+        </p>
+        <div class="bg-black/50 border-l-4 border-violet-500 p-5 rounded-r">
+          <p class="text-xs text-violet-400 uppercase tracking-widest mb-2">🎭 Da leggere/interpretare</p>
+          <p class="italic text-violet-100 leading-relaxed">
+            Lo senti prima di vederlo. La cicatrice sul tuo braccio si scalda, non abbastanza da bruciare, quanto
+            basta perché tu chiuda la mano senza deciderlo. E dall'altra parte del cerchio, di colpo, Anders smette
+            di urlare.
+          </p>
+          <p class="italic text-violet-100 leading-relaxed mt-3">
+            Non si calma per gradi. Si spegne, come una nota tenuta troppo a lungo quando qualcuno toglie il dito
+            dalla corda. La luce sotto la sua pelle rallenta fino a battere piano, e per la prima volta da quando
+            sei entrato batte allo stesso ritmo di quella sul tuo braccio. Nella stanza resta solo il rumore del
+            suo respiro, che si allunga, e di Orlin che ha smesso di parlare a metà del nome.
+          </p>
+          <p class="italic text-violet-100 leading-relaxed mt-3">
+            Anders apre l'occhio buono e ti guarda dal pavimento, e non piange, e non urla, e non ride. Ha la faccia
+            di uno a cui hanno appena tolto un peso dal petto dopo settimane, e la cosa insopportabile è quanto
+            sembra normale, in quel momento. <em>"Ah."</em> Un respiro intero, dentro e fuori, senza tremare.
+            <em>"Ecco. Ecco com'era."</em>
+          </p>
+          <p class="italic text-violet-100 leading-relaxed mt-3">
+            Dura quanto resti dove sei. Alla prima cosa che fa qualcuno, un passo indietro, una mano di Orlin sulla
+            tua spalla, la luce riprende velocità e lui torna dentro. Ma prima di tornarci ha il tempo di dire una
+            frase sola, e la dice guardando te: <em>"Non andare via."</em>
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 Cosa NON dire, qualunque opzione tu scelga</p>
+        <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+          <li>Che l'ambra del dungeon c'entri qualcosa con Anders. Non l'ha mai vista.</li>
+          <li>Che qualcuno abbia scelto o marchiato Riven in anticipo.</li>
+          <li>Che la seconda firma appartenga a una divinità specifica, nominata o nominabile.</li>
+          <li>Che esista un modo per curarlo, o che restare vicino a lui possa diventarlo. Nessuno in quella stanza lo sa, e chi lo affermasse starebbe mentendo o sperando.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE VIII: TIRI UTILI ==================== -->
+    <div id="tiri" class="bg-emerald-900/20 border border-emerald-600/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-emerald-400">🎲</span> PARTE VIII: TIRI UTILI
+      </h2>
+
+      <p class="text-sm text-gray-300 leading-relaxed mb-6">
+        Sessione di sola interpretazione, nessun tiro è necessario per far funzionare la scena. Questi servono a
+        dare al giocatore qualcosa da fare con la sua scheda e a premiare le domande buone. Un fallimento non
+        chiude mai una porta: sposta solo il momento in cui si apre.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead>
+            <tr class="border-b border-gray-600 text-emerald-300">
+              <th class="p-3">Prova</th>
+              <th class="p-3">CD</th>
+              <th class="p-3">Cosa ottiene</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300">
+            <tr class="border-b border-gray-700/50">
+              <td class="p-3"><strong class="text-white">Arcano</strong> guardando le venature</td>
+              <td class="p-3">13</td>
+              <td class="p-3">Sono identiche alle sue, non simili: stesso colore, stesso modo di ramificarsi, stesso ritmo sbagliato. E si stanno espandendo mentre lui le guarda, lentamente ma visibilmente. Con 18 o più: il ritmo di Anders è più veloce del suo, non di poco.</td>
+            </tr>
+            <tr class="border-b border-gray-700/50">
+              <td class="p-3"><strong class="text-white">Intuizione</strong> nelle finestre di lucidità</td>
+              <td class="p-3">12</td>
+              <td class="p-3">Anders sta razionando le proprie parole: sa quanto tempo ha e ha deciso in anticipo cosa dire. Con 17 o più: la richiesta finale non è improvvisata, la sta preparando da quando ha sentito che stava arrivando qualcuno.</td>
+            </tr>
+            <tr class="border-b border-gray-700/50">
+              <td class="p-3"><strong class="text-white">Persuasione</strong> (Riven ha +5 Car e competenza)</td>
+              <td class="p-3">15</td>
+              <td class="p-3">Riesce a farlo restare lucido oltre la fine naturale della finestra, un minuto in più, una domanda in più. Costa: la crisi che segue arriva peggiore, e Orlin glielo fa notare dopo, fuori dalla porta.</td>
+            </tr>
+            <tr class="border-b border-gray-700/50">
+              <td class="p-3"><strong class="text-white">Percezione</strong> nella cella</td>
+              <td class="p-3">13</td>
+              <td class="p-3">Il muro sotto la branda è coperto di segni tracciati con qualcosa di duro, troppi per il poco tempo che è qui. Non giorni contati: cerchi, spirali, la stessa forma ripetuta a centinaia. Anders, se glielo si chiede, dice che li fa quando non riesce a dormire e che non sa cosa siano. Non sono riconoscibili nemmeno per Arianna. Da lasciare irrisolto.</td>
+            </tr>
+            <tr>
+              <td class="p-3"><strong class="text-white">Intuizione</strong> su Orlin</td>
+              <td class="p-3">14</td>
+              <td class="p-3">Ha già pensato di farlo lui, quello che Anders chiede, e la cosa che lo tiene sveglio non è averlo pensato: è essersi accorto di starci pensando meno di prima. Se Riven glielo dice in faccia, non lo nega.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE IX: COME CHIUDERE ==================== -->
+    <div id="chiusura" class="bg-amber-900/20 border border-amber-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-amber-400">🧵</span> PARTE IX: COME CHIUDERE E COSA LASCIARE APERTO
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-amber-200 mb-2">Se Riven promette di tornare</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Anders non ci crede, e lo dice senza rancore: <em>"Lo dicono tutti sulla porta. Non è una colpa, è
+            un'abitudine."</em> Se Riven insiste, chiedigli qualcosa di piccolo e concreto al posto della promessa
+            grande, ed è quello che va segnato tra i filoni aperti. Proposte pronte: sapere i nomi della donna e
+            del ragazzo morti in piazza accanto a lui, che nessuno gli ha mai detto. Sapere cosa c'è davvero sotto
+            l'Arco, che è l'unica cosa che ancora lo incuriosisce. Oppure, la più semplice e la peggiore, tornare
+            e basta, restare in piedi vicino al cerchio per un'ora senza dire niente.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-amber-200 mb-2">Se Riven propone di liberarlo o di curarlo</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Orlin non è ostile, è realista: non è una decisione sua, servirebbe il Blackstaff, e fuori da questa
+            stanza Anders morirebbe o farebbe morire qualcuno entro un giorno. Anders taglia più corto di tutti,
+            perché ha già fatto quel giro: <em>"Curarmi. Certo. E con cosa?"</em> Se Riven prova a rispondere,
+            lascialo parlare e poi lascia che Anders torni sulla propria richiesta. Il filo resta aperto per
+            l'Ecosistema 2, non si risolve stasera.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-amber-200 mb-2">Arianna, fuori dalla porta</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Chiusura breve. Non ha una teoria nuova e non la inventa, e per la prima volta da quando Riven la
+            conosce non riprende subito il tono da lezione. Quello che ha è una decisione: tornerà, con o senza di
+            lui, e questa volta metterà il caso nei registri della Gilda, così che non sia più un problema privato
+            di nessuno. E ha una domanda, che si è tenuta per la strada del ritorno: <em>"Quando ti ha chiesto
+            quella cosa. Per quanto ci hai pensato, prima di rispondere?"</em> Qualunque numero dica Riven, lei
+            non commenta.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-600 rounded-lg p-5">
+          <p class="font-bold text-amber-200 mb-2">Da segnare per le sessioni piene</p>
+          <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+            <li>La richiesta di Anders, e cosa ha risposto Riven. È il filone più pesante che esce da questa serata.</li>
+            <li>Riven è l'unico ad averlo visto. Fealer, che era presente agli esperimenti e lo considera il proprio paziente zero, si aspetta un resoconto e non gradirà l'esclusione.</li>
+            <li>Se hai giocato l'opzione A: la presenza di Riven ferma il dolore. Nessuno sa perché, e il gruppo dovrà decidere cosa farne.</li>
+            <li>Il peggioramento in accelerazione: qualunque cosa il party voglia fare per Anders, ha un limite di tempo che nessuno conosce.</li>
+            <li>La decisione di Arianna di mettere il caso a registro, che rende Anders visibile alla Gilda e potenzialmente al Consiglio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-800/40 border border-gray-600 rounded p-4">
+        <p class="text-xs font-bold text-gray-400 uppercase mb-2">📋 PX indicativi</p>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Sessione breve e di sola interpretazione, con un solo giocatore: tieniti sulla metà del valore di una
+          sessione piena, come già fatto per 11b e 11c, e assegna il premio di interpretazione in base a quanto il
+          giocatore si è esposto invece di limitarsi a raccogliere informazioni. Come ha reagito alla richiesta
+          vale più di qualsiasi domanda intelligente.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE X: SE AVANZA TEMPO ==================== -->
+    <div id="dopo" class="bg-orange-900/20 border border-orange-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-orange-400">🌙</span> PARTE X: SE AVANZA TEMPO
+      </h2>
+
+      <div class="bg-orange-900/30 border border-orange-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          La serata è la visita, e va benissimo che finisca lì: dopo una scena così, insistere è peggio che
+          chiudere presto. Queste due opzioni servono solo se il giocatore esce dalla cella con voglia di
+          continuare, e sono entrambe pensate per lui da solo.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        <div class="bg-gray-800/50 border-2 border-green-700 rounded-lg p-5">
+          <p class="font-bold text-green-200 mb-1">A. Il Peso del Sigillo, mai giocata</p>
+          <p class="text-xs text-gray-500 italic mb-2">Proposta in <a href="/dm/sessioni/sessione-11a#dopo" class="underline text-green-300">Sessione 11a, Parte III</a> e mai usata. Personale, quieta, nessun tiro necessario.</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Riven manda da sempre denaro e aiuti in segreto alla famiglia a Daggerford, e la cupola ha interrotto
+            quel canale. Dopo aver sentito Anders parlare di sua madre e delle due visite, è il momento giusto:
+            Riven prova comunque a far uscire una lettera o del denaro e scopre in modo concreto cosa significhi il
+            Sigillo. Nessun corriere accetta, nessun canale regge, e chi ci ha provato prima di lui non è tornato.
+            Non risolvere: il valore è tutto nel gesto inutile.
+          </p>
+        </div>
+        <div class="bg-gray-800/50 border-2 border-purple-700 rounded-lg p-5">
+          <p class="font-bold text-purple-200 mb-1">B. Il rapporto a Fealer</p>
+          <p class="text-xs text-gray-500 italic mb-2">Scena breve, due personaggi, ottima se il giocatore vuole ancora parlare.</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Fealer era presente a tutti e cinque gli esperimenti e considera Riven il proprio paziente zero. Ha
+            saputo che è andato a vedere Anders senza di lui. Non farà una scenata, non è nel suo registro: farà
+            domande cliniche, in ordine, come si compila una cartella, e la freddezza con cui le fa è più eloquente
+            di qualsiasi rimprovero. Se Riven gli riferisce la richiesta di Anders, Fealer non si scandalizza
+            affatto, e la sua risposta è il vero motivo per giocare questa scena. Lascia che sia il giocatore a
+            scegliere quanto raccontargli: cosa decide di tenersi per sé è il dato interessante.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PARTE XI: PROMPT IMMAGINE ==================== -->
+    <div id="immagine" class="bg-pink-900/20 border border-pink-500/30 rounded-lg p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">
+        <span class="text-pink-400">🖼️</span> PARTE XI: PROMPT PER GENERARE L'IMMAGINE DI ANDERS
+      </h2>
+
+      <div class="bg-pink-900/30 border border-pink-700/30 rounded p-4 mb-6">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Da incollare in un generatore di immagini. La versione inglese è quella da usare per prima: i modelli
+          rendono meglio i dettagli anatomici e di luce descritti in inglese. Sotto, la stessa cosa in italiano se
+          preferisci lavorarci in lingua. La cosa da non perdere è che le venature sono le stesse di Riven, stesso
+          blu, stesso modo di ramificarsi, solo molto più estese.
+        </p>
+      </div>
+
+      <p class="font-bold text-pink-200 mb-2">Prompt principale (inglese)</p>
+      <div class="bg-black/60 border border-pink-700/40 rounded p-5 mb-6">
+        <p class="text-sm text-gray-200 leading-relaxed font-mono">
+          Painterly dark fantasy character portrait, three quarter view, waist up, of a gaunt human man about
+          thirty years old, sitting on the floor of a bare stone cell with his back against a low cot. He is a man
+          in constant agony who has been like this for only a few weeks: exhausted, hollow-eyed, wrecked, not a
+          hardened veteran. The entire left side of his head and face is overtaken by a branching network of
+          glowing blue-white veins under the skin, like cracks of light spreading through him, starting at the
+          cheekbone and running over the temple, across the bare scalp, down the neck and shoulder, disappearing
+          under his shirt and reappearing on the back of his hand. The skin over those veins is stretched thin and
+          almost translucent, lit from within, and it is clearly the brightest light source in the room. Where the
+          veins are densest the skin has split open into dry fissures that have not healed, some covered with
+          yellowed gauze. On that left side he has no hair at all, the scalp burned bare and marked by the same
+          glowing branches. His left eye is not an eye anymore: the socket is filled with the same blue-white
+          light, no pupil, no eyelid closing over it. The right half of his face is completely ordinary and human:
+          a thin, tired, unremarkable young man's face, one normal exhausted eye, mouth open as if he has been
+          screaming for hours. His expression is not dignified or serene: it is raw, feverish, on the edge of
+          breaking, pleading. He wears a filthy sweat-soaked linen shirt, no armor, no jewelry. The blanket on the
+          cot behind him is scorched in patches, the wall above it blackened. A wide suppression circle is carved
+          into the stone floor around him, pulsing dull grey. Lighting comes almost entirely from his own blue
+          glow, cold and clinical, with one weak warm lantern far to the right. Muted desaturated palette of
+          greys, sick blues and dirty amber. Realistic painted illustration, heavy detail on skin, cracks and
+          glowing veins, D&amp;D character art, no text, no watermark.
+        </p>
+      </div>
+
+      <p class="font-bold text-pink-200 mb-2">Cosa evitare, da aggiungere se il modello sbaglia registro</p>
+      <div class="bg-black/60 border border-pink-700/40 rounded p-5 mb-6">
+        <p class="text-sm text-gray-200 leading-relaxed font-mono">
+          Avoid: white or waxy vitreous skin, ice or crystal texture, calm serene expression, noble stoic hero
+          look, zombie or undead face, demonic horns, glowing eyes on both sides, symmetrical damage, armor,
+          wizard robes, magical energy swirling around the body, action pose, muscular build, neon or cyberpunk
+          lighting, gore, spraying blood.
+        </p>
+      </div>
+
+      <p class="font-bold text-pink-200 mb-2">Versione italiana</p>
+      <div class="bg-black/60 border border-pink-700/40 rounded p-5">
+        <p class="text-sm text-gray-200 leading-relaxed font-mono">
+          Ritratto dark fantasy dipinto, tre quarti, mezzo busto, di un uomo umano sulla trentina, magrissimo,
+          seduto per terra in una cella di pietra spoglia con la schiena appoggiata a una branda bassa. È un uomo
+          in agonia costante, ridotto così da poche settimane: sfinito, occhi infossati, distrutto, non un
+          veterano indurito. Tutto il lato sinistro della testa e del viso è invaso da una ramificazione di
+          venature blu-bianche luminose sotto la pelle, come crepe di luce che si diramano dentro di lui, che
+          partono dallo zigomo, risalgono la tempia, attraversano il cuoio capelluto nudo, scendono lungo il collo
+          e la spalla, spariscono sotto la camicia e ricompaiono sul dorso della mano. La pelle sopra quelle
+          venature è tesa e quasi traslucida, illuminata da dentro, ed è chiaramente la fonte di luce più forte
+          della stanza. Dove le venature sono più fitte la pelle si è aperta in solchi secchi mai rimarginati,
+          alcuni coperti da garze ingiallite. Su quel lato non ha più capelli, il cuoio capelluto è bruciato e
+          percorso dalle stesse diramazioni luminose. L'occhio sinistro non è più un occhio: l'orbita è piena
+          della stessa luce blu-bianca, senza pupilla, senza palpebra che ci si chiuda sopra. La metà destra del
+          viso è del tutto ordinaria e umana: la faccia magra e stanca di un ragazzo qualunque, un occhio normale
+          sfinito, la bocca socchiusa come di chi ha urlato per ore. L'espressione non è dignitosa né serena: è
+          cruda, febbrile, sul punto di spezzarsi, supplicante. Indossa una camicia di lino lurida e fradicia di
+          sudore, nessuna armatura, nessun gioiello. La coperta sulla branda dietro di lui è bruciacchiata a
+          chiazze, il muro sopra annerito. Attorno a lui un ampio cerchio di soppressione inciso nel pavimento
+          pulsa di grigio sordo. La luce viene quasi solo dal suo bagliore blu, fredda e clinica, più una debole
+          lanterna calda lontana sulla destra. Palette desaturata di grigi, blu malati e ambra sporca.
+          Illustrazione dipinta realistica, gran dettaglio su pelle, crepe e venature luminose, arte da personaggio
+          D&amp;D, senza testo.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================== RIEPILOGO ==================== -->
+    <div class="bg-amber-900/20 border border-amber-500/50 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-amber-400 mb-4">📋 Riepilogo Veloce da Tavolo</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>• <strong class="text-white">Apertura:</strong> Arianna aspetta fuori dall'Accademia, dice cosa non faranno e chiede a Riven con che domanda vuole entrare. Vedi Parte II.</li>
+        <li>• <strong class="text-white">Discesa:</strong> tre porte, ozono, sigilli sempre più fitti, la magia di Riven che si zittisce, e un suono attraverso la pietra. Orlin e le tre regole. Vedi Parte III.</li>
+        <li>• <strong class="text-white">Ingresso:</strong> le stesse venature blu di Riven, ma su mezza testa, e un uomo che illumina la propria cella. Mostra l'immagine qui. Vedi Parte V.</li>
+        <li>• <strong class="text-white">Struttura:</strong> tre finestre di lucidità sempre più corte, due crisi, transizioni sempre a metà di una frase. Vedi Parte VI.</li>
+        <li>• <strong class="text-white">Il cuore della serata:</strong> Anders chiede a Riven di ucciderlo, e lo chiede da persona ragionevole. Non si risolve stasera. Vedi Parte VI.</li>
+        <li>• <strong class="text-white">Snodo:</strong> niente esperimenti su di lui. L'unica cosa che succede è che, quando Riven si avvicina, il dolore si ferma. Vedi Parte VII.</li>
+        <li>• <strong class="text-white">Da non fare:</strong> risolvere la cicatrice, nominare la divinità della seconda firma, collegare Anders all'ambra, promettere una cura, dargli dignità stoica al posto del dolore.</li>
+      </ul>
+    </div>
+
+    <!-- Link di navigazione -->
+    <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-700">
+      <a href="/dm/sessioni/sessione-13" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Sessione 13 - Bozza
+      </a>
+      <a href="/dm/sessioni" class="text-blue-400 hover:text-blue-300 flex items-center gap-2">
+        Torna alle Sessioni
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</MainLayout>
